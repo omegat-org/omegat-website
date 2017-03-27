@@ -1,0 +1,20 @@
+global:
+  title: OmegaT - The Free Translation Memory Tool
+  languages: Languages
+menu:
+  about: About
+  contact: Contact
+  download: Download
+  resources: Resources
+footer:
+  connect: Connect
+titles:
+  about: About
+  contact: Contact
+  dl_overview: Download Overview
+  documentation: Documentation
+  download: Download
+  home: OmegaT - The Free Translation Memory Tool
+  philosophy: Philosophy
+  resources: Resources
+

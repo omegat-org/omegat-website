@@ -1,0 +1,113 @@
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+          </button>
+          <a class="navbar-brand" href="{% tl index %}">
+            <img alt="OmegaT" class="logo-omegat" src="{{ "/img/omegat.svg" | prepend: site.baseurl_root }}" height="80" width="80"/>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="download">{% t menu.download %}</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="contact">{% t menu.contact %}</a></li>
+            <li><a href="resources">{% t menu.resources %}</a></li>
+            <li><a href="about">{% t menu.about %}</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% translate global.languages %}<span class="caret"/> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu languages">
+                <li><a href="{{"/ar/" | prepend: site.baseurl_root }}">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                <li><a href="{{"/ca/" | prepend: site.baseurl_root }}">Catal&#xE0;</a></li>
+                <li><a href="{{"/cz/" | prepend: site.baseurl_root }}">&#x10C;e&#x161;tina</a></li>
+                <li><a href="{{"/de/" | prepend: site.baseurl_root }}">Deutsch</a></li>
+                <li><a href="{{"/el/" | prepend: site.baseurl_root }}">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+                <li><a href="{{"/"    | prepend: site.baseurl_root }}"   >English</a></li>
+                <li><a href="{{"/es/" | prepend: site.baseurl_root }}">Espa&#xF1;ol</a></li>
+                <li><a href="{{"/fr/" | prepend: site.baseurl_root }}">Fran&#xE7;ais</a></li>
+                <li><a href="{{"/gl/" | prepend: site.baseurl_root }}">Galego</a></li>
+                <li><a href="{{"/id/" | prepend: site.baseurl_root }}">Bahasa Indonesia</a></li>
+                <li><a href="{{"/ia/" | prepend: site.baseurl_root }}">Interlingua</a></li>
+                <li><a href="{{"/it/" | prepend: site.baseurl_root }}">Italiano</a></li>
+                <li><a href="{{"/ko/" | prepend: site.baseurl_root }}">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                <li><a href="{{"/hu/" | prepend: site.baseurl_root }}">Magyar</a></li>
+                <li><a href="{{"/ja/" | prepend: site.baseurl_root }}">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                <li><a href="{{"/nl/" | prepend: site.baseurl_root }}">Nederlands</a></li>
+                <li><a href="{{"/pl/" | prepend: site.baseurl_root }}">Polski</a></li>
+                <li><a href="{{"/br/" | prepend: site.baseurl_root }}">Portugu&#xEA;s (Brazil)</a></li>
+                <li><a href="{{"/pt/" | prepend: site.baseurl_root }}">Portugu&#xEA;s (Portugal)</a></li>
+                <li><a href="{{"/ru/" | prepend: site.baseurl_root }}">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                <li><a href="{{"/sq/" | prepend: site.baseurl_root }}">Shqip</a></li>
+                <li><a href="{{"/sk/" | prepend: site.baseurl_root }}">Sloven&#x10D;ina</a></li>
+                <li><a href="{{"/si/" | prepend: site.baseurl_root }}">Sloven&#x161;&#x10D;ina</a></li>
+                <li><a href="{{"/hr/" | prepend: site.baseurl_root }}">Srpskohrvatski</a></li>
+                <li><a href="{{"/fi/" | prepend: site.baseurl_root }}">Suomi</a></li>
+                <li><a href="{{"/sv/" | prepend: site.baseurl_root }}">Svenska</a></li>
+                <li><a href="{{"/zh_CN/" | prepend: site.baseurl_root }}">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                <li><a href="{{"/zh_TW/" | prepend: site.baseurl_root }}">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+              </ul>
+            </li>
+            <!--
+            <li>
+              <a href="#page-download">Download v.<span id="last-version">4.1.1</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            -->
+          </ul>
+          <!--
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Link</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>

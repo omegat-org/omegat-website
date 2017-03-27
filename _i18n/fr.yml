@@ -1,0 +1,23 @@
+﻿global:
+  title: OmegaT - l'outil libre de TAO
+  languages: Langues
+
+menu:
+  about: À propos
+  download: Télécharger
+  resources: Ressources
+  contact: Contact
+
+footer:
+  connect: Réseaux sociaux
+
+titles:
+  about: À propos
+  contact: Contact
+  dl_overview: Présentation du système de téléchargement d'OmegaT
+  documentation: Documentation
+  download: Télécharger
+  home: OmegaT - l'outil libre de TAO
+  philosophy: Philosophie
+  resources: Ressources
+
