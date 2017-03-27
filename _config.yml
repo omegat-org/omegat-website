@@ -38,7 +38,8 @@ exclude_from_localizations: ["js", "fonts", "img", "css", "favicon.ico"]
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-feed
+  - jekyll-sitemap
+  #- jekyll-feed
   - jekyll-multiple-languages-plugin
 exclude:
   - Gemfile
