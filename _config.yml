@@ -27,7 +27,6 @@ url: "http://www.omegat.org"
 # Github
 baseurl: "/omegat-website"
 url: "http://briacp.github.io/"
-url: "http://localhost:4000/"
 
 twitter_username: OmegaTOfficial
 github_username:  omegat-org
