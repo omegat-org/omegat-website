@@ -6,6 +6,7 @@ $colorPrimary:        #88B04B
 $colorLight:          lighten($colorPrimary, 33%)
 $colorDark:           #3d4a3e
 $colorLinks:          darken(#fd7400, 5%)
+$colorLightGray:      #efefef
 
 //$colorPrimary: rgb(43, 178, 76)
 //$colorLinks: #314C47
@@ -188,8 +189,54 @@ ul.languages
   -moz-columns: 3
   background-color: $colorLight
 
+//.panel-body
+//  padding: 15px
+
+#download-wizard
+  .navbar 
+    background-color: inherit
+
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
+    background-color: $colorPrimary
+
+  .tab-content
+    padding: 15px
+    font-size: 120%
+    background-color: #fefefe
+    border-radius: 5px
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7)
+
+  .radio
+    margin-bottom: 20px
+  
+    label
+      font-weight: 600
+
+#downloadSelector h5
+  font-weight: 600
+  text-align: center
+
+.selector-choice
+  text-align: justify
+  background-color: $colorLightGray
+  margin: 15px 10px 2px 10px
+  padding: 15px
+  //min-height: 200px
+  width: 23%
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7)
+
+.selector-choice-default
+  background-color: darken($colorLightGray, 10%)
+
+.selector-btn
+  width: 23%
+  text-align: center
+
 .versions
   margin: auto 20%
+
+  a
+    color: #fff
 
 .im-centered
   margin: auto
@@ -199,8 +246,12 @@ ul.languages
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7)
   margin: 15px auto
 
+.downloads .popover
+  cursor: pointer
+  max-width: 50%
+
 #page-omegat-and-you
-  background-color: #efefef
+  background-color: $colorLightGray
 
 #page-download
   background-image: $imgDownload 

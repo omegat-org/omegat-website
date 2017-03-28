@@ -11,10 +11,20 @@ footer:
 titles:
   about: About
   contact: Contact
-  dl_overview: Download Overview
+  dl_overview: Download
   documentation: Documentation
   download: Download
   home: OmegaT - The Free Translation Memory Tool
   philosophy: Philosophy
   resources: Resources
+# Platforms name
+windows_jre: Windows with JRE
+windows_no_jre: Windows without JRE
+osx_signed: OS X Signed
+osx_unsigned: OS X Unsigned
+linux_32b: Linux with 32-bit JRE
+linux_64b: Linux with 64-bit JRE
+no_jre: Cross-platform without JRE
+webstart: Web Start
+source: Source code
 
