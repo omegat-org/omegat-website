@@ -3,11 +3,13 @@ global:
   languages: Languages
 menu:
   about: About
+  documentation: Documentation
   contact: Contact
   download: Download
   resources: Resources
 footer:
   connect: Connect
+  omegat_project: The OmegaT Project
 titles:
   about: About
   contact: Contact

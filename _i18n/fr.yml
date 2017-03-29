@@ -1,23 +1,31 @@
-﻿global:
-  title: OmegaT - l'outil libre de TAO
+global:
+  title: OmegaT, l'outil libre de TAO
   languages: Langues
-
 menu:
   about: À propos
-  download: Télécharger
-  resources: Ressources
+  documentation: Documentation
   contact: Contact
-
+  download: Téléchargement
+  resources: Ressources
 footer:
   connect: Réseaux sociaux
-
+  omegat_project: Le projet OmegaT
 titles:
   about: À propos
   contact: Contact
   dl_overview: Téléchargement
   documentation: Documentation
-  download: Télécharger
-  home: OmegaT - l'outil libre de TAO
+  download: Téléchargement
+  home: OmegaT, l'outil libre de TAO
   philosophy: Philosophie
   resources: Ressources
-
+# Platforms name
+windows_jre: Windows avec JRE
+windows_no_jre: Windows sans JRE
+osx_signed: OS X Signé
+osx_unsigned: OS X Non signé
+linux_32b: Linux avec JRE 32 bits
+linux_64b: Linux avec JRE 64 bits
+no_jre: Cross-platform sans JRE
+webstart: Web Start
+source: Code source

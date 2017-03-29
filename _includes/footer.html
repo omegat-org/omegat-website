@@ -3,17 +3,37 @@
     <span class="glyphicon glyphicon-chevron-up"/>
   </a>
   <div class="container-fluid">
-          <div class="row">
-          <div class="col-sm-2 social-links">
-    <h4>{% t footer.connect %}</h4>
-    <ul>
-      <li><a href="https://sourceforge.net/projects/omegat/"><img       src="{{ "/img/sourceforge.svg" | prepend: site.baseurl_root }}" height="24"/> Sourceforge</a></li>
-      <li><a href="github.com/omegat-org/"><img                         src="{{ "/img/github.svg"      | prepend: site.baseurl_root }}" height="24"/> Github</a></li>
-      <li><a href="https://twitter.com/OmegaTOfficial"><img             src="{{ "/img/twitter.svg"     | prepend: site.baseurl_root }}" height="24"/> Twitter</a></li>
-      <li><a href="https://www.facebook.com/OmegaTOfficial"><img        src="{{ "/img/facebook.svg"    | prepend: site.baseurl_root }}" height="24"/> Facebook</a></li>
-    </ul>
-  </div>
-  </div>
+    <div class="row">
+      <div class="col-sm-2 footer-column">
+        <h4>{% t footer.connect %}</h4>
+        <ul>
+          <li>
+            <a href="https://sourceforge.net/projects/omegat/"><img src="{{ "/img/sourceforge.svg" | prepend: site.baseurl_root }}" height="24"/> Sourceforge</a>
+          </li>
+          <li>
+            <a href="github.com/omegat-org/"><img src="{{ "/img/github.svg" | prepend: site.baseurl_root }}" height="24"/> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/OmegaTOfficial"><img src="{{ "/img/twitter.svg" | prepend: site.baseurl_root }}" height="24"/> Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/OmegaTOfficial"><img src="{{ "/img/facebook.svg" | prepend: site.baseurl_root }}" height="24"/> Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-8"><!-- padding --></div>
+      <div class="col-sm-2 footer-column">
+        <h4>{% t footer.omegat_project %}</h4>
+        <ul>
+          <li>
+          <a href="contact"><span class="glyphicon glyphicon-envelope"></span> {% t titles.contact %}</a>
+          </li>
+          <li>
+            <a href="about"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <p>Copyright &#xA9; 2017 - <a href="{{site.baseurl}}">omegat.org</a></p>
 </footer>
