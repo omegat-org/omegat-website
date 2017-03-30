@@ -17,10 +17,17 @@ $(document).ready(function () {
         }
     });
 
-     var quoteCarousel = $('#quote-carousel');
-     if (quoteCarousel.length) {
-             quoteCarousel.carousel({ pause: true, interval: 4000, });
-     }
+    // Disable link for unavailable languages
+    $('li.disabled a').attr('href','#');
+
+    // Setup the Quote Carousel
+    var quoteCarousel = $('#quote-carousel');
+    if (quoteCarousel.length) {
+        quoteCarousel.carousel({
+            pause: true,
+            interval: 4000,
+        });
+    }
 
     // Download Selector Wizard
     var downloadWizard = $('#download-wizard');
@@ -147,8 +154,7 @@ $(document).ready(function () {
                 var unsignedHref = $('a', '#' + result.replace(/_signed$/, '_unsigned')).attr('href');
                 $('#wizard-result-unsigned').attr('href', unsignedHref);
                 $('#wizard-result-osx').show();
-            }
-            else {
+            } else {
                 $('#wizard-result-osx').hide();
             }
 
