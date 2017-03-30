@@ -37,6 +37,11 @@ exclude_from_localizations: ["js", "fonts", "img", "css", "favicon.png"]
 
 # Build settings
 markdown: kramdown
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
 gems:
   - jekyll-sitemap
   #- jekyll-feed
