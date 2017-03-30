@@ -3,9 +3,9 @@
     <span class="glyphicon glyphicon-chevron-up"/>
   </a>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2 footer-column">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
         <h4>{% t footer.connect %}</h4>
+        <div class="header-line"><!----></div>
         <ul>
           <li>
             <a href="https://sourceforge.net/projects/omegat/"><img src="{{ "/img/sourceforge.svg" | prepend: site.baseurl_root }}" height="24"/> Sourceforge</a>
@@ -23,6 +23,7 @@
       </div>
       <div class="col-sm-2 footer-column">
         <h4>{% t footer.documentation %}</h4>
+        <div class="header-line"><!----></div>
         <ul>
           <li><a href="manual"><span class="glyphicon glyphicon-book"></span> {% t titles.manual %}</a></li>
           <li><a href="tutorials"><span class="glyphicon glyphicon-user"></span> {% t titles.tutorials %}</a></li>
@@ -30,11 +31,9 @@
           <li><a href="reviews"><span class="glyphicon glyphicon-heart"></span> {% t titles.reviews %}</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 footer-column"><!-- --></div>
-              <div class="col-sm-2 footer-column"><!-- --></div>
-      <div class="col-sm-2 footer-column"><!-- --></div>
       <div class="col-sm-2 footer-column">
         <h4>{% t footer.omegat_project %}</h4>
+        <div class="header-line"><!----></div>
         <ul>
           <li>
           <a href="contact"><span class="glyphicon glyphicon-envelope"></span> {% t titles.contact %}</a>
@@ -42,9 +41,11 @@
           <li>
             <a href="about"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
           </li>
+          <li>
+            <a href="philosophy"><span class="glyphicon glyphicon-console"></span> {% t titles.philosophy %}</a>
+          </li>
         </ul>
       </div>
-    </div>
   </div>
-  <p>Copyright &#xA9; 2017 - <a href="{{site.baseurl}}">omegat.org</a></p>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="{{site.baseurl}}/">omegat.org</a></p>
 </footer>
