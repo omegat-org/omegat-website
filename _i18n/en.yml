@@ -1,23 +1,32 @@
 global:
   title: OmegaT - The Free Translation Memory Tool
   languages: Languages
+
 menu:
   about: About
   documentation: Documentation
   contact: Contact
   download: Download
   resources: Resources
+
 footer:
   connect: Connect
   omegat_project: The OmegaT Project
+  documentation: Documentation
+
 titles:
   about: About
-  contact: Contact
+  contact: Contact and Support
   documentation: Documentation
   download: Download
   home: OmegaT - The Free Translation Memory Tool
   philosophy: Philosophy
   resources: Resources
+  manual: Manual
+  tutorials: Tutorials
+  howto: How-To
+  reviews: Reviews
+
 # Platforms name
 windows_jre: Windows with JRE
 windows_jre64b: Windows with 64-bit JRE

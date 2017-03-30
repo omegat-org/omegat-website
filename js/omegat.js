@@ -17,6 +17,11 @@ $(document).ready(function () {
         }
     });
 
+     var quoteCarousel = $('#quote-carousel');
+     if (quoteCarousel.length) {
+             quoteCarousel.carousel({ pause: true, interval: 4000, });
+     }
+
     // Download Selector Wizard
     var downloadWizard = $('#download-wizard');
     if (downloadWizard.length) {
@@ -149,6 +154,10 @@ $(document).ready(function () {
 
         };
 
+        // if we came on this page with the #selector anchor, open the selector at the beginning
+        if (window.location.hash == '#selector') {
+            $('#download-wizard').collapse();
+        }
     }
 
 });
