@@ -132,6 +132,29 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
   </div>
 </div>
 
+<h3>Requirements</h3>
+
+<h4>System requirements</h4>
+
+<p>OmegaT will run on any system on which the JRE (Java Runtime Environment)
+has been or can be installed. The JRE is now supplied with OmegaT and need not
+be obtained separately. OmegaT has been successfully installed on Windows (all
+versions from 98 onwards), Macintosh OS X and Linux.</p>
+<p>Files in Microsoft Office XML format can be translated directly in OmegaT.
+Files in older MS Word, Excel and Powerpoint formats can be translated
+following conversion to the equivalent current Microsoft Office formats, or
+alternatively to the Office Open XML format, which can be done in
+OpenOffice.org or LibreOffice (also free). To obtain OpenOffice.org or
+LibreOffice, follow the link from "Third-party software" button on the
+left.</p>
+
+<h4>User requirements</h4>
+<p>OmegaT is not particularly difficult to install or use, but it does require
+a willingness to read and follow the instructions. If you have a natural
+aversion to reading instructions, and your approach to new software is to click
+on every button you see until something resembling the desired effect occurs,
+then OmegaT is probably not suitable for you.</p>
+
 <a name="downloads"></a>
 <h3 id="standard">Standard Version - {{site.data.versions.standard.name '}}</h3>
 
@@ -152,8 +175,10 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
+      {% if platform.noInfo != true %}
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_{{ platform.name }}"/>
+      {% endif %}
       </td>
       <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
   </tr>
@@ -183,7 +208,11 @@ prefer the Latest version.</p>
 {% for platform in site.data.versions.latest.platforms %}
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
-      <td><span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      {% if platform.noInfo != true %}
+          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      {% endif %}
+      </td>
       <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
   </tr>
 {% endfor %}
@@ -289,7 +318,7 @@ space on your hard drive. In this case, do not select the Default version; selec
 <div id="popover_content_nightly" style="display:none">
   <p>Periodic builds are available on CloudBees.</p>
   <div class="text-md-center">
-    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" alt="built on DEV@cloud" />
+    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" width="209" height="72" alt="built on DEV@cloud" />
   </div>
 </div>
 
