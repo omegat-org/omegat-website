@@ -1,31 +1,33 @@
 global:
-  title: OmegaT, l'outil libre de TAO
+  title: OmegaT - The Free Translation Memory Tool
+  # Name of the translators for this version of the website
+  translators: Marc Prior, Briac Pilpré
 
 menu:
-  languages: Langues
-  about: À propos
+  languages: Languages
+  about: About
   documentation: Documentation
   contact: Contact
-  download: Téléchargement
-  resources: Ressources
+  download: Download
+  resources: Resources
 
 footer:
-  connect: Réseaux sociaux
-  omegat_project: Le projet OmegaT
+  connect: Connect
+  omegat_project: The OmegaT Project
   documentation: Documentation
 
 titles:
-  about: À propos
-  contact: Contact et Assistance
+  about: About
+  contact: Contact and Support
   documentation: Documentation
-  download: Téléchargement
-  home: OmegaT, l'outil libre de TAO
-  philosophy: Philosophie
-  resources: Ressources
-  manual: Manuel
-  tutorials: Tutoriels
-  howto: Guides pratiques
-  reviews: Articles
+  download: Download
+  home: OmegaT - The Free Translation Memory Tool
+  philosophy: Philosophy
+  resources: Resources
+  manual: Manual
+  tutorials: Tutorials
+  howto: How-To
+  reviews: Reviews
   sponsorship: Sponsorship
   howtos:
      compatibility: Compatibility
@@ -46,15 +48,15 @@ titles:
      text_export: Howto - Using the OmegaT text export function (scripting interface)
      tokenizer: Howto - Using the OmegaT tokenizer
 
-
 # Platforms name
-windows_jre: Windows avec JRE
-windows_jre64b: Windows avec JRE 64 bits
-windows_nojre: Windows sans JRE
-osx_signed: OS X Signé
-osx_unsigned: OS X Non signé
-linux_jre: Linux avec JRE 32 bits
-linux_jre64b: Linux avec JRE 64 bits
-nojre: Cross-platform sans JRE
+windows_jre: Windows with JRE
+windows_jre64b: Windows with 64-bit JRE
+windows_nojre: Windows without JRE
+osx_signed: OS X Signed
+osx_unsigned: OS X Unsigned
+linux_jre: Linux with JRE
+linux_jre64b: Linux with 64-bit JRE
+nojre: Cross-platform without JRE
 webstart: Web Start
-source: Code source
+source: Source code
+
