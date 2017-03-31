@@ -1,0 +1,56 @@
+<div class="container">
+
+
+<h3>Introduction</h3>
+
+<p>This HowTo describes OmegaT's functions for automatic match propagation and one-to-many matching.</p>
+
+<h3>Propagation</h3>
+
+<p>By default, OmegaT uses automatic match propagation. This means that as soon as a segment is translated, the same translation is automatically inserted into all identical segments. If a segment has already been translated and an identical segment later on in the text is then changed, the earlier segment will be brought into line with the changed segment. Segments which occur more than once are described in OmegaT as "non-unique segments".</p>
+
+<p>Selecting View > Mark Non-Unique Segments causes only the first instance of a non-unique segment to be displayed in black, and second and subsequent instances to be displayed in grey. This is useful when a translation is being checked, since only the first instance of identical segments may need to be checked. The user can therefore see immediately that a segment in grey, rather than black, has already been checked. (If Options > View > "Include the first non-unique segment when marking non-unique segments" is selected, all non-unique segments including the first are marked in this way.)</p>
+
+<p>You can disable the auto-propagation function with Project > Properties > uncheck the "Auto-propagation of Translations" box. This has the effect of making all instances of non-unique segments alternative translations (see "One-to-many matching" below).</p>
+
+<h3>One-to-many matching</h3>
+
+<p>In most cases, the translator will wish to translate identical segments within a project in the same way. For cases where two or more identical segments require different translations, OmegaT offers "one-to-many matching".</p>
+
+<p>OmegaT's one-to-many matching function first assumes that identical segments are to be translated in the same way. This translation is described as the "default translation". To produce a translation that is different from the "default translation", right-click with the mouse within the segment and select "Create Alternative Translation". This segment can be now translated as desired without other instances of it automatically being made identical to it.</p>
+
+<p>You can have as many "alternative translations" as you like of identical segments, but there can only be one default translation (or none at all).</p>
+
+<p>To make an alternative translation the default translation, right-click with the mouse and select "Use as Default Translation". This will make the current translation the default translation. All other instances of the same segment that were previously the "default translation" will now be brought into line with this translation.</p>
+
+<p>If you have already translated an instance of a non-unique segment and wish to make a different instance of the non-unique segment the default translation without changing the translation of the instance you have already translated, you must first set the status of the segment you have already translated to "alternative translation" using "Create Alternative Translation".</p>
+
+<p>To remove the "alternative translation" status of a single segment and bring it back into line with the "default translation", simply delete the content of the segment. This has the effect of deleting the "alternative translation" status at the same time; the translation of the segment will therefore revert to that of the default translation. The content of a segment can be deleted completely either by means of the keyboard shortcuts Ctrl+A > Ctrl+X > Enter, by right-clicking with the mouse and the Remove Translation menu item, or simply by using the delete key (repeatedly).</p>
+
+
+<h3>Summary of propagation and one-to-many matching commands</h3>
+
+<p><b>None</b> (default behaviour): all identical segments are automatically translated the same way.</p>
+
+<p><b>Mark Non-Unique Segments</b>: identical segments are marked in grey (changes the display, but not the behaviour).</p>
+
+<p><b>Create Alternative Translation</b>: makes the segment unique. Changes to this segment have no effect upon other segments, nor do changes to the "default translation" affect it.</p>
+
+<p><b>Remove Translation</b>: deletes the content of the segment, causing (when Enter is pressed) the default translation to be inserted.</p>
+
+<p><b>Use as Default Translation</b>: causes the active segment to be made the default translation and therefore all previous "default translation" segments to be brought into line with it.</p>
+
+
+
+<h3>Points to note</h3>
+
+<p>For some file types, OmegaT differentiates between identical segments by referring to their preceding and following segments. Creating an "alternative translation" therefore relies upon identical segments having different preceding or following segments. Where two segments also have identical preceding and following segments (for example when an entire page appears twice in the text), they cannot be translated differently from each other in OmegaT, i.e. it is not possible to make one of them an "alternative translation".</p>
+
+<p>"Non-unique segment" covers both default and alternative translations. Consequently, segments that are marked (with the grey font) as being non-unique are marked as non-unique irrespective of whether alternative translations have been created or not.</p>
+
+<p>By default, the Go To Next Untranslated Segment command (Ctrl+U) skips to the next untranslated segment, skipping propagated translations in the process. If Options > Editing Behaviour > "Go To Next Untranslated Segment stops when there is at least one alternative translation" is selected however and at least one alternative translation of a non-unique segment has been created, this function treats all instances of that segment (whether default or alternative translations) as untranslated, i.e. does not skip them.</p>
+
+
+<p>Copyright Marc Prior 2014</p>
+
+</div>

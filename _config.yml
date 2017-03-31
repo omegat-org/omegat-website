@@ -33,7 +33,7 @@ github_username:  omegat-org
 
 # i18n plugin
 languages: [ "en" , "fr" ] #"ar", "ca", "cz", "de", "el", "es", "gl", "id", "ia", "it", "ko", "hu", "ja", "nl", "pl", "br", "pt", "ru", "sq", "sk", "si", "hr", "fi", "sv", "zh_CN", "zh_TW" ]
-exclude_from_localizations: ["js", "fonts", "img", "css", "favicon.png"]
+exclude_from_localizations: ["js", "fonts", "img", "css", "favicon.png", "tutorial", "omegatk"]
 
 # Build settings
 markdown: kramdown

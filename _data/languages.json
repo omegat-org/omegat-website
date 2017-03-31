@@ -1,0 +1,113 @@
+[{
+    "code": "ar",
+    "enabled": false,
+    "label": "&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;"
+}, {
+    "code": "ca",
+    "enabled": false,
+    "label": "Catal&#xE0;"
+}, {
+    "code": "cz",
+    "enabled": false,
+    "label": "&#x10C;e&#x161;tina"
+}, {
+    "code": "de",
+    "enabled": false,
+    "label": "Deutsch"
+}, {
+    "code": "el",
+    "enabled": false,
+    "label": "&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;"
+}, {
+    "code": "en",
+    "enabled": true,
+    "label": "English"
+}, {
+    "code": "es",
+    "enabled": false,
+    "label": "Espa&#xF1;ol"
+}, {
+    "code": "fr",
+    "enabled": true,
+    "label": "Fran&#xE7;ais"
+}, {
+    "code": "gl",
+    "enabled": false,
+    "label": "Galego"
+}, {
+    "code": "id",
+    "enabled": false,
+    "label": "Bahasa Indonesia"
+}, {
+    "code": "ia",
+    "enabled": false,
+    "label": "Interlingua"
+}, {
+    "code": "it",
+    "enabled": false,
+    "label": "Italiano"
+}, {
+    "code": "ko",
+    "enabled": false,
+    "label": "&#xD55C;&#xAD6D;&#xC5B4;"
+}, {
+    "code": "hu",
+    "enabled": false,
+    "label": "Magyar"
+}, {
+    "code": "ja",
+    "enabled": false,
+    "label": "&#x65E5;&#x672C;&#x8A9E;"
+}, {
+    "code": "nl",
+    "enabled": false,
+    "label": "Nederlands"
+}, {
+    "code": "pl",
+    "enabled": false,
+    "label": "Polski"
+}, {
+    "code": "br",
+    "enabled": false,
+    "label": "Portugu&#xEA;s (Brazil)"
+}, {
+    "code": "pt",
+    "enabled": false,
+    "label": "Portugu&#xEA;s (Portugal)"
+}, {
+    "code": "ru",
+    "enabled": false,
+    "label": "&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;"
+}, {
+    "code": "sq",
+    "enabled": false,
+    "label": "Shqip"
+}, {
+    "code": "sk",
+    "enabled": false,
+    "label": "Sloven&#x10D;ina"
+}, {
+    "code": "si",
+    "enabled": false,
+    "label": "Sloven&#x161;&#x10D;ina"
+}, {
+    "code": "hr",
+    "enabled": false,
+    "label": "Srpskohrvatski"
+}, {
+    "code": "fi",
+    "enabled": false,
+    "label": "Suomi"
+}, {
+    "code": "sv",
+    "enabled": false,
+    "label": "Svenska"
+}, {
+    "code": "zh_CN",
+    "enabled": false,
+    "label": "&#x7B80;&#x4F53;&#x4E2D;&#x6587;"
+}, {
+    "code": "zh_TW",
+    "enabled": false,
+    "label": "&#x7E41;&#x9AD4;&#x4E2D;&#x6587;"
+}]

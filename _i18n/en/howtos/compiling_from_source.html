@@ -1,0 +1,59 @@
+<div class="container">
+  <p>This HowTo describes how to compile OmegaT from the source code.</p>
+  <p>OmegaT is supplied ready-compiled for a number of platforms, including a cross-platform version. Users do not therefore need to compile OmegaT themselves. Compiling OmegaT is relevant for developers who wish to make modifications of their own to its code. </p>
+  <p>
+    <strong>1. Download and install the Java Development Kit (JDK)</strong>
+  </p>
+  <p>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> is required. For OmegaT 4.0 and later, no additional software is required.</p>
+  <p>Earlier versions of OmegaT require <a href="http://ant.apache.org">Apache Ant</a>.</p>
+  <p>You may have to set your <code>JAVA_HOME</code> environment variable to point to the location of the JDK.</p>
+  <p>
+    <strong>2. Compile the code</strong>
+  </p>
+  <p>Open a command-line window (console, DOS window). Navigate to the root of the OmegaT source code (the folder containing the file <code>build.gradle</code>), e.g.</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source</pre>
+  <p>
+    <em>OmegaT 4.0 or later</em>
+  </p>
+  <p>You can run OmegaT directly from the command line with</p>
+  <pre>gradlew run</pre>
+  <p>If this is all you're interested in, you can skip to step 3a.</p>
+  <p>To build the OmegaT program and all associated files, instead do</p>
+  <pre>gradlew installDist</pre>
+  <p>The results will be in the <code>build\install\OmegaT</code>.</p>
+  <p>
+    <em>Older versions of OmegaT</em>
+  </p>
+  <p>From within the root folder, execute Apache Ant by entering the ant executable. It may be necessary to enter the full path, e.g.:</p>
+  <pre>C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</pre>
+  <p>If the code compiles successfully, you will see the <code>BUILD SUCCESSFUL</code> message. If not, debugging messages will be shown which will (hopefully) provide some idea of where the problem is.</p>
+  <p>If your code has compiled successfully, the compiled OmegaT is placed in:</p>
+  <pre>OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>Still in your command-line window, change to this folder, e.g. with:</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>and launch OmegaT with:</p>
+  <pre>java -jar OmegaT.jar</pre>
+  <p>
+    <strong>3a. 1st example modification: changing the colour of segment highlighting</strong>
+  </p>
+  <p>In the folder <code>src/org/omegat/gui/editor</code> open the file <code>SegmentBuilder.java</code> in a text editor.</p>
+  <p>Find the lines:</p>
+  <pre>return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</pre>
+  <p>and</p>
+  <pre>b = Styles.COLOR_GREEN;</pre>
+  <p>and replace <code>COLOR_GREEN</code> with <code>COLOR_BLUE</code>.</p>
+  <p>In the folder <code>src/org/omegat/util/gui</code> open the file <code>Styles.java</code> in a text editor.</p>
+  <p>Find the line</p>
+  <pre>public static final Color COLOR_GREEN = new Color(192, 255, 192);</pre>
+  <p>Replace <code>COLOR_GREEN</code> with <code>COLOR_BLUE</code> and <code>192, 255, 192</code> with <code>225, 225, 255</code>.</p>
+  <p>
+    <strong>3b. 2nd example modification: increasing the number of fuzzy matches displayed from five to ten</strong>
+  </p>
+  <p>In the folder <code>/src/org/omegat/util</code> open the file <code>OConsts.java</code> in a text editor.</p>
+  <p>Find the lines:</p>
+  <pre>    /** Number of fuzzy matches to display */
+    public static final int MAX_NEAR_STRINGS = 5;</pre>
+  <p>and replace <code>= 5</code> with <code>= 10</code>.</p>
+  <p>For both examples, compile and test as described above.</p>
+  <p>Copyright Marc Prior 2011-2012</p>
+</div>

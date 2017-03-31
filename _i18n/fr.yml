@@ -27,6 +27,25 @@ titles:
   howto: Guides pratiques
   reviews: Articles
   sponsorship: Sponsorship
+  howtos:
+     compatibility: Compatibility
+     compatibility_deja_vu: Howto - OmegaT compatibility with Déjà Vu
+     compiling_from_source: Howto - Compiling OmegaT from the source code
+     docx: Howto - Translating Word 2007 files in OmegaT
+     export_uncleaned_rtf: Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format
+     google_translate: Howto - Using Google Translate in OmegaT
+     iceni_infix: Howto - Translating PDF files with Iceni Infix and OmegaT
+     linux: OmegaT on Linux HowTo
+     localizing_omegat: Howto - Translating OmegaT into your language
+     ms_translator: Howto - Using Microsoft Translator in OmegaT
+     new_filter: Howto - Creating a new file filter
+     preview: Howto - Adding a preview function to OmegaT
+     priorview: Howto - The "Priorview" preview utility
+     prop12m: Propagation and one-to-many matching HowTo
+     spelling: Howto - Spellchecking
+     text_export: Howto - Using the OmegaT text export function (scripting interface)
+     tokenizer: Howto - Using the OmegaT tokenizer
+
 
 # Platforms name
 windows_jre: Windows avec JRE
