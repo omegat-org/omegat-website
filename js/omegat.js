@@ -17,8 +17,16 @@ $(document).ready(function () {
         }
     });
 
+    // Stop YouTube videos when the modal dialog is closed.
+    $('.close-yt').click(function () {
+        $('.ytvideo').each(function () {
+            var src = $(this).attr('src');
+            $(this).attr('src', src);
+        });
+    });
+
     // Disable link for unavailable languages
-    $('li.disabled a').attr('href','#');
+    $('li.disabled a').attr('href', '#');
 
     // Setup the Quote Carousel
     var quoteCarousel = $('#quote-carousel');
@@ -150,7 +158,6 @@ $(document).ready(function () {
 
             // OS X Signed / Unsigned
             if (os == 'osx') {
-                debugger;
                 var unsignedHref = $('a', '#' + result.replace(/_signed$/, '_unsigned')).attr('href');
                 $('#wizard-result-unsigned').attr('href', unsignedHref);
                 $('#wizard-result-osx').show();

@@ -1,21 +1,174 @@
 ﻿<div class="container">
+		
+<p class="lead">Links are provided below to the various versions of OmegaT. If
+you are confused about which version to download, you can use the <a
+href="#download-wizard" data-toggle="collapse">Assistant de téléchargement</a>.</p>
 
-<h2>Download OmegaT</h2>
 
-<p>OmegaT is available in many different versions in order to suit a range of user requirements. To find the version most suitable for you, follow the link below to the Download Selector. Alternatively, if you already know which version you wish to download, click on the link to the Download Overview.</p>
+<h3 id="standard">Standard Version - {{site.data.versions.standard.name '}}</h3>
 
-<p><a href="download_selector/selector.php">Download Selector</a><br/>
+<p>The Standard version has usually been in use for some time and is therefore
+proven. Its documentation, at least in English, is usually reasonably up to
+date. It will however lack some of the features of the "Latest" version.</p>
 
-Guides you step-by-step to selecting a suitable OmegaT version for download.</p>
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for platform in site.data.versions.standard.platforms %}
+  <tr id="{{ platform.id }}">
+      <td class="version-name">{% translate platform.name %}</td>
+      <td>
+          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_{{ platform.name }}"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+  </tr>
+{% endfor %}
+  </tbody>
 
-<p><a href="./dl_overview.php">Download Overview</a><br/>
+</table>
 
-Overview of OmegaT versions.</p>
+<h3 id="latest">Latest Version - {{site.data.versions.latest.name '}}</h3>
+
+<p>The Latest version is a more recent version than the Standard version and
+includes new features not present in the latter. The Latest version will
+usually be reasonably stable and usable, but may have some bugs. Documentation,
+particularly of new features, will be less comprehensive than that of the
+Standard version. Users who already have some experience with OmegaT often
+prefer the Latest version.</p>
+
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for platform in site.data.versions.latest.platforms %}
+ <tr id="{{ platform.id }}">
+      <td class="version-name">{% translate platform.name %}</td>
+      <td><span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+  </tr>
+{% endfor %}
+  </tbody>
+
+</table>
+
+<h3 id="downloadTrunk">Developer Version</h3>
+
+<p>The "/trunk" version is a cutting-edge, "alpha" version, still in
+development. Pre-built binaries, are available as Nightly Builds.</p>
+
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td>Trunk</td>
+      <td><span rel="popover" data-platform="trunk" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td>
+      <td><a class="btn btn-primary" href="{{ site.data.versions.trunk }}" role="button">Download</a></td>
+  </tr>
+  <tr>
+      <td>Nightly Builds</td>
+      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      <td><a class="btn btn-primary" href="{{ site.data.versions.nightly }}" role="button">Download</a></td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Legacy versions</h3>
+
+<p>You can still find <a href="{{ site.data.versions.legacy }}">older, superseded versions</a> of OmegaT.</p>
+
+<p>Legacy versions are older versions that have been superseded. For most
+users, these are not of interest. However, some users may face restrictions
+(imposed by their operating systems or Java version) that may result in a
+preference for an older version.</p>
+
+<h3>With/without JRE</h3>
+
+<p>In order to run, OmegaT requires the Java Runtime Environment (JRE) to be installed on your computer.</p>
+
+<p>If you are confident that a suitable version of the JRE is already installed on your computer, you can download a version of OmegaT without the JRE. The download will be faster, and the installation will require less
+space on your hard drive. In this case, do not select the Default version; select a different version (e.g. Standard or Latest), then select a version marked "Java not included".</p>
+
+<p>If you install the OmegaT version with JRE even though the JRE is already installed on your computer, OmegaT's JRE will be installed separately and will not conflict with it. It is therefore always safe to install the version of OmegaT with JRE. If you are unsure whether or not you have a suitable version of the JRE, select a version with JRE (or the Default version). </p>
+
+<p><strong>Mac OS X users</strong>: the JRE is installed on Mac OS X by default; there is therefore no version for Mac OS X with the JRE.</p>
+
+<p><strong>Linux users</strong>: most Linux distributions are supplied with a Java Runtime Environment, but some open-source implementations do not work properly with OmegaT (although this may not be immediately apparent). If you are relatively new to Linux, we advise you to select an OmegaT version with the JRE included. More experienced Linux users may prefer to install the Oracle (formerly Sun) JRE at system level.
+</p>
+
+<div id="popover_content_osx_signed" style="display:none">
+<h4 id="about_signing">Signed/Unsigned</h4>
+
+<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
+
+<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
 </div>
 
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br />
+<div id="popover_content_osx_unsigned" style="display:none">
+<h4 id="about_signing">Signed/Unsigned</h4>
 
-<a href="http://validator.w3.org/check?uri=referer"><img src="../images/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../images/css.png" alt="Valid CSS" /></a>
-	</div>
+<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
 
+<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
 </div>
+
+<div id="popover_content_webstart" style="display:none">
+      <p>The Web Start version offers an alternative means of installing OmegaT on your computer.</p>
+      <p>With this version, future updates will be installed automatically.</p>
+      <p>During installation, depending on your operating system, you may
+      receive several security warnings.<br/>The certificate is signed by <a
+      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, a
+      French registered company.</p>
+      <p>The permissions you give to this version (which may be described as
+      "unrestricted access to the computer") are no different from the
+      permissions you assign to the local version, i.e., an access to the hard
+      drive of your computer.</p>
+      <p>In order to install the Web start version, you must already have Java
+      version 1.3 or later installed on your computer.</p>
+      <p>Privacy information: OmegaT Java Web Start does not save any of your
+      information to OmegaT's web servers. The application runs on your
+      machine. Your documents and translation memories remain on your computer,
+      and the OmegaT project will have no access to your work or
+      information.</p>
+</div>
+
+
+<div id="popover_content_trunk" style="display:none">
+    <p>The /trunk (alpha) version reflects the very latest state of development. It
+    is recommended for serious developers and testers only. It can also be obtained
+    using the subversion command:</p>
+    <p><kbd>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</kbd></p>
+</div>
+
+<div id="popover_content_nightly" style="display:none">
+  <p>Periodic builds are available on CloudBees.</p>
+  <div class="text-md-center">
+    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" alt="built on DEV@cloud" />
+  </div>
+</div>
+
+<div id="popover_content_source" style="display:none">
+    <p>Source code packages are not required by users and are intended for
+    developers only. They can be found in the folders of the corresponding compiled
+    versions.</p>
+</div>
+</div>
+

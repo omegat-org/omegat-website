@@ -1,8 +1,10 @@
 global:
   title: OmegaT - The Free Translation Memory Tool
-  languages: Languages
+  # Name of the translators for this version of the website
+  translators: Marc Prior, Briac Pilpré
 
 menu:
+  languages: Languages
   about: About
   documentation: Documentation
   contact: Contact
@@ -26,6 +28,7 @@ titles:
   tutorials: Tutorials
   howto: How-To
   reviews: Reviews
+  sponsorship: Sponsorship
 
 # Platforms name
 windows_jre: Windows with JRE

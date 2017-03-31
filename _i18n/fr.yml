@@ -1,8 +1,8 @@
 global:
   title: OmegaT, l'outil libre de TAO
-  languages: Langues
 
 menu:
+  languages: Langues
   about: À propos
   documentation: Documentation
   contact: Contact
@@ -26,6 +26,7 @@ titles:
   tutorials: Tutoriels
   howto: Guides pratiques
   reviews: Articles
+  sponsorship: Sponsorship
 
 # Platforms name
 windows_jre: Windows avec JRE

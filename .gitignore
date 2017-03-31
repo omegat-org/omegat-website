@@ -3,3 +3,5 @@ _mess
 .sass-cache
 .jekyll-metadata
 *.swp
+_translations
+

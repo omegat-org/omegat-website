@@ -45,6 +45,7 @@ sass:
 gems:
   - jekyll-sitemap
   #- jekyll-feed
+  # https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin
   - jekyll-multiple-languages-plugin
 exclude:
   - Gemfile
