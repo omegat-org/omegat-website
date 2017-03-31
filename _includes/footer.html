@@ -25,10 +25,10 @@
         <h4>{% t footer.documentation %}</h4>
         <div class="header-line"><!----></div>
         <ul>
-          <li><a href="documentation#manual"><span class="glyphicon glyphicon-book"></span> {% t titles.manual %}</a></li>
-          <li><a href="documentation#tutorials"><span class="glyphicon glyphicon-user"></span> {% t titles.tutorials %}</a></li>
-          <li><a href="documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.howto %}</a></li>
-          <li><a href="reviews"><span class="glyphicon glyphicon-heart"></span> {% t titles.reviews %}</a></li>
+          <li><a href="{% tl documentation %}#manual"><span class="glyphicon glyphicon-book"></span> {% t titles.manual %}</a></li>
+          <li><a href="{% tl documentation %}#tutorials"><span class="glyphicon glyphicon-user"></span> {% t titles.tutorials %}</a></li>
+          <li><a href="{% tl documentation %}#howto"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.howto %}</a></li>
+          <li><a href="{% tl reviews %}"><span class="glyphicon glyphicon-heart"></span> {% t titles.reviews %}</a></li>
         </ul>
       </div>
       <div class="col-sm-2 footer-column">
@@ -36,16 +36,16 @@
         <div class="header-line"><!----></div>
         <ul>
           <li>
-          <a href="contact"><span class="glyphicon glyphicon-envelope"></span> {% t titles.contact %}</a>
+          <a href="{% tl contact %}"><span class="glyphicon glyphicon-envelope"></span> {% t titles.contact %}</a>
           </li>
           <li>
-            <a href="about"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
+          <a href="{% tl about %}"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
           </li>
           <li>
-            <a href="philosophy"><span class="glyphicon glyphicon-console"></span> {% t titles.philosophy %}</a>
+          <a href="{% tl philosophy %}"><span class="glyphicon glyphicon-console"></span> {% t titles.philosophy %}</a>
           </li>
         </ul>
       </div>
   </div>
-  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="{{site.baseurl}}/">omegat.org</a></p>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="{{site.baseurl}}">omegat.org</a></p>
 </footer>
