@@ -8,9 +8,7 @@
 
 <p>The text export function exports data from within the current OmegaT project to plain-text files. At present, the data exported are:</p>
 
-<p>- The content of the segment source text, when the segment is opened<br/>
-- The content of the segment target text, when the segment is opened<br/>
-- Highlighted text in the target text, when the relevant shortcut is pressed</p>
+<p>- The content of the segment source text, when the segment is opened<br/> - The content of the segment target text, when the segment is opened<br/> - Highlighted text in the target text, when the relevant shortcut is pressed</p>
 
 <p>Programmers and scripters can use the files containing this text in order to add further functions to OmegaT. They need no knowledge of Java; most if not all programming languages could be used instead, and useful functions achieved even with only relatively limited programming skill.</p>
 
@@ -20,19 +18,17 @@
 
 <p>Options > Editing behaviour</p>
 
-<p>Then tick the "Export the segment to text files" box.</p>
+<p>Then tick the &quot;Export the segment to text files&quot; box.</p>
 
 <p>The files appear in the /script subfolder in the OmegaT user files folder (for the location of the OmegaT user files folder on your operating system, see the User Manual (F1 from within OmegaT) > Files and directories > User files):</p>
 
-<p>source.txt	- contains the source text of the segment<br/>
-target.txt	- contains the target text of the segment<br/>
-selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is pressed or Edit > Export Selection is selected</p>
+<p>source.txt - contains the source text of the segment<br/> target.txt - contains the target text of the segment<br/> selection.txt - contains the text highlighted by the user, when Ctrl-Shift-C is pressed or Edit > Export Selection is selected</p>
 
 <p>The content of the files is overwritten either when a new segment is opened (source.txt and target.txt) or when a new selection is exported (selection.txt). The files are unformatted plain-text files.</p>
 
 <h3>Using the sample scripts</h3>
 
-<p>Tcl/tk must be installed, if it is not already. Tcl/tk can be obtained from a number of sources; tcl.activestate.com is one popular source. Mac OSX users should install tcl/tk from their system media and Linux users should find it in their distribution's repository, if it is not already installed by default. (Note to Ubuntu users: the font implementation of the default tcl/tk installation in Ubuntu at the present time (version 9.10) is appalling, but can be rectified.)</p>
+<p>Tcl/tk must be installed, if it is not already. Tcl/tk can be obtained from a number of sources; tcl.activestate.com is one popular source. Mac OSX users should install tcl/tk from their system media and Linux users should find it in their distribution&#39;s repository, if it is not already installed by default. (Note to Ubuntu users: the font implementation of the default tcl/tk installation in Ubuntu at the present time (version 9.10) is appalling, but can be rectified.)</p>
 
 <p>In order to make the workings of the script code clearer, each script essentially performs only one function. If multiple functions were to be used at the same time in practice, it would be more efficient to combine them in a single script file.</p>
 
@@ -40,7 +36,7 @@ selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is 
 
 <p>To launch a script:</p>
 
-<p>Copy the script into the OmegaT "script" folder, i.e. the folder containing source.txt etc. (The scripts can in principle be placed anywhere, but must then be edited with addition of the path to the script files.)</p>
+<p>Copy the script into the OmegaT &quot;script&quot; folder, i.e. the folder containing source.txt etc. (The scripts can in principle be placed anywhere, but must then be edited with addition of the path to the script files.)</p>
 
 <p>Depending upon how your system is configured, it may be possible to launch the scripts simply by clicking on them with the mouse. Alternatively:</p>
 
@@ -50,7 +46,7 @@ selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is 
 
 <p>cd C:\Documents and Settings\User Name\Application Data\OmegaT\script</p>
 
-<p>Launch the script with "wish" followed by the script file name, e.g.:</p>
+<p>Launch the script with &quot;wish&quot; followed by the script file name, e.g.:</p>
 
 <p>wish te-basic-source.tcl</p>
 
@@ -68,7 +64,7 @@ selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is 
 
 <p>Besides displaying the source text, this script provides an entry box into which the user can type a string (e.g. a word). When an OmegaT segment containing this string is opened, the script outputs a warning. The warning takes the form of the text in the script window being highlighted in yellow. In addition, if supported by the hardware and operating system (this is not always the case), a beep will sound.</p>
 
-<p>An example use of this function is as follows. The translator has a text containing the phrase "abc", and has completed a first draft of it, translating "abc" as "abc". She then discovers that "abc" should be translated as "def". Rather than find all the cases of "abc" and correcting them before proceeding (which is possible, but has drawbacks), she could simply decide to correct them in course of the next draft. In this case, a "reminder" in each relevant segment may be helpful.</p>
+<p>An example use of this function is as follows. The translator has a text containing the phrase &quot;abc&quot;, and has completed a first draft of it, translating &quot;abc&quot; as &quot;abc&quot;. She then discovers that &quot;abc&quot; should be translated as &quot;def&quot;. Rather than find all the cases of &quot;abc&quot; and correcting them before proceeding (which is possible, but has drawbacks), she could simply decide to correct them in course of the next draft. In this case, a &quot;reminder&quot; in each relevant segment may be helpful.</p>
 
 <p><strong>te-notags</strong></p>
 
@@ -94,20 +90,13 @@ selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is 
 
 <p>Tcl/tk has a number of advantages as a scripting language:</p>
 
-<p>- It is easy to learn<br/>
-- It is free<br/>
-- It is widely used, so help can be found on the Internet<br/>
-- The Tk component makes it easy to produce graphical user interfaces<br/>
-- There are many good books and other resources available for it (at least in English)<br/>
-- It is string-oriented, making it particularly suitable for applications involving text</p>
+<p>- It is easy to learn<br/> - It is free<br/> - It is widely used, so help can be found on the Internet<br/> - The Tk component makes it easy to produce graphical user interfaces<br/> - There are many good books and other resources available for it (at least in English)<br/> - It is string-oriented, making it particularly suitable for applications involving text</p>
 
 <p>For beginners, several online tutorials are available, such as:</p>
 
-<p><a href="http://archive.is/kZWsj">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/>
-<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
-<a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
+<p><a href="http://archive.is/kZWsj">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/> <a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/> <a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
 
-<p>If you are serious about learning tcl/tk, "Practical Programming in Tcl and Tk" by Brent Welch, ISBN: 0-13-038560-3 is strongly recommended. This is likely to be a little too technical for complete newcomers to programming, but after working through one of the online tutorials, they should find it useful.</p>
+<p>If you are serious about learning tcl/tk, &quot;Practical Programming in Tcl and Tk&quot; by Brent Welch, ISBN: 0-13-038560-3 is strongly recommended. This is likely to be a little too technical for complete newcomers to programming, but after working through one of the online tutorials, they should find it useful.</p>
 
 <p>Copyright Marc Prior 2009-2011</p>
 
