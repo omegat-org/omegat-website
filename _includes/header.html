@@ -24,9 +24,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% translate menu.languages %}<span class="caret"/> <span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu languages">
                 {% for lang in site.data.languages %}
-                {% if lang.enabled == true %}
                 <li{% if lang.enabled == false %} class="disabled"{% endif %}><a href="{{ site.baseurl_root }}{% if lang.code != 'en' %}/{{ lang.code }}{% endif %}{{ page.url }}">{{ lang.label }}</a></li>
-                {% endif %}
                 {% endfor %}
               </ul>
             </li>
