@@ -5,10 +5,33 @@
       <h1>OmegaT <small>the free translation memory tool</small></h1>
       <div class="title-buttons">
         <a class="btn btn-primary" href="download" role="button">Download</a>
-        <a class="btn btn-primary" href="#get-started" role="button">Get Started</a>
+        <a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Get Started</a>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal-get-started">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close close-yt" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">Get Started with OmegaT</h4>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="ytvideo embed-responsive-item" src="//www.youtube.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""><!----></iframe>
+          </div>
+          <p class="text-center">Video by <a href="https://www.youtube.com/channel/UC2EFKLWWI4gh9BGpMf0-_5g">CATguruEN</a> (Dominique Pivard)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-yt" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid section">
     <p class="lead"><strong>OmegaT</strong> is a free translation memory application written in
 Java. It is a tool intended for professional translators. It does not
