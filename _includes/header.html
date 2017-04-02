@@ -1,34 +1,38 @@
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"/>
-            <span class="icon-bar"/>
-            <span class="icon-bar"/>
-          </button>
-          <a class="navbar-brand" href="{% tl index %}">
-            <img alt="OmegaT" class="logo-omegat" src="{{ "/img/omegat.svg" | prepend: site.baseurl_root }}" height="80" width="80"/>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"/>
+        <span class="icon-bar"/>
+        <span class="icon-bar"/>
+      </button>
+      <a class="navbar-brand" href="{% tl index %}">
+        <img alt="OmegaT" class="logo-omegat" src="{{ "/img/omegat.svg" | prepend: site.baseurl_root }}" height="80" width="80"/>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{% tl download %}">{% t menu.download %}</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="{% tl resources %}">{% t menu.resources %}</a></li>
+        <li><a href="{% tl documentation %}">{% t menu.documentation %}</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
+            {% translate menu.languages %}<span class="caret"/> <span class="sr-only">(current)</span>
+            </span>
           </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="{% tl download %}">{% t menu.download %}</a></li>
+          <ul class="dropdown-menu languages">
+            {% for lang in site.data.languages %}
+            <li{% if lang.enabled == false %} class="disabled"{% endif %}><a href="{{ site.baseurl_root }}{% if lang.code != 'en' %}/{{ lang.code }}{% endif %}{{ page.url }}">{{ lang.label }}</a></li>
+            {% endfor %}
           </ul>
-          <ul class="nav navbar-nav">
-            <li><a href="{% tl resources %}">{% t menu.resources %}</a></li>
-            <li><a href="{% tl documentation %}">{% t menu.documentation %}</a></li>
-          </ul>
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% translate menu.languages %}<span class="caret"/> <span class="sr-only">(current)</span></a>
-              <ul class="dropdown-menu languages">
-                {% for lang in site.data.languages %}
-                <li{% if lang.enabled == false %} class="disabled"{% endif %}><a href="{{ site.baseurl_root }}{% if lang.code != 'en' %}/{{ lang.code }}{% endif %}{{ page.url }}">{{ lang.label }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

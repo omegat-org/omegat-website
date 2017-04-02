@@ -1,10 +1,31 @@
+--- 
+--- 
 /*jshint bitwise:true, browser:true, camelcase:true, curly:true, devel:false, eqeqeq:false, forin:true, immed:true, indent:4, newcap:true, noarg:true, noempty:true, nonew:true, jquery:true, quotmark:true, regexp:false, strict:true, trailing:true, undef:true, unused:true */
 $(document).ready(function () {
     'use strict';
-    //var siteLang = $('html').attr('lang');
 
-    // TODO Show a language selection modal dialog if it's the first time visiting the site.
-    //$('#modalLanguageSelector').modal();
+    var root = '{{ site.baseurl_root }}';
+
+    // Show a language alert if it's the first time visiting the site and the navigator uses a different languages.
+    if (!readCookie('omegatFirstVisit')) {
+        var siteLang = $('html').attr('lang');
+        var userLang = window.navigator.languages ? window.navigator.languages[0] : null;
+        userLang = userLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage || '';
+        userLang = userLang.split(/[_-]/)[0];
+        console.log('userLang: ' + userLang + '/siteLang:' + siteLang);
+        if (userLang != siteLang) {
+            // Get localized message from /${userLang}/messages.json w/ Ajax
+            $.getJSON(root + '/' + userLang + '/messages.json', function (data) {
+                $('.language-popover').attr('title', data.languageTitle);
+                $('.language-popover').popover('show');
+                $('.popover-content').html(data.languageMessage);
+                setTimeout(function () {
+                    $('.language-popover').popover('hide');
+                }, 5000);
+            });
+        }
+        writeCookie('omegatFirstVisit', new Date());
+    }
 
     // Popover on download table
     $('[rel=popover][data-platform]').popover({
@@ -33,7 +54,7 @@ $(document).ready(function () {
     if (quoteCarousel.length) {
         quoteCarousel.carousel({
             pause: true,
-            interval: 4000,
+            interval: 4000
         });
     }
 
@@ -72,7 +93,7 @@ $(document).ready(function () {
                 type: $('input[name=optType]:checked').val(),
                 os: $('input[name=optOS]:checked').val(),
                 jre: $('input[name=optJRE]:checked').val(),
-                version: $('input[name=optVersion]:checked').val(),
+                version: $('input[name=optVersion]:checked').val()
             };
 
             //console.log(sel);
@@ -171,6 +192,18 @@ $(document).ready(function () {
         if (window.location.hash == '#selector') {
             $('#download-wizard').collapse();
         }
+    }
+
+
+    function readCookie(k) {
+        var v = document.cookie.match('(^|;)\\s*' + k + '\\s*=\\s*([^;]+)');
+        return v ? v.pop() : null;
+    }
+
+    function writeCookie(k, v) {
+        var date = new Date();
+        date.setYear(date.getFullYear() + 1); // expires in one year
+        document.cookie = k + '=' + v + ';expires=' + date.toGMTString() + ';path=/';
     }
 
 });
