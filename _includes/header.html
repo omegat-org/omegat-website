@@ -28,7 +28,7 @@
           </a>
           <ul class="dropdown-menu languages">
             {% for lang in site.data.languages %}
-            <li{% if lang.enabled == false %} class="disabled"{% endif %}><a href="{{ site.baseurl_root }}{% if lang.enabled == false %}#{% endif %}{% if lang.code != 'en' %}/{{ lang.code }}{% endif %}{{ page.url }}">{{ lang.label }}</a></li>
+            <li{% if lang.enabled == false %} class="disabled"{% endif %}><a href="{{ site.baseurl_root }}{% if lang.enabled == false %}/#{% endif %}{% if lang.code != 'en' %}/{{ lang.code }}{% endif %}{{ page.url }}">{{ lang.label }}</a></li>
             {% endfor %}
           </ul>
         </li>
