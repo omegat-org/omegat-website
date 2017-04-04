@@ -4,7 +4,7 @@
 
 <h3>Background and principles</h3>
 
-<p>Priorview is a small utility that provides a preview function for use with OmegaT. For the background and principles, refer to the <a href="./preview.html">Preview Howto</a>. This HowTo describes the use of Priorview for <b>Windows and Linux</b>. If you are using Mac OSX, you can <a href="../../resources/priorview_for_mac.zip">download a version of Priorview for Mac here</a>. The Mac OSX version is not yet documented and the information below does <b>not</b> apply to it.</p>
+<p>Priorview is a small utility that provides a preview function for use with OmegaT. For the background and principles, refer to the <a href="preview.html">Preview Howto</a>. This HowTo describes the use of Priorview for <b>Windows and Linux</b>. If you are using Mac OSX, you can <a href="{{ '/files/priorview_for_mac.zip' | prepend: site.baseurl_root }}">download a version of Priorview for Mac here</a>. The Mac OSX version is not yet documented and the information below does <b>not</b> apply to it.</p>
 
 <h3>Software required</h3>
 
@@ -36,7 +36,7 @@
 
 <p>Almost any current version of Tcl/Tk will probably be suitable, but you must have both Tcl (the scripting interpreter) and Tk (the graphical component).</p>
 
-<p>4. <b><a href="../../resources/priorview.zip">Priorview</a></b></p>
+<p>4. <b><a href="{{ '/files/priorview.zip' | prepend: site.baseurl_root }}">Priorview</a></b></p>
 
 <p>To install Priorview, simply unpack the zip archive at any suitable location on your hard drive. To launch Priorview, open a command prompt/terminal/console and type in:</p>
 
@@ -82,7 +82,7 @@
 
 <p>The Quit button closes Priorview and also deletes the temporary files that it creates. (Other methods of closing Priorview will not delete the temporary files.)</p>
 
-<p><img src="../../images/preview_ss.png" alt="preview_ss.png"></img></p>
+<p><img src="{{ '/img/preview_ss.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"></img></p>
 
 <p><i>A European Commission press release (in .odt format) in OmegaT and below it the instantaneous target text displayed in Opera. Bottom right: the Priorview utility. The layout shown here is just for the sake of example; you can of course arrange the windows as you like.</i></p>
 
@@ -107,7 +107,7 @@
 
 <li>That you are remembering to hit Ctrl+s, Ctrl+d in OmegaT. Until/unless you do, there will be no changes to detect/display!</li>
 
-<li>That the file conversion utility is installed properly and is working. You can test this with the relevant command below on the command line (terminal/console/DOS prompt). In each case, <i>file</i> is the name of a .docx or .odt file. If all is well, an .html version of the file will be produced:<br/> For Abiword:<br/> abiword --to=html <i>file</i><br/> For LibreOffice+Unoconv:br/> unoconv -f html <i>file</i><br/></li>
+<li>That the file conversion utility is installed properly and is working. You can test this with the relevant command below on the command line (terminal/console/DOS prompt). In each case, <i>file</i> is the name of a .docx or .odt file. If all is well, an .html version of the file will be produced:<br/> For Abiword:<br/> <kbd>abiword --to=html <i>file</i></kbd><br/> For LibreOffice+Unoconv:<br/> <kbd>unoconv -f html <i>file</i></kbd></li>
 
 <li>That you have set the auto-refresh interval in the browser.</li>
 

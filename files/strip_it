@@ -1,0 +1,22 @@
+Sub StripIT
+
+REM *****************************************************************************
+REM This short macro can be used to remove all internal tags from OmT TMX files.
+REM To use this macro, open your TMX as unicode (UTF-8), run the macro and 
+REM save the TMX with a new name. 
+REM *****************************************************************************
+
+
+Dim Doc as Object
+Dim Replace as Object
+
+Doc = StarDesktop.CurrentComponent
+Replace = Doc.createReplaceDescriptor
+
+Replace.SearchRegularExpression = "True"
+Replace.SearchString = "&lt;/?[fst][:digit:]?{1,2}&gt;"
+Replace.ReplaceString =""
+
+Doc.replaceAll(Replace)
+
+end sub

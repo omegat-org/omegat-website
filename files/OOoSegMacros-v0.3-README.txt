@@ -1,0 +1,61 @@
+These OpenOffice.org (OOo) macros will allow you to segment a text to a sentence level instead of paragraphs.
+It is meant to prepare text for translation with the OmegaT CAT if you prefer sentence segmentation.
+
+WHAT'S NEW IN V. 0.3
+  New macro to combine both segmentation rules for both 1 and 2 spaces after punctuation (this is for messy texts mixing
+       both styles)
+  Better looking code.
+
+KNOWN PROBLEM: it seems a bug in the search replace feature
+  of OpenOffice v. 1.0.1 generates an error.
+  Please use with v. 1.1.0 or above.
+
+SETUP:
+  a - in OpenOffice.org, Tools menu > Macros > Macro.
+  b - select or create a module (default is Module1, just as good as any), and click Edit.
+  c - in the BASIC window, go to the end of the file, and paste this whole text.
+  d - save and close. You can now use the macros by Tools menu > Macros > Macro,
+        select a macro and click Run.
+  e - it is possible to add keyboard shortcuts or buttons to run macros easily in OOo.
+
+USAGE:
+  1 - To prepare a file (i.e. segment it into sentences):
+  1a - open it in OpenOffice.org.
+  1b - if sentences in your SOURCE text are separated by dot-1 space,
+        run the Segment1Space macro on your source text.
+  1c - if sentences in your SOURCE text are separated by dot-2 spaces,
+        run the Segment2Spaces macro on your source text.
+  2 - translate your text and compile it.
+  3 - To finish a file (i.e. restore the original segmentation):
+  3a - open it in OpenOffice.org.
+  3b - if you want sentences in your TARGET text to be separated by dot-1 space,
+        run the UnSegment1Space macro on your target text.
+  3c - if you want sentences in your TARGET text to be separated by dot-2 spaces,
+        run the UnSegment2Spaces macro on your target text.
+  4 - that's it!
+  NOTE: the UnSegment macros might be a bit slow on a big document
+  NOTE: OOo's repagination feature can take a while to catch up after running these macros.
+
+Version history:
+0.1: (2004/03/06) First release - Benjamin Siband
+0.2: (2004/03/06) Cosmetic changes - Benjamin Siband
+    - changed the loop's findFirst into findNext
+    - cleaned the code from unnecessary structure declarations
+0.3: (2004/03/12) Optimization + New function - Benjamin Siband
+    - optimization: the common code for the segmentation macros has been extracted into a new procedure
+    - new segmentation macro for both 1 and 2 spaces after punctuation (this is for messy texts mixing
+       both styles)
+
+Ideas for future development:
+- language versions of the macros (esp. for the list of abbr., but also segmentation rules).
+       Please provide special requirements.
+- read the list of abbreviations from an external file
+- auto-installer
+
+***  DISCLAIMER  *****
+The author has done some basic testing on these macros, and they seem to work well, for him.
+Always keep backups of your files before you run these macros!!!
+The author shall not be held responsible is anything goes wrong with the use of these macros.
+Testing has been done with OpenOffice.org v. 1.1.0, English version, on Windows XP, English US version.
+
+Please email any comments/bugs/suggestions for improvement on the OmegaT @ Yahoo groups mailing list.

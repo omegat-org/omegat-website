@@ -1,0 +1,297 @@
+REM  *****  BASIC  *****
+
+
+REM    These OpenOffice.org (OOo) macros will allow you to segment a text to a sentence level instead of paragraphs.
+REM    It is meant to prepare text for translation with the OmegaT CAT if you prefer sentence segmentation.
+REM
+REM    WHAT'S NEW IN V. 0.3
+REM      New macro to combine both segmentation rules for both 1 and 2 spaces after punctuation (this is for messy texts mixing
+REM           both styles)
+REM      Better looking code.
+
+
+REM    KNOWN PROBLEM: it seems a bug in the search replace feature
+REM      of OpenOffice v. 1.0.1 generates an error.
+REM      Please use with v. 1.1.0 or above.
+REM
+REM    SETUP:
+REM      a - in OpenOffice.org, Tools menu > Macros > Macro.
+REM      b - select or create a module (default is Module1, just as good as any), and click Edit.
+REM      c - in the BASIC window, go to the end of the file, and paste this whole text.
+REM      d - save and close. You can now use the macros by Tools menu > Macros > Macro,
+REM            select a macro and click Run.
+REM      e - it is possible to add keyboard shortcuts or buttons to run macros easily in OOo.
+REM
+REM    USAGE:
+REM      1 - To prepare a file (i.e. segment it into sentences):
+REM      1a - open it in OpenOffice.org.
+REM      1b - if sentences in your SOURCE text are separated by dot-1 space,
+REM            run the Segment1Space macro on your source text.
+REM      1c - if sentences in your SOURCE text are separated by dot-2 spaces,
+REM            run the Segment2Spaces macro on your source text.
+REM      2 - translate your text and compile it.
+REM      3 - To finish a file (i.e. restore the original segmentation):
+REM      3a - open it in OpenOffice.org.
+REM      3b - if you want sentences in your TARGET text to be separated by dot-1 space,
+REM            run the UnSegment1Space macro on your target text.
+REM      3c - if you want sentences in your TARGET text to be separated by dot-2 spaces,
+REM            run the UnSegment2Spaces macro on your target text.
+REM      4 - that's it!
+REM      NOTE: the UnSegment macros might be a bit slow on a big document
+REM      NOTE: OOo's repagination feature can take a while to catch up after running these macros.
+REM
+REM    Version history:
+REM    0.1: (2004/03/06) First release - Benjamin Siband
+REM    0.2: (2004/03/06) Cosmetic changes - Benjamin Siband
+REM        - changed the loop's findFirst into findNext
+REM        - cleaned the code from unnecessary structure declarations
+REM    0.3: (2004/03/12) Optimization + New function - Benjamin Siband
+REM        - optimization: the common code for the segmentation macros has been extracted into a new procedure
+REM        - new segmentation macro for both 1 and 2 spaces after punctuation (this is for messy texts mixing
+REM           both styles)
+REM
+REM    Ideas for future development:
+REM    - language versions of the macros (esp. for the list of abbr., but also segmentation rules).
+REM           Please provide special requirements.
+REM    - read the list of abbreviations from an external file
+REM    - auto-installer
+REM
+REM  *****  DISCLAIMER  *****
+REM    The author has done some basic testing on these macros, and they seem to work well, for him.
+REM    Always keep backups of your files before you run these macros!!!
+REM    The author shall not be held responsible is anything goes wrong with the use of these macros.
+REM    Testing has been done with OpenOffice.org v. 1.1.0, English version, on Windows XP, English US version.
+REM
+REM    Please email any comments/bugs/suggestions for improvement on the OmegaT @ Yahoo groups mailing list.
+
+Const SINGLESPACING = 1
+Const DOUBLESPACING = 2
+Const BOTHSPACING = 3
+
+Global gAbbr As String
+
+Sub Main
+
+	rem ----------------------------------------------------------------------
+	rem    Mark common abbr. (M., Mr., Mrs., Ms., Dr.) for "no segmentation"
+	rem ----------------------------------------------------------------------
+	rem    Add new abbr. here. Do not forget "\<" for "beginning of word",
+	rem	   and "\." for the dot.
+	gAbbr = "\<M\.|\<Mr\.|\<Mrs\.|\<Ms\.|\<Dr\."
+
+End Sub
+
+sub subSegmentCommon(parSpacing as Integer)
+rem ----------------------------------------------------------------------
+rem define variables
+dim document   as object
+dim dispatcher as object
+rem ----------------------------------------------------------------------
+rem get access to the document
+document   = ThisComponent.CurrentController.Frame
+dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+
+rem ----------------------------------------------------------------------
+rem    Prepare the structure used for searches
+rem ----------------------------------------------------------------------
+dim SRargs(18) as new com.sun.star.beans.PropertyValue
+SRargs(0).Name = "SearchItem.StyleFamily"
+SRargs(0).Value = 2
+SRargs(1).Name = "SearchItem.CellType"
+SRargs(1).Value = 0
+SRargs(2).Name = "SearchItem.RowDirection"
+SRargs(2).Value = true
+SRargs(3).Name = "SearchItem.AllTables"
+SRargs(3).Value = false
+SRargs(4).Name = "SearchItem.Backward"
+SRargs(4).Value = false
+SRargs(5).Name = "SearchItem.Pattern"
+SRargs(5).Value = false
+SRargs(6).Name = "SearchItem.Content"
+SRargs(6).Value = false
+SRargs(7).Name = "SearchItem.AsianOptions"
+SRargs(7).Value = false
+SRargs(8).Name = "SearchItem.AlgorithmType"
+SRargs(8).Value = 1
+SRargs(12).Name = "SearchItem.Locale"
+SRargs(12).Value = 255
+SRargs(13).Name = "SearchItem.ChangedChars"
+SRargs(13).Value = 2
+SRargs(14).Name = "SearchItem.DeletedChars"
+SRargs(14).Value = 2
+SRargs(15).Name = "SearchItem.InsertedChars"
+SRargs(15).Value = 2
+SRargs(16).Name = "SearchItem.TransliterateFlags"
+SRargs(16).Value = 1024
+SRargs(17).Name = "SearchItem.Command"
+SRargs(17).Value = 3
+SRargs(18).Name = "Quiet"
+SRargs(18).Value = true
+
+rem ----------------------------------------------------------------------
+rem    Mark common abbr. for "no segmentation". The abbr. list is global
+rem ----------------------------------------------------------------------
+SRargs(10).Name = "SearchItem.SearchString"
+SRargs(10).Value = gAddr
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65552
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = "&[NoSeg-DOT]"
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+rem ----------------------------------------------------------------------
+rem   Because OOo only allows to reuse the whole search pattern, so we
+rem      can't replace "dot-space-cap" with
+rem      "dot-paragraph-segmentmark-paragraph-cap", it is first
+rem      necessary to first replace with "mark1-SearchString", then next
+rem      step is to replace "mark1-dot" with
+rem      "dot-paragraph-segmentmark-paragraph".
+rem ----------------------------------------------------------------------
+
+rem ----------------------------------------------------------------------
+rem   Find all remaining "dot|exclamation mark|question mark-space-cap"
+rem      and mark them for replacement.
+rem ----------------------------------------------------------------------
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65536
+SRargs(10).Name = "SearchItem.SearchString"
+If parSpacing = SINGLESPACING Then
+	SRargs(10).Value = "\. [A-Z1-3]|! [A-Z1-3]|\? [A-Z1-3]"
+Else If parSpacing = DOUBLESPACING Then
+		SRargs(10).Value = "\.  [A-Z1-3]|!  [A-Z1-3]|\?  [A-Z1-3]"
+	Else
+		SRargs(10).Value = "\.  [A-Z1-3]|!  [A-Z1-3]|\?  [A-Z1-3]|\. [A-Z1-3]|! [A-Z1-3]|\? [A-Z1-3]"
+	End If
+End If
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = "=======&"
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+rem ----------------------------------------------------------------------
+rem   Find all dot+marks and replace them with
+rem      "dot-paragraph-segmentmark-paragraph"
+rem ----------------------------------------------------------------------
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65536
+SRargs(10).Name = "SearchItem.SearchString"
+SRargs(10).Value = "=======\.  |=======\. "
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = ".\n\t\t\t\n"
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+rem ----------------------------------------------------------------------
+rem   Find all question mark+marks and replace them with
+rem      "question mark-paragraph-segmentmark-paragraph"
+rem ----------------------------------------------------------------------
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65536
+SRargs(10).Name = "SearchItem.SearchString"
+SRargs(10).Value = "=======\? |=======\?  "
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = "?\n\t\t\t\n"
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+rem ----------------------------------------------------------------------
+rem   Find all exclamation mark+marks and replace them with
+rem      "exclamation mark-paragraph-segmentmark-paragraph"
+rem ----------------------------------------------------------------------
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65536
+SRargs(10).Name = "SearchItem.SearchString"
+SRargs(10).Value = "=======\! |=======\!  "
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = "!\n\t\t\t\n"
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+
+rem ----------------------------------------------------------------------
+rem   Restore all abbreviations
+rem ----------------------------------------------------------------------
+SRargs(8).Name = "SearchItem.AlgorithmType"
+SRargs(8).Value = 0
+SRargs(9).Name = "SearchItem.SearchFlags"
+SRargs(9).Value = 65536
+SRargs(10).Name = "SearchItem.SearchString"
+SRargs(10).Value = "[NoSeg-DOT]"
+SRargs(11).Name = "SearchItem.ReplaceString"
+SRargs(11).Value = ""
+
+dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, SRargs())
+
+
+end sub
+
+sub Segment1Space
+rem ----------------------------------------------------------------------
+rem ----------------------------------------------------------------------
+
+	subSegmentCommon(SINGLESPACING)
+
+end sub
+
+sub Segment2Spaces
+rem ----------------------------------------------------------------------
+rem ----------------------------------------------------------------------
+
+	subSegmentCommon(DOUBLESPACING)
+
+end sub
+
+sub Segment1and2Spaces
+rem ----------------------------------------------------------------------
+rem ----------------------------------------------------------------------
+
+	subSegmentCommon(BOTHSPACING)
+
+end sub
+
+sub UnSegment1Space
+
+oDoc = thisComponent 
+'Set up find & replace. 
+FandR=oDoc.createReplaceDescriptor() 
+'We need to use Regular Expressions to find paragraph break. 
+FandR.searchRegularExpression = true 
+'We want to find a line made of 3 tabs.  
+FandR.setSearchString("^\t\t\t$") 
+'Find it. 
+FindCursor = oDoc.findFirst(FandR) 
+Do While Not IsNull(FindCursor)
+	'"3 tabs" is now selected so extend the selection by 1 on each side
+	'to add the paragraph breaks to the selection. 
+	FindCursor.goLeft(4,false) 
+	FindCursor.goRight(5,true) 
+	'replace the selection with space. 
+	FindCursor.setString(" ") 
+	FindCursor = oDoc.findNext(FindCursor.End,FandR) 
+Loop
+end sub
+
+
+sub UnSegment2Spaces
+
+oDoc = thisComponent 
+'Set up find & replace. 
+FandR=oDoc.createReplaceDescriptor() 
+'We need to use Regular Expressions to find paragraph break. 
+FandR.searchRegularExpression = true 
+'We want to find a line made of 3 tabs.  
+FandR.setSearchString("^\t\t\t$") 
+'Find it. 
+FindCursor = oDoc.findFirst(FandR) 
+Do While Not IsNull(FindCursor)
+	'"3 tabs" is now selected so extend the selection by 1 on each side
+	'to add the paragraph breaks to the selection. 
+	FindCursor.goLeft(4,false) 
+	FindCursor.goRight(5,true) 
+	'replace the selection with space. 
+	FindCursor.setString("  ") 
+	FindCursor = oDoc.findNext(FindCursor.End,FandR) 
+Loop
+end sub
+
