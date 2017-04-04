@@ -21,14 +21,14 @@ description: > # this means to ignore newlines until "baseurl:"
 
 # the subpath of your site, e.g. /blog
 baseurl: ""
+
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "http://www.omegat.org"
 
 # Github
+url: "https://omegat-org.github.io"
 baseurl: "/omegat-website"
 
-#production_url: "http://localhost:4000"
-production_url: "https://omegat-org.github.io"
 
 twitter_username: OmegaTOfficial
 github_username:  omegat-org
