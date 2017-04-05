@@ -155,8 +155,7 @@ aversion to reading instructions, and your approach to new software is to click
 on every button you see until something resembling the desired effect occurs,
 then OmegaT is probably not suitable for you.</p>
 
-<a name="downloads"></a>
-<h3 id="standard">Standard Version - {{site.data.versions.standard.name '}}</h3>
+<h3 id="downloads">Standard Version - {{site.data.versions.standard.name '}}</h3>
 
 <p>The Standard version has usually been in use for some time and is therefore
 proven. Its documentation, at least in English, is usually reasonably up to
@@ -177,7 +176,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
       <td>
       {% if platform.noInfo != true %}
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_{{ platform.name }}"/>
+          <div id="info_{{ platform.name }}"></div>
       {% endif %}
       </td>
       <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
@@ -280,7 +279,7 @@ space on your hard drive. In this case, do not select the Default version; selec
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing">Signed/Unsigned</h4>
+<h4 id="about_signing_unsigned">Signed/Unsigned</h4>
 
 <p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
 

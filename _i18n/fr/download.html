@@ -76,7 +76,9 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 <p>Les fichiers au format Microsoft Office XML peuvent être traduits directement dans OmegaT. Par contre, les fichiers créés dans un format MS Word, Excel ou Powerpoint plus ancien doivent être convertis dans les formats correspondants d&#39;OpenOffice.org, Apache OpenOffice ou LibreOffice (suites bureautiques libres et gratuites). Vous pouvez obtenir Apache OpenOffice ou LibreOffice à partir de la page « Logiciels tiers » accessible via le menu sur la gauche de l&#39;écran.</p>
 
 <h4>Profil utilisateur</h4>
-<p>Bien que l&#39;installation et l&#39;utilisation d&#39;OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d&#39;une manière générale, vous avez une certaine aversion pour la lecture d&#39;instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l&#39;attente que quelque chose ressemblant à l&#39;effet recherché se produise, alors OmegaT n&#39;est probablement pas le bon outil pour vous.</p><a name="downloads"></a><h3 id="standard">Version standard - {{site.data.versions.standard.name &#39;}}</h3>
+<p>Bien que l&#39;installation et l&#39;utilisation d&#39;OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d&#39;une manière générale, vous avez une certaine aversion pour la lecture d&#39;instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l&#39;attente que quelque chose ressemblant à l&#39;effet recherché se produise, alors OmegaT n&#39;est probablement pas le bon outil pour vous.</p>
+
+<h3 id="downloads">Version standard - {{site.data.versions.standard.name &#39;}}</h3>
 
 <p>La version standard est la version normalement utilisée ; elle se distingue par sa fiabilité. La documentation qui l&#39;accompagne est relativement à jour, du moins en ce qui concerne la documentation en anglais. Elle n&#39;intègre cependant pas toutes les fonctionnalités de la version « récente ».</p>
 
@@ -90,7 +92,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
   </thead>
   <tbody>{% for platform in site.data.versions.standard.platforms %}<tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
-      <td>{% if platform.noInfo != true %} <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span><div id="info_{{ platform.name }}"/>{% endif %}</td>
+      <td>{% if platform.noInfo != true %} <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span><div id="info_{{ platform.name }}"></div>{% endif %}</td>
       <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger </a></td>
   </tr>{% endfor %}</tbody>
 
@@ -168,7 +170,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing">Signé / Non signé</h4>
+<h4 id="about_signing_unsigned">Signé / Non signé</h4>
 
 <p>Mac OS X dispose d&#39;une fonctionnalité appelée « Gatekeeper » qui renforce la sécurité en contraignant l&#39;exécution de programmes non signés. OmegaT pour Mac OS X est disponible en version signée et non signée ; elles sont fonctionnellement identiques, mais la version signée est préférée car elle est reconnue par le système comme étant publiée par un développeur connu.</p>
 
