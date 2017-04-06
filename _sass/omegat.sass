@@ -45,6 +45,16 @@ h3
 .navbar-brand
   padding: 9px 15px
 
+// When used on smartphone, the OmT icon overlapse the menu
+.navbar-default .navbar-collapse, .navbar-default .navbar-form
+  padding-left: 100px
+
+// Realign the languages selection list
+@media (max-width: 767px)
+  .navbar-nav .open .dropdown-menu
+    margin-left: -60px
+    margin-right: 40px
+
 .jumbotron
   background-color: $colorPrimary
   // https://unsplash.com/photos/5iNFD-IkUP8
@@ -73,7 +83,6 @@ h3
 
 .jumbo-page h1
   color: $colorDark
-  
 
 .title-buttons
   padding: 1rem
@@ -112,16 +121,6 @@ nav .container-fluid
 
 .navbar
   margin-bottom: 0
-
-// When used on smartphone, the OmT icon overlapse the menu
-.navbar-default .navbar-collapse, .navbar-default .navbar-form
-  padding-left: 100px
-
-// Realign the languages selection list
-@media (max-width: 767px)
-  .navbar-nav .open .dropdown-menu
-    margin-left: -60px
-    margin-right: 40px
 
 .title-buttons 
   text-align: center
@@ -167,6 +166,7 @@ footer ul li
   margin: 30px -15px 0 -15px
   line-height: 33px
   font-weight: bold
+  clear: both
 
 footer h4
   text-align: center
@@ -175,6 +175,9 @@ footer h4
 
 .footer-column
   text-align: left
+
+  .footer-links
+    margin: 0 auto
 
   .header-line
     margin: 4px auto
