@@ -30,7 +30,7 @@ url: "https://omegat-org.github.io"
 baseurl: "/omegat-website"
 
 # Used by the jekyll-seo-tag plugin
-logo: http://localhost:4000/omegat-website/omegat_96.png
+logo: https://omegat-org.github.io/omegat-website/img/omegat_96.png
 twitter:
   username: OmegaTOfficial
 #facebook:
