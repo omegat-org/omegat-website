@@ -1,23 +1,16 @@
 <div class="container">
-  <h3>À propos de ce site</h3>
-  <p>Ce site est maintenu pour le compte du projet OmegaT par :</p>
-  <p>Marc Prior<br/> Baumeistersweg 12<br/> 45896 Gelsenkirchen<br/> Germany<br/> <br/> Tel. +49 209 94757413<br/> VAT ID DE160842097</p>
-  <table>
-    <tbody>
-      <tr>
-        <td>Contenu du site Web :</td>
-        <td>Marc Prior, Briac Pilpré</td>
-      </tr>
-      <tr>
-        <td>Conception graphique du site :</td>
-        <td>Briac Pilpré</td>
-      </tr>
-      <tr>
-        <td>Traduction du site dans cette langue :</td>
-        <td>{% translate global.translators %}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h2>À propos de ce site</h2>
+
+  <div class="text-md-center">
+  <h3>Auteurs du contenu du site</h3>
+  <ul class="list-unstyled">{% for author in site.data.credits.website %}<li>{{ author }}</li>{% endfor %}</ul>
+
+  <h3>Conception du site web</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>{% if site.lang != &quot;en&quot; %}<h3>Traducteurs de la version française</h3>
+  <ul class="list-unstyled">{% for translator in site.data.credits.translators[site.lang] %}<li>{{ translator }}</li>{% endfor %}</ul>{% endif %}
+  </div>
   <h2>Le projet OmegaT</h2>
   <p>Le projet OmegaT existe grâce à un groupe informel et international de bénévoles. Son objectif est de développer, distribuer et promouvoir OmegaT, un logiciel open source de mémoire de traduction.</p>
   <p>Les principaux acteurs du projet sont :</p>
@@ -37,49 +30,7 @@
     <h3>Responsable de la localisation, propriétaire du groupe des utilisateurs</h3>
     <p>Jean-Christophe Helary</p>
     <h3>Développeurs</h3>
-    <ul class="list-unstyled">
-      <li>Keith Godfrey</li>
-      <li>Lev Abashkin</li>
-      <li>Zoltan Bartko</li>
-      <li>Volker Berlin</li>
-      <li>Didier Briel</li>
-      <li>Kim Bruning</li>
-      <li>Alex Buloichik</li>
-      <li>Thomas Cordonnier</li>
-      <li>Sandra Jean Chua</li>
-      <li>Enrique Estévez Fernández</li>
-      <li>Martin Fleurke</li>
-      <li>Wildrich Fourie</li>
-      <li>Tony Graham</li>
-      <li>Phillip Hall</li>
-      <li>Jean-Christophe Helary</li>
-      <li>Chihiro Hio</li>
-      <li>Thomas Huriaux</li>
-      <li>Hans-Peter Jacobs</li>
-      <li>Kyle Katarn</li>
-      <li>Piotr Kulik</li>
-      <li>Ibai Lakunza Velasco</li>
-      <li>Guido Leenders</li>
-      <li>Aaron Madlon-Kay</li>
-      <li>Fabián Mandelbaum</li>
-      <li>Manfred Martin</li>
-      <li>Adiel Mittmann</li>
-      <li>Hiroshi Miura</li>
-      <li>John Moran</li>
-      <li>Maxym Mykhalchuk</li>
-      <li>Arno Peters</li>
-      <li>Henry Pijffers</li>
-      <li>Briac Pilpré</li>
-      <li>Tiago Saboga</li>
-      <li>Andrzej Sawuła</li>
-      <li>Benjamin Siband</li>
-      <li>Yu Tang</li>
-      <li>Rashid Umarov</li>
-      <li>Antonio Vilei</li>
-      <li>Ilia Vinogradov</li>
-      <li>Martin Wunderlich</li>
-      <li>Michael Zakharov</li>
-    </ul>
+    <ul class="list-unstyled">{% for dev in site.data.credits.developers %}<li>{{ dev }}</li>{% endfor %}</ul>
   </div>
   <p>Pour mieux comprendre l&#39;esprit OmegaT, nous vous invitons à découvrir la <a href="philosophy.html">philosophie du projet</a>.</p>
   <p>Depuis ses débuts, le projet a reçu le soutien de bien d&#39;autres contributeurs, hélas trop nombreux pour être cités ici, mais pour l&#39;aide desquels nous sommes très reconnaissants.</p>

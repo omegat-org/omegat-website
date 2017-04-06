@@ -1,7 +1,6 @@
 global:
   title: OmegaT, l'outil libre de TAO
-  # Name of the translators for this version of the website
-  translators: Marc Prior, Briac Pilpré
+  description: OmegaT est un logiciel libre de TAO écrit en Java conçu et pour des traducteurs professionnels.
 
 menu:
   languages: Langues

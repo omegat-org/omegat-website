@@ -1,7 +1,6 @@
 global:
   title: OmegaT - The Free Translation Memory Tool
-  # Name of the translators for this version of the website
-  translators: Marc Prior, Briac Pilpré
+  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
 
 menu:
   languages: Languages
