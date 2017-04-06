@@ -9,3 +9,5 @@ js/omegat.min.js
 js/bootstrap.min.css
 js/bootstrap.min.js
 js/jquery.min.js
+*.swo
+*.bak
