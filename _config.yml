@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Omegat - The Free Translation Memory Tool
+title: Omegat - The Free Open-Source Translation Memory Tool
 email: contact@omegat.org
 description: > # this means to ignore newlines until "baseurl:"
-  OmegaT is a free translation memory application written in Java. It is a tool
-  intended for professional translators. 
+  OmegaT is a free open-source translation memory application written in Java.
+  It is a tool intended for professional translators. 
 
 # the subpath of your site, e.g. /blog
 baseurl: ""
@@ -29,9 +29,21 @@ url: "http://www.omegat.org"
 url: "https://omegat-org.github.io"
 baseurl: "/omegat-website"
 
-
-twitter_username: OmegaTOfficial
-github_username:  omegat-org
+# Used by the jekyll-seo-tag plugin
+logo: http://localhost:4000/omegat-website/omegat_96.png
+twitter:
+  username: OmegaTOfficial
+#facebook:
+#  app_id:
+#  publisher:
+#  admins:
+social:
+  name: OmegaT
+  links:
+    - https://sourceforge.net/projects/omegat/
+    - https://github.com/omegat-org/
+    - https://twitter.com/OmegaTOfficial
+    - https://www.facebook.com/OmegaTOfficial
 
 # i18n plugin
 languages: [ "en" , "fr" ] #"ar", "ca", "cz", "de", "el", "es", "gl", "id", "ia", "it", "ko", "hu", "ja", "nl", "pl", "br", "pt", "ru", "sq", "sk", "si", "hr", "fi", "sv", "zh_CN", "zh_TW" ]
