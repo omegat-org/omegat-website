@@ -15,8 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="{{ '/js/omegat.js' | prepend: site.baseurl_root }}"></script>
 
-  {% assign page_description = page.excerpt | default: t(global.description) | strip_html | normalize_whitespace | truncate: 160 | escape  %}
-  <meta name="description" content="{{ page_description }}">
+  <meta name="description" content="{% t global.description %}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
@@ -28,7 +27,7 @@
   <!-- SEO tags -->
   {% comment %}<!-- The jekyll-seo-tag plugin does not play well with jekyll-multiple-languages-plugin, so we write the SEO tags ourselves-->{% endcomment %}
   <meta property="og:title"       content="{% t page.title %} - OmegaT" />
-  <meta property="og:description" content="{{ page_description }}" />
+  <meta property="og:description" content="{% t global.description %}" />
   <meta property="og:url"         content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="og:site_name"   content="{% t global.title %}" />
   {% comment %}
