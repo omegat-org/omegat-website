@@ -192,6 +192,19 @@ $(document).ready(function () {
         if (window.location.hash == '#selector') {
             $('#download-wizard').collapse();
         }
+
+        // Close the popovers when the user clicks elsewhere.
+        // http://stackoverflow.com/a/14857326
+        $(document).on('click', function (e) {
+            $('[data-toggle="popover"],[data-original-title]').each(function () {
+                //the 'is' for buttons that trigger popups
+                //the 'has' for icons within a button that triggers a popup
+                if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {                
+                    (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false  // fix for BS 3.3.6
+                }
+        
+            });
+        });
     }
 
 
