@@ -1,0 +1,218 @@
+h1, h2, ,h3
+  color: $colorPrimary
+  font-weight: 700
+
+//.container h2
+//  text-align: left
+
+h2
+  width: 100%
+  text-align: center
+
+.header-line
+  width: 40px
+  height: 1px
+  background-color: $colorDark
+  margin: 20px auto
+
+h3
+  text-align: center
+
+.navbar
+  background-color: $colorPrimary
+  border: none
+  border-bottom: Solid 1px $colorLight
+  border-radius: 0
+
+.box
+  margin-bottom: 30px
+  width: 290px
+  min-height: 100px
+  padding-bottom: 24px
+  background-color: #fff
+  box-shadow: 0 2px 0 0 rgba(0,0,0,.15)
+  border: 1px solid #e5e5e5
+
+.navbar-default .navbar-nav>li>a, footer li>a,
+  color: #000
+  &:hover
+    color: #000
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+  background-color: $colorLight
+  color: inherit
+
+.navbar-brand
+  padding: 9px 15px
+
+// When used on smartphone, the OmT icon overlapse the menu
+.navbar-default .navbar-collapse, .navbar-default .navbar-form
+  padding-left: 100px
+
+// Realign the languages selection list
+@media (max-width: 767px)
+  .navbar-nav .open .dropdown-menu
+    margin-left: -60px
+    margin-right: 40px
+
+.jumbotron
+  background-color: $colorPrimary
+  // https://unsplash.com/photos/5iNFD-IkUP8
+  background-image: $imgHeader
+  text-align: center
+  //height: 500px
+  box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5)
+
+.jumbotron h1
+  //margin-top: 100px
+  font-family: 'Linux Libertine Semibold'
+  //@include stroke(3, #fff)
+
+.jumbotron h1 small
+  display: block
+  font-size: 50%
+  font-family: sans-serif
+
+.jumbotron h1, .jumbotron h1 small
+  color: #fff
+
+.jumbo-page
+  background-image: $imgDownload
+  height: 110px
+  padding-top: 4px
+
+.jumbo-page h1
+  color: $colorDark
+
+.title-buttons
+  padding: 1rem
+  a.btn
+    margin: 2rem 4rem 1rem 0rem
+    width: 150px
+
+.view-details
+  margin-top: 5px
+  text-align: center
+
+.project
+  text-align: center
+
+.project h3
+  margin-top: auto
+
+.project .glyphicon
+  font-size: 22px
+  color: $colorPrimary
+
+.project p
+  text-align: justify
+
+.container .jumbotron, .container-fluid .jumbotron
+  border-radius: 0
+
+.section
+  padding-left: 20%
+  padding-right: 20%
+  margin-bottom: 10px
+
+nav .container-fluid
+  padding-left: 15px
+  padding-right: 15px
+
+.navbar
+  margin-bottom: 0
+
+.title-buttons 
+  text-align: center
+
+.btn-primary
+  background-color: $colorDark
+  border-color: #fff
+  border: solid 1px white
+  border-radius: 9px
+
+  &:hover
+    background-color: darken($colorDark, 10%)
+    //border-color: $colorDark
+    border-color: #fff
+
+a
+  color: $colorLinks
+  &:focus, &:hover
+    color: darken($colorLinks, 10%)
+
+.text-md-center
+  text-align: center
+
+footer
+  margin-top: 25px
+  padding-top: 10px
+  background-color: $colorPrimary
+  box-shadow: 0px -4px 15px 1px rgba(0, 0, 0, 0.5)
+
+footer .glyphicon
+  font-size: 20px
+  margin-right: 5px
+  color: #fff
+
+footer ul li
+  height: 28px
+  list-style-type: none
+  white-space: nowrap
+
+.footer-copyright
+  background-color: lighten($colorPrimary, 3%)
+  border-top: Solid 1px lighten($colorPrimary, 10%)
+  margin: 30px -15px 0 -15px
+  line-height: 33px
+  font-weight: bold
+  clear: both
+
+footer h4
+  text-align: center
+  //border-bottom: solid 1px $colorLight
+  //padding-bottom: 5px
+
+.footer-column
+  text-align: left
+
+  .footer-links
+    margin: 0 auto
+
+  .header-line
+    margin: 4px auto
+
+  .glyphicon
+    color: #040805
+
+ul.languages
+  columns: 3
+  -webkit-columns: 3
+  -moz-columns: 3
+  background-color: $colorLight
+
+//.panel-body
+//  padding: 15px
+
+.im-centered
+  margin: auto
+  max-width: 600px
+
+.im-centered img
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7)
+  margin: 15px auto
+
+.downloads .popover
+  cursor: pointer
+  max-width: 50%
+
+#page-omegat-and-you
+  background-color: $colorLightGray
+
+#page-download
+  background-image: $imgDownload 
+
+.whitebox
+  border-radius: 10px
+  background-color: rgba(255, 255, 255, 0.6)
+

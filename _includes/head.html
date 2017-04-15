@@ -9,11 +9,12 @@
   <link rel="icon" sizes="192x192" href="{{ '/img/omegat_192.png' | prepend: site.baseurl_root }}"/>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="{{ '/css/omegat.css' | prepend: site.baseurl_root }}"/>
+  {% css omegat %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="{{ '/js/omegat.js' | prepend: site.baseurl_root }}"></script>
+  {% js omegat %}
+
 
   <meta name="description" content="{% t global.description %}">
 

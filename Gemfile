@@ -30,6 +30,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # 
+gem 'uglifier'
 gem 'jekyll-multiple-languages-plugin'
 gem 'jekyll-sitemap'
+gem 'jekyll-assets'
 

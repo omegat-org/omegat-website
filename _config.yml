@@ -17,7 +17,7 @@ title: Omegat - The Free Open-Source Translation Memory Tool
 email: contact@omegat.org
 description: > # this means to ignore newlines until "baseurl:"
   OmegaT is a free open-source translation memory application written in Java.
-  It is a tool intended for professional translators. 
+  It is a tool intended for professional translators.
 
 # the subpath of your site, e.g. /blog
 baseurl: ""
@@ -58,7 +58,12 @@ sass:
   sass_dir: _sass
   style: compressed
 
+assets:
+  digest: false
+
 gems:
+  - uglifier
+  - jekyll-assets
   - jekyll-sitemap
   #- jekyll-feed
   # https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin
