@@ -63,6 +63,7 @@ assets:
 
 gems:
   - uglifier
+  # https://github.com/jekyll/jekyll-assets
   - jekyll-assets
   - jekyll-sitemap
   #- jekyll-feed
