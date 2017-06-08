@@ -23,7 +23,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: ""
 
 # the base hostname & protocol for your site, e.g. http://example.com
-url: "http://www.omegat.org"
+url: "http://omegat.org"
 baseurl: ""
 
 # Github
@@ -31,7 +31,7 @@ baseurl: ""
 #baseurl: "/omegat-website"
 
 # Used by the jekyll-seo-tag plugin
-logo: https://omegat-org.github.io/omegat-website/img/omegat_96.png
+logo: http://omegat.org/img/omegat_96.png
 twitter:
   username: OmegaTOfficial
 #facebook:
