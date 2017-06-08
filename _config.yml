@@ -24,10 +24,11 @@ baseurl: ""
 
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "http://www.omegat.org"
+baseurl: ""
 
 # Github
-url: "https://omegat-org.github.io"
-baseurl: "/omegat-website"
+#url: "https://omegat-org.github.io"
+#baseurl: "/omegat-website"
 
 # Used by the jekyll-seo-tag plugin
 logo: https://omegat-org.github.io/omegat-website/img/omegat_96.png
