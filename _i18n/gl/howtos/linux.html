@@ -1,0 +1,143 @@
+<div class="container">
+
+<h2>Gu&iacute;a de uso de OmegaT en Linux</h2>
+
+
+<p>Esta gu&iacute;a explica como usar OmegaT en Linux. Est&aacute; especialmente dirixida &aacute;s persoas que te&ntilde;en pouca experiencia no uso de Linux.</p>
+
+<h3>Java</h3>
+
+<p>OmegaT non funciona de forma adecuada con todas as versi&oacute;ns de Java. Se xa ten unha versi&oacute;n de Java instalada no seu sistema (o cal &eacute; probable) e quere usar esta instalaci&oacute;n que abarca todo o seu sistema de forma conxunta con OmegaT, deber&aacute; asegurarse de que &eacute; adecuada. Poder&aacute; facelo abrindo a terminal (tam&eacute;n co&ntilde;ecida como consola ou vent&aacute; de li&ntilde;a de comandos, exemplos de programas com&uacute;ns para esta funci&oacute;n son o konsole de KDE ou o gnome-terminal de GNOME) e escribindo:</p>
+
+<p>java -version</p>
+
+<p>O sistema daralle informaci&oacute;n sobre a versi&oacute;n de Java instalada no seu sistema.</p>
+
+<p>Versi&oacute;ns de Oracle (anteriormente Sun) de Java: comprobe os requisitos do sistema na documentaci&oacute;n de OmegaT (readme.txt) para saber cal &eacute; a versi&oacute;n de Oracle Java que precisa (&eacute; dicir, se a s&uacute;a versi&oacute;n de Java &eacute; suficiente).</p>
+
+<p>Versi&oacute;ns de Java de terceiros: ata fai relativamente pouco tempo, OmegaT s&oacute; funcionaba coa versi&oacute;n de Java de Oracle/Sun. A situaci&oacute;n mudou e agora p&oacute;dese executar OmegaT coa implementaci&oacute;n de Java OpenJDK que incl&uacute;en algunhas distribuci&oacute;ns de Linux, mais &eacute; posible que algunhas funci&oacute;ns non estean dispo&ntilde;ibles (tales como o conxunto completo de opci&oacute;ns da li&ntilde;a de comandos) ou que empregue unha fonte de caracteres distinta. Ademais diso, existen informes de erros, como problemas na forma na que se mostra a vent&aacute; ou na funci&oacute;n de segmentaci&oacute;n.</p>
+
+<p>Se non est&aacute; seguro de se a s&uacute;a versi&oacute;n de Java &eacute; adecuada, pode seguir estes pasos:</p>
+
+<ul>
+
+<li>Instale unha versi&oacute;n de OmegaT sen Java e comprobe se funciona. Se non funciona, pode probar a instalar unha versi&oacute;n de Java diferente no seu sistema.</li>
+
+<li>Instale unha versi&oacute;n de Java distinta &aacute; que incl&uacute;e o sistema por defecto e execute OmegaT empregando esta versi&oacute;n.</li>
+
+<li>Instale a versi&oacute;n de OmegaT que incl&uacute;e Java.</li>
+
+</ul>
+
+<p>Se determina que a versi&oacute;n de Java instalada no seu sistema non &eacute; compatible con OmegaT e desexa substitu&iacute;r esa versi&oacute;n por unha de Oracle Java, primeiro deber&aacute; comprobar se existe unha paquete de Oracle dispo&ntilde;ible para a s&uacute;a distribuci&oacute;n de Linux (SUSE, Ubuntu, etc.), xa que isto facilitar&aacute; a instalaci&oacute;n.</p>
+
+<p>Se obt&eacute;n a versi&oacute;n Oracle de Java directamente de Oracle, a instalaci&oacute;n deber&iacute;a ser sinxela, pero ter&aacute; que configurala de forma manual para poder convertela na versi&oacute;n por defecto do sistema. Non recomendamos que se faga isto, sobre todo se non ten experiencia empregando Linux.</p>
+
+<p>A terceira opci&oacute;n, instalar unha versi&oacute;n de OmegaT que incl&uacute;e Java, &eacute; sempre unha opci&oacute;n \xABsegura\xBB e recomendada.</p>
+
+<h3>Seleccionar e descargar unha versi&oacute;n de OmegaT</h3>
+
+<p>As seguintes versi&oacute;ns de OmegaT est&aacute;n dispo&ntilde;ibles para Linux:</p>
+
+<p>\xABEst&aacute;ndar\xBB, \xAB&Uacute;ltima\xBB, \xAB/troncal\xBB e \xABComezo web\xBB. Recomendamos empregar a versi&oacute;n \xAB&Uacute;ltima\xBB. (Atopar&aacute; explicaci&oacute;ns sobre as diferencias entre as versi&oacute;ns na secci&oacute;n \xABDescargas\xBB da p&aacute;xina web de OmegaT.)</p>
+
+<p>Con ou sen JRE inclu&iacute;do, por exemplo, a versi&oacute;n multiplataforma sen JRE, &eacute; dicir, \xABOmegaT_2.1.7_02_Beta_Without_JRE.zip\xBB e a versi&oacute;n espec&iacute;fica para Linux con JRE, &eacute; dicir, \xABOmegaT_2.1.7_02_Beta_Linux.tar.bz2\xBB. Escolla se precisa unha versi&oacute;n con ou sen JRE tendo en conta a situaci&oacute;n do seu sistema con respecto a Java (ten m&aacute;is informaci&oacute;n ao respecto arriba).</p>
+
+<p>Ao ser un software de c&oacute;digo aberto, moitas distribuci&oacute;ns de Linux inclu&iacute;ron OmegaT nos seus repositorios, polo que pode instalar OmegaT a trav&eacute;s deles. Non obstante, &eacute; preciso que te&ntilde;a en conta que:</p>
+
+<ul>
+
+<li>A maior&iacute;a das distribuci&oacute;ns de Linux empregan a versi&oacute;n OpenJDK de Java por defecto, No momento no que se redacta este texto, OmegaT funciona moito mellor coa versi&oacute;n de Oracle de Java (ten m&aacute;is informaci&oacute;n ao respecto arriba).</li>
+
+<li>Por norma xeral, os repositorios incl&uacute;en a versi&oacute;n \xABEst&aacute;ndar\xBB de OmegaT. &Eacute; habitual que a versi&oacute;n \xAB&Uacute;ltima\xBB te&ntilde;a m&aacute;is funci&oacute;ns dispo&ntilde;ibles.</li>
+
+</ul>
+
+<p>Te&ntilde;a en conta que &eacute; posible instalar varias versi&oacute;ns de OmegaT en Linux sen que haxa conflitos entre elas, inda que sempre acceder&aacute;n aos mesmos ficheiros de configuraci&oacute;n do usuario (a menos que os execute dende unha conta de usuario distinta).</p>
+
+<h3>Instalar OmegaT</h3>
+
+<p>A versi&oacute;n de Linux de OmegaT incl&uacute;e o seu propio instalador, o script linux-install.sh. Este script:</p>
+
+<ul>
+
+<li>coloca os ficheiros de programa de OmegaT en /opt/omegat/OmegaT-&lt;versi&oacute;n&gt;;</li>
+<li>incl&uacute;e scripts de execuci&oacute;n de bash e kaptain;</li>
+<li>crea ligaz&oacute;ns dende /usr/local/bin aos scripts de execuci&oacute;n.</li>
+
+</ul>
+
+<p>O script de bash &eacute; un ficheiro moi b&aacute;sico que pode editar de forma manual con opci&oacute;ns de li&ntilde;a de comandos para executar e configurar OmegaT.</p>
+
+<p>O script de kaptain (ou \xABgram&aacute;tica\xBB, tal e como se denomina aos scripts de kaptain) perm&iacute;telle escoller e seleccionar opci&oacute;ns de execuci&oacute;n e configuraci&oacute;n a trav&eacute;s de unha interface gr&aacute;fica de usuario f&aacute;cil de utilizar. Pode escoller o idioma da interface de usuario, asignar m&aacute;is memoria a OmegaT ou introducir unha contrasinal do Tradutor de Google. Pode personalizar o script de execuci&oacute;n de kaptain editando o ficheiro omegat.kaptn cun editor de texto plano para que se empreguen as s&uacute;as preferencias por defecto. Atopar&aacute; comentarios de axuda no ficheiro. Te&ntilde;a en conta que para poder executar o script de kaptain primeiro ter&aacute; que instalar kaptain. Se non est&aacute; inclu&iacute;do no repositorio da s&uacute;a distribuci&oacute;n, poder&aacute; <a href="http://kaptain.sourceforge.net">descargalo dende kaptain.sourceforge.net</a>.</p>
+
+<p><img src="../../images/kaptain.png" alt="preview_ss.png"></img></p>
+
+<p><i>Captura de pantalla do iniciado de OmegaT de kaptain</i></p>
+
+<p>O script fai o proceso de instalaci&oacute;n m&aacute;is c&oacute;modo, pero se o prefire pode instalar OmegaT de forma manual. So ten que descomprimir o ficheiro no cartafol que desexe. Neste caso non se escribir&aacute;n os ficheiros de execuci&oacute;n no seu cami&ntilde;o de execuci&oacute;n.</p>
+
+<h3>Executar OmegaT dende a li&ntilde;a de comandos</h3>
+
+<p>Inda que non &eacute; preciso executar OmegaT dende a li&ntilde;a de comandos, facelo pode ser &uacute;til e aporta informaci&oacute;n de depuraci&oacute;n. Para executalo dende a li&ntilde;a de comandos, abra unha vent&aacute; de terminal (non precisar&aacute; permisos de administrador). Navegue ata o cartafol que cont&eacute;n o ficheiro OmegaT.jar, por exemplo:</p>
+
+<p>cd /opt/omegat/OmegaT_2.3.4</p>
+
+<p>e confirme con INTRO.</p>
+
+<p>Despois ter&aacute; que introducir o comando de execuci&oacute;n e confirmar con INTRO. O comando de execuci&oacute;n b&aacute;sico &eacute;:</p>
+
+<p>java -jar OmegaT.jar</p>
+
+<p>O comando diferencia entre mai&uacute;sculas e min&uacute;sculas.</p>
+
+<p>Isto non ser&aacute; suficiente se emprega ou desexa empregar unha instalaci&oacute;n de Java que non est&aacute; instalada a nivel do sistema, ter&aacute; que indicarlle ao sistema onde pode encontrar Java. Se instalou unha versi&oacute;n de OmegaT con JRE, o script de execuci&oacute;n que incl&uacute;e xa ten a informaci&oacute;n do cami&ntilde;o que precisa. Se instalou unha versi&oacute;n de Java diferente pero non a estableceu como a versi&oacute;n por defecto a nivel do sistema, deber&aacute; inclu&iacute;r o cami&ntilde;o completo ao binario de Java no comando de execuci&oacute;n. Deber&iacute;a usar un comando como /usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java; durante o proceso de instalaci&oacute;n, tome nota do lugar no que est&aacute; instalado Java para poder atopalo m&aacute;is tarde. Polo tanto, o comando ser&iacute;a (neste caso)</p>
+
+<p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+
+<p>Non confunda o cami&ntilde;o a OmegaT.jar e o cami&ntilde;o do comando de Java no seu script de execuci&oacute;n. O primeiro (co comando de cd) &eacute; preciso se o script de execuci&oacute;n non est&aacute; no mesmo cartafol que OmegaT.jar. O segundo &eacute; necesario se a versi&oacute;n de Java que desexa usar non &eacute; a versi&oacute;n que emprega por defecto o seu sistema.</p>
+
+<h3>Executar OmegaT dende un script de execuci&oacute;n</h3>
+
+<p>Como xa mencionamos, OmegaT incl&uacute;e un script de execuci&oacute;n de bash. Unha vez o te&ntilde;a copiado ou ligado ao cami&ntilde;o de execuci&oacute;n (proceso que se realiza de forma autom&aacute;tica se emprega o script de instalaci&oacute;n inclu&iacute;do no paquete), poder&aacute; executar OmegaT premendo <i>Alt+F2</i> e, na vent&aacute; que se abre, escriba <i>omegat</i> e prema INTRO para confirmar.</p>
+
+<p>O script de execuci&oacute;n de bash &eacute; un ficheiro executable por defecto, pero &eacute; posible que o seu sistema cambie os seus permisos (durante o proceso de desempaquetado do ficheiro) e que te&ntilde;a que volver a facelo executable.</p>
+
+<h3>Forma sinxela de executar OmegaT</h3>
+
+<p>Pode engadir OmegaT ao seu men&uacute; de aplicaci&oacute;ns ou crear unha icona no escritorio ou no panel para poder executalo de forma m&aacute;is sinxela. Hai m&uacute;ltiples posibilidades e m&uacute;ltiples formas de implementalas, por non falar das abundantes distribuci&oacute;ns.</p>
+
+<h3>Aspecto das fontes en OmegaT en Linux</h3>
+
+<p>O aspecto das fontes en OmegaT en Linux pode variar moito, dependendo de:</p>
+
+<ul>
+
+<li>A versi&oacute;n de Java que emprega (unha mesma fonte pode variar moito da versi&oacute;n Sun &aacute; versi&oacute;n OpenJDK de Java)</li>
+
+<li>As fontes dispo&ntilde;ibles/seleccionadas</li>
+
+<li>O tama&ntilde;o da fonte</li>
+
+<li>Se o anti-aliasing est&aacute; activado (est&aacute; &eacute; unha opci&oacute;n da execuci&oacute;n mediante li&ntilde;a de comandos, pero pode activala no script de execuci&oacute;n de kaptain)</li>
+
+</ul>
+
+<h3>Desinstalar OmegaT</h3>
+
+<p>Para eliminar completamente OmegaT do seu sistema deber&aacute;:</p>
+
+<p>Borrar o cartafol do programa de OmegaT. Pode restauralo de forma f&aacute;cil no futuro.</p>
+
+<p>Eliminar o cartafol /home/&lt;usuario&gt;/.omegat de calquera conta de usuario dende a que se te&ntilde;a executado OmegaT. Isto eliminar&aacute; calquera ficheiro de configuraci&oacute;n que fose creado (como poden ser os cambios &aacute;s regras de segmentaci&oacute;n) e, se o cartafol foi eliminado da forma \xABadecuada\xBB, &eacute; dicir, non mov&eacute;ndoo ao lixo, non poder&aacute; restauralo.</p>
+
+<p>Elimine calquera script de execuci&oacute;n e calquera entrada personalizada de OmegaT no seu sistema.</p>
+
+<p>Desinstalar OmegaT non borrar&aacute; ning&uacute;n proxecto do seu sistema a menos que os tivese gardado no cartafol do programa ou no cartafol de configuraci&oacute;n de OmegaT, as cales non son adecuadas para gardar proxectos.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2010-2012</p>
+
+</div>
+

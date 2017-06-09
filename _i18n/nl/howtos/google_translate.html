@@ -1,0 +1,66 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br/>Google Translate gebruiken in OmegaT</h2>
+
+<p>Naast de webpagina waarin gebruikers eenvoudigweg tekst kunnen plakken om te laten vertalen, biedt Google Translate ook een interface (API) die kan worden gebruikt door CAT-programma's om toegang te krijgen tot de service. Vanaf december 2011 wil Google dat gebruikers betalen voor het gebruik van deze service. Deze HOWTO beschrijft hoe deze functie kan worden geconfigureerd in OmegaT.</p>
+
+<p>1. Als u er nog geen hebt, open dan een account op google.com.</p>
+
+<p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Volg deze koppeling om bij Google aan te vragen</a> de sleutel voor de Google Translate API v2. Zorg er voor dat u uw details van uw creditcard bij de hand heeft. Google zal uw sleutel voor de API genereren, een tekenreeks met ongeveer 39 tekens.</p>
+
+<p>3. Wijs de sleutel als volgt toe aan de startprocedure voor OmegaT, afhankelijk van of u Windows, Mac gebruikt of OmegaT start vanaf de opdrachtregel of door middel van een script:</p>
+
+<p><b>Windows-gebruikers:</b></p>
+
+<p>3.1. Lokaliseer het configuratiebestand OmegaT.l4J.ini (de standaard locatie is C:\Program Files (x86)\OmegaT).</p>
+<p>3.2. U heeft misschien rechten als Administrator nodig, of moet u het tijdelijk verplaatsen naar een andere locatie op uw harde schijf om dit bestand te kunnen bewerken.</p>
+<p>3.3. Open OmegaT.l4J.ini in een platte-tekstbewerker</p>
+<p>3.4. Voeg de volgende regel toe aan de tekst in het bestand:</p>
+<p>-Dgoogle.api.key=XXXXXXXX </p>
+<p>(waarbij &quot;XXXXXXXX&quot; de sleutel voor de API is die Google heeft verschaft).</p>
+<p>3.5. Sla OmegaT.l4J.ini op (en, indine nodig, verplaats het terug naar de map van OmegaT).</p>
+
+<p><b>Mac-gebruikers:</b></p>
+
+<p>3.6 Klik met rechts op OmegaT.app en selecteer &quot;Pakketinhoud weergeven&quot;.</p>
+<p>3.7 Klik met rechts op het bestand Info.plist en selecteer de bewerker van uw voorkeur om het bestand te openen.</p>
+<p>3.8. Zoek de regels:</p>
+<p>&lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;</p>
+<p>&lt;string&gt;true&lt;/string&gt;</p>
+<p>en voeg direct daarna de regels toe:</p>
+<p>&lt;key&gt;google.api.key&lt;/key&gt;</p>
+<p>&lt;string&gt;XXXXXXXX&lt;/string&gt;</p>
+<p>waarbij &quot;XXXXXXXX&quot; uw sleutel voor Google Translate API is.</p>
+<p>3.9 Sla Info.plist op.</p>
+
+<p><b>Linux-gebruikers:</b></p>
+
+<p>3.10 Zorg er voor dat het Kaptain-startbestand is geïnstalleerd (<a href="./linux.html">bekijk indien nodig de Linux Howto)</a>, en voer de Google Translate API-sleutel in het relevante veld in op de tab Connectivity.</p>
+
+<p><b>Gebruikers die OmegaT starten vanaf de opdrachtregel of door een script:</b></p>
+
+<p>3.11 Voeg het volgende argument toe aan de startopdracht:</p>
+
+<p>-Dgoogle.api.key=XXXXXXXX</p>
+
+<p>waarbij &quot;XXXXXXXX&quot; uw sleutel voor Google Translate API is.</p>
+
+<p>De basis startopdracht voor de toegevoegde Google Translate API zal daarom zijn:</p>
+
+<p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
+
+<p>4. Configuratie in OmegaT</p>
+<p>4.1. OmegaT starten</p>
+<p>4.2. Selecteer Opties &gt; Machinevertaling</p>
+<p>4.3. Vink Google Translate v2 aan (laat de andere opties niet aangevinkt)</p>
+
+<p>5. Opmerking:</p>
+
+<p>5.1 Google Machinevertaling is een betaalservice (US$20.00 per miljoen tekens). U kunt het dagelijks gebruik controleren op uw account van Google. In het bovenste menu:</p>
+<p>More &gt; Even More &gt; Innovation/Code &gt; APIs Console &gt; Service/Translate API</p>
+
+
+<p>Copyright Milan Hubacek en Marc Prior 2011</p>
+
+</div>
+

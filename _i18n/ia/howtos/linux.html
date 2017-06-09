@@ -1,0 +1,143 @@
+<div class="container">
+
+<h2>Guida a OmegaT sur Linux</h2>
+
+
+<p>Iste Guida provide information re le uso de OmegaT sur Linux. Illo es in particular pro le usatores qui es nove de Linux.</p>
+
+<h3>Java</h3>
+
+<p>OmegaT non exeque ben sur omne versiones de  Java. Si Java es jam installate sur tu systema (le qual es probabilemente le caso) e tu projecta usar iste existente installation Java de systema in conjunction con OmegaT, in prime loco controla que illo es convenibile. Pro facer isto, aperi un terminal (alsi note como un consola o fenestra pro linea de commando; programmas commun pro isto es konsole (KDE) e gnome-terminal (GNOME)), e scribe:</p>
+
+<p>java -version</p>
+
+<p>Le systema emittera detalios del version de Java jam installate a nivello de systema.</p>
+
+<p>Versiones Java Oracle (un vice Sun) : controla le requisitos del systema in le documentation de OmegaT (readme.txt) pro le precise version de Oracle Java requirite (i.e. si tu version de Java es satis recente).</p>
+
+<p>Versiones Java de tertie parte: usque durante le tempore recente, OmegaT functionava sol sur Java proprie de Oracle/Sun. OmegaT ora essera exequite sur le installation Java OpenJDK supplite con alicun distributiones de Linux, ma alicun functiones (assi como le suite de optiones del linea de commando) pote non esser disponibile; pote esser supplite un serie de typo de characteres; e qualque defectos esseva reportate, assi como con monstra de fenestra e le function de segmentation.</p>
+
+<p>Si tu es insecur si tu version de Java es convenibile, tu pote:</p>
+
+<ul>
+
+<li>Simplemente installa un version de OmegaT sin Java e vide si illo opera. si non opera, tu ancora ha le option pro installar un version local de Java o un differente version de Java a nivello de systema.</li>
+
+<li>Installa un secunde, non base version de Java a nivello de systema, e lancea OmegaT explicitemente usante iste version.</li>
+
+<li>Installa le version OmegaT con Java includite.</li>
+
+</ul>
+
+<p>Si tu constata que le version de Java installate a nivello de systema non es compatibile con OmegaT e tu desidera reimplaciar iste version de Java con le version Oracle de Java, controla in prime loco si es disponibile un Oracle pacchetto pro tu distribution de Linux (SUSE, Ubuntu, etc.). Si assi, isto rende le installation multo plus facile.</p>
+
+<p>Si tu obtene le version Oracle de Java directemente ex Oracle, le installation essera probabilemente candide, ma tu debera lo configurar manualmente pro render lo version base a nivello de systema. Isto non es recommendate, in particular si tu es estranie con Linux.</p>
+
+<p>Le tertie option, id es installar un version de OmegaT con Java includite a nivello local, es semper le option &quot;secur&quot;, e es recommendate.</p>
+
+<h3>Selectionar e discargar OmegaT </h3>
+
+<p>Le versiones sequente de OmegaT es disponibile pro Linux:</p>
+
+<p>&quot;Standard&quot;, &quot;Latest&quot;, &quot;/trunk&quot; e &quot;Webstart&quot;. Le version &quot;Latest&quot; es recommendate. (refere al pagina &quot;discargas&quot; sur le sito TTT de OmegaT pro detalios del differentias.)</p>
+
+<p>Sin/con JRE includite, id es le multe platteforma sin JRE, exempli gratia. &quot;OmegaT_2.1.7_02_Beta_Without_JRE.zip&quot; e le version -specific pro Linux con JRE, exempli gratia &quot;OmegaT_2.1.7_02_Beta_Linux.tar.bz2&quot;. Selige un version sin o con JRE dependente sur tu situation Java (vide supra).</p>
+
+<p>Como un application open-source, OmegaT esseva includite per multe distributiones Linux in lor depositos, assi tu pote esser capace a installar lo per iste via. Nota totevia que:</p>
+
+<ul>
+
+<li>le major parte del distributiones Linux usa le version de Java OpenJDK per arrangiamento initial. Al momento del scriptura, OmegaT currera multo melio con le version de Java Oracle (vide supra).</li>
+
+<li>Le version OmegaT habitualmente supplite es le version &quot;Standard&quot;. Plus de functiones habitualmente essera trovate in le version &quot;Latest&quot;.</li>
+
+</ul>
+
+<p>Nota que il es facile installar versiones multiple de OmegaT sur Linux sin conflictos. Illos totevia accedera semper al mesme files de configuration del usator (a minus que lanceate ab un conto del usator differente).</p>
+
+<h3>Installar OmegaT</h3>
+
+<p>Le version Linux de OmegaT ora es supplite con su proprie script de installation: linux-install.sh. Iste script:</p>
+
+<ul>
+
+<li>loca le files programma de OmegaT in /opt/omegat/OmegaT-&lt;version&gt;;</li>
+<li>include le scripts de lanceamento bash e kaptain;</li>
+<li>crea le ligamines ab /usr/local/bin al scripts de lanceamento.</li>
+
+</ul>
+
+<p>Le script bash es un file multo basic que pote esser modificate manualmente con optiones de linea de commando pro lancear e configurar OmegaT.</p>
+
+<p>Le script Kaptain (o &quot;grammatica&quot;, como le scriptes kaptain es terminate) habilita te a seliger le optiones del lanceamento e del configuration de un GUI facile. Tu pote per exemplo usar lo pro seliger le lingua del interfacie del usator, pro assignar plus de memoria a OmegaT, o scriber un contrasigno de Google Translate. Tu pote personalisar le script kaptain lanceamento de maniera que tu preferentias sia le preparationes initial; redige simplemente le file omegat.kaptn in un editor de texto. Le file es commentate pro adjutar te. Pro facer functionar le script kaptain, comocunque, tu debe in prime loco installar kaptain. If illo non es in tu deposito del distribution, tu pote <a href="http://kaptain.sourceforge.net">discarga lo ex kaptain.sourceforge.net</a>.</p>
+
+<p><img src="../../images/kaptain.png" alt="preview_ss.png"/></p>
+
+<p><i>Imagine del schermo del lanceator kaptain de OmegaT</i></p>
+
+<p>Le script de installation provide convenientia additional, ma tu pote ancora installar OmegaT sur Linux manualmente si tu prefere lo. simplemente dispacchetta le archivo in le plica de tu selection. Le scripts de lanceamento non essera scripte in tu percurso de execution in iste caso.</p>
+
+<h3>Lancear OmegaT ab le linea de commando</h3>
+
+<p>OmegaT non debe esser lanceate ab le linea de commando, ma facer assi pote esser utile pois que illo provide information de  cernita del defecto. Pro lancear ab le linea de commando, aperi un fenestra terminal (non necessita permissiones de radice). Naviga al plica continente le file OmegaT.jar, e.g.:</p>
+
+<p>cd /opt/omegat/OmegaT_2.3.4</p>
+
+<p>e confirma con ENTER.</p>
+
+<p>Ergo inscribe le commando ipse de lanceamento, e confirma con ENTER. Le commando basic de lanceamento es:</p>
+
+<p>java -jar OmegaT.jar</p>
+
+<p>Le commando es sensibile al maiuscolas e minuscolas.</p>
+
+<p>Si tu es fidente sur, o desira usar, un installation Java non installate a nivello de systema, isto non essera sufficient: tu debe anque maestrar tu systema a ubi trovar Java. Si tu ha installate un version de OmegaT con supplite JRE, le script lanceamento supplite jam contine iste percurso pro te. Si tu ha installate un altere version de Java ma non ha rendite lo le version de arrangiamento base a nivello de systema, tu debe includer le integre percurso del file binari Java in le commando de lanceamento. Isto essera alicun cosa simile a /usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java; face un nota re ubi Java es installate durante le installation a fin que tu pote trovar lo de nove. Le commando essera dunque (in iste caso):</p>
+
+<p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+
+<p>In tu script de lanceamento, non confunder le percurso a OmegaT.jar e le percurso al commando Java. Le prime (con le commando cd) necessita si tu script de lanceamento non es in le mesme plica que OmegaT.jar. Le secundo es necesse si le version Java que tu desidera usar non es le installation base a nivello de systema.</p>
+
+<h3>Lancear OmegaT ex un script de lanceamento</h3>
+
+<p>Como jam mentionate, un script de lanceamento bash es fornite con OmegaT. un vice (que) isto esseva copiate o ligate a tu percurso de execution (facite automaticamente si  tu usa le script de installation fornite), tu pote lancear OmegaT pressante le pulsante <i>Alt+F2</i>, pois scribente <i>omegat</i> e confirmante con ENTER.</p>
+
+<p>Per arrangiamento initial, the script de lanceamento es executabile, ma tu systema pote mutar su permissiones (exempli gratia durante disincassamento del archivo) e tu poterea deber facer lo de nove.</p>
+
+<h3>Lancear OmegaT facilemente</h3>
+
+<p>Pro render lanceamento OmegaT magis plus facile, adde lo a tu menu de lanceamento, o pone un icone de lanceamento pro illo sur tu scriptorio o in tu quadro scriptorio. Le possibilitates es numerose, e le proceduras pro implementar illos non minus numerose, debite al plethora de distributiones.</p>
+
+<h3>Semblantia del typo de character in OmegaT sur Linux</h3>
+
+<p>Le apparentia del  fonts in OmegaT sur Linux pote differer largemente, secundo:</p>
+
+<ul>
+
+<li>Le version Java usate (le identic typo de character pote parer assatis differente sur le versiones Sun e OpenJDK de Java)</li>
+
+<li>Le typos de character disponibile/seligite</li>
+
+<li>Le mesura del character</li>
+
+<li>Si es habilitate le anti-aliasing (isto es un option de lanceamento a linea de commando, ma tu pote alsi adjustar lo in le script de lanceamento kaptain)</li>
+
+</ul>
+
+<h3>Disinstallar OmegaT</h3>
+
+<p>Pro remover omne tracias de OmegaT ex tu systema:</p>
+
+<p>dele le plica del programma OmegaT. Isto potera facilemente esser restaurate novemente in le futuro.</p>
+
+<p>Dele le plica /home/&lt;user&gt;/.omegat de omne conto de usator ab le qual OmegaT esseva lanceate. Isto resultara in deletion del preparationes de configuration de omne usator que esseva facite (assi como cambios al regulas de segmentation), e – si le plica es delite &quot;debitemente&quot;, id es. non simplemente movite al antiqualia, non pote esser restaurate.</p>
+
+<p>Dele omne scripts de lanceamento e leva omne entratas personalisate pro OmegaT in tu scriptorio.</p>
+
+<p>Disinstallar OmegaT non removera alicun projectos OmegaT ab tu systema, a minus que tu poneva tal projectos intra le plica(s) del programma OmegaT o del files de configuration, le qual non es un bon ubication pro illos in omne caso.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2010-2012</p>
+
+</div>
+

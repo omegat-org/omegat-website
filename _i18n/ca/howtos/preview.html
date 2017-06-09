@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  <title>OmegaT, l'eina de memòria de traducció lliure</title>
+  <meta name="generator" content="screem 0.10.2"/>
+  
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  
+  <meta name="keywords" content="memòria de traducció, MT, traducció assistida per ordinador, eina de traducció assistida, TAO, GPL, codi font obert"/>
+
+  
+<link rel="stylesheet" type="text/css" href="../../config/howto_wide.css"/>
+
+</head>
+
+<body>
+
+<div id="container">
+			
+<div id="banner">
+
+<h1>OmegaT</h1>
+
+<p>L'eina de memòria de traducció lliure (GPL)</p>
+
+</div>
+
+<div id="content">
+
+<h2>Manual: Com afegir la funció de previsualització a l'OmegaT</h2>
+
+<h3>Descripció del context</h3>
+
+<p>La major part de les eines TAO modernes mostren el text segmentat, en comptes de mostrar el disseny i el format definitius. Si bé això presenta molts avantatges, la possibilitat de veure el disseny i el format definitius mentre es tradueix pot resultar molt útil als traductors. Per aquesta raó, moltes eines TAO ofereixen una funció de previsualització que mostra el disseny i el format final sense que el traductor hagi de crear el document final ni obrir-lo en una altra aplicació (normalment un processador de textos). L'OmegaT no incorpora una funció de previsualització, però es pot aconseguir una funcionalitat semblant mitjançant programari complementari. En aquest manual es descriuen els principis generals per configurar una funció de previsualització.</p>
+
+<h3>Principis</h3>
+
+<p>Idealment, un visualitzador ha de fer dues coses:</p>
+
+<ul>
+
+<li>Mostrar el text amb un aspecte semblant al disseny i el format definitius.</li>
+
+<li>Actualitzar-se contínuament.</li>
+
+</ul>
+
+
+<h3>Navegador</h3>
+
+<p>Si esteu traduint fitxers .html, una bona solució és utilitzar un navegador amb una funció d'actualització automàtica que incorpori l'opció de previsualització. Exemples de navegadors amb la funció d'actualització automàtica:</p>
+
+<ul>
+
+<li>Firefox:<br/> Els usuaris del Windows que encara no utilitzin el Firefox, poden <a href="http://www.mozilla.org">baixar-lo de www.mozilla.org</a>; la major part dels usuaris del Linux ja el tindran instal·lat o el poden instal·lar des dels repositoris de les seves distribucions. Per afegir una funció d'actualització automàtica al Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">instal·leu el complement «ReloadEvery»</a>.</li>
+
+<li>Opera:<br/> L'Opera està disponible per a totes les plataformes; també és molt ràpid i utilitza pocs recursos de maquinari. El podeu <a href="http://www.opera.com">baixar de www.opera.com</a> (o, per als usuaris del Linux: del repositori de la vostra distribució). La funció automàtica d'actualització està integrada.</li>
+
+<li>Chrome:<br/> El Chrome també està disponible per a totes les plataformes. Podeu <a href="https://www.google.com/chrome/browser/desktop/index.html">baixar el Chrome de www.google.com/chrome</a>. Per afegir la funció d'actualització automàtica al Chrome, <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">baixeu l'extensió Auto Refresh Plus</a> del Web Store i instal·leu-la.</li>
+
+</ul>
+
+<p>Potser preferireu <i>no</i> fer servir el navegador habitual per a la funció de previsualització i reservar-lo per a la navegació per Internet per tal de no haver de canviar de pestanya contínuament. En aquest cas, seria convenient instal·lar un altre navegador per a la funció de previsualització.</p>
+
+<p>Una vegada seleccionat i instal·lat un navegador adient (i/o el complement necessari), obriu el fitxer traduït de la carpeta /target del vostre projecte:</p>
+
+<ul>
+
+<li>Si utilitzeu el Firefox, amb Fitxer &gt; Obre un fitxer</li>
+<li>Si utilitzeu l'Opera, amb Opera &gt; Pàgina &gt; Obre</li>
+
+</ul>
+
+<p>Ara activeu l'actualització automàtica. Tant al Firefox com a l'Opera, feu clic amb el botó dret al fitxer .html traduït que heu obert, seleccioneu «Torna a carregar cada» i seleccioneu l'interval que vulgueu (p. ex., 5 segons).</p>
+
+<p>Així tindreu una funció de previsualització. Per actualitzar la visualització, encara haureu de desar i crear el document traduït a l'OmegaT amb Ctrl+s, Ctrl+d. El canvi es farà visible en transcórrer l'interval de temps que hàgiu seleccionat (més el temps que trigui l'OmegaT a desar i produir els fitxers traduïts). El navegador no es desplaçarà automàticament pel text a mesura que hi aneu treballant; això cal fer-ho de forma manual. Almenys es quedarà, però, al mateix punt del text en què era al moment en què es va actualitzar la visualització.</p>
+
+<h3>Previsualització de fitxers de processador de textos</h3>
+
+<p>És molt senzill obrir el fitxer traduït en un navegador si el fitxer de partida té el format .html, però les traduccions sovint es fan a partir de fitxers de processador de textos que, quan es treballa amb l'OmegaT, normalment tindran els formats .docx o .odt. La solució del navegador descrita més amunt també és vàlida per a previsualitzar aquests fitxers, però en aquest cas us faria falta també a) un convertidor per convertir el fitxer al format .html i b) una utilitat per iniciar el convertidor de manera automàtica per no haver de convertir els fitxers de forma manual.</p>
+
+<p>Aquí es descriuen dos programes que es poden utilitzar com a convertidors: l'Abiword i el LibreOffice.</p>
+
+<p>L'Abiword i el LibreOffice són, respectivament, un processador de textos i un paquet ofimàtic. Tots dos són gratuïts, disponibles per a diverses plataformes i permeten convertir els fitxers .docx i .odt al format .html.</p>
+
+<p>L'Abiword ocupa relativament poc i funciona amb molta rapidesa. Inclou una funció de línia d'ordres per convertir els fitxers .docx i .odt al format .html. La instal·lació és molt senzilla per als usuaris del Linux i bastant senzilla per als usuaris del Windows. <a href="http://www.abisource.com/download/">Baixeu l'Abiword aquí</a>.</p>
+
+<p>El LibreOffice és un paquet ofimàtic complet semblant al Microsoft Office. També es pot fer servir per convertir els fitxers .docx i .odt al format .html, però per fer-ho des de la línia d'ordres farà falta també un connector, el Unoconv. <a href="http://www.libreoffice.org/">Baixeu el LibreOffice aquí</a>; <a href="http://dag.wieers.com/home-made/unoconv/">baixeu el connector Unoconv aquí</a>.</p>
+
+<p>Quan hàgiu instal·lat l'Abiword o la combinació del LibreOffice+Unoconv, podreu convertir els fitxers traduïts produïts amb l'OmegaT al format .html perquè el navegador els pugui llegir. Recordeu que primer heu de desar la traducció i crear els documents traduïts a l'OmegaT, després iniciar la utilitat de conversió i, finalment, esperar fins que s'actualitzi la visualització al navegador.</p>
+
+<p>Hi ha diverses maneres d'aconseguir-ho, però una solució pràctica és utilitzar un script que estigui «atent» als canvis als fitxers traduïts que produeix l'OmegaT i, quan detecti un canvi, iniciï automàticament la utilitat que converteix els fitxers al format .html perquè el navegador pugui llegir-los. A continuació se'n mostra un diagrama esquemàtic:</p>
+
+<p><img src="../../images/preview_flow.png" alt="preview_flow.png"/></p>
+
+<p>Al <a href="priorview.html">manual del Priorview</a> trobareu un exemple de script que aconsegueix aquesta funció.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+
+<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88"/></a><br/>
+
+<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML"/></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML"/></a>
+	</div>
+
+</div>
+
+</body></html>

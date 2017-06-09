@@ -1,0 +1,125 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br/>Compiling OmegaT from the source code</h2>
+
+
+<p>This HowTo describes how to compile OmegaT from the source code.</p>
+
+<p>OmegaT is supplied ready-compiled for a number of platforms, including a cross-platform version. Users do not therefore need to compile OmegaT themselves. Compiling OmegaT is relevant for developers who wish to make modifications of their own to its code. </p>
+
+<p><strong>1. Download and install the Java Development Kit (JDK) and Apache Ant</strong></p>
+
+<p>Various programs can be used to compile the source code again after you have modified it, but among the most convenient is <a href="http://ant.apache.org">Apache Ant</a>. The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK) is also required.</p>
+
+<p>Depending upon how you install the Java Development Kit, you may have to change your "JAVA_HOME" attribute in order for it to function with Ant.</p>
+
+<p><strong>2. Compile the code</strong></p>
+
+<p>The folder names indicated below are for illustration only; version numbers will change.</p>
+
+<p>Open a command-line window (console, DOS window). Change folder to the main folder in the OmegaT source code (the folder containing the file build.xml), e.g.</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_2.2.3_Beta_Source</p>
+
+<p>From within this folder, execute Apache Ant by entering the ant executable. It may be necessary to enter the full path, e.g.:</p>
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+<p>If the code compiles successfully, you will see the "BUILD SUCCESSFUL" message. If not, debugging messages will be shown which will (hopefully) provide some idea of where the problem is.</p>
+
+<p><strong>3. Launch OmegaT</strong></p>
+
+<p>If your code has compiled successfully, the compiled OmegaT is placed in:</p>
+
+<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
+
+<p>Still in your command-line window, change to this folder, e.g. with:</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+<p>and launch OmegaT with:</p>
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+
+
+<p><strong>4a. 1st example modification: changing the colour of segment highlighting</strong></p>
+
+<p>In the folder </p>
+
+<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
+
+<p>open the file SegmentBuilder.java in a text editor.</p>
+
+<p>Find the lines:</p>
+
+<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
+
+<p>and</p>
+
+<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
+
+<p>and replace</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>with</p>
+
+<p style="font-family: monospace;">COLOR_BLUE.</p>
+
+<p>In the folder</p>
+
+<p style="font-family: monospace;">src/org/omegat/util/gui</p>
+
+<p>open the file Styles.java in a text editor.</p>
+
+<p>Find the line</p>
+
+<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
+
+<p>Replace</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>with </p>
+
+<p style="font-family: monospace;">COLOR_BLUE</p>
+
+<p> and </p>
+
+<p style="font-family: monospace;">192, 255, 192 </p>
+
+<p>with </p>
+
+<p style="font-family: monospace;">225, 225, 255.</p>
+
+
+
+<p><strong>4b. 2nd example modification: increasing the number of fuzzy matches displayed from five to ten</strong></p>
+
+<p>In the folder </p>
+
+<p style="font-family: monospace;">/src/org/omegat/util</p>
+
+<p>open the file OConsts.java in a text editor.</p>
+
+<p>Find the lines:</p>
+
+<p style="font-family: monospace;">    /** Number of fuzzy matches to display */<br/>
+    public static final int MAX_NEAR_STRINGS = 5;</p>
+
+<p>and replace</p>
+
+<p style="font-family: monospace;">= 5</p>
+
+<p>with</p>
+
+<p style="font-family: monospace;">= 10</p>
+
+
+<p>For both examples, compile and test as described above.</p>
+
+<p>Copyright Marc Prior 2011-2012</p>
+
+</div>
+

@@ -1,0 +1,66 @@
+<div class="container">
+
+<h2>OmegaT 技術情報：<br/>OmegaT で Google Translate を使用</h2>
+
+<p>Google Translate は、ユーザーが単にテキストを張り付ければ翻訳結果が得られるウェブページのほかに、CAT ツールがアクセスしてサービスを利用できるインターフェース（API）も提供しています。2011年12月現在、Google はこのサービスを有料にしています。この技術情報では、Google Translate 機能を OmegaT に組み込む方法を説明します。</p>
+
+<p>1. google.com のアカウントを持っていない場合は、まずアカウントを開設してください。</p>
+
+<p>2. Google Translate API v2 キーを得るには、<a href="http://code.google.com/apis/language/translate/v2/pricing.html">このリンクから</a> Google に申請してください。あらかじめ、クレジットカード情報を手元に用意してください。Google は、各ユーザーの API キーを、約 39 字からなる文字列として生成します。</p>
+
+<p>3. このキーを、以下に記すように OmegaT の起動手順に組み入れます。Windows、Mac、Linux を使用する場合や、コマンドラインやスクリプトから OmegaT を起動する場合などに応じて、手順は異なります。</p>
+
+<p><b>Windows ユーザー：</b></p>
+
+<p>3.1. 設定ファイル OmegaT.l4J.ini の場所を確認します（デフォルトの場所は C:\Program Files (x86)\OmegaT）。</p>
+<p>3.2. このファイルを編集するには、管理者モードが必要かもしれません。あるいは、一時的にハードディスク内の別の場所へ移動してください。</p>
+<p>3.3. プレーンテキストエディタで Open OmegaT.l4J.ini を開きます。</p>
+<p>3.4. ファイルのテキストに、次の 1 行を追加します。</p>
+<p>-Dgoogle.api.key=XXXXXXXX </p>
+<p>（ここに、「XXXXXXXX」は Google から与えられた API キーです。)</p>
+<p>3.5. OmegaT.l4J.ini を保存します（必要であれば、同ファイルを OmegaT フォルダー内に戻します）。</p>
+
+<p><b>Mac ユーザー：</b></p>
+
+<p>3.6OmegaT.app を右クリックし、「パッケージの内容を表示」を選びます。</p>
+<p>3.7ファイル Info.plist を右クリックし、このファイルを開くためのエディタを選びます。</p>
+<p>3.8. テキスト内の</p>
+<p>&lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;</p>
+<p>&lt;string&gt;true&lt;/string&gt;</p>
+<p>という 2 行のすぐ下に、次の 2 行を挿入します。</p>
+<p>&lt;key&gt;google.api.key&lt;/key&gt;</p>
+<p>&lt;string&gt;XXXXXXXX&lt;/string&gt;</p>
+<p>ここで、「XXXXXXXX」は与えられた Google Translate API キーです。</p>
+<p>3.9Info.plist を保存します。</p>
+
+<p><b>Linux ユーザー：</b></p>
+
+<p>3.10Kaptain ランチャーがインストールされていることを確認した上で<a href="./linux.html">（必要であれば Linux に関する技術情報を参照してください）</a>、Connectivity タブの該当蘭に Google Translate API キーを入力してください。</p>
+
+<p><b>コマンドラインまたはスクリプトから OmegaT を起動する場合：</b></p>
+
+<p>3.11起動コマンドに以下の引数を追加します。</p>
+
+<p>-Dgoogle.api.key=XXXXXXXX</p>
+
+<p>ここで、「XXXXXXXX」は与えられた Google Translate API キーです。</p>
+
+<p>Google Translate API が追加された基本的な起動コマンドは、次のようになります。</p>
+
+<p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
+
+<p>4. OmegaT の設定</p>
+<p>4.1. OmegaT の起動</p>
+<p>4.2. ［設定］→［機械翻訳］を選択します。</p>
+<p>4.3. ［Google Translate v2］にチェックを入れます（他のオプションはチェックを外します）。</p>
+
+<p>5. 備考：</p>
+
+<p>5.1Google Machine Translation は有料サービスです（100 万文字あたり 20.00 米ドル）。ユーザーは、自分の Google アカウントで日々の使用量を確認できます。上方のメニューから以下のようにたどります（英語表示の場合）。</p>
+<p>［More］→［Even More］→［Innovation/Code］→［APIs Console］→［Service/Translate API］</p>
+
+
+<p>Copyright Milan Hubacek and Marc Prior 2011</p>
+
+</div>
+

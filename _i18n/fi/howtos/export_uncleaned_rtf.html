@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+	
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Marc Prior - Linux </title>
+  <meta name="GENERATOR" content="OpenOffice.org 1.0  (Linux) ">
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="AUTHOR" content="Marc Prior ">
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CREATED" content="20011224;18295700">
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CHANGED" content="20030512;20270600">
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+	<!--
+		P { color: #000000 }
+		A:link { color: #ff0000 }
+		A:visited { color: #ff0000 }
+	-->
+	</style>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+  
+  
+  
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor">
+
+
+
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+  
+  
+  
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor">
+</head>
+
+
+<body bgcolor="#ffffff" lang="en-US " link="#ff0000" text="#000000" vlink="#ff0000">
+
+
+
+
+
+
+
+
+<h1><font color="#330000"><font face="Helvetica, sans-serif"><img style="width: 51px; height: 62px;" alt="" src="relOT11.png " hspace="10">HOWTO: Tiedostojen vienti OmegaT:sta Tradosin kaksikieliseen RTF-muotoon</font></font></h1>
+
+
+
+
+
+
+
+
+<p>Tässä HOWTO-ohjeessa kerrotaan, miten OmegaT-projektista luodaan kaksikielinen RTF-tiedosto. Tämä tiedostomuoto voi olla kätevä välimuoto muiden CAT-työkalujen, erityisesti Tradosin ja Wordfast Classicin, käyttäjille.</p>
+<p>Huomattavaa:</p>
+<p>Tätä koodi/aliohjelmayhdistelmää ei ole vielä testattu perusteellisesti (alustavasti on kuitenkin saatu lupaavia tuloksia).</p>
+<p>Komentosarja on saatavilla vain Windows-alustalle.</p>
+<p>Sen voi avulla kääntäjä voi vain luoda (eli toimittaa) Tradosin kaksikielisiä tiedostoja. Sen avulla ei voi "kääntää" asiakkaan toimittamia kaksikielisiä tiedostoja</p>
+<h1 style="font-family: sans-serif;">1. Syötä Tradosin segmenttirajoittimet.</h1>
+
+
+
+
+<p>Kun haluat luoda kaksikielisen OpenOffice.org-tiedoston, joka sisältää Tradosin segmentinrajoittimet, sulje OmegaT-projekti ja aja sitten projektin project_save.tmx-tiedostossa seuraava AutoIt-komentosarja (tarvitsee Windowsin). </p>
+
+<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip ">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip </a>
+<h1 style="font-family: sans-serif;">2. Kohdedokumenttien luominen</h1>
+
+
+
+<p>Luo kohdedokumentit tavalliseen tapaan ja muunna tiedosto Microsoft Word -muotoon.</p>
+
+<h1 style="font-family: sans-serif;">3. Määritä tyylit rajoittimille</h1>
+
+
+
+<p>Aja Microsoft Wordissa seuraava makro sopivien tyylien määrittämiseksi kohdedokument(e)ille:</p>
+
+Private Sub AddTw4winStyles()<br>
+
+On Error Resume Next<br>
+
+Dim sMark, sInt, sExt As Style<br>
+
+Set sMark = ActiveDocument.Styles.Add(Name:="tw4winMark", _<br>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br>
+
+With sMark.Font<br>
+
+&nbsp; .Name = "Courier"<br>
+
+&nbsp; .Size = 11<br>
+
+&nbsp; .Hidden = True<br>
+
+&nbsp; .Subscript = True<br>
+
+&nbsp; .ColorIndex = wdViolet<br>
+
+End With<br>
+
+Set sInt = ActiveDocument.Styles.Add(Name:="tw4winInternal", _<br>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br>
+
+sInt.LanguageID = wdNoProofing<br>
+
+With sInt.Font<br>
+
+&nbsp; .Name = "Courier"<br>
+
+&nbsp; .Size = 11<br>
+
+&nbsp; .ColorIndex = wdRed<br>
+
+End With<br>
+
+Set sExt = ActiveDocument.Styles.Add(Name:="tw4winExternal", _<br>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br>
+
+sExt.LanguageID = wdNoProofing<br>
+
+With sExt.Font<br>
+
+&nbsp; .Name = "Courier"<br>
+
+&nbsp; .Size = 11<br>
+
+&nbsp; .ColorIndex = wdGray50<br>
+
+End With<br>
+
+End Sub<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font color="#330000"><a href=" ../documentation.html "><font face="Helvetica, sans-serif"><font color="#330000">Takaisin dokumentaatioon</font></font></a><font face="Helvetica, sans-serif"> <br> <font color="#330000">© Marc Prior,&nbsp;2009</font></font> </font></p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

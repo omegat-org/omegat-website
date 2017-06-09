@@ -1,0 +1,87 @@
+<div class="container">
+
+<h2>Οδηγός τού OmegaT: Δημιουργία νέου φίλτρου αρχείων</h2>
+
+<p>Αυτός ο οδηγός εξηγεί πώς να δημιουργήσετε νέο φίλτρο αρχείων για το OmegaT, δίνοντας ως παράδειγμα την δημιουργία ενός απλού φίλτρου για αρχεία μορφής TMX. Ίσως να φαίνεται παράξενο να θέλει κανείς να μεταφράσει αρχεία TMX (η μετάφραση είναι ο κύριος λόγος δημιουργίας ενός φίλτρου), η προσθήκη ενός φίλτρου για αρχεία TMX θα σας επιτρέψει να αναζητάτε κείμενο εντός οποιουδήποτε αρχείου TMX μέσω ενός έργου τού OmegaT, με την επιλογή "Αναζήτηση αρχείων", κάτι που δεν είναι δυνατό στην κανονική δόμηση του OmegaT.</p>
+
+<p>Για οδηγίες μεταγλώττισης του OmegaT από τον πηγαίο κώδικα ανατρέξτε στον <a href="compiling_from_source.html">Οδηγό Μεταγλώττισης του Πηγαίου Κώδικα του OmegaT</a>.</p>
+
+<p>Επιλέξτε έναν υπάρχον φίλτρο για μια μορφή παραπλήσια με αυτήν του νέου φίλτρου. Στο παράδειγμά μας έχουμε επιλέξει το φίλτρο "Help &amp; Manual". </p>
+
+<p>Εντοπίστε τον φάκελο src/org/omegat/filters3/xml και δημιουργήστε αντίγραφο τού υποφακέλου /helpandmanual με το όνομα /tmx. Εντός του φακέλου, μετονομάστε τα αρχεία HelpandManualDialect.java και HelpandManualFilter.java σε TmxDialect.java and TmxFilter.java, αντιστοίχως.</p>
+
+<p>Ανοίξτε τα αρχεία TMXDialect.java και TMX filter σε επεξεργαστή κειμένου. Και στα δύο αρχεία αναζητήστε και αντικαταστήστε (διατηρώντας τα κεφαλαία και πεζά γράμματα) το:</p>
+
+<p>"helpandmanual" με το "tmx"<br/> "HelpAndManual" με το "TMX"<br/> "HELPANDMANUAL" με το "TMX"<br/> "Help &amp; Manual" με το "TMX"<br/> "Help&amp;Manual" με το "TMX"</p>
+
+<p>Εντοπίστε τις δομικές ετικέτες τής νέας μορφής αρχείου. Για να το κάνετε αυτό, κοιτάξτε προσεκτικά ένα δοκιμαστικό αρχείο σε επεξεργαστή κειμένου. Για την μορφή TMX, η δομική ετικέτα για το τεμάχιο είναι "tu".</p>
+
+<p>Στο TMXDialect.java:</p>
+
+<p>Ορίστε τις δομικές ετικέτες —στο παράδειγμά μας, αλλάζοντας την σειρά</p>
+
+<p>   defineParagraphTags(new String[] { "caption", "config-value", "variable", "para", "title", "keyword", "li", });</p>
+
+<p>σε</p>
+
+<p>   defineParagraphTags(new String[] { "tu", });</p>
+
+
+<p>Μπορείτε να διαγράψετε την σειρά</p>
+
+<p>    defineShortcut("link", "li");</p>
+
+<p>αφού δεν χρειάζεται για την μορφή TMX (δεν πειράζει, όμως, αν την αφήσετε).</p>
+
+<p>Μπορείτε να ορίσετε ετικέτες των εξωτεμαχιακών στοιχείων. Αυτές οι ετικέτες σημειώνουν όσα υποτεμάχια εμφανίζονται σε τεμάχιο άλλο από αυτό στο οποίο περιέχονται (όπως, π.χ., οι υποσημειώσεις). Στο παράδειγμά μας, εισαγάγετε την σειρά: </p>
+
+<p>   defineOutOfTurnTags(new String[] { "sub", });</p>
+
+<p>κάτω από την σειρά</p>
+
+<p>   defineParagraphTags(new String[] { "tu", });</p>
+
+<p>Το φίλτρο θα λειτουργεί ακόμη και χωρίς αυτήν την προσθήκη.</p>
+
+<p>Κάτω από αυτές τις γραμμές μπορείς να εισαγάγετε και τον εξής κώδικα:</p>
+
+<p>   defineIntactTags(new String[]<br/>
+&nbsp;&nbsp;&nbsp;{<br/>    "header",<br/>    "prop",<br/>    "ph",<br/>    "bpt",<br/>    "ept",<br/>    "it",<br/>    "ut",<br/>
+&nbsp;&nbsp;&nbsp;});</p>
+
+<p>Αυτές οι σειρές θα βελτιώσουν την εμφάνιση των αρχείων TMX, αλλά ούτε αυτές είναι απαραίτητες.</p>
+
+<p>Στο TMXFilter.java:</p>
+
+<p>Αλλάξτε την επέκταση τού αρχείου σε .tmx, αλλάζοντας την σειρά:</p>
+
+<p>   public Instance[] getDefaultInstances() {<br/>    return new Instance[] { new Instance("*.xml", null, null), new Instance("*.hmxp", null, null), };</p>
+
+<p>σε:</p>
+
+<p>   public Instance[] getDefaultInstances() {<br/>    return new Instance[] { new Instance("*.tmx", null, null), };</p>
+
+<p>Στον φάκελο /src/org/omegat ανοίξτε το αρχείο Bundle.properties σε επεξεργαστή κειμένου και αναζητήστε τις σειρές</p>
+
+<p>   # HelpAndManualFilter.java<br/>    HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+ 
+<p>Κάτω από αυτές τις σειρές εισαγάγετε τις </p>
+
+<p>   # TMXFilter.java<br/>    TMX_FILTER_NAME=TMX files</p>
+
+<p>(Αν θέλετε να εκκινείτε το OmegaT με γλώσσα περιβάλλοντος άλλη από την Αγγλική, κάνετε την ίδια αλλαγή στο αρχείο Bundle.properties file τής αντίστοιχης γλώσσας.)</p>
+
+<p>Στον κυρίως φάκελο του πηγαίου κώδικα ανοίξτε το αρχείο manifest-template.mf σε επεξεργαστή κειμένου. Βρείτε τις γραμμές:</p>
+
+<p>   Όνομα: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>    OmegaT-Plugin: φίλτρο</p>
+
+<p>Κάτω από αυτές τις σειρές εισαγάγετε τις</p>
+ 
+<p>   Όνομα: org.omegat.filters3.xml.tmx.TMXFilter<br/>    OmegaT-Plugin: φίλτρο</p>
+ 
+<p>Μεταγλωττίστε όπως περιγράφεται στον Οδηγό Μεταγλώττισης του Πηγαίου Κώδικα του OmegaT. Εκκινήστε την έκδοση που μόλις μεταγλωττίσατε. Βεβαιωθείτε ότι υπάρχει το νέο φίλτρο στην λίστα Options &gt; File Filters. Για να ελέγξετε αν λειτουργεί, μπορείτε να βάλετε ένα αρχείο TMX στον φάκελο /source ενός έργου ή να εκτελέστε αναζήτηση σε αρχεία TMX με την εντολή Text Search &gt; Search files.</p>
+
+<p>Copyright Marc Prior 2008-2011</p>
+
+</div>
+

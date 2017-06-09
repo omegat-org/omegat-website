@@ -1,0 +1,106 @@
+body {font-family:sans-serif;
+			}
+	 	#container {
+			width: 780px;
+			border: 1px solid gray;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			background : url(../images/pinstripe.png) repeat;
+					}
+		#banner {
+			padding: 5px;
+			margin-bottom: 5px;
+			background-color: rgb(213, 219, 225);
+			background : url(../images/logo_omegat.jpg) no-repeat top right #ffffff;
+			height:120px;
+			border : 1px outset;
+			}
+		#content {
+			padding: 5px;
+			margin-left: 215px;
+			margin-right:0px;
+			}
+		#content a:link, a:visited {color : black;
+		 text-decoration :none;
+		border-bottom: dashed 1px;
+				} 	
+
+			
+		#content h2 { color:white;
+		background-color : #912828;
+		margin : 0px ;
+		padding: 5px 0px 5px 10px ;
+		font-family:sans-serif;
+		
+		}
+		
+		#content h3 { color:#912828;
+		margin : 5px 0px 5px 0px ;
+		padding: 5px 5px 5px 10px ;
+		width : auto;
+		font-family:sans-serif;
+		border-left:35px solid #912828;
+		}
+		#content p, #content ul  {padding: 5px;
+		margin:0;
+		padding-left : 45px; 
+		}
+		#content table {font-size : 14px;
+		margin-top:10px;
+		margin-bottom:10px;} 
+		#menu {
+			float: left;
+			width: 200px;
+			\width: 210px;
+			w\idth: 200px;
+			margin: 0;
+			margin-right: 5px;
+			padding: 5px;
+			border : 1px outset;
+			list-style: none;
+			padding :0;}
+		#menu li a:link, #menu li a:visited  {
+		padding: 3px 5px 3px 5px; 
+		color:white;
+		background-color : #912828;
+		text-decoration:none;
+		font-weight:bold;
+		display : block; 
+		text-align:left;
+		border:none;
+		
+		}
+		#menu li a:hover, #menu li a:active  {
+		padding: 3px 5px 3px 5px; 
+		color: #912828;
+		background :white;
+		text-decoration:none;
+		font-weight:bold;
+		display : block; 
+		text-align:left;
+		border:none;
+		
+		}
+		#menu li span  {
+		padding: 3px 5px 3px 5px; 
+		color: #912828;
+		
+		background :white;
+		text-decoration:none;
+		display : block; 
+		text-align:center;
+		
+		}
+		td
+		{
+		padding:10px;
+		vertical-align:top;
+		}
+		#footer {
+			clear: both;
+			padding: 5px;
+			margin-top: 5px;
+				}
+		#footer a {border:0}		
+		#footer img {border :0;}		

@@ -1,0 +1,106 @@
+<div class="container">
+
+<h2>Guida de OmegaT: <br/>Usar le function de exportation del texto de OmegaT (interfacie de script)</h2>
+
+<p>De le version 2.0.1, OmegaT habeva un  function de exportation del texto. Iste GUIDA describe le function e su possibile usos. In addition, le pacchetto <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> contine alicun scripts tcl/tk multo simplice que es designate a illustrar le uso del function.</p>
+
+<h3>Proposito</h3>
+
+<p>Le function de exportation del texto exporta datos ex le projecto OmegaT currente in files de texto simple. Actualmente, le data exportate es:</p>
+
+<p>- Le contento del texto del segmento original, quando le segmento es aperte<br/> - Le contento del texto del segmento final, quando le segmento es aperte<br/><br/> - Le texto marcate in le segmento final, quando le segmento es aperte<br/></p>
+
+<p>Programmatores e redactores de script pote usar le files continente iste texto pro adder functiones ulterior a OmegaT. Il non necessita nulle cognoscentia de Java; le major parte del linguas de programmation, si non omne, poterea esser usate in vice, e implementate functiones utile etiam sol con un habilitate de programmation relativemente limitate.</p>
+
+<h3>Usar le  function de exportation del texto</h3>
+
+<p>Pro usar le function de exportation del texto, tu debe in prime loco lo habilitar in OmegaT:</p>
+
+<p>Optiones &gt; Comportamento de Modifica</p>
+
+<p>Pois marca le cassa: &quot;Exporta le segmento in files de texto&quot;.</p>
+
+<p>Le files appare in le sub plica /script in le plica files del usator de OmegaT<br/> (Pro le position del plica del files del usator de OmegaT sur tu systema operative, vide le Manual del usator (F1 ex intra OmegaT) &gt; Files e plicas &gt; Files del usator):</p>
+
+<p>source.txt - contine le texto original del segmento<br/> target.txt - contine le texto final del segmento<br/> selection.txt - contine le texto marcate per le usator, quando o es pressate Ctrl-Shift-C  o es seligite Modifica &gt; Exporta le selection</p>
+
+<p>Le contento del files es superscribite o quando un segmento nove es aperte (source.txt e target.txt) o quando a nove selection es exportate (selection.txt). Le files es files de texto simple non formattate.</p>
+
+<h3>Usar le scripts exemplo</h3>
+
+<p>Tcl/tk debe esser installate, si illo jam non es. Tcl/tk pote esser obtenite ex plure fontes; tcl.activestate.com es un fonte popular. Le usatores de Mac OSX deberea installar tcl/tk ex lor media de systema e le usatores de Linux deberea trovar lo in lor deposito de distribution si illo non es ja installate per arrangiamento base. (Nota pro le usatores de Ubuntu: le implementation del typo de character del installation base de tcl/tk in Ubuntu al presente tempore (version 9.10) es horrific, ma pote esser rectificate.)</p>
+
+<p>Pro render plus clar le functionamentos del script, omne script essentialmente exeque sol un function. Si multiple functiones debera esser usate al mesme tempore in practica, esserea plus efficiente combinar los in un file script singule.</p>
+
+<p>Le scripts exemplo supplite <a href="../../omegatk/te-scripts.zip">hic</a> lancea omnes un fenestra, ma es assatis concipibile scripts que exeque functiones in le fundo .</p>
+
+<p>Pro lancear un script:</p>
+
+<p>copia le script in le plica &quot;script&quot; de OmegaT, id es le plica continente source.txt etc. (Le scripts in principio pote esser site ubique, ma debe alora esser modificate con addition del percurso al files script.)</p>
+
+<p>Dependente sur como tu systema es configurate, il pote esser possibile lancear le scripts cliccante simplemente sur illos con le mouse. Alias:</p>
+
+<p>Aperi un fenestra pro linea de commando (consola, terminal, fenestra DOS).</p>
+
+<p>Cambia plica (directory) al plica del script, exempli gratia (sur systemas Windows XP):</p>
+
+<p>cd C:\Documents and Settings\User Name\Application Data\OmegaT\script</p>
+
+<p>Lancea le script con &quot;wish&quot; sequite ex le nomine del file script, exempli gratia:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Descriptiones del scripts individual</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>Iste script expone le texto original in un fenestra separate. Como tal, il face nihil non ja facite per le quadro Modifica de OmegaT; su fin es illustrar como le texto pote esser extrahite ex un file script e rendite disponibile pro scripts ulterior. Le contento del fenestra del script es modificabile e pote esser copiate e collate al reverso in le quadro Modifica de OmegaT.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>Como pro te-basic-source, ma pro le texto de destination.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>In ultra a monstrar le texto original, iste script provide un cassa de entrata in quem le usator pote scriber un linea (exempli gratia un parola). Quando es OmegaT  aperte un segmento continente iste linea, le script emitte un advertimento. Le advertimento sume le forma del texto in le fenestra de script essente marcate in jalne. In ultra, si supportate ex le hardware e ex le systema operative (isto non es semper le caso), sonara un pipamento.</p>
+
+<p>Un uso exemplo de iste function es quam seque. Le traductor ha un texto continente le phrase &quot;abc&quot;, e ha clause un prime minuta de illo, rendente &quot;abc&quot; quam &quot;abc&quot;. Illa alora discoperi que &quot;abc&quot; deberea esser rendite in &quot;def&quot;.  plus tosto que trovar omne le casos de &quot;abc&quot; e corriger los ante que proceder (le qual es possibile, ma ha disavantages), illa poterea decider simplemente de corriger los intra del proxime minuta. In iste caso, un &quot;memento&quot; in cata segmento pertinente pote esser utile.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>Como su nomine suggere, iste script spolia del tags le segmento (final) de OmegaT. Isto es utile ubi on <i>controla</i> segmentos gravate ex tag sur le schermo, pois que il es facile omitter perdite o duplice spatios, per exemplo.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>Iste script expone le segmento de destination in un typo de character particular (codificate in le script, ma pote esser modificate) plus tosto que le typo de character base. Le tags es monstrate in un differente typo de character pro render los minus intrusive. Dissimile de te-notags, il es possibile pro le translator laborar in iste fenestra, pois copiar e collar le contento in plen al quadro Modifica de OmegaT.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>Iste script lege le contento de un file glossario e marca omne terminos trovate in illo in le actual segmento (original). Le file glossario debe consister de duo columnas solmente, haber nomine GLOSS.utf8, e esser presente in le plica /script .</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>Como pro te-gloss-highlight, ma substitue le terminos in le glossario con le terminos de destination.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combina le functiones substitue e marca de te-gloss-highlight e te-gloss-subst.</p>
+
+<h3>Programmation in tcl/tk</h3>
+
+<p>Tcl/tk como lingua de script ha plure avantages:</p>
+
+<p>- illo es facile a apprender<br/> - illo es gratuite<br/> - Illo es largemente utilisate, assi on pote trovar adjuta sur le Interrete<br/> - Le componente Tk rende facile producer interfacies graphic del usator<br/> - Il ha multe bon libros e altere ressources disponibile pro illo (al minus in anglese)<br/> - Illo es orientate al linea de texto, e isto rende lo in particular convenibile  pro applicationes involvente texto</p>
+
+<p>Pro le neophytos, es disponibile in interrete plure parve instructiones, assi como:</p>
+
+<p><a href="http://www.dci.clrc.ac.uk/Publications/Cookbook/index.html">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a></p>
+
+<p>Si tu es  seriose re apprender tcl/tk, es fortemente recommendate &quot;Practical Programming in Tcl and Tk&quot; ex Brent Welch, ISBN: 0-13-038560-3. Isto es probabilemente un pauc troppo technic pro neophytos complete al programmation, ma post laborante al transverso de un del parve instructiones in interrete, illes deberea trovar lo utile.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

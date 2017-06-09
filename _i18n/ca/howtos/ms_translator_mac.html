@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>OmegaT, l'eina de memòria de traducció lliure</title>
+
+
+  
+  
+  <meta name="generator" content="screem 0.10.2"/>
+  
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  
+  <meta name="keywords" content="memòria de traducció, MT, traducció assistida per ordinador, eina de traducció assistida, TAO, GPL, codi font obert"/>
+
+  
+<link rel="stylesheet" type="text/css" href="../../config/howto.css"/></head><body>
+
+<div id="container">
+			
+<div id="banner">
+
+<h1>OmegaT</h1>
+
+<p>L'eina de memòria de traducció lliure (GPL)</p>
+
+</div>
+
+<div id="content">
+
+<h2>Manual de l'OmegaT: <br/>Configuració de l'MS Translator al Mac</h2><br/>- Inicieu la sessió al Microsoft Azure Marketplace:<br/> <a href="http://datamarket.azure.com/">http://datamarket.azure.com/</a><br/> <br/> *Si encara no teniu un compte de l'Azure Marketplace, haureu de crear-ne un abans.<br/> <br/> - Feu clic a l'opció My Account (El meu compte) a la part superior de la pàgina. <br/> - A prop de la part inferior, trobareu les entrades i els valors per a:<br/> <br/> Primary Account Key (Clau primària del compte)<br/> Customer ID (Identificador del client)<br/> <br/> Clau primària del compte = microsoft.api.client_secret (necessària per a configurar l'accés al Microsoft Translator)<br/> Identificador del client = microsoft.api.client_id (necessari per a configurar l'accés al Microsoft Translator)<br/> <br/> - Aneu al directori Applications (Aplicacions) (o al lloc on hàgiu instal·lat l'OmegaT al vostre Mac), feu clic amb el botó dret, premeu cmd+clic o feu dos tocs a l'executable de l'OmegaT i seleccioneu «View package contents» (Mostra el contingut del paquet). <br/> - Feu clic a la carpeta Contents (Contingut) i feu una còpia de seguretat/còpia/duplicat del fitxer info.plist. <br/> - Obriu el fitxer info.plist a l'editor de text que preferiu i aneu a la secció Properties (Propietats). <br/> - Aquí afegireu entrades per als valors de clau primària del compte i d'identificador d'usuari d'Azure Marketplace (recordeu que microsoft.api.client_id = el vostre «Customer ID» d'Azure Marketplace i que microsoft.api.client_secret = la vostra «Primary Account Key» d'Azure Marketplace):<br/> <br/>  &lt;key&gt;Properties&lt;/key&gt;<br/>        &lt;dict&gt;<br/>            &lt;key&gt;apple.laf.useScreenMenuBar&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>            &lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_id&lt;/key&gt;<br/>           --&gt; &lt;string&gt;A1234-5678-1234-5678-12345678901&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_secret&lt;/key&gt;<br/>           --&gt; &lt;string&gt;AaBb1234CcDd5678aAbBcCdD1234eEfFgGhH1234&lt;/string&gt;<br/>        &lt;/dict&gt;<br/> <br/> ***NOTA: Les fletxes del text anterior són NOMÉS il·lustratives. NO les incloeu a les vostres entrades. <br/> <br/> - Una vegada afegides les entrades anteriors, comproveu que els valors siguin correctes i, a continuació, deseu i tanqueu el vostre fitxer info.plist.<br/> - Inicieu l'OmegaT i activeu l'opció de l'MS Translator:<br/> aneu a Opcions &gt; Traducció automàtica i seleccioneu les opcions que vulgueu activar. <br/> - Comenceu a utilitzar l'OmegaT.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Copyright Will Helton 2012</p>
+
+</div>
+
+<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88"/></a><br/>
+
+<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML"/></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML"/></a>
+	</div>
+
+</div>
+
+</body></html>

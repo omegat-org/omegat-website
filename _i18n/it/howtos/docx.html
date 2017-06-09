@@ -1,0 +1,163 @@
+<div class="container">
+
+<h2>Guida di OmegaT: <br/>Traduzione di file di Word 2007 (Office Open XML, con estensione .docx) in OmegaT</h2>
+
+<p>Questa guida fornisce suggerimenti sulla traduzione di file MS Office 2007 (e successivi) con OmegaT.</p>
+
+<h3>Premesse</h3>
+
+<p>Con l'avvento di Microsoft Office 2007, Microsoft Word, Excel e Powerpoint hanno nuovi formati di file predefiniti. Questi formati sono formalmente conosciuti come &quot;Office Open XML&quot; e hanno rispettivamente le estensioni .docx, .xlsx e .pptx. I formati sono utilizzati anche in MS Office 2010. Per motivi di convenienza, si farà riferimento a tali formati con la locuzione &quot;formati file MS Office 2007&quot;.</p>
+
+<p>Dalla versione 1.7.1, OmegaT è in grado di gestire direttamente i file di Microsoft Office 2007, senza conversione. Con la comparsa di OmegaT versione 2.1.8, il trattamento di questo formato di file nel programma è diventato molto più facile da usare.</p>
+
+<h3>I vantaggi di usare il formato .docx insieme con OmegaT</h3>
+
+<p>Con l'aggiornamento, da parte dei clienti/autori, alle versioni più recenti di Microsoft Office/Word, i traduttori devono attendersi sempre più file nel nuovo formato. A differenza dei precedenti formati. doc,. xls e. ppt, questi file possono essere gestiti direttamente in OmegaT, senza perdite di formattazione dovute alla conversione da altri formati.</p>
+
+<p>Il nuovo formato può anche essere utile per gestire i vecchi formati .doc, .xls e .ppt, dato che possono essere convertiti nei loro corrispettivi di MS Office 2007, tradotti in OmegaT e riconvertiti nel vecchio formato. Questa procedura è quindi alternativa per i traduttori che preferiscono non utilizzare LibreOffice/OpenOffice.org per questo scopo.</p>
+
+<h3>Conversione nel formato MS Office 2007</h3>
+
+<p>È possibile convertire file di MS Office 1997/2000/2003/XP nel formato MS Office 2007, aprendoli con MS Office 2007 e salvandoli con &quot;Salva con nome&quot; nel nuovo formato (poiché ora è questo il formato standard, esso è semplicemente definito come formato Word, Excel o Powerpoint in MS Office 2007).</p>
+
+<p>Per gli utenti che non dispongono di MS Office 2007 o 2010 e non hanno intenzione di comprarlo, Microsoft fornisce anche un <a href="http://www.microsoft.com/downloads/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;display">plug-in di compatibilità</a> gratuito per le versioni precedenti.</p>
+
+<p>Utenti di Linux: sia MS Office 2007, sia i plug-in di compatibilità con Microsoft funzionano in <a href="http://www.codeweavers.com">Linux Crossover.</a></p>
+
+<h3>Punti da tenere presente nell'uso dei formati .docx, .xlsx e .pptx in OmegaT</h3>
+
+<p>Nelle versioni di OmegaT precedenti alla 2.1.8, ogni cambiamento di formattazione in un file di MS Office 2007 provocava una lunga serie di tag multipli, che rendevano spesso impraticabile la gestione di questo formato di file. Dalla versione 2.1.8, per impostazione predefinita, questi tag multipli sono ora aggregati (condensati) in un unico tag. Gli utenti che desiderano tradurre i file di MS Office 2007 dovrebbero quindi aggiornare OmegaT alla versione 2.1.8 o successiva</p>
+
+<p>(la maggiore facilità di gestione dei tag con i file .docx è data al costo di una leggera perdita del controllo sulla formattazione. Per esempio, senza la funzione di &quot;aggregazione tag&quot;, in cui una parola nel testo di origine è in grassetto e corsivo, il traduttore potrebbe scegliere di renderla solo in grassetto o solo in corsivo. Con la funzione di &quot;aggregazione tag&quot; attivata, questo non è possibile. La maggioranza degli utenti probabilmente troverà che l'aumentata facilità di utilizzo è superiore a questo inconveniente).</p>
+
+<p>Il formato .docx è anche soggetto all'introduzione di codice di formattazione, per così dire, &quot;fastidioso&quot;, che si traduce in tag indesiderati e inutili visibili nel riquadro dell'editor di OmegaT. Dato che sono scomodi durante la traduzione, vale la pena tentare di rimuovere questi disturbi prima di iniziare a tradurre. OmegaT condivide questo problema con altri strumenti CAT che gestiscono il formato .docx e le loro soluzioni sono simili o uguali.</p>
+
+<h3>Come rimuovere il codice di formattazione indesiderato dai file. docx</h3>
+
+<ul>
+
+
+<li><p>Word 2007 segna tutte le parole non presenti nel suo dizionario ortografico con tag, quindi anche un paio di parole che ritiene essere errori ortografici si tradurranno in una pletora di tag. Se tutte le singole parole appaiono in OmegaT racchiuse da tag, è possibile che Word abbia tentato di eseguire il controllo ortografico del testo senza accesso a un dizionario di ortografia adatto e quindi abbia segnato ogni parola come errata. In tal caso basta disattivare in Word il controllo automatico dell'ortografia.</p></li>
+<li><p>Anche la sillabazione automatica aggiunge tag inutili, quindi conviene disattivarla. Può essere necessario fare questo per ciascun documento, nel qual caso la procedura in Word 2007 è: scegliere la scheda Layout di pagina; nel gruppo &quot;Imposta pagina&quot;, fare clic su Sillabazione; quindi fare clic su Nessuna.</p></li>
+
+<li><p>Utilizzare la funzione di ricerca e sostituzione per rimuovere gli spazi doppi (sostituendoli con un singolo spazio).</p></li>
+
+<li>Se il testo contiene sia caratteri &quot;normali&quot; (ad esempio latini), sia asiatici, utilizzare Ctrl+A per selezionare tutto il testo, quindi impostare un solo tipo di carattere per tutto. Fare attenzione a scegliere un tipo di carattere che contenga sia i caratteri asiatici, sia quelli &quot;normali&quot; necessari, tipo &quot;MS Mincho&quot;, ma senza il suffisso di stile &quot;[corpo del testo]&quot;.</li>
+
+<li><p>Word 2007 inserisce un tag alle interruzioni di pagina, anche per quelle automatiche. Questo tag sembra che non possa essere rimosso.</p></li>
+
+</ul>
+
+<p>Si noti che anche dopo che le impostazioni di Word sono state modificate in modo che esso non inserisca più codici di &quot;disturbo&quot;, ad esempio per la sillabazione automatica, tali codici potrebbero non essere stati rimossi dalla modifica della configurazione ed essere ancora presenti nel file. La rimozione di questi codici è descritta di seguito. Prima di seguire le seguenti istruzioni per la rimozione dei codici fastidiosi, tuttavia, si rammenti di apportare le modifiche di configurazione in Word, altrimenti Word potrà semplicemente reinserire tali codici appena il file viene riaperto.</p>
+
+<h3>Macro CodeZapper</h3>Come già accennato, questo problema con MS Office 2007 non è limitato solo a OmegaT. Il traduttore <a href="http://asap-traduction.com/CodeZapper">David Turner</a> ha scritto una macro di MS Word (vivamente consigliata!) per affrontare il problema.<h3>Livellamento della formattazione dei caratteri</h3>
+
+<p>Un'alternativa all'esecuzione della macro CodeZapper sul vostro testo è quella di &quot;livellare&quot; la formattazione. &quot;Livellare&quot; la formattazione significa applicare il formato del primo carattere a tutti i caratteri successivi, in una selezione di testo (ad esempio un paragrafo intero). Si noti che questo non è lo stesso che &quot;eliminare&quot; la formattazione, che causerebbe alla formattazione dei caratteri di tornare all'impostazione predefinita del documento.</p>
+
+<p>È possibile livellare la formattazione dei paragrafi essenzialmente copiando interi paragrafi in MS Word e incollandoli di nuovo su se stessi, in modo che l'intero paragrafo prenda la formattazione del primo carattere.</p>
+
+<h3>Livellamento manuale della formattazione di un paragrafo</h3>
+
+<p>Passo 1: scoprire il segno di paragrafo. Selezionare ogni paragrafo facendovi sopra clic ripetutamente finché non viene evidenziato l'intero paragrafo. Quindi spostare la fine della selezione un carattere a sinistra, in modo che il segno di paragrafo sia escluso.</p>
+
+<p>Passo 2: copiare il testo evidenziato (Ctrl+C). Selezionare poi &quot;Incolla speciale&quot; (Word 2003) o fare clic sulla freccia nella parte inferiore del pulsante &quot;Inserisci&quot; (Word 2007) per ottenere le opzioni estese per l'incollaggio. Infine, inserire il contenuto usando l'opzione &quot;Testo Unicode non formattato&quot;.</p>
+
+<p>Dove i paragrafi contengono formattazione incorporata (grassetto, corsivo, collegamenti ipertestuali, ecc.) è possibile:</p>
+
+<p>- livellare la formattazione da questi paragrafi utilizzando la macro come descritto sopra, quindi reinserire la formattazione; o</p>
+
+<p>- evidenziare solo il testo fino all'inizio della parte formattata, copiarlo e incollarlo su se stesso, quindi ripetere il processo sul testo dopo la parte formattata.</p>
+
+<h3>Creazione di una macro per livellare la formattazione del carattere di un paragrafo</h3>
+
+<p>È in qualche modo possibile automatizzare la procedura descritta sopra con la creazione di una macro. Brevi istruzioni per la creazione della macro (in MS Office 2007) sono fornite di seguito (per maggiori informazioni, consultare il manuale di istruzioni o fare clic <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">qui</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">qui</a> o <a href="http://oit.nd.edu/training/documentation/documents/macro_qrg.pdf">qui</a>).</p>
+
+<p>Se non l'avete già fatto, aggiungere la scheda di sviluppo alla barra multifunzione come segue: fare clic sul pulsante Office. Selezionare opzioni di Word. Fare clic su 'Popolare' nella finestra di dialogo Opzioni di Word. Sulla barra multifunzione, spuntare la scheda 'Visualizza sviluppo' e confermare con OK. Chiudere Word.</p>
+
+<p>Riavviare Word, creare un nuovo file Word e aggiungere un paragrafo di testo campione, lungo almeno tre righe, ad esempio:</p>
+
+<p>Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo. Questo è un paragrafo.</p>
+
+<p>Premere il pulsante 'evidenzia paragrafo' per rendere visibili i caratteri nascosti.</p>
+
+<p>Posizionare il cursore nel paragrafo di testo (non nelle prime righe o nelle ultime).</p>
+
+<p>Creare la macro:</p>
+
+<p>Nella scheda Sviluppatore, fare clic su Registra Macro.</p>
+
+<p>Nella casella Nome Macro digitare un nome per la macro, ad esempio &quot;levelformat&quot;. Per rendere la macro disponibile in tutti i documenti, selezionare Normal.dotm nella casella &quot;Memorizza macro in&quot;. Se sono state apportate modifiche al proprio Normal.dotm, potrebbe convenire prima farne una copia di sicurezza.</p>
+
+<p>Fare clic sul pulsante Tastiera. Fare clic nella casella per una nuova combinazione di tasti, poi sperimentare con le combinazioni di tasti per trovarne una non assegnata. Se una combinazione che si prova è già assegnata, verrà visualizzato un messaggio relativo al comando nella finestra di dialogo, ed è possibile eliminare la combinazione e provarne un'altra. Ctrl+Maiusc+9 sembra non essere assegnata nell'installazione base di Word, ma è possibile utilizzare qualsiasi altra combinazione non ancora assegnata.</p>
+
+<p>Fare clic su Assegna per assegnare la scorciatoia alla macro che si sta per registrare. Qualsiasi cosa si fa ora sarà registrata nella macro, quindi seguire questa procedura con attenzione:</p>
+
+<p>Ctrl+cursore su (questo sposta il cursore all'inizio del paragrafo)</p>
+<p>Ctrl+Maiusc+cursore giù (seleziona il paragrafo, incluso il segno di paragrafo)</p>
+<p>Maiusc+cursore sinistra (sposta la fine della selezione a sinistra di un carattere, in modo da escludere il segno di paragrafo)</p>
+<p>Ctrl+C (copia il paragrafo)</p>
+<p>Ctrl+V (viene incollato il testo del paragrafo di nuovo sopra il paragrafo)</p>
+
+<p>Dopo aver inserito questi comandi, fare clic su Ferma Registrazione.</p>
+
+<p>Fare clic su Macro e selezionare levelformat (o qualunque sia il nome dato alla macro), quindi Modifica. Verrà visualizzato il codice della, o delle, macro. Per levelformat, questo dovrebbe essere:</p>
+
+<p>___________________<br/>
+Sub levelformat()<br/>
+'<br/>
+' levelformat macro<br/>
+'<br/>
+'<br/>
+    Selection.MoveUp Unit:=wdParagraph, Count:=1<br/>
+    Selection.MoveDown Unit:=wdParagraph, Count:=1, Extend:=wdExtend<br/>
+    Selection.MoveLeft Unit:=wdWord, Count:=1, Extend:=wdExtend<br/>
+    Selection.Copy<br/>
+    Selection.PasteAndFormat (wdPasteDefault)<br/>
+End Sub<br/>
+___________________</p>
+
+<p>Modificare la riga:</p>
+<p>    Selection.PasteAndFormat (wdPasteDefault)</p>
+<p>in:</p>
+<p>    Selection.PasteSpecial DataType:=wdPasteText</p>
+
+<p>Salvare con Ctrl+S e chiudere la finestra di modifica macro.</p>
+
+<p>Se tutto è andato secondo i piani, la macro ora dovrebbe funzionare. Per provarlo, aggiungere alcuni elementi di formattazione a un documento di Word, ad esempio convertendo una parola in grassetto. Ora basta posizionare il cursore in un punto qualsiasi del paragrafo e premere Ctrl+Maiusc+9 (o qualunque altro tasto di scelta rapida che era stato scelto): la formattazione dovrebbe scomparire.</p>
+
+<p>È possibile modificare la scelta rapida da tastiera in qualsiasi momento. Per fare questo, premere il pulsante &quot;Office&quot; principale, poi opzioni di Word (in basso a destra della finestra di dialogo).</p>
+
+<p>Fare clic su Personalizza &gt; Scegli comandi. Scegliere Macro dall'elenco a discesa. Selezionare &quot;levelformat&quot; (o qualsiasi sia il suo nome).</p>
+
+<p>Nella parte inferiore della finestra di dialogo accanto alle scelte rapide da tastiera, fare clic su Personalizza.</p>
+
+<p>Nella casella Categorie, scorrere giù le macro e selezionarle. Poi a destra, sotto le macro, selezionare levelformat (o qualsiasi sia il suo nome). La scelta rapida corrente verrà visualizzata nella casella pertinente. È possibile cancellarla selezionandola e premendo CANC. È possibile poi inserire una nuova scorciatoia da tastiera e assegnarla con il comando Assegna, come fatto in precedenza. Chiudere/confermare le finestre di dialogo.</p>
+
+<p>È possibile utilizzare una procedura simile per creare un pulsante per la macro:</p>
+
+<p>Ancora una volta, fare clic su pulsante &quot;Office&quot; principale, poi opzioni di Word.</p>
+
+<p>Fare clic su Personalizza &gt; Scegli comandi. Scegliere Macro dall'elenco a discesa. Selezionare la macro.</p>
+
+<p>Fare clic su Aggiungi. Si dovrebbe vedere il comando macro apparire nella colonna di destra. Fare clic su Modifica.</p>
+
+<p>Scegliere un simbolo, quindi OK &gt; OK. Il simbolo per la macro dovrebbe apparire nella barra degli strumenti.</p>
+
+<p>Questa macro è utile per la formattazione di un paragrafo intero che non contiene alcuna formattazione visibile di livellamento. Laddove un paragrafo contiene la formattazione desiderata, è necessario ripristinare la formattazione eliminata dopo il paragrafo di livellamento. Nei paragrafi che contengono molta formattazione, il ripristino della formattazione eliminata può richiedere molto lavoro. Per tali paragrafi, considerare le seguenti alternative:</p>
+
+<ul> 
+
+<li><p>Usare macro CodeZapper di Dave Turner.</p></li>
+
+<li><p>Creare una seconda macro (che abbia un proprio pulsante e, o in alternativa, una scorciatoia da tastiera) che livelli solo il testo evidenziato, piuttosto che l'intero paragrafo. (Registrare come descritto sopra, ma registrare solo il comando Ctrl+C seguito da Ctrl+V). Si può quindi evidenziare il testo tra i punti in cui la formattazione cambia. Questo livellerà la formattazione sulle sezioni di testo che hanno la stessa formattazione voluta e non sarà quindi necessario ripristinare la formattazione eliminata.</p></li>
+
+<li><p>Utilizzare la macro per il livellamento della formattazione solo su paragrafi con poca o nessuna formattazione. I paragrafi non &quot;livellati&quot; conterranno quindi i tag di disturbo, ma almeno gli altri saranno molto &quot;più puliti&quot;.</p></li>
+
+<li><p>Gli utenti più avanzati potrebbero voler provare la funzione 'Esporta testo' di OmegaT. In combinazione con lo script di te-st-notags, questa fornisce una finestra separata in cui i tag non vengono visualizzati. Si dovrà ancora gestire adeguatamente i tag durante la produzione e la modifica della traduzione, ma è possibile visualizzarla in una finestra separata senza il loro ingombro (&quot;zuppa di tag&quot;).</p></li>
+
+</ul>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

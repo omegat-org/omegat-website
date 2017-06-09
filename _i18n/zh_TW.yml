@@ -1,0 +1,60 @@
+---
+footer:
+  connect: Connect
+  documentation: 相關文件
+  omegat_project: The OmegaT Project
+global:
+  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
+  title: 'OmegaT - The Free Translation Memory Tool'
+linux_jre: Linux with JRE
+linux_jre64b: Linux with 64-bit JRE
+menu:
+  about: About
+  contact: Contact
+  documentation: 相關文件
+  download: 程式下載
+  languages: Languages
+  resources: 其他OmegaT資源
+nojre: Cross-platform without JRE
+osx_signed: OS X Signed
+osx_unsigned: OS X Unsigned
+source: Source code
+titles:
+  about: About
+  contact: Contact and Support
+  documentation: 相關文件
+  download: 程式下載
+  home: 'OmegaT - The Free Translation Memory Tool'
+  howto: How-To
+  howtos:
+    compatibility: Compatibility
+    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
+    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
+    docx: 'Howto - Translating Word 2007 files in OmegaT'
+    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
+    google_translate: 'Howto - Using Google Translate in OmegaT'
+    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
+    linux: OmegaT on Linux HowTo
+    localizing_omegat: 'Howto - Translating OmegaT into your language'
+    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
+    new_filter: 'Howto - Creating a new file filter'
+    preview: 'Howto - Adding a preview function to OmegaT'
+    priorview: 'Howto - The "Priorview" preview utility'
+    prop12m: Propagation and one-to-many matching HowTo
+    spelling: 'Howto - Spellchecking'
+    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
+    tokenizer: 'Howto - Using the OmegaT tokenizer'
+  index: OmegaT簡介
+  involved: OmegaT企畫與您
+  manual: Manual
+  philosophy: Philosophy
+  requirements: 安裝需求
+  resources: 其他OmegaT資源
+  reviews: OmegaT使用心得
+  sponsorship: Sponsorship
+  tutorials: Tutorials
+  usergroups: 使用者群組
+webstart: Web Start
+windows_jre: Windows with JRE
+windows_jre64b: Windows with 64-bit JRE
+windows_nojre: Windows without JRE

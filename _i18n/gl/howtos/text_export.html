@@ -1,0 +1,104 @@
+<div class="container">
+
+<h2>Gu&iacute;a de OmegaT: <br/>Usar a funci&oacute;n de exportaci&oacute;n de texto de OmegaT (interface de procesamento de scripts)</h2>
+
+<p>OmegaT ten unha funci&oacute;n de exportaci&oacute;n de texto dende a versi&oacute;n 2.0.1. Esta gu&iacute;a describe dita funcionalidade e os seus posibles usos. Ademais, o paquete <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> cont&eacute;n alg&uacute;ns scripts tcl/tk moi simples creados co obxectivo de demostrar o uso da funcionalidade.</p>
+
+<h3>Prop&oacute;sito</h3>
+
+<p>A funci&oacute;n de exportaci&oacute;n de texto exporta datos dende o proxecto actual de OmegaT a un ficheiro de texto plano. Nestes momentos, os datos exportados son:</p>
+
+<p>- O contido dos segmentos do texto de orixe, cando o segmento est&aacute; aberto.<br/>- O contido dos segmentos do texto de destino, cando o segmento est&aacute; aberto.<br/>- O texto destacado no texto de destino, cando se emprega o atallo adecuado.</p>
+
+<p>Os programadores e creadores de scripts poden empregar os ficheiros que cote&ntilde;en este texto para engadir funci&oacute;ns adicionais a OmegaT. Non &eacute; necesario ter co&ntilde;ecementos de Java, &eacute; posible empregar a maior&iacute;a das linguaxes de programaci&oacute;n, se non todas, no seu lugar, se non todas, e &eacute; posible crear funcionalidades moi &uacute;tiles incluso con co&ntilde;ecementos de programaci&oacute;n moi limitados.</p>
+
+<h3>Uso da funci&oacute;n de exportaci&oacute;n de texto</h3>
+
+<p>Para empregar a funci&oacute;n de exportaci&oacute;n de texto, ter&aacute; que activala en OmegaT:</p>
+
+<p>Opci&oacute;ns &gt; Editar comportamento</p>
+
+<p>Marque a caixa \xABExportar o segmento a ficheiros de texto\xBB.</p>
+
+<p>Atopar&aacute; o ficheiro no subcartafol /script no cartafol de ficheiros de usuario de OmegaT.<br/>[para atopar a localizaci&oacute;n do cartafol de ficheiros de usuario de OmegaT no seu sistema operativo, lea o Manual de usuario (premendo F1 en OmegaT) &gt; Ficheiros e cartafoles &gt; Ficheiros de configuraci&oacute;n do usuario]:</p>
+
+<p>source.txt	- cont&eacute;n o texto fonte do segmento<br/>target.txt	- cont&eacute;n o texto de destino do segmento<br/>selection.txt	- cont&eacute;n o texto destacado polo usuario ao premer Ctrl+Mai&uacute;s+C ou con Editar &gt; Exportar selecci&oacute;n</p>
+
+<p>O contido dos ficheiros sobrescribirase cando abra un novo segmento (source.txt e target.txt) ou cando exporte unha nova selecci&oacute;n (selection.txt). Os ficheiros son de texto plano sen formato.</p>
+
+<h3>Uso dos scripts de mostra</h3>
+
+<p>Deber&aacute; instalar Tcl/tk se non est&aacute; instalado xa. Pode obter Tcl/tk de varias fontes. Unha fonte popular &eacute; tcl.activestate.com. Os usuarios de Mac OS X deber&aacute;n instalar tcl/tk a trav&eacute;s dos medios do seu sistema e os usuarios de Linux deber&aacute;n atopala nos repositorios da s&uacute;a distribuci&oacute;n, se non est&aacute; instalado por defecto. [Nota para os usuarios de Ubuntu: a implementaci&oacute;n da fonte na instalaci&oacute;n por defecto de tcl/tk en Ubuntu nestes momentos (versi&oacute;n 9.10) &eacute; terrible, pero &eacute; posible solucionar este problema.]</p>
+
+<p>Para poder facer m&aacute;is claro o funcionamento dos scripts, cada un realiza s&oacute; unha funci&oacute;n. Se se fosen empregar m&uacute;ltiples funci&oacute;ns ao mesmo tempo, ser&iacute;a m&aacute;is eficiente combinalas nun &uacute;nico ficheiro de script.</p>
+
+<p>Todos os scripts de mostra que atopar&aacute; <a href="../../omegatk/te-scripts.zip">aqu&iacute;</a> abrir&aacute;n unha nova vent&aacute;, pero &eacute; posible crear scripts que realicen tarefas en segundo plano.</p>
+
+<p>Para executar un script:</p>
+
+<p>Copie o script no cartafol \xABscript\xBB de OmegaT, &eacute; dicir, o cartafol que cont&eacute;n o ficheiro source.txt. (&Eacute; posible situar os ficheiros en calquera lugar, pero se non est&aacute;n no cartafol \xABscript\xBB ser&aacute; necesario editar o cami&ntilde;o dos ficheiros de script.)</p>
+
+<p>Dependendo da configuraci&oacute;n do seu sistema, pode ser posible executar os scripts con s&oacute; facer clic neles co rato. Un m&eacute;todo alternativo &eacute;:</p>
+
+<p>Abrir unha venta de li&ntilde;a de comandos (s&iacute;mbolo do sistema DOS, terminal, consola)</p>
+
+<p>Cambie o cartafol (directorio) ao cartafol do ficheiro, por exemplo, nun sistema con Windows XP deber&iacute;a escribir:</p>
+
+<p>cd C:\Documents e Settings\User Name\Application Data\OmegaT\script</p>
+
+<p>Execute o ficheiro do script con \xABwish\xBB seguido do nome do script, por exemplo:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Descrici&oacute;n dos scripts individuais</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>Este script mostra o texto de orixe nunha xanela separada. Polo tanto, non fai nada que non faga o panel do Editor de OmegaT. O seu prop&oacute;sito &eacute; ilustrar como &eacute; posible extraer o texto dun ficheiro de script e po&ntilde;elo &aacute; disposici&oacute;n doutros scripts. &Eacute; posible editar o contido da xanela do script, e copialo e pegalo no panel do Editor de OmegaT.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>Realiza a mesma funci&oacute;n que basic-source, pero co texto de destino.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>Ademais de mostrar o texto de orixe, este script proporciona unha caixa de entrada na que o usuario pode introducir unha cadea (por exemplo, unha palabra). Cando se abra un segmento de OmegaT que conte&ntilde;a esa cadea, o script mostrar&aacute; unha advertencia resaltando o texto en amarelo na vent&aacute; do script. Ademais, se o hardware e o sistema operativo o permiten (non sempre &eacute; as&iacute;), soar&aacute; unha alarma.</p>
+
+<p>A continuaci&oacute;n m&oacute;strase un exemplo de uso desta funci&oacute;n. A persoa que realiza a traduci&oacute;n ten un texto que cont&eacute;n a cadea \xABabc\xBB, e completa un borrador traducindo \xABabc\xBB como \xABabc\xBB, mais posteriormente descubre que \xABabc\xBB deber&iacute;a traducirse como \xABdef\xBB. En lugar de atopar todas as repetici&oacute;ns de \xABabc\xBB e corrixilas (o cal &eacute; posible, pero ten desvantaxes), poder&iacute;a optar por corrixilas nun novo borrador. Para isto resulta moi &uacute;til un recordatorio para cada segmento relevante.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>Este script actualiza de forma autom&aacute;tica as etiquetas dun segmento (de destino) de OmegaT. Esta funci&oacute;n &eacute; moi &uacute;til para <i>revisar</i> segmentos con moitas etiquetas, xa que &eacute; posible non ver espazos que faltan ou espazos dobres, por exemplo.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>Este script mostra o segmento de destino nunha fonte particular (codificada no script, pero &eacute; posible editalo) en lugar da fonte predeterminada. As etiquetas m&oacute;stranse nunha fonte diferente para facelas menos intrusivas. A diferencia de te-notags, &eacute; posible que a persoa que realiza a traduci&oacute;n traballe nesta vent&aacute; e despois copie e pegue o contido completo no panel do Editor de OmegaT.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>Este script le o contido dun ficheiro de glosario e destaca calquera termo do glosario que apareza no segmento (de orixe) actual. O ficheiro de glosario s&oacute; debe consistir en d&uacute;as columnas, ter o nome GLOSS.utf8 e estar situado no cartafol /script.</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>Realiza a mesma funci&oacute;n que te-gloss-highlight, pero substitu&iacute;ndo os termos de orixe no glosario cos termos de destino.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combina as funci&oacute;ns dos scripts te-gloss-highlight e te-gloss-subst.</p>
+
+<h3>Programar en tcl/tk</h3>
+
+<p>Tcl/tk ten varias vantaxes como linguaxe para crear scripts:</p>
+
+<p>- &Eacute; f&aacute;cil de aprender<br/>- &Eacute; libre<br/>- &Uacute;sase moito, polo que poder&aacute; atopar axuda de forma f&aacute;cil en Internet<br/>- O compo&ntilde;ente Tk facilita a creaci&oacute;n de interfaces gr&aacute;ficas de usuario<br/>- Hai moitos libros excelentes e outras fontes dispo&ntilde;ibles (cando menos en ingl&eacute;s)<br/>- Est&aacute; orientada &aacute;s cadeas, o que a volve especialmente adecuada para as aplicaci&oacute;ns que traballan con texto</p>
+
+<p>Hai varios titoriais dispo&ntilde;ibles en li&ntilde;a, como:</p>
+
+<p><a href="http://www.dci.clrc.ac.uk/Publications/Cookbook/index.html">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/><a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/><a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a></p>
+
+<p>Se est&aacute; considerando seriamente aprender tcl/tk recomendamos encarecidamente \xABPractical Programming in Tcl and Tk\xBB por Brent Welch, ISBN: 0-13-038560-3. &Eacute; posible que sexa demasiado t&eacute;cnico para persoas novatas na programaci&oacute;n, pero deber&iacute;a resultarlle &uacute;til despois de realizar un dos titoriais en li&ntilde;a.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

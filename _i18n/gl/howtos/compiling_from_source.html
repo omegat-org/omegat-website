@@ -1,0 +1,124 @@
+<div class="container">
+
+<h2>Gu&iacute;a de OmegaT: <br/>Compilar OmegaT a partir do c&oacute;digo fonte</h2>
+
+
+<p>Esta gu&iacute;a explica como compilar OmegaT a partir do c&oacute;digo fonte.</p>
+
+<p>OmegaT est&aacute; dispo&ntilde;ible xa compilado para m&uacute;ltiples plataformas, e existe unha versi&oacute;n multiplataforma. Polo tanto non &eacute; necesario compilar OmegaT para poder usalo. Compilar OmegaT &eacute; &uacute;til para desenvolvedores que queiran facer modificaci&oacute;ns ao c&oacute;digo do programa. </p>
+
+<p><strong>1. Descargue e instale o Java Development Kit (JDK) e Apache Ant</strong></p>
+
+<p>Poden usarse varios programas para compilar o c&oacute;digo fonte de novo despois de modificalo, pero entre os m&aacute;is pr&aacute;cticos at&oacute;pase <a href="http://ant.apache.org">Apache Ant</a>. Tam&eacute;n &eacute; preciso o <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK).</p>
+
+<p>Dependendo de como instale o Java Development Kit, &eacute; posible que te&ntilde;a que cambiar o atributo \xABJAVA_HOME\xBB para que funcione con Ant.</p>
+
+<p><strong>2. Compile o c&oacute;digo</strong></p>
+
+<p>Os nomes de cartafoles aqu&iacute; indicados son s&oacute; para fins ilustrativos, os n&uacute;meros de versi&oacute;n cambiar&aacute;n.</p>
+
+<p>Abra unha xanela de li&ntilde;a de comandos (consola, xanela de DOS). Cambie o cartafol ao cartafol principal do c&oacute;digo fonte de OmegaT (o cartafol que cont&eacute;n o ficheiro build.xml), por exemplo:</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_2.2.3_Beta_Source</p>
+
+<p>Neste cartafol, inicie Apache Ant entrando no executable de ant. &Eacute; posible que sexa necesario introducir a ruta completa, por exemplo:</p>
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+<p>Se o c&oacute;digo se compila con &eacute;xito ver&aacute; a mensaxe \xABBUILD SUCCESSFUL\xBB. Se non &eacute; as&iacute;, aparecer&aacute;n mensaxes de depuraci&oacute;n que, con sorte, lle axudar&aacute;n a ter unha idea de cal &eacute; o problema.</p>
+
+<p><strong>3. Execute OmegaT</strong></p>
+
+<p>Se o seu c&oacute;digo se compilou con &eacute;xito, a versi&oacute;n compilada de OmegaT estar&aacute; en:</p>
+
+<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
+
+<p>Sen sa&iacute;r da li&ntilde;a de comandos, c&aacute;mbieo a este cartafol, por exemplo con:</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+<p>e inicie OmegaT con:</p>
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+
+
+<p><strong>4a. 1\xBA exemplo de modificaci&oacute;n: cambiar a cor coa que se destacan os segmentos</strong></p>
+
+<p>No cartafol </p>
+
+<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
+
+<p>abra o ficheiro SegmentBuilder.java nun editor de texto.</p>
+
+<p>Busque as li&ntilde;as:</p>
+
+<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
+
+<p>e</p>
+
+<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
+
+<p>e cambie</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>por</p>
+
+<p style="font-family: monospace;">COLOR_BLUE.</p>
+
+<p>No cartafol</p>
+
+<p style="font-family: monospace;">src/org/omegat/util/gui</p>
+
+<p>abra o ficheiro Styles.java nun editor de texto.</p>
+
+<p>Busque a li&ntilde;a</p>
+
+<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
+
+<p>Cambie</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>por </p>
+
+<p style="font-family: monospace;">COLOR_BLUE</p>
+
+<p> e </p>
+
+<p style="font-family: monospace;">192, 255, 192 </p>
+
+<p>por </p>
+
+<p style="font-family: monospace;">225, 225, 255.</p>
+
+
+
+<p><strong>4b. 2\xBA exemplo de modificaci&oacute;n: incremente o n&uacute;mero de coincidencias parciais que se mostran de cinco a dez</strong></p>
+
+<p>No cartafol </p>
+
+<p style="font-family: monospace;">/src/org/omegat/util</p>
+
+<p>abra o ficheiro OConsts.java nun editor de texto.</p>
+
+<p>Busque as li&ntilde;as:</p>
+
+<p style="font-family: monospace;">    /** Number of fuzzy matches to display */<br/>public static final int MAX_NEAR_STRINGS = 5;</p>
+
+<p>e cambie</p>
+
+<p style="font-family: monospace;">= 5</p>
+
+<p>por</p>
+
+<p style="font-family: monospace;">= 10</p>
+
+
+<p>En ambos exemplos, compile e faga probas tal como se describiu arriba.</p>
+
+<p>Copyright Marc Prior 2011-2012</p>
+
+</div>
+

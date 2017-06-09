@@ -1,0 +1,13 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br/>Instellen van MS Translator op Mac</h2><br/>- Log in op Microsoft Azure Marketplace:<br/> <a href="http://datamarket.azure.com/">http://datamarket.azure.com/</a><br/> <br/> *Indien u nog geen account hebt voor Azure Marketplace dient u er eerst een te registreren.<br/> <br/> - Klik op de optie My Account boven aan de pagina. <br/> - Nabij de onderkant zult u items en waarden zien voor:<br/> <br/> Primary Account Key<br/> Customer ID<br/> <br/> Primary Account Key = microsoft.api.client_secret (nodig om uw toegang voor Microsoft Translator te configureren)<br/> Customer ID = microsoft.api.client_id (nodig om uw toegang voor Microsoft Translator te configureren)<br/> <br/> - Ga naar uw map Applications (of waar u dan ook uw installatie van OmegaT hebt opgeslagen op uw Mac), klik met rechts/cmd+klik/twee-vinger tap op de uitvoerbare van OmegaT en selecteer &quot;View package contents&quot;. <br/> - Klik op de map Contents en maak een back-up/kopie/duplicaat van uw bestand info.plist. <br/> - Open uw bestand info.plist in uw favoriete tekstbewerker en localiseer het gedeelte Properties. <br/> - Hier moet u items toevoegen voor uw waarden van Azure Marketplace Primary Account Key en Customer ID (onthoud dat microsoft.api.client_id = uw Azure Marketplace Customer ID en microsoft.api.client_secret = uw Azure Marketplace Primary Account Key):<br/> <br/>  &lt;key&gt;Properties&lt;/key&gt;<br/>        &lt;dict&gt;<br/>            &lt;key&gt;apple.laf.useScreenMenuBar&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>            &lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_id&lt;/key&gt;<br/>           --&gt; &lt;string&gt;A1234-5678-1234-5678-12345678901&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_secret&lt;/key&gt;<br/>           --&gt; &lt;string&gt;AaBb1234CcDd5678aAbBcCdD1234eEfFgGhH1234&lt;/string&gt;<br/>        &lt;/dict&gt;<br/> <br/> ***ONTHOUD: de bovenstaande pijlen zijn ALLEEN ter illustratie. Neem die NIET op in uw daadwerkelijke items. <br/> <br/> - Als u eenmaal de bovenstaande items hebt gemaakt, controleer dan nogmaals dat de waarden correct zijn en sla dan op en sluit uw bestand info.plist.<br/> - Starten van Launch OmegaT en de optie MS Translator inschakelen:<br/> Opties &gt; Machinevertaling ... en selecteer de opties die u zou willen inschakelen. <br/> - Beginnen met het gebruiken van OmegaT.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Copyright Will Helton 2012</p>
+
+</div>
+

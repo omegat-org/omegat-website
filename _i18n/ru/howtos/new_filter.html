@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+	
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>OmegaT</title>
+  <meta name="GENERATOR" content="OpenOffice.org 1.0  (Linux)">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="AUTHOR" content="Марк Прайор (Marc Prior)">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CREATED" content="20011224;18295700">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CHANGED" content="20030512;20270600">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <style>
+	<!--
+		P { color: #000000 }
+		A:link { color: #ff0000 }
+		A:visited { color: #ff0000 }
+	-->
+	</style>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="Generator" content="Kate, расширенный текстовый редактор KDE">
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="Generator" content="Kate, расширенный текстовый редактор KDE">
+</head>
+
+
+<body bgcolor="#ffffff" lang="en-US" link="#ff0000" text="#000000" vlink="#ff0000">
+
+
+
+
+
+
+<h1><font color="#330000"><font face="Helvetica, sans-serif"><img style="width: 51px; height: 62px;" alt="" src="relOT11.png" hspace="10">HOWTO: Создание нового фильтра</font></font></h1>
+
+
+
+
+
+
+<p>В этом документе HOWTO описывается создание нового фильтра для использования в OmegaT.</p>
+
+
+
+
+
+
+
+
+
+
+<p>Для создания фильтра не требуются навыки программирования на Java или любом другом языке, но необходимо разбираться в компьютерах на уровне выше среднего.</p>
+<p>В описании ниже подразумевается, что файл, для которого необходимо написать новый фильтр, имеет формат XML. К примеру, нужно создать для OmegaT версии 1.8.0 update 01 Beta новый фильтр для файлов формата Abiword, взяв за основу существующий фильтр XLIFF.<br> Откройте на веб-сайте OmegaT страницу загрузки , чтобы загрузить исходный код OmegaT. Распакуйте архив в нужный каталог.<br>
+
+
+</p>
+
+
+
+<h1 style="font-family: sans-serif;">1. Загрузить и установить программу Apache Ant.</h1>
+
+
+<p>Программа Apache Ant понадобится для компиляции изменённого исходного кода. Для этой цели можно также воспользоваться пакетом Java Development Kit (JDK), но Ant является, наверное, самый простым в использовании инструментом. Загрузить его можно на веб-сайте ant.apache.org.<br>
+
+</p>
+
+<h1 style="font-family: sans-serif;">2. Сделать копию существующего фильтра.</h1>
+
+<p>Выберите существующий фильтр, который послужит основой для нового фильтра. В данном примере выбран фильтр XLIFF. Фильтр находится в каталоге:</p>
+<p>
+
+<span style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters3\xml\xliff</span></p>
+<p><span style="font-family: monospace;"></span>Сделайте копию этого каталога с подходящим названием, например как в данном примере:</p>
+<p>
+
+<span style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters3\xml\abiword</span></p>
+<p><span style="font-family: monospace;"></span>Переименуйте файлы в этом каталоге, например:</p>
+<p>
+
+<span style="font-family: monospace;">XLIFFDialect.java</span> в <span style="font-family: monospace;">AbiwordDialect.java</span><br> <span style="font-family: monospace;"> XLIFFFilter.java</span> в <span style="font-family: monospace;">AbiwordFilter.java</span></p>
+<p><span style="font-family: monospace;"></span>По очереди откройте в текстовом редакторе файлы <span style="font-family: monospace;">AbiwordDialect.java</span> и <span style="font-family: monospace;">AbiwordFilter.java</span> и замените все экземпляры «XLIFF», «xliff» и т.д. на «Abiword», «abiword» и т.д.<br>
+</p>
+<h1><span style="font-family: sans-serif;">3. Определить для формата файла теги уровня параграфа.</span> </h1>
+<p>Чтобы узнать, на что должны быть похожи теги параграфов, посмотрите в текстовом редакторе на пример файла. Например, в файле Abiword (в данном примере) параграф может выглядеть так:</p>
+<p style="font-family: monospace;">&lt;p style="Normal"&gt;Мама мыла раму. Маму рыла рама. Маму рыла рама. Образец &lt;c props="font-weight:bold"&gt;полужирного&lt;/c&gt; и &lt;c props="font-style:italic"&gt;наклонного&lt;/c&gt; текста. Рамой маму смыло.&lt;/p&gt;</p>
+<p>В данном случае видно, что тегом параграфа в Abiword является структура &lt;p&gt;.<br>
+</p>
+<h1 style="font-family: sans-serif;">4. Объявить теги параграфов</h1>
+<p>В файле MyFilterDialect.java в списке тегов уровня параграфа замените существующие теги параграфов  на те, которые были определены для нового фильтра:</p>
+<p style="font-family: monospace;">
+
+{<br>
+
+
+    public AbiwordDialect()<br>
+
+
+    {      <br>
+
+
+        defineParagraphTags(new String[]<br>
+
+
+        {<br>
+
+
+            "p",                                                           // NOI18N<br>
+
+
+        });<br>
+
+
+        <br>
+
+
+        defineOutOfTurnTags(new String[]<br>
+</p>
+<h1 style="font-family: sans-serif;">5. Объявить непереводимые теги</h1>
+<p>Для работы фильтра, возможно, понадобится объявить непереводимые теги. В Abiword, например, нужно объявить как непереводимый тег &lt;data&gt;:</p>
+<p>
+
+<span style="font-family: monospace;">defineIntactTags(new String[]</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+        {</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+            "data",                                                             // NOI18N</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+        });</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+    }</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+}</span><br>
+</p>
+<h1 style="font-family: sans-serif;">6. Добавить фильтр в мастер фильтров.</h1>
+<p>Откройте в текстовом редакторе файл</p>
+<p style="font-family: monospace;">
+
+..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters2\master\FilterMaster.java</p>
+<p>и найдите ссылки на XLIFF-фильтр. Вставьте соответствующие ссылки на новый фильтр, например:</p>
+<p>
+
+<span style="font-family: monospace;">import org.omegat.filters3.xml.xliff.XLIFFFilter;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+import org.omegat.filters3.xml.abiword.AbiwordFilter;</span><br style="font-family: monospace;">
+
+
+<br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+res.addFilter(new OneFilter(new XLIFFFilter(), false));</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+res.addFilter(new OneFilter(new AbiwordFilter(), false)); </span><br>
+</p>
+
+
+<h1 style="font-family: sans-serif;">7. Добавить новый фильтр в файл Bundle.properties</h1>
+
+
+<p>Откройте файл</p>
+
+
+<p style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\Bundle.properties</p>
+
+
+<p>в текстовом редакторе. Найдите запись для XLIFF-фильтра и добавьте соответствующую запись для нового фильтра:</p>
+
+
+<p style="font-family: monospace;"># XLIFFFilter.java</p>
+
+
+<p style="font-family: monospace;">XLIFF_FILTER_NAME=XLIFF files</p>
+
+
+<p style="font-family: monospace;"># AbiwordFilter.java</p>
+
+
+<p style="font-family: monospace;">ABIWORD_FILTER_NAME=Abiword files</p>
+
+
+<p>(В данном случае подразумевается, что используется английская версия OmegaT. Для другого языка запись нужно добавить в файл Bundle.properties соответствующей версии программы.)</p>
+
+
+<h1 style="font-family: sans-serif;">8. Откомпилировать код.</h1>Откройте окно с командной строкой (консоль, окно с DOS'ом). Перейдите в главный каталог с исходным кодом OmegaT (каталог, в котором находится файл build.xml), например<p style="font-family: monospace;">cd C:\Мои документы\MyOmegat\OmegaT_1.8.0_01_Beta_Source</p>
+
+
+<p>Находясь в этом каталоге запустите программу Apache Ant, указав полный путь в исполняемому файлу Ant, например:</p>
+
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+
+<p>В случае успешной компиляции кода появится сообщение «BUILD SUCCESSFUL» (Собрано без ошибок). В противном случае будут показаны отладочные сообщения, с помощью которых (в лучшем случае) можно будет разобраться, в чём заключается проблема.</p>
+
+
+<h1 style="font-family: sans-serif;">9. Запустить OmegaT.</h1>В случае успешной компиляции кода собранная программа OmegaT будет помещена в каталог:<p style="font-family: monospace;">OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+
+<p>Находясь в окне с командной строкой перейдите в этот каталог, например так::</p>
+
+
+<p style="font-family: monospace;">cd C:\Мои документы\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+
+<p>и запустите OmegaT с помощью команды:</p>
+
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+
+<h1 style="font-family: sans-serif;">10. Проверить присутствие фильтра в программе OmegaT.</h1>Чтобы вывести список фильтров OmegaT, выбрите меню <span style="font-family: monospace;">Настройки &gt; Файловые фильтры &gt; По умолчанию</span>.<h1 style="font-family: sans-serif;">11. Проверить работу нового фильтра.</h1>Создайте новый проект с файлом в нужном формате.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font color="#330000"><a href="../documentation.html"><font face="Helvetica, sans-serif"><font color="#330000">Назад к списку документации</font></font></a><font face="Helvetica, sans-serif"> <br> <font color="#330000">© Marc Prior,&nbsp;2008</font></font></font></p>
+
+
+
+
+
+
+
+
+</body>
+</html>

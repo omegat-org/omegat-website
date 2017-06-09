@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  <title>OmegaT, l'eina de memòria de traducció lliure</title>
+  <meta name="generator" content="screem 0.10.2"/>
+  
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  
+  <meta name="keywords" content="memòria de traducció, MT, traducció assistida per ordinador, eina de traducció assistida, TAO, GPL, codi font obert"/>
+
+  
+<link rel="stylesheet" type="text/css" href="../../config/howto.css"/>
+</head>
+
+<body>
+
+<div id="container">
+			
+<div id="banner">
+
+<h1>OmegaT</h1>
+
+<p>L'eina de memòria de traducció lliure (GPL)</p>
+
+</div>
+
+<div id="content">
+
+<h2>Manual de l'OmegaT: <br/>Com s'utilitza la funció d'exportació de text de l'OmegaT (interfície de scripts)</h2>
+
+<p>A partir de la versió 2.0.1, l'OmegaT inclou una funció d'exportació de text. En aquest manual es descriu la funció i les possibles aplicacions que pot tenir. A més a més, el paquet <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> conté alguns scripts en tcl/tk molt senzills que serveixen per il·lustrar com s'utilitza aquesta funció.</p>
+
+<h3>Finalitat</h3>
+
+<p>La funció d'exportació de text exporta les dades del projecte de l'OmegaT actiu a fitxers de text net. En aquest moment, les dades que s'exporten són:</p>
+
+<p>- El contingut del segment del text de partida, quan el segment està obert.<br/> - El contingut del segment del text traduït, quan el segment està obert.<br/> - El text realçat al text traduït, si es prem la drecera corresponent.</p>
+
+<p>Els programadors i els creadors de scripts poden utilitzar els fitxers que contenen aquest text per afegir més funcions a l'OmegaT. No cal que tinguin coneixements del Java, ja que es poden utilitzar la majoria dels llenguatges de programació, si no tots, i es poden crear funcions ben útils fins i tot sense tenir uns amplis coneixements de programació.</p>
+
+<h3>Com s'utilitza la funció d'exportació de text</h3>
+
+<p>Perquè es pugui utilitzar la funció d'exportació de text, abans heu d'activar-la a l'OmegaT:</p>
+
+<p>Opcions &gt; Comportament de l'edició</p>
+
+<p>Tot seguit, seleccioneu la casella «Exporta el segment a fitxers de text».</p>
+
+<p>Els fitxers apareixen a la subcarpeta /script de la carpeta de fitxers de l'usuari de l'OmegaT  (per trobar la ubicació de la carpeta de fitxers de l'usuari de l'OmegaT al sistema operatiu, consulteu el Manual d'usuari (F1 quan sou a l'OmegaT) &gt; Fitxers i directoris &gt; Fitxers de l'usuari):</p>
+
+<p>source.txt: conté el text de partida del segment<br/> target.txt: conté el text traduït del segment<br/> selection.txt: conté el text realçat per l'usuari quan es prem Ctrl+Shift+C o se selecciona Edita &gt; Exporta la selecció</p>
+
+<p>El contingut dels fitxers se sobreescriu en obrir un segment nou (source.txt i target.txt) o bé quan s'exporta una nova selecció (selection.txt). Els fitxers són fitxers de text net sense format.</p>
+
+<h3>Utilització dels scripts de mostra</h3>
+
+<p>Cal instal·lar el Tcl/tk, si no s'ha instal·lat encara. El Tcl/tk es pot aconseguir de diversos llocs; un dels més coneguts és tcl.activestate.com. Els usuaris del Mac OSX hauran d'instal·lar el tcl/tk dels suports del sistema i els usuaris del Linux el trobaran als repositoris de les seves distribucions, si no el tenen ja instal·lat per defecte. (Nota per als usuaris de l'Ubuntu: la implementació del tipus de font de la instal·lació per defecte del tcl/tk és pèssima en aquests moments [versió 9.10], però es pot rectificar).</p>
+
+<p>Perquè el funcionament del codi de script sigui més clar, cada script fa en principi una sola funció. Si, en la pràctica, es necessita més d'una funció, seria més eficaç combinar-les en un únic fitxer script.</p>
+
+<p>Tots els scripts d'exemple proporcionats <a href="../../omegatk/te-scripts.zip">aquí</a> inicien una finestra, però els scripts que fan funcions en segon pla són bastant senzills de concebre.</p>
+
+<p>Per iniciar un script:</p>
+
+<p>Copieu l'script a la carpeta «script» de l'OmegaT, és a dir, la carpeta que conté, entre d'altres, el fitxer source.txt (en principi, els scripts es poden col·locar en qualsevol lloc, però caldria editar-los per afegir el camí corresponent als fitxers script).</p>
+
+<p>En funció de la configuració del sistema, hi hauria la possibilitat d'iniciar els scripts tot just fent-hi clic amb el ratolí. Com a alternativa:</p>
+
+<p>Obriu una finestra de línia d'ordres (consola, finestra DOS).</p>
+
+<p>Canvieu de carpeta (directori) a la carpeta dels scripts, p. ex. (als sistemes Windows XP):</p>
+
+<p>cd C:\Documents and Settings\Nom d'usuari\Application Data\OmegaT\script</p>
+
+<p>Inicieu l'script amb «wish», seguit pel nom del fitxer script, p. ex.:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Descripcions de cada script</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>Aquest script mostra el text de partida en una finestra independent. Per tant, no fa res que no faci ja la subfinestra de l'editor de l'OmegaT; l'objectiu és mostrar com s'extreu el text d'un fitxer script perquè estigui disponible per crear altres scripts. El contingut de la finestra de l'script és editable i es pot copiar i tornar a enganxar a la subfinestra de l'editor de l'OmegaT.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>Fa el mateix que te-basic-source, però per al text traduït.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>A més de mostrar el text de partida, aquest script ofereix un quadre d'entrada de text al qual l'usuari pot escriure una cadena (p. ex., una paraula). Quan s'obri un segment de l'OmegaT que contingui aquesta cadena, l'script llençarà un avís. L'avís consistirà a realçar en groc el text de la finestra de l'script. A més a més, si ho permeten el maquinari i el sistema operatiu (no sempre és així), s'emetrà un so.</p>
+
+<p>A continuació es mostra un exemple de com s'utilitza aquesta funció. Imaginem que una traductora té un text amb la frase «abc» i ja ha completat el primer esborrany de la traducció, on ha traduït «abc» com «abc». En aquest moment, descobreix que «abc» s'ha de traduir com «def». En comptes de cercar totes les aparicions d'«abc» i corregir-les abans de continuar (la qual cosa és possible, però té alguns inconvenients), pot decidir corregir-les mentre treballa en l'esborrany següent. En aquest cas, li vindria bé rebre un «recordatori» en cada segment.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>Com ho indica el nom («no tags», sense etiquetes), aquest script elimina automàticament totes les etiquetes d'un segment (traduït) de l'OmegaT. És una funció útil quan es <i>revisen</i> segments plens d'etiquetes a la pantalla, ja que és molt fàcil passar per alt, per exemple, si hi ha espais dobles o si en falten.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>Aquest script mostra el segment traduït amb un tipus de lletra particular (incrustat a l'script, però es pot editar), en comptes del tipus de lletra per defecte. Les etiquetes es mostren amb un tipus de lletra diferent perquè destaquin menys. Al contrari que amb te-notags, el traductor pot treballar en aquesta finestra i, a continuació, copiar i enganxar tot el contingut a la subfinestra de l'editor de l'OmegaT.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>Aquest script llegeix el contingut d'un fitxer de glossari i realça els termes que apareixen al segment actual (text de partida). El fitxer del glossari ha de tenir només dues columnes, anomenar-se GLOSS.utf8 i estar ubicat a la carpeta /script.</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>Fa el mateix que te-gloss-highlight, però substitueix els termes de partida del glossari pels termes traduïts.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combina les funcions de realçat i substitució de te-gloss-highlight i te-gloss-subst.</p>
+
+<h3>Programació amb el tcl/tk</h3>
+
+<p>El tcl/tk és un llenguatge script que presenta diversos avantatges:</p>
+
+<p>- És ben senzill d'aprendre.<br/> - És gratuït.<br/> - S'utilitza molt i, per tant, es pot trobar ajuda en Internet.<br/> - El component Tk facilita la creació d'interfícies gràfiques d'usuari.<br/> - Hi ha diversos llibres i altres recursos de qualitat per a aquest llenguatge (almenys en anglès).<br/> - Se centra en les cadenes, de manera que s'adiu especialment a les aplicacions que treballen amb text.</p>
+
+<p>Per als principiants, hi ha diversos programes d'aprenentatge en línia, com ara:</p>
+
+<p><a href="http://archive.is/kZWsj">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/> <a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/> <a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
+
+<p>Si realment voleu aprendre el llenguatge tcl/tk, us recomanem especialment la lectura de «Practical Programming in Tcl and Tk» de Brent Welch, ISBN: 0-13-038560-3. Probablement sigui un poc massa tècnic per als principiants en programació, però segurament els resultarà útil després de completar un dels programes d'aprenentatge en línia.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+
+<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88"/></a><br/>
+
+<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML"/></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML"/></a>
+	</div>
+
+</div>
+
+</body></html>

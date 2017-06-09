@@ -1,0 +1,88 @@
+<div class="container">
+
+<h2>Οδηγός τού OmegaT: <br/>Εξαγωγή αρχείου μορφής "Trados uncleaned RTF" από το OmegaT</h2>
+
+<p>Αυτός ο οδηγός περιγράφει την διαδικασία δημιουργίας "ακαθάριστου RTF" από ένα έργο τού OmegaT. Αυτή η μορφή αρχείου ίσως διευκολύνει τους χρήστες άλλων εργαλείων CAT, ιδίως του Trados και του Wordfast Classic.</p> 
+
+<p>Σημεία που χρειάζονται προσοχή:</p>
+<p>Αυτός ο συνδυασμός κώδικα/διαδικασίας δεν έχει ακόμη δοκιμαστεί εκτενώς (αν και οι πρώτες αναφορές είναι ενθαρρυντικές).</p>
+<p>Η δέσμη ενεργειών διατίθεται μόνο για την πλατφόρμα Windows.</p>
+<p>Επιτρέπει στους μεταφραστές μόνο να δημιουργούν (δηλ. να παραδίδουν) ακαθάριστα αρχεία τού Trados. Δεν τους επιτρέπει να εκτελούν μετάφραση σε δίγλωσσα αρχεία τα οποία έχουν λάβει από πελάτες τους.</p>
+
+<p><strong>1. Εισάγετε τα σημάδια τεμαχισμού τού Trados</strong></p>
+
+<p>Για να δημιουργήσετε ένα δίγλωσσο αρχείο τού OpenOffice.org με σημάδια τεμαχισμού τού Trados, κλείστε το έργο τού OmegaT κι εκτελέστε την παρακάτω δέσμη ενεργειών (απαιτεί Windows) στο αρχείο project_save.tmx τού έργου:</p>
+
+<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip</a>
+<p><strong>2. Δημιουργείτε τα έγγραφα αφίξεως</strong></p>
+
+<p>Δημιουργήστε τα έγγραφα αφίξεως ως συνήθως και μετατρέψτε το αρχείο σε μορφή Microsoft Word.</p>
+
+<p><strong>3. Εφαρμόζετε στυλ στα σημάδια τεμαχισμού</strong></p>
+
+<p>Στο Microsoft Word, εκτελέσετε την παρακάτω μακροεντολή, για να εφαρμοστούν τα σχετικά στυλ στο/στα έγγραφα αφίξεως:</p>
+
+<p>Private Sub AddTw4winStyles()<br/>
+
+On Error Resume Next<br/>
+
+Dim sMark, sInt, sExt As Style<br/>
+
+Set sMark = ActiveDocument.Styles.Add(Name:="tw4winMark", _<br/>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
+
+With sMark.Font<br/>
+
+&nbsp; .Name = "Courier"<br/>
+
+&nbsp; .Size = 11<br/>
+
+&nbsp; .Hidden = True<br/>
+
+&nbsp; .Subscript = True<br/>
+
+&nbsp; .ColorIndex = wdViolet<br/>
+
+End With<br/>
+
+Set sInt = ActiveDocument.Styles.Add(Name:="tw4winInternal", _<br/>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
+
+sInt.LanguageID = wdNoProofing<br/>
+
+With sInt.Font<br/>
+
+&nbsp; .Name = "Courier"<br/>
+
+&nbsp; .Size = 11<br/>
+
+&nbsp; .ColorIndex = wdRed<br/>
+
+End With<br/>
+
+Set sExt = ActiveDocument.Styles.Add(Name:="tw4winExternal", _<br/>
+
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
+
+sExt.LanguageID = wdNoProofing<br/>
+
+With sExt.Font<br/>
+
+&nbsp; .Name = "Courier"<br/>
+
+&nbsp; .Size = 11<br/>
+
+&nbsp; .ColorIndex = wdGray50<br/>
+
+End With<br/>
+
+End Sub<br/>
+
+</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

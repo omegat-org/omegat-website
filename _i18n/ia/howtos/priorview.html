@@ -1,0 +1,121 @@
+<div class="container">
+
+<h2>Guida: Le utilitate de vista preliminar &quot;Priorview&quot;</h2>
+
+<h3>Scenario de fundo e principios</h3>
+
+<p>Priorview es un parve utilitate que provide un function vista preliminar pro uso con OmegaT. Pro le scenario de fundo e le principios, refere al <a href="./preview.html">Guida al vista preliminar</a>. Iste Guida describe le uso de Priorview pro <b>Windows e Linux</b>. Si tu es  usante Mac OSX, tu pote <a href="../../resources/priorview_for_mac.zip">discarga un version de Priorview pro Mac hic</a>. Le version pro Mac OSX non es ancora documentate e le information in sequito  <b>non</b> referer se a illo.</p>
+
+<h3>Software necessari</h3>
+
+<p>Pro usar Priorview sur Windows o Linux, tu necessita le sequente:</p>
+
+<p>1. <b>Un lector del tela</b>, specificamente o:</p>
+
+<ul>
+
+<li><a href="http://www.opera.com">Opera</a><br/>or</li>
+
+<li><a href="http://www.mozilla.org">Firefox</a> conjunctemente con le <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">add-on pro Firefox &quot;ReloadEvery&quot;</a><br/> Installa in prime loco Firefox (si tu non ha lo jam installate), pois installa ReloadEvery.</li>
+
+<li><i>(Discargar ex le ligamines fornite; le usatores de Linux pote preferer de installar lo ex lor depositos del distribution, ubi isto es possibile.)</i></li>
+
+</ul>
+
+<p>2. <b>Un utilitate de conversion</b>, specificamente o:</p>
+
+<ul>
+
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>or</li>
+
+<li><a href="http://www.libreoffice.org/">LibreOffice</a> conjunctemente con le <a href="http://dag.wieers.com/home-made/unoconv/">plugin Unoconv</a></li>
+
+</ul>
+
+<p>3. <b><a href="http://www.tcl.tk/software/tcltk/">Tcl/Tk</a></b></p>
+
+<p>Quasi omne version actual de Tcl/Tk essera probabilemente commode, ma tu debe haber tote le duo Tcl (le interprete del script) e Tk (le componente graphic).</p>
+
+<p>4. <b><a href="../../resources/priorview.zip">Priorview</a></b></p>
+
+<p>Pro installar Priorview, discassa simplemente le archivo zip in un location convenibile sur tu disco dur. Pro lancear  Priorview, aperi un prompte/terminal/consola de commando e inscribe:</p>
+
+<p>cd <i>path</i></p>
+
+<p>ubi <i>percurso</i> es le nomine percurso complete del plica in le qual tu poneva preview.tcl. Deinde scribe:</p>
+
+<p>wish priorview.tcl</p>
+
+<p>Tu pote simplificar le lanceamento con le scriptura de un file script, id es un file de texto simple continente iste duo  lineas.</p>
+
+<h3>Usar Priorview</h3>
+
+<p>Si toto vade ben, Priorview deberea apparer quando lanceate como ante describite. Sur isto, selige:</p>
+
+<ul>
+
+<li>le nomine del final file (in le plica /target in tu projecto OmegaT);</li>
+
+<li>le lector del tela que tu ha installate;</li>
+
+<li>le frequentia con le qual le script controla si iste file cambiava (intervallo de polling);</li>
+
+<li>le utilitate de conversion file que tu ha installate.</li>
+
+</ul>
+
+<p>Quando tu ha seligite tote istos, compare le button Start. Quando actuate, isto lancea tu lector del tela con un pagina simulacro instruente te a preparar le function de renovation automatic, quem tu deberea dunque facer, e pois pressar Ctrl+s, Ctrl+d in OmegaT pro lancear le renovation automatic del lector del tela.</p>
+
+<p>Durante que Priorview es functionante, tu pote:</p>
+
+<ul>
+
+<li>interrumper e reinitiar lo;</li>
+
+<li>seliger un file nove (Si tu es laborante in un projecto continente plure files, tu non debe relancear Priorview quando tu attinge le fin de un file; tu pote seliger simplemente le sequente);</li>
+
+<li>cambiar le intervallo de polling.</li>
+
+</ul>
+
+<p>Un vice que Priorview esseva lanceate, comocunque, tu non pote seliger un lector del tela differente o un utilitate de conversion; iste optiones in consequentia es occulte post le lanceamento. Pro seliger un lector del tela differente o utilitate conversion, tu debe clauder Priorview e relancear lo.</p>
+
+<p>Le button Quita claude Priorview e dele alsi le files temporari que illo creava. (Altere methodos de clauder Priorview non delera le files temporari.)</p>
+
+<p><img src="../../images/preview_ss.png" alt="preview_ss.png"/></p>
+
+<p><i>Un edition de pressa del Commission Europee (in formato .odt) in OmegaT e in sequito a illo le instantanee texto final monstrate in Opera. In basso a dextra: le utilitate Priorview. Le arrangiamento monstrate hic es justo pro gratia de exemplo; tu pote naturalmente arrangiar le fenestras como tu vole.</i></p>
+
+
+<h3>Chassa al defecto</h3>
+
+<p>Si le percurso allocation de priorview.tcl contine spatios, pone lo inter virgulettas, exempli gratia:</p>
+
+<p>cd &quot;C:\My Files\priorview&quot;</p>
+
+<p>Si Priorview falle al lanceamento:</p>
+
+<p>Dependente sur le version de Tcl/Tk que tu ha installate, tu pote deber adder le numero de version al commando desirate, exempli gratia.:</p>
+
+<p>wish8.5 priorview.tcl</p>
+
+<p>Paga reguardo al characteres minuscule/majuscule.</p>
+
+<p>If the file monstrate in le lector del tela non esseva renovate, controla le sequente:</p>
+
+<ul>
+
+<li>Que tu recordava de pressar Ctrl+s, Ctrl+d in OmegaT. usque/sinon tu face lo, il essera nulle cambios a discoperir/monstrar!</li>
+
+<li>que le utilitate de conversion de file es installate debitemente e es functionante. Tu pote probar isto con le commando pertinente in sequito sur le linea de commando (terminal/consola/prompte DOS). In cata caso, <i>file</i> es le nomine de un file .docx o .odt. Si tote es ben, un version .html del file essera producite:<br/> Pro Abiword:<br/> abiword --to=html <i>file</i><br/> Pro LibreOffice+Unoconv:br/&gt; unoconv -f html <i>file</i><br/></li>
+
+<li>Que tu ha preparate le intervallo de auto refrescamento in le lector del tela.</li>
+
+</ul>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

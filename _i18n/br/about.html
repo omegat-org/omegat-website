@@ -1,0 +1,55 @@
+<div class="untranslated">Sorry this page has not yet been translated.</div><div class="container">
+
+  <div class="text-md-center">
+  <h3>Website content authors</h3>
+  <ul class="list-unstyled">
+    {% for author in site.data.credits.website %}
+      <li>{{ author }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Website design</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpr&#xE9;</li>
+  </ul>
+
+  {% if site.lang != "en" %}
+  <h3>English version translators</h3>
+  <ul class="list-unstyled">
+    {% for translator in site.data.credits.translators[site.lang] %}
+      <li>{{ translator }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  </div>
+
+  <h2>The OmegaT project</h2>
+  <p>The OmegaT project is maintained by an informal, international group of volunteers. Its purpose is to develop, distribute and support the use of OmegaT, an open-source translation memory software application.</p>
+  <p>The principal members of the project are:</p>
+  <div class="text-md-center">
+    <h3>Original author of the OmegaT application</h3>
+    <p>Keith Godfrey</p>
+    <h3>Project manager</h3>
+    <p>Didier Briel</p>
+    <h3>Lead developer</h3>
+    <p>Alex Buloichik</p>
+    <h3>Integration manager</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Website manager</h3>
+    <p>Marc Prior</p>
+    <h3>Documentation manager</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Localization manager, user group owner</h3>
+    <p>Jean-Christophe Helary</p>
+    <h3>Developers</h3>
+    <ul class="list-unstyled">
+      {% for dev in site.data.credits.developers %}
+        <li>{{ dev }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <p>The philosophy of the project is described <a href="philosophy.html">here</a>.</p>
+  <p>Since the project's inception, it has received the support of dozens of
+other contributors, too numerous to mention here, but for whose help we are
+very grateful.</p>
+</div>

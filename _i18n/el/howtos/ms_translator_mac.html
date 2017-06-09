@@ -1,0 +1,57 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br />Setting up MS Translator on Mac</h2><br />
+- Log into Microsoft Azure Marketplace:<br />
+<a href="http://datamarket.azure.com/">http://datamarket.azure.com/</a><br />
+<br />
+*If you do not already have an Azure Marketplace account you will need to register one first.<br />
+<br />
+- Click on the My Account option at the top of the page. <br />
+- Near the bottom you will see entries and values for:<br />
+<br />
+Primary Account Key<br />
+Customer ID<br />
+<br />
+Primary Account Key = microsoft.api.client_secret (needed to configure your Microsoft Translator access)<br />
+Customer ID = microsoft.api.client_id (needed to configure your Microsoft Translator access)<br />
+<br />
+- Go to your Applications directory (or wherever you have your
+installation of OmegaT stored on your Mac), right
+click/cmd+click/two-finger tap on the OmegaT executable and select
+"View package contents". <br />
+- Click on the Contents folder and make a backup/copy/duplicate of your info.plist file. <br />
+- Open your info.plist file in your favourite text editor and locate the Properties section. <br />
+- Here you will add entries for your Azure Marketplace Primary Account
+Key and Customer ID values (remember that microsoft.api.client_id =
+your Azure Marketplace Customer ID and microsoft.api.client_secret =
+your Azure Marketplace Primary Account Key):<br />
+<br />
+&nbsp;&lt;key&gt;Properties&lt;/key&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dict&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;key&gt;apple.laf.useScreenMenuBar&lt;/key&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;string&gt;true&lt;/string&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;string&gt;true&lt;/string&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&gt; &lt;key&gt;microsoft.api.client_id&lt;/key&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&gt; &lt;string&gt;A1234-5678-1234-5678-12345678901&lt;/string&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&gt; &lt;key&gt;microsoft.api.client_secret&lt;/key&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&gt;
+&lt;string&gt;AaBb1234CcDd5678aAbBcCdD1234eEfFgGhH1234&lt;/string&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/dict&gt;<br />
+<br />
+***PLEASE NOTE: The above arrows are for illustration purposes ONLY. Do NOT include these in your actual entries. <br />
+<br />
+- Once you have made the above entries, double check that the values are correct and then save and close your info.plist file.<br />
+- Launch OmegaT and enable the MS Translator option:<br />
+Options &gt; Machine Translate ... and select the options you would like to turn on. <br />
+- Begin using OmegaT.<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>Copyright Will Helton 2012</p>
+
+</div>
+

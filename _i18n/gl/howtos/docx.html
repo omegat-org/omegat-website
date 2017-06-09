@@ -1,0 +1,158 @@
+<div class="container">
+
+<h2>Gu&iacute;a de OmegaT: <br/>Traducir ficheiros de Word 2007 (Office Open XML, .docx) en OmegaT</h2>
+
+<p>Esta gu&iacute;a d&aacute;lle consellos para traducir ficheiros de Word 2007 (e versi&oacute;ns posteriores) en OmegaT.</p>
+
+<h3>Situaci&oacute;n</h3>
+
+<p>Dende o lanzamento de Microsoft Office 2007, Microsoft Word, Excel e PowerPoint te&ntilde;en novos formatos de ficheiro por defecto. Estes formatos son co&ntilde;ecidos como \xABOffice Open XML\xBB e te&ntilde;en as extensi&oacute;ns .docx, .xlsx e .pptx respectivamente. MS Office 2010, 2013 e 2016 tam&eacute;n usan este formato. Para simplificar falaremos deles como \xABformatos de ficheiro MS Office 2007\xBB.</p>
+
+<p>OmegaT pode traballar con ficheiros de MS Office 2007 sen necesidade de convertelos dende a versi&oacute;n 1.7.1. Ademais, coa aparici&oacute;n da versi&oacute;n 2.1.8 de OmegaT traballar con este formato de ficheiros volveuse m&aacute;is f&aacute;cil.</p>
+
+<h3>Vantaxes de usar o formato .docx con OmegaT</h3>
+
+<p>A medida que os clientes/autores actualizan Microsoft Office/Word a versi&oacute;ns m&aacute;is recentes, as persoas que se dedican &aacute; traduci&oacute;n recibir&aacute;n cada vez m&aacute;is ficheiros no novo formato. A diferenza do que ocorr&iacute;a cos antigos formatos .doc, .xls e .ppt, &eacute; posible traballar con estes ficheiros en OmegaT sen perdas de formato como resultado da conversi&oacute;n a ou dende outros formatos.</p>
+
+<p>O novo formato pode ser unha forma moi &uacute;til de traballar cos antigos formatos .doc, .xls e .ppt, xa que &eacute; posible convertelos aos seus equivalentes de MS Office 2007, traducilos en OmegaT e convertelos de novo. Este proceso &eacute; unha alternativa para as persoas que traducen que non queren empregar OpenOffice.org para este prop&oacute;sito.</p>
+
+<h3>Converter ao formato MS Office 2007</h3>
+
+<p>Pode converter ficheiros de MS Office 1997/2000/2003/XP ao formato MS Office 2007 abr&iacute;ndoos en MS Office 2007 (ou unha versi&oacute;n posterior) e gard&aacute;ndoos con \xABGardar como\xBB no novo formato. (Ao ser o novo formato est&aacute;ndar est&aacute; descrito como Word, Excel ou PowerPoint en MS Office 2007 e posteriores).</p>
+
+<p>Microsoft ofrece un <a href="http://www.microsoft.com/downloads/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;display">complemento de compatibilidade</a> para que o empreguen en versi&oacute;ns anteriores aqueles usuarios que non te&ntilde;en a versi&oacute;n de MS Office 2007 (ou unha posterior) e non desexen mercala.</p>
+
+<p>Usuarios de Linux: &eacute; posible executar MS Office 2007 e o complemento de compatibilidade de Microsoft en <a href="http://www.codeweavers.com">Crossover Linux.</a></p>
+
+<h3>Puntos que ter en conta cando usa os formatos .docx, .xlsx e .pptx en OmegaT</h3>
+
+<p>Nas versi&oacute;ns de OmegaT anteriores &aacute; 2.1.8 cada cambio no formato dun ficheiro de MS Office 2007 resultaba nunha longa serie de m&uacute;ltiples etiquetas, o cal fac&iacute;a que na maior&iacute;a dos casos traballar con este formato fose pouco pr&aacute;ctico. Por defecto, a partir da versi&oacute;n 2.1.8, non se agregan as etiquetas m&uacute;ltiples a unha etiqueta &uacute;nica. Por tanto, as persoas que queiran traducir ficheiros de MS Office 2007 deber&iacute;an actualizar &aacute; versi&oacute;n 2.1.8 ou unha superior.</p>
+
+<p>(A mellora na xesti&oacute;n das etiquetas nos ficheiros .docx ten como contrapartida unha pequena perda no control sobre o formato. Por exemplo, sen a opci&oacute;n \xABEtiquetas de agregado\xBB, cando unha palabra no texto fonte est&aacute; en negra e cursiva a persoa que traduce pode optar por deixala s&oacute; en negra ou s&oacute; en cursiva no texto traducido, algo que non &eacute; posible facer se a opci&oacute;n \xABEtiquetas de agregado\xBB est&aacute; activada. Para a maior&iacute;a da xente a maior facilidade de uso compensa esta desvantaxe.)</p>
+
+<p>O formato .docx ten a tendencia de introducir c&oacute;digo de formato \xABsen sentido\xBB, o cal leva a que aparezan etiquetas in&uacute;tiles e innecesarias no panel de edici&oacute;n de OmegaT. &Eacute; boa idea intentar eliminalas antes de comezar a traducir en OmegaT, xa que estas etiquetas resultan inc&oacute;modas durante o proceso de traduci&oacute;n. OmegaT comparte este problema &aacute; hora de traballar co formato .docx con outras ferramentas de traduci&oacute;n asistida, e as soluci&oacute;ns que empregan son similares ou iguais.</p>
+
+<h3>Como eliminar c&oacute;digo de formato non desexado en ficheiros .docx</h3>
+
+<ul>
+
+<li><p>Word 2007 etiqueta calquera palabra que non estea no seu dicionario, polo que un par de palabras que considere mal escritas pode levar a un mont&oacute;n de etiquetas. Se cada palabra en OmegaT est&aacute; entre etiquetas, &eacute; posible que Word intentase revisar a ortograf&iacute;a dun texto sen ter acceso a un dicionario adecuado e, polo tanto, marcase todas as palabras como mal escritas. Unha soluci&oacute;n &eacute; desactivar a revisi&oacute;n autom&aacute;tica en Word.</p></li>
+<li><p>A guionizaci&oacute;n autom&aacute;tica tam&eacute;n engade etiquetas innecesarias, polo que deber&iacute;a desactivala. &Eacute; posible que sexa necesario facer isto para cada documento, neste caso, debe seguir o seguinte proceso en Word 2007: Faga clic na p&aacute;xina de Dese&ntilde;o de p&aacute;xina, faga clic en Guionizaci&oacute;n no grupo Configuraci&oacute;n de p&aacute;xina e seleccione Ningunha.</p></li>
+
+<li><p>Empregue a opci&oacute;n Buscar e substitu&iacute;r para eliminar todos os espazos dobres cambi&aacute;ndoos por espazos simples.</p></li>
+
+<li>Se o seu texto cont&eacute;n caracteres asi&aacute;ticos e \xABnormais\xBB (&eacute; dicir, latinos), use Ctrl+A para seleccionar todo o texto e despois seleccione unha &uacute;nica fonte para el. Aseg&uacute;rese de escoller unha fonte que conte&ntilde;a caracteres normais e asi&aacute;ticos, como pode ser MS Mincho, pero que non te&ntilde;a o sufixo de estilo \xABcorpo do texto\xBB.</li>
+
+<li><p>Word 2007 introduce unha etiqueta nos saltos de p&aacute;xina, incluso nos saltos de p&aacute;xina autom&aacute;ticos. Parece ser que esta etiqueta non pode ser eliminada.</p></li>
+
+</ul>
+
+<p>Te&ntilde;a en conta que incluso despois de cambiar a configuraci&oacute;n de Word para que non introduza etiquetas sen sentido, como pode ser o caso da guionizaci&oacute;n autom&aacute;tica, &eacute; posible que non sexan eliminadas polo cambio na configuraci&oacute;n e sigan estando presentes no ficheiro. A continuaci&oacute;n describimos o m&eacute;todo para eliminar estas etiquetas. Te&ntilde;a en conta que deber&aacute; cambiar a configuraci&oacute;n de Word antes de seguir as instruci&oacute;ns que atopar&aacute; a continuaci&oacute;n, ou Word volver&aacute; a introducir etiquetas sen sentido cando se abra de novo o ficheiro.</p>
+
+<h3>Ferramentas de terceiros</h3>
+
+<p>Como xa mencionamos, este problema con MS Word non s&oacute; se d&aacute; en OmegaT. Por ese motivo se crearon ferramentas para solucionar este problema: D&uacute;as destas ferramentas son:</p>
+
+<p><a href="http://asap-traduction.com/CodeZapper">CodeZapper</a> (barata)</p>
+
+<p><a href="http://www.translatortools.net/word-doccleaner.html">Document Cleaner</a> (gratu&iacute;ta)</p>
+
+<h3>Nivelar o formato dos caracteres</h3>
+
+<p>Unha alternativa a usar a macro de CodeZapper no seu texto &eacute; \xABnivelar\xBB o formato. \xABNivelar\xBB o formato consiste en aplicar o formato do primeiro car&aacute;cter nunha selecci&oacute;n de texto (un par&aacute;grafo completo, por exemplo) a todos os caracteres subsecuentes. Te&ntilde;a en conta que isto non &eacute; o mesmo que \xABeliminar\xBB o formato, o cal poder&iacute;a causar que o formato dos caracteres volvese a ser o que emprega o documento por defecto.</p>
+
+<p>Pode nivelar o formato dos par&aacute;grafos copiando par&aacute;grafos enteiros en MS Word e peg&aacute;ndoos de novo sobre eles mesmos para que o par&aacute;grafo asuma o formato do primeiro car&aacute;cter.</p>
+
+<h3>Nivelar o formato dun par&aacute;grafo de forma manual</h3>
+
+<p>Paso 1: Mostre a marca do par&aacute;grafo. Marque cada par&aacute;grafo facendo clic nel repetidas veces ata que o par&aacute;grafo completo quede destacado. Despois desprace o final do espazo destacando un car&aacute;cter &aacute; esquerda para que non incl&uacute;a a marca do par&aacute;grafo.</p>
+
+<p>Paso 2: - nivelar o formato destes par&aacute;grafos usando a macro que describimos antes e reinserir o formato, ou Seleccione \xABpegado especial\xBB (Word 2003) ou faga clic na frecha da parte inferior do bot&oacute;n \xABinserir\xBB (Word 2007) para obter as opci&oacute;ns de pegado estendidas. Por &uacute;ltimo, insira o contido empregando a opci&oacute;n \xABTexto Unicode sen formato\xBB.</p>
+
+<p>Nos par&aacute;grafos que conte&ntilde;an formato entre li&ntilde;as, como grosa, cursiva, hiperligaz&oacute;ns, etc, pode optar por:</p>
+
+<p>- nivelar o formato destes par&aacute;grafos usando a macro que describimos antes, e reinserir o formato; ou</p>
+
+<p>- marcar s&oacute; o texto que est&aacute; ao comezo da parte con formato, copiar ese texto e pegalo sobre si mesmo e repetir o proceso despois da parte con formato. </p>
+
+<h3>Crear unha macro para nivelar o formato dos caracteres dun par&aacute;grafo</h3>
+
+<p>Pode actualizar o proceso que describimos anteriormente creando unha macro. A continuaci&oacute;n describimos de forma breve o proceso para crear unha macro (en MS Office 2007). (Pode atopar instruci&oacute;ns m&aacute;is detalladas no seu manual de instruci&oacute;ns ou facendo clic <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">aqu&iacute;</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">aqu&iacute;</a> ou <a href="http://oit.nd.edu/training/documentation/documents/macro_qrg.pdf">aqu&iacute;</a>.)</p>
+
+<p>Se inda non o fixo, engada a pestana do Programador &aacute; fita seguindo este proceso: faga clic no bot&oacute;n de Office. Seleccione Opci&oacute;ns de Word. Fai clic na opci&oacute;n Popular da caixa de di&aacute;logo de Opci&oacute;ns de Word. Na fita, faga clic en Mostrar xanela do programador e confirme con Aceptar. Peche Word.</p>
+
+<p>Volva a executar Word, cree un novo ficheiro de Word e engada un par&aacute;grafo dun texto de exemplo, que te&ntilde;a polo menos tres li&ntilde;as de lonxitude, por exemplo:</p>
+
+<p>Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo. Isto &eacute; un par&aacute;grafo.</p>
+
+<p>Faga clic no bot&oacute;n da marca do par&aacute;grafo para volver as marcas de par&aacute;grafo visibles.</p>
+
+<p>Coloque o cursor no seu par&aacute;grafo de texto (non na primeira ou na &uacute;ltima li&ntilde;a).</p>
+
+<p>Cree a macro:</p>
+
+<p>Na xanela do Programador, faga clic en Gravar macro.</p>
+
+<p>Escriba un nome na caixa Nome da macro, por exemplo \xABnivelarformato\xBB. Seleccione Normal.dotm na caixa &ldquo;Gardar macro en&rdquo; para po&ntilde;er a macro &aacute; disposici&oacute;n de todos os ficheiros. Se fixo cambios no seu Normal.dotm, &eacute; posible que queira facer unha copia de seguranza deste. </p>
+
+<p>Faga clic no bot&oacute;n Teclado. Faga clic na caixa para crear unha nova combinaci&oacute;n de teclado e probe as distintas combinaci&oacute;ns para atopar unha que non estea atribu&iacute;da. Unha mensaxe aparecer&aacute; na caixa de di&aacute;logo se proba unha combinaci&oacute;n que xa est&aacute; atribu&iacute;da e poder&aacute; eliminar a combinaci&oacute;n e probar con outra. Parece que a combinaci&oacute;n Ctrl+Mai&uacute;s+9 non est&aacute; atribu&iacute;da a ningunha funci&oacute;n nas instalaci&oacute;ns b&aacute;sicas de Word, pero pode empregar calquera combinaci&oacute;n que non estea atribu&iacute;da.</p>
+
+<p>Faga clic en Atribu&iacute;r para establecer o atallo da macro que est&aacute; a punto de gravar. Todo o que faga a partir de agora ser&aacute; gravado na macro, polo que debe seguir este proceso coidadosamente:</p>
+
+<p>Ctrl+Cursor arriba (para levar o cursor ao comezo do par&aacute;grafo)</p>
+<p>Ctrl+Mai&uacute;s+Cursor abaixo (para seleccionar o par&aacute;grafo, inclu&iacute;ndo a marca de par&aacute;grafo)</p>
+<p>Mai&uacute;s+Cursor esquerda (para mover o final da selecci&oacute;n un car&aacute;cter &aacute; esquerda para que non incl&uacute;a a marca do par&aacute;grafo)</p>
+<p>Ctrl+C (para copiar o par&aacute;grafo)</p>
+<p>Ctrl+V (para pegar o texto do par&aacute;grafo sobre o propio par&aacute;grafo)</p>
+
+<p>Despois de introducir estes comandos, faga clic en Parar gravaci&oacute;n.</p>
+
+<p>Faga clic en Macros e seleccione nivelarformato (ou o nome que lle dese &aacute; s&uacute;a macro), despois en Editar: Mostrarase o c&oacute;digo da s&uacute;a macro. En nivelarformato deber&iacute;a ter este aspecto:</p>
+
+<p>___________________<br/>Sub nivelarformato()<br/>&lsquo;<br/>&lsquo; nivelarformato macro<br/>&lsquo;<br/>&lsquo;<br/>Selection.MoveUp Unit:=wdParagraph, Count:=1<br/>Selection.MoveDown Unit:=wdParagraph, Count:=1, Extend:=wdExtend<br/>Selection.MoveLeft Unit:=wdWord, Count:=1, Extend:=wdExtend<br/>Selection.Copy<br/>Selection.PasteAndFormat (wdPasteDefault)<br/>End Sub<br/>___________________</p>
+
+<p>Cambie a li&ntilde;a:</p>
+<p>    Selection.PasteAndFormat (wdPasteDefault)</p>
+<p>a:</p>
+<p>    Selection.PasteSpecial DataType:=wdPasteText</p>
+
+<p>Garde con Ctrl+G e peche a vent&aacute; de edici&oacute;n de macros.</p>
+
+<p>Se todo sa&iacute;u como deber&iacute;a, agora a s&uacute;a macro deber&iacute;a funcionar. Para probala, engada algo de formato ao seu documento de Word, como por exemplo, po&ntilde;er unha palabra en grosa. Despois po&ntilde;a o cursor nalg&uacute;n lugar do par&aacute;grafo e prema Ctrl+Mai&uacute;s+9 (ou o atallo que escollese) e deber&iacute;a ver como o formato desaparece.</p>
+
+<p>Pode cambiar o atallo en calquera momento. Para facelo, faga clic no bot&oacute;n \xABOffice\xBB e despois en Opci&oacute;ns de Word (bot&oacute;n dereito da caixa de di&aacute;logo).</p>
+
+<p>Faga clic en Personalizar &gt; Escoller comandos. Escolla Macros na lista despregable. Escolla \xABnivelarformato\xBB (ou o nome que lle puxese).</p>
+
+<p>Na parte inferior da caixa de di&aacute;logo a car&oacute;n dos atallos faga clic en Personalizar.</p>
+
+<p>Na caixa de di&aacute;logo Categor&iacute;as, despr&aacute;cese cara abaixo ata e escolla Macros. Na dereita, baixo Macros, escolla nivelarformato (ou o nome que lle puxese). O atallo actual aparecer&aacute; na caixa de di&aacute;logo. Pode limpalo facendo clic no bot&oacute;n Eliminar, despois pode introducir un novo atallo con Atribu&iacute;r. Peche/confirme as caixas de di&aacute;logo.</p>
+
+<p>Pode seguir un proceso similar para crear un bot&oacute;n para a s&uacute;a macro:</p>
+
+<p>Faga clic de novo no bot&oacute;n \xABOffice\xBB e despois en Opci&oacute;ns de Word.</p>
+
+<p>Faga clic en Personalizar &gt; Escoller comandos. Escolla Macros na lista despregable. Escolla a s&uacute;a macro.</p>
+
+<p>Faga clic en Engadir. Deber&iacute;a aparecer o comando do macro na columna da dereita. Faga clic en Modificar.</p>
+
+<p>Escolla un s&iacute;mbolo, despois faga clic en Vale &gt; Vale. O s&iacute;mbolo da s&uacute;a macro deber&iacute;a aparecer na barra de ferramentas.</p>
+
+<p>Esta macro &eacute; &uacute;til para nivelar o formato dun par&aacute;grafo completo que non conte&ntilde;a formato visible. Cando un par&aacute;grafo conte&ntilde;a formato que queira conservar, deber&aacute; restaurar o formato eliminado despois de nivelar o par&aacute;grafo. Restaurar o formato eliminado pode levar moito traballo naqueles par&aacute;grafos que conte&ntilde;an moito formato. Nestes casos debe considerar as seguintes alternativas: </p>
+
+<ul> 
+
+<li><p>Use a macro de Dave Tunner CodeZapper. </p></li>
+
+<li><p>Cree unha segunda macro (que te&ntilde;a o seu propio bot&oacute;n e atallo) propia que s&oacute; nivele o texto seleccionado, en lugar do par&aacute;grafo enteiro. (Grave tal como describimos antes, pero grave s&oacute; o comando Ctrl+C seguido de Ctrl+V.) Seleccione o texto entre os puntos nos que hai cambios de formato. Isto nivelar&aacute; o formato nas secci&oacute;ns na que o texto ten o formato desexado e non precisar&aacute; restaurar o formato eliminado.</p></li>
+
+<li><p>Use a macro para nivelar o formato s&oacute; naqueles par&aacute;grafos nos que haxa pouco ou ning&uacute;n formato. Os par&aacute;grafos que non \xABnivelou\xBB conter&aacute;n etiquetas sen sentido, pero o resto estar&aacute;n m&aacute;is limpos.</p></li>
+
+<li><p>Os usuarios m&aacute;is experimentados poden querer probar a funci&oacute;n de Exportaci&oacute;n de texto de OmegaT. En conxunto co script te-st-notags aporta unha vent&aacute; separada na que non se mostran as etiquetas. Ter&aacute; que manexar as etiquetas de forma adecuada durante o proceso de traduci&oacute;n, pero poder&aacute; vela nunha vent&aacute; separada sen o desastre de etiquetas (\xABsopa de etiquetas\xBB).</p></li>
+
+</ul>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

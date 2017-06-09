@@ -1,0 +1,121 @@
+<div class="container">
+
+<h2>Gu&iacute;a: A opci&oacute;n de vista previa \xABPriorview\xBB</h2>
+
+<h3>Situaci&oacute;n e principios</h3>
+
+<p>Priorview &eacute; unha pequena ferramenta que permite usar unha funci&oacute;n de vista previa en OmegaT. Para ler sobre a situaci&oacute;n e os principios, visite a <a href="./preview.html">Gu&iacute;a da vista previa</a>. Esta gu&iacute;a fala do uso de Priorview para <b>Windows e Linux</b>. Se emprega Mac OS X, pode <a href="../../resources/priorview_for_mac.zip">descargar unha versi&oacute;n Priorview de para Mac aqu&iacute;</a>. Inda non existe documentaci&oacute;n para a versi&oacute;n de Mac, polo que a informaci&oacute;n que aparece a continuaci&oacute;n <b>non</b> se lle aplica.</p>
+
+<h3>Software necesario</h3>
+
+<p>Para usar Priorview en Windows ou Linux, precisa:</p>
+
+<p>1. <b>Un navegador</b>, sendo espec&iacute;ficos:</p>
+
+<ul>
+
+<li><a href="http://www.opera.com">Opera</a><br/>ou</li>
+
+<li><a href="http://www.mozilla.org">Firefox</a> xunto co <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">complemento &quot;ReloadEvery&quot; para Firefox</a><br/> Primeiro instale Firefox (se non o ten xa instalado), e despois ReloadEvery.</li>
+
+<li><i>(Descargue dende os enlaces que aparecen nesta p&aacute;xina. Os usuarios de Linux poden instalar dende os repositorios da distribuci&oacute;n cando for posible.)</i></li>
+
+</ul>
+
+<p>2. <b>Unha ferramenta de conversi&oacute;n</b>, sendo espec&iacute;ficas</p>
+
+<ul>
+
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>ou</li>
+
+<li><a href="http://www.libreoffice.org/">LibreOffice</a> xunto co <a href="http://dag.wieers.com/home-made/unoconv/">complemento Unoconv</a></li>
+
+</ul>
+
+<p>3. <b><a href="http://www.tcl.tk/software/tcltk/">Tcl/Tk</a></b></p>
+
+<p>&Eacute; probable que practicamente calquera versi&oacute;n actual de Tcl/Tk sexa adecuada, pero debe ter Tcl (o int&eacute;rprete de scripts) e TK (o compo&ntilde;ente gr&aacute;fico).</p>
+
+<p>4. <b><a href="../../resources/priorview.zip">Priorview</a></b></p>
+
+<p>Para instalar Priorview s&oacute; ten que descomprimir o ficheiro zip en calquera localizaci&oacute;n adecuada do disco duro. Para executar Priorview, abra unha xanela de comando/terminal/consola e escriba:</p>
+
+<p>cd <i>path</i></p>
+
+<p>onde <i>path</i> &eacute; a direcci&oacute;n completa do cartafol no que se atopa preview.tcl. Logo escriba:</p>
+
+<p>wish priorview.tcl</p>
+
+<p>Pode simplificar a execuci&oacute;n escribindo un ficheiro de scripts, por exemplo, un ficheiro de texto plano que conte&ntilde;a estas d&uacute;as li&ntilde;as.</p>
+
+<h3>Usar Priorview</h3>
+
+<p>Se todo funcionou correctamente, Priorview deber&iacute;a aparecer ao executarse como se describe arriba. Cando estea en Priorview, seleccione:</p>
+
+<ul>
+
+<li>o nome do ficheiro de destino (no cartafol /target do seu proxecto de OmegaT);</li>
+
+<li>o navegador que ten instalado;</li>
+
+<li>a frecuencia coa que quere que o script comprobe se hai cambios no ficheiro (intervalo de sondaxe);</li>
+
+<li>a ferramenta de conversi&oacute;n de ficheiros que ten instalada.</li>
+
+</ul>
+
+<p>Cando te&ntilde;a realizado todas estas escollas aparecer&aacute; o bot&oacute;n de Inicio. Cando faga clic no bot&oacute;n, abrir&aacute; no seu navegador unha p&aacute;xina de proba na que lle indicar&aacute; que ten que establecer como autom&aacute;tica a funci&oacute;n de actualizaci&oacute;n, e despois de facelo, deber&iacute;a premer Ctrl+s e Ctrl+d en OmegaT para executar a actualizaci&oacute;n autom&aacute;tica no navegador.</p>
+
+<p>Mentres Priorview se est&aacute; executando, pode:</p>
+
+<ul>
+
+<li>detelo e volver a inicialo;</li>
+
+<li>seleccionar un ficheiro novo (se est&aacute; traballando nun proxecto que cont&eacute;n varios ficheiros, non ten que volver a iniciar Priorview cando chegue ao final dun, sen&oacute;n que pode pasar ao seguinte);</li>
+
+<li>cambiar o intervalo de sondaxe.</li>
+
+</ul>
+
+<p>Debe ter en conta que unha vez que se execute Priorview non poder&aacute; seleccionar un navegador ou unha ferramenta de conversi&oacute;n diferente, polo que estas opci&oacute;ns quedar&aacute;n ocultas despois de executar o programa. Para seleccionar un navegador ou unha ferramenta de conversi&oacute;n diferente, debe pechar Priorview e volver a executalo.</p>
+
+<p>O bot&oacute;n Sa&iacute;r pecha Priorview e tam&eacute;n borra os ficheiros temporais que crea. (Outras formas de pechar Priorview non borrar&aacute;n os ficheiros temporais.)</p>
+
+<p><img src="../../images/preview_ss.png" alt="preview_ss.png"></img></p>
+
+<p><i>Un comunicado de prensa da Comisi&oacute;n Europea (en formato .odt) en OmegaT e debaixo del o texto de destino instant&aacute;neo mostrado en Opera. Esquina inferior dereita: a ferramenta Priorview. A disposici&oacute;n que se mostra aqu&iacute; s&oacute; &eacute; un exemplo, pode cambiar a disposici&oacute;n das xanelas ao seu gusto.</i></p>
+
+
+<h3>Informaci&oacute;n para a soluci&oacute;n de problemas</h3>
+
+<p>Se a direcci&oacute;n da localizaci&oacute;n de priorview.tcl ten espazos, p&oacute;&ntilde;aa entre comi&ntilde;as, por exemplo:</p>
+
+<p>cd &quot;C:\Os meus ficheiros\priorview&quot;</p>
+
+<p>Se Priorview non se executa:</p>
+
+<p>Dependendo da versi&oacute;n de Tcl/Tk que te&ntilde;a instalada, &eacute; posible que te&ntilde;a que engadir o n&uacute;mero de versi&oacute;n ao comando Wish, por exemplo:	</p>
+
+<p>wish8.5 priorview.tcl</p>
+
+<p>Preste atenci&oacute;n &aacute;s mai&uacute;sculas e &aacute;s min&uacute;sculas.</p>
+
+<p>Se o ficheiro que se mostra no navegador non se actualiza, comprobe o seguinte:</p>
+
+<ul>
+
+<li>Que recordou premer Ctrl+s e Ctrl+d en OmegaT. Ata que o faga non haber&aacute; cambios na vista previa!</li>
+
+<li>Que a ferramenta de conversi&oacute;n de ficheiros est&aacute; instalada de forma adecuada e que funciona. Pode comprobar isto co comando adecuado indicado abaixo, na li&ntilde;a de comandos (terminal/consola/interface de DOS). En cada caso, <i>file</i> &eacute; o nome dun ficheiro .docx ou .odt. Se todo funciona correctamente, crearase unha versi&oacute;n .html do ficheiro:<br/>Para Abiword:<br/>abiword --to=html <i>file</i><br/>Para LibreOffice+Unoconv:br/&gt; unoconv -f html <i>file</i><br/></li>
+
+<li>Que estableceu o intervalo de autoactualizaci&oacute;n no navegador.</li>
+
+</ul>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

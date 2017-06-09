@@ -1,0 +1,99 @@
+<div class="container">
+
+<h2>Οδηγός τού OmegaT: <br/>Μεταγλώττιση του πηγαίου κώδικα του OmegaT</h2>
+
+
+<p>Αυτός ο οδηγός περιγράφει πώς να μεταγλωττίσετε τον πηγαίο κώδικα του OmegaT.</p>
+
+<p>Το OmegaT παρέχεται μεταγλωττισμένο για χρήση σε διάφορες πλατφόρμες, καθώς και σε δια-πλατφορμική έκδοση. Έτσι, δεν χρειάζεται να μεταγλωττίζουν το OmegaT οι χρήστες. Η μεταγλώττιση τού OmegaT αφορά όσους προγραμματιστές επιθυμούν να τροποποιήσουν τον κώδικα.</p>
+
+<p><strong>1. Κατεβάστε και εγκαταστήστε τα Java Development Kit (JDK) και Apache Ant</strong></p>
+
+<p>Μεταγλώττιση τού πηγαίου κώδικα μετά την τροποποίησή του μπορούν να γίνει με διάφορα προγράμματα, αλλά το <a href="http://ant.apache.org">Apache Ant</a> είναι από τα πιο βολικά. Το <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK) είναι προαπαιτούμενο.</p>
+
+<p>Ανάλογα με τον τρόπο εγκατάστασης του Java Development Kit, ίσως χρειαστεί να αλλάξετε το χαρακτηριστικό "JAVA_HOME" ώστε να λειτουργήσει με το Ant.</p>
+
+<p><strong>2. Μεταγλωττίστε τον κώδικα</strong></p>
+
+<p>Τα παρακάτω ονόματα φακέλων είναι ενδεικτικά· οι αριθμοί έκδοσης ίσως διαφέρουν.</p>
+
+<p>Ανοίξτε ένα παράθυρο με γραμμή εντολών (κονσόλα, παράθυρο DOS). Μεταβείτε στον κύριο φάκελο με τον πηγαίο κώδικα του OmegaT (αυτόν με το αρχείο build.xml) —π.χ.:</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_2.2.3_Beta_Source</p>
+
+<p>Από αυτόν τον φάκελο εκτελέστε το Apache Ant πληκτρολογώντας το εκτελέσιμο αρχείο τού ant. Ίσως χρειαστεί να γράψετε την πλήρη διαδρομή —π.χ.:</p>
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+<p>Αν ο κώδικας μεταγλωττιστεί επιτυχώς, θα εμφανιστεί το μήνυμα "BUILD SUCCESSFUL". Αν όχι, θα εμφανιστούν μηνύματα αποσφαλμάτωσης, τα οποία θα σας υποδείξουν πού ανέκυψε πρόβλημα.</p>
+
+<p><strong>3. Εκκινήστε το OmegaT</strong></p>
+
+<p>Αν ο κώδικας μεταγλωττίστηκε επιτυχώς, το μεταγλωττισμένο OmegaT θα βρίσκεται στη θέση:</p>
+
+<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
+
+<p>Από την γραμμή εντολών μεταβείτε σε αυτόν τον φάκελο —π.χ.:</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+<p>και εκκινήστε το OmegaT με την εντολή:</p>
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+<p><strong>4. Ένα παράδειγμα τροποποίησης</strong></p>
+
+<p>Στον φάκελο </p>
+
+<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
+
+<p>ανοίξτε το αρχείο SegmentBuilder.java σε επεξεργαστή κειμένου.</p>
+
+<p>Βρείτε τις γραμμές:</p>
+
+<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
+
+<p>και</p>
+
+<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
+
+<p>και αντικαταστήστε το</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>με το</p>
+
+<p style="font-family: monospace;">COLOR_BLUE.</p>
+
+<p>Στον φάκελο</p>
+
+<p style="font-family: monospace;">src/org/omegat/util/gui</p>
+
+<p>ανοίξτε το αρχείο Styles.java σε επεξεργαστή κειμένου.</p>
+
+<p>Βρείτε τήν γραμμή</p>
+
+<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
+
+<p>Αντικαταστήστε το</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>με το </p>
+
+<p style="font-family: monospace;">COLOR_BLUE</p>
+
+<p> και </p>
+
+<p style="font-family: monospace;">192, 255, 192 </p>
+
+<p>με το </p>
+
+<p style="font-family: monospace;">225, 225, 255.</p>
+
+<p>Κάντε μεταγλώττιση και δοκιμή όπως περιγράφηκε παραπάνω.</p>
+
+<p>Copyright Marc Prior 2011</p>
+
+</div>
+

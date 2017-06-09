@@ -1,0 +1,32 @@
+<div class="container">
+
+<h2>OmegaT 技術情報：Déjà Vu との互換性</h2>
+
+<p>この技術情報では、OmegaT を Atril 社のコンピューター翻訳支援ツール Déjà Vu と連携させる方法について説明します。</p>
+
+<h3>背景</h3>
+
+<p>OmegaT ユーザーが、顧客から Déjà Vu 用のファイル形式で翻訳するよう依頼されたとします。Déjà Vu の「External Views」ファイル形式を使えば（Déjà Vu DVX の場合）、OmegaT で作業できます。</p>
+
+<h3>Déjà Vu の「External Views」</h3>
+
+<p>「External Views」ファイル形式は Déjà Vu DVX の機能です。この機能を使えば、Déjà Vu を所有していない人が Déjà Vu による翻訳結果を編集し、その結果を Déjà Vu へ戻すことが容易にできます。したがって、Déjà Vu ユーザーにこの機能を使ってファイルを準備してもらえば、Déjà Vu 以外の翻訳支援ツール（OmegaT を含む）を使うユーザーにも翻訳できるようになります。</p>
+
+<p>Déjà Vu の「External Views」ファイルは、RTF 形式で複数列の表を含んでいます。表は原文列と訳文列に分かれており、セルは各分節の内容で埋められます。未翻訳の「External Views」ファイルの場合、訳文列が空になります。翻訳済みの「External Views」ファイルの場合、訳文列に訳文が入ります。このファイルを OmegaT で翻訳する手順は、以下の通りです。</p>
+
+<p>1. ファイル形式を RTF から OpenDocument Format (ODF) に変換します。</p>
+
+<p>2. External View ファイルのコピーを取り、原文列以外の内容をすべて削除します。</p>
+
+<p>3. このファイルを OmegaT でふだん通りに翻訳します。分節内のインラインタグは、波括弧内に連番の数字を含んだ形式で表されています。つまり {1}、{2}... のような感じです。これらのタグについては、OmegaT 標準のインラインタグを扱うときと同じく、不用意に順序や個数を乱さないように注意してください。残念ながら、OmegaT 標準のインラインタグに適用できる機能（「タグ検証」、「タグを削除」、「原文のタグを挿入」など）は、この Déjà Vu 由来のインラインタグに対しては使えません。</p>
+
+<p>4. 翻訳を終えて訳文ファイルを生成したら、訳文列をコピーして、原文ファイルの<span style="font-style: italic;">訳文</span>列に貼り付けます。</p>
+
+<p>5. ファイルを RTF 形式に逆変換します。</p>
+
+<p>以上の手順を実施するためには、Déjà Vu ユーザーから原文ファイルを「External Views」形式で提供してもらう必要があります。ファイル形式とその出力方法の詳細については、Déjà Vu および他の翻訳支援ツールのユーザー向けに書かれた <a href="http://www.atril.com/docs/DVX/InstructionsExternalView.pdf">Atril 社の技術情報</a>（PDF）と <a href="http://simmer-lossner.blogspot.com/2008/11/dj-vu-x-as-editing-tool-for-trados-jobs.html">Kevin Lossner によるブログ記事</a>（英語）を参照してください。</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

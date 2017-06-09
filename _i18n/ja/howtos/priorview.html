@@ -1,0 +1,122 @@
+<div class="container">
+
+<h2>技術情報：プレビューユーティリティー Priorview</h2>
+
+<h3>背景と原理</h3>
+
+<p>Priorview は、OmegaT にプレビュー機能を提供する小ぶりのユーティリティーです。背景と原理については、<a href="./preview.html">技術情報：プレビュー</a>を参照してください。この技術情報は、<b>Windows と Linux</b> での Priorview の使用方法を説明します。Mac OSX ユーザーは、<a href="../../resources/priorview_for_mac.zip">Mac 版 Priorview をここからダウンロード</a>できます。Mac OSX 版の文書は未作成であり、以下の情報は Mac には<b>当てはまりません</b>。</p>
+
+<h3>必要なプログラム</h3>
+
+<p>Windows または Linux で Priorview を使用するには、以下のプログラムが必要です。</p>
+
+<p>1. 以下のいずれかの<b>ブラウザー</b></p>
+
+<ul>
+
+<li><a href="http://www.opera.com">Opera</a><br/>または</li>
+
+<li><a href="http://www.mozilla.org">Firefox</a> と<a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">そのアドオン ReloadEvery</a><br/>まだインストールしていなければ、まず Firefox をインストールし、次に ReloadEvery をインストールします。</li>
+
+<li><i>（上記のリンクからダウンロードします。Linux ユーザーは、可能であればディストリビューションのリポジトリからインストールすることを望むかもしれません。）</i></li>
+
+</ul>
+
+<p>2. 以下のいずれかの<b>変換ユーティリティー</b></p>
+
+<ul>
+
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>または</li>
+
+<li><a href="http://www.libreoffice.org/">LibreOffice</a> と<a href="http://dag.wieers.com/home-made/unoconv/">プラグイン Unoconv</a></li>
+
+</ul>
+
+<p>3. <b><a href="http://www.tcl.tk/software/tcltk/">Tcl/Tk</a></b></p>
+
+<p>現行バージョンの Tcl/Tk であれば、ほぼどれでも適しているでしょう。ただし、Tcl（スクリプト言語）と Tk（グラフィックツール）の両方が必要です。</p>
+
+<p>4. <b><a href="../../resources/priorview.zip">Priorview</a></b></p>
+
+<p>Priorview をインストールするには、zip ファイルを、ハードディスクの任意の場所に展開してください。Priorview を起動するには、コマンド prompt/terminal/console を開いて、以下のように入力します。</p>
+
+<p>cd <i>path</i></p>
+
+<p>ここに、<i>path</i> は、preview.tclを入れたフォルダーのフルパスです。次に、以下のように入力します。</p>
+
+<p>wish priorview.tcl</p>
+
+<p>この 2 つの行を含むプレーンテキストファイルをスクリプトファイルとして書くことによって、簡単に起動できます。</p>
+
+<h3>Priorview の使用</h3>
+
+<p>問題がなければ、上述のように Priorview が表示されるはずです。ここで、次の事項を選択します。</p>
+
+<ul>
+
+<li>訳文ファイル名（OmegaT プロジェクトの target フォルダー内）</li>
+
+<li>インストール済みのブラウザー</li>
+
+<li>当該ファイルに変更がないかをスクリプトが点検する頻度（ポーリング間隔）</li>
+
+<li>インストールしたファイル変換ユーティリティー</li>
+
+</ul>
+
+<p>これらの事項を選択したら、Start ボタンが表示されます。作動させれば、ブラウザーが起動してダミーページが表示され、自動更新機能を設定するよう促されるので、設定を行います。次に、OmegaT で Ctrl+s と Ctrl+d を押してブラウザーの自動更新を起動します。</p>
+
+<p>Priorview の作動中に、以下のことが可能です。</p>
+
+<ul>
+
+<li>Priorview の中断とリセット</li>
+
+<li>新しいファイルの選択（複数のファイルを含むプロジェクトに取り組んでいる場合、1 つのファイルの終わりに達したときに Priorview を再起動する必要はありません。単に次のファイルを選んでください。）</li>
+
+<li>ポーリング間隔の変更</li>
+
+</ul>
+
+<p>ただし、Priorview を起動したら、別のブラウザーや変換ユーティリティーを選ぶことはできません。そのようなオプションは、起動後に表示されなくなります。別のブラウザーや変換ユーティリティーを選択するには、Priorview を閉じて再起動する必要があります。</p>
+
+<p>Quit ボタンによって Priorview を閉じると、作成された一時ファイルが削除されます。（別の方法で Priorview を閉じると、一時ファイルが削除されません。）</p>
+
+<p><img src="../../images/preview_ss.png" alt="preview_ss.png"/></p>
+
+<p><i>上の図の上側に示すのは欧州委員会の報道発表（.odt 形式）を OmegaT で表示したものであり、下側に示すのは Opera で表示した暫定的な訳文テキストです。右下に示すのは Priorview ユーティリティーです。ここに示すレイアウトは一例であり、好みに応じてウィンドウの配置を変えることができます。</i></p>
+
+
+<h3>トラブルシューティング</h3>
+
+<p>priorview.tcl のパスにスペースが含まれる場合は、次のように引用符で囲ってください。</p>
+
+<p>cd &quot;C:\My Files\priorview&quot;</p>
+
+<p>Priorview が起動しない場合：</p>
+
+<p>インストールした Tcl/Tk のバージョンによっては、wish コマンドに次のようにバージョン番号を追加する必要があるかもしれません。</p>
+
+<p>wish8.5 priorview.tcl</p>
+
+<p>大文字・小文字の違いに注意してください。</p>
+
+<p>ブラウザーに表示されるファイルが更新されない場合、以下を確認してください。</p>
+
+<ul>
+
+<li>OmegaT で Ctrl+s と Ctrl+d を押したこと。それらを押さなければ、表示は変わりません。</li>
+
+<li>ファイル変換ユーティリティーが適切にインストールされ、作動していること。このことは、コマンドライン（terminal/console/DOS prompt）で以下のコマンドによってテストできます。いずれの場合も、<i>file</i> は .docx または .odt ファイルの名称です。順調であれば、.html ファイルが作成されます。<br/>Abiword の場合：<br/>abiword --to=html <i>file</i><br/>LibreOffice+Unoconv の場合：
+unoconv -f html <i>file</i><br/></li>
+
+<li>ブラウザーで自動更新間隔を設定してあること。</li>
+
+</ul>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

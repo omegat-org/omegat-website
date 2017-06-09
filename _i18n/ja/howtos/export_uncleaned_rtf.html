@@ -1,0 +1,32 @@
+<div class="container">
+
+<h2>OmegaT 技術情報：<br/>OmegaT から「Trados uncleaned RTF」形式へのエクスポート</h2>
+
+<p>この技術情報は、OmegaT プロジェクトから「uncleaned RTF」ファイルを生成する手順を説明します。この形式は、Trados や Wordfast Classic などの他の CAT ツールのユーザーとファイルを相互交換する実際的な方法になりえます。</p> 
+
+<p>留意点：</p>
+<p>このコード/手順の組み合わせは、まだ十分にテストされていません（ただし初期報告では有望です）。</p>
+<p>このスクリプトは、Windows プラットフォームでのみ利用できます。</p>
+<p>これによって翻訳者は、単に、Trados uncleaned ファイルを生成（引渡し）することができます。顧客から提供されたバイリンガルファイルを「翻訳」することはできません。</p>
+
+<p><strong>1. Trados の分節区切り文字を挿入</strong></p>
+
+<p>Trados の分節区切り文字を含む OpenOffice.Org バイリンガルファイルを作成するには、まず OmegaT プロジェクトを閉じて、プロジェクト内の project_save.tmx ファイルを、下記の AutoIt スクリプト（Windows が必要）で処理します。</p>
+
+<a href="http://www.leuce.com/autoit/uncleanifyTMX.zip">http://www.leuce.com/autoit/uncleanifyTMX.zip</a>
+<p><strong>2. 訳文文書を作成</strong></p>
+
+<p>通常通りに訳文文書を作成し、ファイルを Microsoft Word 形式に変換します。</p>
+
+<p><strong>3. 区切り文字にスタイルを適用</strong></p>
+
+<p>Microsoft Word 上で以下のマクロを実行して、訳文文書に関連のスタイルを適用します。</p>
+
+<p>Private Sub AddTw4winStyles()<br/>On Error Resume Next<br/>Dim sMark, sInt, sExt As Style<br/>Set sMark = ActiveDocument.Styles.Add(Name:=&quot;tw4winMark&quot;, _<br/>    Type:=wdStyleTypeCharacter)<br/>With sMark.Font<br/>  .Name = &quot;Courier&quot;<br/>  .Size = 11<br/>  .Hidden = True<br/>  .Subscript = True<br/>  .ColorIndex = wdViolet<br/>End With<br/>Set sInt = ActiveDocument.Styles.Add(Name:=&quot;tw4winInternal&quot;, _<br/>    Type:=wdStyleTypeCharacter)<br/>sInt.LanguageID = wdNoProofing<br/>With sInt.Font<br/>  .Name = &quot;Courier&quot;<br/>  .Size = 11<br/>  .ColorIndex = wdRed<br/>End With<br/>Set sExt = ActiveDocument.Styles.Add(Name:=&quot;tw4winExternal&quot;, _<br/>    Type:=wdStyleTypeCharacter)<br/>sExt.LanguageID = wdNoProofing<br/>With sExt.Font<br/>  .Name = &quot;Courier&quot;<br/>  .Size = 11<br/>  .ColorIndex = wdGray50<br/>End With<br/>End Sub<br/>
+
+</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

@@ -1,0 +1,32 @@
+<div class="container">
+
+<h2>Guida di OmegaT: <br/>Esportazione da OmegaT in formato &quot;RTF Trados non ripuliti&quot;</h2>
+
+<p>Questa guida spiega come produrre un file in formato &quot;RTF non ripulito&quot; da un progetto OmegaT. Questo può essere un pratico formato di interscambio per gli utenti di altre applicazioni CAT, in particolare Trados e Wordfast Classic.</p> 
+
+<p>Punti da tenere presente:</p>
+<p>Questa combinazione di codice/procedura non è stata ancora accuratamente testata (anche se i risultati iniziali sono promettenti).</p>
+<p>Lo script è disponibile solo per la piattaforma Windows.</p>
+<p>Permette ai traduttori di generare (cioè consegnare) solo file Trados non ripuliti. Non permette loro di &quot;tradurre&quot; file bilingui forniti dai clienti.</p>
+
+<p><strong>1. Inserire i delimitatori di segmento di Trados</strong></p>
+
+<p>Per produrre un file di LibreOffice/OpenOffice.Org bilingue contenente i delimitatori di segmento di Trados, chiudere il progetto OmegaT, quindi eseguire il seguente script AutoIt (richiede Windows) sul file del progetto project_save.tmx:</p>
+
+<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip</a>
+<p><strong>2. Creare documenti di destinazione</strong></p>
+
+<p>Creare i documenti di destinazione come al solito e convertire il file in Microsoft Word.</p>
+
+<p><strong>3. Applicare stili ai delimitatori</strong></p>
+
+<p>In Microsoft Word, eseguire la seguente macro per applicare gli stili pertinenti ai documenti di destinazione:</p>
+
+<p>Private Sub AddTw4winStyles() <br/> On Error Resume Next <br/> Dim sMark, sInt, sExt As Style<br/> Set sMark = ActiveDocument.Styles.Add(Name:=&quot;tw4winMark&quot;, _<br/>     Type:=wdStyleTypeCharacter)<br/> With sMark.Font<br/>   .Name = &quot;Courier&quot;<br/>   .Size = 11<br/>   .Hidden = True<br/>   .Subscript = True<br/>   .ColorIndex = wdViolet<br/> End With<br/> Set sInt = ActiveDocument.Styles.Add(Name:=&quot;tw4winInternal&quot;, _<br/>     Type:=wdStyleTypeCharacter)<br/> sInt.LanguageID = wdNoProofing<br/> With sInt.Font<br/>   .Name = &quot;Courier&quot;<br/>   .Size = 11<br/>   .ColorIndex = wdRed<br/> End With<br/> Set sExt = ActiveDocument.Styles.Add(Name:=&quot;tw4winExternal&quot;, _<br/>     Type:=wdStyleTypeCharacter)<br/> sExt.LanguageID = wdNoProofing<br/> With sExt.Font<br/>   .Name = &quot;Courier&quot;<br/>   .Size = 11<br/>   .ColorIndex = wdGray50<br/> End With<br/> End Sub<br/>
+
+</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

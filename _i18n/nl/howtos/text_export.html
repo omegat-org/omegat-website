@@ -1,0 +1,106 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br/>De functie voor exporteren van tekst in OmegaT gebruiken (interface voor scripten).</h2>
+
+<p>Sinds versie 2.0.1 heeft OmegaT een functie voor het exporteren van tekst. Deze HOWTO beschrijft de functie en mogelijk gebruik er voor. In aanvulling daarop bevat het pakket <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> enkele zeer eenvoudige tcl/tk-scripts die zijn bedoeld om het gebruik van de functie te illustreren.</p>
+
+<h3>Doel</h3>
+
+<p>De functie Tekst exporteren exporteert gegevens vanuit het huidige OmegaT-project naar platte tekst-bestanden. Momenteel zijn de geëxporteerde gegevens:</p>
+
+<p>- De inhoud van de brontekst van het segment, als het segment is geopend<br/> - De inhoud van de doeltekst van het segment, als het segment is geopend<br/> - Geaccentueerde tekst in de doeltekst, als op de relevante sneltoets is gedrukt</p>
+
+<p>Programmeurs en scripters kunnen de bestanden gebruiken die deze tekst bevatten om verdere functies aan OmegaT toe te voegen. Zij behoeven geen kennis te hebben van Java; de meeste, zo niet alle, programmeertalen zouden in plaats daarvan kunnen worden gebruikt en nuttige functies zouden kunnen worden bereikt zelfs met relatief beperkte vaardigheden in programmeren.</p>
+
+<h3>Gebruiken van de functie Tekst exporteren</h3>
+
+<p>U moet het eerst in OmegaT zelf inschakelen om de functie tekst exporteren te kunnen gebruiken:</p>
+
+<p>Opties &gt; Bewerken (gedrag)</p>
+
+<p>Selecteer dan het vak &quot; Segment naar tekstbestanden exporteren&quot;.</p>
+
+<p>De bestanden verschijnen in de submap /script in de map voor de OmegaT gebruikersbestanden (voor de locatie van de map voor de gebruikersbestanden voor OmegaT op uw besturingssysteem, bekijk de Gebruikershandleiding (F1 binnen OmegaT) &gt; Bestanden en mappen &gt; Gebruikersbestanden):</p>
+
+<p>source.txt - bevat de brontekst van het segment<br/> target.txt - bevat de doeltekst van het segment<br/> selection.txt - bevat de door de gebruiker geaccentueerde tekst, indien op Ctrl-Shift-C is gedrukt of als Bewerken &gt; Selectie exporteren is geselecteerd</p>
+
+<p>De inhoud van de bestanden wordt overschreven als een nieuw segment wordt geopend (source.txt en target.txt) of als een nieuwe selectie wordt geëxporteerd (selection.txt). De bestanden zijn niet-opgemaakte platte tekst-bestanden.</p>
+
+<h3>De voorbeeldscripts gebruiken</h3>
+
+<p>Tcl/tk moet zijn geïnstalleerd, als het dat al niet is. Tcl/tk kan worden verkregen vanuit een aantal bronnen; tcl.activestate.com is een populaire bron. Mac OSX-gebruikers zouden tcl/tk vanaf hun systeemmedia moeten installeren en Linux-gebruikers zouden het in de repository van hun distributie moeten vinden, als het al niet standaard geïnstalleerd is. (Opmerking voor gebruikers van Ubuntu: de implementatie van het lettertype van de standaard installatie van tcl/tk in Ubuntu op dit moment (versie 9.10) is afschuwelijk, maar kan worden gerectificeerd.)</p>
+
+<p>Elk script voert essentieel slechts één functie uit om de werking van de code in het scripte duidelijker te maken. Als meerdere functies in de praktijk tegelijkertijd zouden worden gebruikt, zou het meer efficiënt zijn om ze te combineren in één enkel script.</p>
+
+<p>De voorbeeldscripts die <a href="../../omegatk/te-scripts.zip">hier</a> worden verschaft starten allemaal een venster, maar scripts die functies uitvoeren op de achtergrond zijn denkbaar.</p>
+
+<p>Een script starten:</p>
+
+<p>Kopieer het script in de map van OmegaT &quot;script&quot;, d.i. de map die source.txt etc. bevat. (De scripts kunnen in principe overal geplaatst worden, maar moeten dan worden bewerkt door aanvulling van het pad naar de scriptbestanden.)</p>
+
+<p>Afhankelijk van hoe uw systeem is geconfigureerd, zou het mogelijk kunnen zijn om de scripts eenvoudigweg te starten door er met de muis op te klikken. Als alternatief:</p>
+
+<p>Open een venster voor de opdrachtregel (DOS prompt, terminal, console)</p>
+
+<p>Wijzig de map (directory) naar de map script, bijv. (op systemen met Windows XP):</p>
+
+<p>cd C:\Documents and Settings\Gebruikersnaam\Application Data\OmegaT\script</p>
+
+<p>Start het script met &quot;wish&quot; gevolgd door de bestandsnaam van het script, bijv.:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Beschrijvingen van de individuele scripts</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>Dit script geeft de brontekst weer in een afzonderlijk venster. Als zodanig doet het niets anders dan wat al door het venster Bewerken van OmegaT is gedaan; het doel ervan is om te illustreren hoe de tekst kan worden geëxtraheerd uit een scriptbestand en beschikbaar kan worden gemaakt voor andere scripts. De inhoud van het venster van het script is te bewerken en kan worden gekopieerd en kan opnieuw worden geplakt in het venster Bewerken van OmegaT.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>Als voor te-basic-source, maar dan voor de doeltekst.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>Naast het weergeven van de brontekst verschaft dit script een invoervak waarin de gebruiker een tekenreeks in kan voeren (bijv. een woord). Wanneer een segment in OmegaT dat deze tekenreeks bevat wordt geopend, geeft het script een waarschuwing. De waarschuwing heeft de vorm van het in geel accentueren van de tekst in het venster van het script. In aanvulling daarop, indien ondersteund door de hardware en het besturingssysteem (dit is niet altijd het geval), zal een biep klinken.</p>
+
+<p>Een voorbeeld van het gebruik van deze functie is als volgt. De vertaalster heeft een tekst die de frase &quot;abc&quot; bevat en heeft een eerste uitwerking ervan voltooid, waarin &quot;abc&quot; is vertaald als &quot;abc&quot;. Zij ontdekt dan dat &quot;abc&quot; zou moeten zijn vertaald als &quot;def&quot;. In plaats van te zoeken naar alle items van &quot;abc&quot; en die te corrigeren vooraleer door te gaan (wat mogelijk is, maar nadelen heeft), zou zij eenvoudigweg kunnen beslissen om ze te corrigeren tijdens de doorgang voor de volgende versie. In dat geval zou een &quot;herinnering&quot; in elk relevant segment van pas kunnen komen.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>Zoals de naam al aangeeft, stript dit script automatisch alle tags uit een (doel)segment in OmegaT. Dit is handig bij het <i>controleren</i> van segmenten met veel tags op het scherm, omdat dan bijvoorbeeld ontbrekende of dubbele spaties niet eenvoudig worden opgemerkt.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>Dit script geeft het doelsegment weer in een bijzonder lettertype (hard-gecodeerd in het script, maar het kan worden bewerkt) in plaats van het standaard lettertype. De tags worden weergegeven in een verschillend lettertype om ze minder te laten opvallen. Anders dan te-notags is het voor de vertaler mogelijk om in dit venster te werken en dan de volledige inhoud te kopiëren en te plakken in het venster Bewerken van OmegaT.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>Dit script leest de inhoud van een woordenlijstbestand en accentueert alle daarin gevonden termen in het huidige (bron)segment. Het woordenlijstbestand mag slechts bestaan uit twee kolommen, de naam GLOSS.utf8 hebben en moet aanwezig zijn in de map /script.</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>Net als voor te-gloss-highlight, maar vervangt de brontermen in de woordenlijst door de doeltermen.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combineert de functies substitueren en accentueren van te-gloss-highlight en te-gloss-subst.</p>
+
+<h3>Programmeren in tcl/tk</h3>
+
+<p>Tcl/tk heeft een aantal voordelen als taal om te scripten:</p>
+
+<p>- Het is eenvoudig te leren<br/> - Het is gratis<br/> - Het wordt breed gebruikt, dus hulp kan op het internet worden gevonden<br/> - De component Tk maakt het eenvoudig om grafische gebruikersinterfaces te maken<br/> - Er bestaan vele goede boeken en andere beschikbare bronnen voor (tenminste in het Engels)<br/> - Het is tekenreeks-georiënteerd, wat het in het bijzonder geschikt maakt voor toepassing die betrekking hebben op tekst</p>
+
+<p>Voor beginners zijn verschillende online handleidingen beschikbaar, zoals:</p>
+
+<p><a href="http://archive.is/kZWsj">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
+<a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
+
+<p>Als u serieus van plan bent tcl/tk te leren, wordt &quot;Practical Programming in Tcl and Tk&quot; door Brent Welch, ISBN: 0-13-038560-3 sterk aanbevolen. Dit is waarschijnlijk een beetje te technisch voor volledige nieuwkomers in programmeren, maar na het doorwerken van één van de online handleidingen zouden zij het nuttig kunnen vinden.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

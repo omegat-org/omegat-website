@@ -1,0 +1,76 @@
+<div class="container">
+
+<h2>HowTo: Toevoegen van een functie Voorbeeld aan OmegaT</h2>
+
+<h3>Achtergrond</h3>
+
+<p>De meeste moderne CAT-programma's geven de tekst weer in segment-georiënteerde vorm in plaats van in zijn uiteindelijke lay-out en opmaak. Hoewel dit vele voordelen heeft, kan het voor de vertaler zeer handig zijn om de uiteindelijke lay-out en opmaak te zien tijdens het vertalen. Om deze reden verschaffen vele CAT-programma's een functie Voorbeeld die de lay-out en opmaak weergeeft zonder dat de vertaler het uiteindelijke document moet maken en het in een afzonderlijke toepassing moet openen (gewoonlijk een tekstbewerker). OmegaT heeft geen integrale functie Voorbeeld, maar het is mogelijk dezelfde functionaliteit te verschaffen met behulp van aanvullende software. Deze HowTo beschrijft de algemene principes voor het instellen van een functie Voorbeeld.</p>
+
+<h3>Principes</h3>
+
+<p>Idealer wijze zou een weergave twee dingen doen:</p>
+
+<ul>
+
+<li>Het zou de tekst weergeven op een wijze die de uiteindelijke lay-out en opmaak benadert.</li>
+
+<li>Het zou continu worden bijgewerkt.</li>
+
+</ul>
+
+
+<h3>Browser</h3>
+
+<p>Als u .html-bestanden vertaalt, is een handig oplossing om een browser met een automatische functie voor vernieuwen te gebruiken om een functie Voorbeeld voor reeds vertaald te verschaffen. Voorbeelden van browsers met een automatische functie voor vernieuwen:</p>
+
+<ul>
+
+<li>Firefox:<br/> Windows-gebruikers die Firefox nog niet gebruiken kunnen het <a href="http://www.mozilla.org">downloaden vanaf www.mozilla.org</a>; de meeste Linux-gebruikers zullen het al reeds geïnstalleerd hebben, of kunnen het installeren vanuit de repositories van hun distributies. <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">Installeer de add-on &quot;ReloadEvery&quot;</a> om een automatische functie Vernieuwen toe te voegen aan Firefox,.</li>
+
+<li>Opera:<br/> Opera is beschikbaar voor alle platformen; het is ook zeer snel en vereist weinig hardwarebronnen. <a href="http://www.opera.com">Download het vanaf www.opera.com</a> (of voor Linux-gebruikers: via de repository van uw distributie). De automatische functie Vernieuwen is ingebouwd.</li>
+
+<li>Chrome:<br/> Chrome is ook beschikbaar voor alle platformen. <a href="https://www.google.com/chrome/browser/desktop/index.html">Download Chrome vanaf www.google.com/chrome</a>.  <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">Download en installeer de extensie Auto Refresh Plus</a> vanuit de Web Store om de functie Auto refresh toe te voegen aan Chrome.</li>
+
+</ul>
+
+<p>U zou kunnen prefereren om <i>niet</i> uw gewone browser te gebruiken voor de functie Voorbeeld om die vrij te houden voor het browsen op internet in plaats van constant te moeten wisselen van tabs, dus kunt u het installeren van een aanvullende browser voor de functie Voorbeeld als een voordeel beschouwen.</p>
+
+<p>Na het selecteren en installeren van een geschikte browser (en/of de vereiste add-on), open uw vertaalde bestand in de map /target van uw project:</p>
+
+<ul>
+
+<li>Met behulp van Firefox: met Bestand &gt; Bestand openen</li>
+<li>Met behulp van Opera: met Opera &gt; Pagina &gt; Openen</li>
+
+</ul>
+
+<p>Schakel nu automatisch vernieuwen in. In zowel Firefox als Opera kan dit worden gedaan door met rechts te klikken in het vertaalde .html-bestand dat u heeft geopend, en dan Herlaad iedere &gt; selecteer de gewenste interval (bijv. 5 seconden).</p>
+
+<p>U heeft nu een functie Voorbeeld. U moet nog steeds opslaan en uw vertaalde documenten maken in OmegaT met Ctrl+s, Ctrl+d om de weergave bij te werken. De wijzigingen worden dan zichtbaar tenminste na een vertraging van ten hoogste de interval die u heeft geselecteerd (plus de tijd die OmegaT nodig heeft voor het opslaan en het maken van de vertaalde documenten). Uw browser zal niet automatisch scrollen als u door de tekst heen werkt; u moet dat zelf doen. Maar het zal tenminste op hetzelfde punt in de tekst blijven staan als tot waar de weergave is bijgewerkt.</p>
+
+<h3>Voorbeelden van bestanden in tekstbewerken</h3>
+
+<p>Openen van uw vertaalde doelbestand in een browser is eenvoudig als uw bronbestand in de indeling .html is, maar vertalingen betreffen doorgaans meer bestanden voor tekst bewerken, die in OmegaT gewoonlijk worden afgehandeld in de indelingen .docx of .odt. U kunt nog steeds de hierboven beschreven oplossing met de browser gebruiken om de vertalingen van deze bestanden weer te geven, maar dan heeft u ook nodig a) een converter om het bestand te converteren naar de indeling .html, en b) een mogelijkheid om de converter automatisch te laten starten zodat u de bestanden niet handmatig hoeft te converteren.</p>
+
+<p>Twee programma's die als converters kunnen worden gebruikt worden hier besproken: Abiword en LibreOffice.</p>
+
+<p>Abiword en LibreOffice zijn respectievelijk een tekstbewerker en een kantoorsuite. beide zijn gratis, beschikbaar voor een aantal verschillende platformen, en kunnen .docx- en .odt-bestanden converteren naar de indeling .html.</p>
+
+<p>Abiword is een relatief kleine download en is zeer snel in het gebruik. Het heeft een functie voor de opdrachtregel voor het converteren van .docx- en .odt-bestanden naar de indeling .html. Het is zeer eenvoudig voor Linux-gebruikers en redelijk eenvoudig te installeren voor Windows-gebruikers. <a href="http://www.abisource.com/download/">Download Abiword hier</a>.</p>
+
+<p>LibreOffice is een volledig uitgeruste kantoorsuite zoals Microsoft Office. Het kan ook worden gebruikt om .docx- en .odt-bestanden te converteren naar de indeling .html, maar om dat vanaf de opdrachtregel te kunnen doen, vereist het ook Unoconv, een plug-in. <a href="http://www.libreoffice.org/">Download LibreOffice hier</a>; <a href="http://dag.wieers.com/home-made/unoconv/">download de plug-in Unoconv hier</a>.</p>
+
+<p>Als u eenmaal Abiword of de combinatie LibreOffice+Unoconv hebt geïnstalleerd, kunt u de door OmegaT geproduceerde vertaalde documenten converteren naar de indeling html om ze te kunnen laten lezen door de browser. Onthoud dat u eerst zult moeten opslaan in OmegaT en de vertaalde documenten moet produceren, en dan het programma voor de conversie moet starten en wachten tot de weergave in de browser is bijgewerkt.</p>
+
+<p>Er zijn talrijke manieren om dit te bereiken, maar een praktische oplossing is om een script te gebruiken dat &quot;luistert&quot; naar wijzigingen in de vertaalden bestand(en) die worden geproduceerd door OmegaT en dan, als een wijziging wordt gedetecteerd, automatisch het programma start dat (het)de bestand(en) converteert naar de indeling html om ze te kunnen laten lezen door de browser. Een schematisch diagram is hieronder weergegeven:</p>
+
+<p><img src="../../images/preview_flow.png" alt="preview_flow.png"/></p>
+
+<p>Een voorbeeldscript dat deze functie mogelijk maakt is beschreven in de <a href="priorview.html">Priorview Howto</a>.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

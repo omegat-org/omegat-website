@@ -1,0 +1,70 @@
+<div class="container">
+
+<h2>Návod: Překlad souborů PDF pomocí Iceni Infix a OmegaT</h2>
+
+<p>Tento návod poskytuje informace o použití OmegaT a Iceni Infix při překladu PDF souborů.</p>
+
+<h3>Nástin situace</h3>
+
+<p>Soubory PDF se řadí do dvou kategorií: pravé a „skenované“ PDFka.</p>
+
+<p>„Skenovaný“ soubor PDF je takový soubor, u kterého formát PDF převážně slouží jako vhodný kontejner pro skeny tištěných stránek. Často takové skeny obsahují text, který má být přeložen. Neexistuje žádný způsob překladu skenovaných souborů PDF než nějakým způsobem obnovit text, a to buď ručním přepsáním nebo pomocí OCR (optické rozlišení znaků), a vytvořit tak vzhled stránky úplně od začátku znova. Tento návod se skenovaným souborům PDF dále nebude věnovat.</p>
+
+<p>Opravdové soubory PDF (někdy zvané „nativní“ nebo „distilled“ PDF soubory, i když „distilled“ [„destilovaný“] je přesnější označení) jsou takové soubory PDF, které vznikly exportem z jiné aplikace, obvykle z oblasti programů elektronické přípravy dokumentů (DTP; desktop publishing). Aby bylo možno překládat soubory PDF, pak správný postup obvykle znamená vytvořit překlad v původní (DTP) aplikaci a pak projít stejné kroky produkce PDF, které byly učiněny u originálu. Překlad souboru PDF jeho přímou úpravou zpravidla není moc praktické. Při překladu souborů PDF „jen pro informaci“, překladatelé ještě před zahájením překladu často použijí konverzi souboru PDF na jiný formát, např. RTF; výsledky mohou být pro zvolený účel dostačující, ale nebudou odpovídat profesionálním standardům původního DTP zpracování.</p>
+
+<h3>Iceni Infix</h3>
+
+<p>Iceni Infix nabízí další možnost. Infix je editor PDF, tj. text v PDF můžete upravovat přímo. I když je diskutabilní, zda výsledky tohoto postupu budou srovnatelné s opětovným vytvořením vzhledu stránky překladu nějakým DTP profesionálem, ale budou pravděpodobně lepší než převod na zcela odlišný formát (jako např. RTF).</p>
+
+<p>„Profesionální“ verze editoru Infix má další funkce, které by překladatele mohly zajímat: export textu v XML. Toto umožňuje exportovat text do souboru XML, který již lze překládat v CAT nástroji. Přeložený text můžete pak opět importovat do Infix Professional. OmegaT patří mezi CAT nástroje, pro které lze takovýto postup využít. Postup je popsán v tomto návodu.</p>
+
+<h3>Platformy</h3>
+
+<p>I když Infix je aplikací pro prostředí Windows, Iceni se překonal a vyšel vstříc i uživatelům Linuxu a Macintosh. Infox Professional lze použít na těchto platformách ve spojení s Crossover Linux a Crossover Macintosh. Crossover Linux a Crossover Macintosh stojí průměrně 40 €. Jak je zvykem, demo verze jsou dostupné také. Crossover Linux a Crossover Macintosh můžete získat na stránkách <a href="http://www.codeweavers.com/products/crossover/">Codeweavers' website</a>. <a href="http://www.iceni.com/infixmaclinux.htm">Specifické informace o provozu programu Iceni Infix pod Crossover Linux nebo Crossover Macintosh</a> jsou dostupné také.</p>
+
+<h3>Překlad souboru PDF: postup</h3>
+
+<p>Stáhněte si a instalujte Iceni Infix Professional ze stránky <a href="http://www.iceni.com/infix.htm">Iceni</a>. Dostupná je demoverze; v čase psaní tohoto textu stojí plná verze přibližně 150 USD. Pokud používáte Linux nebo Macintosh, pořiďte si a instalujte odpovídající verzi Crossover před instalací Iceni Infix Professional. (Infix údajně pracuje i pod WINE.)</p>
+
+<p>Spusťte Iceni Infix a otevřete soubor PDF, který chcete překládat. Příklad na obrázku je <a href="http://ec.europa.eu/enterprise/policies/sme/files/sme_definition/sme_user_guide_hu.pdf">Směrnice Evropské komise v maďarštině</a>.</p>
+
+<img src="../../images/infix1.png" alt="infix1.png"/>
+
+<p>Exportujte text z PDF do XML formátu programu Infix přes nabídku Document &gt; Translate &gt; Export XML. Uložit PDF. Toto je důležité: když exportujete soubor XML z PDF, Infix vytvoří poznámku v souboru kam pak patří všechny vyňaté části textu, takže musíte použít tuto verzi soubor, když chcete opět importovat přeložený XML soubor.</p>
+
+<p>Vytvořte projekt OmegaT obvyklým způsobem.</p>
+
+<p>Pokud používáte verzi OmegaT 2.3 nebo novější, jednoduše umístěte exportovaný soubor XML z Infix jak bylo popsáno výše do adresáře /source vašeho OmegaT projektu.</p>
+
+<p><i>Jestliže používáte starší verzi OmegaT, pak se doporučuje upgradovat vaši instalaci OmegaT. Jinak by mělo jít překládat soubor XML z Infix s dobrými výsledky za použití starší verze OmegaT prostřednictvím filtru HTML. Aby byl tento filtr použit, prostě změňte koncovku souboru XML exportovaného z Infox místo .xml na .html.</i></p>
+
+<p>Nechejte projekt v OmegaT znovu načíst. Teď již můžete překládat text (viz snímek obrazovky).</p>
+
+<img src="../../images/infix2.png" alt="infix2.png"/>
+
+<p>Poznámka na okraj: filtr aplikace OmegaT pro Infix zobrazuje tag Infixu &lt;BR/&gt; jako &lt;brx/&gt;. Toto pak umožňuje použít pravidlo pro segmentaci HTML a rozhodnout tak, jestli na takovýchto místech aplikovat segmentaci nebo ne.</p>
+
+<p>Po dokončení překladu vytvořte přeložené dokumenty obvyklým způsobem (Ctrl+S, Ctrl+D). Přejděte k přeloženému souboru XML v projektovém adresáři /target aplikace OmegaT. <i>Pokud jste změnili koncovku souboru na .html, změňte koncovku přeloženého souboru zpět na .xml.</i></p>
+
+<p>Opět v programu Iceni Infix importujte přeložený soubor XML zpět na <i>formát PDF, ze kterého jste text prvně exportovali</i>. Uložte změny.</p>
+
+<p>Když vše dobře šlo, váš překlad bude vypadat stejně jako originál, ovšem přeložen. (Viz snímek obrazovky: zde byly přeloženy pouze první tři segmenty.)</p>
+
+<p>Pokud při své práci použijete demo verzi programu Iceni Infix, přeložený PDF dokument bude obsahovat vodoznak Iceni. U překladů „pro informaci“, by toto nemuselo vadit. Iceni Infix také umožňuje uložit soubory PDF do formátu RTF, ale v tomto případě je demoverze vhodná pouze pro demonstraci účelu, protože znaky jsou převedeny jen namátkově.</p>
+
+<img src="../../images/infix3.png" alt="infix3.png"/>
+
+<p>Jak už tak bývá u technických (a překladových) věcí, i tady je jeden háček.</p>
+
+<p>Může se stát, že vestavěná písma v PDF neobsahují všechny znaky, které potřebujete. Pravděpodobně můžete tuto situaci vyřešit získáním a instalací potřebných písem; nebo můžete vybrat pro tento účel jiné písmo - což může ale nemusí být vhodné řešení.</p>
+
+<p>Je tu velká pravděpodobnost, že v některých případech bude překlad delší než originál. Toto se musí řešit uvnitř Infix, např. zvětšení pole obsahujícího text. Infix má funkce, které toto umí zpracovat a poradí si i s ostatními potížemi, které v rámci tohoto návodu nelze všechny popsat.</p>
+
+<p>Můžete se setkat s tím, že segmenty jsou zalomeny ukončením řádku na nevhodném místě. Tato situace je vám jistě známá, pokud jste překládali soubory Powerpoint prostřednictvím OmegaT, nebo podobně u jiných CAT nástrojů. Aby se toto vyřešilo, otevřete původní soubor PDF v Infix. Vyberte Tools &gt; Text tool. Klikněte na sporný text a zobrazí se textové pole s formátovacími značkami. Snímek obrazovky ukazuje příklad: <img src="../../images/infix4.png" alt="infix4.png"/>Odstranit zalomení řádku. Pak uložte změny a znovu exportujte PDF do XML (a změňte koncovku souboru atd.), a znovu jej importujte do svého projektu OmegaT. Pokud váš soubor obsahuje spousty takovýchto nevyhovujících zalomení, je efektivnější je odstranit všechny najednou, přepínáním mezi OmegaT a Infix si je necháte zobrazit.</p>
+
+<p>Některé nevyhovující ukončení řádků mohou být požadovány pro správné umístění textu. V takovýchto případech je praktické odstranit je před exportem do XML, takže k překladu jsou vám předkládány navazující segmenty, a pak budou opět vloženy v Infix na konci zpracování projektu.</p>
+
+<p>Copyright Marc Prior 2011</p>
+
+</div>
+

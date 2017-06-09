@@ -1,0 +1,158 @@
+<div class="container">
+
+<h2>OmegaT HowTo: <br/>Vertalen van bestanden van Word 2007 (Office Open XML, .docx) in OmegaT</h2>
+
+<p>Deze HOWTO verschaft tips over het vertalen van bestanden van MS Office 2007 (en later) in OmegaT.</p>
+
+<h3>Achtergrond</h3>
+
+<p>Met de komst van Microsoft Office 2007 hebben Microsoft Word, Excel en Powerpoint nieuwe standaard bestandsindelingen. Deze indelingen zijn formeel bekend als &quot;Office Open XML&quot;, en hebben de respectievelijke extensies .docx, .xlsx en .pptx. De indelingen worden ook gebruikt in MS Office 2010. Gemakshalve zal er naar verwezen worden als &quot;MS Office 2007-bestandsindelingen&quot;.</p>
+
+<p>Vanaf versie 1.7.1 en verder is OmegaT in staat geweest om bestanden van Microsoft Office 2007 direct af te handelen, zonder conversie. Met het verschijnen van OmegaT versie 2.1.8, werd de afhandeling van deze bestandsindeling in OmegaT ook veel gebruikersvriendelijker.</p>
+
+<h3>De voordelen van het gebruiken van de indeling .docx in samenwerking met OmegaT</h3>
+
+<p>Als gebruikers/auteurs Microsoft Office/Word bijwerken naar meer recente versies, kunnen vertalers verwachten dat zij meer bestanden in de nieuwe indeling zullen ontvangen. Anders dan de oudere .doc-, .xls- en .ppt-indelingen, kunnen deze bestanden direct in OmegaT worden afgehandeld, zonder verlies van opmaak als resultaat van conversie naar en vanuit andere indelingen.</p>
+
+<p>De nieuwe indeling kan ook dienen als een handige manier voor het afhandelen van de oudere .doc-, .xls- en .ppt-indelingen, omdat zij kunnen worden geconverteerd naar hun MS Office 2007 tegenhangers, vertaald in OmegaT, en terug worden geconverteerd. Deze procedure is daarom een alternatief voor vertalers die prefereren om niet OpenOffice.org voor dit doel te gebruiken.</p>
+
+<h3>Converteren naar MS Office 2007-indeling</h3>
+
+<p>U kunt bestanden van MS Office 1997/2000/2003/XP converteren naar de indeling van MS Office 2007 door ze te openen in MS Office 2007 en ze in de nieuwe indeling op te slaan met &quot;Opslaan als&quot;. (Omdat dit nu de nieuwe standaard indeling is, worden ze eenvoudigweg beschreven als Word, Excel of Powerpoint in MS Office 2007).</p>
+
+<p>Voor gebruikers die geen MS Office 2007 of 2010 hebben en het niet willen kopen, verschaft Microsoft een <a href="http://www.microsoft.com/downloads/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;display">compatibiliteits plug-in</a> voor eerdere versies.</p>
+
+<p>Linux-gebruikers: zowel MS Office 2007 en de Microsoft compatibiliteits plug-in kunnen worden uitgevoerd op <a href="http://www.codeweavers.com">Crossover Linux.</a></p>
+
+<h3>Punten om op te letten bij het gebruiken van de indelingen .docx, .xlsx en .pptx in OmegaT</h3>
+
+<p>In de OmegaT versies vóór 2.1.8, resulteerde elke wijziging in opmaak in een bestand van MS Office 2007 in een lange rij van meerdere tags, die de afhandeling van deze bestandsindeling onpraktisch maakte. Vanaf versie 2.1.8 worden deze meerdere tags nu, standaard, samengevoegd (gecomprimeerd) tot één enkele tag. Gebruikers die bestanden van MS Office 2007 willen vertalen zouden daarom OmegaT moeten bijwerken naar versie 2.1.8 of later.</p>
+
+<p>(Het grootste gemak van het afhandelen van tags met .docx-bestanden gaat ten koste van een licht verlies aan het beheren van de opmaak. Bijvoorbeeld: zonder de functie &quot;samengevoegde tags&quot;, waarbij een woord in vet of cursief in de brontekst staat, zou de vertaler er voor kunnen kiezen om het slechts weg te zetten in alleen vet of alleen cursief. Met de functie &quot;samengevoegde tags&quot; ingeschakeld, is dit niet mogelijk. De meeste gebruikers zullen waarschijnlijk vinden dat het grotere gemak opweegt tegen dit gebrek.)</p>
+
+<p>De indeling .docx is ook gevoelig voor de introductie van &quot;storende&quot; opmaakcode die resulteert in het verschijnen van ongewenste en onnodige tags in het bewerkingsvenster van OmegaT. Omdat deze onhandig zijn tijdens het vertalen, is het het waard om te proberen deze storende tags te verwijderen vóórdat wordt begonnen met de vertaling in OmegaT. OmegaT deelt dit probleem met andere CAT-programma's die de indeling .docx afhandelen, en de oplossingen zijn soortgelijk of hetzelfde.</p>
+
+<h3>Hoe ongewenste opmaakcode te verwijderen uit .docx-bestanden</h3>
+
+<ul>
+
+<li><p>Word 2007 markeert woorden die niet in zijn spellingswoordenboek staan met tags, dus zelfs een aantal woorden die het beschouwt als verkeerd gespeld zullen zorgen voor een overvloed aan tags. Indien elk enkel woord in OmegaT wordt omsloten door tags, is het mogelijk dat Word heeft geprobeerd om de tekst op spelling te controleren zonder toegang tot een geschikt woordenboek voor die spelling, en heeft daarom elk woord gemarkeerd als verkeerd gespeld. Eén oplossing is om de automatische spellingscontrole in Word uit te schakelen.</p></li>
+<li><p>Automatisch afbreken voegt ook onnodige tags toe, schakel het dus uit. Het kan nodig zijn om dit voor elk document te doen, in welk geval de procedure in Word 2007 is: Klik op de tab Paginainstelling; in de groep Paginainstelling, klik op Afbreken; en klik dan op Geen.</p></li>
+
+<li><p>Gebruik Zoeken en vervangen om dubbele spaties te verwijderen (vervang ze door één enkele spatie).</p></li>
+
+<li>Als uw tekst zowel Aziatische als &quot;normale&quot; (bijv. Latijnse) tekens bevat, gebruik dan Ctrl+A om de gehele tekst te selecteren, en selecteer er één enkel lettertype voor. Wees zorgvuldig om een lettertype te kiezen dat zowel de noodzakelijke Aziatische als &quot;normale&quot; tekens bevat, zoals MS Mincho, maar zonder het achtervoegsel voor de stijl &quot;[text body]&quot;.</li>
+
+<li><p>Word 2007 voegt een tag in voor een pagina-einde, zelfs automatische pagina-einden. Deze tag kan klaarblijkelijk niet worden verwijderd.</p></li>
+
+</ul>
+
+<p>Onthoud dat zelfs nadat de instellingen van Word zijn gewijzigd zodat het geen &quot;storende&quot; codes meer invoegt, bijvoorbeeld voor automatisch afbreken, kunnen zulke codes nog steeds aanwezig zijn in het bestand en niet zijn verwijderd door de wijziging in de configuratie. Verwijderen van deze codes wordt hieronder beschreven. Maak echter eerst, vóórdat de instructies hieronder voor het verwijderen van storende codes worden opgevolgd, de wijzigingen in de configuratie in Word, of Word kan eenvoudigweg opnieuw de storende codes invoegen als het bestand vervolgens wordt geopend.</p>
+
+<h3>Gereedschappen van derde partijen</h3>
+
+<p>Zoals reeds vermeld is dit probleem met MS Word niet uniek voor OmegaT. Gereedschappen zijn door derde partijen geproduceerd om het probleem te behandelen. Twee hiervan zijn:</p>
+
+<p><a href="http://asap-traduction.com/CodeZapper">CodeZapper</a> (goedkoop)</p>
+
+<p><a href="http://www.translatortools.net/word-doccleaner.html">Document Cleaner</a> (gratis)</p>
+
+<h3>Op niveau brengen tekenopmaak</h3>
+
+<p>Een alternatief voor het uitvoeren van de macro CodeZapper macro op uw tekst is om de opmaak &quot;op niveau te brengen&quot;. &quot;Op niveau brengen&quot; van de opmaak betekent het toepassen van de opmaak van het eerste teken in een selectie van tekst (zoals een gehele alinea) op alle volgende tekens. Onthoud dat dit niet hetzelfde is als het &quot;verwijderen&quot; van de opmaak, wat er voor zou zorgen dat de tekenopmaak terug zou keren naar de standaard van het document.</p>
+
+<p>U kunt de opmaak van alinea's essentieel op niveau brengen door gehele alinea's in MS Word te kopiëren en ze over zichzelf heen te plakken zodat de gehele alinea de opmaak van het eerste teken aanneemt.</p>
+
+<h3>Handmatig op niveau brengen van de tekenopmaak van een alinea</h3>
+
+<p>Stap 1: Weergeven van de markering van een alinea. Markeer elke alinea door er herhaaldelijk op te klikken totdat de gehele alinea wordt geaccentueerd. Verplaats dan het einde van de markering één plaats naar links zodat het niet de markering van het alinea-einde omvat.</p>
+
+<p>Stap 2: Kopieer deze geaccentueerde (Ctrl+C). Selecteer dan &quot;Plakken speciaal&quot; (Word 2003) of klik op de pijl aan de onderzijde van de knop &quot;Invoegen&quot; (Word 2007) om de uitgebreide opties voor Plakken te verkrijgen. Voeg tenslotte de inhoud in met behulp van de optie &quot;Niet-opgemaakte Unicode-tekst&quot;.</p>
+
+<p>Waar alinea's geen in-regelige opmaak hebben (vet, cursief, hyperlinks, etc.), kunt u ofwel:</p>
+
+<p>- de opmaak vanuit deze alinea's op niveau brengen met behulp van de hierboven beschreven macro, en dan de opmaak opnieuw in te voegen; of</p>
+
+<p>- markeer alleen de tekst tot aan het gedeelte dat is opgemaakt, kopieer deze tekst en plak het over zichzelf heen, en herhaal dat proces op de tekst na het opgemaakte gedeelte.</p>
+
+<h3>Maken van een macro om de tekenopmaak van een alinea op niveau te brengen</h3>
+
+<p>U kunt de hierboven vermelde procedure enigszins automatiseren door een macro te maken. Korte instructies voor het maken van de macro (in MS Office 2007) worden hieronder gegeven. (Voor meer gedetailleerde instructies, bekijk uw instructiehandleiding of klik <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">hier</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">hier</a> of <a href="https://oit.nd.edu/assets/141085/word_2013_macros_qrg.pdf">hier</a>.)</p>
+
+<p>Als u dit nog niet gedaan hebt, voeg de tab Ontwikkelaar als volgt aan de ribbon toe: klik op de knop Office. Selecteer Word Opties. Klik op Populair in het dialoogvenster Word Opties. Op de ribbon, vink Tab ontwikkelaar weergeven aan en bevestig met OK. Sluit Word.</p>
+
+<p>Start Word opnieuw op, maak een nieuw bestand in Word en voeg een alinea voorbeeldtekst toe, ten minste drie regels lang, bijv.:</p>
+
+<p>Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea. Dit is een alinea.</p>
+
+<p>Klik op de knop voor de markering van de alinea om de alinea-einden zichtbaar te maken.</p>
+
+<p>Plaats de cursor in uw tekstalinea (niet in de eerst of laatste regels).</p>
+
+<p>Maak de macro:</p>
+
+<p>Klik, op de tab Ontwikkelaar, op Macro opnemen.</p>
+
+<p>In het vak Macronaam, typ een naam voor de macro, zoals &quot;niveau_opmaak&quot;. Selecteer Normal.dotm in het vak &quot;Macro opslaan in&quot; om de macro in alle documenten beschikbaar te maken. Als u al wijzigingen hebt gemaakt in uw Normal.dotm, wilt u daar misschien eerst een back-up van maken.</p>
+
+<p>Klik op de knop Toetsenbord. Klik in het vak voor een nieuwe toetsencombinatie, en experimenteer met de toetsencombinaties om er een te vinden die nog niet is toegewezen. Als een combinatie die u probeert als is toegewezen, wordt een bericht met die mededeling weergegeven in het dialoogvenster, en kunt u de combinatie verwijderen en een andere proberen. Ctrl+Shift+9 schijnt niet te zijn toegewezen aan enige andere functie in de basis Word-installatie, maar u kunt elke andere combinatie gebruiken die nog niet is toegewezen.</p>
+
+<p>Klik op Toewijzen om de sneltoets toe te wijzen aan de macro die u zult gaan opnemen. Alles wat u vanaf nu doet zal worden opgenomen in de macro, dus volg deze procedure zorgvuldig:</p>
+
+<p>Ctrl+Cursor naar boven (dit brengt de cursor naar het begin van de alinea)</p>
+<p>Ctrl+Shift+Cursor naar beneden (dit selecteert de alinea, inclusief de markering voor het alinea-einde)</p>
+<p>Shift+Cursor naar links (dit verplaatst het einde van de selectie één teken naar links zodat de markering voor het alinea-einde niet langer is opgenomen)</p>
+<p>Ctrl+C (dit kopieert de alinea)</p>
+<p>Ctrl+V (dit plakt de tekst van de alinea terug over de alinea)</p>
+
+<p>Klik op Opnemen stoppen na het invoeren van deze opdrachten.</p>
+
+<p>Klik op Macro's en selecteer niveau_opmaak (of welke naam u ook gaf aan uw macro), en dan Bewerken. De code van uw macro(s) zal worden weergegeven. Voor niveau_opmaak zou dat moeten zijn:</p>
+
+<p>___________________<br/> Sub niveau_opmaak()<br/> '<br/> ' macro niveau_opmaak<br/> '<br/> '<br/> Selection.MoveUp Unit:=wdParagraph, Count:=1<br/> Selection.MoveDown Unit:=wdParagraph, Count:=1, Extend:=wdExtend<br/> Selection.MoveLeft Unit:=wdWord, Count:=1, Extend:=wdExtend<br/> Selection.Copy<br/> Selection.PasteAndFormat (wdPasteDefault)<br/> End Sub<br/> ___________________</p>
+
+<p>Wijzig de regel:</p>
+<p>    Selection.PasteAndFormat (wdPasteDefault)</p>
+<p>naar:</p>
+<p>    Selection.PasteSpecial DataType:=wdPasteText</p>
+
+<p>Sla op met Ctrl+S, en sluit het venster voor het bewerken van de macro.</p>
+
+<p>Als alles volgens plan is gegaan zou uw macro nu moeten werken. Voeg enige opmaak aan uw Word-document toe, bijvoorbeeld door één woord vet te maken, om dit te testen. Plaats nu eenvoudigweg de cursor ergens in de alinea en druk op Ctrl+Shift+9 (of eender welke andere toetscombinatie u hebt geselecteerd), en u zou de opmaak moeten zien verdwijnen.</p>
+
+<p>U kunt de toetsencombinatie op elke moment wijzigen. Klik op de hoofdknop &quot;Office&quot; en dan Word-opties (rechtsonder in het dialoogvenster) om dat te doen.</p>
+
+<p>Klik op Aanpassen &gt; Opdrachten kiezen. Kies Macro's uit de keuzelijst. Selecteer &quot;niveau_opmaak&quot; (of hoe u het ook noemde).</p>
+
+<p>Klik op Aanpassen aan de onderzijde van het dialoogvenster naast de Toetsenbordsneltoetsen.</p>
+
+<p>In het vak Categorieën, scroll naar beneden naar Macro's en selecteer dat. Selecteer dan rechts, onder Macro's, niveau_opmaak (of hoe u uw macro ook noemde). De huidige sneltoets zal worden weergegeven in het relevante vak. U kunt dat leeg maken door het te selecteren en op Verwijderen te drukken. U kunt dan een nieuwe sneltoets invoeren en die toewijzen met Toewijzen zoals u eerder hebt gedaan. Sluit/bevestig de dialoogvensters.</p>
+
+<p>U kunt een soortgelijke procedure gebruiken om een knop voor uw macro te maken:</p>
+
+<p>Klik opnieuw op de hoofdknop &quot;Office&quot;, en dan Word-opties.</p>
+
+<p>Klik op Aanpassen &gt; Opdrachten kiezen. Kies Macro's uit de keuzelijst. Selecteer uw macro.</p>
+
+<p>Klik op Toevoegen. U zou de opdracht voor de macro moeten zien verschijnen in de kolom aan de rechterkant. Klik op Aanpassen.</p>
+
+<p>Kies een symbool en klik op OK &gt; OK. Het symbool voor uw macro zou moeten verschijnen in de werkbalk.</p>
+
+<p>Deze macro is handig voor het op niveau brengen van de opmaak van een hele alinea die geen zichtbare opmaak bevat. Waar een alinea gewenste opmaak bevat, moet u de verwijderde opmaak herstellen na het op niveau brengen van de alinea. In alinea's die veel opmaak bevatten kan het herstellen van de verwijderde opmaak behoorlijk veel werk zijn. Overweeg de volgende alternatieven voor zulke alinea's:</p>
+
+<ul> 
+
+<li><p>Gebruik de macro CodeZapper van Dave Turner.</p></li>
+
+<li><p>Maak een tweede macro (met zijn eigen knop en/of toetsenbordsneltoets) van uzelf die alleen geaccentueerde tekst op niveau brengt, in plaats van de gehele alinea. (Nee die op zoals hierboven beschreven, maar neem alleen de opdracht Ctrl+C op, gevolgd door Ctrl+V.) U kunt dan de tekst accentueren tussen de punten waarop de opmaak wijzigt. Dit zal de opmaak op niveau brengen over gedeelten van tekst die dezelfde, gewenste opmaak hebben, en u zult geen verwijderde opmaak behoeven te herstellen.</p></li>
+
+<li><p>Gebruik de macro niveau_opmaak alleen op alinea's zonder of met weinig opmaak. Alinea's die u niet &quot;op niveau hebt gebracht&quot; zullen dan storende tags bevatten, maar de andere zullen op zijn minst veel &quot;schoner&quot; zijn.</p></li>
+
+<li><p>Meer gevorderde gebruikers willen misschien de functie Tekst exporteren van OmegaT gebruiken. In samenwerking met het script te-st-notags verschaft dit een afzonderlijk venster waarin geen tags worden weergegeven. U moet nog steeds de tags juist afhandelen bij het produceren en bewerken van uw vertaling, maar u kunt het bekijken in een afzonderlijk venster zonder de wirwar van tags (&quot;tagssoep&quot;).</p></li>
+
+</ul>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

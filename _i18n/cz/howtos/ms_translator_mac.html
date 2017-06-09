@@ -1,0 +1,13 @@
+<div class="container">
+
+<h2>Návod OmegaT:<br/>Nastavení překladače MS Translator na Macu</h2><br/>- Přihlašte se do obchodu Microsoft Azure Marketplace:<br/> <a href="http://datamarket.azure.com/">http://datamarket.azure.com/</a><br/> <br/> *Pokud ještě nemáte účet pro Azure Marketplace bude nejprve nutno si jej založit.<br/> <br/> - Klikněte na volbu Můj účet v horní části stránky. <br/> - Ve spodní části stránky uvidíte záznamy a hodnoty pro:<br/> <br/> Hlavní klíč účtu / Primary Account Key<br/> Identifikaci uživatele / Customer ID<br/> <br/> Hlavní klíč účtu = microsoft.api.client_secret  (je potřebný k nastavení přístupu k překladači Microsoft Translator)<br/> Identifikace uživatele = microsoft.api.client_id je potřebný k nastavení přístupu k překladači Microsoft Translator)<br/>( <br/> - Přejděte k adresáři aplikace (prostě tam, kde máte nainstalováno OmegaT na svém Macu), pravý klik/cmd+klik/dotek dvou prstů na spouštěcí soubor OmegaT a vyberte „Zobrazit obsah balíčku“ / „View package contents“. <br/> - Klikněte na adresář s obsahem a zálohujte/zkopírujte/zduplikujte nalezený soubor info.plist. <br/> - Otevřete soubor info.plist ve svém textovém editoru a najděte část s vlastnostmi („Properties section“). <br/> - Sem přidáte záznamy se svým Hlavním klíčem účtu pro Azure Marketplace a Identifikaci uživatele (zapamatujte si, že microsoft.api.client_id = vaše identifikace uživatele pro Azure Marketplace a microsoft.api.client_secret = váš hlavní klíč k účtu na Azure Marketplace):<br/> <br/>  &lt;key&gt;Properties&lt;/key&gt;<br/>        &lt;dict&gt;<br/>            &lt;key&gt;apple.laf.useScreenMenuBar&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>            &lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_id&lt;/key&gt;<br/>           --&gt; &lt;string&gt;A1234-5678-1234-5678-12345678901&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_secret&lt;/key&gt;<br/>           --&gt; &lt;string&gt;AaBb1234CcDd5678aAbBcCdD1234eEfFgGhH1234&lt;/string&gt;<br/>        &lt;/dict&gt;<br/> <br/> ***POVŠIMNĚTE SI: Šipky ve výše uvedeném příkladu slouží POUZE pro ilustraci. NEZADÁVEJTE je do reálných hodnot. <br/> <br/> - Jakmile jste provedli výše zmíněné záznamy, zkontrolujte, že zadané údaje jsou správné a uložte a zavřete soubor info.plist.<br/> - Spusťte OmegaT a povolte použití překladače MS Translator:<br/> Možnosti &gt; Strojový překlad ... a vyberte překladač, který chcete aktivovat. <br/> - Začněte používat OmegaT.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Copyright Will Helton 2012</p>
+
+</div>
+

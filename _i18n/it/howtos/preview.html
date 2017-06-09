@@ -1,0 +1,76 @@
+<div class="container">
+
+<h2>Guida: Aggiunta di una funzione di anteprima a OmegaT</h2>
+
+<h3>Premesse</h3>
+
+<p>I più moderni strumenti CAT visualizzano il testo in forma orientata ai segmenti piuttosto che al suo aspetto e impaginazione finale. Anche se questo ha molti vantaggi, può risultare molto utile per il traduttore essere in grado di visualizzare l'impaginazione e la formattazione finale durante la traduzione. Per questo motivo, molti strumenti CAT forniscono una funzione di anteprima che mostra l'impaginazione e la formattazione senza che il traduttore debba creare il documento finale e aprirlo in un'applicazione separata (di solito un elaboratore di testi). OmegaT non ha una funzione di anteprima integrata, ma è possibile fornire grosso modo la stessa funzionalità utilizzando software aggiuntivo. Questa guida descrive i principi generali per l'impostazione di una funzione di anteprima.</p>
+
+<h3>Principi</h3>
+
+<p>Idealmente, un visualizzatore dovrebbe fare due cose:</p>
+
+<ul>
+
+<li>Dovrebbe visualizzare il testo con qualcosa che si avvicina all'impaginazione e all'aspetto finale.</li>
+
+<li>Dovrebbe essere poi aggiornato continuamente con le modifiche apportate al testo tradotto.</li>
+
+</ul>
+
+
+<h3>Browser</h3>
+
+<p>Se si stanno traducendo file .html, una comoda soluzione è quella di utilizzare un browser con una funzione di aggiornamento automatico in modo da avere una funzione di anteprima già disponibile. Esempi di browser con funzione di aggiornamento automatico:</p>
+
+<ul>
+
+<li>Firefox:<br/> Gli utenti di Windows che non stanno già utilizzando Firefox possono <a href="http://www.mozilla.org">scaricarlo da www.mozilla.org</a>; la maggior parte degli utenti Linux l'avrà già installato, oppure può installarlo tramite gli archivi delle loro distribuzioni. Per aggiungere la funzione di aggiornamento automatico di Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installare il componente aggiuntivo &quot;ReloadEvery&quot;</a>.</li>
+
+<li>Opera:<br/> Opera è disponibile per tutte le piattaforme; inoltre è molto veloce e richiede modeste risorse hardware. <a href="http://www.opera.com">Scaricarlo da www.opera.com</a> (per gli utenti Linux: tramite l'archivio della propria distribuzione). La funzione di aggiornamento automatico è integrata.</li>
+
+<li>Chrome:<br/> Chrome è disponibile per tutte le piattaforme. <a href="www.google.com/chrome">Scaricare Chrome da www.google.com/chrome</a>. Per aggiungere la funzione di aggiornamento automatico in Chrome, <a href="http://chrome.google.com/webstore/detail/oilipfekkmncanaajkapbpancpelijih">scaricare e installare l'estensione &quot;Auto Refresh Plus&quot;</a> dal Web Store.</li>
+
+</ul>
+
+<p>Si potrebbe <i>non</i> voler utilizzare il proprio browser abituale per la funzione di anteprima, in modo da tenerlo libero per la navigazione Internet. Piuttosto che dover continuamente saltare fra le schede, converrà considerare l'installazione di un browser supplementare riservato alla funzione di anteprima.</p>
+
+<p>Dopo la selezione e l'installazione del browser adatto (e, o in alternativa, del componente aggiuntivo richiesto), aprire il file tradotto nella cartella /target del proprio progetto:</p>
+
+<ul>
+
+<li>Utilizzando Firefox: con File &gt; Apri file.</li>
+<li>Usando Opera: con Opera &gt; Pagina &gt; Apri</li>
+
+</ul>
+
+<p>Ora attivare l'aggiornamento automatico. In Firefox e Opera, questo può essere fatto facendo clic col pulsante destro del mouse sul file .html tradotto aperto, e scegliendo il comando Ricarica ogni &gt; selezionare un intervallo desiderato (ad esempio, cinque secondi).</p>
+
+<p>La funzione di anteprima è ora attiva. Per aggiornare la visualizzazione, è necessario ancora salvare e creare il documento di destinazione in OmegaT con la sequenza Ctrl+S, Ctrl+D. Il cambiamento quindi diventerà visibile dopo un ritardo massimo dell'intervallo selezionato (più il tempo impiegato da OmegaT per salvare e produrre i file di arrivo). Il browser non scorre automaticamente mentre si lavora sul testo; bisognerà farlo manualmente. Ma rimarrà almeno nello stesso punto del testo quando viene aggiornata la visualizzazione.</p>
+
+<h3>Eseguire l'anteprima dei file degli elaboratori di testo</h3>
+
+<p>Aprire il file di destinazione tradotti in un browser è facile quando il file di origine è in formato .html, ma le traduzioni coinvolgono più spesso file di elaborazione testi, che in OmegaT sono solitamente gestiti in formato .docx o .odt . È comunque possibile utilizzare la soluzione dei browser descritta sopra per visualizzare in anteprima le traduzioni di questi file, ma si avrà poi bisogno anche di: a) un convertitore per convertire il file in formato .html; b) un programmino per avviare automaticamente il convertitore, in modo da non dover convertire manualmente i file.</p>
+
+<p>Due programmi utilizzabili come convertitori sono descritti qui: Abiword e LibreOffice.</p>
+
+<p>AbiWord e LibreOffice sono, rispettivamente, un elaboratore testi e una suite per ufficio. Sono entrambi gratuiti, disponibili per diverse piattaforme e possono convertire i file .docx e .odt in formato .html.</p>
+
+<p>AbiWord è relativamente piccolo da scaricare ed è molto veloce nell'uso. Dispone di una funzione da riga di comando per convertire file .docx e .odt in formato .html. È molto facile da installare sia per gli utenti Linux, sia per quelli Windows. <a href="http://www.abisource.com/download/">Scarica Abiword qui</a>.</p>
+
+<p>LibreOffice è una suite per ufficio completa simile a Microsoft Office. Può anche essere utilizzata per convertire i file .docx e .odt in formato ,html, ma per farlo dalla riga di comando richiede anche Unoconv, un componente aggiuntivo. <a href="http://www.libreoffice.org/">Scarica LibreOffice qui</a>; <a href="http://dag.wieers.com/home-made/unoconv/">scarica il plug-in Unoconv qui</a>.</p>
+
+<p>Una volta installato Abiword o la combinazione di LibreOffice + Uniconv, è possibile convertire i file di destinazione prodotti da OmegaT in formato html, in modo da poter essere letti dal browser. Ricordare che bisognerà prima salvare in OmegaT e produrre i documenti tradotti, avviare poi l'utilità di conversione e quindi attendere che la visualizzazione sia aggiornata nel browser.</p>
+
+<p>Esistono molti modi per farlo, ma una soluzione pratica è quella di utilizzare uno script che &quot;ascolta&quot; eventuali modifiche dei file tradotti prodotti da OmegaT e, una volta rilevata una modifica, avvia automaticamente l'utilità che converte i file in formato html per la lettura nel browser. Di seguito è riportato un breve schema:</p>
+
+<p><img src="../../images/preview_flow.png" alt="preview_flow.png"/></p>
+
+<p>Un esempio di script che realizza questa funzione è descritto nella <a href="priorview.html">Guida di Priorview</a>.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

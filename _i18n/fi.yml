@@ -1,0 +1,64 @@
+---
+footer:
+  connect: Connect
+  documentation: Dokumentaatio
+  omegat_project: The OmegaT Project
+global:
+  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
+  title: 'OmegaT - The Free Translation Memory Tool'
+linux_jre: Linux with JRE
+linux_jre64b: Linux with 64-bit JRE
+menu:
+  about: Tekijöiden esittely
+  contact: Yhteystiedot ja tuki
+  documentation: Dokumentaatio
+  download: OmegaT:n lataaminen
+  languages: Languages
+  resources: OmegaT:n muut resurssit
+nojre: Cross-platform without JRE
+osx_signed: OS X Signed
+osx_unsigned: OS X Unsigned
+source: Source code
+titles:
+  3rd_party: Kolmannen osapuolen ohjelmat
+  about: Tekijöiden esittely
+  contact: Yhteystiedot ja tuki
+  documentation: Dokumentaatio
+  download: OmegaT:n lataaminen
+  home: 'OmegaT - The Free Translation Memory Tool'
+  howto: How-To
+  howtos:
+    compatibility: Compatibility
+    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
+    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
+    docx: 'Howto - Translating Word 2007 files in OmegaT'
+    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
+    google_translate: 'Howto - Using Google Translate in OmegaT'
+    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
+    linux: OmegaT on Linux HowTo
+    localizing_omegat: 'Howto - Translating OmegaT into your language'
+    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
+    new_filter: 'Howto - Creating a new file filter'
+    preview: 'Howto - Adding a preview function to OmegaT'
+    priorview: 'Howto - The "Priorview" preview utility'
+    prop12m: Propagation and one-to-many matching HowTo
+    spelling: 'Howto - Spellchecking'
+    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
+    tokenizer: 'Howto - Using the OmegaT tokenizer'
+  howtos/compatibility: 'XLIFF '
+  index: 'OmegaT:n esittely</a>'
+  involved: OmegaT-projekti ja sinä
+  jre: 'JRE</a>'
+  manual: Manual
+  philosophy: Ajattelutapa
+  requirements: Vaatimukset
+  resources: OmegaT:n muut resurssit
+  reviews: 'Arvioita OmegaT:stä</a>'
+  screenshots: 'Kuvakaappaukset</a>'
+  sponsorship: Sponsorship
+  translation-info: OmegaT:n kääntäminen omalle kielellesi
+  tutorials: Tutorials
+webstart: Web Start
+windows_jre: Windows with JRE
+windows_jre64b: Windows with 64-bit JRE
+windows_nojre: Windows without JRE

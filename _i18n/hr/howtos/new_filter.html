@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+	
+	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>OmegaT</title>
+  <meta name="GENERATOR" content="OpenOffice.org 1.0  (Linux)">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="AUTHOR" content="Marc Prior">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CREATED" content="20011224;18295700">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <meta name="CHANGED" content="20030512;20270600">
+
+
+
+
+
+
+
+
+	
+  
+  
+  
+  
+  
+  
+  
+  <style>
+	<!--
+		P { color: #000000 }
+		A:link { color: #ff0000 }
+		A:visited { color: #ff0000 }
+	-->
+	</style>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="Generator" content="Kate, KDE napredni editor teksta">
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="Generator" content="Kate, KDE napredni editor teksta">
+</head>
+
+
+<body bgcolor="#ffffff" lang="en-US" link="#ff0000" text="#000000" vlink="#ff0000">
+
+
+
+
+
+
+<h1><font color="#330000"><font face="Helvetica, sans-serif"><img style="width: 51px; height: 62px;" alt="" src="relOT11.png" hspace="10">HOWTO: Stvaranje filtra za novu vrstu datoteke</font></font></h1>
+
+
+
+
+
+
+<p>U ovome HOWTO, opisuje se sačinjavanje novog filtra za OmegaT.</p>
+
+
+
+
+
+
+
+
+
+
+<p>Za pravljenje novog filtra nije potrebno znanje jednog programera u jeziku Java ili nekom drugom. Dovoljno je da posjedujete nešto malo više od osnovnog poznavanja načina rada računara.</p>
+<p>U opisu koji slijedi, polazi se od pretpostavke da je format za koji imate namjeru napisati novi filtar, jedan od od XML formata. Za potrebe samog primjera, polazi se i od pretpostavke da se koristi verzija OmegaT 1.8.0 update 01 Beta, a da će se novi filtar praviti za format datoteke Abiword, na bazi postojećeg XLIFF filtra.<br>Da biste preuzeli OmegaT source code, slijedite poveznicu sa vebsajta OmegaT. Raspakujte arhivnu datoteku u neki pogodan direktorijum.<br>
+
+
+</p>
+
+
+
+<h1 style="font-family: sans-serif;">1. Preuzmite i instalirajte Apache Ant</h1>
+
+
+<p>Apache Ant je neophodan radi kompiliranja source koda pošto ga budete modificirali. Neke druge aplikacije, kao što je na pr. Java Development Kit (JDK), takođe se mogu koristiti za ove svrhe, dok je Ant vjerovatno najjednostavniji za upotrebu. Preuzmite ga sa ant.apache.org.<br>
+
+</p>
+
+<h1 style="font-family: sans-serif;">2. Ukopirajte neki postojeći filtar</h1>
+
+<p>Selektujte neki postojeći filtar koji će poslužiti kao osnova za filtar koji imate namjeru načiniti. U ovom se primjeru, selektuje XLIFF filtar. Ovaj filtar nalazi se direktorijumu:</p>
+<p>
+
+<span style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters3\xml\xliff</span></p>
+<p><span style="font-family: monospace;"></span>Napravite kopiju ovog direktorijuma, dajući mu pritom neko pogodno ime, na pr., u ovom slučaju:</p>
+<p>
+
+<span style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters3\xml\abiword</span></p>
+<p><span style="font-family: monospace;"></span>Preimenujte datoteke u tom direktorijumu, tj.:</p>
+<p>
+
+<span style="font-family: monospace;">XLIFFDialect.java</span> u <span style="font-family: monospace;">AbiwordDialect.java</span><br>
+<span style="font-family: monospace;"> XLIFFFilter.java</span> u <span style="font-family: monospace;">AbiwordFilter.java</span></p>
+<p><span style="font-family: monospace;"></span>Otvorite u nekom tekst editoru <span style="font-family: monospace;">AbiwordDialect.java</span>, te poslije <span style="font-family: monospace;">AbiwordFilter.java</span> i zamijenite sve riječi XLIFF, xliff, itd. sa riječima Abiword, abiword itd.<br>
+</p>
+<h1><span style="font-family: sans-serif;">3. Za vaš format locirajte tag-ove koji određuju kraj pasusa</span> </h1>
+<p>Kroz tekst editor, bacite pogled na primjer, kako biste vidjeli kako bi trebalo da izgledaju tag-ovi za kraj pasusa. Na primjer, u nekoj od datoteka Aboword (kao u ovome primjeru), pasus bi mogao imati ovaj izgled:</p>
+<p style="font-family: monospace;">&lt;p style="Normal"&gt;razni tekst... . Razni tekst. Razni tekst. Razni tekst &lt;c props="font-weight:bold"&gt;bold&lt;/c&gt; blah &lt;c props="font-style:italic"&gt;italics&lt;/c&gt;. Razni tekst.&lt;/p&gt;</p>
+<p>Iz ovoga se vidi da tag za pasus u Abiword-u, predstavlja znak &lt;p&gt;.<br>
+</p>
+<h1 style="font-family: sans-serif;">4. Definišite tag-ove za pasus</h1>
+<p>U MyFilterDialect.java, u popisu tag-ova za kraj pasusa, zamijenite postojeće tag-ove za kraj pasusa, onim koji(e) ste identificirali za vaš filtar:</p>
+<p style="font-family: monospace;">
+
+{<br>
+
+
+    public AbiwordDialect()<br>
+
+
+    {      <br>
+
+
+        defineParagraphTags(new String[]<br>
+
+
+        {<br>
+
+
+            "p",                                                           // NOI18N<br>
+
+
+        });<br>
+
+
+        <br>
+
+
+        defineOutOfTurnTags(new String[]<br>
+</p>
+<h1 style="font-family: sans-serif;">5. Definišite tag-ove koji se ne prevode (non translatable tags)</h1>
+<p>Da bi filtar koji pravite, funkcionirao, možda ćete morati odrediti i tag-ove koji se ne prevode. Na primjer, u Abiword-u, &lt;data&gt; tag se mora definisati kao neprevodiv:</p>
+<p>
+
+<span style="font-family: monospace;">defineIntactTags(new String[]</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+        {</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+            "data",                                                             // NOI18N</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+        });</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+    }</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+}</span><br>
+</p>
+<h1 style="font-family: sans-serif;">6. Dodajte vaš novi filtar u "filter master"</h1>
+<p>Otvorite datoteku</p>
+<p style="font-family: monospace;">
+
+..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\filters2\master\FilterMaster.java</p>
+<p>pomoću nekog tekst editora i pronađite referentno mjesto XLIFF filtra. Umetnite odgovarajuće reference za vaš filtar, na pr.:</p>
+<p>
+
+<span style="font-family: monospace;">import org.omegat.filters3.xml.xliff.XLIFFFilter;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+import org.omegat.filters3.xml.abiword.AbiwordFilter;</span><br style="font-family: monospace;">
+
+
+<br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+res.addFilter(new OneFilter(new XLIFFFilter(), false));</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">
+
+res.addFilter(new OneFilter(new AbiwordFilter(), false)); </span><br>
+</p>
+
+
+<h1 style="font-family: sans-serif;">7. Dodajte novi filtar u Bundle.properties</h1>
+
+
+<p>Otvorite datoteku:</p>
+
+
+<p style="font-family: monospace;">..\OmegaT_1.8.0_01_Beta_Source\src\org\omegat\Bundle.properties</p>
+
+
+<p>u nekom tekst editoru. Pronađite stavku za XLIFF filtar i dodajte odgovarajuću stavku za vaš novi filtar:</p>
+
+
+<p style="font-family: monospace;"># XLIFFFilter.java</p>
+
+
+<p style="font-family: monospace;">XLIFF_FILTER_NAME=XLIFF files</p>
+
+
+<p style="font-family: monospace;"># AbiwordFilter.java</p>
+
+
+<p style="font-family: monospace;">ABIWORD_FILTER_NAME=Abiword files</p>
+
+
+<p>(Ovdje se pretpostavljalo da korisnik drži verziju OmegaT na engleskom jeziku; Ukoliko nije takav slučaj, u Bundle.properties dodajte i red u verziju za "vaš" jezik.)</p>
+
+
+<h1 style="font-family: sans-serif;">8. Kompilirajte kod</h1>Otvorite okno s komandnom linijom (konzolu, DOS okno). Promijenite direktorijum na glavni od OmegaT source koda (dir koji sadrži file build.xml), tj.<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source</p>
+
+
+<p>Iz ovog direktorijuma, aktivirajte Apache Ant, tako što ćete unijeti izvršnu Ant datoteku s punom putanjom, tj.:</p>
+
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+
+<p>Ako se kod uspješno kompilirao, ugledaćete poruku "BUILD SUCCESSFUL". Ako to nije bio slučaj, prikazaće se poruke o debugging, koje će vam eventualno opisati gdje je bio problem.</p>
+
+
+<h1 style="font-family: sans-serif;">9. Startujte OmegaT</h1>Ako se kod uspješno kompilirao, the kompilirana OmegaT biće smještena u:<p style="font-family: monospace;">OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+
+<p>Uvijek kroz okno komandne linije, pređite na taj direktorijum, tj. pomoću:</p>
+
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+
+<p>i startujte OmegaT pomoću:</p>
+
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+
+<h1 style="font-family: sans-serif;">10. Provjerite da li novi filtar stoji u OmegaT</h1>Da biste vidjeli vaš novi filtar u popisu filtara u OmegaT, selektujte <span style="font-family: monospace;">Opcije &gt; Filtri datoteka &gt; Podrazumijevane vrijednosti</span>.<h1 style="font-family: sans-serif;">11. Provjerite da li filtar funkcioniše</h1>Napravite novi projekt sa uzorkom datoteke u dotičnom formatu.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font color="#330000"><a href="../documentation.html"><font face="Helvetica, sans-serif"><font color="#330000">Nazad na Dokumentaciju</font></font></a><font face="Helvetica, sans-serif"> <br>
+
+
+
+
+
+
+
+<font color="#330000">©
+Marc Prior,&nbsp;2008</font></font></font></p>
+
+
+
+
+
+
+
+
+</body>
+</html>

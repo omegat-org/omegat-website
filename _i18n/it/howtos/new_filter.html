@@ -1,0 +1,101 @@
+<div class="container">
+
+<h2>Guida di OmegaT: Creazione di un nuovo filtro di file</h2>
+
+<p>Questa guida spiega come creare un nuovo filtro di file per l'uso con OmegaT descrivendo la creazione di un filtro rudimentale per il formato TMX. Anche se può sembrare strano voler tradurre file TMX (il motivo usuale per la creazione di un filtro di file), l'aggiunta di un filtro TMX produce l'interessante effetto di permettere la ricerca all'interno dei file TMX da qualsiasi posizione, all'interno di qualsiasi progetto OmegaT, tramite la funzione &quot;Ricerca file&quot;, cosa non possibile nell'impianto standard di OmegaT.</p>
+
+<p>Per la compilazione di OmegaT dal codice sorgente, vedere la <a href="compiling_from_source.html">Guida alla compilazione di OmegaT dal codice sorgente</a>.</p>
+
+<p>Selezionare un filtro esistente per un formato simile a quello per il nuovo filtro. In questo esempio, il filtro Help &amp; Manual è stato selezionato come base.</p>
+
+<p>Individuare la cartella src/org/omegat/filters3/xml e fare una copia della sottocartella /helpandmanual, chiamandola /tmx. In questa cartella, rinominare i due file HelpandManualDialect.java e HelpandManualFilter.java in TmxDialect.java e TmxFilter.java, rispettivamente.</p>
+
+<p>Aprire il file TMXDialect.java e il filtro TMX in un editor di testo. In entrambi i file, cercare (con discriminazione delle maiuscole/minuscole) e sostituire:</p>
+
+<p>&quot;helpandmanual&quot; con &quot;tmx&quot;<br/> &quot;HelpAndManual&quot; con &quot;TMX&quot;<br/> &quot;HELPANDMANUAL&quot; con &quot;TMX&quot;<br/> &quot;Help &amp; Manual&quot; con &quot;TMX&quot;<br/> &quot;Help&amp;Manual&quot; con &quot;TMX&quot;</p>
+
+<p>Identificare i tag a livello di paragrafo per il nuovo formato di file. Per scoprire quali dovrebbero essere i tag di paragrafo, esaminare un file di esempio in un editor di testo. In TMX, il tag di paragrafo corrispondente a un segmento è &quot;tu&quot;.</p>
+
+<p>In TMXDialect.java:</p>
+
+<p>Definire i tag di paragrafo, in questo caso modificando la riga:</p>
+
+<p>   defineParagraphTags(new String[] { &quot;caption&quot;, &quot;config-value&quot;, &quot;variable&quot;, &quot;para&quot;, &quot;title&quot;, &quot;keyword&quot;,
+                &quot;li&quot;, });</p>
+
+<p>in</p>
+
+<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
+
+
+<p>È possibile eliminare la riga:</p>
+
+<p>    defineShortcut(&quot;link&quot;, &quot;li&quot;);</p>
+
+<p>in quanto è irrilevante per TMX, sebbene il nuovo filtro continuerà a funzionare anche se non si elimina.</p>
+
+<p>È possibile definire i tag fuori testo. Questi definiscono sottosegmenti che vengono presentati al di fuori del segmento in cui sono contenuti (le note a piè di pagina sono un buon esempio). Per fare questo per il filtro TMX, inserire la riga</p>
+
+<p>   defineOutOfTurnTags(new String[] { &quot;sub&quot;, });</p>
+
+<p>sotto la riga</p>
+
+<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
+
+<p>Il filtro continuerà comunque a funzionare anche se non viene inserita.</p>
+
+<p>Sotto queste righe, è possibile anche inserire il codice:</p>
+
+<p>   defineIntactTags(new String[]<br/>
+   {<br/>
+   &quot;header&quot;,<br/>
+   &quot;prop&quot;,<br/>
+   &quot;ph&quot;,<br/>
+   &quot;bpt&quot;,<br/>
+   &quot;ept&quot;,<br/>
+   &quot;it&quot;,<br/>
+   &quot;ut&quot;,<br/>
+   });</p>
+
+<p>Questo codice renderà l'aspetto dei file TMX più ordinato ma, ancora una volta, esso non è assolutamente indispensabile.</p>
+
+<p>In TMXFilter.java:</p>
+
+<p>Cambiare l'estensione del file, in questo caso in .tmx, modificando la riga:</p>
+
+<p>   public Instance[] getDefaultInstances() {<br/>
+   return new Instance[] { new Instance(&quot;*.xml&quot;, null, null), new Instance(&quot;*.hmxp&quot;, null, null), };</p>
+
+<p>in:</p>
+
+<p>   public Instance[] getDefaultInstances() {<br/>
+   return new Instance[] { new Instance(&quot;*.tmx&quot;, null, null), };</p>
+
+<p>In /src/org/omegat la cartella, aprire il file Bundle.properties in un editor di testo e individuare le righe</p>
+
+<p>   # HelpAndManualFilter.java<br/>
+   HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+
+<p>Sotto di esse, inserire le righe:</p>
+
+<p>   # TMXFilter.java<br/>
+   TMX_FILTER_NAME=TMX files</p>
+
+<p>(Se si desidera avviare OmegaT con una lingua di interfaccia utente diversa dall'inglese, apportare la stessa modifica nel file Bundle.properties localizzato interessato.)</p>
+
+<p>Nella cartella principale del codice sorgente, aprire il file manifest-template.mf in un editor di testo. Trovare le righe:</p>
+
+<p>   Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
+   OmegaT-Plugin: filter</p>
+
+<p>Sotto di esse, inserire le righe:</p>
+
+<p>   Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
+   OmegaT-Plugin: filter</p>
+
+<p>Compilare come descritto nella Guida alla compilazione di OmegaT da codice sorgente. Avviare la versione appena compilata. Verificare che in &quot;Opzioni &gt; Filtri dei file&quot; sia presente il nuovo filtro. Per verificare la correttezza del suo funzionamento è possibile inserire un file TMX nella cartella /source di un progetto o, ancora meglio, eseguire una Ricerca di testo &gt; operazione di ricerca file su file TMX.</p>
+
+<p>Copyright Marc Prior 2008-2011</p>
+
+</div>
+

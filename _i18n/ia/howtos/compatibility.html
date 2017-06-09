@@ -1,0 +1,188 @@
+<div class="container">
+
+<h2>Guida al compatibilitate de OmegaT</h2>
+
+
+<p>Iste GUIDA describe le compatibilitate de OmegaT con altere applicationes.</p>
+
+<h3>Commentos general</h3>
+
+<p>Pois que il es procedura standard pro le traductores professional reciper e committer textos in forma digital, le usatores de OmegaT es naturalmente interessate a lor compatibilitate con altere productos software. Iste GUIDA aspira a provider information in iste area.</p>
+
+<p>Un observation general: le &quot;compatibilitate&quot; es rarmente un question nigre e blanc, &quot;si&quot; o &quot;no&quot;. Ubi le venditor de un producto software assere que su producto es compatibile con un altere pecia de software, iste compatibilitate es rarmente al 100%. Reciprocamente, ubi le productos es decisemente non directemente compatibile, il es sovente possibile trovar proceduras pro le facer  laborar conjunctemente. Le question al qual on debe responder es si iste proceduras es acceptabile in terminos del resultato e del effortio implicate, e le responsa probabilemente variara de un usator a un altere. In altere parolas, le  &quot;compatibilitate&quot; es non sol re le productos, sed etiam re le fluxos del labor.<br/>
+
+</p>
+
+
+<h3>Le systemas operative</h3>
+
+<p>OmegaT essera habitualmente exequite sur omne le systema operative sur le qual pote esser installate un convenibile version del Java Runtime Environment (JRE). Actualmente, istos include tote le versiones de Microsoft Windows partir de Windows 98 in avante, Mac OS X, e le major parte del distributiones de Linux.</p>
+
+<h3>Le textos primari (files pro le traduction)</h3>
+
+<p>Refere al manual del usator de OmegaT pro un lista al currente de omne formatos de file supportate. Le lista in basso <strong>non</strong> es un lista exhaustive de omne le formatos de file supportate per OmegaT, ma es limitate a illos de particular interesse al usatores typic.</p>
+
+<ul>
+
+  <li>
+    
+    <p><strong>Le Formato Microsoft Office 2007-2010 (Word, Excel, PowerPoint 2007-2010); Office Open XML:</strong></p>
+
+    <p>OmegaT is capabile de tractar le actual formatos de Microsoft Office directemente, sin conversion verso o a partir de altere formatos.</p>
+
+<p>Le formatos de file Microsoft Office 2007-2010 (alsi note como Office Open XML, e con le extensiones de file .docx, .xlsx e .pptx) es radicalmente differente del formatos de Office 97-2003 que illos supplanta. de facto, lor structura es multo simile a cello del files de OpenOffice.org: illos consiste de un archivo zip continente multiple files, e le files continente le texto es basate sur le standard XML. Isto rende plus facile pro le applicationes CAT supportar lo e rediger lo directemente. On pote render, directemente in OmegaT, le files in formato Microsoft Office XML.; plus information pote esser trovate <a href="./docx.html">hic</a>.</p>
+    
+    <p>Pro le usatores de Microsoft Office que non (ancora) ha le version 2007, le conversion inter Office Open XML e Microsoft Office 98-2003 pote esser complite usante un plug-in convertitor gratuite disponibile <a href="http://www.download.com/Microsoft-Open-XML-Converter/3000-18483_4-146736.html">hic</a> ab Microsoft. Iste convertitor es disponibile pro Windows e pro Mac.</p>
+  
+    <p>Office Open XML pote esser convertite directemente in Open Document Format e reverso con  le convertitor ODF, disponibile <a href="http://odf-converter.sourceforge.net/download.html">hic</a>. Iste utilitate require un version de MS Office (XP/2003/2007).<br/></p>
+
+    <p>Le usatores de Mac OS X pote converter directemente ab Office Open XML a OpenDocument Format e reverso in <a href="http://www.neooffice.org/">NeoOffice</a>.</p>
+
+    <p>Le usatores de Linux pote usar iste version del <a href="http://www.oooninja.com/2008/01/convert-openxml-docx-etc-in-linux-using.html">utilitate de conversion</a> autonome pro converter directemente inter Office Open XML e OpenDocument Format.</p>
+
+    <p>Le versiones recente de OpenOffice.org es capabile a converter inter le formato Microsoft Office 2007 e le formato Open Document.</p>
+
+  </li>
+
+  <li>
+
+    <p><strong>Le Formato Microsoft Office 97-2003 (Microsoft Word/Excel/Powerpoint 2003):</strong></p>
+
+    <p>Iste formatos de file es proprietari, binari, e  usque in le ultime tempore non esseva publicamente documentate, omne characteristicas que rende tractar los in a CAT tool extrememente difficile. </p>
+    
+    <p>Alicun applicationes CAT solve iste problema, al minus pro MS Word, per functionar intra Word ipse; le major parte del altere applicationes CAT converte in RTF e reverso, sovente in modo invisibile al traductor.</p>
+
+    <p>OmegaT non supporta directemente iste formatos de file. In vice, illos debe in prime loco esser convertite manualmente a Office Open XML (MS Office 2007/2010) o Open Document format (LibreOffice o OpenOffice.org) ante que illos pote esser tractate in OmegaT. (OmegaT es distante ab unic in iste respecto: multe altere applicationes CAT converte le files origine in un formato differente, in alicun casos in le fundo, sin que le traductor sia al currente del facto, ante que illo sia rendite.)</p>
+
+  </li>
+
+  <li>
+        
+    <p><strong>Le Formato RTF (Rich Text Format):</strong></p>
+
+    <p>RTF es structuralmente assatis differente ab le formato de file Microsoft Office 98-2003, ma per OmegaT, on applica le mesme: illo non es supportate directemente e debe in prime loco esser convertite al formato  .docx (MS Office 2007/2010) o al formato Open Document (LibreOffice/OpenOffice.org).</p>
+
+  </li>
+
+  <li>
+    <p><strong>Le Formato Open Document: LibreOffice/OpenOffice.org/NeoOffice Writer/Calc/Impress</strong></p>
+    
+    <p>Iste formatos de file es le equivalente del formatos de Microsoft Office. Le formato Open Document es un standard international e ha replaciate le anterior formato de file proprietari (ma aperte) Star Office (duo formatos de file differente, ma multo similabile). OmegaT ha filtros de file pro ambe Open Document Format e pro le formato Star Office que illo replaciava. Iste filtros de file es excellente, e le risco de damnificar le formato de un file LibreOffice, OpenOffice.org, etc. file durante le traduction in OmegaT es extrememente basse.</p>
+
+  </li>
+
+  <li>
+    
+    <p><strong>HTML; XHTML:</strong></p>
+
+    <p>HTML e XHTML, su equivalente  XML, es le plus commun formato de file pro paginas TTT. De nove, OmegaT ha excellente filtros de file pro ambos. Iste formatos de file, como le files OpenOffice.org, pote esser traducite in OmegaT con un risco de corruption minime. Il es conveniente tamen personalisar le preparationes del filtro pro resultatos optime.</p>
+
+  </li>
+
+</ul>
+
+
+<h3>Memorias de traduction:</h3>
+
+<p>Existe un international standard pro le memorias de traduction: TMX, o Translation Memory eXchange. Illo esseva largemente adoptate e es supportate per quasi omne le actual applicationes CAT.</p>
+
+
+<p>Le standard TMX existe in differente <strong>versiones</strong> e in differente <strong>nivellos</strong>. Le distinction es importante pro le fines del compatibilitate. Le standard es ancora in evolution; i.e. le differente versiones refere se a. Le nivellos refere se al information de formato que es continite in le file TMX:</p>
+
+<ul>
+
+  <li>
+    
+    <p>Le files TMX nivello 1 non contine informationes de formato.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Le files TMX nivello 2 contine informationes de formato, ma iste files es sovente compatibile sol quando le mesme application CAT es utilisate. In altere parolas, si un usator de OmegaT discoperi un concordantia al 100% in un file TMX Level 2 de OmegaT, on pote acceptar lo sin accommodation, ma le mesme non esserea ver pro un file TMX Level 2 producite per un application CAT differente (o vice versa). Isto ha repercussiones pro le fluxos del labor in que le usatores de application CAT (typicamente clientes) expecta de reciper le files memoria de traduction e de haber le concordantias al 100% inserite automaticamente.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Le files TMX nivello 3 contine informationes de formato in un forma que pote esser legite ab altere applicationes CAT. Le supporto pro nivello 3 in le applicationes CAT es rar.</p>
+
+  </li>
+
+</ul>
+
+<p>Certe altere applicationes CAT (assi como TRADOS) es capace a exportar differente files TMX in differente versiones. OmegaT supporta omne le versiones actual de TMX, ma es probabile delivrar melior resultatos de concordantia si le file TMX es version 1.4b. </p>
+
+<p>Le applicationes que supporta differente nivellos de files TMX es in principio ancora compatibile le un le altere. Le information de formato continite in le nivellos superior essera disproviste de senso al &quot;altere&quot; application, ma le information textual pote ancora esser vidite, le concordantias partial trovate, etc.</p>
+
+
+<p>OmegaT usa le standard TMX international qua formato de memoria de traduction su native. Alicun applicationes CAT ancora emplea formatos memoria de traduction dedicate proprietari, ma virtualmente omnes supporta le importation e le exportation de files TMX. In practica, il es dunque possibile al traductores committer memorias de traduction al clientes e vice versa, e per le recipiente usar iste files pro immediate o futur referentia; si le files debe esser usate intra un fluxo de labor automatisate, comocunque, on applica le coercition precedente.</p>
+
+<p>Alcun magis punctos a notar re le files TMX:</p>
+
+<p>Le standard TMX contine definitiones re qual characteres es permissibile. Non omne applicationes CAT es equalmente stricte in lor observantia de iste definitiones; ita, alicun applicationes CAT es incapace a aperir directemente files TMX producite per certe altere applicationes CAT. OmegaT generalmente observa le conditiones del alteres applicationes e tolera lor fallimentos de los observar; problemas que deberea levar se hic, tamen, pote generalmente esser resolute assatis facilemente con un recerca &amp; reimplacia in un editor de texto del character illegal in le file TMX.</p>
+
+<p>Le files TMX es in le codification Unicode, ma pote esser UTF-8 o UTF-16. Le files TMX producite sur systemas Windows pote initiar con un signo byte-order (BOM). Iste differentias generalmente non duce a problemas de compatibilitate.</p>
+
+<p>Problemas de compatibilitate pote esser causate per differentias in le codices del lingua empleate. OmegaT supporta codices del lingua in le formato &quot;xx&quot;, &quot;XX&quot;, &quot;xx-YY&quot; e &quot;XX-YY&quot;, ubi xx o XX es le lingua, yy o YY le region. Strictemente parlante, le standard ISO pro le codices del lingua require &quot;xx-YY&quot; (per exemplo: &quot;en-GB&quot; pro le anglese britannic); etiam si iste variante es supportate in OmegaT, le convention jam arrangiate offerite ex OmegaT es &quot;XX-YY&quot;, exempli gratia &quot;EN-GB&quot;. OmegaT es tolerante in le lectura del files TMX: il acceptara files con en-GB, en-US, en, EN, etc. Non omne le applicationes CAT exhibi le mesme tolerantia et alicunos pote dunque non monstrar le previste concordantias si le codices del lingua non es satis conforme. Iste incompatibilitate pote esser resolute per cercar e reimplaciar le pertinente codices del lingua in le file TMX in un convenibile editor de texto. Un altere possibile fonte de  incompatibilitate es le codices de lingua a tres cifras, que non es supportate del toto per OmegaT. (Isto a proposito es un limitation de Java, non de OmegaT ipse.)</p>
+
+<p>Punctos re files de memoria de traduction proprietari:</p>
+
+<p>Le traditional formato de memoria de traduction de Wordfast es de particular interesse debite a su simplicitate: il consiste de un file de texto simple con un elemento de traduction (segmento) sur cata linea in le qual le origine e le destination es separate con un tabulation. Iste formato pote esser convertite facilemente al formato TMX per utilitates de tertie parte assi como <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a> pote alsi esser usate pro iste proposito.</p>
+
+<h3>Files glossario</h3>
+
+<p>Le files glossario de OmegaT es files de texto simple in le formato:</p>
+
+<p>termino primari    &lt;tabulation&gt;    termino de destination    &lt;tabulation&gt;    altere information</p>
+
+<p>Alicun altere applicationes CAT es capabile de importar e exportar files glossario in iste formato, o in un formato de texto simple simile que pote esser producite de illo multo facilemente (per exemplo per un operation cerca &amp; reimplacia in Microsoft Word).</p>
+
+<p>OmegaT is alsi capabile de leger glossarios in TBX, le formato standard del industria pro files glossario.</p>
+
+<p>OmegaT non pote importar o leger files glossario in formatos binari proprietari, assi como Trados Multiterm.</p>
+
+<h3>Formatos bilingue de application CAT</h3>
+
+<p>Multe applicationes CAT usa un formato de file intermedie bilingue, id es un file continente tote le duo segmentos in lingua de origine e de destination, e in alicun casos alsi le structura del file original. In origine, iste formatos de file bilingue forsan esseva un subproducto del architectura del application. Comocunque illos es devenite un phenomeno importante in le fluxos del labor de traduction involvente applicationes CAT, e illos saepe constitue le obstaculo maxime al compatibilitate inter OmegaT e le altere applicationes CAT (o pro ille materia inter applicationes CAT in general).</p>
+
+<p>Il ha al minus tres rationes proque un cliente pote demandar le livration de un traduction in un particular formato de file bilingue (plus tosto que simplemente livration del file rendite e possibilemente alsi le memoria de traduction):</p>
+
+<p>1. Alicun applicationes CAT, remarcabilemente TRADOS, es capabile a importar un large scala de formatos de file, includente formatos de desktop publishing, e a preparar illos pro le traduction in le application concernite. Le forma &quot;preparate&quot; es typicamente le formato de file bilingue del application. In iste maniera, sin preparation, le original formato de file pote esser accessibile al traductor.</p>
+
+<p>2. Le stadio del traduction es sol parte del fluxo de labor del cliente. Le traduction pote per exemplo esser passate a un corrector pro lo editar. Si le cambios del correctores debe esser includite in un deposito pro memoria de traduction mantenite per le cliente, necessita facer le cambios <i>ante que</i> le documentos final es create. On pote facer isto o in le application CAT concernite, o in qualque casos in un formato de file bilingue externe que le application es capabile de leger.</p>
+
+<p>3. Le cliente desira reciper un memoria de traduction contra  le qual textos pote esser exequite in le futuro: in altere parolas, a &quot;pre render&quot; textos futur contra  un memoria de traduction existente. Pro automatisar le plus possibile iste processo, on debe satisfacer in particular a duo conditiones: in prime loco, le memoria de traduction debe continer le informationes de formato (vider supra); e in secunde loco, le regulas de segmentation applicate al texto debe esser identic a illos applicate quando esseva producite le memoria de traduction (o parte de illo). Le modo plus facile pro un cliente de assecurar se que iste duo conditiones es complite, es de pre traducer le texto ipse avante que passar lo al translator (assi definiente como illo es segmentate), e crear le memoria de traduction in le application CAT de su selection, depost que recipeva le file bilingue intermedie rendite ab le traductor (assi assecurante se que le informationes de formato continite in le memoria de traduction essera compatibile con le projectos futur).</p>
+
+<p>Several of the bilingual file formats can be handled by OmegaT, and not necessarily with great effort. Un intendimento del processos implicate es tamen importante. Le formatos de file bilingue describite in basso.</p>
+
+<p><strong>XLIFF</strong></p>
+
+<p>XLIFF es le formato file bilingue standard del industria. Illo es supportate per plure applicationes CAT e in effecto alicun applicationes CAT es effectively &quot;pojectate circum&quot; le standard XLIFF: Heartsome e Swordfish es duo exemplos. Pois que il es un standard, un avantage de XLIFF es que le filtros de file supplite per un  CAT tool venditor pro le conversion inter un certe formato e XLIFF (e, postere le completamento del fluxo de labor del traduction,  de nove al reverso) pote in theoria esser usate pro preparar files in le formato concernite pro traduction in qualcunque application CAT que supporta XLIFF. In practica, functionante con le fluxo de labor XLIFF frequentemente necessita le uso de applicationes que non es multo facile.</p>
+
+<p>OmegaT ha un supporto rudimentari pro XLIFF, e un procedura pro usar XLIFF in OmegaT conjunctemente con le applicationes Rainbow pote esser trovate <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">hic</a>. Le filtros disponibile es principalmente pro formatos de file proprie al industria IT plus tosto que files al usator final.<a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm"/></p>
+
+<p><strong>Trados &quot;RTF non mundate&quot;</strong></p>
+
+<p>Le formato de file RTF &quot;non mundate&quot; Trados, frequentemente referite simplemente como &quot;files non mundate&quot;, esseva depost multe annos le plus commun formato de file bilingue usate in le fluxos del labor de traduction. Illo debe su origines al uso de MS Word como un interfacie pro le application CAT Trados. In ultra a Trados, comocunque, plure altere applicationes CAT alsi supporta le formato &quot;RTF non mundate&quot;, remarcabilemente Wordfast Classic.</p>
+
+<p>Essentialmente, iste formato consiste de un file RTF in le qual le segmentos origine e final se alterna. Iste segmentos es marcate e delimitate con characteres peculiar e stilos formato MS Word.</p>
+
+<p>Un script (solmente pro Windows) e procedura esseva recentemente (2008) disveloppate pro habilitar le usatores de OmegaT a producer files non mundate RTF Trados pro livration al fin de lor grado de traduction. Pro detalios, que tu vide <a href="http://www.omegat.org/en/howtos/export_uncleaned_rtf.html">Guida a &quot;Exportar ab OmegaT a RTF non mundate&quot;</a>.</p>
+
+<p><strong>Trados TTX</strong></p>
+
+<p>Le formato TTX Trados es le pendant al formato &quot;RTF non mundate&quot; pro le editor del tag de Trados, que dissimile ab Trados Workbench, non obra in directe combination con MS Word. TTX es un formato basate sur XML. Ora es disponibile un  <a href="http://www.opentag.com/okapi/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">plugin OmegaT</a> con le qual iste formato pote esser tractate in OmegaT.</p>
+
+<p><strong>Wordfast TXML</strong></p>
+
+<p>TXML Wordfast es le formato interne native del nove &quot;Wordfast Professional&quot; (alsi note como Wordfast 6.0) del firma Wordfast. Como su nomine suggere, illo es un  formato basate sur XML. Illo non es supportate per OmegaT actualmente, e secundo le  representantes de Wordfast, probabilemente illo essera supplantate ab XLIFF in le medium termino.</p>
+
+<p><strong>&quot;Vistas Externe&quot; de Déjà Vu </strong></p>
+
+<p>Un interessante characteristica de Déjà Vu DVX es su formato de file &quot;Vista Externe&quot; file format. Iste formato de file habilita le usatores de OmegaT a committer files bilingue al usatores de Déjà Vu DVX, que es alora habile a rediger los ulteriormente o del los incorporar in fluxos del labor automatisate. Pro detalios, que tu vide <a href="http://www.omegat.org/en/howtos/compatibility_deja_vu.html">Guida al &quot;Vista Externe&quot; de Déjà Vu</a>.<br/></p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

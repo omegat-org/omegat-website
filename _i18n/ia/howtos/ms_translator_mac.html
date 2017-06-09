@@ -1,0 +1,13 @@
+<div class="container">
+
+<h2>Guida de OmegaT: <br/>Preparation de MS Translator sur Mac</h2><br/>- Log into Microsoft Azure Marketplace:<br/> <a href="http://datamarket.azure.com/">http://datamarket.azure.com/</a><br/> <br/> *In prime loco tu habera necessitate de registrar un conto Azure Marketplace, si tu non ha jam uno de illos.<br/> <br/> - Clicca sur le option My Account al summitate del pagina. <br/> - Presso le fundo tu videra entratas e precios pro:<br/> <br/> Primary Account Key<br/> Customer ID<br/> <br/> Primary Account Key = microsoft.api.client_secret (necessita pro configurar tu accesso a Microsoft Translator)<br/> Customer ID = microsoft.api.client_id (necessita pro configurar tu accesso a Microsoft Translator)<br/> <br/> - Vade a tu directori del applicationes (o ubicunque  tu ha tu installation de OmegaT immagazinate sur tu Mac), clicca dextera/cmd+click/two-finger colpa sur le OmegaT executabile e selige &quot;Vide le contentos del pacchetto&quot;. <br/> - Clicca sur le plica Contentos e face un copia de reserva/duplicato de tu file info.plist. <br/> - Aperi tu file info.plist in tu  favorite redactor de texto e individua le section Proprietates. <br/> - Hic tu addera entratas pro tu valores Primary Account Key e Customer ID de Azure Marketplace (recorda que microsoft.api.client_id = your Azure Marketplace Customer ID e microsoft.api.client_secret = your Azure Marketplace Primary Account Key):<br/> <br/>  &lt;key&gt;Properties&lt;/key&gt;<br/>        &lt;dict&gt;<br/>            &lt;key&gt;apple.laf.useScreenMenuBar&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>            &lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;<br/>            &lt;string&gt;true&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_id&lt;/key&gt;<br/>           --&gt; &lt;string&gt;A1234-5678-1234-5678-12345678901&lt;/string&gt;<br/>           --&gt; &lt;key&gt;microsoft.api.client_secret&lt;/key&gt;<br/>           --&gt; &lt;string&gt;AaBb1234CcDd5678aAbBcCdD1234eEfFgGhH1234&lt;/string&gt;<br/>        &lt;/dict&gt;<br/> <br/> ***PER FAVOR NOTA: le flechas supra es SOLMENTE pro fines de illustration. NON los includer in tu entratas real. <br/> <br/> - Un vice que tu ha facite le superior entratas, controla duo vices que le valores es correcte e deinde salva e claude tu file info.plist.<br/> - Lancea OmegaT e habilita le option MS Translator:<br/> Optiones &gt; Traduction Automatic... e selige le optiones que gusta. <br/> - Initia a usar OmegaT.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Copyright Will Helton 2012</p>
+
+</div>
+

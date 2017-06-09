@@ -1,0 +1,163 @@
+<div class="container">
+
+<h2>Guida de OmegaT: <br/>Traduction in OmegaT del files in formato Word 2007 (Office Open XML, .docx)</h2>
+
+<p>Iste Guida provide punctos sur le traduction in OmegaT re files MS Office 2007 (e subsequente).</p>
+
+<h3>Situation de fundo</h3>
+
+<p>Con le advenimento de Microsoft Office 2007, Microsoft Word, Excel e Powerpoint ha nove formatos de file. iste formatos es formalmente note como &quot;Office Open XML&quot;, e ha respectivemente le extensiones .docx, .xlsx e .pptx. Le formatos es anque usate in MS Office 2010. Pro gratia del convenientia, illos essera referite in sequito como &quot;Formatos de file MS Office 2007&quot;.</p>
+
+<p>A partir del Version 1.7.1 in avante, OmegaT esseva habile a tractar directemente files Microsoft Office 2007, sin conversion. Con le apparentia de OmegaT Version 2.1.8, le tractamento de iste formato de file in OmegaT alsi deveni multo plus facile.</p>
+
+<h3>Le avantages de usar le formato .docx con OmegaT</h3>
+
+<p>A mesura que le clientes e le autores promove Microsoft Office/Word al versiones plus recente, le traductores pote expectar se de reciper le files progressivemente in le nove formato. Differentemente al vetule formatos .doc, .xls e .ppt, iste files pote esser tractate directemente in OmegaT, con nulle perdita de formato in consequentia del conversiones verso e a partir de del altere formatos.</p>
+
+<p>Le nove formato pote alsi servir como un utile maniera de tractar le vetule formatos .doc, .xls e .ppt, post que illos pote esser convertite a lor MS Office 2007 pendantes, traducite in OmegaT, e reconvertite de nove in le vetule formato. Iste procedura es in consequentia un alternativa pro le traductores qui prefererea non tusar OpenOffice.org pro iste proposito.</p>
+
+<h3>Converter in formato MS Office 2007</h3>
+
+<p>On pote converter le files MS Office 1997/2000/2003/XP al formato MS Office 2007 per apertura in MS Office 2007 e salvamento con &quot;Salva Como&quot; in le formato nove. (Post que isto es ora le formato standard, illo es simplemente describite como Word, Excel o Powerpoint in MS Office 2007).</p>
+
+<p>Pro usatores qui non ha MS Office 2007 o 2010 e non desidera comprar los, Microsoft provide un <a href="http://www.microsoft.com/downloads/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;display">plugin de compatibilitate</a> pro le versiones anterior.</p>
+
+<p>Usatores de Linux: ambe MS Office 2007 e le plugin de compatibilitate Microsoft opera sur <a href="http://www.codeweavers.com">Linux Crossover.</a></p>
+
+<h3>Punctos a notar quando on usa le formatos .docx, .xlsx e .pptx con OmegaT</h3>
+
+<p>In OmegaT versions prior to 2.1.8, each formatting change in an MS Office 2007 file resulted in a long series of multiple tags, which often made handling this file format impractical. As of version 2.1.8, by default, these multiple tags are now aggregated (condensed) into a single tag. Le usatores que desidera render files MS Office 2007 deberea dunque promover al version 2.1.8 o subsequente de OmegaT.</p>
+
+<p>(Le major facilitate de tractar le tag con le files .docx veni a costo de un legier perdita in controlo re le formato. Exempli gratia, sin le function &quot;aggrega le tags&quot;, ubi un parola in le texto original es in nigrato e italico, le traductor poterea seliger de render lo in nigrato solmente, o sol in italico. Con le function &quot;aggrega le tags&quot; habilitate, isto non es possibile. Le major parte del usatores probabilemente trovara que le major facilitate de uso supera iste disavantage.)</p>
+
+<p>Le formato .docx es alsi pron al introduction de codice de formato &quot;enoiose&quot; que resulta in un apparition de tags importun e inutile in le quadro del modifica (editor) de OmegaT. Since these are inconvenient during translation, it is worthwhile trying to remove these nuisance tags before beginning translation in OmegaT. OmegaT divide iste problema con altere applicationes CAT que tracta le formato .docx, e le solutiones es simile o identic.</p>
+
+<h3>Como remover importun codice de formato ab le files .docx</h3>
+
+<ul>
+
+
+<li><p>Word 2007 marca omne parolas non in su dictionario orthographic con tags, assi mesmo un par de parolas que illo considera esser error orthographic resultara in un plethora de tags. Si cata singule parola in OmegaT es includite inter tags, il es possibile que Word ha tentate le controlo orthographic del texto sin accesso a un convenibile dictionario orthographic, e ha ergo marcate cata parola ut error orthographic. un solution es interrumper le controlo orthographic automatic in Word.</p></li>
+<li><p>Automatic syllabation adde anque inutile tags, assi ferma lo. Il pote esser necessari facer isto pro cata documento, in le qual caso le procedura in Word 2007 es: clicca le etiquetta Arrangiamento del Pagina; in le gruppo Preparation del Pagina, clicca Syllabation; pois clicca Necun.</p></li>
+
+<li><p>Usa &quot;Cerca e replacia&quot; pro remover le spatios duple (replacia los con un spatio singule).</p></li>
+
+<li>Si tu texto contine ambe le characteres asiatic e &quot;normal&quot; (exempli gratia Latin), usa Ctrl+A pro seliger le texto integre, pois selige un typo de character sol pro illo. Esse attente a optar pro un typo de character que contine ambe le characteres necessari asiatic e &quot;normal&quot;, assi como MS Mincho, ma sin le suffixo de stilo  &quot;[corpore del texto]&quot;.</li>
+
+<li><p>Word 2007 insere un tag al interruptiones del pagina, mesmo illos automatic. Iste tag apparentemente non pote esser removite.</p></li>
+
+</ul>
+
+<p>Nota que mesmo post que le preparationes de Word esseva cambiate de maniera que illos non insereva codices &quot;enoiose&quot;, per exemplo pro le auto syllabation, tal codices pote ancora esser presente in le file e non removite per le cambio in le configuration. Le remotion de iste codices es describite in sequito. ante que tu seque le instructiones in sequito pro le remotion del codices enoiose, comocunque, rememorar se facer le cambios de configuration in Word in prime loco, o Word pote simplemente re-inserer codices enoiose un altere vice quando le file es aperte novemente</p>
+
+<h3>Le macro CodeZapper</h3>Como jam mentionate, iste problema con MS Office 2007 non es unic in OmegaT. Le traductor <a href="http://asap-traduction.com/CodeZapper">David Turner</a> ha scripte un macro MS Word (fortemente recommendate!) pro tractar con le problema.<h3>Nivellar le formato del character</h3>
+
+<p>Un alternative executar le macro CodeZapper sur tu texto, is  &quot;nivellar&quot; le formato. &quot;Nivellar&quot; le formato significa applicar le formato del prime character in un selection de texto (assi como un integre paragrapho) a omne characteres subsequente. Nota que isto non es le identic cosa de &quot;cancellar&quot; le formato, le qual causarea le retorno al formato base del character del documento.</p>
+
+<p>Tu pote nivellar le formato de paragrapho essentialmente copiante paragraphos integre in MS Word e los collar back super se ipse assi como le paragrapho integre assume le formato del prime character.</p>
+
+<h3>Nivellar le formato del character de un paragrapho manualmente</h3>
+
+<p>Grado 1: discoperi le marca del paragrapho. Marca cata paragrapho cliccante sur illo repetitemente usque le paragrapho integre es marcate. Pois move le fin del marca un character al sinistre de sorta que il non include le marca del paragrapho.</p>
+
+<p>Grado 2: copia iste texto marcate (Ctrl+C). Pois selige &quot;Colla Special&quot; (Word 2003) o clicca sur le sagitta al base del button &quot;Insere&quot; (Word 2007) pro obtener le optiones Colla extendite. Finalmente, insere le contento usante le option &quot;Texto Unicode non formattate &quot;.</p>
+
+<p>Ubi le paragraphos contine formato integrate (nigrato, italico, ligamines, etc.), tu pote o:</p>
+
+<p>- nivellar le formato ab iste paragraphos usante le macro ut describite supra, pois re insere le formato; o</p>
+
+<p>- marcar sol le texto usque al initio del parte formattate, copiar iste texto e collar lo retro, super se ipse, pois iterar le processo sur le texto post le parte formattate.</p>
+
+<h3>Crear un macro pro nivellar le formato del character de un paragrapho</h3>
+
+<p>Tu pote automatisar satis le procedura precedente per le creation de un macro. Breve instructiones pro crear le macro (in MS Office 2007) es fornite in sequito. (Pro instructiones plus detaliate, refere te a tu manual de instruction o clicca <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">ci</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">ci</a> o <a href="http://oit.nd.edu/training/documentation/documents/macro_qrg.pdf">ci</a>.)</p>
+
+<p>Si tu non ha ja facite assi, adde le linguetta Disveloppator al banda ut seque: clicca sur le button Office. Selige le Optiones de Word Clicca Popular in le cassa de dialogo Optiones de Word. Sur le &quot;banda&quot;, compulsa le linguetta &quot;Monstra disveloppator&quot; e confirma lo con OK. Claude Word.</p>
+
+<p>Lancea de nove Word, crea a file Word nove e adde un paragrapho de texto exemplo, longe al minus  tres lineas, e.g.:</p>
+
+<p>Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho Isto es un paragrapho</p>
+
+<p>Clicca sur le button marca paragrapho pro render le marcas del paragrapho visibile.</p>
+
+<p>Placia le cursor in tu paragrapho de texto (non in le prime o ultime lineas).</p>
+
+<p>Crear  le macro:</p>
+
+<p>Sur le etiquetta Disveloppator, clicca sur Registra macro.</p>
+
+<p>In le cassa Nomine del macro, scribe un nomine pro le macro, assi como &quot;levelformat&quot;. Pro render le macro utilisabile in omne documentos, selige in le cassa &quot;Salva macro in&quot;: Normal.dotm. Si tu ha facite cambios a tu Normal.dotm, tu pote voler in prime loco lo salvar.</p>
+
+<p>Clicca sur le button Claviero. Clicca in le cassa pro un nove combination de claviero, pois experimenta con le combinationes de claviero pro trovar uno que non es assignate. Si un combination que tu tenta es jam assignate, es monstrate un message pro iste effecto in the dialogo, e tu pote deler le combination e experir un altere. Ctrl+Shift+9 sembla no sia assignate a ulle altere function in le installation basic de Word, ma tu pote usar omne altere combination que non esseva jam assignate.</p>
+
+<p>Clicca sur Assigna pro assignar le via breve al macro que tu es circa registrar. Alicun cosa tu ora face essera registrate in le macro, assi seque exactemente iste procedura:</p>
+
+<p>Ctrl+Cursor Up (this takes the cursor to the beginning of the paragraph)</p>
+<p>Ctrl+Shift+Cursor a basso (isto selige le paragrapho, includente le marca de paragrapho)</p>
+<p>Shift+Cursor a leva (isto move le fin del selection un character verso leva de maniera que illo non include plus le marca del paragrapho)</p>
+<p>Ctrl+C (isto copia le paragrapho)</p>
+<p>Ctrl+V (isto colla le texto del paragrapho de nevo sur le paragrapho mesme)</p>
+
+<p>Post scripte iste commandos, clicca Cessa le registration.</p>
+
+<p>Clicca sur Macros e selige &quot;levelformat&quot; (o qual que sia tu ha lo nominate), pois Modifica. Le codice de tu macro essera monstrate. Pro levelformat, isto deberea esser:</p>
+
+<p>___________________<br/>
+Sub levelformat()<br/>
+'<br/>
+' levelformat macro<br/>
+'<br/>
+'<br/>
+    Selection.MoveUp Unit:=wdParagraph, Count:=1<br/>
+    Selection.MoveDown Unit:=wdParagraph, Count:=1, Extend:=wdExtend<br/>
+    Selection.MoveLeft Unit:=wdWord, Count:=1, Extend:=wdExtend<br/>
+    Selection.Copy<br/>
+    Selection.PasteAndFormat (wdPasteDefault)<br/>
+End Sub<br/>
+___________________</p>
+
+<p>Cambia le linea:</p>
+<p>    Selection.PasteAndFormat (wdPasteDefault)</p>
+<p>in:</p>
+<p>    Selection.PasteSpecial DataType:=wdPasteText</p>
+
+<p>Salva con Ctrl+S, e claude le fenestra de modifica del macro.</p>
+
+<p>Si toto esseva facite secun le plano, tu macro deberea ora functionar. Pro probar lo, adde alicun formatos a tu documento Word, per exemplo rendente un parola nigrate. Ora simplemente mitte le cursor alicubi in le paragrapho e calca Ctrl+Shift+9 (o qual que sia  altere via breve de claviero tu ha seligite), e tu deberea vider le formato disparer.</p>
+
+<p>Tu pote cambiar alquando le via breve de claviero. Pro facer isto, clicca le button major  de &quot;Office&quot;, pois optiones de Word (in fundo al dextera del fenestra de dialogo).</p>
+
+<p>Clicca Personalisa &gt; Selige le commandos. Opta Macros ab le lista a cadita. Selige &quot;levelformat&quot; (o qual que sia tu ha lo nominate).</p>
+
+<p>Al base del fenestra de dialogo juxta a Vias breve de claviero, clicca sur Personalisa.</p>
+
+<p>In le cassa Categorias, rola in basso a Macros e selige lo. Pois al dextra, sub Macros, selige &quot;levelformat&quot; (o qual que sia tu ha lo nominate). Le via breve currente essera monstrate in le cassa apposite. Tu pote deler lo: selige lo e pulsa Dele. Tu pote dunque scriber un via breve nove e assignar lo con Assigna como tu ha facite anteriormente. Claude/confirma le fenestras de dialogo.</p>
+
+<p>Tu pote usar un procedura simile pro crear  un button pro tu macro:</p>
+
+<p>De nove, clicca le button principal de &quot;Office&quot;, dunque Optiones de Word.</p>
+
+<p>Clicca Personalisa &gt; Selige le commandos. Opta Macros ab le lista a cadita. Selige tu macro.</p>
+
+<p>Clicca sur Adde. Tu deberea vider apparer in le columna dextere le commando macro. Clicca sur Modifica.</p>
+
+<p>Elige un symbolo, pois OK &gt; OK. Le symbolo pro tu macro deberea apparer in le barra del instrumentos.</p>
+
+<p>Iste macro es utile pro nivellar le formato de un integre paragrapho que non contine formato visibile. Ubi un paragrapho contine formato desiderate, tu debe restaurar le formato delite post le nivellamento del paragrapho. In le paragraphos continente multe formatos, le restauration del formatos delite pote resultar in un grande quantitate de labor. For such paragraphs, consider the following alternatives:</p>
+
+<ul> 
+
+<li><p>Usa le macro CodeZapper ex Dave Turner.</p></li>
+
+<li><p>Crea un secunde macro (con su proprie button o via breve de claviero) de tu proprie que nivella solmente le texto marcate, plus tosto que le paragrapho integre. (Registra como describite precedentemente, ma registrante sol le commando Ctrl+C sequite per Ctrl+V.) Tu pote dunque marcar le texto inter le punctos ubi cambia le formato. Isto nivellara le formato super sectiones del texto que ha le identic, formato desiderate, e tu non habera necessitate de dunque de restaurar le formato delite.</p></li>
+
+<li><p>usa le macro pro nivellar le formato sol sur paragraphos con pauc o nulle formato. Le paragraphos que tu non ha &quot;nivellate&quot; continera alora tags enoiose, ma al minus le alteros essera multo &quot;dismaculate&quot;.</p></li>
+
+<li><p>Le usatores plus experte pote desiderar probar le function Exporta Texto de OmegaT. Conjunctemente con le script te-st-notags , isto provide un fenestra separate in le qual le tags non es monstrate. Tu debe ancora tractar tags debitemente quando produce e modifica tu traduction, ma tu pote vider lo in un fenestra separate sin incombramento de tags (&quot;suppa de tag&quot;).</p></li>
+
+</ul>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+

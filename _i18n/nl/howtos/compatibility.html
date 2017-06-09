@@ -1,0 +1,188 @@
+<div class="container">
+
+<h2>HOWTO over compatibiliteit van OmegaT</h2>
+
+
+<p>Deze HOWTO beschrijft de compatibiliteit van OmegaT met andere softwareproducten.</p>
+
+<h3>Algemene opmerkingen</h3>
+
+<p>Omdat het de standaardprocedure voor professionele vertalers is om teksten in digitale vorm te ontvangen en af te leveren, zijn gebruikers van OmegaT bij nature geïnteresseerd in de compatibiliteit er van met andere softwareproducten. Deze HOWTO richt zich op het verschaffen van informatie op dit gebied.</p>
+
+<p>Een algemene observatie: &quot;compatibiliteit&quot; is zelden een geval van zwart en wit, &quot;ja&quot; of &quot;nee&quot;. Waar de verkoper van een softwareproduct claimt dat zijn product compatibel is met een ander stukje software, is deze compatibiliteit zelden 100%. Tegengesteld daaraan, waar producten duidelijk niet direct compatibel zijn, is het vaak mogelijk om procedures te vinden waardoor zij wel samen kunnen werken. De vraag die moet worden beantwoord is of deze procedures acceptabel zijn in termen van resultaat en de te leveren inspanningen, en het antwoord zal zeker verschillen van de ene gebruiker naar de andere. Met andere woorden: &quot;compatibiliteit&quot; gaat niet alleen over producten, maar ook over werkstromen.<br/>
+
+</p>
+
+
+<h3>Besturingssystemen</h3>
+
+<p>OmegaT werkt op elk besturingssysteem waarop een geschikte versie van de Runtime Environment (JRE) kan worden uitgevoerd. Op dit moment zijn dat alle versies van Microsoft Windows vanaf Windows 98 en hoger, Mac OS X, en de meeste Linux-distributies.</p>
+
+<h3>Bronteksten (bestanden om te vertalen)</h3>
+
+<p>kijk in de gebruikershandleiding van OmegaT voor een recente lijst van alle ondersteunde bestandsindelingen. De lijst hieronder is <strong>geen</strong> volledige lijst van alle bestandsindelingen die worden ondersteund door OmegaT, maar is beperkt to die welke in het bijzonder interessant zijn voor gewone gebruikers.</p>
+
+<ul>
+
+  <li>
+    
+    <p><strong>Microsoft Office 2007-2010 (Word, Excel, PowerPoint 2007-2010); Office Open XML:</strong></p>
+
+    <p>OmegaT is in staat om de huidige indelingen van Microsoft Office direct af te handelen, zonder conversie naar of vanuit andere indelingen.</p>
+
+<p>De Microsoft Office 2007-2010-bestandsindeling (ook bekend als Office Open XML, en met de bestandextensies .docx, .xlsx en .pptx) is radicaal anders dan de Office 97-2003-indelingen die zij opvolgen. In feite lijkt de structuur zeer veel op die van OpenOffice.org-bestanden: zij bestaan uit een zip-archief dat meerdere bestanden bevat, en de bestanden die de tekst bevatten zijn gebaseerd op de XML-standaard. Dit maakt het voor CAT-programma's veel eenvoudiger om het te ondersteunen en het direct te bewerken. De bestandsindelingen voor Microsoft Office 2007-2010 kunnen direct in OmegaT worden verwerkt; meer informatie kan <a href="./docx.html">hier</a> worden gevonden.</p>
+    
+    <p>Voor gebruikers van Microsoft Office die de 2007-versie (nog) niet hebben, conversie tussen Office Open XML en Microsoft Office 98-2003 kan worden gedaan door middel van een gratis plug-in converter van Microsoft, <a href="http://www.download.com/Microsoft-Open-XML-Converter/3000-18483_4-146736.html">hier</a> beschikbaar. Deze converter is beschikbaar voor Windows en Mac.</p>
+  
+    <p>Office Open XML kan rechtstreeks naar Open Document Format worden geconverteerd en terug door midedel van de ODF-converter, <a href="http://odf-converter.sourceforge.net/download.html">hier</a> beschikbaar. Dit programma vereist een versie van MS Office (XP/2003/2007).<br/></p>
+
+    <p>Mac OS X-gebruikers kunnen direct van Office Open XML naar OpenDocument Format en terug converteren in <a href="http://www.neooffice.org/">NeoOffice</a>.</p>
+
+    <p>Linux-gebruikers kunnen deze versie van het zelfstandige <a href="http://www.oooninja.com/2008/01/convert-openxml-docx-etc-in-linux-using.html">conversie-programma</a> gebruiken om direct te converteren tussen Office Open XML en OpenDocument Format.</p>
+
+    <p>Recente versies van OpenOffice.org zijn in staat om te converteren tussen Microsoft Office 2007 en Open Document Format.</p>
+
+  </li>
+
+  <li>
+
+    <p><strong>Microsoft Office 97-2003 (Microsoft Word/Excel/Powerpoint 2003):</strong></p>
+
+    <p>Deze bestandsindelingen zijn gebonden, binair, en tot voor kort niet openbaar gedocumenteerd, allemaal karakteristieken die het bijzonder moeilijk maken om ze af te handelen binnen een CAT-programma. </p>
+    
+    <p>Sommige CAT-programma's lossen dit probleem op, tenminste voor MS Word, door binnen Word zelf te werken; de meeste andere CAT-programma's converteren naar RTF en terug, vaak onzichtbaar voor de vertaler.</p>
+
+    <p>OmegaT ondersteund deze indelingen niet direct. In plaats daarvan moeten zij eerst handmatig worden geconverteerd naar Office Open XML (MS Office 2007/2010) of Open Document-indeling (LibreOffice of OpenOffice.org) vóór zij kunnen worden afgehandeld in OmegaT. (OmegaT is verre van uniek hierin: vele andere CAT-programma's converteren bronbestanden naar een andere indeling, in sommige gevallen op de achtergrond zonder dat de vertaler zich daarvan bewust is, vóórdat zij worden vertaald.)</p>
+
+  </li>
+
+  <li>
+        
+    <p><strong>RTF (Rich Text Format):</strong></p>
+
+    <p>RTF is structureel geheel verschillend van de Microsoft Office 98-2003-bestandsindeling, maar met betrekking tot OmegaT is hetzelfde van toepassing: het wordt niet direct ondersteund, en moet eerst worden geconverteerd naar .docx (MS Office 2007/2010) of Open Document-indeling (LibreOffice/OpenOffice.org).</p>
+
+  </li>
+
+  <li>
+    <p><strong>Open Document Format: LibreOffice/OpenOffice.org/NeoOffice Writer/Calc/Impress</strong></p>
+    
+    <p>Deze bestandsindelingen zijn het equivalent van de indelingen van Microsoft Office. Het Open Document Format is een internationale standaard en heeft de gebonden (maar open) Star Office-bestandsindeling vervangen (twee verschillende maar zeer op elkaar gelijkende bestandsindelingen). OmegaT heeft bestandsfilters voor zowel Open Document Format als voor de Star Office-indeling die het verving. Deze bestandsfilters zijn excellent, en het gevaar van beschadiging van de opmaak van een LibreOffice, OpenOffice.org, etc.-bestand gedurende de vertaling in OmegaT is extreem laag.</p>
+
+  </li>
+
+  <li>
+    
+    <p><strong>HTML; XHTML:</strong></p>
+
+    <p>HTML en XHTML, zijn XML equivalent, zijn de meest algemene bestandsindelingen voor webpagina's. Opnieuw heeft OmegaT excellente bestandsfilters voor beide. Net als OpenOffice.org-bestanden, kunnen deze bestandsindelingen worden vertaald in OmegaT met heel weinig risico voor corruptie. Het is het echter waard om de filterinstellingen aan te passen voor optimale resultaten.</p>
+
+  </li>
+
+</ul>
+
+
+<h3>Vertaalgeheugens</h3>
+
+<p>Er bestaat een internationale standaard voor vertaalgeheugens: TMX, of Translation Memory eXchange. Het is breed geadopteerd en wordt ondersteund door bijna alle huidige CAT-programma's.</p>
+
+
+<p>De TMX-standaard bestaat zowel in verschillende <strong>versies</strong> als in verschillende <strong>niveaus</strong>. Het onderscheid is belangrijk om redenen van compatibiliteit. De standaard ondergaat nog steeds ontwikkelingen; dat is waar de verschillende versies naar verwijzen. De niveaus verwijzen naar de opmaak-informatie die is opgenomen in het TMX-bestand:</p>
+
+<ul>
+
+  <li>
+    
+    <p>Niveau 1 TMX-bestanden bevatten geen opmaak-informatie.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Niveau 2 TMX-bestanden bevatten opmaak-informatie, maar deze bestanden zijn in het algemeen slechts compatibel als hetzelfde CAT-programma wordt gebruikt. Met andere woorden: als een OmegaT-gebruiker een 100%-overeenkomst vindt in een Niveau 2 OmegaT TMX-bestand, can die worden geaccepteerd zonder dat aanpassingen nodig zijn, maar hetzelfde zou niet waar hoeven te zijn voor een Niveau 2 TMX-bestand dat is gemaakt met een ander CAT-programma (of vice-versa). Dit heeft repercussies voor werkstromen waarin gebruikers van CAT-programma's (typische klanten) verwachten bestanden van vertaalgeheugens te ontvangen en dat 100%-overeenkomsten automatisch worden ingevoegd.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Niveau 3 TMX-bestanden bevatten opmaak-informatie in een vorm die kan worden gelezen door andere CAT-programma's. Ondersteuning voor Niveau 3 in CAT-programma's is bijzonder.</p>
+
+  </li>
+
+</ul>
+
+<p>Bepaalde andere CAT-programma's (zoals TRADOS) zijn in staat om verschillende TMX-bestanden in verschillende versies te exporteren. OmegaT ondersteunt alle huidige versies van TMX, maar levert waarschijnlijk de beste resultaten voor overeenkomsten als het TMX-bestand van de versie 1.4b is. </p>
+
+<p>Gereedschappen die andere verschillende niveaus van TMX-bestanden ondersteunen zijn in principe nog steeds compatibel met elkaar. De opmaak-informatie die is opgenomeen in de hogere niveaus zal zonder betekenis zijn voor het &quot;andere&quot; programma, maar de tekstuele informatie kan nog steeds worden bekeken, fuzzy-overeenkomsten gevonden, etc.</p>
+
+
+<p>OmegaT gebruikt de internationale TMX standaard als zijn eigen indeling voor vertaalgeheugens. Sommige CAT-programma's hebben nog steeds toegewezen gebonden indelingen voor vertaalgeheugens, maar ondersteunen virtueel allemaal de import en export van TMX-bestanden. In de praktijk is het daarom voor vertalers mogelijk om vertaalgeheugens te leveren aan klanten en vice-versa, en voor de ontvanger om deze bestanden te gebruiken als onmiddellijke of toekomstige verwijzing; als de bestanden echter moeten worden gebruikt binnen een geautomatiseerde werkstroom, dan is de hierboven beschreven beperking van toepassing.</p>
+
+<p>Verdere opmerkingen met betrekking tot TMX-bestanden:</p>
+
+<p>De TMX-standaard bevat definities van welke tekens toegestaan zijn. Niet alle CAT-programma's zijn even streng in de naleving van deze definities; als consequentie daarvan zijn sommige CAT-programma's niet in staat om direct TMX-bestanden te openen files die zijn gemaakt door bepaalde andere CAT-programma's. OmegaT volgt over het algemeen de condities en is tolerant voor de gebreken van andere programma's om ze te zien; zouden hier echter problemen ontstaan, dan kunnen zij in het algemeen redelijk eenvoudig worden opgelost door een zoek- en vervangactie in een tekstbewerker van het niet geldige teken binnen het TMX-bestand.</p>
+
+<p>TMX-bestanden zijn in de codering Unicode, maar mogen UTF-8 of UTF-16 zijn. TMX-bestanden die zijn gemaakt op Windows systemen zouden kunnen beginnen met een byte-order mark (BOM). Deze verschillen leiden in het algemeen niet tot compatibiliteits-problemen.</p>
+
+<p>Compatibiliteits-problemen zouden kunnen worden veroorzaakt door verschillen in de gebruikte taalcodes. OmegaT ondersteunt taalcodes in de indeling &quot;xx&quot;, &quot;XX&quot;, &quot;xx-YY&quot; en &quot;XX-YY&quot;, waar xx of XX de taal is, yy of YY de regio. Strikt gesproken vereist de ISO standaard voor taalcodes &quot;xx-YY&quot; (bijvoorbeeld: &quot;en-GB&quot; voor Brits Engels); hoewel deze variant wordt ondersteund door OmegaT, is de door OmegaT aangeboden standaard conventie &quot;XX-YY&quot;. OmegaT is tolerant bij het lezen van TMX-bestanden: het zal bestanden accepteren met en-GB, en-US, en, EN, etc. Niet alle CAT-programma's vertonen hetzelfde tolerantie en sommige zouden daarom de verwachte overeenkomsten niet hoeven weer te geven als de taalcodes niet genoeg voldoen. Deze incompatibiliteit kan worden opgelost door te zoeken naar en het vervangen van de relevante taalcodes in het TMX-bestand in een toepasselijke tekstbewerker. Een andere mogelijk bron van incompatibiliteit zijn drie-cijferige taalcodes, welke in het geheel niet worden ondersteund door OmegaT. (Dit is trouwens een beperking van Java, niet van OmegaT zelf.)</p>
+
+<p>Punten met betrekking tot gebonden bestanden van vertaalgeheugens:</p>
+
+<p>De traditionele bestandsindeling van Wordfast-vertaalgeheugens is van bijzondere interesse dankzij zijn eenvoud: het bestaat uit een bestand van platte-tekst met een vertaaleenheid (segment) op elke regel waarin de bron en het doel worden gescheiden door een tab. Deze indeling kan eenvoudig worden geconverteerd naar de TMX-indeling door programma's van derden zoals <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a> kan ook voor dit doel worden gebruikt.</p>
+
+<h3>Bestanden van woordenlijsten</h3>
+
+<p>OmegaT's woordenlijsten zijn bestanden van platte-tekst in de indeling:</p>
+
+<p>bronterm    &lt;tab&gt;    doelterm    &lt;tab&gt;    aanvullende informatie</p>
+
+<p>Sommige andere CAT-programma's zijn in staat om woordenlijsten in deze indeling te importeren en te exporteren, of een soortgelijke indeling van platte-tekst die daaruit op eenvoudige wijze kan worden gemaakt (bijvoorbeeld door een zoek- &amp; vervangactie in Microsoft Word).</p>
+
+<p>OmegaT is ook in staat om woordenlijsten in TBX, de industrie-standaard indeling voor woordenlijstbestanden, te lezen.</p>
+
+<p>OmegaT kan geen woordenlijsten in gesloten binaire indelingen, zoals Trados Multiterm, importeren of lezen.</p>
+
+<h3>Tweetalige indelingen voor CAT-programma's</h3>
+
+<p>Veel CAT-programma's maken gebruik van een tussenliggend tweetalige bestandsindeling, d.i. een bestand dat zowel de brontaal- als de doeltaalsegmenten bevat en in sommige gevallen ook de structuur van het originele bestand. Origineel zouden deze tweetalige bestandsindelingen een bijproduct van de architectuur van het programma kunnen zijn. Zij zijn echter een belangrijk fenomeen geworden in werkstromen van vertalingen waarbij CAT-programma's worden gebruikt, en zij vormen vaak het grootste obstakel voor compatibiliteit tussen OmegaT en andere CAT-programma's (of voor wat dat betreft: tussen CAT-programma's in het algemeen).</p>
+
+<p>Er zijn tenminste drie redenen waarom een klant de levering van een vertaling in een bepaalde tweetalige bestandsindeling kan vragen (in plaats van eenvoudigweg levering van het vertaalde bestand en mogelijk ook het vertaalgeheugen):</p>
+
+<p>1. Sommige CAT-programma's, met name TRADOS, is in staat om een breed scala aan bestandsindelingen te importeren, inclusief bestandsindelingen voor desktop publishing, en ze voor te bereiden op vertaling in het betreffende programma. De &quot;voorbereide&quot; vorm is veelal de tweetalige bestandsindeling van het programma. Zonder voorbereiding op deze manier zou het originele bestand toegankelijk kunnen zijn voor de vertaler.</p>
+
+<p>2. Het stadium van vertaling is slechts een deel van de werkstroom van de klant. De vertaling zou bijvoorbeeld kunnen worden doorgegeven aan iemand die het controleert ter bewerking. Als de wijziging van de controle moeten worden opgenomen in een vertaalgeheugen dat wordt onderhouden door de klant, moeten de wijzigingen worden gemaakt <i>vóórdat</i> de uiteindelijke documenten worden gemaakt. Dit kan worden gedaan binnen het betreffende CAT-programma, of in sommige gevallen in een externe tweetalige bestandsindeling die het programma kan lezen.</p>
+
+<p>3. De klant wil een vertaalgeheugen ontvangen waarmee in de toekomst teksten kunnen worden bewerkt: met andere woorden, om toekomstige teksten &quot;voor te vertalen&quot; met behulp van een bestaand vertaalgeheugen. Aan twee voorwaarden moet, om dit proces zo veel mogelijk te automatiseren, in het bijzonder zijn voldaan: ten eerste, het vertaalgeheugen moet opmaak-informatie bevatten (zie boven); en ten tweede, de op de tekst toegepaste segmentatie-regels moeten hetzelfde zijn als die welke werden toegepast toen het vertaalgeheugen (of deel er van) werd geproduceerd. De eenvoudigste manier voor klanten om er voor te zorgen dat aan die twee voorwaarden wordt voldaan is voor hen om de tekst zelf van te voren te vertalen, vóórdat die wordt doorgegeven aan de vertaler (daarbij definiërend hoe het is gesegmenteerd), en om het vertaalgeheugen te maken in het CAT-programma van hun keuze nadat zij het vertaalde tussenliggende tweetalige bestand van de vertaler hebben ontvangen (er daarmee voor zorgend dat de opgenomen opmaak-informatie in het vertaalgeheugen compatibel zal zijn met toekomstige projecten).</p>
+
+<p>Verschillende tweetalige bestandsindelingen kunnen worden afgehandeld door OmegaT, en niet noodzakelijkerwijze met heel veel inspanning. Begrip van de betrokken processen is echter belangrijk. De individuele tweetalige bestandsindelingen worden hieronder beschreven.</p>
+
+<p><strong>XLIFF</strong></p>
+
+<p>XLIFF is de industriële standaard tweetalige bestandsindeling. Het wordt ondersteund door meerdere CAT-programma's, en in feite zijn sommige CAT-programma's effectief &quot;ontworpen rondom&quot; de XLIFF-standaard: Heartsome en Swordfish zijn vorbeelden hiervan. Omdat het een standaard is, is een voordeel van XLIFF dat bestandsfilters die worden verschaft door de ene verkoper van een CAT-programma voor conversie tussen een bepaalde indeling en XLIFF (en, volgend op de voltooide werkstroom van de vertaling, weer terug) kan in theorie worden gebruikt om bestanden te prepareren in de betrokken indeling voor vertaling in een willekeurig CAT-programma dat in staat is om XLIFF te ondersteunen. In de praktijk vereist het werken met de XLIFF-werkstroom vaak het gebruik van programma's die niet erg gebruikersvriendelijk zijn.</p>
+
+<p>OmegaT heeft rudimentaire ondersteuning voor XLIFF, en een procedure voor het gebruiken van XLIFF in OmegaT in samenwerking met de programma's van Rainbow kan <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">hier</a> worden gevonden. De beschikbare filters zijn hoofdzakelijk voor bestandsindelingen die meer bijzonder zijn voor de IT-industrie in plaats van voor bestanden voor eindgebruikers.<a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm"/></p>
+
+<p><strong>Trados &quot;vuile RTF&quot;</strong></p>
+
+<p>De Trados &quot;vuile&quot; RTF-bestandsindeling, waarnaar vaak wordt verwezen als naar &quot;vuile bestanden&quot;, was vele jaren de meest gebruikte algemene tweetalige bestandsindeling in werkstromen voor vertalingen. Het dankt zijn bestaan aan het gebruiken van MS Word als een interface voor het Trados CAT-programma. In aanvulling op Trados ondersteunen echter ook verschillende andere CAT-programma's de &quot;vuile RTF&quot;-indeling, met name Wordfast Classic.</p>
+
+<p>In essentie bestaat deze indeling uit een RTF-bestand waarin de bron- en doelsegmenten elkaar afwisselen. Deze segmenten worden gemarkeerd en gescheiden door speciale tekens en MS Word-opmaakprofielen.</p>
+
+<p>Een script (alleen voor Windows) en procedure werden recent (2008) ontwikkeld om OmegaT-gebruikers in staat te stellen om vuile RTF-bestanden voor Trados te maken om af te leveren aan het einde van hun vertaalstadium. Voor details, zie de <a href="http://www.omegat.org/en/howtos/export_uncleaned_rtf.html">&quot;Exporteren vanuit OmegaT naar vuile RTF&quot; HOWTO</a>.</p>
+
+<p><strong>Trados TTX</strong></p>
+
+<p>Trados TTX-indeling is het tegenovergestelde van de &quot;vuile RTF&quot;-indeling voor Trados Tag Editor, die, anders dan Trados Workbench, niet werkt in directe combinatie met MS Word. TTX is een XML-gebaseerde indeling. Een <a href="http://www.opentag.com/okapi/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">OmegaT plugin</a> is nu beschikbaar door middel waarvan deze indeling kan worden afgehandeld in OmegaT.</p>
+
+<p><strong>Wordfast TXML</strong></p>
+
+<p>Wordfast TXML is de eigen interne indeling van Wordfast's nieuwe Wordfast Professional (ook bekend als Wordfast 6.0). Zoals zijn naam aangeeft, is het een XML-gebaseerde indeling. Het wordt ondersteund door OmegaT.</p>
+
+<p><strong>Déjà Vu &quot;External View&quot;</strong></p>
+
+<p>Een interessante mogelijkheid van Déjà Vu DVX is zijn &quot;External View&quot;-bestandsindeling. Deze bestandsindeling maakt het gebruikers van OmegaT mogelijk om tweetalige bestanden af te leveren aan gebruikers van Déjà Vu DVX, die ze dan verder kunnen bewerken of ze kunnen invoegen binnen geautomatiseerde werkstromen. Voor details, zie de <a href="http://www.omegat.org/en/howtos/compatibility_deja_vu.html">Déjà Vu &quot;External View&quot; HOWTO</a>.<br/></p>
+
+<p>Copyright Marc Prior 2009-2014</p>
+
+</div>
+

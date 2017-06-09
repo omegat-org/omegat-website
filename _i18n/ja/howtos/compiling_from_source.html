@@ -1,0 +1,127 @@
+<div class="container">
+
+<h2>OmegaT 技術情報：<br/>OmegaT のソースコードからのコンパイル</h2>
+
+
+<p>この技術情報では、OmegaT をソースコードからコンパイルする方法について説明します。</p>
+
+<p>OmegaT は、クロスプラットフォーム版を含む複数のプラットフォーム向けにコンパイル済みで提供されています。したがってユーザーは、自分で OmegaT をコンパイルする必要はありません。OmegaT のコンパイルは、自分でコードを書き換えることを望むような開発者にかかわりがあります。</p>
+
+<p><strong>1. Java Development Kit（JDK）と Apache Ant をダウンロードしてインストールします。</strong></p>
+
+<p>変更したソースコードをコンパイルするには、さまざまなプログラムを利用できますが、最も便利なのは <a href="http://ant.apache.org">Apache Ant</a> です。<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a>（JDK）も必要です。</p>
+
+<p>Java Development Kit のインストール方法によっては、Ant とともに機能させるには「JAVA_HOME」属性を変更しなければなりません。</p>
+
+<p><strong>2. コードのコンパイル</strong></p>
+
+<p>以下に示すフォルダー名は、説明のための便宜的なものです。バージョン番号は変わります。</p>
+
+<p>コマンドラインウィンドウを開きます（コンソール、DOS プロンプトとも呼ばれます）。フォルダーを、OmegaT ソースコードのメインフォルダーに変更します（build.xml ファイルを含むフォルダー）。下記は一例です。</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_2.2.3_Beta_Source</p>
+
+<p>このフォルダー内から、Apache Ant の実行ファイルを起動します。下記のようなフルパスが必要かもしれません。</p>
+
+<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
+
+<p>コードのコンパイルに成功したら、「BUILD SUCCESSFUL」というメッセージが表示されます。そうでない場合はデバッグメッセージが表示され、どこに問題があるのかヒントが与えられます。</p>
+
+<p><strong>3. OmegaT の起動</strong></p>
+
+<p>コードのコンパイルに成功したら、コンパイルされた OmegaT が下記の場所に入ります。</p>
+
+<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
+
+<p>そのままコマンドラインウィンドウで、このフォルダーをたとえば次のように変更します。</p>
+
+<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
+
+<p>そして、</p>
+
+<p style="font-family: monospace;">java -jar OmegaT.jar</p>
+
+<p>によって OmegaT を起動します。</p>
+
+<p><strong>4a. 変更例 1：分節の表示色の変更</strong></p>
+
+<p>フォルダー</p>
+
+<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
+
+<p>の中のファイル SegmentBuilder.java をテキストエディターで開きます。</p>
+
+<p>テキスト内の</p>
+
+<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
+
+<p>および</p>
+
+<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
+
+<p>という行の中の</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>を</p>
+
+<p style="font-family: monospace;">COLOR_BLUE</p>
+
+<p>に置換します。</p>
+
+<p>フォルダー</p>
+
+<p style="font-family: monospace;">src/org/omegat/util/gui</p>
+
+<p>の中のファイル Styles.java をテキストエディターで開きます。</p>
+
+<p>テキスト内の</p>
+
+<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
+
+<p>という行の中の</p>
+
+<p style="font-family: monospace;">COLOR_GREEN</p>
+
+<p>を</p>
+
+<p style="font-family: monospace;">COLOR_BLUE</p>
+
+<p>に置換し、</p>
+
+<p style="font-family: monospace;">192, 255, 192 </p>
+
+<p>を</p>
+
+<p style="font-family: monospace;">225, 225, 255</p>
+
+<p>に置換します。</p>
+
+<p><strong>4b. 変更例 2：参考訳文の数を 5 から 10 に増やす</strong></p>
+
+<p>フォルダー</p>
+
+<p style="font-family: monospace;">/src/org/omegat/util</p>
+
+<p>の中のファイル OConsts.java をテキストエディターで開きます。</p>
+
+<p>テキスト内の</p>
+
+<p style="font-family: monospace;">/** Number of fuzzy matches to display */<br/>public static final int MAX_NEAR_STRINGS = 5;</p>
+
+<p>という行の中の</p>
+
+<p style="font-family: monospace;">= 5</p>
+
+<p>を</p>
+
+<p style="font-family: monospace;">= 10</p>
+
+<p>に置換します。</p>
+
+<p>いずれの例も、前述の要領でコンパイルとテストを行ってください。</p>
+
+<p>Copyright Marc Prior 2011-2012</p>
+
+</div>
+

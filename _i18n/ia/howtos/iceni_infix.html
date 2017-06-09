@@ -1,0 +1,70 @@
+<div class="container">
+
+<h2>Guida: traduction del files PDF con Iceni Infix e OmegaT</h2>
+
+<p>Iste guida provide information re le uso de OmegaT e Iceni Infix pro le render le files PDF.</p>
+
+<h3>Situation de fundo</h3>
+
+<p>le files PDF cade in duo categorias: PDF ver e PDF &quot;scandite&quot;.</p>
+
+<p>Un file PDF &quot;scandite&quot; es un file in le qual le formato PDF servi solmente como un recipiente commode pro scansiones de paginas imprimite. Frequentemente, iste scansiones contine texto pro traduction. Ma il non ha maniera de render un file PDF scandite altere que recrear su texto, o per dactylographia o per OCR (recognition optic del character), e recrear le arrangiamento del file ab ovo. Iste Guida NON tracta le file PDF scandite.</p>
+
+<p>Le files PDF ver (nominate alcun vices files PDF &quot;native&quot; o &quot;distillate&quot;, ben que &quot;distillate&quot; ha un significato plus precise) es files PDF que esseva exportate ex un altere application, habitualmente un programma de Edition al scriptorio (DTP). Pro render un file PDF ver, le procedura correcte es de costume producer le traduction in le application (DTP) original, e pois sequer le mesme procedura pro le production del PDF que esseva sequite pro le original. Non es habitualmente un proposition practic render le file PDF modificante lo directemente. Pro le traduction de files PDF &quot;pro information&quot;, traductores frequentemente recurre a converter le file PDF a alicun altere formato de file, assi como RTF, anteriormente al traduction; le resultatos pote esser adequate pro iste proposito, ma non satisfacera le standard professional del processo DTP original.</p>
+
+<h3>Iceni Infix</h3>
+
+<p>Iceni Infix offere un option ulterior. Infix es un editor PDF, id es le texto in PDF pote esser modificate directemente. Ben que sia discutibile si le resultatos de iste procedura essera comparabile a re arrangiar le traduction con un DTP professional, illos essera probabilemente multo melio que le conversion a formatos completemente differente (assi como RTF).</p>
+
+<p>Le version &quot;Professional&quot; de Infix ha un function additional interessante pro le traductores: exporta texto XML. Isto habilita le exportation del texto in un file XML que pote esser traducite in un application CAT. Le texto rendite pote pois esser re-importate in Infix Professional. OmegaT es un application CAT pro le qual iste processo pote esser utilisate. Le procedura es describite in iste Guida.</p>
+
+<h3>Platteformas</h3>
+
+<p>Ben que Infix sia un application Windows, Iceni ha facite effortios pro provider al usatores de Linux e Macintosh. Infix Professional can be used on these platforms in conjunction with Crossover Linux and Crossover Macintosh respectively. Crossover Linux e Crossover Macintosh costa circa €40. De nove, versiones de demonstration gratuite es disponibile. Crossover Linux e Crossover Macintosh pote esser obtenite ex le <a href="http://www.codeweavers.com/products/crossover/">Sito TTT de Codeweaver</a>. <a href="http://www.iceni.com/infixmaclinux.htm">information specific re executar Iceni Infix sur Crossover Linux o Crossover Macintosh</a> es alsi disponibile.</p>
+
+<h3>Render un file PDF: procedura</h3>
+
+<p>obtene e installa Iceni Infix Professional ex le <a href="http://www.iceni.com/infix.htm">pagina TTT Iceni</a>. Un version demonstrative es disponibile; al tempore de scriptura, le version complete costa circa US$ 150. Si tu es usante Linux o Macintosh, obtene e installa le version Crossover apposite ante que installa Iceni Infix Professional. (il es alsi reportate que Infix opera sur WINE.)</p>
+
+<p>Lancea Iceni Infix e aperi le file PDF que tu vole render. Le exemplo in le imagine del schermo es le <a href="http://ec.europa.eu/enterprise/policies/sme/files/sme_definition/sme_user_guide_hu.pdf">European Commission's SME user guide in hungaro</a>.</p>
+
+<img src="../../images/infix1.png" alt="infix1.png"/>
+
+<p>Exporta le texto ex le PDF in formato XML de Infix con Documento &gt; Traduce &gt; Exporta XML. Salva le PDF. Isto es importante: quando tu exporta le file XML ex lo PDF, Infix produce un nota in le file a ubi omne le pieces de texto compete (&quot;historias&quot;), assi tu debera usar iste version del file quando re importara le file XML traducite.</p>
+
+<p>Crea un projecto OmegaT in le maniera consuete.</p>
+
+<p>Si tu es usante OmegaT version 2.3 o sequente, pone simplemente le file XML exportate de Infix como describite supra in le plica /source de tu projecto OmegaT.</p>
+
+<p><i>Si tu es usante un version de OmegaT anterior, il es recommendate de promover tu installation OmegaT. Alias, tu deberea esser habile a traducer le file XML Infix con bon resultatos usante anterior versiones de OmegaT per medio del filtro HTML. Pro usar iste filtro, simplemente cambia le extension del file del file XML exportate per Infix ab .xml a .html.</i></p>
+
+<p>Recarga tu projecto OmegaT. Tu ora pote render le texto (vide imagine del schermo).</p>
+
+<img src="../../images/infix2.png" alt="infix2.png"/>
+
+<p>Nota: le filtro Infix de OmegaT mappa le  tags &lt;BR/&gt; de Infix in  tags &lt;brx/&gt;. Isto habilita le regula de segmentation HTML a esser usate pro seliger si le segmentation deberea occurrer a iste punctos o non.</p>
+
+<p>Post completate tu traduction, crea le documento rendite in le maniera usual (Ctrl+S, Ctrl+D). Loca le file XML rendite in le plica /target del projecto de OmegaT. <i>Si tu cambiava le extension del file in .html, cambia le extension del file rendite al reverso in .xml.</i></p>
+
+<p>Al reverso in Iceni Infix, importa le file XML rendite al retro in <i>le PDF ex le qual tu ha exportate lo</i>. Salva le cambios.</p>
+
+<p>Si toto vade ben, tu traduction venira foras con le mesme apparentia del original, ma rendite. (Vide imagine del schermo: so le prime tres segmentos esseva rendite.)</p>
+
+<p>Nota que si tu usa le version demonstration de Iceni Infix in iste procedura, tu file PDF rendite suffrera del filigrana Iceni. Pro le traductiones designate &quot;pro information&quot;, iste pote non esser un problema. Iceni Infix alsi habilita te a salvar le files PDF in formato  RTF, ma in iste caso le version de demonstration vermente es convenibile sol pro fines demonstrative, pois que illo contine substitutiones casual de character.</p>
+
+<img src="../../images/infix3.png" alt="infix3.png"/>
+
+<p>Cono es sovente in le caso con cosas technic (e cosas re le traduction), il ha alicun trappas.</p>
+
+<p>Tu pote trovar que le typo de character incastrate in the PDF non contine omne le characteres que tu necessita. Tu pote presumibilemente resolver iste problema obtenente e installante le typo de character necessari; o tu pote seliger un differente typo de character pro iste proposito – le qual poterea esser un solution adequate o minus.</p>
+
+<p>Il ha un forte possibilitate que a alicun punctos, tu traduction essera plus longe que lo original. Isto necessita esser adaptate con Infix, per exemplo con le ampliation del cassa continente le texto. Infix ha le functiones pro adaptar se con iste e altere problemas que es foras del campo de iste Guida.</p>
+
+<p>Tu pote trovar que le segmentos es rupte per interruptiones de linea, dur, in locos incommode. Iste situation essera probabilemente familiar a te si tu ha rendite files Powerpoint in OmegaT, o pro ille altere materia ????applicationes CAT. Pro resolver isto, aperi de nove in Infix le file original PDF. Selige Instrumentos &gt; Instrumento de texto. Cliccar sur le texto in question displicara un cassa pro texto e marcas de formato. Le imagine del schermo monstra un exemplo: <img src="../../images/infix4.png" alt="infix4.png"/> Leva le interruption de linea. Pois salva le cambios e re exporta le PDF al file XML (e cambia le extension del file etc.), e recarga tu projecto  OmegaT. Si tu  file contine multe tal interruptiones incommode, il es plus efficiente levar los tote a un vice, commutante inter OmegaT e Infix pro vider ubi illos es.</p>
+
+<p>Alicun incommode interruptiones de linea pote esser necesse pro le positionamento correcte del texto. In iste casos,il es practic remover los ante que exportar le file in XML, de maniera que tu es presentate con segmentos cohesive pro le traduction, e alora a re inserer los in Infix al fin del processo.</p>
+
+<p>Copyright Marc Prior 2011</p>
+
+</div>
+
