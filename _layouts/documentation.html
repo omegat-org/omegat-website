@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
+<html lang="{{ page.lang | default: site.lang | default: "en" }}"{% if site.lang == "ar" %} dir="rtl" align="right"{% endif %}>
   {% include head.html %}
 
   <body id="page">
+
 
     {% include header.html %}
 
