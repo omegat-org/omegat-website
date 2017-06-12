@@ -52,36 +52,36 @@
             "id": "latest_windows_jre",
             "name": "windows_jre",
             "noInfo": true,
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download"
         }, {
             "id": "latest_windows_jre64b",
             "name": "windows_jre64b",
             "noInfo": true,
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_64.exe/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_64.exe/download"
 
         }, {
             "id": "latest_windows_nojre",
             "name": "windows_nojre",
             "noInfo": true,
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download"
         }, {
             "id": "latest_osx_signed",
             "name": "osx_signed",
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac_Signed.zip/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac_Signed.zip/download"
         }, {
             "id": "latest_osx_unsigned",
             "name": "osx_unsigned",
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download"
         }, {
             "id": "latest_linux_jre64b",
             "name": "linux_jre64b",
             "noInfo": true,
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux_64.tar.bz2/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux_64.tar.bz2/download"
         }, {
             "id": "latest_linux_nojre",
             "name": "nojre",
             "noInfo": true,
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download"
         }, {
             "id": "latest_webstart",
             "name": "webstart",
@@ -89,7 +89,7 @@
         }, {
             "id": "latest_source",
             "name": "source",
-            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download"
+            "link": "http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download"
         }]
     },
     "trunk": "https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk",
