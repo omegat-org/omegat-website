@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   about: Who we are
   contact: Contact and Support
   documentation: Documenta&ccedil;o

@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   3rd_party: Software třetích stran
   about: Kdo jsme
   contact: Kontakt a podpora

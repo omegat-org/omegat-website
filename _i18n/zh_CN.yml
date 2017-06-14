@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   3rd_party: 第三方软件
   Download OmemaT: 下载
   'OmegaT - Documentation': 文档

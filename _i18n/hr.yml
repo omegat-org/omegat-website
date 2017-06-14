@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   3rd_party: Softver drugog porijekla
   about: O nama
   contact: Kontakt i tehnička podrška

@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   3rd_party: Extern mjukvara
   about: Vilka vi är
   contact: Kontakt och support

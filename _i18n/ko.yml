@@ -20,6 +20,7 @@ osx_signed: OS X Signed
 osx_unsigned: OS X Unsigned
 source: Source code
 titles:
+  404: Page Not Found
   3rd_party: 연관 프로그램
   about: 개발자 정보
   contact: 지원 및 연락처
