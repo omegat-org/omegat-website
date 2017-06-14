@@ -33,6 +33,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-multiple-languages-plugin (1.5.1)
       jekyll (>= 2.0, < 4.0)
+    jekyll-redirect-from (0.12.1)
+      jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-sitemap (1.0.0)
@@ -76,6 +78,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-feed (~> 0.6)
   jekyll-multiple-languages-plugin
+  jekyll-redirect-from
   jekyll-sitemap
   minima (~> 2.0)
   tzinfo-data
