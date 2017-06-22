@@ -179,7 +179,13 @@ date. It will however lack some of the features of the "Latest" version.</p>
           <div id="info_{{ platform.name }}"></div>
       {% endif %}
       </td>
-      <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+      <td>
+      {% if platform.link != null %}
+        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+      {% else %}
+        <a class="btn btn-primary version-download" href="{{ site.data.versions.baseUrl }}/{{ site.data.versions.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+      {% endif %}
+      </td>
   </tr>
 {% endfor %}
   </tbody>
@@ -212,7 +218,13 @@ prefer the Latest version.</p>
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
       {% endif %}
       </td>
-      <td><a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+      <td>
+      {% if platform.link != null %}
+        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+      {% else %}
+        <a class="btn btn-primary version-download" href="{{ site.data.versions.baseUrl }}/{{ site.data.versions.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+      {% endif %}
+      </td>
   </tr>
 {% endfor %}
   </tbody>
