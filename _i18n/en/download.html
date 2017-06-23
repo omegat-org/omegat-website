@@ -170,7 +170,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
     </tr>
   </thead>
   <tbody>
-{% for platform in site.data.versions.standard.platforms %}
+{% for platform in site.data.downloads.standard.platforms %}
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
@@ -183,7 +183,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
       {% if platform.link != null %}
         <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
       {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.versions.baseUrl }}/{{ site.data.versions.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
       {% endif %}
       </td>
   </tr>
@@ -210,7 +210,7 @@ prefer the Latest version.</p>
     </tr>
   </thead>
   <tbody>
-{% for platform in site.data.versions.latest.platforms %}
+{% for platform in site.data.downloads.latest.platforms %}
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
@@ -222,7 +222,7 @@ prefer the Latest version.</p>
       {% if platform.link != null %}
         <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
       {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.versions.baseUrl }}/{{ site.data.versions.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
       {% endif %}
       </td>
   </tr>
@@ -249,19 +249,19 @@ development. Pre-built binaries, are available as Nightly Builds.</p>
       <td>Trunk</td>
       <td><span rel="popover" data-platform="trunk" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
       </td>
-      <td><a class="btn btn-primary" href="{{ site.data.versions.trunk }}" role="button">Download</a></td>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.trunk }}" role="button">Download</a></td>
   </tr>
   <tr>
       <td>Nightly Builds</td>
       <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      <td><a class="btn btn-primary" href="{{ site.data.versions.nightly }}" role="button">Download</a></td>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Download</a></td>
   </tr>
   </tbody>
 </table>
 
 <h3>Legacy versions</h3>
 
-<p>You can still find <a href="{{ site.data.versions.legacy }}">older, superseded versions</a> of OmegaT.</p>
+<p>You can still find <a href="{{ site.data.downloads.legacy }}">older, superseded versions</a> of OmegaT.</p>
 
 <p>Legacy versions are older versions that have been superseded. For most
 users, these are not of interest. However, some users may face restrictions

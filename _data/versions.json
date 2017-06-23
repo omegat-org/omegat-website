@@ -1,101 +1,10 @@
 {
-    "baseUrl": "http://sourceforge.net/projects/omegat/files",
     "standard": {
-        "folder": "OmegaT - Standard",
         "name": "OmegaT 3.6.0 update 5",
-        "version": "3.6.0_05",
-        "platforms": [{
-            "id": "standard_windows_jre",
-            "name": "windows_jre",
-            "noInfo": true,
-            "fileName": "Windows.exe"
-        }, {
-            "id": "standard_windows_nojre",
-            "name": "windows_nojre",
-            "noInfo": true,
-            "fileName": "Windows_without_JRE.exe"
-        }, {
-            "id": "standard_osx_signed",
-            "name": "osx_signed",
-            "fileName": "Mac_Signed.zip"
-        }, {
-            "id": "standard_osx_unsigned",
-            "name": "osx_unsigned",
-            "fileName": "Mac.zip"
-        }, {
-            "id": "standard_linux_jre",
-            "name": "linux_jre",
-            "noInfo": true,
-            "fileName": "Linux.tar.bz2"
-        }, {
-            "id": "standard_linux_jre64b",
-            "name": "linux_jre64b",
-            "noInfo": true,
-            "fileName": "Linux_64.tar.bz2"
-        }, {
-            "id": "standard_linux_nojre",
-            "name": "nojre",
-            "noInfo": true,
-            "fileName": "Without_JRE.zip"
-        }, {
-            "id": "standard_webstart",
-            "name": "webstart",
-            "link": "http://omegat.sourceforge.net/webstart/OmegaT.jnlp"
-        }, {
-            "id": "standard_source",
-            "name": "source",
-            "fileName": "Source.zip"
-        }]
+        "version": "3.6.0_05"
     },
     "latest": {
-        "folder": "OmegaT - Latest",
-        "name": "OmegaT 4.1.1",
-        "version": "4.1.1_Beta",
-        "platforms": [{
-            "id": "latest_windows_jre",
-            "name": "windows_jre",
-            "noInfo": true,
-            "fileName": "Windows.exe"
-        }, {
-            "id": "latest_windows_jre64b",
-            "name": "windows_jre64b",
-            "noInfo": true,
-            "fileName": "Windows_64.exe"
-
-        }, {
-            "id": "latest_windows_nojre",
-            "name": "windows_nojre",
-            "noInfo": true,
-            "fileName": "Windows_without_JRE.exe"
-        }, {
-            "id": "latest_osx_signed",
-            "name": "osx_signed",
-            "fileName": "Mac_Signed.zip"
-        }, {
-            "id": "latest_osx_unsigned",
-            "name": "osx_unsigned",
-            "fileName": "Mac.zip"
-        }, {
-            "id": "latest_linux_jre64b",
-            "name": "linux_jre64b",
-            "noInfo": true,
-            "fileName": "Linux_64.tar.bz2"
-        }, {
-            "id": "latest_linux_nojre",
-            "name": "nojre",
-            "noInfo": true,
-            "fileName": "Without_JRE.zip"
-        }, {
-            "id": "latest_webstart",
-            "name": "webstart",
-            "link": "http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp"
-        }, {
-            "id": "latest_source",
-            "name": "source",
-            "fileName": "Source.zip"
-        }]
-    },
-    "trunk": "https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk",
-    "nightly": "https://omegat.ci.cloudbees.com/job/omegat-trunk/",
-    "legacy": "http://sourceforge.net/projects/omegat/files/OmegaT - Legacy/"
-}
+        "name": "OmegaT 4.1.2",
+        "version": "4.1.2_Beta"
+    }
+}
