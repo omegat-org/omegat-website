@@ -43,8 +43,8 @@
     <p>Jean-Christophe Helary</p>
     <h3>Developers</h3>
     <ul class="list-unstyled">
-      {% for dev in site.data.credits.developers %}
-        <li>{{ dev }}</li>
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size > 0 %}<li>{{ dev.name }}</li>{% endif %}
       {% endfor %}
     </ul>
   </div>

@@ -29,7 +29,11 @@
     <h3>Responsable de la localisation, propriétaire du groupe des utilisateurs</h3>
     <p>Jean-Christophe Helary</p>
     <h3>Développeurs</h3>
-    <ul class="list-unstyled">{% for dev in site.data.credits.developers %}<li>{{ dev }}</li>{% endfor %}</ul>
+    <ul class="list-unstyled">
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size > 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    </ul>
   </div>
   <p>Pour mieux comprendre l&#39;esprit OmegaT, nous vous invitons à découvrir la <a href="philosophy.html">philosophie du projet</a>.</p>
   <p>Depuis ses débuts, le projet a reçu le soutien de bien d&#39;autres contributeurs, hélas trop nombreux pour être cités ici, mais pour l&#39;aide desquels nous sommes très reconnaissants.</p>
