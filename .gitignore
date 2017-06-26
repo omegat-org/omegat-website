@@ -12,3 +12,4 @@ js/bootstrap.min.js
 js/jquery.min.js
 *.swo
 *.bak
+Gemfile.lock

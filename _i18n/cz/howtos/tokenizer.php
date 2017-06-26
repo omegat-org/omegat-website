@@ -1,35 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, svobodný nástroj využívající technologie překladových pamětí</title>
-  <meta name="generator" content="screem 0.10.2"/>
-  
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-  
-  <meta name="keywords" content="translation memory, TM, computer-aided translation, computer-assisted translation, překladová paměť, TM, překlad podporovaný počítačem, CAT, GPL, open source"/>
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css"/>
-
-</head>
-
-<?php include '../../config/versions.txt'; ?>
-
-<body>
-
-<div id="container">
-			
-<div id="banner">
-
-<h1>O aplikaci OmegaT</h1>
-
-<p>Svobodný (GPL) nástroj využívající technologie překladových pamětí </p>
-
-</div>
-
-<div id="content">
+<div class="container">
 
 <h2>Návod OmegaT: O použití tokenizerů</h2>
 
@@ -43,7 +12,7 @@
 
 <p><strong>OmegaT verze 2.1.0 a starší</strong>: aktuální tokenizer není kompatibilní s těmito verzemi. (Tokenizer můžete použít s verzemi 2.0.x a 2.1.0, ale toto vyžaduje jak odlišné verze tokenizeru, tak odlišný způsob instalace.) Uživatelé by měli povýšit na nejnovější beta verzi OmegaT.</p>
 
-<p><strong>Verze OmegaT pro Windows</strong>: aby šlo použít OmegaT (jakákoliv verze) s tokenizerem, tak musí být tento program spuštěn přes soubor spouštěcího skriptu. Soubor spouštěcího skriptu není dostupný s verzemi OmegaT pro Windows. Pokud používáte verzi pro Windows s JRE, stáhněte si soubor <a href="../../resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Pokud používáte verzi pro Windows bez JRE, stáhněte si soubor <a href="../../resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Po stažení umístěte soubor do hlavního adresáře OmegaT (adresář obsahující soubor OmegaT.jar).</p>
+<p><strong>Verze OmegaT pro Windows</strong>: aby šlo použít OmegaT (jakákoliv verze) s tokenizerem, tak musí být tento program spuštěn přes soubor spouštěcího skriptu. Soubor spouštěcího skriptu není dostupný s verzemi OmegaT pro Windows. Pokud používáte verzi pro Windows s JRE, stáhněte si soubor <a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Pokud používáte verzi pro Windows bez JRE, stáhněte si soubor <a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Po stažení umístěte soubor do hlavního adresáře OmegaT (adresář obsahující soubor OmegaT.jar).</p>
 
 <p><strong>Verze bez závislosti na platformě (pod Windows)</strong>: užijte daný soubor se spouštěcím skriptem pro OmegaT (Omega.bat).</p>
 
@@ -137,12 +106,3 @@ org.omegat.plugins.tokenizer.SnowballTurkishTokenizer</p>
 <p>Copyright Marc Prior 2010-2011</p>
 
 </div>
-
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="Logo SourceForge.net" height="31" width="88"/></a><br/>
-
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML"/></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML"/></a>
-	</div>
-
-</div>
-
-</body></html>

@@ -1,38 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, 自由に使える翻訳メモリツール</title>
-  <meta name="generator" content="screem 0.10.2" />
-  
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  
-  <meta name="keywords" content="翻訳メモリ, TM, コンピューター支援翻訳, コンピューター利用翻訳, CAT, GPL, オープンソース" />
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css" />
-
-</head>
-
-
-
-<?php include '../../config/versions.txt'; ?>
-
-
-
-<body>
-
-<div id="container">
-			
-<div id="banner">
-
-<h1>OmegaT</h1>
-
-<p>自由に使える（GPL）翻訳メモリツール</p>
-
-</div>
-
-<div id="content">
+<div class="container">
 
 <h2>OmegaT 技術情報：トークナイザーの使用</h2>
 
@@ -48,7 +14,7 @@
 
 <p><strong>OmegaT バージョン 2.1.0 以前</strong>：現在のトークナイザーには対応していません。（バージョン 2.0.x から 2.1.0 の間でもトークナイザーを使用できますが、それには別バージョンのトークナイザーと別のインストール方法が必要です。） 最新ベータ版の OmegaT にアップグレードすることをお勧めします。</p>
 
-<p><strong>Windows 版 OmegaT</strong>：OmegaT (バージョンにかかわらず) でトークナイザーを使用するには、起動スクリプトファイルから起動する必要があります。起動スクリプトファイルは、Windows 版 OmegaT には付属していません。JRE 付きの Windows 版を使用している場合、<a href="../../resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a> ファイルをダウンロードしてください。JRE 無しの Windows 版を使用している場合は、<a href="../../resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a> ファイルをダウンロードしてください。ダウンロードしたファイルを、OmegaT メインフォルダー（OmegaT.jar ファイルが入っているフォルダー）に入れてください。</p>
+<p><strong>Windows 版 OmegaT</strong>：OmegaT (バージョンにかかわらず) でトークナイザーを使用するには、起動スクリプトファイルから起動する必要があります。起動スクリプトファイルは、Windows 版 OmegaT には付属していません。JRE 付きの Windows 版を使用している場合、<a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a> ファイルをダウンロードしてください。JRE 無しの Windows 版を使用している場合は、<a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a> ファイルをダウンロードしてください。ダウンロードしたファイルを、OmegaT メインフォルダー（OmegaT.jar ファイルが入っているフォルダー）に入れてください。</p>
 
 <p><strong>プラットフォームに依存しない版（Windows 上）</strong>：OmegaT 起動スクリプトファイル（OmegaT.bat）の場所を確認してください。</p>
 
@@ -112,12 +78,3 @@ href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-tokenizers/Ome
 <p>Copyright Marc Prior 2010-2011</p>
 
 </div>
-
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net ロゴ" height="31" width="88" /></a><br />
-
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML" /></a>
-	</div>
-
-</div>
-
-</body></html>

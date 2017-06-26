@@ -1,40 +1,4 @@
-<?php print "<?xml version=\"1.0\"?>" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, het gratis programma met vertaalgeheugen</title>
-  <meta name="generator" content="screem 0.10.2" />
-  
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  
-  <meta name="keywords" content="translation memory, TM, computer-aided translation, computer-assisted translation, CAT, GPL, open source, vertaalgeheugen, open bron" />
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css" />
-
-</head>
-
-
-
-<?php include '../../config/versions.txt'; ?>
-<?php include '../../config/website_progress.txt'; ?>
-
-
-
-<body>
-
 <div id="container">
-			
-<div id="banner">
-
-<h1>OmegaT</h1>
-
-<p>Het gratis (GPL) vertaalprogramma met vertaalgeheugens</p>
-
-</div>
-
-<div id="content">
 
 <h2>OmegaT HowTo: Vertalen van OmegaT naar uw taal</h2>
 
@@ -89,7 +53,7 @@ $endlink='</a>';?>
 
 <p>Het volledige pakket bevat de gebruikershandleiding, de gids Snelle start, het bronbestand voor de gebruikersinterface en het bestand LeesMij. Het minimale pakket bevat dezelfde bestanden als het volledige pakket, met uitzondering van de belangrijke gebruikershandleiding. U hoeft niet een compleet pakket te vertalen; u kunt, bijvoorbeeld, alleen de gebruikersinterface (Bundle.properties) vertalen, of alleen de gids Snelle start.</p>
 
-<p>If you wish to translate the <strong>OmegaT web pages</strong>, download the <a href="http://www.omegat.org/resources/omt_website.zip">website localization package</a>. (Opmerking: dit zijn de Engelstalige bestanden. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
+<p>If you wish to translate the <strong>OmegaT web pages</strong>, download the <a href="/resources/omt_website.zip">website localization package</a>. (Opmerking: dit zijn de Engelstalige bestanden. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
 
 <p>Localizations of the OmegaT user interface and documentation are generally updated in step with new releases of OmegaT.  </p>
 
@@ -101,7 +65,7 @@ $endlink='</a>';?>
 
 <p>Opties &gt; Bestandsfilters &gt; Selecteer "HTML en XHTML" &gt; Bewerken &gt; Toevoegen &gt; voer dan "*.php" in in de kolom "Patroon voor bronbestandsnaam".</p>
 
-<p>Finally, there is the <strong>Beginner's Tutorial</strong>, available <a href="http://www.omegat.org/en/tutorial/OmegaT_for_Beginners.odt">here</a>.</p>
+<p>Finally, there is the <strong>Beginner's Tutorial</strong>, available <a href="/tutorials/OmegaT_for_Beginners.odt">here</a>.</p>
 
 <p>5. Er kunnen vele oudere versies van de documentatie en/of vertaalgeheugens (TMX-bestanden) voor uw taal beschikbaar zijn die misschien handig zijn voor uw vertaling. Bestanden met vertaalgeheugens (TMX) van oudere vertalingen van OmegaT, de documentatie en de website kunnen worden gevonden in het gedeelte <a href="http://groups.yahoo.com/neo/groups/omegat/files/3- Localization files/Translation memory repository/">"Files" van de online gebruikersgroep</a>. Het is het ook waard om te vragen op de <a href="https://lists.sourceforge.net/lists/listinfo/omegat-l10n">lijst met vertalers</a> (OmT-l10n) of iemand misschien referentiemateriaal heeft dat bruikbaar is voor uw vertaling.</p>
 
@@ -147,11 +111,3 @@ $endlink='</a>';?>
 
 </div>
 
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br />
-
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Geldige XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Geldige XHTML" /></a>
-	</div>
-
-</div>
-
-</body></html>

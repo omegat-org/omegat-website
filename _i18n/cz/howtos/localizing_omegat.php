@@ -75,7 +75,7 @@ $endlink='</a>';?><?php echo $link ?>„minimální“ („Minimal“) balík<?p
 
 <p>Plný balík obsahuje uživatelskou příručku, rychlou úvodní příručku, zdrojový balíček uživatelského rozhraní a soubor čtimě (readme). Minimální balík obsahuje stejné soubory jako plný balík, mimo hlavní uživatelskou příručku. Nemusíte překládat celý balík; můžete například přeložit jen uživatelské rozhraní (Bundle.properties), nebo jen stručný úvodní tutoriál.</p>
 
-<p>Pokud chcete překládat webové stránky OmegaT, stáhněte si <a href="http://www.omegat.org/resources/omt_website.zip">lokalizační balík webové prezentace</a>. (Poznámka: toto jsou anglické soubory. Pokud upřednostňujete překlad z jiného jazyka, do kterého byla aplikace OmegaT již lokalizována, prosím kontaktujte <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmastera OmegaT</a>).</p>
+<p>Pokud chcete překládat webové stránky OmegaT, stáhněte si <a href="/resources/omt_website.zip">lokalizační balík webové prezentace</a>. (Poznámka: toto jsou anglické soubory. Pokud upřednostňujete překlad z jiného jazyka, do kterého byla aplikace OmegaT již lokalizována, prosím kontaktujte <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmastera OmegaT</a>).</p>
 
 <p>Webová prezentace OmegaT obsahuje soubory ve formátu HTML a od roku 2011 také v PHP. Aby šlo překládat PHP v OmegaT, musíte registrovat koncovkku .php ve filtru XHTML následovně:</p>
 

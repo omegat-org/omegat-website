@@ -1,39 +1,4 @@
-<?php print "<?xml version=\"1.0\"?>" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, het gratis programma met vertaalgeheugen</title>
-  <meta name="generator" content="screem 0.10.2" />
-  
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  
-  <meta name="keywords" content="translation memory, TM, computer-aided translation, computer-assisted translation, CAT, GPL, open source, vertaalgeheugen, open bron" />
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css" />
-
-</head>
-
-
-
-<?php include '../../config/versions.txt'; ?>
-
-
-
-<body>
-
-<div id="container">
-			
-<div id="banner">
-
-<h1>OmegaT</h1>
-
-<p>Het gratis (GPL) vertaalprogramma met vertaalgeheugens</p>
-
-</div>
-
-<div id="content">
+<div class="container">
 
 <h2>OmegaT HowTo: De OmegaT tokenizer gebruiken</h2>
 
@@ -49,7 +14,7 @@
 
 <p><strong>OmegaT versie 2.1.0 en ouder</strong>: de huidige Tokenizer is niet compatibel met deze versies. (De Tokenizer kan worden gebruikt met de versies 2.0.x en 2.1.0, maar dat vereist zowel een andere versie van de Tokenizer, als ook een andere procedure voor de installatie.) Gebruikers worden geadviseerd bij te werken naar de laatste bèta versie van OmegaT.</p>
 
-<p><strong>Windows-versies van OmegaT</strong>: om OmegaT (elke versie) te kunnen laten werken met de Tokenizer, moet die worden gestart vanuit een opstartbestand. Een bestand voor opstarten wordt niet meegeleverd met de versies van OmegaT voor Windows. Indien u de versie van Windows met JRE gebruikt, download het bestand <a href="../../resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Indien u de versie van Windows zonder JRE gebruikt, download dan het bestand <a href="../../resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Plaats, na het downloaden, het bestand in de hoofdmap van OmegaT (de map die het bestand OmegaT.jar bevat).</p>
+<p><strong>Windows-versies van OmegaT</strong>: om OmegaT (elke versie) te kunnen laten werken met de Tokenizer, moet die worden gestart vanuit een opstartbestand. Een bestand voor opstarten wordt niet meegeleverd met de versies van OmegaT voor Windows. Indien u de versie van Windows met JRE gebruikt, download het bestand <a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Indien u de versie van Windows zonder JRE gebruikt, download dan het bestand <a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Plaats, na het downloaden, het bestand in de hoofdmap van OmegaT (de map die het bestand OmegaT.jar bevat).</p>
 
 <p><strong>Platform-neutrale versie (op Windows)</strong>: lokaliseer uw bestand om OmegaT op te starten (OmegaT.bat).</p>
 
@@ -146,11 +111,3 @@ org.omegat.plugins.tokenizer.SnowballTurkishTokenizer</p>
 
 </div>
 
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br />
-
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Geldige XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Geldige XHTML" /></a>
-	</div>
-
-</div>
-
-</body></html>

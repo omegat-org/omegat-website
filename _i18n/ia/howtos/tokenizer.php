@@ -1,38 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, le application gratuite pro memoria de traduction</title>
-  <meta name="generator" content="screem 0.10.2" />
-  
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  
-  <meta name="keywords" content="translation memory, TM, computer-aided translation, computer-assisted translation, CAT, GPL, open source" />
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css" />
-
-</head>
-
-
-
-<?php include '../../config/versions.txt'; ?>
-
-
-
-<body>
-
-<div id="container">
-			
-<div id="banner">
-
-<h1>OmegaT</h1>
-
-<p>OmegaT, le instrumento (GPL) gratuite pro memoria de traduction</p>
-
-</div>
-
-<div id="content">
+<div class="container">
 
 <h2>Guida de OmegaT: Using the OmegaT tokenizer</h2>
 
@@ -48,7 +14,7 @@
 
 <p><strong>OmegaT version 2.1.0 e precedente</strong>: le actual tokenizer non es compatibile con iste versiones. (Le tokenizer pote esser usate con le versiones 2.0.x e 2.1.0, ma isto necessita ambe un differente version del tokenizer, e un differente procedura de installation.) Le usatores es avisate pro promover al ultime version beta de OmegaT.</p>
 
-<p><strong>Versiones Windows de OmegaT</strong>:pro usar OmegaT (omne version) con le tokenizer, illo debe esser lanceate ab un file script de lanceamento. Un file script de lanceamento non es supplite con le versiones de OmegaT pro Windows. Si tu es usante le version Windows con JRE, discarga le file <a href="../../resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; si tu es usante le version Windows sin JRE, discarga le file <a href="../../resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Depost le discargamento, pone le file in le plica principal de OmegaT (le plica continente le file OmegaT.jar).</p>
+<p><strong>Versiones Windows de OmegaT</strong>:pro usar OmegaT (omne version) con le tokenizer, illo debe esser lanceate ab un file script de lanceamento. Un file script de lanceamento non es supplite con le versiones de OmegaT pro Windows. Si tu es usante le version Windows con JRE, discarga le file <a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; si tu es usante le version Windows sin JRE, discarga le file <a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Depost le discargamento, pone le file in le plica principal de OmegaT (le plica continente le file OmegaT.jar).</p>
 
 <p><strong>Le version Platteforma neutre (sur Windows)</strong>: loca tu file script de lanceamento de OmegaT (OmegaT.bat).</p>
 
@@ -142,11 +108,3 @@ org.omegat.plugins.tokenizer.SnowballTurkishTokenizer</p>
 
 </div>
 
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br />
-
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML" /></a>
-	</div>
-
-</div>
-
-</body></html>

@@ -81,7 +81,7 @@ href="http://sourceforge.net/projects/omegat/files/Other%20-%20Localization%20pr
 <p>Le pacchetto complete contine le 'Manual del usator', le 'Manual de initio rapide', le 'Equipamento de ressources de Interfacie del usator' e le file 'Lege me'. Le pacchetto minime contine le mesme files del pacchetto complete, exception facite pro le manual principal del usator. Tu non debe traducer un pacchetto complete; il es possibile, per exemplo, render solmente le Interfacie del usator (equipamento), o solmente le Guida de initio rapide.
 </p>
 
-<p>Si tu vole render le paginas TTT de OmegaT, discarga le <a href="http://www.omegat.org/resources/omt_website.zip">pacchetto de localisation del sito TTT</a>.. (Nota: istos son files in lingua anglese. Si tu prefere render ex un altere lingua, in le qual OmegaT esseva jam localisate, que tu stabili contacto con le <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmaster di OmegaT</a>.)</p>
+<p>Si tu vole render le paginas TTT de OmegaT, discarga le <a href="/resources/omt_website.zip">pacchetto de localisation del sito TTT</a>.. (Nota: istos son files in lingua anglese. Si tu prefere render ex un altere lingua, in le qual OmegaT esseva jam localisate, que tu stabili contacto con le <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmaster di OmegaT</a>.)</p>
 
 <p>Le sito de OmegaT include files in HTML e, a partir del 2011, anque in formato PHP. Pro render isto ultime in OmegaT, es necesse registrar le extension .php con le filtro XHTML como seque:</p>
 

@@ -1,32 +1,4 @@
-<?php print "<?xml version=\"1.0\"?>" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  
-  <title>OmegaT, a ferramenta de memoria de traduci&oacute;n libre</title>
-  <meta name="generator" content="screem 0.10.2" />
-  
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  
-  <meta name="keywords" content="translation memory, TM, computer-aided translation, computer-assisted translation, CAT, GPL, open source" />
-
-  
-<link rel="stylesheet" type="text/css" href="../../config/howto.css" />
-
-<META http-equiv="content-type" content="text/html; charset=utf-8">
-</head><?php include '../../config/versions.txt'; ?><body>
-
-<div id="container">
-			
-<div id="banner">
-
-<h1>OmegaT</h1>
-
-<p>A ferramenta de memoria de traduci&oacute;n libre (GPL)</p>
-
-</div>
-
-<div id="content">
+<div class="container">
 
 <h2>Gu&iacute;a de OmegaT: Usar o tokenizer de OmegaT</h2>
 
@@ -42,7 +14,7 @@
 
 <p><strong>Versi&oacute;n 2.1.0 de OmegaT e anteriores</strong>: o tokenizer actual non &eacute; compatible con estas versi&oacute;ns. (&Eacute; posible empregar o tokenizer coas versi&oacute;ns 2.0.X e 2.1.0, pero &eacute; necesario empregar unha versi&oacute;n do tokenizer e un m&eacute;todo de instalaci&oacute;n distintos.) Recomendamos aos usuarios que actualicen OmegaT &aacute; &uacute;ltima versi&oacute;n beta.</p>
 
-<p><strong>Versi&oacute;ns de Windows de OmegaT</strong>: para poder empregar o tokenizer en OmegaT, ser&aacute; necesario que o execute dende un ficheiro de script de inicio. Non se incl&uacute;e este ficheiro nas versi&oacute;ns de OmegaT de Windows. Se est&aacute; usando a versi&oacute;n de Windows con JRE, descargue o ficheiro <a href="../../resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; pola contra, se est&aacute; empregando a versi&oacute;n de Windows sen JRE, descargue o ficheiro <a href="../../resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Unha vez finalice a descarga, sit&uacute;e o arquivo no cartafol principal de OmegaT (o cartafol no que se atopa o ficheiro OmegaT.jar).</p>
+<p><strong>Versi&oacute;ns de Windows de OmegaT</strong>: para poder empregar o tokenizer en OmegaT, ser&aacute; necesario que o execute dende un ficheiro de script de inicio. Non se incl&uacute;e este ficheiro nas versi&oacute;ns de OmegaT de Windows. Se est&aacute; usando a versi&oacute;n de Windows con JRE, descargue o ficheiro <a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; pola contra, se est&aacute; empregando a versi&oacute;n de Windows sen JRE, descargue o ficheiro <a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Unha vez finalice a descarga, sit&uacute;e o arquivo no cartafol principal de OmegaT (o cartafol no que se atopa o ficheiro OmegaT.jar).</p>
 
 <p><strong>Versi&oacute;n independente de plataforma (en Windows)</strong>: localice o ficheiro de script de inicio (OmegaT.bat).</p>
 
@@ -106,9 +78,3 @@ $endlink='</a>';?> <?php echo $link ?>paquete zip que cont&eacute;n o tokenizer 
 <p>Copyright Marc Prior 2010-2011</p>
 
 </div>
-
-<div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br /> <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Valid XHTML" /></a></div>
-
-</div>
-
-</body></html>
