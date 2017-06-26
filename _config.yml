@@ -48,7 +48,7 @@ google_analytics: UA-87327-16
 # i18n plugin, "en" is listed twice to force jekyll-multiple-languages-plugin
 # to create a "en/" folder, like the original OmegaT website.
 languages: [ "en" , "fr" ,"ar", "ca", "cz", "de", "el", "es", "gl", "id", "ia", "it", "ko", "hu", "ja", "nl", "pl", "br", "pt", "ru", "sq", "sk", "si", "hr", "fi", "sv", "zh_CN", "zh_TW", "en" ]
-exclude_from_localizations: [ "android-chrome-192x192.png", "android-chrome-256x256.png", "apple-touch-icon.png", "assets", "browserconfig.xml", "CNAME", "css", "favicon-16x16.png", "favicon-32x32.png", "favicon.ico", "favicon.png", "feed.xml", "files", "fonts", "img", "js", "LICENSE", "manifest.json", "mstile-150x150.png", "omegatk", "robots.txt", "safari-pinned-tab.svg", "sitemap.xml", "tutorial" ]
+exclude_from_localizations: [ "android-chrome-192x192.png", "android-chrome-256x256.png", "apple-touch-icon.png", "assets", "browserconfig.xml", "CNAME", "css", "favicon-16x16.png", "favicon-32x32.png", "favicon.ico", "favicon.png", "feed.xml", "files", "fonts", "img", "js", "LICENSE", "manifest.json", "mstile-150x150.png", "omegatk", "Rakefile", "robots.txt", "safari-pinned-tab.svg", "sitemap.xml", "tutorial" ]
 
 # Build settings
 markdown: kramdown
@@ -75,5 +75,6 @@ plugins_dir:
 exclude:
   - README
   - LICENSE
+  - Rakefile
   - Gemfile
   - Gemfile.lock
