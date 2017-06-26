@@ -19,9 +19,6 @@ description: > # this means to ignore newlines until "baseurl:"
   OmegaT is a free open-source translation memory application written in Java.
   It is a tool intended for professional translators.
 
-# the subpath of your site, e.g. /blog
-baseurl: ""
-
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "http://omegat.org"
 baseurl: ""
@@ -62,8 +59,11 @@ sass:
 
 assets:
   digest: false
+  prefix: "/assets"
 
-gems:
+plugins_dir:
+  - jekyll-sitemap
+  #- jekyll-feed
   - uglifier
   # https://github.com/jekyll/jekyll-assets
   - jekyll-assets
@@ -71,8 +71,6 @@ gems:
   - jekyll-redirect-from
   # https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin
   - jekyll-multiple-languages-plugin
-  - jekyll-sitemap
-    #- jekyll-feed
 
 exclude:
   - README
