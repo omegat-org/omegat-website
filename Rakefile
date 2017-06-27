@@ -1,6 +1,6 @@
 require 'html-proofer'
 
-$outputDir = "../staging"
+$outputDir = "_site"
 $serveOpts = "--host 0.0.0.0 --port 4000"
 $testOpts = {
   # Ignore errors "linking to internal hash # that does not exist"
