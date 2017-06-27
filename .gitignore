@@ -1,5 +1,6 @@
 .asset-cache
 _site
+_gh-pages
 _mess
 .sass-cache
 .jekyll-metadata
