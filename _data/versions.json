@@ -1,10 +1,10 @@
 {
     "standard": {
-        "name": "OmegaT 3.6.0 update 6",
-        "version": "3.6.0_06"
+        "name": "OmegaT 3.6.0 update 7",
+        "version": "3.6.0_07"
     },
     "latest": {
-        "name": "OmegaT 4.1.2",
-        "version": "4.1.2_Beta"
+        "name": "OmegaT 4.1.2 update 1",
+        "version": "4.1.2_01"
     }
 }
