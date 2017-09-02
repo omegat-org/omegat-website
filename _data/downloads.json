@@ -77,6 +77,11 @@
             "noInfo": true,
             "fileName": "Linux_64.tar.bz2"
         }, {
+            "id": "latest_linux_jre",
+            "name": "linux_jre",
+            "noInfo": true,
+            "fileName": "Linux.tar.bz2"
+        }, {
             "id": "latest_linux_nojre",
             "name": "nojre",
             "noInfo": true,
