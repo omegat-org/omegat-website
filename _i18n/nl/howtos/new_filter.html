@@ -1,101 +1,57 @@
 <div class="container">
-
-<h2>OmegaT HowTo: Maken van een a nieuw bestandsfilter</h2>
-
-<p>Deze HowTo legt uit hoe een nieuw bestandsfilter kan worden gemaakt om te gebruiken met OmegaT door het beschrijven van het maken van een rudimentair bestandsfilter voor de indeling TMX. Hoewel het misschien vreemd lijkt om TMX-bestanden te willen vertalen (de gebruikelijke reden voor het maken van een bestandsfilter), heeft het toevoegen van een TMX-filter het interessante effect dat het TMX-bestanden op elke locatie inschakelt om te kunnen worden doorzocht vanuit elk project van OmegaT met behulp van de functie &quot;Zoeken in bestanden&quot;, iets dat niet mogelijk is in het standaard gebouwde programma OmegaT.</p>
-
-<p>Voor het compileren van de broncode van OmegaT, bekijk <a href="compiling_from_source.html">Compiling OmegaT from Source HowTo</a>.</p>
-
-<p>Selecteer een bestaand filter in een indeling die soortgelijk is aan dat voor het nieuwe filter. In dit voorbeeld is het filter Help &amp; handleiding geselecteerd als de basis.</p>
-
-<p>Localiseer de map src/org/omegat/filters3/xml en maak een copy van de submap /helpandmanual, en noem die /tmx. In deze laatste folder, hernoem de twee bestanden HelpandManualDialect.java en HelpandManualFilter.java respectievelijk naar TmxDialect.java en TmxFilter.java.</p>
-
-<p>Open de bestanden TMXDialect.java en TMX filter in een tekstbewerker. Zoek, in beide bestanden, naar (overeenkomende Hoofd-/kleine letters) en vervang door:</p>
-
-<p>&quot;helpandmanual&quot; door &quot;tmx&quot;<br/> &quot;HelpAndManual&quot; door &quot;TMX&quot;<br/> &quot;HELPANDMANUAL&quot; door &quot;TMX&quot;<br/> &quot;Help &amp; Manual&quot; door &quot;TMX&quot;<br/> &quot;Help&amp;Manual&quot; door &quot;TMX&quot;</p>
-
-<p>Identificeer de tag(s) voor het alinea-niveau voor uw nieuwe bestandsindeling Kijk naar een voorbeeldbestand in de tekstverwerker om te zien wat de tags voor de alinea's zouden moeten zijn. In TMX is de tag voor het alinea-niveau, die overeenkomt met een segment, &quot;tu&quot;.</p>
-
-<p>In TMXDialect.java:</p>
-
-<p>Definieer de tags voor de alinea, in dit gevall door te wijzigen de regel:</p>
-
-<p>   defineParagraphTags(new String[] { &quot;caption&quot;, &quot;config-value&quot;, &quot;variable&quot;, &quot;para&quot;, &quot;title&quot;, &quot;keyword&quot;,
-                &quot;li&quot;, });</p>
-
-<p>naar</p>
-
-<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
-
-
-<p>U kunt deze regel verwijderen:</p>
-
-<p>    defineShortcut(&quot;link&quot;, &quot;li&quot;);</p>
-
-<p>omdat die niet relevant is voor TMX, hoewel het nieuwe filter nog steeds zal werken als u hem niet verwijderd.</p>
-
-<p>U kunt tags voor buiten het gebied definiëren. Deze definiëren subsegmenten die buiten het segment waarin zij zijn opgenomen worden weergegeven (voetnoten zijn een goed voorbeeld). Voeg, om dit te doen voor het filter TMX, de regel</p>
-
-<p>   defineOutOfTurnTags(new String[] { &quot;sub&quot;, });</p>
-
-<p>toe onder de regel</p>
-
-<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
-
-<p>Het filter zal echter nog steeds werken als u dit niet doet.</p>
-
-<p>Onder deze regels kunt u ook de volgende code toevoegen:</p>
-
-<p>   defineIntactTags(new String[]<br/>
-   {<br/>
-   &quot;header&quot;,<br/>
-   &quot;prop&quot;,<br/>
-   &quot;ph&quot;,<br/>
-   &quot;bpt&quot;,<br/>
-   &quot;ept&quot;,<br/>
-   &quot;it&quot;,<br/>
-   &quot;ut&quot;,<br/>
-   });</p>
-
-<p>Dit zal de weergave van de TMX-bestanden netter maken, maar opnieuw, het is niet absoluut essentieel.</p>
-
-<p>In TMXFilter.java:</p>
-
-<p>Wijzig de bestandsextensie, in dit geval naar .tmx, door de regel:</p>
-
-<p>   public Instance[] getDefaultInstances() {<br/>
-   return new Instance[] { new Instance(&quot;*.xml&quot;, null, null), new Instance(&quot;*.hmxp&quot;, null, null), };</p>
-
-<p>naar:</p>
-
-<p>   public Instance[] getDefaultInstances() {<br/>
-   return new Instance[] { new Instance(&quot;*.tmx&quot;, null, null), };</p>
-
-<p>In de map /src/org/omegat, open het bestand Bundle.properties in een tekstbewerker en zoek de regels</p>
-
-<p>   # HelpAndManualFilter.java<br/>
-   HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
-
-<p>Voeg onder deze regels de volgende regels in</p>
-
-<p>   # TMXFilter.java<br/>
-   TMX_FILTER_NAME=TMX files</p>
-
-<p>(Als u OmegaT wilt starten met een andere taal voor de gebruikersinterface dan Engels, maak dezelfde wijzigingen dan in het relevante vertaalde bestand Bundle.properties.)</p>
-
-<p>In de hoofdmap van de broncode, open het bestand manifest-template.mf in een tekstbewerker. Zoek de regels:</p>
-
-<p>   Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
-   OmegaT-Plugin: filter</p>
-
-<p>Voeg onder deze regels de volgende regels in</p>
-
-<p>   Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
-   OmegaT-Plugin: filter</p>
-
-<p>Compileeer zoals beschreven in de Compiling OmegaT from Source HowTo. Start de nieuw gecompileerde versie. Controleer in Opties &gt; Bestandsfilters of het nieuwe filter aanwezig is. U kunt een TMX-bestand in de map /source van een project plaatsen, of (nuttiger) een bewerking Tekst zoeken &gt; Zoeken in bestanden uitvoeren op TMX-bestanden om te controleren of het werkt.</p>
-
-<p>Copyright Marc Prior 2008-2011</p>
-
+  <p>Deze HowTo legt uit hoe een nieuw bestandsfilter kan worden gemaakt om te gebruiken met OmegaT door het beschrijven van het maken van een rudimentair bestandsfilter voor de indeling TMX. Hoewel het misschien vreemd lijkt om TMX-bestanden te willen vertalen (de gebruikelijke reden voor het maken van een bestandsfilter), heeft het toevoegen van een TMX-filter het interessante effect dat het TMX-bestanden op elke locatie inschakelt om te kunnen worden doorzocht vanuit elk project van OmegaT met behulp van de functie "Zoeken in bestanden", iets dat niet mogelijk is in het standaard gebouwde programma OmegaT.</p>
+  <p>Voor het compileren van de broncode van OmegaT, bekijk <a href="compiling_from_source.html">Compiling OmegaT from Source HowTo</a>.</p>
+  <p>Selecteer een bestaand filter in een indeling die soortgelijk is aan dat voor het nieuwe filter. In dit voorbeeld is het filter Help &amp; handleiding geselecteerd als de basis. </p>
+  <p>Localiseer de map src/org/omegat/filters3/xml en maak een copy van de submap /helpandmanual, en noem die /tmx. In deze laatste folder, hernoem de twee bestanden HelpandManualDialect.java en HelpandManualFilter.java respectievelijk naar TmxDialect.java en TmxFilter.java.</p>
+  <p>Open de bestanden TMXDialect.java en TMX filter in een tekstbewerker. Zoek, in beide bestanden, naar (overeenkomende Hoofd-/kleine letters) en vervang door:</p>
+  <p>"helpandmanual" door "tmx"<br/> "HelpAndManual" door "TMX"<br/> "HELPANDMANUAL" door "TMX"<br/> "Help &amp; Manual" door "TMX"<br/> "Help&amp;Manual" door "TMX"</p>
+  <p>Identificeer de tag(s) voor het alinea-niveau voor uw nieuwe bestandsindeling Kijk naar een voorbeeldbestand in de tekstverwerker om te zien wat de tags voor de alinea's zouden moeten zijn. In TMX is de tag voor het alinea-niveau, die overeenkomt met een segment, "tu".</p>
+  <p>In TMXDialect.java:</p>
+  <p>Definieer de tags voor de alinea, in dit gevall door te wijzigen de regel:</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "caption", "config-value", "variable", "para", "title", "keyword",
+                "li", });</p>
+  <p>to</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "tu", });</p>
+  <p>U kunt deze regel verwijderen:</p>
+  <p>  &nbsp;&nbsp;&nbsp;defineShortcut("link", "li");</p>
+  <p>omdat die niet relevant is voor TMX, hoewel het nieuwe filter nog steeds zal werken als u hem niet verwijderd.</p>
+  <p>U kunt tags voor buiten het gebied definiëren. Deze definiëren subsegmenten die buiten het segment waarin zij zijn opgenomen worden weergegeven (voetnoten zijn een goed voorbeeld). Voeg, om dit te doen voor het filter TMX, de regel </p>
+  <p>&nbsp;&nbsp;&nbsp;defineOutOfTurnTags(new String[] { "sub", });</p>
+  <p>toe onder de regel</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "tu", });</p>
+  <p>Het filter zal echter nog steeds werken als u dit niet doet.</p>
+  <p>Onder deze regels kunt u ook de volgende code toevoegen:</p>
+  <p>&nbsp;&nbsp;&nbsp;defineIntactTags(new String[]<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;"header",<br/>
+&nbsp;&nbsp;&nbsp;"prop",<br/>
+&nbsp;&nbsp;&nbsp;"ph",<br/>
+&nbsp;&nbsp;&nbsp;"bpt",<br/>
+&nbsp;&nbsp;&nbsp;"ept",<br/>
+&nbsp;&nbsp;&nbsp;"it",<br/>
+&nbsp;&nbsp;&nbsp;"ut",<br/>
+&nbsp;&nbsp;&nbsp;});</p>
+  <p>Dit zal de weergave van de TMX-bestanden netter maken, maar opnieuw, het is niet absoluut essentieel.</p>
+  <p>In TMXFilter.java:</p>
+  <p>Wijzig de bestandsextensie, in dit geval naar .tmx, door de regel:</p>
+  <p>&nbsp;&nbsp;&nbsp;public Instance[] getDefaultInstances() {<br/>
+&nbsp;&nbsp;&nbsp;return new Instance[] { new Instance("*.xml", null, null), new Instance("*.hmxp", null, null), };</p>
+  <p>naar:</p>
+  <p>&nbsp;&nbsp;&nbsp;public Instance[] getDefaultInstances() {<br/>
+&nbsp;&nbsp;&nbsp;return new Instance[] { new Instance("*.tmx", null, null), };</p>
+  <p>In de map /src/org/omegat, open het bestand Bundle.properties in een tekstbewerker en zoek de regels</p>
+  <p>&nbsp;&nbsp;&nbsp;# HelpAndManualFilter.java<br/>
+&nbsp;&nbsp;&nbsp;HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+  <p>Voeg onder deze regels de volgende regels in </p>
+  <p>&nbsp;&nbsp;&nbsp;# TMXFilter.java<br/>
+&nbsp;&nbsp;&nbsp;TMX_FILTER_NAME=TMX files</p>
+  <p>(Als u OmegaT wilt starten met een andere taal voor de gebruikersinterface dan Engels, maak dezelfde wijzigingen dan in het relevante vertaalde bestand Bundle.properties.)</p>
+  <p>In de hoofdmap van de broncode, open het bestand manifest-template.mf in een tekstbewerker. Zoek naar de regels:</p>
+  <p>&nbsp;&nbsp;&nbsp;Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
+&nbsp;&nbsp;&nbsp;OmegaT-Plugin: filter</p>
+  <p>Voeg onder deze regels de volgende regels in</p>
+  <p>&nbsp;&nbsp;&nbsp;Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
+&nbsp;&nbsp;&nbsp;OmegaT-Plugin: filter</p>
+  <p>Compileeer zoals beschreven in de Compiling OmegaT from Source HowTo. Start de nieuw gecompileerde versie. Controleer in Opties &gt; Bestandsfilters of het nieuwe filter aanwezig is. U kunt een TMX-bestand in de map /source van een project plaatsen, of (nuttiger) een bewerking Tekst zoeken &gt; Zoeken in bestanden uitvoeren op TMX-bestanden om te controleren of het werkt.</p>
+  <p>Copyright Marc Prior 2008-2011</p>
 </div>
-

@@ -1,8 +1,7 @@
+
 <div class="container">
 
-<h2>OmegaT HowTo: <br/>De functie voor exporteren van tekst in OmegaT gebruiken (interface voor scripten).</h2>
-
-<p>Sinds versie 2.0.1 heeft OmegaT een functie voor het exporteren van tekst. Deze HOWTO beschrijft de functie en mogelijk gebruik er voor. In aanvulling daarop bevat het pakket <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> enkele zeer eenvoudige tcl/tk-scripts die zijn bedoeld om het gebruik van de functie te illustreren.</p>
+<p>Sinds versie 2.0.1 heeft OmegaT een functie voor het exporteren van tekst. Deze HOWTO beschrijft de functie en mogelijk gebruik er voor. In aanvulling daarop bevat het pakket <a href="{{ '/files/omegatk/te-scripts.zip' | prepend: site.baseurl_root }}">te-scripts.zip</a> enkele zeer eenvoudige tcl/tk-scripts die zijn bedoeld om het gebruik van de functie te illustreren.</p>
 
 <h3>Doel</h3>
 
@@ -18,7 +17,7 @@
 
 <p>Opties &gt; Bewerken (gedrag)</p>
 
-<p>Selecteer dan het vak &quot; Segment naar tekstbestanden exporteren&quot;.</p>
+<p>Selecteer dan het vak " Segment naar tekstbestanden exporteren".</p>
 
 <p>De bestanden verschijnen in de submap /script in de map voor de OmegaT gebruikersbestanden (voor de locatie van de map voor de gebruikersbestanden voor OmegaT op uw besturingssysteem, bekijk de Gebruikershandleiding (F1 binnen OmegaT) &gt; Bestanden en mappen &gt; Gebruikersbestanden):</p>
 
@@ -32,11 +31,11 @@
 
 <p>Elk script voert essentieel slechts één functie uit om de werking van de code in het scripte duidelijker te maken. Als meerdere functies in de praktijk tegelijkertijd zouden worden gebruikt, zou het meer efficiënt zijn om ze te combineren in één enkel script.</p>
 
-<p>De voorbeeldscripts die <a href="../../omegatk/te-scripts.zip">hier</a> worden verschaft starten allemaal een venster, maar scripts die functies uitvoeren op de achtergrond zijn denkbaar.</p>
+<p>De voorbeeldscripts die <a href="{{ '/files/omegatk/te-scripts.zip' | prepend: site.baseurl_root }}">hier</a> worden verschaft starten allemaal een venster, maar scripts die functies uitvoeren op de achtergrond zijn denkbaar.</p>
 
 <p>Een script starten:</p>
 
-<p>Kopieer het script in de map van OmegaT &quot;script&quot;, d.i. de map die source.txt etc. bevat. (De scripts kunnen in principe overal geplaatst worden, maar moeten dan worden bewerkt door aanvulling van het pad naar de scriptbestanden.)</p>
+<p>Kopieer het script in de map van OmegaT "script", d.i. de map die source.txt etc. bevat. (De scripts kunnen in principe overal geplaatst worden, maar moeten dan worden bewerkt door aanvulling van het pad naar de scriptbestanden.)</p>
 
 <p>Afhankelijk van hoe uw systeem is geconfigureerd, zou het mogelijk kunnen zijn om de scripts eenvoudigweg te starten door er met de muis op te klikken. Als alternatief:</p>
 
@@ -46,7 +45,7 @@
 
 <p>cd C:\Documents and Settings\Gebruikersnaam\Application Data\OmegaT\script</p>
 
-<p>Start het script met &quot;wish&quot; gevolgd door de bestandsnaam van het script, bijv.:</p>
+<p>Start het script met "wish" gevolgd door de bestandsnaam van het script, bijv.:</p>
 
 <p>wish te-basic-source.tcl</p>
 
@@ -64,7 +63,7 @@
 
 <p>Naast het weergeven van de brontekst verschaft dit script een invoervak waarin de gebruiker een tekenreeks in kan voeren (bijv. een woord). Wanneer een segment in OmegaT dat deze tekenreeks bevat wordt geopend, geeft het script een waarschuwing. De waarschuwing heeft de vorm van het in geel accentueren van de tekst in het venster van het script. In aanvulling daarop, indien ondersteund door de hardware en het besturingssysteem (dit is niet altijd het geval), zal een biep klinken.</p>
 
-<p>Een voorbeeld van het gebruik van deze functie is als volgt. De vertaalster heeft een tekst die de frase &quot;abc&quot; bevat en heeft een eerste uitwerking ervan voltooid, waarin &quot;abc&quot; is vertaald als &quot;abc&quot;. Zij ontdekt dan dat &quot;abc&quot; zou moeten zijn vertaald als &quot;def&quot;. In plaats van te zoeken naar alle items van &quot;abc&quot; en die te corrigeren vooraleer door te gaan (wat mogelijk is, maar nadelen heeft), zou zij eenvoudigweg kunnen beslissen om ze te corrigeren tijdens de doorgang voor de volgende versie. In dat geval zou een &quot;herinnering&quot; in elk relevant segment van pas kunnen komen.</p>
+<p>Een voorbeeld van het gebruik van deze functie is als volgt. De vertaalster heeft een tekst die de frase "abc" bevat en heeft een eerste uitwerking ervan voltooid, waarin "abc" is vertaald als "abc". Zij ontdekt dan dat "abc" zou moeten zijn vertaald als "def". In plaats van te zoeken naar alle items van "abc" en die te corrigeren vooraleer door te gaan (wat mogelijk is, maar nadelen heeft), zou zij eenvoudigweg kunnen beslissen om ze te corrigeren tijdens de doorgang voor de volgende versie. In dat geval zou een "herinnering" in elk relevant segment van pas kunnen komen.</p>
 
 <p><strong>te-notags</strong></p>
 
@@ -98,9 +97,8 @@
 <a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
 <a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
 
-<p>Als u serieus van plan bent tcl/tk te leren, wordt &quot;Practical Programming in Tcl and Tk&quot; door Brent Welch, ISBN: 0-13-038560-3 sterk aanbevolen. Dit is waarschijnlijk een beetje te technisch voor volledige nieuwkomers in programmeren, maar na het doorwerken van één van de online handleidingen zouden zij het nuttig kunnen vinden.</p>
+<p>Als u serieus van plan bent tcl/tk te leren, wordt "Practical Programming in Tcl and Tk" door Brent Welch, ISBN: 0-13-038560-3 sterk aanbevolen. Dit is waarschijnlijk een beetje te technisch voor volledige nieuwkomers in programmeren, maar na het doorwerken van één van de online handleidingen zouden zij het nuttig kunnen vinden.</p>
 
 <p>Copyright Marc Prior 2009-2011</p>
 
 </div>
-

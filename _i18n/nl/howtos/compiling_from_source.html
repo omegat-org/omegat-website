@@ -1,125 +1,59 @@
 <div class="container">
-
-<h2>OmegaT HowTo: <br/>OmegaT compileren vanuit de broncode</h2>
-
-
-<p>Deze HOWTO beschrijft hoe OmegaT vanuit de broncode kan worden gecompileerd.</p>
-
-<p>OmegaT wordt verschaft terwijl het al is gecompileerd voor een aantal platformen, inclusief een versie voor meerdere platformen. Gebruikers hoeven dan ook OmegaT niet zelf te compileren. Compileren van OmegaT is relevant voor ontwikkelaars die hun eigen aanpassingen in de code willen maken.</p>
-
-<p><strong>1. Download en installeer de Java Development Kit (JDK) en Apache Ant</strong></p>
-
-<p>Verschillende programma's kunnen worden gebruikt om de broncode opnieuw te compileren nadat u die hebt aangepast, maar een van de meest handige is <a href="http://ant.apache.org">Apache Ant</a>. De <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK) is ook vereist.</p>
-
-<p>Afhankelijk van hoe u de Java Development Kit installeert, zou u misschien uw attribuut &quot;JAVA_HOME&quot; moeten wijzigen om het laten functioneren met Ant.</p>
-
-<p><strong>2. Compileer de code</strong></p>
-
-<p>De hieronder aangegeven mapnamen dienen slechts ter illustratie; versienummers zullen wijzigen.</p>
-
-<p>Open een venster voor de opdrachtregel (console, DOS-venster). Wijzig de map naar de hoofdmap in de OmegaT borncode (de map waarin het bestand build.xml staat), bijv.</p>
-
-<p style="font-family: monospace;">cd C:\Mijn documenten\MynOmegat\OmegaT_2.2.3_Beta_Source</p>
-
-<p>Voer, vanuit deze map, Apache Ant uit door de Ant executable in te voeren. Het zou nodig kunnen zijn het volledige pad in te voeren, bijv.:</p>
-
-<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
-
-<p>Als de code succesvol compileert, zult u het bericht &quot;BUILD SUCCESSFUL&quot; zien. Indien niet zullen foutberichten worden weergegeven die (hopelijk) een idee geven over waar het probleem zich bevindt.</p>
-
-<p><strong>3. OmegaT starten</strong></p>
-
-<p>Als uw code succesvol is gecompileerd, is de gecompileerde OmegaT geplaatst in:</p>
-
-<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
-
-<p>Wijzig, nog steeds in uw venster van de opdrachtregel, naar die map, bijv. met:</p>
-
-<p style="font-family: monospace;">cd C:\Mijn Documenten\MijnOmegat\OmegaT_2.2.3_Beta_Source\dist</p>
-
-<p>en start OmegaT met:</p>
-
-<p style="font-family: monospace;">java -jar OmegaT.jar</p>
-
-
-
-<p><strong>4a. 1ste voorbeeld van aanpassing: wijzigen van de kleur van het accentueren van segmenten</strong></p>
-
-<p>In de map</p>
-
-<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
-
-<p>open het bestand SegmentBuilder.java in een tekstbewerker.</p>
-
-<p>Zoek de regels:</p>
-
-<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
-
-<p>en</p>
-
-<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
-
-<p>en vervang</p>
-
-<p style="font-family: monospace;">COLOR_GREEN</p>
-
-<p>door</p>
-
-<p style="font-family: monospace;">COLOR_BLUE.</p>
-
-<p>In de map</p>
-
-<p style="font-family: monospace;">src/org/omegat/util/gui</p>
-
-<p>open het bestand Styles.java in een tekstbewerker.</p>
-
-<p>Zoek de regel</p>
-
-<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
-
-<p>Vervang</p>
-
-<p style="font-family: monospace;">COLOR_GREEN</p>
-
-<p>door</p>
-
-<p style="font-family: monospace;">COLOR_BLUE.</p>
-
-<p>en</p>
-
-<p style="font-family: monospace;">192, 255, 192 </p>
-
-<p>door</p>
-
-<p style="font-family: monospace;">225, 225, 255.</p>
-
-
-
-<p><strong>4b. 2de voorbeeld aanpassing: verhogen van het aantal weergegeven fuzzy overeenkomsten van vijf naar tien</strong></p>
-
-<p>In de map</p>
-
-<p style="font-family: monospace;">/src/org/omegat/util</p>
-
-<p>open het bestand OConsts.java in een tekstbewerker.</p>
-
-<p>Zoek de regels:</p>
-
-<p style="font-family: monospace;">    /** Number of fuzzy matches to display */<br/>
-    public static final int MAX_NEAR_STRINGS = 5;</p>
-
-<p>en vervang</p>
-
-<p style="font-family: monospace;">= 5</p>
-
-<p>door</p>
-
-<p style="font-family: monospace;">= 10</p>
-
-
-<p>Voor beide voorbeelden: compileer en test zoals boven beschreven.</p>
-
-<p>Copyright Marc Prior 2011-2012</p>
-
+  <p>Deze HOWTO beschrijft hoe OmegaT vanuit de broncode kan worden gecompileerd.</p>
+  <p>OmegaT wordt verschaft terwijl het al is gecompileerd voor een aantal platformen, inclusief een versie voor meerdere platformen. Gebruikers hoeven dan ook OmegaT niet zelf te compileren. Compileren van OmegaT is relevant voor ontwikkelaars die hun eigen aanpassingen in de code willen maken. </p>
+  <p>
+    <strong>1. Download en installeer de Java Development Kit (JDK)</strong>
+  </p>
+  <p>De <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> is vereist. Voor OmegaT 4.0 en later is geen aanvullende software vereist.</p>
+  <p>Eerdere versies van OmegaT vereisen <a href="http://ant.apache.org">Apache Ant</a>.</p>
+  <p>U mag uw omgevingsvariabele <code>JAVA_HOME</code> hebben ingesteld om te verwijzen naar de locatie van de JDK.</p>
+  <p>
+    <strong>2. Compileer de code</strong>
+  </p>
+  <p>Open een venster voor de opdrachtregel (console, DOS-venster). Navigeer naar de hoofdmap van de broncode van OmegaT (de map die het bestand <code>build.gradle</code> bevat), bijv.</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;versie&gt;_Beta_Source</pre>
+  <p>
+    <em>OmegaT 4.0 of later</em>
+  </p>
+  <p>U kunt OmegaT direct starten vanaf de opdrachtregel met</p>
+  <pre>gradlew run</pre>
+  <p>Al dit alles is waar u in geïnteresseerd bent, kunt u doorgaan met stap 3a.</p>
+  <p>Doe, om het programma OmegaT en alle daarmee geassocieerde bestanden te bouwen, in plaats daarvan</p>
+  <pre>gradlew installDist</pre>
+  <p>De resultaten zijn te vinden in de <code>build\install\OmegaT</code>.</p>
+  <p>
+    <em>Oudere versies van OmegaT</em>
+  </p>
+  <p>Voer, vanuit de hoofdmap, Apache Ant uit door het uitvoerbare bestand van ant in te voeren. Het zou nodig kunnen zijn het volledige pad in te voeren, bijv.:</p>
+  <pre>C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</pre>
+  <p>Als de code succesvol compileert, zult u het bericht <code>BUILD SUCCESSFUL</code> zien. Indien niet zullen foutberichten worden weergegeven die (hopelijk) een idee geven over waar het probleem zich bevindt.</p>
+  <p>Als uw code succesvol is gecompileerd, is de gecompileerde OmegaT geplaatst in:</p>
+  <pre>OmegaT_&lt;versie&gt;_Beta_Source\dist</pre>
+  <p>Wijzig, nog steeds in uw venster van de opdrachtregel, naar die map, bijv. met:</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;versie&gt;_Beta_Source\dist</pre>
+  <p>en start OmegaT met:</p>
+  <pre>java -jar OmegaT.jar</pre>
+  <p>
+    <strong>3a. 1ste voorbeeld van aanpassing: wijzigen van de kleur van het accentueren van segmenten</strong>
+  </p>
+  <p>Open, in de map <code>src/org/omegat/gui/editor</code>, het bestand <code>SegmentBuilder.java</code> in een tekstbewerker.</p>
+  <p>Zoek naar de regels:</p>
+  <pre>return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</pre>
+  <p>en</p>
+  <pre>b = Styles.COLOR_GREEN;</pre>
+  <p>en vervang <code>COLOR_GREEN</code> door <code>COLOR_BLUE</code>.</p>
+  <p>Open, in de map <code>src/org/omegat/util/gui</code>, het bestand <code>Styles.java</code> in een tekstbewerker.</p>
+  <p>Zoek de regel</p>
+  <pre>public static final Color COLOR_GREEN = new Color(192, 255, 192);</pre>
+  <p>Vervang <code>COLOR_GREEN</code> door <code>COLOR_BLUE</code> en <code>192, 255, 192</code> door <code>225, 225, 255</code>.</p>
+  <p>
+    <strong>3b. 2e voorbeeld aanpassing: verhogen van het aantal weergegeven fuzzy overeenkomsten van vijf naar tien</strong>
+  </p>
+  <p>Open, in de map <code>/src/org/omegat/util</code>, het bestand <code>OConsts.java</code> in een tekstbewerker.</p>
+  <p>Zoek naar de regels:</p>
+  <pre>    /** Number of fuzzy matches to display */
+    public static final int MAX_NEAR_STRINGS = 5;</pre>
+  <p>en vervang <code>= 5</code> door <code>= 10</code>.</p>
+  <p>Voor beide voorbeelden: compileer en test zoals boven beschreven.</p>
+  <p>Copyright Marc Prior 2011-2012</p>
 </div>
-
