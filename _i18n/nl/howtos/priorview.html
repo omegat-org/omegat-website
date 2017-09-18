@@ -1,10 +1,10 @@
+
 <div class="container">
 
-<h2>HowTo: De functie Voorbeeld &quot;Priorview&quot;</h2>
 
 <h3>Achtergrond en principes</h3>
 
-<p>Priorview is een klein programma dat een functie Voorbeeld verschaft om te gebruiken met OmegaT. Bekijk de <a href="./preview.html">Preview Howto</a> voor de achtergrond en principes. Deze HowTo beschrijft het gebruik van Priorview voor <b>Windows en Linux</b>. Als u Mac OSX gebruikt, kunt u <a href="/resources/priorview_for_mac.zip">hier een versie van Priorview voor Mac downloaden</a>. De versie Mac OSX is nog niet gedocumenteerd en de informatie hieronder is daarop <b>niet</b> van toepassing.</p>
+<p>Priorview is een klein programma dat een functie Voorbeeld verschaft om te gebruiken met OmegaT. Bekijk de <a href="preview.html">Preview Howto</a> voor de achtergrond en principes. Deze HowTo beschrijft het gebruik van Priorview voor <b>Windows en Linux</b>. Als u Mac OSX gebruikt, kunt u <a href="{{ '/files/priorview_for_mac.zip' | prepend: site.baseurl_root }}">hier een versie van Priorview voor Mac downloaden</a>. De versie Mac OSX is nog niet gedocumenteerd en de informatie hieronder is daarop <b>niet</b> van toepassing.</p>
 
 <h3>Vereiste software</h3>
 
@@ -14,9 +14,9 @@
 
 <ul>
 
-<li><a href="http://www.opera.com">Opera</a><br/>of</li>
+<li><a href="http://www.opera.com">Opera</a><br/>or</li>
 
-<li><a href="http://www.mozilla.org">Firefox</a> tezamen met de add-on <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">&quot;ReloadEvery&quot; voor Firefox</a><br/> Installeer eerst Firefox (indien u deze al nog niet geïnstalleerd hebt), dan ReloadEvery.</li>
+<li><a href="http://www.mozilla.org">Firefox</a> tezamen met de add-on <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">"ReloadEvery" voor Firefox</a><br/> Installeer eerst Firefox (indien u deze al nog niet geïnstalleerd hebt), dan ReloadEvery.</li>
 
 <li><i>(Downloaden vanaf de verschafte koppelingen; Linux-gebruikers zouden kunnen prefereren om vanuit de repositories van hun distributie te installeren, waar dit mogelijk is)</i></li>
 
@@ -26,7 +26,7 @@
 
 <ul>
 
-<li><a href="http://www.abisource.com/download/">Abiword</a><br/>of</li>
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>or</li>
 
 <li><a href="http://www.libreoffice.org/">LibreOffice</a> tezamen met de <a href="http://dag.wieers.com/home-made/unoconv/">plug-in Unoconv</a></li>
 
@@ -36,7 +36,7 @@
 
 <p>Bijna elke huidige versie van Tcl/Tk zal waarschijnlijk geschikt zijn, maar u moet zowel Tcl (de scripting interpreter) als Tk (de grafische component) hebben.</p>
 
-<p>4. <b><a href="/resources/priorview.zip">Priorview</a></b></p>
+<p>4. <b><a href="{{ '/files/priorview.zip' | prepend: site.baseurl_root }}">Priorview</a></b></p>
 
 <p>Pak eenvoudigweg het zip-archief uit op een geschikte locatie op uw harde schijf om Priorview te installeren. Open, om Priorview te starten, een command prompt/terminal/console en typ:</p>
 
@@ -82,7 +82,7 @@
 
 <p>De knop Quit sluit Priorview en verwijdert ook de tijdelijke bestanden die het maakt. (Andere methoden voor het sluiten van Priorview zullen de tijdelijke bestanden niet verwijderen.)</p>
 
-<p><img src="../../images/preview_ss.png" alt="preview_ss.png"/></p>
+<p><img src="{{ '/img/preview_ss.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"></img></p>
 
 <p><i>Een persbericht van de Europese Commissie (in indeling .odt) in OmegaT en daaronder de directe doeltekst weergegeven in Opera. Rechtsonder: het programma Priorview. De hier getoonde lay-out dient slechts als voorbeeld; u kunt natuurlijk de vensters schikken zoals u dat wilt.</i></p>
 
@@ -91,7 +91,7 @@
 
 <p>Als het pad naar de locatie van priorview.tcl spaties bevat, plaats het dan tussen aanhalingstekens, bijv.:</p>
 
-<p>cd &quot;C:\My Files\priorview&quot;</p>
+<p>cd "C:\My Files\priorview"</p>
 
 <p>Als Priorview niet wil starten:</p>
 
@@ -107,7 +107,7 @@
 
 <li>Dat u heeft onthouden om Ctrl+s, Ctrl+d in te drukken in OmegaT. Totdat/Tenzij u dat doet, zullen er geen wijzigingen zijn om te detecteren/weer te geven!</li>
 
-<li>Dat het programma voor bestandsconversie juist is geïnstalleerd en werkt. U kunt dit testen met de relevante opdracht hieronder op de opdrachtregel (terminal/console/DOS prompt). In elk geval is <i>bestand</i> de naam van een .docx- of .odt-bestand. Als alles goed is zal een .html-versie van het bestand worden geproduceerd:<br/> Voor Abiword:<br/> abiword --to=html <i>bestand</i><br/> Voor LibreOffice+Unoconv:br/&gt; unoconv -f html <i>bestand</i><br/></li>
+<li>Dat het programma voor bestandsconversie juist is geïnstalleerd en werkt. U kunt dit testen met de relevante opdracht hieronder op de opdrachtregel (terminal/console/DOS prompt). In elk geval is <i>bestand</i> de naam van een .docx- of .odt-bestand. Als alles goed is zal een .html-versie van het bestand worden geproduceerd:<br/> Voor Abiword:<br/> <kbd>abiword --to=html <i>file</i></kbd><br/> Voor LibreOffice+Unoconv:<br/> <kbd>unoconv -f html <i>file</i></kbd></li>
 
 <li>Dat u de interval voor automatisch vernieuwen hebt ingesteld in de browser.</li>
 
@@ -118,4 +118,3 @@
 <p>Copyright Marc Prior 2012</p>
 
 </div>
-

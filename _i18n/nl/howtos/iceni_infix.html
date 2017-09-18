@@ -1,70 +1,36 @@
 <div class="container">
-
-<h2>HowTo: Vertalen van PDF-bestanden met Iceni Infix en OmegaT</h2>
-
-<p>Deze HOWTO verschaft informatie over het gebruiken van OmegaT en Iceni Infix om PDF-bestanden te vertalen.</p>
-
-<h3>Achtergrond</h3>
-
-<p>PDF-bestanden vallen in twee categorieën: echte en &quot;gescande&quot; PDF's.</p>
-
-<p>Een &quot;gescand&quot; PDF-bestand is een bestand waarin de PDF-indeling slechts dient als een handige container voor scans van papieren pagina's. Deze scans bevatten vaak tekst om te vertalen. Er bestaat geen andere manier om een gescand PDF-bestand te vertalen dan door de tekst opnieuw te maken, ofwel door die opnieuw te typen, of door middel van OCR (optical character recognition (optische tekenherkenning)), en de lay-out van het ebstand vanaf het beginpunt opnieuw te maken. Gescande PDF's zijn geen onderwerp van deze HOWTO.</p>
-
-<p>Echte PDF-bestanden (soms ook &quot;eigen&quot; of &quot;gedistilleerde&quot; PDF-bestanden genoemd, hoewel &quot;gedistilleerd&quot; een meer precieze betekenis heeft) zijn PDF-bestanden die zijn geëxporteerd vanuit een andere toepassing, gewoonlijk een desktop publishing (DTP)-programma. De juiste procedure is gewoonlijk om de vertaling in de originele (DTP) toepassing te maken en dan dezelfde procedure te volgen voor het produceren van de PDF die voor het originele PDF-bestand werd gevolgd om een echt PDF-bestand te vertalen. Vertalen van het PDF-bestand door het direct te bewerken is gewoonlijk geen praktisch voorstel. Voor het vertalen van PDF-bestanden &quot;ter informatie&quot; vallen vertalers vaak terug op het converteren van het PDF-bestand naar een andere bestandsindeling, zoals RTF; de resultaten kunnen voor dit doel adequaat zijn, maar zullen de professionele standaarden van het originele DTP-proces niet benaderen.</p>
-
-<h3>Iceni Infix</h3>
-
-<p>Iceni Infix biedt nog een andere oplossing. Infix is een bewerker voor PDF, d.i. de tekst in de PDF kan direct worden bewerkt. Hoewel ter discussie kan worden gesteld of de resultaten van deze procedure te vergelijken zijn met het opnieuw lay-outen van de vertaling door een DTP-professional, zijn zij waarschijnlijk veel beter dan een conversie naar een compleet andere indeling (zoals RTF).</p>
-
-<p>De &quot;Professional&quot; versie van Infix heeft nog een interessante functie voor vertalers: XML-tekst exporteren. Dit maakt het mogelijk dat de tekst wordt geëxporteerd naar een XML-bestand dat kan worden vertaald in een CAT-programma. De vertaalde tekst kan dan opnieuw worden geïmporteerd in Infix Professional. OmegaT is één van de CAT-programma's waarin dat proces gebruikt kan worden. De procedure wordt beschreven in deze HOWTO.</p>
-
-<h3>Platformen</h3>
-
-<p>Hoewel Infix een toepassing voor Windows is, heeft Iceni pogingen gedaan om gebruikers van Linux en Macintosh tegemoet te komen. Infix Professional kan op die platformen worden gebruikt in samenwerking met respectievelijk Crossover Linux en Crossover Macintosh. Crossover Linux en Crossover Macintosh kosten ongeveer €40. Ook hier zijn gratis demonstratieversies beschikbaar. Crossover Linux en Crossover Macintosh kunnen worden verkregen van de <a href="http://www.codeweavers.com/products/crossover/">Codeweavers' website</a>. <a href="http://www.iceni.com/infixmaclinux.htm">Specifieke informatie over het uitvoeren van Iceni Infix op Crossover Linux of Crossover Macintosh</a> is ook beschikbaar.</p>
-
-<h3>Vertalen van een PDF-bestand: procedure</h3>
-
-<p>Verkrijg en installeer Iceni Infix Professional vanaf de <a href="http://www.iceni.com/infix.htm">Iceni webpagina</a>. Een demonstratieversie is beschikbaar; ten tijde van het schrijven kostte een volledige versie ongeveer € 150,--. Indien u Linux of Macintosh gebruikt zorg dan eerst de relevante versie van Crossover te verkrijgen en te installeren vóórdat Iceni Infix Professional wordt geïnstalleerd. (Infix schijnt ook te werken op WINE.)</p>
-
-<p>Start Iceni Infix en open het PDF-bestand dat u wilt vertalen. Het voorbeeld in de schermafbeelding is de <a href="http://bookshop.europa.eu/hu/az-j-kkv-meghat-roz-s-pbNB6004773/?CatalogCategoryID=2QcKABstE4IAAAEjwJAY4e5L">Nieuwe definitie voor KMO's, informatiebrochure en modelverklaring in het Hongaars</a>.</p>
-
-<img src="../../images/infix1.png" alt="infix1.png"/>
-
-<p>Exporteer de tekst vanuit de PDF naar Infix's XML-indeling met Document &gt; Translate &gt; Export XML. Sla de PDF op. Dit is belangrijk: wanneer u het XML bestand exporteert vanuit de PDF maakt Infix een notitie in het bestand van waar alle stukken tekst (&quot;stories&quot;) behoren, dus moet u deze versie van het bestand gebruiken bij het opnieuw importeren van het vertaalde XML-bestand.</p>
-
-<p>Maak op de gewone manier een OmegaT-project.</p>
-
-<p>Als u OmegaT versie 2.3 of later gebruikt plaats dan eenvoudigweg het met Infix geëxporteerde XML-bestand, zoals hierboven beschreven, in de map /source van uw OmegaT-project.</p>
-
-<p><i>Indien u een eerdere versie van OmegaT gebruikt, wordt het bijwerken van uw installatie van OmegaT aanbevolen. Als alternatief zou u in staat moeten zijn om het Infix XML-bestand met goede resultaten kunnen vertalen met behulp van het HTML-filter in eerdere versies van OmegaT. Wijzig eenvoudigweg de bestandsextensie van het met Infix geëxporteerde XML-bestand van .xml naar .html om dit filter te gebruiken.</i></p>
-
-<p>Laadt uw OmegaT-project opnieuw. U kunt nu de tekst vertalen (zie schermafbeelding).</p>
-
-<img src="../../images/infix2.png" alt="infix2.png"/>
-
-<p>Opmerking: OmegaT's Infix-filter maakt van de tags &lt;BR/&gt; van Infix &lt;brx/&gt; tags. Dit stelt de HTML-segmentatieregel in staat om te worden gebruikt om te kiezen of op deze punten al dan niet segmentatie zou moeten plaatsvinden.</p>
-
-<p>Na het completeren van uw vertaling, maak dan op de normale manier het vertaalde document (Ctrl+S, Ctrl+D). Lokaliseer het vertaalde XML-bestand in de map /target van het OmegaT-project. <i>Indien u de bestandsextensie hebt gewijzigd naar .html, wijzig dan de extensie van het vertaalde document terug naar .xml.</i></p>
-
-<p>Terug in Iceni Infix, importeer het vertaalde XML-bestand terug in <i>het PDF van waaruit u het hebt geëxporteerd</i>. Slad de wijzigingen op.</p>
-
-<p>Als alles goed is gegaan ziet uw vertaling er uit zoals het origineel, maar vertaald. (Bekijk de schermafbeelding: alleen de eerste drie segmenten zijn vertaald.)</p>
-
-<p>Merk op dat als u de demonstratieversie van Iceni Infix in deze procedure hebt gebruikt, uw vertaalde PDF-bestand een Iceni-watermerk heeft. Voor vertalingen die zijn bedoeld als &quot;ter informatie&quot;, hoeft dit geen probleem te zijn. Iceni Infix stelt u ook in staat om PDF-bestanden op te slaan in RTF-indeling, maar in dit geval is de demonstratieversie echt alleen beschikt voor demonstratiedoeleinden, omdat het willekeurige vervangingen van tekens bevat.</p>
-
-<img src="../../images/infix3.png" alt="infix3.png"/>
-
-<p>Zoals zo vaak het geval is met technische dingen (en vertalingsdingen), zijn er tegenvallers.</p>
-
-<p>U zou kunnen vinden dat de ingebedde lettertypen in de PDF niet alle tekens bevatten die u nodig hebt. U kunt dit waarschijnlijk oplossen door de noodzakelijke lettertypen te downloaden en te installeren; of u kunt voor dit doel een ander lettertype selecteren – wat een adequate o;lossing zou kunnen zijn, of niet.</p>
-
-<p>Er is een grote mogelijkheid dat, op sommige punten, uw vertaling langer zal zijn dan het origineel. Dit dient te worden afgehandeld in Infix, bijvoorbeeld door het vak dat de tekst bevat te vergroten. Infix heeft functies voor het afhandelen van dit en andere problemen die buiten het bereik van deze HOWTO vallen.</p>
-
-<p>U zou kunnen bemerken dat segmenten zijn afgebroken door harde regeleinden op onhandige plaatsen. Deze situatie zal u waarschijnlijk bekend zijn als u Powerpoint-bestanden hebt vertaald in OmegaT, of met andere CAT-programma's. Open het originele PDF-bestand opnieuw in Infix, om dit op te lossen. Selecteer Tools &gt; Text tool. Klikken op de tekst in kwestie zal een tekstvak en markeringen voor opmaak weergeven. De schermafbeelding geeft een voorbeeld weer: <img src="../../images/infix4.png" alt="infix4.png"/> Verwijder het regeleinde. Sla dan de wijzigingen op en exporteer het PDF opnieuw naar het XML-bestand (en wijzig de bestandsextensie etc.), en laad uw OmegaT-project opnieuw. Als uw bestand veel van zulke onhandige einden bevat, is het efficiënter om ze allemaal in één keer te verwijderen, schakelend tussen OmegaT en Infix om te zien waar ze zijn.</p>
-
-<p>Sommige onhandige regeleinden kunnen vereist zijn voor de juiste plaatsing van de tekst. In deze gevallen is het praktisch om ze te verwijderen vóór het exporteren van het bestand naar XML, zodat u samenhangende segmenten voor vertaling krijgt gepresenteerd, en ze dan opnieuw in te voegen in Infix aan het einde van het proces.</p>
-
-<p>Copyright Marc Prior 2011</p>
-
+  <p>Deze HOWTO verschaft informatie over het gebruiken van OmegaT en Iceni Infix om PDF-bestanden te vertalen.</p>
+  <h3>Achtergrond</h3>
+  <p>PDF-bestanden vallen in twee categorieën: echte en "gescande" PDF's.</p>
+  <p>Een "gescand" PDF-bestand is een bestand waarin de PDF-indeling slechts dient als een handige container voor scans van papieren pagina's. Deze scans bevatten vaak tekst om te vertalen. Er bestaat geen andere manier om een gescand PDF-bestand te vertalen dan door de tekst opnieuw te maken, ofwel door die opnieuw te typen, of door middel van OCR (optical character recognition (optische tekenherkenning)), en de lay-out van het ebstand vanaf het beginpunt opnieuw te maken. Gescande PDF's zijn geen onderwerp van deze HOWTO.</p>
+  <p>Echte PDF-bestanden (soms ook "eigen" of "gedistilleerde" PDF-bestanden genoemd, hoewel "gedistilleerd" een meer precieze betekenis heeft) zijn PDF-bestanden die zijn geëxporteerd vanuit een andere toepassing, gewoonlijk een desktop publishing (DTP)-programma. De juiste procedure is gewoonlijk om de vertaling in de originele (DTP) toepassing te maken en dan dezelfde procedure te volgen voor het produceren van de PDF die voor het originele PDF-bestand werd gevolgd om een echt PDF-bestand te vertalen. Vertalen van het PDF-bestand door het direct te bewerken is gewoonlijk geen praktisch voorstel. Voor het vertalen van PDF-bestanden "ter informatie" vallen vertalers vaak terug op het converteren van het PDF-bestand naar een andere bestandsindeling, zoals RTF; de resultaten kunnen voor dit doel adequaat zijn, maar zullen de professionele standaarden van het originele DTP-proces niet benaderen.</p>
+  <h3>Iceni Infix</h3>
+  <p>Iceni Infix biedt nog een andere oplossing. Infix is een bewerker voor PDF, d.i. de tekst in de PDF kan direct worden bewerkt. Hoewel ter discussie kan worden gesteld of de resultaten van deze procedure te vergelijken zijn met het opnieuw lay-outen van de vertaling door een DTP-professional, zijn zij waarschijnlijk veel beter dan een conversie naar een compleet andere indeling (zoals RTF).</p>
+  <p>De "Professional" versie van Infix heeft nog een interessante functie voor vertalers: XML-tekst exporteren. Dit maakt het mogelijk dat de tekst wordt geëxporteerd naar een XML-bestand dat kan worden vertaald in een CAT-programma. De vertaalde tekst kan dan opnieuw worden geïmporteerd in Infix Professional. OmegaT is één van de CAT-programma's waarin dat proces gebruikt kan worden. De procedure wordt beschreven in deze HOWTO.</p>
+  <h3>Platformen</h3>
+  <p>Hoewel Infix een toepassing voor Windows is, heeft Iceni pogingen gedaan om gebruikers van Linux en Macintosh tegemoet te komen. Infix Professional kan op die platformen worden gebruikt in samenwerking met respectievelijk Crossover Linux en Crossover Macintosh. Crossover Linux en Crossover Macintosh kosten ongeveer €40. Ook hier zijn gratis demonstratieversies beschikbaar. Crossover Linux en Crossover Macintosh kunnen worden verkregen van de <a href="http://www.codeweavers.com/products/crossover/">Codeweavers' website</a>. <a href="http://www.iceni.com/infixmaclinux.htm">Specifieke informatie over het uitvoeren van Iceni Infix op Crossover Linux of Crossover Macintosh</a> is ook beschikbaar.</p>
+  <h3>Vertalen van een PDF-bestand: procedure</h3>
+  <p>Verkrijg en installeer Iceni Infix Professional vanaf de <a href="http://www.iceni.com/infix.htm">Iceni webpagina</a>. Een demonstratieversie is beschikbaar; ten tijde van het schrijven kostte een volledige versie ongeveer € 150,--. Indien u Linux of Macintosh gebruikt zorg dan eerst de relevante versie van Crossover te verkrijgen en te installeren vóórdat Iceni Infix Professional wordt geïnstalleerd. (Infix schijnt ook te werken op WINE.)</p>
+  <p>Start Iceni Infix en open het PDF-bestand dat u wilt vertalen. Het voorbeeld in de schermafbeelding is de <a href="http://bookshop.europa.eu/hu/az-j-kkv-meghat-roz-s-pbNB6004773/?CatalogCategoryID=2QcKABstE4IAAAEjwJAY4e5L">Nieuwe definitie voor KMO's, informatiebrochure en modelverklaring in het Hongaars</a>.</p>
+  <img src="{{ '/img/infix1.png' | prepend: site.baseurl_root }}" alt="infix1.png"/>
+  <p>Exporteer de tekst vanuit de PDF naar Infix's XML-indeling met Document &gt; Translate &gt; Export XML. Sla de PDF op. Dit is belangrijk: wanneer u het XML bestand exporteert vanuit de PDF maakt Infix een notitie in het bestand van waar alle stukken tekst ("stories") behoren, dus moet u deze versie van het bestand gebruiken bij het opnieuw importeren van het vertaalde XML-bestand.</p>
+  <p>Maak op de gewone manier een OmegaT-project.</p>
+  <p>Als u OmegaT versie 2.3 of later gebruikt plaats dan eenvoudigweg het met Infix geëxporteerde XML-bestand, zoals hierboven beschreven, in de map /source van uw OmegaT-project.</p>
+  <p>
+    <i>Indien u een eerdere versie van OmegaT gebruikt, wordt het bijwerken van uw installatie van OmegaT aanbevolen. Als alternatief zou u in staat moeten zijn om het Infix XML-bestand met goede resultaten kunnen vertalen met behulp van het HTML-filter in eerdere versies van OmegaT. Wijzig eenvoudigweg de bestandsextensie van het met Infix geëxporteerde XML-bestand van .xml naar .html om dit filter te gebruiken.</i>
+  </p>
+  <p>Laadt uw OmegaT-project opnieuw. U kunt nu de tekst vertalen (zie schermafbeelding).</p>
+  <img src="{{ '/img/infix2.png' | prepend: site.baseurl_root }}" alt="infix2.png"/>
+  <p>Opmerking: OmegaT's Infix-filter maakt van de tags &lt;BR/&gt; van Infix &lt;brx/&gt; tags. Dit stelt de HTML-segmentatieregel in staat om te worden gebruikt om te kiezen of op deze punten al dan niet segmentatie zou moeten plaatsvinden.</p>
+  <p>Na het completeren van uw vertaling, maak dan op de normale manier het vertaalde document (Ctrl+S, Ctrl+D). Lokaliseer het vertaalde XML-bestand in de map /target van het OmegaT-project. <i>Indien u de bestandsextensie hebt gewijzigd naar .html, wijzig dan de extensie van het vertaalde document terug naar .xml.</i></p>
+  <p>Terug in Iceni Infix, importeer het vertaalde XML-bestand terug in <i>het PDF van waaruit u het hebt geëxporteerd</i>. Slad de wijzigingen op.</p>
+  <p>Als alles goed is gegaan ziet uw vertaling er uit zoals het origineel, maar vertaald. (Bekijk de schermafbeelding: alleen de eerste drie segmenten zijn vertaald.)</p>
+  <p>Merk op dat als u de demonstratieversie van Iceni Infix in deze procedure hebt gebruikt, uw vertaalde PDF-bestand een Iceni-watermerk heeft. Voor vertalingen die zijn bedoeld als "ter informatie", hoeft dit geen probleem te zijn. Iceni Infix stelt u ook in staat om PDF-bestanden op te slaan in RTF-indeling, maar in dit geval is de demonstratieversie echt alleen beschikt voor demonstratiedoeleinden, omdat het willekeurige vervangingen van tekens bevat.</p>
+  <img src="{{ '/img/infix3.png' | prepend: site.baseurl_root }}" alt="infix3.png"/>
+  <p>Zoals zo vaak het geval is met technische dingen (en vertalingsdingen), zijn er tegenvallers.</p>
+  <p>U zou kunnen vinden dat de ingebedde lettertypen in de PDF niet alle tekens bevatten die u nodig hebt. U kunt dit waarschijnlijk oplossen door de noodzakelijke lettertypen te downloaden en te installeren; of u kunt voor dit doel een ander lettertype selecteren – wat een adequate o;lossing zou kunnen zijn, of niet.</p>
+  <p>Er is een grote mogelijkheid dat, op sommige punten, uw vertaling langer zal zijn dan het origineel. Dit dient te worden afgehandeld in Infix, bijvoorbeeld door het vak dat de tekst bevat te vergroten. Infix heeft functies voor het afhandelen van dit en andere problemen die buiten het bereik van deze HOWTO vallen.</p>
+  <p>U zou kunnen bemerken dat segmenten zijn afgebroken door harde regeleinden op onhandige plaatsen. Deze situatie zal u waarschijnlijk bekend zijn als u Powerpoint-bestanden hebt vertaald in OmegaT, of met andere CAT-programma's. Open het originele PDF-bestand opnieuw in Infix, om dit op te lossen. Selecteer Tools &gt; Text tool. Klikken op de tekst in kwestie zal een tekstvak en markeringen voor opmaak weergeven. De schermafbeelding geeft een voorbeeld weer: <img src="{{ '/img/infix4.png' | prepend: site.baseurl_root }}" alt="infix4.png"/> Verwijder het regeleinde. Sla dan de wijzigingen op en exporteer het PDF opnieuw naar het XML-bestand (en wijzig de bestandsextensie etc.), en laad uw OmegaT-project opnieuw. Als uw bestand veel van zulke onhandige einden bevat, is het efficiënter om ze allemaal in één keer te verwijderen, schakelend tussen OmegaT en Infix om te zien waar ze zijn.</p>
+  <p>Sommige onhandige regeleinden kunnen vereist zijn voor de juiste plaatsing van de tekst. In deze gevallen is het praktisch om ze te verwijderen vóór het exporteren van het bestand naar XML, zodat u samenhangende segmenten voor vertaling krijgt gepresenteerd, en ze dan opnieuw in te voegen in Infix aan het einde van het proces.</p>
+  <p>Copyright Marc Prior 2011</p>
 </div>
-

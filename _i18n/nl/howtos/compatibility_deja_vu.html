@@ -1,32 +1,28 @@
 <div class="container">
 
-<h2>OmegaT HowTo: OmegaT compatibiliteit met Déjà Vu</h2>
+  <p>Deze HOWTO beschrijft hoe OmegaT te gebruiken in combinatie met Atril's Déjà Vu CAT-programma.</p>
 
-<p>Deze HOWTO beschrijft hoe OmegaT te gebruiken in combinatie met Atril's Déjà Vu CAT-programma.</p>
+  <h3>Achtergrond situatie</h3>
 
-<h3>Achtergrond situatie</h3>
+  <p>U bent een gebruiker van OmegaT en bent door een klant gevraagd om een vertaling af te leveren de bestandsindeling van Déjà Vu. Dit kan worden bereikt (voor Déjà Vu DVX) door het gebruiken van Déjà Vu's "External View"-bestandsindeling.</p>
 
-<p>U bent een gebruiker van OmegaT en bent door een klant gevraagd om een vertaling af te leveren de bestandsindeling van Déjà Vu. Dit kan worden bereikt (voor Déjà Vu DVX) door het gebruiken van de Déjà Vu's &quot;External Views&quot;-bestandsindeling.</p>
+  <h3>Déjà Vu "External View"</h3>
 
-<h3>Déjà Vu &quot;External View&quot;</h3>
+  <p>De Déjà Vu "External View"-bestandsindeling is een mogelijkheid van&nbsp;Déjà Vu DVX. Het stelt bewerkers, die Déjà Vu niet bezitten, in staat om vertalingen, die zijn gemaakt in Déjà Vu, zodanig te bewerken dat aanpassingen daarin eenvoudig kunnen worden opgenomen. Op dezelfde manier kunnen gebruikers van CAT-programma's, inclusief OmegaT, die&nbsp;Déjà Vu niet bezitten, bestanden vertalen die zijn geprepareerd door een&nbsp;Déjà Vu-gebruiker.</p>
 
-<p>De Déjà Vu &quot;External View&quot;-bestandsindeling is een mogelijkheid van Déjà Vu DVX. Het stelt bewerkers, die Déjà Vu niet bezitten, in staat om vertalingen, die zijn gemaakt in Déjà Vu, zodanig te bewerken dat aanpassingen daarin eenvoudig kunnen worden opgenomen. Op dezelfde manier kunnen gebruikers van CAT-programma's, inclusief OmegaT, die Déjà Vu niet bezitten, bestanden vertalen die zijn geprepareerd door een Déjà Vu-gebruiker.</p>
+  <p>Een&nbsp;Déjà Vu "External View"-bestand neemt de vorm aan van een RTF-bestand met een multi-kolom tabel, inclusief kolommen voor de bron- en doeltekst, waarin elk segment een tabelcel bezet. In een zoals het is, niet vertaald "External View"-bestand is de doelkolom leeg. Een "vertaald" External View-bestand wordt gemaakt door de vertaling in de doelkolom in te voeren. Doe het volgende om het bestand te vertalen in OmegaT:</p>
 
-<p>Een Déjà Vu &quot;External View&quot;-bestand neemt de vorm aan van een RTF-bestand met een multi-kolom tabel, inclusief kolommen voor de bron- en doeltekst, waarin elk segment een tabelcel bezet. In een zoals het is, niet vertaald &quot;External View&quot;-bestand is de doelkolom leeg. Een &quot;vertaald&quot; External View-bestand wordt gemaakt door de vertaling in de doelkolom in te voeren. Doe het volgende om het bestand te vertalen in OmegaT:</p>
+  <p>1. Converteer het bestand van RTF naar OpenOffice.org-indeling.</p>
 
-<p>1. Converteer het bestand van RTF naar OpenOffice.org-indeling.</p>
+  <p>2. Maak een kopie van het External View-bestand, en verwijder daaruit de inhoud van alle kolommen met uitzondering van de kolom waar de brontekst staat.</p>
 
-<p>2. Maak een kopie van het External View-bestand, en verwijder daaruit de inhoud van alle kolommen met uitzondering van de kolom waar de brontekst staat.</p>
+  <p>3. Vertaal dit bestand in OmegaT op de gewone manier. Inregelige tags binnen segmenten zijn getallen tussen accolades, d.i. {1}, {2}, etc. Zorg er voor dat u deze verzorgt op dezelfde manier als u de eigen inregelige tags van OmegaT zou afhandelen (de functionaliteit voor inregelige tags van OmegaT, zoals de functie tagvalidatie, is in dit geval echter niet beschikbaar).</p>
 
-<p>3. Vertaal dit bestand in OmegaT op de gewone manier. Inregelige tags binnen segmenten zijn getallen tussen accolades, d.i. {1}, {2}, etc. Zorg er voor dat u deze verzorgt op dezelfde manier als u de eigen inregelige tags van OmegaT zou afhandelen (de functionaliteit voor inregelige tags van OmegaT, zoals de functie tagvalidatie, is in dit geval echter niet beschikbaar).</p>
+  <p>4. Na het voltooien van de vertaling en het maken van de vertaalde documenten, kopieer de vertaalde kolom vanuit het vertaalde bestand terug naar de <i>doel</i>-kolom van het originele bestand.</p>
 
-<p>4. Na het voltooien van de vertaling en het maken van de vertaalde documenten, kopieer de vertaalde kolom vanuit het vertaalde bestand terug naar de <span style="font-style: italic;">doel</span>-kolom van het originele bestand.</p>
+  <p>5. Converteer het bestand terug naar RTF-indeling.</p>
 
-<p>5. Converteer het bestand terug naar RTF-indeling.</p>
+  <p>De Déjà Vu-gebruiker moet het brontekst-bestand prepareren en het in de Déjà Vu "External View"-indeling aan de vertaler geven om deze procedure te kunnen gebruiken. Meer informatie over de indeling en de procedure om het te maken, voor zowel gebruikers van Déjà Vu en van andere CAT-programma's kan worden gevonden op de <a href="http://www.atril.com/sites/default/files/InstructionsExternalView.pdf">relevante Atril pagina</a>, en op het handige <a href="http://simmer-lossner.blogspot.com/2008/11/dj-vu-x-as-editing-tool-for-trados-jobs.html">blog bijgehouden door Kevin Lossner</a>.</p>
 
-<p>De Déjà Vu-gebruiker moet het brontekst-bestand prepareren en het in de Déjà Vu &quot;External View&quot;-indeling aan de vertaler geven om deze procedure te kunnen gebruiken. Meer informatie over de indeling en de procedure om het te maken, voor zowel gebruikers van Déjà Vu en van andere CAT-programma's kan worden gevonden op de <a href="http://www.atril.com/sites/default/files/InstructionsExternalView.pdf">relevante Atril pagina</a>, en op het handige <a href="http://simmer-lossner.blogspot.com/2008/11/dj-vu-x-as-editing-tool-for-trados-jobs.html">blog bijgehouden door Kevin Lossner</a>.</p>
-
-<p>Copyright Marc Prior 2009-2011</p>
-
+  <p>Copyright Marc Prior 2009-2011</p>
 </div>
-
