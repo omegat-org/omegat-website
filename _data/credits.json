@@ -1,4 +1,4 @@
-{
+﻿{
     "website": [
         "Marc Prior",
         "Briac Pilpré"
@@ -6,6 +6,15 @@
     "translators": {
         "fr": [
           "Briac Pilpré"
+        ],
+        "es": [
+          "Cristina Rodríguez"
+        ],
+        "ru": [
+          "Павел Марьянов",
+          "Кос Иванцов",
+          "Лев Абашкин"
         ]
     }
-}
+}
+
