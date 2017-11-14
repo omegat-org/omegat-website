@@ -1,109 +1,68 @@
 <div class="container">
-		
-<h2>О проекте</h2>
-		
-<h3>Сведения об этом сайте</h3>
-		
 
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Русский перевод:</td>
-
-      <td>Павел Марьянов &lt;acid_jack@ukr.net&gt;</td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-<p/>
-
-<h3>Проект OmegaT</h3>
-
-<p>Проект OmegaT поддерживается неофициальной международной группой добровольцев. Его целью является разработка, распространение и поддержка OmegaT — программного обеспечения с открытым исходным кодом с поддержкой памяти переводов.</p>
-
-<p>Главные участники проекта:</p>
-
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Кейт Годфри (Keith Godfrey)</td>
-
-      <td>Первый автор программы OmegaT</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Дидье Брейль (Didier Briel)</td>
-
-      <td>Руководитель проекта</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Alex Buloichik</td>
-
-      <td>Ведущий разработчик проекта</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Aaron Madlon-Kay</td>
-
-      <td>Диспетчер интеграции</td>
-
-    </tr>
+  <div class="text-md-center">
+  <h3>Авторы контента сайта</h3>
+  <ul class="list-unstyled">
     
-    <tr>
-
-      <td>Марк Прайор (Marc Prior)</td>
-
-      <td>Веб-мастер</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Винсент Бидау (Vincent Bidaux)</td>
-
-      <td>Ответственный за документацию</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Jean-Christophe Helary</td>
-
-      <td>Ответственный за локализацию, владелец группы пользователей</td>
-
-    </tr>
-    <tr>
-      <td>Разработчики</td>
+    {% for author in site.data.credits.website %}
       
-      <td>Keith Godfrey, Zoltan Bartko, Volker Berlin, Didier Briel,
-    Kim Bruning, Alex Buloichik, Thomas Cordonnier, Sandra Jean Chua, Enrique Estévez Fernández,
-    Martin Fleurke, Wildrich Fourie, Phillip Hall, Jean-Christophe Helary, Chihiro Hio, Thomas Huriaux, 
-    Hans-Peter Jacobs, Kyle Katarn, Piotr Kulik, Ibai Lakunza Velasco, Guido Leenders, Aaron Madlon-Kay, 
-    Fabián Mandelbaum, Manfred Martin, Adiel Mittmann, Hiroshi Miura, John Moran, Maxym Mykhalchuk, Arno Peters, 
-    Henry Pijffers, Briac Pilpré, Tiago Saboga, Andrzej Sawuła, 
-    Benjamin Siband, Yu Tang, Rashid Umarov, Antonio Vilei, Ilia Vinogradov, Martin Wunderlich and Michael Zakharov</td>
+      <li>{{ author }}</li>
+    
+    {% endfor %}
+  
+  </ul>
 
-  </tbody>
-</table>
+  <h3>Дизайн сайта</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>
 
+  
 
-<p>С момента создания проекта его поддержали слишком много людей, чтобы перечислить их здесь, но которым мы очень благодарны за их помощь.<br/>
+  {% if site.lang != "en" %}
+  
+  <h3>Переводчики с английского</h3>
+  <ul class="list-unstyled">
+    
+    {% for translator in site.data.credits.translators[site.lang] %}
+      
+      <li>{{ translator }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+  
+  {% endif %}
+  
+  </div>
 
-</p>
-
+  <h2>Проект OmegaT</h2>
+  <p>Проект OmegaT поддерживается неофициальной международной группой добровольцев. Его целью является разработка, распространение и поддержка OmegaT — программного обеспечения с открытым исходным кодом с поддержкой памяти переводов.</p>
+  <p>Главные участники проекта:</p>
+  <div class="text-md-center">
+    <h3>Создатель программы OmegaT</h3>
+    <p>Кит Годфри (Keith Godfrey)</p>
+    <h3>Руководитель проекта</h3>
+    <p>Дидье Брейль (Didier Briel)</p>
+    <h3>Ведущий разработчик проекта</h3>
+    <p>Алекс Булойчик (Alex Buloichik)</p>
+    <h3>Диспетчер интеграции</h3>
+    <p>Эрон Медлон-Кэй (Aaron Madlon-Kay)</p>
+    <h3>Веб-мастер</h3>
+    <p>Марк Прайор (Marc Prior)</p>
+    <h3>Ответственный за документацию</h3>
+    <p>Винсент Бидау (Vincent Bidaux)</p>
+    <h3>Ответственный за локализацию, владелец пользовательской группы</h3>
+    <p>Жан-Кристоф Хелари (Jean-Christophe Helary)</p>
+    <h3>Разработчики</h3>
+    <ul class="list-unstyled">
+      
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    
+    </ul>
+  </div>
+  <p>С философией проекта можно ознакомиться <a href="philosophy.html">здесь</a>.</p>
+  <p>С момента создания проекта его поддержали слишком много людей, чтобы перечислить их здесь, но которым мы очень благодарны за их помощь.</p>
 </div>
-
