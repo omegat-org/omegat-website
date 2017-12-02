@@ -1,77 +1,61 @@
----
-footer:
-  connect: Connect
-  documentation: Documentation
-  omegat_project: The OmegaT Project
 global:
-  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
-  title: 'OmegaT - The Free Translation Memory Tool'
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
+  title: OmegaT - Le application gratuite pro memorias de traduction
+  description: OmegaT es un programma gratuite pro memoria de traduction, scripte in Java.
+
 menu:
-  about: Qui es nos
-  contact: Contacto e supporto
+  languages: Linguas
+  about: A proposito
   documentation: Documentation
-  download: Discargar OmegaT
-  languages: Languages
-  resources: Altere ressources OmegaT
-nojre: Cross-platform without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
-source: Source code
+  contact: Continge
+  download: Discargamento
+  resources: Ressources
+
+footer:
+  connect: Connecter
+  omegat_project: Le projecto OmegaT Projecto
+  documentation: Documentation
+
 titles:
-  404: Page Not Found
-  3rd_party: Software de tertie parte
-  about: Qui es nos
-  contact: Contacto e supporto
+  404: Pagina non trovate
+  about: A proposito
+  contact: Contactos e supporto
   documentation: Documentation
-  download: Discargar OmegaT
-  home: 'OmegaT - The Free Translation Memory Tool'
-  howto: How-To
-  howtos:
-    compatibility: Compatibility
-    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
-    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
-    docx: 'Howto - Translating Word 2007 files in OmegaT'
-    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
-    google_translate: 'Howto - Using Google Translate in OmegaT'
-    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
-    linux: OmegaT on Linux HowTo
-    localizing_omegat: 'Howto - Translating OmegaT into your language'
-    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
-    new_filter: 'Howto - Creating a new file filter'
-    preview: 'Howto - Adding a preview function to OmegaT'
-    priorview: 'Howto - The "Priorview" preview utility'
-    prop12m: Propagation and one-to-many matching HowTo
-    spelling: 'Howto - Spellchecking'
-    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
-    tokenizer: 'Howto - Using the OmegaT tokenizer'
-  howtos/compatibility: Guida al compatibilitate de OmegaT
-  howtos/compatibility_deja_vu: 'Guida de OmegaT: compatibilitate de OmegaT con Déjà Vu'
-  howtos/compiling_from_source: 'Guida de OmegaT: <br/>Compilar OmegaT a partir del codice primari'
-  howtos/docx: 'Guida de OmegaT: <br/>Traduction in OmegaT del files in formato Word 2007 (Office Open XML, .docx)'
-  howtos/export_uncleaned_rtf: 'Guida de OmegaT: <br/>Exportar ex OmegaT al formato  &quot;RTF non mundate Trados&quot;'
-  howtos/google_translate: 'Guida de OmegaT: <br/>Usar Google Translate in OmegaT'
-  howtos/iceni_infix: 'Guida: traduction del files PDF con Iceni Infix e OmegaT'
-  howtos/linux: Guida a OmegaT sur Linux
-  howtos/ms_translator_mac: 'Guida de OmegaT: <br/>Preparation de MS Translator sur Mac'
-  howtos/new_filter: 'Guida OmegaT: creation de un nove filtro de file'
-  howtos/preview: 'Guida: Adder un function de vista preliminar a OmegaT'
-  howtos/priorview: 'Guida: Le utilitate de vista preliminar &quot;Priorview&quot;'
-  howtos/prop12m: Guida al propagation e al concordantia un a multe
-  howtos/spelling: Guida OmegaT. Controlo orthographic
-  howtos/text_export: 'Guida de OmegaT: <br/>Usar le function de exportation del texto de OmegaT (interfacie de script)'
-  index: Introduction a OmegaT
-  involved: Le projecto OmegaT e tu
-  manual: Manual
+  download: Discargamento
+  home: OmegaT - Le application gratuite pro memorias de traduction
   philosophy: Philosophia
-  requirements: Requisitos
-  resources: Altere ressources OmegaT
-  reviews: Recensiones de OmegaT
-  screenshots: Paginas
+  resources: Ressources
+  manual: Manual
+  tutorials: Breve instructiones
+  howto: Guida
+  reviews: Revistas
   sponsorship: Financiamento
-  tutorials: Tutorials
+  howtos:
+     compatibility: Compatibilitate
+     compatibility_deja_vu: Guida - OmegaT compatibilitate con Déjà Vu
+     compiling_from_source: Guida - Compilation de OmegaT ab le codice fonte
+     docx: Guida - Traduction files de Microsoft Word 2007 in OmegaT
+     export_uncleaned_rtf: Guida - Exportar ex OmegaT al formato 'RTF non mundate' de Trados
+     google_translate: Guida - Usar Google Translate in OmegaT
+     iceni_infix: Guida - Traduction de files PDF con Iceni Infix e OmegaT
+     linux: Guida a OmegaT sur Linux
+     localizing_omegat: Guida - Traducer OmegaT in tu lingua
+     ms_translator: Guida - Usar Microsoft Translator in OmegaT
+     new_filter: Guida - Creation un nove filtro de file
+     preview: Adder un function de vista preliminar a OmegaT
+     priorview: Guida - Le utilitate de visualisation preliminar Priorview
+     prop12m: Guida al propagation e al concordantia un a multe
+     spelling: Guida - Controlator orthographic
+     text_export: Guida - Usar le function exportar texto de OmegaT (script interfacie)
+     tokenizer: Guida - Usar le tokenizer de OmegaT
+
+# Platforms name
+windows_jre: Windows con JRE
+windows_jre64b: Windows con JRE a 64-bit
+windows_nojre: Windows sin JRE
+osx_signed: OS X Signate
+osx_unsigned: OS X Non signate
+linux_jre: Linux con JRE
+linux_jre64b: Linux con JRE a 64-bit
+nojre: Cross-platform sin JRE
 webstart: Web Start
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
+source: Codice de origine
