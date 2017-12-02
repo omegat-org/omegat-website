@@ -1,106 +1,68 @@
 <div class="container">
-		
-<h2>Qui es nos</h2>
-		
-<h3>Re iste sito</h3>
-		
-<table>
-		<tbody>
 
-    <tr>
+  <div class="text-md-center">
+  <h3>Autores del contento del sito web</h3>
+  <ul class="list-unstyled">
+    
+    {% for author in site.data.credits.website %}
+      
+      <li>{{ author }}</li>
+    
+    {% endfor %}
+  
+  </ul>
 
-      <td>Iste version in interlingua:</td>
+  <h3>Designo del sito web</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>
 
-      <td>Carmelo Serraino  </td>
+  
 
-    </tr>
+  {% if site.lang != "en" %}
+  
+  <h3>Traductores del version anglese</h3>
+  <ul class="list-unstyled">
+    
+    {% for translator in site.data.credits.translators[site.lang] %}
+      
+      <li>{{ translator }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+  
+  {% endif %}
+  
+  </div>
 
-  </tbody>
-
-</table>
-
-<p/>
-
-<h3>Le projecto OmegaT</h3>
-
-<p>Le projecto OmegaT es mantenite per un gruppo informal e international de voluntarios. Su proposito es disveloppar, distribuer e sustener le uso de OmegaT, un application software, open source, pro memoria de traduction.</p>
-
-<p>Le principal membros del projecto es:</p>
-
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Keith Godfrey</td>
-
-      <td>Autor original del application OmegaT</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Didier Briel</td>
-
-      <td>Director del disveloppamento</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Alex Buloichik</td>
-
-      <td>Disveloppator capo</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Marc Prior</td>
-
-      <td>Coordinator del Projecto e director del sito TTT</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Vincent Bidaux</td>
-
-      <td>Director del documentation</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Jean-Christophe Helary</td>
-
-      <td>Director del localisation, titular del Gruppo del usatores</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Disveloppatores</td>
-
-      <td>Keith Godfrey, Zoltan Bartko, Volker Berlin, Didier Briel,
-    Kim Bruning, Alex Buloichik, Thomas Cordonnier, Sandra Jean Chua, 
-    Martin Fleurke, Wildrich Fourie, Phillip Hall, Jean-Christophe Helary, Thomas Huriaux, 
-    Hans-Peter Jacobs, Kyle Katarn, Ibai Lakunza Velasco, Guido Leenders, Aaron Madlon-Kay, 
-    Fabián Mandelbaum, John Moran, Maxym Mykhalchuk, Arno Peters, 
-    Henry Pijffers, Briac Pilpré, Tiago Saboga, Andrzej Sawuła, 
-    Benjamin Siband, Yu Tang, Rashid Umarov, Antonio Vilei, Martin Wunderlich and Michael Zakharov</td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-
-<p>Le philosophia del projecto es describite  <a href="philosophy.html">hic</a>.</p>
-<p>Desde le initio le projecto ha recipite le supporto de dozenas de altere contributores, troppo numerose a mentionar ci, ma pro le adjuta del quales nos es multo grate.<br/>
-
-</p>
-
+  <h2>Le projecto OmegaT</h2>
+  <p>Le projecto OmegaT es mantenite per un gruppo informal e international de voluntarios. Su proposito es disveloppar, distribuer e sustener le uso de OmegaT, un application software, open source, pro memorias de traduction.</p>
+  <p>Le principal membros del projecto es:</p>
+  <div class="text-md-center">
+    <h3>Autor original del application OmegaT</h3>
+    <p>Keith Godfrey</p>
+    <h3>Director del projecto</h3>
+    <p>Didier Briel</p>
+    <h3>Disveloppator capo</h3>
+    <p>Alex Buloichik</p>
+    <h3>Director del integration</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Director del sito web</h3>
+    <p>Marc Prior</p>
+    <h3>Director del documentation</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Director del localisation, titular del Gruppo del usatores</h3>
+    <p>Jean-Christophe Helary</p>
+    <h3>Disveloppatores</h3>
+    <ul class="list-unstyled">
+      
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    
+    </ul>
+  </div>
+  <p>Le philosophia del projecto es describite  <a href="philosophy.html">hic</a>.</p>
+  <p>Desde le initio le projecto, illo ha recipite le supporto de dozenas de altere contributores, troppo numerose a mentionar ci, ma nos es multo grate pro lor auxilio.</p>
 </div>
-
