@@ -1,125 +1,59 @@
 <div class="container">
-
-<h2>Guida de OmegaT: <br/>Compilar OmegaT a partir del codice primari</h2>
-
-
-<p>Iste guida explica como compilar OmegaT ex le codice origine.</p>
-
-<p>OmegaT es supplite preste compilate pro un numero de  platteformas, includente un version multe platteforma. Dunque le usatores non necessita de compilar OmegaT ipse. Compilar OmegaT es pertinente pro disveloppatores qui desidera facer modificationes lor proprie a su codice.</p>
-
-<p><strong>1. Discarga e installa le Java Development Kit (JDK) e Apache Ant</strong></p>
-
-<p>Varie programmas pote esser usate pro compilar de nove le codice primari post que tu ha modificate lo, ma inter le plus conveniente es <a href="http://ant.apache.org">Apache Ant</a>. Il es alsi necesse le <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK).</p>
-
-<p>dependente sur como tu installa le Java Development Kit, tu pote deber cambiar tu &quot;JAVA_HOME&quot; attributo proque illo functiona con Ant.</p>
-
-<p><strong>2. Compila le codice</strong></p>
-
-<p>Le nomines del plica indicate in basso es sol pro illustration; le numeros de version mutara.</p>
-
-<p>Aperi un fenestra pro linea de commando (consola, fenestra DOS). Cambia plica al plica principal in le codice origine de OmegaT (le plica continente le file build.xml), e.g.</p>
-
-<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_2.2.3_Beta_Source</p>
-
-<p>Ex intra iste plica, exeque Apache Ant per scriber le executabile ant. Il es possibile necessitar de scriber le percurso complete, e.g.:</p>
-
-<p style="font-family: monospace;">C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</p>
-
-<p>Si le codice se compila con bon successo, tu videra le message &quot;BUILD SUCCESSFUL&quot;. Si non, essera monstrate messages de cernita  que (on spera) providera alicun idea re ubi es le problema.</p>
-
-<p><strong>3. Lancea OmegaT</strong></p>
-
-<p>Si tu codice esseva compilate con bon successo, le OmegaT compilate es site in:</p>
-
-<p style="font-family: monospace;">OmegaT_2.2.3_Beta_Source\dist</p>
-
-<p>Ancora in tu fenestra de linea de commando, cambia iste plica, e.g. con:</p>
-
-<p style="font-family: monospace;">cd C:\My Documents\MyOmegat\OmegaT_1.8.0_01_Beta_Source\dist</p>
-
-<p>e lancea OmegaT con:</p>
-
-<p style="font-family: monospace;">java -jar OmegaT.jar</p>
-
-
-
-<p><strong>4a. 1st exemplo de modification: cambiar le color del marcator del segmento</strong></p>
-
-<p>In le plica</p>
-
-<p style="font-family: monospace;">src/org/omegat/gui/editor</p>
-
-<p>aperi le file SegmentBuilder.java in un editor de texto.</p>
-
-<p>Trova le lineas:</p>
-
-<p style="font-family: monospace;">return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</p>
-
-<p>e</p>
-
-<p style="font-family: monospace;">b = Styles.COLOR_GREEN;</p>
-
-<p>e reimplacia</p>
-
-<p style="font-family: monospace;">COLOR_GREEN</p>
-
-<p>con</p>
-
-<p style="font-family: monospace;">COLOR_BLUE.</p>
-
-<p>In le plica</p>
-
-<p style="font-family: monospace;">src/org/omegat/util/gui</p>
-
-<p>aperi le file Styles.java in un editor de texto.</p>
-
-<p>Trova le linea</p>
-
-<p style="font-family: monospace;">public static final Color COLOR_GREEN = new Color(192, 255, 192);</p>
-
-<p>Reimplacia</p>
-
-<p style="font-family: monospace;">COLOR_GREEN</p>
-
-<p>con</p>
-
-<p style="font-family: monospace;">COLOR_BLUE</p>
-
-<p>e</p>
-
-<p style="font-family: monospace;">192, 255, 192 </p>
-
-<p>con</p>
-
-<p style="font-family: monospace;">225, 225, 255.</p>
-
-
-
-<p><strong>4b. 2nd exemplo de modification: augmentar le numero de concordantias partial displicate, ab cinque a dece</strong></p>
-
-<p>In le plica</p>
-
-<p style="font-family: monospace;">/src/org/omegat/util</p>
-
-<p>aperi le file OConsts.java in un editor de texto.</p>
-
-<p>Trova le lineas:</p>
-
-<p style="font-family: monospace;">    /** Number of fuzzy matches to display */<br/>
-    public static final int MAX_NEAR_STRINGS = 5;</p>
-
-<p>e reimplacia</p>
-
-<p style="font-family: monospace;">= 5</p>
-
-<p>con</p>
-
-<p style="font-family: monospace;">= 10</p>
-
-
-<p>Pro ambe le exemplos, compila e proba como describite supra.</p>
-
-<p>Copyright Marc Prior 2011-2012</p>
-
+  <p>Iste guida explica como compilar OmegaT a partir del codice fonte.</p>
+  <p>OmegaT es supplite preste compilate pro un numero de  platteformas, includente un version multe platteforma. Dunque le usatores non besonia de compilar illes ipse OmegaT. Compilar OmegaT es pertinente a disveloppatores qui desidera facer modificationes lor proprie a lor codice. </p>
+  <p>
+    <strong>1. Discarga e installa le Java Development Kit (JDK)</strong>
+  </p>
+  <p>Il es necesse le &lt;a1&gt;Java Development Kit&lt;/a1&gt; (JDK). Pro OmegaT 4.0 e subsequente, nulle altere software es requirite.</p>
+  <p>Precedente versiones del OmegaT require <a href="http://ant.apache.org">Apache Ant</a>.</p>
+  <p>Tu pote haber a configurar tu variabile de ambiente de <code>JAVA_HOME</code> a punctar al position de JDK.</p>
+  <p>
+    <strong>2. Compila le codice</strong>
+  </p>
+  <p>Aperi un fenestra pro linea de commando (consola, fenestra DOS). Naviga al radice del codice fonte de OmegaT (le plica continente le file <code>build.gradle</code>), e.g.</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source</pre>
+  <p>
+    <em>OmegaT 4.0 o plus tarde</em>
+  </p>
+  <p>Tu pote facer fluer OmegaT directemente per linea de commando:</p>
+  <pre>gradlew run</pre>
+  <p>Si isto es toto lo que te interessa, tu pote saltar al grado 3a.</p>
+  <p>Pro construer le programma OmegaT e tote le files associate, in vice commanda</p>
+  <pre>gradlew installDist</pre>
+  <p>Le resultatos essera in <code>build\install\OmegaT</code>.</p>
+  <p>
+    <em>Versiones precedente de OmegaT</em>
+  </p>
+  <p>Inter le plica radice, exeque Apache Ant per entrar le executabile de Ant. Il es possibile besoniar de scriber le percurso complete, e.g.:</p>
+  <pre>C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</pre>
+  <p>Si le codice compila con bon successo, tu videra le message <code>COMPILATION SUCCEDITE</code>. Si non, essera monstrate messages de cernita que (on spera) fornira qualque idea re ubi es le problema.</p>
+  <p>Si tu codice esseva compilate con bon successo, le OmegaT compilate es site in:</p>
+  <pre>OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>Ancora in tu fenestra de linea de commando, cambia iste plica, e.g. con:</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>e lancea OmegaT con:</p>
+  <pre>java -jar OmegaT.jar</pre>
+  <p>
+    <strong>3a. 1me exemplo de modification: cambiar le color del marcator del segmento</strong>
+  </p>
+  <p>In le classificator <code>src/org/omegat/gui/editor</code> aperir le file <code>SegmentBuilder.java</code> in un texto editor.</p>
+  <p>Trova le lineas:</p>
+  <pre>return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</pre>
+  <p>e</p>
+  <pre>b = Styles.COLOR_GREEN;</pre>
+  <p>e supplanta <code>COLOR_GREEN</code> con <code>COLOR_BLUE</code>.</p>
+  <p>In le classificator <code>src/org/omegat/util/gui</code> aperir le file <code>Styles.java</code> in un texto editor.</p>
+  <p>Trova le linea</p>
+  <pre>public static final Color COLOR_GREEN = new Color(192, 255, 192);</pre>
+  <p>Reimplacia <code>COLOR_GREEN</code> con <code>COLOR_BLUE</code> e <code>192, 255, 192</code> con <code>225, 225, 255</code>.</p>
+  <p>
+    <strong>3b. 2nd exemplo de modification: augmentar le numero de concordantias partial displicate, ab cinque a dece</strong>
+  </p>
+  <p>In le plica <code>/src/org/omegat/util</code> aperi le file <code>OConsts.java</code> in un editor de texto.</p>
+  <p>Trova le lineas:</p>
+  <pre>    /** Numero de concordantias partial a monstrar */
+    public static final int MAX_NEAR_STRINGS = 5;</pre>
+  <p>atque reimplacia <code>= 5</code> con <code>= 10</code>.</p>
+  <p>Pro ambe le exemplos, compila e proba como describite supra.</p>
+  <p>Copyright Marc Prior 2011-2012</p>
 </div>
-

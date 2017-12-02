@@ -1,103 +1,62 @@
-<div class="untranslated">Sorry this page has not yet been translated.</div><div class="container">
-- By using Microsoft Translator API, you can utilize Microsoft Translator machine translation in the Machine Translation window of OmegaT.<br />
-- To use Microsoft Translator API, you need to register your Application in Microsoft Azure Marketplace. OmegaT uses "Client ID" and "Client secret" information of which you registered.<br />
-
-<h3>Subscription</h3>
-<br />
-<a href="https://datamarket.azure.com/dataset/bing/microsofttranslator">https://datamarket.azure.com/dataset/bing/microsofttranslator</a>
-<br />
-<br />
-- Access the above website and [Sign in] to Microsoft Azure Marketplace.<br />
-<br />
-*If you do not already have an Microsoft account, you will need to register one first.<br />
-<br />
-- After signing in Microsoft Azure Marketplace, you can get subscription to use Microsoft Translator.<br />
-- You may pick from any of the available subscription offers, shown in the right area of the page. If you want to select Basic subscription (free, up to 2 million characters a month,) click [SIGN UP] at the top of the subscription list.<br />
-
-<h3>Register your application</h3>
-<br />
-- Click [My Account] on the top of the page.<br />
-- Click [DEVELOPERS] in the left "my account" menu.<br />
-<br />
-<a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/developer/applications</a>
-<br />
-<br />
-- Click [REGISTER] shown below "Registered Applications."<br />
-- Register an application with the following infomation:<br />
-&nbsp;&nbsp; - Client ID: Any string ex.) my_clientid1<br />
-&nbsp;&nbsp; - Name: Any string ex.) my_application01<br />
-&nbsp;&nbsp; - Client secret: Use string displayed by default<br />
-&nbsp;&nbsp; - Redirect URI: Any URI (Invalid URL required when using Microsoft Translator) ex.) http://dummy/<br />
-- After registering, check if your application has been displayed on the "Registered Applications" in the page.<br />
-<br />
-<a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/developer/applications</a>
-<br />
-<br />
-
-<h3>OmegaT setting</h3>
-<br />
-- OmegaT uses "Client ID" and "Client secret" information of which you registered.<br />
-
-<h4>Windows users:</h4>
-- Locate the file OmegaT.l4J.ini (in the OmegaT program folder) and edit the following lines with your preferred plain-text editor:<br />
-<br />
-- Before editing OmegaT.l4J.ini<br />
-<pre>
-# Microsoft Translator credentials
-#-Dmicrosoft.api.client_id=xxxxx
-#-Dmicrosoft.api.client_secret=xxxxx
-</pre>
-- After editing OmegaT.l4J.ini (where Client ID: my_clientid1)<br />
-- Remove "#" at the line heads, and replace "xxxxx" with your "Client ID" and "Client secret."<br />
-<pre>
-# Microsoft Translator credentials
--Dmicrosoft.api.client_id=my_clientid1
--Dmicrosoft.api.client_secret=your Client secret
-</pre>
-- Save OmegaT.l4J.ini.<br />
-<br />
-<h4>Mac users:</h4>
-- Right-click on OmegaT.app and select "Show Package Contents."<br />
-- Find the file OmegaT.app/Contents/MacOS/OmegaT.sh and edit the following lines with your preferred plain-text editor:<br />
-<br />
-- Before editing OmegaT.sh<br />
-<pre>
-# Microsoft Translator credentials
-#MS_CLIENT_ID="-Dmicrosoft.api.client_id=xxxxx"
-#MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=xxxxx"
-</pre>
-- After editing OmegaT.sh (where Client ID: my_clientid1)<br />
-- Remove "#" at the line heads, and replace "xxxxx" with your "Client ID" and "Client secret."<br />
-<pre>
-# Microsoft Translator credentials
-MS_CLIENT_ID="-Dmicrosoft.api.client_id=my_clientid1"
-MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=your Client secret"
-</pre>
-- Save OmegaT.sh.<br />
-<br />
-<h4>Linux users:</h4>
-- Add the following options to launch OmegaT (where Client ID: my_clientid1)<br />
-<pre>
-java -jar -Dmicrosoft.api.client_id=my_clientid1 -Dmicrosoft.api.client_secret=your Client secret OmegaT.jar
-</pre>
-
-
-<h3>Using Microsoft Translator machine translation in OmegaT</h3>
-<br />
-- Launch OmegaT and open your project.<br />
-- Select [Options] > [Machine Translate]<br />
-- Check [Microsoft Translator]<br />
-- When you select any segments, its translation will be displayed in Machine Translation window of OmegaT.<br />
-&nbsp;&nbsp; - If you find a message including "Bad Request" in Machine Translation window, check if the values "Client ID" and "Client secret" are appropriate.<br />
-- Ctrl+M (or Command+M on Mac) will replace the current segment translation with that machine translation.<br />
-
-<h3>How will I know when I reach my monthly usage limit?</h3>
-<br />
-<a href="https://datamarket.azure.com/account/datasets">https://datamarket.azure.com/account/datasets</a>
-<br />
-<br />
-- You can check your usage limit in your account by accessing the above page. The "Status" field displays the limit like as "1,998,890 Characters remaining" for example.<br />
-<br />
-Copyright Will Helton and OmegaT Japanese Localization Team 2012-2015<br />
-
-</div>
+<div class="container">
+- Per usar la API de Microsoft Translator, tu pote utilisar Microsoft Translator in le fenestra Traduction automatic de OmegaT.<br /> - Pro usar le API de Microsoft Translator, il es necesse de registrar tu application in Microsoft Azure Marketplace. OmegaT usa le informationes "Cliente ID" e "Cliente secret" per los qual tu te registrava<br />
+
+<h3>Abonamento</h3>
+<br />
+<a href="https://datamarket.azure.com/dataset/bing/microsofttranslator">https://datamarket.azure.com/dataset/bing/microsofttranslator</a> <br /> <br /> - Acceder le precedente sito web e [accede] a Microsoft Azure Marketplace.<br /> <br /> *Si tu non ha ja un conto Microsoft, tu in prime loco habera a registrar uno.<br /> <br /> - Post le accesso a Microsoft Azure Marketplace, tu pote obtener le abonamento a usar Microsoft Translatar.<br /> - Tu pote seliger ab alcun del offertas de abonamento disponibile, monstrate in le area dextre del pagina. Si tu vole seliger Abonamento basic (gratuite, usque a 2 million de characteres al mense), clicca [SIGN UP] al alto lista del abonamentos.<br />
+
+<h3>Registra tu application</h3>
+<br />
+- Clicca [My Account] al summitate del pagina.<br /> - Clicca [DEVELOPERS] al sinistra del menu de "my account".<br /> <br /> <a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/developer/applications</a> <br /> <br /> - Clicca [REGISTER] monstrate sub "Registred Applications".<br /> - Registra un application con le sequente informationes:<br /> &nbsp;&nbsp; - Cliente ID: Alcun linea ex.) my_clientid1<br /> &nbsp;&nbsp; - Nomine: Alcun linea ex.) my_application01<br /> &nbsp;&nbsp; - Cliente secret: usa le linea displicate per norma<br /> &nbsp; - Re-dirige al URI: Alcun URI (Invalide URL requirite pro Microsoft Translator) ex.) http://dummy/<br /> - Post le registration, controla si tu application ha essite monstrate sur le "Applicationes registrate" in le pagina.<br /> <br /> <a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/disveloppator/applicationes</a> <br />
+<br />
+
+<h3>Preparation de OmegaT</h3>
+<br />
+- OmegaT usa le informationes "Cliente ID" e "Cliente secret" per los qual tu te registrava.<br />
+
+<h4>Usatores de Windows: </h4>
+- Trova le file OmegaT.l4J.ini (in le plica del programma OmegaT) e modifica le sequente rigas con tu editor de texto-simple preferite:<br /> <br /> - Ante le modificationes de OmegaT.l4J.ini<br />
+<pre>
+# Microsoft Translator credentials
+#-Dmicrosoft.api.client_id=xxxxx
+#-Dmicrosoft.api.client_secret=xxxxx
+</pre>
+- Post le modificationes de OmegaT.l4J.ini (ubi Cliente ID: my_clientid1)<br /> - Remove "#" al initios del riga, e reimplacia "xxxxx" con tu "Client ID" e "Client secret".<br />
+<pre>
+# Microsoft Translator credentials
+-Dmicrosoft.api.client_id=my_clientid1
+-Dmicrosoft.api.client_secret=tu Client secret
+</pre>
+- Salva OmegaT.l4J.ini.<br />
+<br />
+<h4>Usatores de Mac:</h4>
+- Clicca-dextre sur OmegaT.app e selige "Monstrar le contentos del pacchetto."<br /> - Trova le file OmegaT.app/Contentos/MacOS/OmegaT.sh e modifica le sequente rigas con tu editor de texto-simple preferite:<br /> <br /> - Ante le modificationes de OmegaT.sh<br />
+<pre>
+# Microsoft Translator credentials
+#MS_CLIENT_ID="-Dmicrosoft.api.client_id=xxxxx"
+#MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=xxxxx"
+</pre>
+- Post le modificationes de OmegaT.sh (ubi Cliente ID: my_clientid1)<br /> - Remove "#" al initios del riga, e reimplacia "xxxxx" con tu "Client ID" e "Client secret".<br />
+<pre>
+# Microsoft Translator credentials
+MS_CLIENT_ID="-Dmicrosoft.api.client_id=my_clientid1"
+MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=tu Client secret"
+</pre>
+- Salva OmegaT.sh.<br />
+<br />
+<h4>Usatores de Linux:</h4>
+- Adde le sequente optiones pro lancear OmegaT (ubi Cliente ID: my_clientid1)<br />
+<pre>
+java -jar -Dmicrosoft.api.client_id=my_clientid1 -Dmicrosoft.api.client_secret=your Client secret OmegaT.jar
+</pre>
+
+
+<h3>Usar le traductor automatic Microsoft Translator in OmegaT</h3>
+<br />
+- Lancea OmegaT e aperi tu projecto.<br /> - Selige [Optiones] &gt; [Traduction automatic]<br /> - Marca [Microsoft Translator]<br /> - Quando tu selige alcun segmentos, su traduction essera displicate in le fenestra Traduction automatic de OmegaT.<br /> &nbsp;&nbsp; - Si tu trova un message includente "Bad Request" in le fenestra Traduction automatic, verifica si le valores "Cliente ID" e "Cliente secret" es appropriate.<br /> - Ctrl+M (o Commando+M sur Mac) reimplaciara le traduction actual del segmento con iste traduction a machina.<br />
+
+<h3>Como sapera io quando io attinge le limite de mi uso mensual?</h3>
+<br />
+<a href="https://datamarket.azure.com/account/datasets">https://datamarket.azure.com/account/datasets</a> <br /> <br /> - Tu pote verificate le limite de tu uso in tu conto per le accesso al pagina precedente. Le campo "Status" monstra le limite, per exemplo: "1,998,890 Characters remaining" (characteres restante).<br /> <br /> Copyright Will Helton e OmegaT Japanese Localisation Equipa 2012-2015<br />
+
+</div>
