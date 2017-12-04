@@ -75,7 +75,7 @@ $endlink='</a>';?> <?php echo $link ?>paquete «M&iacute;nimo»<?php echo $endli
 
 <p>Opci&oacute;ns &gt; Filtros de ficheiros &gt; Seleccione «HTML e XHTML» &gt; Editar &gt;Engadir &gt; Introduza &ldquo;*.php&rdquo; no cadro «Padr&oacute;n do nome de ficheiro de orixe». </p>
 
-<p>Por &uacute;ltimo, pode atopar o <strong>Titorial para novatos</strong> <a href="/tutorials/OmegaT_for_Beginners.odt">aqu&iacute;</a>.</p>
+<p>Por &uacute;ltimo, pode atopar o <strong>Titorial para novatos</strong> <a href="/files/guide/OmegaT_for_Beginners_gl.odt">aqu&iacute;</a>.</p>
 
 <p>5. &Eacute; posible que haxa versi&oacute;ns antigas das da documentaci&oacute;n ou das memorias de traduci&oacute;n (ficheiros TMX) dispo&ntilde;ibles para o seu idioma que poden ser &uacute;tiles no proceso de traduci&oacute;n. Pode atopar os ficheiros de memorias de traduci&oacute;n (TMX) de localizaci&oacute;ns antigas de OmegaT, a documentaci&oacute;n e a p&aacute;xina web na <a href="http://groups.yahoo.com/neo/groups/omegat/files/3- Localization files/Translation memory repository/">secci&oacute;n «Files» do grupo de usuarios en li&ntilde;a</a>. Tam&eacute;n merece a pena preguntar na <a href="https://lists.sourceforge.net/lists/listinfo/omegat-l10n">lista de localizadores</a> (OmT-l10n) se algu&eacute;n ten materiais de referencia que poidan facilitar a s&uacute;a traduci&oacute;n.</p>
 

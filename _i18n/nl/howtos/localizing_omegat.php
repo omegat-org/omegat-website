@@ -65,7 +65,7 @@ $endlink='</a>';?>
 
 <p>Opties &gt; Bestandsfilters &gt; Selecteer "HTML en XHTML" &gt; Bewerken &gt; Toevoegen &gt; voer dan "*.php" in in de kolom "Patroon voor bronbestandsnaam".</p>
 
-<p>Finally, there is the <strong>Beginner's Tutorial</strong>, available <a href="/tutorials/OmegaT_for_Beginners.odt">here</a>.</p>
+<p>Finally, there is the <strong>Beginner's Tutorial</strong>, available <a href="/files/guide/OmegaT_for_Beginners_nl.odt">here</a>.</p>
 
 <p>5. Er kunnen vele oudere versies van de documentatie en/of vertaalgeheugens (TMX-bestanden) voor uw taal beschikbaar zijn die misschien handig zijn voor uw vertaling. Bestanden met vertaalgeheugens (TMX) van oudere vertalingen van OmegaT, de documentatie en de website kunnen worden gevonden in het gedeelte <a href="http://groups.yahoo.com/neo/groups/omegat/files/3- Localization files/Translation memory repository/">"Files" van de online gebruikersgroep</a>. Het is het ook waard om te vragen op de <a href="https://lists.sourceforge.net/lists/listinfo/omegat-l10n">lijst met vertalers</a> (OmT-l10n) of iemand misschien referentiemateriaal heeft dat bruikbaar is voor uw vertaling.</p>
 
