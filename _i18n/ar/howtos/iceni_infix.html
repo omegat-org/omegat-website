@@ -28,7 +28,7 @@
 
 <p>Launch Iceni Infix and open the PDF file you wish to translate. The example in the screenshot is the <a href="http://ec.europa.eu/enterprise/policies/sme/files/sme_definition/sme_user_guide_hu.pdf">European Commission's SME user guide in Hungarian</a>.</p>
 
-<img src="../../images/infix1.png" alt="infix1.png"></img>
+<img src="/img/infix1.png" alt="infix1.png"></img>
 
 <p>Export the text from the PDF in Infix's XML format with Document > Translate > Export XML. Save the PDF. This is important: when you export the XML file from the PDF, Infix makes a note in the file of where all the pieces of text ("stories") belong, so you must use this version of the file when re-importing the translated XML file.</p>
 
@@ -40,7 +40,7 @@
 
 <p>Reload your OmegaT project. You can now translate the text (see screenshot).</p>
 
-<img src="../../images/infix2.png" alt="infix2.png"></img>
+<img src="/img/infix2.png" alt="infix2.png"></img>
 
 <p>Note: OmegaT's Infix filter maps the &lt;BR/&gt; of Infix to &lt;brx/&gt; tags. This enables the HTML segmentation rule to be used to choose whether or not segmentation should occur at these points.</p>
 
@@ -52,7 +52,7 @@
 
 <p>Note that if you use the demonstration version of Iceni Infix in this procedure, your translated PDF file will bear an Iceni watermark. For translations intended "for information", this may not be a problem. Iceni Infix also enables you to save PDF files in RTF format, but in this case the demonstration version really is only suitable for demonstration purposes, as it contains random character substitutions.</p>
 
-<img src="../../images/infix3.png" alt="infix3.png"></img>
+<img src="/img/infix3.png" alt="infix3.png"></img>
 
 <p>As is so often the case with things technical (and things translation), there are catches.</p>
 
@@ -62,7 +62,7 @@
 
 <p>You may find that segments are broken by hard line breaks at inconvenient places. This situation will probably be familiar to you if you have translated Powerpoint files in OmegaT, or for that matter other CAT tools. To resolve this, open the original PDF file again in Infix. Select Tools > Text tool. Clicking on the text in question will display a text box and formatting marks. The screenshot shows an example: 
 
-<img src="../../images/infix4.png" alt="infix4.png"></img>
+<img src="/img/infix4.png" alt="infix4.png"></img>
 
 Remove the line break. Then save the changes and re-export the PDF to the XML file (and change the file extension etc.), and reload your OmegaT project. If your file contains lots of such inconvenient breaks, it is more efficient to remove them all at once, toggling between OmegaT and Infix to see where they are.</p>
 

@@ -56,7 +56,7 @@ echo $website_files
 
 <div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net Logo" height="31" width="88" /></a><br />
 
-<a href="http://validator.w3.org/check?uri=referer"><img src="../../images/xhtml.png" alt="Geldige XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../images/css.png" alt="Geldige XHTML" /></a>
+<a href="http://validator.w3.org/check?uri=referer"><img src="/img/xhtml.png" alt="Geldige XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="/img/css.png" alt="Geldige XHTML" /></a>
 	</div>
 
 </div>

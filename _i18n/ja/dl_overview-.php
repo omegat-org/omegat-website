@@ -36,27 +36,27 @@
 
 <ul id="menu">
 
-  <li><a href="omegat.html">OmegaT とは</a></li>
+  <li><a href="omegat">OmegaT とは</a></li>
 
-  <li><a href="requirements.html">要件</a></li>
+  <li><a href="requirements">要件</a></li>
 
-  <li><a href="screenshots.html">スクリーンショット</a></li>
+  <li><a href="screenshots">スクリーンショット</a></li>
 
-  <li><a href="downloads.html">ダウンロード</a></li>
+  <li><a href="downloads">ダウンロード</a></li>
 
-  <li><a href="documentation.php">文書</a></li>
+  <li><a href="documentation">文書</a></li>
 
-  <li><a href="resources.html">その他のリソース</a></li>
+  <li><a href="resources">その他のリソース</a></li>
 
-  <li><a href="3rd_party.html">関連プログラム</a></li>
+  <li><a href="3rd_party">関連プログラム</a></li>
 
-  <li><a href="contact_support.html">連絡先とサポート</a></li>
+  <li><a href="contact_support">連絡先とサポート</a></li>
 
-  <li><a href="involved.html">あなたにできること</a></li>
+  <li><a href="involved">あなたにできること</a></li>
 
-  <li><a href="reviews.html">レビュー</a></li>
+  <li><a href="reviews">レビュー</a></li>
 
-  <li><a href="who_we_are.html">貢献者</a></li>
+  <li><a href="who_we_are">貢献者</a></li>
 
 </ul>
 
@@ -192,7 +192,7 @@ href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp">Web Start 開発�
 
 <p>Web Start 版では、将来の更新版が自動インストールされます。</p>
 
-<p>インストール中、OS によってはいくつかのセキュリティ警告が表示されることがあります。<br/>証明書は、フランスで登記された会社 <a href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a> によって署名されています。</p>
+<p>インストール中、OS によってはいくつかのセキュリティ警告が表示されることがあります。<br/>証明書は、フランスで登記された会社 <a href="http://www.pnsconcept.com/coordinates">PnS Concept Sarl</a> によって署名されています。</p>
 
 <p>この Web Start 版に与える権限（「コンピューターへの無制限アクセス」のように表示されることがあります）は、ローカル版に対して与えるものと同じで、コンピューターのハードディスクにアクセスすることを許可するものです。</p>
 
@@ -218,7 +218,7 @@ href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp">Web Start 開発�
 
 <div id="footer"><a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=68187&amp;type=1" alt="SourceForge.net ロゴ" height="31" width="88" /></a><br />
 
-<a href="http://validator.w3.org/check?uri=referer"><img src="../images/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../images/css.png" alt="Valid XHTML" /></a>
+<a href="http://validator.w3.org/check?uri=referer"><img src="/img/xhtml.png" alt="Valid XHTML" /></a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="/img/css.png" alt="Valid XHTML" /></a>
 	</div>
 
 </div>
