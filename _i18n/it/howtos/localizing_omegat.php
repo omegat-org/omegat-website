@@ -80,7 +80,7 @@ href="http://sourceforge.net/projects/omegat/files/Other%20-%20Localization%20pr
 
 <p>Il pacchetto completo contiene il manuale utente, il manuale di avvio rapido, il corredo di risorse dell'interfaccia utente e il file readme (leggimi). Il pacchetto minimo contiene gli stessi file del pacchetto completo, fatta eccezione per il manuale principale dell'utente. Non è necessario tradurre un pacchetto completo; è possibile, ad esempio, tradurre solo l'interfaccia utente (bundle), o soltanto la guida di avvio rapido.</p>
 
-<p>Se si vogliono tradurre le pagine web di OmegaT, scaricare il <a href="/resources/omt_website.zip">pacchetto di localizzazione del sito Web</a>. (Nota: questi sono i file inglesi. Se si preferisce tradurre da una lingua diversa in cui OmegaT è già stato localizzato, contattare il <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmaster di OmegaT</a>.)</p>
+<p>Se si vogliono tradurre le pagine web di OmegaT, scaricare il <a href="/files/omt_website.zip">pacchetto di localizzazione del sito Web</a>. (Nota: questi sono i file inglesi. Se si preferisce tradurre da una lingua diversa in cui OmegaT è già stato localizzato, contattare il <a href="mailto:mailto:lin4trans@users.sourceforge.net">webmaster di OmegaT</a>.)</p>
 
 <p>Il sito di OmegaT include file in formato HTML e, dal 2011, in PHP. Per tradurre quest'ultimo in OmegaT, è necessario registrare l'estensione .php con il filtro HTML e XHTML come segue:</p>
 

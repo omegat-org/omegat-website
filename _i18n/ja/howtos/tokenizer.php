@@ -14,7 +14,7 @@
 
 <p><strong>OmegaT バージョン 2.1.0 以前</strong>：現在のトークナイザーには対応していません。（バージョン 2.0.x から 2.1.0 の間でもトークナイザーを使用できますが、それには別バージョンのトークナイザーと別のインストール方法が必要です。） 最新ベータ版の OmegaT にアップグレードすることをお勧めします。</p>
 
-<p><strong>Windows 版 OmegaT</strong>：OmegaT (バージョンにかかわらず) でトークナイザーを使用するには、起動スクリプトファイルから起動する必要があります。起動スクリプトファイルは、Windows 版 OmegaT には付属していません。JRE 付きの Windows 版を使用している場合、<a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a> ファイルをダウンロードしてください。JRE 無しの Windows 版を使用している場合は、<a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a> ファイルをダウンロードしてください。ダウンロードしたファイルを、OmegaT メインフォルダー（OmegaT.jar ファイルが入っているフォルダー）に入れてください。</p>
+<p><strong>Windows 版 OmegaT</strong>：OmegaT (バージョンにかかわらず) でトークナイザーを使用するには、起動スクリプトファイルから起動する必要があります。起動スクリプトファイルは、Windows 版 OmegaT には付属していません。JRE 付きの Windows 版を使用している場合、<a href="/files/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a> ファイルをダウンロードしてください。JRE 無しの Windows 版を使用している場合は、<a href="/files/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a> ファイルをダウンロードしてください。ダウンロードしたファイルを、OmegaT メインフォルダー（OmegaT.jar ファイルが入っているフォルダー）に入れてください。</p>
 
 <p><strong>プラットフォームに依存しない版（Windows 上）</strong>：OmegaT 起動スクリプトファイル（OmegaT.bat）の場所を確認してください。</p>
 

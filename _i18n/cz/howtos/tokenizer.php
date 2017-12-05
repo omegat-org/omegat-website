@@ -12,7 +12,7 @@
 
 <p><strong>OmegaT verze 2.1.0 a starší</strong>: aktuální tokenizer není kompatibilní s těmito verzemi. (Tokenizer můžete použít s verzemi 2.0.x a 2.1.0, ale toto vyžaduje jak odlišné verze tokenizeru, tak odlišný způsob instalace.) Uživatelé by měli povýšit na nejnovější beta verzi OmegaT.</p>
 
-<p><strong>Verze OmegaT pro Windows</strong>: aby šlo použít OmegaT (jakákoliv verze) s tokenizerem, tak musí být tento program spuštěn přes soubor spouštěcího skriptu. Soubor spouštěcího skriptu není dostupný s verzemi OmegaT pro Windows. Pokud používáte verzi pro Windows s JRE, stáhněte si soubor <a href="/resources/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Pokud používáte verzi pro Windows bez JRE, stáhněte si soubor <a href="/resources/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Po stažení umístěte soubor do hlavního adresáře OmegaT (adresář obsahující soubor OmegaT.jar).</p>
+<p><strong>Verze OmegaT pro Windows</strong>: aby šlo použít OmegaT (jakákoliv verze) s tokenizerem, tak musí být tento program spuštěn přes soubor spouštěcího skriptu. Soubor spouštěcího skriptu není dostupný s verzemi OmegaT pro Windows. Pokud používáte verzi pro Windows s JRE, stáhněte si soubor <a href="/files/OmegaT_with_JRE.bat">OmegaT_with_JRE.bat</a>; Pokud používáte verzi pro Windows bez JRE, stáhněte si soubor <a href="/files/OmegaT_without_JRE.bat">OmegaT_without_JRE.bat</a>. Po stažení umístěte soubor do hlavního adresáře OmegaT (adresář obsahující soubor OmegaT.jar).</p>
 
 <p><strong>Verze bez závislosti na platformě (pod Windows)</strong>: užijte daný soubor se spouštěcím skriptem pro OmegaT (Omega.bat).</p>
 

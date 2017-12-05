@@ -53,7 +53,7 @@ $endlink='</a>';?>
 
 <p>Het volledige pakket bevat de gebruikershandleiding, de gids Snelle start, het bronbestand voor de gebruikersinterface en het bestand LeesMij. Het minimale pakket bevat dezelfde bestanden als het volledige pakket, met uitzondering van de belangrijke gebruikershandleiding. U hoeft niet een compleet pakket te vertalen; u kunt, bijvoorbeeld, alleen de gebruikersinterface (Bundle.properties) vertalen, of alleen de gids Snelle start.</p>
 
-<p>If you wish to translate the <strong>OmegaT web pages</strong>, download the <a href="/resources/omt_website.zip">website localization package</a>. (Opmerking: dit zijn de Engelstalige bestanden. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
+<p>If you wish to translate the <strong>OmegaT web pages</strong>, download the <a href="/files/omt_website.zip">website localization package</a>. (Opmerking: dit zijn de Engelstalige bestanden. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
 
 <p>Localizations of the OmegaT user interface and documentation are generally updated in step with new releases of OmegaT.  </p>
 

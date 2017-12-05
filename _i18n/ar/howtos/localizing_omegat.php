@@ -89,13 +89,13 @@ $endlink='</a>';?>
 
 <p>The full package contains the user manual, the instant start manual, the user interface resource bundle and the readme file. The minimal package contains the same files as the full package, except for the main user manual. You do not have to translate a complete package; you can, for instance, translate just the user interface (Bundle.properties), or just the instant start tutorial.</p>
 
-<p>If you wish to translate the OmegaT web pages, download the <a href="/resources/omt_website.zip">website localization package</a>. (Note: these are the English files. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
+<p>If you wish to translate the OmegaT web pages, download the <a href="/files/omt_website.zip">website localization package</a>. (Note: these are the English files. If you prefer to translate from a different language into which OmegaT has already been localized, please&nbsp;contact the <a href="mailto:mailto:lin4trans@users.sourceforge.net">OmegaT webmaster</a>.)</p>
 
 <p>The OmegaT website includes files in HTML and, as of 2011, PHP format. To translate the latter in OmegaT, you must register the .php extension with the XHTML filter as follows:</p>
 
 <p>Options > File Filters > Select "XHTML files" > Edit > Add > Then enter "*.php" in the "Source Filename Pattern" column.</p>
 
-<p>5. There may be older versions of the documentation and/or translation memories (TMX files) available for your language which are useful to your translation. A repository of such files can be downloaded from the OmegaT website at www.omegat.org/resources/tmx_repository.zip. It is also worth asking on the <a href="https://lists.sourceforge.net/lists/listinfo/omegat-l10n">localizers' list</a> (OmT-l10n) whether anyone has any reference material which might facilitate your translation.</p>
+<p>5. There may be older versions of the documentation and/or translation memories (TMX files) available for your language which are useful to your translation. A repository of such files can be downloaded from the OmegaT website at www.omegat.org/files/tmx_repository.zip. It is also worth asking on the <a href="https://lists.sourceforge.net/lists/listinfo/omegat-l10n">localizers' list</a> (OmT-l10n) whether anyone has any reference material which might facilitate your translation.</p>
 
 <p>6. Translate the files you have chosen. Needless to say, we would prefer you to use OmegaT for the OmegaT localization work. You can however use other software if you wish.</p>
 

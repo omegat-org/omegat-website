@@ -67,7 +67,7 @@ $endlink='</a>';?> <?php echo $link ?>paquete «M&iacute;nimo»<?php echo $endli
 
 <p>O paquete completo cont&eacute;n o manual de usuario, a gu&iacute;a de inicio r&aacute;pido, a interface de usuario e o ficheiro leme. O paquete m&iacute;nimo cont&eacute;n os mesmos ficheiros que o paquete completo a excepci&oacute;n do manual de usuario. Non ten que traducir un paquete completo, pode simplemente traducir a interface de usuario (Bundle.properties) ou a gu&iacute;a de inicio r&aacute;pido.</p>
 
-<p>Se desexa traducir <strong>a p&aacute;xina web de OmegaT</strong>, descargue o <a href="/resources/omt_website.zip">paquete de localizaci&oacute;n da p&aacute;xina web</a>. (Te&ntilde;a en conta: estes son os paquetes do ingl&eacute;s. Se desexa traducir dende un idioma diferente ao que OmegaT xa fose traducido, contacte co <a href="mailto:mailto:lin4trans@users.sourceforge.net">xestor da p&aacute;xina web de OmegaT</a>.)</p>
+<p>Se desexa traducir <strong>a p&aacute;xina web de OmegaT</strong>, descargue o <a href="/files/omt_website.zip">paquete de localizaci&oacute;n da p&aacute;xina web</a>. (Te&ntilde;a en conta: estes son os paquetes do ingl&eacute;s. Se desexa traducir dende un idioma diferente ao que OmegaT xa fose traducido, contacte co <a href="mailto:mailto:lin4trans@users.sourceforge.net">xestor da p&aacute;xina web de OmegaT</a>.)</p>
 
 <p>Polo xeral, as localizaci&oacute;ns da interface de usuario de OmegaT e a documentaci&oacute;n actual&iacute;zanse con cada nova versi&oacute;n de OmegaT. </p>
 

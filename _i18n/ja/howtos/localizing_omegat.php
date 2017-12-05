@@ -46,7 +46,7 @@ href="http://sourceforge.net/projects/omegat/files/Other%20-%20Localization%20pr
 
 <p>完全パッケージには、取扱説明書、お手軽スタートマニュアル、ユーザーインターフェースリソースバンドル、および readme ファイルが含まれています。簡易パッケージは、完全パッケージから取扱説明書のみを除いたものです。必ずしも完全なパッケージを翻訳する必要はありません。たとえば、ユーザーインターフェース（Bundle.properties）のみ、あるいはお手軽スタートのみを翻訳してもかまいません。</p>
 
-<p>OmegaT ウェブページを翻訳することを望まれる場合は、 <a href="/resources/omt_website.zip">ウェブサイト地域化パッケージ</a>をダウンロードしてください。（注意：いずれも英語のファイルです。OmegaT の地域化が完了している別の言語から翻訳することを望まれる場合は、<a href="mailto:mailto:lin4trans@users.sourceforge.net">OmegaT ウェブサイト管理者</a>にお問い合わせください。）</p>
+<p>OmegaT ウェブページを翻訳することを望まれる場合は、 <a href="/files/omt_website.zip">ウェブサイト地域化パッケージ</a>をダウンロードしてください。（注意：いずれも英語のファイルです。OmegaT の地域化が完了している別の言語から翻訳することを望まれる場合は、<a href="mailto:mailto:lin4trans@users.sourceforge.net">OmegaT ウェブサイト管理者</a>にお問い合わせください。）</p>
 
 <p>OmegaT ウェブサイトには、2011 年時点で HTML および PHP 形式のファイルが含まれています。OmegaT で後者の形式を翻訳するには、以下のように、HTML・XHTML フィルターで .php 拡張子を登録する必要があります。</p>
 
