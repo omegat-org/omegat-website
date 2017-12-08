@@ -1,0 +1,61 @@
+<div class="container">
+  <p>This HowTo explains how to create a new file filter for use with OmegaT by describing the creation of a rudimentary file filter for the TMX format. Although it might seem strange to want to translate TMX files (the usual reason for creating a file filter), the addition of a TMX filter has the interesting effect that it enables TMX files in any location to be searched for from within any OmegaT project using the "Search Files" function, something not possible in the standard OmegaT build.</p>
+  <p>For compiling OmegaT from the source code, see <a href="compiling_from_source.html">Compiling OmegaT from Source HowTo</a>.</p>
+  <p>Select an existing filter for a format similar to that for the new filter. In this example, the Help &amp; Manual filter has been selected as a basis. </p>
+  <p>Locate the folder src/org/omegat/filters3/xml, and make a copy the subfolder /helpandmanual, naming it /tmx. In this folder, rename the two files HelpandManualDialect.java and HelpandManualFilter.java to TmxDialect.java and TmxFilter.java respectively.</p>
+  <p>Open the files TMXDialect.java and TMX filter in a text editor. In both files, search for (matching the case) and replace:</p>
+  <p>"helpandmanual" with "tmx"<br/>
+"HelpAndManual" with "TMX"<br/>
+"HELPANDMANUAL" with "TMX"<br/>
+"Help &amp; Manual" with "TMX"<br/>
+"Help&amp;Manual" with "TMX"</p>
+  <p>Identify the paragraph-level tag(s) for your new file format. To find out what the paragraph tags should be, examine a sample file in a text editor. In TMX, the paragraph-level tag corresponding to a segment is "tu".</p>
+  <p>In TMXDialect.java:</p>
+  <p>Define the paragraph tags, in this case by changing the line:</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "caption", "config-value", "variable", "para", "title", "keyword",
+                "li", });</p>
+  <p>to</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "tu", });</p>
+  <p>You can delete the line:</p>
+  <p> &#xA0;&#xA0;&#xA0;defineShortcut("link", "li");</p>
+  <p>as it is irrelevant to TMX, although the new filter will still work if you do not.</p>
+  <p>You can define out-of-turn tags. These define subsegments that are presented outside the segment in which they are contained (footnotes are a good example). To do this for the TMX filter, insert the line </p>
+  <p>&#xA0;&#xA0;&#xA0;defineOutOfTurnTags(new String[] { "sub", });</p>
+  <p>beneath the line</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "tu", });</p>
+  <p>The filter will however still work if you do not do this.</p>
+  <p>Beneath these lines, you can also insert the code:</p>
+  <p>&#xA0;&#xA0;&#xA0;defineIntactTags(new String[]<br/>
+&#xA0;&#xA0;&#xA0;{<br/>
+&#xA0;&#xA0;&#xA0;"header",<br/>
+&#xA0;&#xA0;&#xA0;"prop",<br/>
+&#xA0;&#xA0;&#xA0;"ph",<br/>
+&#xA0;&#xA0;&#xA0;"bpt",<br/>
+&#xA0;&#xA0;&#xA0;"ept",<br/>
+&#xA0;&#xA0;&#xA0;"it",<br/>
+&#xA0;&#xA0;&#xA0;"ut",<br/>
+&#xA0;&#xA0;&#xA0;});</p>
+  <p>This will make the display of the TMX files neater, but again, it is not absolutely essential.</p>
+  <p>In TMXFilter.java:</p>
+  <p>Change the file extension, in this case to .tmx, by changing the line:</p>
+  <p>&#xA0;&#xA0;&#xA0;public Instance[] getDefaultInstances() {<br/>
+&#xA0;&#xA0;&#xA0;return new Instance[] { new Instance("*.xml", null, null), new Instance("*.hmxp", null, null), };</p>
+  <p>to:</p>
+  <p>&#xA0;&#xA0;&#xA0;public Instance[] getDefaultInstances() {<br/>
+&#xA0;&#xA0;&#xA0;return new Instance[] { new Instance("*.tmx", null, null), };</p>
+  <p>In the folder /src/org/omegat, open the file Bundle.properties in a text editor and find the lines</p>
+  <p>&#xA0;&#xA0;&#xA0;# HelpAndManualFilter.java<br/>
+&#xA0;&#xA0;&#xA0;HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+  <p>Below these lines, insert the lines </p>
+  <p>&#xA0;&#xA0;&#xA0;# TMXFilter.java<br/>
+&#xA0;&#xA0;&#xA0;TMX_FILTER_NAME=TMX files</p>
+  <p>(If you wish to launch OmegaT with a user interface language other than English, make the same change in the relevant localized Bundle.properties file.)</p>
+  <p>In the main folder of the source code, open the file manifest-template.mf in a text editor. Find the lines:</p>
+  <p>&#xA0;&#xA0;&#xA0;Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
+&#xA0;&#xA0;&#xA0;OmegaT-Plugin: filter</p>
+  <p>Below them, insert the lines:</p>
+  <p>&#xA0;&#xA0;&#xA0;Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
+&#xA0;&#xA0;&#xA0;OmegaT-Plugin: filter</p>
+  <p>Compile as described in the Compiling OmegaT from Source HowTo. Launch the newly compiled version. Check in Options &gt; File Filters that the new filter is present. To check whether it works, you can place a TMX file in the /source folder of a project, or (more useful) perform a Text Search &gt; Search files operation on TMX files.</p>
+  <p>Copyright Marc Prior 2008-2011</p>
+</div>

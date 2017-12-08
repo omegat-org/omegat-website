@@ -1,0 +1,113 @@
+
+<div class="container">
+
+<p>Since version 2.0.1, OmegaT has had a text export function. This HOWTO describes the function and possible uses for it. In addition, the package <a href="{{ '/files/omegatk/te-scripts.zip' | prepend: site.baseurl_root }}">te-scripts.zip</a> contains some very simple tcl/tk scripts which are intended to illustrate use of the function.</p>
+
+<h3>Purpose</h3>
+
+<p>The text export function exports data from within the current OmegaT project to plain-text files. At present, the data exported are:</p>
+
+<p>- The content of the segment source text, when the segment is opened<br/>
+- The content of the segment target text, when the segment is opened<br/>
+- Highlighted text in the target text, when the relevant shortcut is pressed</p>
+
+<p>Programmers and scripters can use the files containing this text in order to add further functions to OmegaT. They need no knowledge of Java; most if not all programming languages could be used instead, and useful functions achieved even with only relatively limited programming skill.</p>
+
+<h3>Using the text export function</h3>
+
+<p>For the text export function to be used, you must first enable it within OmegaT itself:</p>
+
+<p>Options > Editing behaviour</p>
+
+<p>Then tick the "Export the segment to text files" box.</p>
+
+<p>The files appear in the /script subfolder in the OmegaT user files folder (for the location of the OmegaT user files folder on your operating system, see the User Manual (F1 from within OmegaT) > Files and directories > User files):</p>
+
+<p>source.txt	- contains the source text of the segment<br/>
+target.txt	- contains the target text of the segment<br/>
+selection.txt	- contains the text highlighted by the user, when Ctrl-Shift-C is pressed or Edit > Export Selection is selected</p>
+
+<p>The content of the files is overwritten either when a new segment is opened (source.txt and target.txt) or when a new selection is exported (selection.txt). The files are unformatted plain-text files.</p>
+
+<h3>Using the sample scripts</h3>
+
+<p>Tcl/tk must be installed, if it is not already. Tcl/tk can be obtained from a number of sources; tcl.activestate.com is one popular source. Mac OSX users should install tcl/tk from their system media and Linux users should find it in their distribution's repository, if it is not already installed by default. (Note to Ubuntu users: the font implementation of the default tcl/tk installation in Ubuntu at the present time (version 9.10) is appalling, but can be rectified.)</p>
+
+<p>In order to make the workings of the script code clearer, each script essentially performs only one function. If multiple functions were to be used at the same time in practice, it would be more efficient to combine them in a single script file.</p>
+
+<p>The example scripts provided <a href="{{ '/files/omegatk/te-scripts.zip' | prepend: site.baseurl_root }}">here</a> all launch a window, but scripts that carry out functions in the background are quite conceivable.</p>
+
+<p>To launch a script:</p>
+
+<p>Copy the script into the OmegaT "script" folder, i.e. the folder containing source.txt etc. (The scripts can in principle be placed anywhere, but must then be edited with addition of the path to the script files.)</p>
+
+<p>Depending upon how your system is configured, it may be possible to launch the scripts simply by clicking on them with the mouse. Alternatively:</p>
+
+<p>Open a command-line window (DOS prompt, terminal, console)</p>
+
+<p>Change folder (directory) to the script folder, e.g. (on Windows XP systems):</p>
+
+<p>cd C:\Documents and Settings\User Name\Application Data\OmegaT\script</p>
+
+<p>Launch the script with "wish" followed by the script file name, e.g.:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Descriptions of the individual scripts</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>This script displays the source text in a separate window. As such, it does nothing not already done by the OmegaT Editor pane; its purpose is to illustrate how the text can be extracted from a script file and made available for further scripts. The content of the script window is editable and can be copied and pasted back into the OmegaT Editor pane.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>As for te-basic-source, but for the target text.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>Besides displaying the source text, this script provides an entry box into which the user can type a string (e.g. a word). When an OmegaT segment containing this string is opened, the script outputs a warning. The warning takes the form of the text in the script window being highlighted in yellow. In addition, if supported by the hardware and operating system (this is not always the case), a beep will sound.</p>
+
+<p>An example use of this function is as follows. The translator has a text containing the phrase "abc", and has completed a first draft of it, translating "abc" as "abc". She then discovers that "abc" should be translated as "def". Rather than find all the cases of "abc" and correcting them before proceeding (which is possible, but has drawbacks), she could simply decide to correct them in course of the next draft. In this case, a "reminder" in each relevant segment may be helpful.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>As its name suggests, this script automatically strips the tags out of an OmegaT (target) segment. This is useful when <i>checking</i> tag-heavy segments on the screen, since it is easy to overlook missing or double spaces, for example.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>This script displays the target segment in a particular font (hard-coded in the script, but can be edited) rather than the default font. The tags are displayed in a different font in order to make them less intrusive. Unlike te-notags, it is possible for the translator to work in this window, then copy and paste the content in full to the OmegaT editor pane.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>This script reads the content of a glossary file and highlights any terms found in it in the current (source) segment. The glossary file must consist of two columns only, have the name GLOSS.utf8, and be present in the /script folder.</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>As for te-gloss-highlight, but substitutes the source terms in the glossary with the target terms.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combines the substitution and highlighting functions of te-gloss-highlight and te-gloss-subst.</p>
+
+<h3>Programming in tcl/tk</h3>
+
+<p>Tcl/tk has a number of advantages as a scripting language:</p>
+
+<p>- It is easy to learn<br/>
+- It is free<br/>
+- It is widely used, so help can be found on the Internet<br/>
+- The Tk component makes it easy to produce graphical user interfaces<br/>
+- There are many good books and other resources available for it (at least in English)<br/>
+- It is string-oriented, making it particularly suitable for applications involving text</p>
+
+<p>For beginners, several online tutorials are available, such as:</p>
+
+<p><a href="http://archive.is/kZWsj">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
+<a href="http://www.tutorialspoint.com/tcl-tk/">www.tutorialspoint.com/tcl-tk/</a></p>
+
+<p>If you are serious about learning tcl/tk, "Practical Programming in Tcl and Tk" by Brent Welch, ISBN: 0-13-038560-3 is strongly recommended. This is likely to be a little too technical for complete newcomers to programming, but after working through one of the online tutorials, they should find it useful.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>

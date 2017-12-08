@@ -104,6 +104,10 @@
     "enabled": true,
     "label": "Svenska"
 }, {
+    "code": "uk",
+    "enabled": true,
+    "label": "Українська"
+}, {
     "code": "zh_CN",
     "enabled": true,
     "label": "&#x7B80;&#x4F53;&#x4E2D;&#x6587;"

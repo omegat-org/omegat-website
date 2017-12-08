@@ -1,0 +1,128 @@
+
+<div class="container">
+
+
+<h3>Background and principles</h3>
+
+<p>Priorview is a small utility that provides a preview function for use with OmegaT. For the background and principles, refer to the <a href="preview.html">Preview Howto</a>. This HowTo describes the use of Priorview for <b>Windows and Linux</b>. If you are using Mac OSX, you can <a href="{{ '/files/priorview_for_mac.zip' | prepend: site.baseurl_root }}">download a version of Priorview for Mac here</a>. The Mac OSX version is not yet documented and the information below does <b>not</b> apply to it.</p>
+
+<h3>Software required</h3>
+
+<p>To use Priorview on Windows or Linux, you need the following:</p>
+
+<p>1. <b>A browser</b>, specifically either:</p>
+
+<ul>
+
+<li><a href="http://www.opera.com">Opera</a><br/>or</li>
+
+<li><a href="http://www.mozilla.org">Firefox</a> together with the <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">"ReloadEvery" add-on for Firefox</a><br/> Install Firefox first (if you do not already have it installed), then ReloadEvery.</li>
+
+<li><i>(Download from the links provided; Linux users may prefer to install from their distribution's repositories, where this is possible)</i></li>
+
+</ul>
+
+<p>2. <b>A conversion utility</b>, specifically either:</p>
+
+<ul>
+
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>or</li>
+
+<li><a href="http://www.libreoffice.org/">LibreOffice</a> together with the <a href="http://dag.wieers.com/home-made/unoconv/">Unoconv plug-in</a></li>
+
+</ul>
+
+<p>3. <b><a href="http://www.tcl.tk/software/tcltk/">Tcl/Tk</a></b></p>
+
+<p>Almost any current version of Tcl/Tk will probably be suitable, but you must have both Tcl (the scripting interpreter) and Tk (the graphical component).</p>
+
+<p>4. <b><a href="{{ '/files/priorview.zip' | prepend: site.baseurl_root }}">Priorview</a></b></p>
+
+<p>To install Priorview, simply unpack the zip archive at any suitable location on your hard drive. To launch Priorview, open a command prompt/terminal/console and type in:</p>
+
+<p>cd <i>path</i></p>
+
+<p>where <i>path</i> is the full pathname of the folder in which you placed preview.tcl. Then type in:</p>
+
+<p>wish priorview.tcl</p>
+
+<p>You can simplify launching by writing a script file, i.e. a plain-text file containing these two lines.</p>
+
+<h3>Using Priorview</h3>
+
+<p>All being well, Priorview should appear when launched as described above. On this, select:</p>
+
+<ul>
+
+<li>the name of the target file (in /target in your OmegaT project);</li>
+
+<li>the browser you have installed;</li>
+
+<li>the frequency with which the script is to check whether this file has changed (polling interval);</li>
+
+<li>the file conversion utility that you have installed.</li>
+
+</ul>
+
+<p>When you have selected all of these, the Start button appears. When actuated, this launches your browser with a dummy page instructing you to set the automatic refresh function, which you should then do, and then to hit Ctrl+s, Ctrl+d in OmegaT to launch automatic updating of the browser.</p>
+
+<p>Whilst Priorview is running, you can:</p>
+
+<ul>
+
+<li>interrupt and restart it;</li>
+
+<li>select a new file (if you are working in a project containing several files, you do not have to relaunch Priorview when you reach the end of one file; you can simply select the next);</li>
+
+<li>change the polling interval.</li>
+
+</ul>
+
+<p>Once Priorview has been launched, however, you cannot select a different browser or conversion utility; these options are therefore hidden after launch. To select a different browser or conversion utility, you must close Priorview and relaunch it.</p>
+
+<p>The Quit button closes Priorview and also deletes the temporary files that it creates. (Other methods of closing Priorview will not delete the temporary files.)</p>
+
+<p><img src="{{ '/img/preview_ss.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"></img></p>
+
+<p><i>A European Commission press release (in .odt format) in OmegaT and below it the instantaneous target text displayed in Opera. Bottom right: the Priorview utility. The layout shown here is just for the sake of example; you can of course arrange the windows as you like.</i></p>
+
+
+<h3>Troubleshooting</h3>
+
+<p>If the path to the location of priorview.tcl contains spaces, put it in quotes, e.g.:</p>
+
+<p>cd "C:\My Files\priorview"</p>
+
+<p>If Priorview fails to launch:</p>
+
+<p>Depending upon the version of Tcl/Tk that you have installed, you may have to add the version number to the wish command, e.g.:</p>
+
+<p>wish8.5 priorview.tcl</p>
+
+<p>Pay attention to lower/upper case.</p>
+
+<p>If the file displayed in the browser is not being updated, check the following:</p>
+
+<ul>
+
+<li>That you are remembering to hit Ctrl+s, Ctrl+d in OmegaT. Until/unless you do, there will be no changes to detect/display!</li>
+
+<li>That the file conversion utility is installed properly and is working. You can test this with the relevant command below on the command line (terminal/console/DOS prompt). In each case, <i>file</i> is the name of a .docx or .odt file. If all is well, an .html version of the file will be produced:<br/>
+
+For Abiword:<br/>
+
+<kbd>abiword --to=html <i>file</i></kbd><br/>
+
+For LibreOffice+Unoconv:<br/>
+
+<kbd>unoconv -f html <i>file</i></kbd></li>
+
+<li>That you have set the auto-refresh interval in the browser.</li>
+
+</ul>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
