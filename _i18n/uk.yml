@@ -1,34 +1,34 @@
 global:
-  title: OmegaT - The Free Translation Memory Tool
-  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
+  title: OmegaT — безкоштовна програма для перекладу
+  description: OmegaT — це безкоштовна програма з перекладацькою пам’яттю, розрахована на професійних перекладачів. Написана на Java.
 
 menu:
-  languages: Languages
-  about: About
-  documentation: Documentation
-  contact: Contact
-  download: Download
-  resources: Resources
+  languages: Мови
+  about: Про програму
+  documentation: Документація
+  contact: Контактна інформація
+  download: Завантажити OmegaT
+  resources: Додаткові ресурси для OmegaT
 
 footer:
-  connect: Connect
-  omegat_project: The OmegaT Project
-  documentation: Documentation
+  connect: OmegaT в мережі
+  omegat_project: Проект OmegaT
+  documentation: Документація
 
 titles:
-  404: Page Not Found
-  about: About
-  contact: Contact and Support
-  documentation: Documentation
-  download: Download
-  home: OmegaT - The Free Translation Memory Tool
-  philosophy: Philosophy
-  resources: Resources
-  manual: Manual
-  tutorials: Tutorials
-  howto: How-To
-  reviews: Reviews
-  sponsorship: Sponsorship
+  404: Сторінку не знайдено
+  about: Про програму
+  contact: Контакти та підтримка
+  documentation: Документація
+  download: Завантажити OmegaT
+  home: OmegaT — безкоштовна програма для перекладу
+  philosophy: Філософія
+  resources: Додаткові ресурси для OmegaT
+  manual: Інструкція користувача
+  tutorials: Тьюторіали
+  howto: Практичні вказівки How To
+  reviews: Огляди OmegaT
+  sponsorship: Спонсори
   howtos:
      compatibility: Compatibility
      compatibility_deja_vu: Howto - OmegaT compatibility with Déjà Vu
@@ -49,14 +49,13 @@ titles:
      tokenizer: Howto - Using the OmegaT tokenizer
 
 # Platforms name
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
-nojre: Cross-platform without JRE
-webstart: Web Start
-source: Source code
-
+windows_jre: Версія для Windows з JRE
+windows_jre64b: Версія для Windows з JRE (64 біти)
+windows_nojre: Версія для Windows без JRE
+osx_signed: Версія для OS X (з підписом)
+osx_unsigned: Версія для OS X (без підпису)
+linux_jre: Версія для Linux з JRE
+linux_jre64b: Версія для Linux з JRE (64 біти)
+nojre: Крос-платформна версія без JRE
+webstart: Версія Web Start
+source: Джерельний код
