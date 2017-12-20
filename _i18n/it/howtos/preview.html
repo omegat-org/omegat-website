@@ -1,6 +1,6 @@
+
 <div class="container">
 
-<h2>Guida: Aggiunta di una funzione di anteprima a OmegaT</h2>
 
 <h3>Premesse</h3>
 
@@ -25,11 +25,11 @@
 
 <ul>
 
-<li>Firefox:<br/> Gli utenti di Windows che non stanno già utilizzando Firefox possono <a href="http://www.mozilla.org">scaricarlo da www.mozilla.org</a>; la maggior parte degli utenti Linux l'avrà già installato, oppure può installarlo tramite gli archivi delle loro distribuzioni. Per aggiungere la funzione di aggiornamento automatico di Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installare il componente aggiuntivo &quot;ReloadEvery&quot;</a>.</li>
+<li>Firefox:<br/> Gli utenti di Windows che non stanno già utilizzando Firefox possono <a href="http://www.mozilla.org">scaricarlo da www.mozilla.org</a>; la maggior parte degli utenti Linux l'avrà già installato, oppure può installarlo tramite gli archivi delle loro distribuzioni. Per aggiungere la funzione di aggiornamento automatico di Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installare il componente aggiuntivo "ReloadEvery"</a>.</li>
 
 <li>Opera:<br/> Opera è disponibile per tutte le piattaforme; inoltre è molto veloce e richiede modeste risorse hardware. <a href="http://www.opera.com">Scaricarlo da www.opera.com</a> (per gli utenti Linux: tramite l'archivio della propria distribuzione). La funzione di aggiornamento automatico è integrata.</li>
 
-<li>Chrome:<br/> Chrome è disponibile per tutte le piattaforme. <a href="http://www.google.com/chrome">Scaricare Chrome da www.google.com/chrome</a>. Per aggiungere la funzione di aggiornamento automatico in Chrome, <a href="http://chrome.google.com/webstore/detail/oilipfekkmncanaajkapbpancpelijih">scaricare e installare l'estensione &quot;Auto Refresh Plus&quot;</a> dal Web Store.</li>
+<li>Chrome:<br/> Chrome è disponibile per tutte le piattaforme. <a href="https://www.google.com/chrome/browser/desktop/index.html">Scaricare Chrome da www.google.com/chrome</a>. Per aggiungere la funzione di aggiornamento automatico in Chrome, <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">scaricare e installare l'estensione "Auto Refresh Plus"</a> dal Web Store. </li>
 
 </ul>
 
@@ -60,11 +60,10 @@
 
 <p>LibreOffice è una suite per ufficio completa simile a Microsoft Office. Può anche essere utilizzata per convertire i file .docx e .odt in formato ,html, ma per farlo dalla riga di comando richiede anche Unoconv, un componente aggiuntivo. <a href="http://www.libreoffice.org/">Scarica LibreOffice qui</a>; <a href="http://dag.wieers.com/home-made/unoconv/">scarica il plug-in Unoconv qui</a>.</p>
 
-<p>Una volta installato Abiword o la combinazione di LibreOffice + Uniconv, è possibile convertire i file di destinazione prodotti da OmegaT in formato html, in modo da poter essere letti dal browser. Ricordare che bisognerà prima salvare in OmegaT e produrre i documenti tradotti, avviare poi l'utilità di conversione e quindi attendere che la visualizzazione sia aggiornata nel browser.</p>
+<p>Una volta installato Abiword o la combinazione di LibreOffice+Uniconv, è possibile convertire i file di destinazione prodotti da OmegaT in formato html, in modo da poter essere letti dal browser. Ricordare che bisognerà prima salvare in OmegaT e produrre i documenti tradotti, avviare poi l'utilità di conversione e quindi attendere che la visualizzazione sia aggiornata nel browser.</p>
 
-<p>Esistono molti modi per farlo, ma una soluzione pratica è quella di utilizzare uno script che &quot;ascolta&quot; eventuali modifiche dei file tradotti prodotti da OmegaT e, una volta rilevata una modifica, avvia automaticamente l'utilità che converte i file in formato html per la lettura nel browser. Di seguito è riportato un breve schema:</p>
-
-<p><img src="/img/preview_flow.png" alt="preview_flow.png"/></p>
+<p>Esistono molti modi per farlo, ma una soluzione pratica è quella di utilizzare uno script che "ascolta" eventuali modifiche dei file tradotti prodotti da OmegaT e, una volta rilevata una modifica, avvia automaticamente l'utilità che converte i file in formato html per la lettura nel browser. Di seguito è riportato un breve schema:</p>
+<p><img src="{{ '/img/preview_flow.png' | prepend: site.baseurl_root }}" alt="preview_flow.png"></img></p>
 
 <p>Un esempio di script che realizza questa funzione è descritto nella <a href="priorview.html">Guida di Priorview</a>.</p>
 

@@ -1,6 +1,5 @@
 <div class="container">
 
-<h2>Guida: Concordanza uno-a-molti e propagazione</h2>
 
 <h3>Introduzione</h3>
 
@@ -8,22 +7,25 @@
 
 <h3>Propagazione</h3>
 
-<p>Per impostazione iniziale, OmegaT utilizza la propagazione automatica della concordanza. Questo significa che non appena si traduce un segmento, la stessa traduzione viene inserita automaticamente in tutti gli altri segmenti uguali. Se un segmento è già stato tradotto e successivamente se ne cambia uno identico più avanti nel testo, tutti i segmenti identici verrano aggiornati al segmento modificato. I segmenti che compaiono più di una volta in OmegaT sono detti  &quot;segmenti non univoci&quot;.</p>
+<p>Per impostazione iniziale, OmegaT utilizza la propagazione automatica della concordanza. Questo significa che non appena si traduce un segmento, la stessa traduzione viene inserita automaticamente in tutti gli altri segmenti uguali. Se un segmento è già stato tradotto e successivamente se ne cambia uno identico più avanti nel testo, tutti i segmenti identici verrano aggiornati al segmento modificato. I segmenti che compaiono più di una volta in OmegaT sono detti  "segmenti non univoci".</p>
 
-<p>Selezionando Vista &gt; Evidenzia i segmenti non univoci, solo la prima istanza di un segmento non univoco sarà visualizzata in nero, mentre le successive avranno un aspetto grigio. Questo è utile per la verifica di una traduzione, poiché così potrebbe bastare solo il controllo della prima istanza dei segmenti identici. L'utente può così vedere immediatamente che un segmento, in grigio anziché nero, è già stato controllato (se si seleziona Opzioni &gt; Vista &gt; &quot;Mostra i segmenti di partenza in grassetto; Includi il primo segmento non univoco quando evidenzi i segmenti non univoci&quot;, tutti i segmenti non univoci, tra cui il primo, saranno contrassegnati in grassetto).</p>
+<p>Selezionando Vista &gt; Evidenzia i segmenti non univoci, solo la prima istanza di un segmento non univoco sarà visualizzata in nero, mentre le successive avranno un aspetto grigio. Questo è utile per la verifica di una traduzione, poiché così potrebbe bastare solo il controllo della prima istanza dei segmenti identici. L'utente può così vedere immediatamente che un segmento, in grigio anziché nero, è già stato controllato (se si seleziona Opzioni &gt; Vista &gt; "Mostra i segmenti di partenza in grassetto; Includi il primo segmento non univoco quando evidenzi i segmenti non univoci", tutti i segmenti non univoci, tra cui il primo, saranno contrassegnati in grassetto).</p>
 
+<p>È possibile disattivare la funzione di propagazione automatica in Progetto &gt; Proprietà, togliendo la spunta alla casella "Propagazione automatica delle traduzioni". Questa azione ha l'effetto di rendere traduzioni alternative tutte le istanze di segmenti non univoci (si veda sotto "Concordanza uno-a-molti").</p>
 
-<h3>Concordanza uno a molti (dalla versione 2.5.0)</h3>
+<h3>Concordanza uno-a-molti </h3>
 
-<p>Nella maggior parte dei casi, il traduttore desidera tradurre allo stesso modo tutti i segmenti identici all'interno di un progetto. Per i casi in cui due o più segmenti identici richiedano traduzioni diverse, OmegaT offre la &quot;concordanza uno a molti&quot;.</p>
+<p>Nella maggior parte dei casi, il traduttore desidera tradurre allo stesso modo tutti i segmenti identici all'interno di un progetto. Per i casi in cui due o più segmenti identici richiedano traduzioni diverse, OmegaT offre la "concordanza uno a molti".</p>
 
-<p>La funzione &quot;concordanza uno a molti&quot; di OmegaT presuppone che segmenti identici si debbano all'inizio tradurre nello stesso modo. Questa traduzione è inizialmente indicata come la &quot;traduzione predefinita&quot;. Per produrre una traduzione che diversa dalla &quot;traduzione predefinita&quot;, fare clic destro con il mouse all'interno del segmento e selezionare «Crea traduzione alternativa». Questo segmento può essere allora tradotto come desiderato senza che le altre copie dello stesso siano automaticamente allineate ad esso.</p>
+<p>La funzione "concordanza uno a molti" di OmegaT presuppone che segmenti identici si debbano all'inizio tradurre nello stesso modo. Questa traduzione è inizialmente indicata come la "traduzione predefinita". Per produrre una traduzione che diversa dalla "traduzione predefinita", fare clic destro con il mouse all'interno del segmento e selezionare «Crea traduzione alternativa». Questo segmento può essere allora tradotto come desiderato senza che le altre copie dello stesso siano automaticamente allineate ad esso.</p>
 
-<p>Si possono avere tante &quot;traduzioni alternative&quot; di segmenti identici quante se ne vuole, ma ci può essere solo una traduzione predefinita (o nessuna).</p>
+<p>Si possono avere tante "traduzioni alternative" di segmenti identici quante se ne vuole, ma ci può essere solo una traduzione predefinita (o nessuna).</p>
 
-<p>Per fare di una traduzione alternativa la &quot;traduzione predefinita&quot;, fare clic destro con il mouse e selezionare «Usa come traduzione predefinita». Questo renderà la traduzione corrente la &quot;traduzione predefinita&quot;. Tutte le altre istanze dello stesso segmento che in precedenza erano considerate &quot;traduzione predefinita&quot; saranno ora aggiornate a questa traduzione.</p>
+<p>Per fare di una traduzione alternativa la "traduzione predefinita", fare clic destro con il mouse e selezionare «Usa come traduzione predefinita». Questo renderà la traduzione corrente la "traduzione predefinita". Tutte le altre istanze dello stesso segmento che in precedenza erano considerate "traduzione predefinita" saranno ora aggiornate a questa traduzione.</p>
 
-<p>Per rimuovere lo stato di «traduzione alternativa» di un singolo segmento e riportarlo in linea con la &quot;traduzione predefinita&quot;, è sufficiente rimuovere il contenuto del segmento. Questo ha l'effetto allo stesso tempo di eliminare lo stato di «traduzione alternativa»; la traduzione del segmento tornerà quindi alla traduzione predefinita. Il contenuto di un segmento può essere eliminato completamente mediante i tasti di scelta rapida Ctrl+A &gt; Ctrl+X &gt; Invio, facendovi clic sopra con il mouse e usando la voce di menu Rimuovi traduzione, o semplicemente utilizzando (ripetutamente) il tasto CANC.</p>
+<p>Se si è già tradotta un'istanza di un segmento non univoco e si desidera rendere un'istanza diversa del segmento non univoco la traduzione predefinita, senza modificare la traduzione dell'istanza già tradotta, si deve prima impostare in "traduzione alternativa" lo stato del segmento che è stato già tradotto utilizzando il comando «Crea traduzione alternativa».</p>
+
+<p>Per rimuovere lo stato di "traduzione alternativa" di un singolo segmento e riportarlo in linea con la "traduzione predefinita", è sufficiente rimuovere il contenuto del segmento. Questo ha l'effetto allo stesso tempo di eliminare lo stato di «traduzione alternativa»; la traduzione del segmento tornerà quindi alla traduzione predefinita. Il contenuto di un segmento può essere eliminato completamente mediante i tasti di scelta rapida Ctrl+A &gt; Ctrl+X &gt; Invio, facendovi clic sopra con il mouse e usando la voce di menu Rimuovi traduzione, o semplicemente utilizzando (ripetutamente) il tasto CANC.</p>
 
 
 <h3>Riepilogo dei comandi per la propagazione e della concordanza uno a molti</h3>
@@ -32,24 +34,23 @@
 
 <p><b>Evidenzia i segmenti non univoci</b>: i segmenti identici sono evidenziati in grigio (cambia l'aspetto, ma non il comportamento).</p>
 
-<p><b>Crea traduzione alternativa</b>: rende univoco il segmento. Le modifiche in questo segmento non hanno alcun effetto sugli altri segmenti, né i cambi alla &quot;traduzione predefinita&quot; lo possono influenzare.</p>
+<p><b>Crea traduzione alternativa</b>: rende univoco il segmento. Le modifiche in questo segmento non hanno alcun effetto sugli altri segmenti, né i cambi alla "traduzione predefinita" lo possono influenzare.</p>
 
 <p><b>Rimuovi traduzione</b>: elimina il contenuto del segmento, causando (quando si preme INVIO) l'inserimento della traduzione predefinita.</p>
 
-<p><b>Usa come traduzione predefinita</b>: il segmento diviene &quot;traduzione predefinita&quot; e quindi tutti i segmenti precedentemente nominati come &quot;traduzione predefinita&quot; si aggiornano ad esso.</p>
+<p><b>Usa come traduzione predefinita</b>: il segmento diviene "traduzione predefinita" e quindi tutti i segmenti precedentemente nominati come "traduzione predefinita" si aggiornano ad esso.</p>
 
 
 
 <h3>Punti salienti</h3>
 
-<p>Per rendere univoci i segmenti di alcuni tipi di file, OmegaT utilizza i segmenti precedenti e seguenti il segmento interessato. La creazione di una &quot;traduzione alternativa&quot; si basa pertanto su segmenti identici che hanno un segmento precedente e seguente diverso. Laddove due segmenti hanno anche identici segmenti precedente e seguente (per esempio, quando un'intera pagina compare due volte nel testo), essi non possono essere tradotti in modo diverso gli uni dagli altri in OmegaT, cioè non è possibile creare una &quot;traduzione alternativa&quot; per uno di essi.</p>
+<p>Per differenziare i segmenti identici di alcuni tipi di file, OmegaT fa riferimento ai segmenti precedenti e seguenti il segmento interessato. La creazione di una "traduzione alternativa" si basa pertanto su segmenti identici che hanno un segmento precedente o seguente diverso. Laddove due segmenti hanno anche identici segmenti precedente e seguente (per esempio, quando un'intera pagina compare due volte nel testo), essi non possono essere tradotti in modo diverso gli uni dagli altri in OmegaT, cioè non è possibile creare una "traduzione alternativa" per uno di essi.</p>
 
-<p>L'attributo di &quot;segmento non univoco&quot; include sia le traduzioni predefinite, sia quelle alternative. Di conseguenza, i segmenti contrassegnati come non univoci (carattere grigio) sono contrassegnati come non univoci indipendentemente dal fatto che per essi siano state create o no traduzioni alternative.</p>
+<p>L'attributo di "segmento non univoco" include sia le traduzioni predefinite, sia quelle alternative. Di conseguenza, i segmenti contrassegnati come non univoci (carattere grigio) sono contrassegnati come non univoci indipendentemente dal fatto che per essi siano state create o no traduzioni alternative.</p>
 
-<p>Per impostazione predefinita, il comando Vai &gt; Segmento non tradotto successivo (Ctrl+U), salta al segmento successivo non tradotto, saltando le traduzioni propagate nel processo. Se è comunque selezionata l'opzione Opzioni &gt; Comportamento di modifica &gt; &quot;Vai al prossimo segmento non tradotto si ferma quando esiste almeno una traduzione alternativa&quot; ed è stata creata almeno una traduzione alternativa di un segmento non univoco, questa funzione considera tutte le istanze di quel segmento (sia le traduzioni predefinite, sia le alternative) come non tradotte, cioè non le salta.</p>
+<p>Per impostazione predefinita, il comando Vai &gt; Segmento non tradotto successivo (Ctrl+U), salta al segmento successivo non tradotto, saltando le traduzioni propagate nel processo. Se è comunque selezionata l'opzione Opzioni &gt; Comportamento di modifica &gt; "Vai al prossimo segmento non tradotto si ferma quando esiste almeno una traduzione alternativa" ed è stata creata almeno una traduzione alternativa di un segmento non univoco, questa funzione considera tutte le istanze di quel segmento (sia le traduzioni predefinite, sia le alternative) come non tradotte, cioè non le salta.</p>
 
 
-<p>Copyright Marc Prior 2012</p>
+<p>Copyright Marc Prior 2014</p>
 
 </div>
-

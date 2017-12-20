@@ -1,66 +1,61 @@
 <div class="container">
-
-<h2>Guida di OmegaT: <br/>Usare Google Translate in OmegaT</h2>
-
-<p>Oltre alla pagina web in cui gli utenti possono semplicemente incollare il testo per la traduzione, Google Translate fornisce anche un'interfaccia (API) che può essere utilizzata dalle applicazioni CAT per accedere al servizio. Dal dicembre 2011 Google richiede un pagamento per l'uso di questo servizio. Questa guida descrive come configurare la funzione di OmegaT.</p>
-
-<p>1. Se non se ne possiede già uno, aprire un conto con google.com.</p>
-
-<p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Seguire questo collegamento per richiedere a Google</a> la chiave di Google Translate API v2. Assicurarsi di avere a portata di mano i dati della carta di credito. Google genererà la chiave API, una stringa con circa 39 caratteri.</p>
-
-<p>3. Assegnare la chiave alla procedura di avvio di OmegaT come segue, a seconda se si utilizza Windows, Mac, o avviare OmegaT dalla riga di comando o tramite uno script:</p>
-
-<p><b>Utenti Windows:</b></p>
-
-<p>3.1. Individuare il file di configurazione OmegaT.l4J.ini (la posizione predefinita è C:\Programmi (x86) \OmegaT).</p>
-<p>3.2. Per modificare questo file potrebbe essere necessaria la modalità amministratore, oppure lo si può spostare temporaneamente in una posizione diversa del proprio disco rigido.</p>
-<p>3.3. Aprire OmegaT.l4J.ini in un editor di testo</p>
-<p>3.4. Aggiungere la riga seguente al testo del file:</p>
-<p>-Dgoogle.api.key=XXXXXXXX </p>
-<p>(dove &quot;XXXXXXXX&quot; è la chiave API fornita da Google).</p>
-<p>3.5. Salvare OmegaT.l4J.ini (e se necessario, tornare alla cartella OmegaT).</p>
-
-<p><b>Utenti di Mac</b></p>
-
-<p>3.6 Fare clic col pulsante destro del mouse su OmegaT.app e selezionare &quot;Mostra contenuto del pacchetto&quot;.</p>
-<p>3.7 Fare clic col pulsante destro del mouse sul file Info.plist e selezionare l'editor preferito per aprire il file.</p>
-<p>3.8. Trovare le righe:</p>
-<p>&lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;</p>
-<p>&lt;string&gt;true&lt;/string&gt;</p>
-<p>e, subito dopo queste, aggiungere le righe:</p>
-<p>&lt;key&gt;google.api.key&lt;/key&gt;</p>
-<p>&lt;string&gt;XXXXXXXX&lt;/string&gt;</p>
-<p>dove &quot;XXXXXXXX&quot; è la propria chiave API di Google Translate.</p>
-<p>3.9 Salvare Info.plist.</p>
-
-<p><b>Utenti di Linux</b></p>
-
-<p>3.10 Assicurarsi di avere installato l'avviatore Kaptain (<a href="./linux.html">riferirsi eventualmente alla guida di Linux)</a>, quindi immettere la chiave API di Google Translate nel relativo campo della scheda di connettività.</p>
-
-<p><b>Utenti che avviano OmegaT dalla riga di comando o da uno script:</b></p>
-
-<p>3.11 Aggiungere il seguente argomento per il comando di avvio:</p>
-
-<p>-Dgoogle.api.key=XXXXXXXX</p>
-
-<p>dove &quot;XXXXXXXX&quot; è la propria chiave API di Google Translate.</p>
-
-<p>Il comando base di avvio con il Google Translate API aggiunto sarà quindi:</p>
-
-<p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
-
-<p>4. Configurazione in OmegaT</p>
-<p>4.1. Avviare OmegaT</p>
-<p>4.2. Selezionare Opzioni &gt; Traduzione automatica</p>
-<p>4.3. Spuntare Google Translate v2 (lasciando le altre opzioni non spuntate)</p>
-
-<p>5. Nota:</p>
-
-<p>5.1 la traduzione automatica di Google è un servizio a pagamento (US$ 20,00 per milione di caratteri). È possibile controllarne l'utilizzo quotidiano dal proprio account Google. Nel menu in alto:</p>
-<p>More &gt; Even More &gt; Innovation/Code &gt; APIs Console &gt; Service/Translate API</p>
-
-
-<p>Copyright Milan Hubacek e Marc Prior 2011</p>
-
+  <p>Oltre alla pagina web in cui gli utenti possono semplicemente incollare il testo per la traduzione, Google Translate fornisce anche un'interfaccia (API) che può essere utilizzata dalle applicazioni CAT per accedere al servizio. Dal dicembre 2011 Google richiede un pagamento per l'uso di questo servizio. Questa guida descrive come configurare la funzione di OmegaT.</p>
+  <p>1. Se non se ne possiede già uno, aprire un conto con google.com.</p>
+  <p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Seguire questo collegamento per richiedere a Google</a> la chiave di Google Translate API v2. Assicurarsi di avere a portata di mano i dati della carta di credito. Google genererà la chiave API, una stringa con circa 39 caratteri.</p>
+  <p>3. Assegnare la chiave alla procedura di avvio di OmegaT come segue, a seconda se si utilizza Windows, Mac, o avviare OmegaT dalla riga di comando o tramite uno script:</p>
+  <p>
+    <b>Utenti Windows:</b>
+  </p>
+  <p>3.1. Individuare il file di configurazione OmegaT.l4J.ini (la posizione predefinita è C:\Programmi (x86) \OmegaT).</p>
+  <p>3.2. Per modificare questo file potrebbe essere necessaria la modalità amministratore, oppure lo si può spostare temporaneamente in una posizione diversa del proprio disco rigido.</p>
+  <p>3.3. Aprire OmegaT.l4J.ini in un editor di testo</p>
+  <p>3.4. Individuare le righe seguenti:</p>
+  <pre>
+# Google Translate v2 API key
+#-Dgoogle.api.key=xxxxx
+</pre>
+  <p>e rimuovere "#" all'inizio della riga -Dgoogle.api.key.</p>
+  <pre>
+# Google Translate v2 API key
+-Dgoogle.api.key=xxxxx
+</pre>
+  <p>(dove "xxxxx" è la chiave API fornita da Google).</p>
+  <p>3.5. Salvare OmegaT.l4J.ini (e se necessario, tornare alla cartella OmegaT).</p>
+  <p>
+    <b>Utenti di Mac</b>
+  </p>
+  <p>3.6. Fare clic col pulsante destro del mouse su OmegaT.app e selezionare "Mostra contenuto del pacchetto".</p>
+  <p>3.7. Individuare il file OmegaT.app/Contents/MacOS/OmegaT.sh e selezionare il proprio editor di testo preferito per aprirlo.</p>
+  <p>3.8. Individuare le righe seguenti:
+<pre>
+# Google Translate v2 API key
+#GOOGLE_API_KEY="-Dgoogle.api.key=0123456789A0123456789B0123456789C0123456789D"
+</pre>
+e rimuovere "#" all'inizio della riga. Questa riga definisce GOOGLE_API_KEY.</p>
+  <pre>
+# Google Translate v2 API key
+GOOGLE_API_KEY="-Dgoogle.api.key=XXXXXXXX"
+</pre>
+  <p>dove "XXXXXXXX" è la propria chiave API di Google Translate.</p>
+  <p>3.9 Salvare OmegaT.sh.</p>
+  <p>
+    <b>Utenti di Linux</b>
+  </p>
+  <p>3.10 Assicurarsi di avere installato l'avviatore Kaptain (<a href="./linux.html">riferirsi eventualmente alla guida di Linux)</a>, quindi immettere la chiave API di Google Translate nel relativo campo della scheda di connettività.</p>
+  <p>
+    <b>Utenti che avviano OmegaT dalla riga di comando o da uno script:</b>
+  </p>
+  <p>3.11 Aggiungere il seguente argomento per il comando di avvio:</p>
+  <p>-Dgoogle.api.key=XXXXXXXX</p>
+  <p>dove "XXXXXXXX" è la propria chiave API di Google Translate.</p>
+  <p>Il comando base di avvio con il Google Translate API aggiunto sarà quindi:</p>
+  <p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
+  <p>4. Configurazione in OmegaT</p>
+  <p>4.1. Avviare OmegaT</p>
+  <p>4.2. Selezionare Opzioni &gt; Traduzione automatica</p>
+  <p>4.3. Spuntare Google Translate v2 (lasciando le altre opzioni non spuntate)</p>
+  <p>5. Nota:</p>
+  <p>5.1 la traduzione automatica di Google è un servizio a pagamento (US$ 20,00 per milione di caratteri). È possibile controllarne l'utilizzo quotidiano dal proprio account Google. Nel menu in alto:</p>
+  <p>More &gt; Even More &gt; Innovation/Code &gt; APIs Console &gt; Service/Translate API</p>
+  <p>Copyright Milan Hubacek e Marc Prior 2011</p>
 </div>
-

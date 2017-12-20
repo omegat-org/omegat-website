@@ -1,70 +1,36 @@
 <div class="container">
-
-<h2>Guida: Tradurre i file PDF con Iceni Infix e OmegaT</h2>
-
-<p>Questa guida fornisce informazioni sull'utilizzo di OmegaT e Iceni Infix per tradurre file PDF.</p>
-
-<h3>Premesse</h3>
-
-<p>I file PDF si dividono in due categorie: PDF vero e PDF &quot;scandito&quot;.</p>
-
-<p>Un file PDF &quot;scandito&quot; è un file in cui il formato PDF serve solo da comodo contenitore per scansioni di pagine cartacee. Spesso, queste scansioni contengono testo da tradurre. Non c'è modo di tradurre un file PDF scandito se non ricreando il testo, o riscrivendolo o tramite riconoscimento ottico dei caratteri (OCR), e ricostruendo poi l'impaginazione da zero. I file PDF scanditi non sono oggetto di questa guida.</p>
-
-<p>I file PDF veri (talvolta chiamati file PDF &quot;nativi&quot; o &quot;distillati&quot;, sebbene &quot;distillato&quot; abbia un significato più preciso) sono file esportati da un'altra applicazione, solitamente un programma di desktop publishing (DTP). Per tradurre un file PDF vero, la procedura corretta è, in genere, produrre la traduzione nell'applicazione originale (DTP) e poi seguire la stessa procedura,per la produzione del PDF, utilizzata per l'originale. La traduzione di un file PDF tramite modifica diretta non è solitamente una proposta pratica. Per la traduzione di file PDF &quot;informativi&quot;, i traduttori ricorrono spesso alla conversione del file PDF in un altro formato, come ad esempio RTF, prima della traduzione; i risultati possono essere adeguati allo scopo, ma non soddisfaranno gli standard professionali dell'elaborazione originale del DTP.</p>
-
-<h3>Iceni Infix</h3>
-
-<p>Iceni Infix offre una opzione ulteriore. Infix è un editor PDF, cioè il testo in PDF può essere modificato direttamente. Sebbene sia discutibile che i risultati di questa procedura siano o no paragonabili alla rimpaginazione della traduzione tramite un DTP professionale, essi sono probabilmente molto meglio della conversione in formati totalmente diversi (ad esempio RTF).</p>
-
-<p>La versione &quot;Professionale&quot; di Infix ha una funzione ulteriore d'interesse per i traduttori: l'esportazione di testo in XML. Essa consente al testo essere esportato in un file XML, traducibile poi con un'applicazione CAT. Il testo tradotto può poi essere reimportato in Infix Professional. OmegaT è tra le applicazioni CAT con cui questo processo può essere utilizzato. La procedura è descritta in questa guida.</p>
-
-<h3>Piattaforme</h3>
-
-<p>Anche se Infix è un'applicazione Windows, Iceni ha compiuto sforzi per soddisfare anche gli utenti Linux e Macintosh. InFix Professional può essere utilizzato su queste piattaforme con Crossover Linux e Macintosh Crossover, rispettivamente. Crossover Linux e Macintosh Crossover costano circa €40. Sono pure disponibili versioni demo gratuite. Crossover Linux e Macintosh Crossover possono essere scaricati dal <a href="http://www.codeweavers.com/products/crossover/">sito web di Codeweavers</a>. Sono disponibili anche <a href="http://www.iceni.com/infixmaclinux.htm">informazioni specifiche sull'esecuzione di Iceni Infix sul Crossover Linux o quello Macintosh</a>.</p>
-
-<h3>Tradurre un file PDF: procedura</h3>
-
-<p>Ottenere e installare Iceni Infix Professional dalla <a href="http://www.iceni.com/infix.htm">pagina web di Iceni</a>. È disponibile una versione dimostrativa; al momento della scrittura, la versione completa costa circa 150 dollari USA. Se si utilizza Linux o Macintosh, scaricare e installare la relativa versione Crossover prima di installare Iceni Infix Professional (Infix è segnalato lavorare anche su WINE).</p>
-
-<p>Avviare Iceni Infix e aprire il file PDF che si desidera tradurre. L'esempio nella schermata è la <a href="http://ec.europa.eu/enterprise/policies/sme/files/sme_definition/sme_user_guide_hu.pdf">Guida di utente delle PMI della Commissione europea in ungherese</a>.</p>
-
-<img src="/img/infix1.png" alt="infix1.png"/>
-
-<p>Esportare il testo dal formato PDF a quello XML di Infix tramite il comando Documento &gt; Traduci &gt; Esporta XML. Salvare il file PDF. Importante: quando si esporta da file PDF in file XML, Infix produce una nota nel file a cui appartengono tutte le parti di testo (&quot;storie&quot;), quindi è necessario utilizzare questa versione del file quando si reimporta il file XML tradotto.</p>
-
-<p>Creare un progetto OmegaT nel modo consueto.</p>
-
-<p>Se si utilizza OmegaT versione 2.3 o successive, è sufficiente posizionare il file XML esportato da Infix come descritto sopra, nella cartella /source del progetto OmegaT.</p>
-
-<p><i>Se si utilizza una versione precedente di OmegaT, si raccomanda di aggiornarne l'installazione. In alternativa, si dovrebbe essere in grado di tradurre il file XML di Infix con buoni risultati utilizzando versioni precedenti di OmegaT mediante il filtro HTML. Per utilizzare questo filtro, è sufficiente modificare l'estensione del file del file XML esportato con Infix da .xml a .html.</i></p>
-
-<p>Ricaricare il progetto OmegaT. Ora è possibile tradurre il testo (vedere schermata).</p>
-
-<img src="/img/infix2.png" alt="infix2.png"/>
-
-<p>Nota: il filtro Infix di OmegaT fa corrispondere i tag &lt;BR/&gt; di Infix ai tag &lt;brx/&gt;. Ciò consente alla regola di segmentazione HTML di scegliere se effettuare o no la segmentazione che dovrebbe verificarsi in questi punti.</p>
-
-<p>Dopo aver completato la traduzione, creare il documento tradotto nel modo consueto (Ctrl+S, Ctrl+D). Individuare il file XML tradotto nella cartella /target del progetto OmegaT. <i>Se si è cambiata l'estensione del file in .html, riportare l'estensione del file tradotto a .xml.</i></p>
-
-<p>Tornare a Iceni Infix, importare il file XML tradotto nuovamente nel <i> PDF da cui era stato esportato</i>. Salvare le modifiche.</p>
-
-<p>Se tutto è andato bene, la traduzione apparirà nell'aspetto come l'originale, però tradotta (si veda la schermata: solo i primi tre segmenti sono stati tradotti).</p>
-
-<p>Notare che se in questa procedura si utilizza la versione demo di Iceni Infix, il file PDF tradotto presenterà una filigrana Iceni. Per le traduzioni &quot;informative&quot;, questo potrebbe non rappresentare un problema. Iceni Infix consente inoltre di salvare i file PDF in formato RTF, ma in tal caso la versione demo è davvero adatta a soli scopi dimostrativi, dato che contiene sostituzioni casuali di caratteri.</p>
-
-<img src="/img/infix3.png" alt="infix3.png"/>
-
-<p>Come spesso capita con le cose tecniche (e con la traduzione di cose), ci sono gli inghippi.</p>
-
-<p>Si potrebbe riscontrare che i tipi di carattere incorporati nel PDF non contengono tutti i caratteri necessari. Probabilmente si può risolvere il problema scaricando e installando i tipi di carattere che servono; oppure è possibile selezionare un carattere diverso per questo scopo – soluzione che potrebbe risultare adeguata o no.</p>
-
-<p>C'è un'alta probabilità che, in alcuni punti, la traduzione sia più lunga rispetto all'originale. Questo problema deve essere affrontato e risolto in Infix, ad esempio ampliando la casella contenente il testo. Infix ha funzioni per risolvere questo e altri problemi che esulano dall'ambito di questa guida.</p>
-
-<p>Si potrebbe riscontrare che i segmenti presentano interruzioni di linea in posizioni errate. Questa situazione probabilmente è nota, se si sono tradotti file di Powerpoint in OmegaT, o in altre applicazioni CAT. Per risolvere questo problema, riaprire il file PDF originale in Infix. Selezionare Strumenti &gt; Strumento di testo. Fare clic sul testo in questione per visualizzare una casella di testo e i segni di formattazione. La schermata mostra un esempio: <img src="/img/infix4.png" alt="infix4.png"/> Rimuovere l'interruzione di riga. Quindi salvare le modifiche e riesportare il file PDF in XML (e cambiare l'estensione del file, ecc.) e ricaricare il progetto OmegaT. Se il file contiene molte di queste interruzioni errate, è certamente meglio rimuoverle tutte insieme, alternando tra OmegaT e Infix per individuarle.</p>
-
-<p>Alcune interruzioni di riga errate potrebbero essere necessarie per la corretta posizione del testo. In questi casi è pratico rimuoverle prima di esportare il file in XML, in modo da avere dei segmenti coesi per la traduzione, e poi reinserirle in Infix alla fine del processo.</p>
-
-<p>Copyright Marc Prior 2011</p>
-
+  <p>Questa guida fornisce informazioni sull'utilizzo di OmegaT e Iceni Infix per tradurre file PDF.</p>
+  <h3>Premesse</h3>
+  <p>I file PDF si dividono in due categorie: PDF vero e PDF "scandito".</p>
+  <p>Un file PDF "scandito" è un file in cui il formato PDF serve solo da comodo contenitore per scansioni di pagine cartacee. Spesso, queste scansioni contengono testo da tradurre. Non c'è modo di tradurre un file PDF scandito se non ricreando il testo, o riscrivendolo o tramite riconoscimento ottico dei caratteri (OCR), e ricostruendo poi l'impaginazione da zero. I file PDF scanditi non sono oggetto di questa guida.</p>
+  <p>I file PDF veri (talvolta chiamati file PDF "nativi" o "distillati", sebbene "distillato" abbia un significato più preciso) sono file esportati da un'altra applicazione, solitamente un programma di desktop publishing (DTP). Per tradurre un file PDF vero, la procedura corretta è, in genere, produrre la traduzione nell'applicazione originale (DTP) e poi seguire la stessa procedura,per la produzione del PDF, utilizzata per l'originale. La traduzione di un file PDF tramite modifica diretta non è solitamente una proposta pratica. Per la traduzione di file PDF "informativi", i traduttori ricorrono spesso alla conversione del file PDF in un altro formato, come ad esempio RTF, prima della traduzione; i risultati possono essere adeguati allo scopo, ma non soddisfaranno gli standard professionali dell'elaborazione originale del DTP.</p>
+  <h3>Iceni Infix</h3>
+  <p>Iceni Infix offre una opzione ulteriore. Infix è un editor PDF, cioè il testo in PDF può essere modificato direttamente. Sebbene sia discutibile che i risultati di questa procedura siano o no paragonabili alla rimpaginazione della traduzione tramite un DTP professionale, essi sono probabilmente molto meglio della conversione in formati totalmente diversi (ad esempio RTF).</p>
+  <p>La versione "Professionale" di Infix ha una funzione ulteriore d'interesse per i traduttori: l'esportazione di testo in XML. Essa consente al testo essere esportato in un file XML, traducibile poi con un'applicazione CAT. Il testo tradotto può poi essere reimportato in Infix Professional. OmegaT è tra le applicazioni CAT con cui questo processo può essere utilizzato. La procedura è descritta in questa guida.</p>
+  <h3>Piattaforme</h3>
+  <p>Anche se Infix è un'applicazione Windows, Iceni ha compiuto sforzi per soddisfare anche gli utenti Linux e Macintosh. InFix Professional può essere utilizzato su queste piattaforme con Crossover Linux e Macintosh Crossover, rispettivamente. Crossover Linux e Macintosh Crossover costano circa €40. Sono pure disponibili versioni demo gratuite. Crossover Linux e Macintosh Crossover possono essere scaricati dal <a href="http://www.codeweavers.com/products/crossover/">sito web di Codeweavers</a>. Sono disponibili anche <a href="http://www.iceni.com/infixmaclinux.htm">informazioni specifiche sull'esecuzione di Iceni Infix sul Crossover Linux o quello Macintosh</a>.</p>
+  <h3>Tradurre un file PDF: procedura</h3>
+  <p>Ottenere e installare Iceni Infix Professional dalla <a href="http://www.iceni.com/infix.htm">pagina web di Iceni</a>. È disponibile una versione dimostrativa; al momento della scrittura, la versione completa costa circa 150 dollari USA. Se si utilizza Linux o Macintosh, scaricare e installare la relativa versione Crossover prima di installare Iceni Infix Professional (Infix è segnalato lavorare anche su WINE).</p>
+  <p>Avviare Iceni Infix e aprire il file PDF che si desidera tradurre. L'esempio nella schermata è la <a href="http://bookshop.europa.eu/hu/az-j-kkv-meghat-roz-s-pbNB6004773/?CatalogCategoryID=2QcKABstE4IAAAEjwJAY4e5L">Guida di utente delle PMI della Commissione europea in ungherese</a>.</p>
+  <img src="{{ '/img/infix1.png' | prepend: site.baseurl_root }}" alt="infix1.png"/>
+  <p>Esportare il testo dal formato PDF a quello XML di Infix tramite il comando Documento &gt; Traduci &gt; Esporta XML. Salvare il file PDF. Importante: quando si esporta da file PDF in file XML, Infix produce una nota nel file a cui appartengono tutte le parti di testo ("storie"), quindi è necessario utilizzare questa versione del file quando si reimporta il file XML tradotto.</p>
+  <p>Creare un progetto OmegaT nel modo consueto.</p>
+  <p>Se si utilizza OmegaT versione 2.3 o successive, è sufficiente posizionare il file XML esportato da Infix come descritto sopra, nella cartella /source del progetto OmegaT.</p>
+  <p>
+    <i>Se si utilizza una versione precedente di OmegaT, si raccomanda di aggiornarne l'installazione. In alternativa, si dovrebbe essere in grado di tradurre il file XML di Infix con buoni risultati utilizzando versioni precedenti di OmegaT mediante il filtro HTML. Per utilizzare questo filtro, è sufficiente modificare l'estensione del file del file XML esportato con Infix da .xml a .html.</i>
+  </p>
+  <p>Ricaricare il progetto OmegaT. Ora è possibile tradurre il testo (vedere schermata).</p>
+  <img src="{{ '/img/infix2.png' | prepend: site.baseurl_root }}" alt="infix2.png"/>
+  <p>Nota: il filtro Infix di OmegaT fa corrispondere i tag &lt;BR/&gt; di Infix ai tag &lt;brx/&gt;. Ciò consente alla regola di segmentazione HTML di scegliere se effettuare o no la segmentazione che dovrebbe verificarsi in questi punti.</p>
+  <p>Dopo aver completato la traduzione, creare il documento tradotto nel modo consueto (Ctrl+S, Ctrl+D). Individuare il file XML tradotto nella cartella /target del progetto OmegaT. <i>Se si è cambiata l'estensione del file in .html, riportare l'estensione del file tradotto a .xml.</i></p>
+  <p>Tornare a Iceni Infix, importare il file XML tradotto nuovamente nel <i> PDF da cui era stato esportato</i>. Salvare le modifiche.</p>
+  <p>Se tutto è andato bene, la traduzione apparirà nell'aspetto come l'originale, però tradotta (si veda la schermata: solo i primi tre segmenti sono stati tradotti).</p>
+  <p>Notare che se in questa procedura si utilizza la versione demo di Iceni Infix, il file PDF tradotto presenterà una filigrana Iceni. Per le traduzioni "informative", questo potrebbe non rappresentare un problema. Iceni Infix consente inoltre di salvare i file PDF in formato RTF, ma in tal caso la versione demo è davvero adatta a soli scopi dimostrativi, dato che contiene sostituzioni casuali di caratteri.</p>
+  <img src="{{ '/img/infix3.png' | prepend: site.baseurl_root }}" alt="infix3.png"/>
+  <p>Come spesso capita con le cose tecniche (e con la traduzione di cose), ci sono gli inghippi.</p>
+  <p>Si potrebbe riscontrare che i tipi di carattere incorporati nel PDF non contengono tutti i caratteri necessari. Probabilmente si può risolvere il problema scaricando e installando i tipi di carattere che servono; oppure è possibile selezionare un carattere diverso per questo scopo – soluzione che potrebbe risultare adeguata o no.</p>
+  <p>C'è un'alta probabilità che, in alcuni punti, la traduzione sia più lunga rispetto all'originale. Questo problema deve essere affrontato e risolto in Infix, ad esempio ampliando la casella contenente il testo. Infix ha funzioni per risolvere questo e altri problemi che esulano dall'ambito di questa guida.</p>
+  <p>Si potrebbe riscontrare che i segmenti presentano interruzioni di linea in posizioni errate. Questa situazione probabilmente è nota, se si sono tradotti file di Powerpoint in OmegaT, o in altre applicazioni CAT. Per risolvere questo problema, riaprire il file PDF originale in Infix. Selezionare Strumenti &gt; Strumento di testo. Fare clic sul testo in questione per visualizzare una casella di testo e i segni di formattazione. La schermata mostra un esempio: <img src="{{ '/img/infix4.png' | prepend: site.baseurl_root }}" alt="infix4.png"/> Rimuovere l'interruzione di riga. Quindi salvare le modifiche e riesportare il file PDF in XML (e cambiare l'estensione del file, ecc.) e ricaricare il progetto OmegaT. Se il file contiene molte di queste interruzioni errate, è certamente meglio rimuoverle tutte insieme, alternando tra OmegaT e Infix per individuarle.</p>
+  <p>Alcune interruzioni di riga errate potrebbero essere necessarie per la corretta posizione del testo. In questi casi è pratico rimuoverle prima di esportare il file in XML, in modo da avere dei segmenti coesi per la traduzione, e poi reinserirle in Infix alla fine del processo.</p>
+  <p>Copyright Marc Prior 2011</p>
 </div>
-

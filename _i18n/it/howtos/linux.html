@@ -1,143 +1,76 @@
 <div class="container">
-
-<h2>Guida di OmegaT su Linux </h2>
-
-
-<p>Questa guida fornisce informazioni per l'uso di OmegaT su Linux. Essa è particolarmente rivolta ai nuovi utenti di Linux.</p>
-
-<h3>Java</h3>
-
-<p>OmegaT non funziona in modo soddisfacente con tutte le versioni di Java. Se Java è già installato sul proprio sistema (come probabile) e si prevede di utilizzarlo a livello di sistema in combinazione con OmegaT, controllare prima che la versione sia idonea. Per fare questo, aprire un terminale (anche conosciuto come console o finestra della riga di comando; programmi comuni sono Konsole (KDE) e il terminale di gnome (GNOME)) e digitare:</p>
-
-<p>java -version</p>
-
-<p>Il sistema visualizzerà i dettagli della versione Java già installata a livello di sistema.</p>
-
-<p>Versioni Java di Oracle (ex Sun): verificare i requisiti di sistema nella documentazione di OmegaT (file Readme.txt) per la versione Java di Oracle richiesta (cioè se la versione di Java posseduta è sufficientemente recente).</p>
-
-<p>Versioni Java di terze parti: fino a poco tempo fa, OmegaT funzionava solo con la versione Java propria di Oracle/Sun. OmegaT adesso funziona con l'implementazione OpenJDK Java fornita con alcune distribuzioni di Linux, ma alcune funzioni (ad esempio, l'insieme completo di opzioni della riga di comando) potrebbero non essere disponibili; il gruppo di caratteri fornito potrebbe essere diverso; sono stati segnalati alcuni piccoli problemi, come quelli con la finestra di visualizzazione e con la funzione di segmentazione.</p>
-
-<p>Se non si è sicuri che la versione posseduta di Java sia adatta, è possibile:</p>
-
-<ul>
-
-<li>installare semplicemente una versione di OmegaT senza Java e vedere se funziona. Se non è possibile, si ha ancora la possibilità d'installare una versione locale di Java o una versione di Java diversa a livello di sistema.</li>
-
-<li>Installare una seconda versione non predefinita di Java a livello di sistema e avviare OmegaT in modo esplicito utilizzando questa versione.</li>
-
-<li>Installare la versione di OmegaT con Java incluso.</li>
-
-</ul>
-
-<p>Se si stabilisce che la versione di Java installata a livello di sistema non è compatibile con OmegaT e si desidera sostituire questa versione con quella di Oracle, verificare prima se è disponibile un pacchetto Oracle per la propria distribuzione Linux (SUSE, Ubuntu, ecc.). Se così fosse, l'installazione sarebbe molto più semplice.</p>
-
-<p>Se si ottiene la versione di Oracle di Java direttamente da Oracle è probabile che l'installazione sia semplice, ma bisognerà configurarla manualmente per renderla predefinita a livello di sistema. Non consigliamo questa procedura, soprattutto se si ha poca familiarità con Linux.</p>
-
-<p>La terza opzione, ossia l'installazione di una versione di OmegaT con Java incluso a livello locale, è sempre l'opzione &quot;sicura&quot; ed è consigliata.</p>
-
-<h3>Scegliere e scaricare OmegaT</h3>
-
-<p>Sono disponibili le seguenti versioni di OmegaT per Linux:</p>
-
-<p>&quot;Standard&quot;, &quot;Più recente&quot;, &quot;/ trunk&quot; e &quot;Webstart&quot;. È consigliata la versione &quot;Più recente&quot; (fare riferimento alla pagina &quot;Download&quot; sul sito Web di OmegaT per vedere i dettagli delle differenze).</p>
-
-<p>Senza (without)/ con (with) JRE incluso, ossia il multi-piattaforma senza JRE, ad esempio &quot;OmegaT_2.1.7_02_Beta_Without_JRE.zip&quot; e la versione specifica per Linux con JRE, ad esempio &quot;OmegaT_2.1.7_02_Beta_Linux.tar.bz2&quot;. Selezionare una versione senza o con JRE in base alla propria situazione con Java (vedere sopra).</p>
-
-<p>Essendo un'applicazione open-source, OmegaT è stato incluso nei depositi di molte distribuzioni Linux, dunque potrebbe essere possibile installarlo per quella via. Notare tuttavia che:</p>
-
-<ul>
-
-<li>La maggior parte delle distribuzioni Linux utilizza la versione OpenJDK Java, per impostazione predefinita. Al momento della scrittura, OmegaT funzionerà molto meglio con la versione Oracle di Java (vedi sopra).</li>
-
-<li>La versione di OmegaT solitamente fornita è la versione &quot;Standard&quot;. Nella versione &quot;Più recente&quot; si trovano in genere più funzioni.</li>
-
-</ul>
-
-<p>Si noti che in Linux è possibile installare più versioni di OmegaT senza conflitti. Si accederà comunque sempre agli stessi file di configurazione utente (a meno che il programma non sia avviato da un account utente diverso).</p>
-
-<h3>Installazione di OmegaT</h3>
-
-<p>La versione Linux di OmegaT ora è fornita col proprio script di installazione, linux-install.sh. Questo script:</p>
-
-<ul>
-
-<li>inserisce i file di programma di OmegaT in /opt/omegat/OmegaT-&lt;version&gt;;</li>
-<li>include l'avvio degli script bash e kaptain;</li>
-<li>crea collegamenti dall'usr/local/bin per gli script di avvio.</li>
-
-</ul>
-
-<p>Lo script bash è un file molto semplice che può essere modificato manualmente con le opzioni a riga di comando per l'avvio e la configurazione di OmegaT.</p>
-
-<p>Lo script kaptain (o &quot;grammatica&quot;, come gli script kaptain sono denominati) consente di selezionare le opzioni di avvio e configurazione da un'interfaccia grafica di facile comprensione. È possibile, ad esempio, utilizzarlo per selezionare la lingua dell'interfaccia utente, assegnare più memoria a OmegaT o inserire una password di Google Translate. È possibile personalizzare lo script di avvio kaptain in modo che le proprie preferenze siano predefinite; è sufficiente modificare il file omegat.kaptn in un editor di testo. Il file è commentato per aiutare. Affinché lo script di kaptain funzioni, è tuttavia necessario prima di tutto installare kaptain. Se non è presente nel deposito della propria distribuzione, lo si può <a href="http://kaptain.sourceforge.net">scaricare da kaptain.sourceforge.net</a>.</p>
-
-<p><img src="/img/kaptain.png" alt="preview_ss.png"/></p>
-
-<p><i>Schermate dell'avviatore di OmegaT kaptain</i></p>
-
-<p>Lo script di installazione fornisce maggiore praticità, ma si può comunque installare OmegaT su Linux manualmente, se si preferisce. Basta decomprimere l'archivio nella cartella di propria scelta. In tale caso, gli script di avvio non verranno scritti nel percorso di esecuzione.</p>
-
-<h3>Avviare OmegaT dalla riga di comando</h3>
-
-<p>OmegaT non deve essere per forza avviato da riga di comando, ma questa azione può tornare utile dato che fornisce informazioni di debug. Per avviare da riga di comando, aprire una finestra di terminale (non sono necessari privilegi amministrativi). Passare alla cartella contenente il file OmegaT.jar, ad esempio:</p>
-
-<p>cd /opt/omegat/OmegaT_2.3.4</p>
-
-<p>e confermare con INVIO.</p>
-
-<p>Quindi immettere lo stesso comando di avvio e confermare con INVIO. Il comando di avvio di base è:</p>
-
-<p>java -jar OmegaT.jar</p>
-
-<p>Il comando è sensibile alle maiuscole/minuscole.</p>
-
-<p>Se ci si affida a, o si desidera utilizzare, un'installazione di Java non installata a livello di sistema, questo non sarà sufficiente: si deve anche istruire il sistema a trovare Java. Se si è installata una versione di OmegaT con JRE in dotazione, lo script di avvio fornito già contiene questo percorso. Se si è installata una versione aggiuntiva di Java ma non è stata designata come versione predefinita a livello di sistema, bisogna includere l'intero percorso del file eseguibile Java all'interno del comando di avvio. Sarà qualcosa di simile a  /usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java; prendere nota della posizione in cui è installato Java durante l'installazione, in modo da ritrovarlo in seguito. Il comando sarà quindi (in questo caso):</p>
-
-<p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
-
-<p>Nello script di avvio, non confondere il percorso di OmegaT.jar e quello del comando java. Il primo (con il comando cd) è necessario se lo script di avvio non è nella stessa cartella di OmegaT.jar. Il secondo è necessario se la versione di Java che si desidera utilizzare non è l'installazione predefinita a livello di sistema.</p>
-
-<h3>Avviare OmegaT da uno script di avvio</h3>
-
-<p>Come già accennato, con OmegaT è fornito uno script di avvio. Una volta che questo è stato copiato o collegato al percorso di esecuzione (fatto automaticamente se si utilizza lo script di installazione fornito), è possibile avviare OmegaT premendo <i>Alt + F2</i>, quindi digitandovi <i>omegat</i> e confermando con INVIO.</p>
-
-<p>Per impostazione predefinita, lo script di avvio bash è eseguibile, ma il sistema potrebbe modificare le sue autorizzazioni (ad esempio, durante l'estrazione dell'archivio) e potrebbe essere necessario renderlo di nuovo eseguibile.</p>
-
-<h3>Avvio semplice di OmegaT</h3>
-
-<p>Per avviare OmegaT in modo ancora più agevole, aggiungere al menu di avvio l'applicazione o posizionare un'apposita icona di avvio sul desktop o nel pannello del desktop. Le possibilità sono numerose e le procedure per implementarle non meno numerose, date le miriadi di distribuzioni.</p>
-
-<h3>Aspetto dei tipi di carattere in OmegaT in Linux</h3>
-
-<p>L'aspetto dei tipi di carattere in OmegaT in Linux potrebbe variare molto, in base a:</p>
-
-<ul>
-
-<li>la versione di Java utilizzata (lo stesso carattere può apparire molto diverso su versioni di Java Sun e OpenJDK)</li>
-
-<li>i tipi di carattere disponibili/scelti</li>
-
-<li>la dimensione del carattere</li>
-
-<li>se è abilitato l'anti-aliasing (questa è un'opzione della riga di comando di avvio, ma è anche possibile impostarla nello script di avvio kaptain)</li>
-
-</ul>
-
-<h3>Disinstallazione di OmegaT</h3>
-
-<p>Per rimuovere tutte le tracce di OmegaT dal sistema:</p>
-
-<p>Eliminare la cartella di programma di OmegaT. Questa può facilmente essere ripristinata in futuro.</p>
-
-<p>Eliminare la cartella /home/&lt;user&gt;/.omegat di qualsiasi account utente da cui è stato avviato OmegaT. Questo significherà l'eliminazione di eventuali impostazioni di configurazione utente apportate (ad esempio, modifiche alle regole di segmentazione) e - se la cartella viene eliminata &quot;correttamente&quot;, cioè non semplicemente spostata nel cestino - l'azione non può essere annullata.</p>
-
-<p>Eliminare qualsiasi script di avvio e rimuovere eventuali voci personalizzate per OmegaT dal proprio desktop.</p>
-
-<p>La disinstallazione di OmegaT non rimuoverà i progetti di OmegaT dal sistema, a meno che non siano stati memorizzati all'interno delle cartelle del programma o dei file di configurazione di OmegaT, posizioni, queste, assolutamente non suggerite.</p>
-
-<br/><br/>
-
-<p>Copyright Marc Prior 2010-2012</p>
-
+  <p>Questa guida fornisce informazioni per l'uso di OmegaT su Linux. Essa è particolarmente rivolta ai nuovi utenti di Linux.</p>
+  <h3>Java</h3>
+  <p>OmegaT non funziona in modo soddisfacente con tutte le versioni di Java. Se Java è già installato sul proprio sistema (come probabile) e si prevede di utilizzarlo a livello di sistema in combinazione con OmegaT, controllare prima che la versione sia idonea. Per fare questo, aprire un terminale (anche conosciuto come console o finestra della riga di comando; programmi comuni sono Konsole (KDE) e il terminale di gnome (GNOME)) e digitare:</p>
+  <p>java -version</p>
+  <p>Il sistema visualizzerà i dettagli della versione Java già installata a livello di sistema.</p>
+  <p>Versioni Java di Oracle (ex Sun): verificare i requisiti di sistema nella documentazione di OmegaT (file Readme.txt) per la versione Java di Oracle richiesta (cioè se la versione di Java posseduta è sufficientemente recente).</p>
+  <p>Versioni Java di terze parti: fino a poco tempo fa, OmegaT funzionava solo con la versione Java propria di Oracle/Sun. OmegaT adesso funziona con l'implementazione OpenJDK Java fornita con alcune distribuzioni di Linux, ma alcune funzioni (ad esempio, l'insieme completo di opzioni della riga di comando) potrebbero non essere disponibili; il gruppo di caratteri fornito potrebbe essere diverso; sono stati segnalati alcuni piccoli problemi, come quelli con la finestra di visualizzazione e con la funzione di segmentazione.</p>
+  <p>Se non si è sicuri che la versione posseduta di Java sia adatta, è possibile:</p>
+  <ul>
+    <li>installare semplicemente una versione di OmegaT senza Java e vedere se funziona. Se non è possibile, si ha ancora la possibilità d'installare una versione locale di Java o una versione di Java diversa a livello di sistema.</li>
+    <li>Installare una seconda versione non predefinita di Java a livello di sistema e avviare OmegaT in modo esplicito utilizzando questa versione.</li>
+    <li>Installare la versione di OmegaT con Java incluso.</li>
+  </ul>
+  <p>Se si stabilisce che la versione di Java installata a livello di sistema non è compatibile con OmegaT e si desidera sostituire questa versione con quella di Oracle, verificare prima se è disponibile un pacchetto Oracle per la propria distribuzione Linux (SUSE, Ubuntu, ecc.). Se così fosse, l'installazione sarebbe molto più semplice.</p>
+  <p>Se si ottiene la versione di Oracle di Java direttamente da Oracle è probabile che l'installazione sia semplice, ma bisognerà configurarla manualmente per renderla predefinita a livello di sistema. Non consigliamo questa procedura, soprattutto se si ha poca familiarità con Linux.</p>
+  <p>La terza opzione, ossia l'installazione di una versione di OmegaT con Java incluso a livello locale, è sempre l'opzione "sicura" ed è consigliata.</p>
+  <h3>Scegliere e scaricare OmegaT</h3>
+  <p>Sono disponibili le seguenti versioni di OmegaT per Linux:</p>
+  <p>"Standard", "Più recente", "/ trunk" e "Webstart". È consigliata la versione "Più recente" (fare riferimento alla pagina "Download" sul sito Web di OmegaT per vedere i dettagli delle differenze).</p>
+  <p>Senza (without)/ con (with) JRE incluso, ossia il multi-piattaforma senza JRE, ad esempio "OmegaT_2.1.7_02_Beta_Without_JRE.zip" e la versione specifica per Linux con JRE, ad esempio "OmegaT_2.1.7_02_Beta_Linux.tar.bz2". Selezionare una versione senza o con JRE in base alla propria situazione con Java (vedere sopra).</p>
+  <p>Essendo un'applicazione open-source, OmegaT è stato incluso nei depositi di molte distribuzioni Linux, dunque potrebbe essere possibile installarlo per quella via. Notare tuttavia che:</p>
+  <ul>
+    <li>La maggior parte delle distribuzioni Linux utilizza la versione OpenJDK Java, per impostazione predefinita. Al momento della scrittura, OmegaT funzionerà molto meglio con la versione Oracle di Java (vedi sopra).</li>
+    <li>La versione di OmegaT solitamente fornita è la versione "Standard". Nella versione "Più recente" si trovano in genere più funzioni.</li>
+  </ul>
+  <p>Si noti che in Linux è possibile installare più versioni di OmegaT senza conflitti. Si accederà comunque sempre agli stessi file di configurazione utente (a meno che il programma non sia avviato da un account utente diverso).</p>
+  <h3>Installazione di OmegaT</h3>
+  <p>La versione Linux di OmegaT ora è fornita col proprio script di installazione, linux-install.sh. Questo script:</p>
+  <ul>
+    <li>inserisce i file di programma di OmegaT in /opt/omegat/OmegaT-&lt;version&gt;;</li>
+    <li>include l'avvio degli script bash e kaptain;</li>
+    <li>crea collegamenti dall'usr/local/bin per gli script di avvio.</li>
+  </ul>
+  <p>Lo script bash è un file molto semplice che può essere modificato manualmente con le opzioni a riga di comando per l'avvio e la configurazione di OmegaT.</p>
+  <p>Lo script kaptain (o "grammatica", come gli script kaptain sono denominati) consente di selezionare le opzioni di avvio e configurazione da un'interfaccia grafica di facile comprensione. È possibile, ad esempio, utilizzarlo per selezionare la lingua dell'interfaccia utente, assegnare più memoria a OmegaT o inserire una password di Google Translate. È possibile personalizzare lo script di avvio kaptain in modo che le proprie preferenze siano predefinite; è sufficiente modificare il file omegat.kaptn in un editor di testo. Il file è commentato per aiutare. Affinché lo script di kaptain funzioni, è tuttavia necessario prima di tutto installare kaptain. Se non è presente nel deposito della propria distribuzione, lo si può <a href="http://kaptain.sourceforge.net">scaricare da kaptain.sourceforge.net</a>.</p>
+  <p>
+  <img src="{{ '/img/kaptain.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"/>
+  </p>
+  <p>
+    <i>Schermate dell'avviatore di OmegaT kaptain</i>
+  </p>
+  <p>Lo script di installazione fornisce maggiore praticità, ma si può comunque installare OmegaT su Linux manualmente, se si preferisce. Basta decomprimere l'archivio nella cartella di propria scelta. In tale caso, gli script di avvio non verranno scritti nel percorso di esecuzione.</p>
+  <h3>Avviare OmegaT dalla riga di comando</h3>
+  <p>OmegaT non deve essere per forza avviato da riga di comando, ma questa azione può tornare utile dato che fornisce informazioni di debug. Per avviare da riga di comando, aprire una finestra di terminale (non sono necessari privilegi amministrativi). Passare alla cartella contenente il file OmegaT.jar, ad esempio:</p>
+  <p>cd /opt/omegat/OmegaT_2.3.4</p>
+  <p>e confermare con INVIO.</p>
+  <p>Quindi immettere lo stesso comando di avvio e confermare con INVIO. Il comando di avvio di base è:</p>
+  <p>java -jar OmegaT.jar</p>
+  <p>Il comando è sensibile alle maiuscole/minuscole.</p>
+  <p>Se ci si affida a, o si desidera utilizzare, un'installazione di Java non installata a livello di sistema, questo non sarà sufficiente: si deve anche istruire il sistema a trovare Java. Se si è installata una versione di OmegaT con JRE in dotazione, lo script di avvio fornito già contiene questo percorso. Se si è installata una versione aggiuntiva di Java ma non è stata designata come versione predefinita a livello di sistema, bisogna includere l'intero percorso del file eseguibile Java all'interno del comando di avvio. Sarà qualcosa di simile a  /usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java; prendere nota della posizione in cui è installato Java durante l'installazione, in modo da ritrovarlo in seguito. Il comando sarà quindi (in questo caso):</p>
+  <p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+  <p>Nello script di avvio, non confondere il percorso di OmegaT.jar e quello del comando java. Il primo (con il comando cd) è necessario se lo script di avvio non è nella stessa cartella di OmegaT.jar. Il secondo è necessario se la versione di Java che si desidera utilizzare non è l'installazione predefinita a livello di sistema.</p>
+  <h3>Avviare OmegaT da uno script di avvio</h3>
+  <p>Come già accennato, con OmegaT è fornito uno script di avvio. Una volta che questo è stato copiato o collegato al percorso di esecuzione (fatto automaticamente se si utilizza lo script di installazione fornito), è possibile avviare OmegaT premendo <i>Alt + F2</i>, quindi digitandovi <i>omegat</i> e confermando con INVIO.</p>
+  <p>Per impostazione predefinita, lo script di avvio bash è eseguibile, ma il sistema potrebbe modificare le sue autorizzazioni (ad esempio, durante l'estrazione dell'archivio) e potrebbe essere necessario renderlo di nuovo eseguibile.</p>
+  <h3>Avvio semplice di OmegaT</h3>
+  <p>Per avviare OmegaT in modo ancora più agevole, aggiungere al menu di avvio l'applicazione o posizionare un'apposita icona di avvio sul desktop o nel pannello del desktop. Le possibilità sono numerose e le procedure per implementarle non meno numerose, date le miriadi di distribuzioni.</p>
+  <h3>Aspetto dei tipi di carattere in OmegaT in Linux</h3>
+  <p>L'aspetto dei tipi di carattere in OmegaT in Linux potrebbe variare molto, in base a:</p>
+  <ul>
+    <li>la versione di Java utilizzata (lo stesso carattere può apparire molto diverso su versioni di Java Sun e OpenJDK)</li>
+    <li>i tipi di carattere disponibili/scelti</li>
+    <li>la dimensione del carattere</li>
+    <li>se è abilitato l'anti-aliasing (questa è un'opzione della riga di comando di avvio, ma è anche possibile impostarla nello script di avvio kaptain)</li>
+  </ul>
+  <h3>Disinstallazione di OmegaT</h3>
+  <p>Per rimuovere tutte le tracce di OmegaT dal sistema:</p>
+  <p>Eliminare la cartella di programma di OmegaT. Questa può facilmente essere ripristinata in futuro.</p>
+  <p>Eliminare la cartella /home/&lt;user&gt;/.omegat di qualsiasi account utente da cui è stato avviato OmegaT. Questo significherà l'eliminazione di eventuali impostazioni di configurazione utente apportate (ad esempio, modifiche alle regole di segmentazione) e - se la cartella viene eliminata "correttamente", cioè non semplicemente spostata nel cestino - l'azione non può essere annullata.</p>
+  <p>Eliminare qualsiasi script di avvio e rimuovere eventuali voci personalizzate per OmegaT dal proprio desktop.</p>
+  <p>La disinstallazione di OmegaT non rimuoverà i progetti di OmegaT dal sistema, a meno che non siano stati memorizzati all'interno delle cartelle del programma o dei file di configurazione di OmegaT, posizioni, queste, assolutamente non suggerite.</p>
+  <br/>
+  <br/>
+  <p>Copyright Marc Prior 2010-2012</p>
 </div>
-
