@@ -1,6 +1,6 @@
-<div class="untranslated">Sorry this page has not yet been translated.</div><div class="container">
+<div class="container">
   <p>This HowTo provides tips on translating MS Office 2007 and later (Office Open XML, .docx)  files in OmegaT.</p>
-  <h3>Background</h3>
+  <h3>Фон</h3>
   <p>With the advent of Microsoft Office 2007, Microsoft Word, Excel and Powerpoint have new default file formats. These formats are formally known as "Office Open XML", and have the extensions .docx, .xlsx and .pptx respectively. The formats are also used in MS Office 2010. For the sake of convenience, they will be referred to below as "MS Office 2007 file formats".</p>
   <p>From Version 1.7.1 onwards, OmegaT has been able to handle Microsoft Office 2007 files directly, without conversion. With the appearance of OmegaT Version 2.1.8, the handling of this file format in OmegaT also became much more user-friendly.</p>
   <h3>The advantages of using the .docx format in conjunction with OmegaT</h3>
@@ -43,7 +43,7 @@
   <p>Step 2: Copy this highlighted text (Ctrl+C). Then select "Paste Special" (Word 2003) or click on the arrow at the bottom of the "Insert" button (Word 2007) to obtain the extended Paste options. Finally, insert the content using the "Unformatted Unicode text" option.</p>
   <p>Where paragraphs do contain inline formatting (bold, italics, hyperlinks, etc.), you can either:</p>
   <p>- level the formatting from these paragraphs using the macro as described above, then re-insert the formatting; or</p>
-  <p>- mark only the text up to the beginning of the formatted part, copy this text and paste it back over itself, then repeat the process on the text after the formatted part. </p>
+  <p>- mark only the text up to the beginning of the formatted part, copy this text and paste it back over itself, then repeat the process on the text after the formatted part.  </p>
   <h3>Creating a macro to level the character formatting of a paragraph</h3>
   <p>You can automate the above procedure somewhat by creating a macro. Brief instructions for creating the macro (in MS Office 2007) are provided below. (For more detailed instructions, refer to your instruction manual or click <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">here</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">here</a> or <a href="https://oit.nd.edu/assets/141085/word_2013_macros_qrg.pdf">here</a>.)</p>
   <p>If you have not already done so, add the Developer tab to the ribbon as follows: click on the Office button. Select Word Options. Click Popular in the Word Options dialog box. On the ribbon, check Show Developer tab and confirm with OK. Close Word.</p>
@@ -53,7 +53,7 @@
   <p>Place the cursor in your paragraph of text (not in the first or last lines).</p>
   <p>Create the macro:</p>
   <p>On the Developer tab, click on Record Macro.</p>
-  <p>In the Macro name box, type a name for the macro, such as "levelformat". To make the macro available in all documents, select Normal.dotm in the "Store macro in" box. If you have made changes to your Normal.dotm, you might want to back this up first. </p>
+  <p>In the Macro name box, type a name for the macro, such as "levelformat". To make the macro available in all documents, select Normal.dotm in the "Store macro in" box. If you have made changes to your Normal.dotm, you might want to back this up first.  </p>
   <p>Click on the Keyboard button. Click in the box for a new keyboard combination, then experiment with keyboard combinations to find one that is not assigned. If a combination you try is already assigned, a message to this effect is displayed in the dialogue, and you can delete the combination and try another. Ctrl+Shift+9 appears not to be assigned to any other function in the basic Word installation, but you can use any other combination that has not already been assigned.</p>
   <p>Click on Assign to assign the shortcut to the macro that you are about to record. Anything you now do will be recorded in the macro, so follow this procedure carefully:</p>
   <p>Ctrl+Cursor Up (this takes the cursor to the beginning of the paragraph)</p>
@@ -79,9 +79,9 @@ Sub levelformat()<br/>
 End Sub<br/>
 ___________________</p>
   <p>Change the line:</p>
-  <p>    Selection.PasteAndFormat (wdPasteDefault)</p>
+  <p>        Selection.PasteAndFormat (wdPasteDefault)</p>
   <p>to:</p>
-  <p>    Selection.PasteSpecial DataType:=wdPasteText</p>
+  <p>        Selection.PasteSpecial DataType:=wdPasteText</p>
   <p>Save with Ctrl+S, and close the macro editing window.</p>
   <p>If all has gone according to plan, your macro should now work. To test it, add some formatting to your Word document, for example by making one word bold. Now simply place the cursor anywhere in the paragraph and press Ctrl+Shift+9 (or whatever other keyboard shortcut you selected), and you should see the formatting disappear.</p>
   <p>You can change the keyboard shortcut at any time. To do this, click the main "Office" button, then Word options (bottom right of the dialog).</p>
@@ -93,10 +93,10 @@ ___________________</p>
   <p>Click Customize &gt; Choose commands. Choose Macros from the drop-down list. Select your macro.</p>
   <p>Click on Add. You should see the macro command appear in the right-hand column. Click on Modify.</p>
   <p>Pick a symbol, then OK &gt; OK. The symbol for your macro should appear in the toolbar.</p>
-  <p>This macro is useful for levelling the formatting of a whole paragraph that contains no visible formatting. Where a paragraph contains desired formatting, you must restore the deleted formatting after levelling the paragraph. In paragraphs containing lots of formatting, restoring the deleted formatting can be quite a lot of work. For such paragraphs, consider the following alternatives: </p>
+  <p>This macro is useful for levelling the formatting of a whole paragraph that contains no visible formatting. Where a paragraph contains desired formatting, you must restore the deleted formatting after levelling the paragraph. In paragraphs containing lots of formatting, restoring the deleted formatting can be quite a lot of work. For such paragraphs, consider the following alternatives:  </p>
   <ul>
     <li>
-      <p>Use Dave Turner's CodeZapper macro. </p>
+      <p>Use Dave Turner's CodeZapper macro.  </p>
     </li>
     <li>
       <p>Create a second macro (with its own button and/or keyboard shortcut) of your own that only levels highlighted text, rather than the entire paragraph. (Record as described above, but only recording the command Ctrl+C followed by Ctrl+V.) You can then highlight text between the points at which formatting changes. This will level the formatting over sections of text that have the same, desired formatting, and you will not then need to restore deleted formatting.</p>
@@ -108,5 +108,5 @@ ___________________</p>
       <p>More advanced users may wish to try OmegaT's Text Export function. In conjunction with the te-st-notags script, this provides a separate window in which tags are not displayed. You must still handle tags properly when producing and editing your translation, but you can view it in a separate window without the clutter of tags ("tag soup").</p>
     </li>
   </ul>
-  <p>Copyright Marc Prior 2009-2011</p>
+  <p>Copyright Марк Прайор 2009–2011</p>
 </div>

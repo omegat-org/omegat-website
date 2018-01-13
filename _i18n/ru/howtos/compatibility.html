@@ -1,65 +1,57 @@
-<div class="untranslated">Sorry this page has not yet been translated.</div><div class="container">
+<div class="container">
 
 
 
-<p>This HOWTO describes OmegaT's compatibility with other software products.</p>
+<p>В этом HowTo рассматриваются вопросы совместимости OmegaT с другими программными продуктами.</p>
 
-<h3>General comments</h3>
+<h3>Общие замечания</h3>
 
-<p>Since it is standard procedure for professional translators to receive and deliver texts in digital form, users of OmegaT are naturally interested in its compatibility with other software products. This HOWTO aims to provide information in this area.</p>
+<p>Поскольку профессиональные переводчики постоянно сталкиваются с получением и передачей текстов в цифровом виде, пользователям OmegaT полезно знать, как происходит взаимодействие с другими программными продуктами. Данное HowTo пытается ответить на этот вопрос.</p>
 
-<p>A general observation: "compatibility" is rarely a black and white, "yes" or "no" issue. Where the vendor of a software product claims that his product is compatible with another piece of software, this compatibility is seldom 100%. Conversely, where products are clearly not directly compatible, it is often possible to find procedures by which they
-can&nbsp;work together. The question which must be answered is whether these procedures are acceptable in terms of the result and the effort involved, and the answer is likely to vary from one user to another. In other words, "compatibility" is not only about products, but also about workflows.<br/>
+<p>Сразу стоит отметить, что «совместимость» очень редко представляет собой чёрно-белый вопрос, на который можно ответить «да» или «нет». Когда производитель программного продукта заявляет о совместимости с другой программой, совместимость редко достигает 100%. И наоборот, когда программные продукты явно не совместимы между собой, часто можно найти способы для организации взаимодействия между ними. Поэтому отвечать нужно на вопрос: возможно ли организовать такое взаимодействие с приемлемыми уровнями результата и затраченных усилий, и ответ на него скорее всего у разных пользователей будет отличаться. Другими словами, «совместимость» зависит не только от программных продуктов, но ещё и от организации рабочего процесса.<br/>
 
 </p>
 
 
-<h3>Operating systems</h3>
+<h3>Операционные системы</h3>
 
-<p>OmegaT runs on any operating system on which a suitable version of the Java Runtime Environment (JRE) can be run. At the present time, this includes all versions of Microsoft Windows from Windows 98 onwards, Mac OS X, and most Linux distributions. </p>
+<p>OmegaT может быть запущена на любой операционной системе, где есть подходящая версия Java Runtime Environment (JRE). В настоящий момент к таким системам относятся все версии Microsoft Windows, начиная с Windows 98, Mac OS X, а также большинство дистрибутивов GNU/Linux. </p>
 
-<h3>Source texts (files for translation)</h3>
+<h3>Исходные тексты (файлы для перевода)</h3>
 
-<p>Refer to the OmegaT user manual for an up-to-date list of all supported file formats. The list below is <strong>not</strong> an exhaustive list of all file formats supported by OmegaT, but is limited to those of particular interest to typical users.</p>
+<p>Для получения актуального списка поддерживаемых форматов, пожалуйста, обратитесь к руководству пользователя OmegaT. Ниже представлен <strong>не</strong> полный перечень форматов, поддерживаемых OmegaT, но лишь тех, которые обычно представляют интерес для пользователей.</p>
 
 <ul>
 
   <li>
     
-    <p><strong>Microsoft Office 2007-2010 (Word, Excel, PowerPoint 2007-2010); Office Open XML:</strong></p>
+    <p><strong>Microsoft Office 2007–2010 (Word, Excel, PowerPoint 2007–2010); Office Open XML:</strong></p>
 
-    <p>OmegaT is capable of handling the current Microsoft Office formats directly, without conversion to or from other formats.</p>
+    <p>OmegaT может работать с текущими форматами Microsoft Office напрямую, без преобразования в/из других форматов.</p>
 
-<p>The Microsoft Office 2007-2010 file formats (also known as Office Open XML, and with the file extensions .docx, .xlsx and .pptx) is radically different to the Office 97-2003 formats which they supersede. In fact, their structure is very similar to that of OpenOffice.org files: they consists of a zip archive containing multiple files, and the files containing the text are based upon the XML standard. This makes it much easier for CAT tools to support it and edit it directly. The Microsoft Office 2007-2010 file formats can be processed directly in OmegaT; more information can be found <a href="./docx.html">here</a>.</p>
+<p>Форматы файлов Microsoft Office 2007-2010 (также известные как Office Open XML, с расширениями имён файлов .docx, .xlsx и .pptx) радикально отличаются от предыдущих форматов Office 97-2003. На самом деле по структуре они очень похожи на файлы OpenOffice.org: они состоят из архива zip, внутри которого находится несколько файлов, а файлы, содержащие текст, основаны на стандарте XML. Этот факт значительно упрощает поддержку этого формата системами автоматизированного перевода (CAT). С файлами Microsoft Office 2007-2010 можно работать непосредственно в OmegaT; с дополнительной информацией можно ознакомиться <a href="./docx.html">здесь</a>.</p>
     
-    <p>For users of&nbsp;Microsoft Office who do not (yet) have the
-2007 version, conversion between Office Open XML and Microsoft Office 98-2003 can be
-achieved using a free plug-in converter available <a href="http://www.download.com/Microsoft-Open-XML-Converter/3000-18483_4-146736.html">here</a> from Microsoft. This
-converter is available for Windows and Mac.</p>
+    <p>Пользователи&nbsp;Microsoft Office, у которых (ещё) нет 2007 версии программы, могут воспользоваться бесплатными плагином от Microsoft для преобразования между форматами Office Open XML и Microsoft Office 98-2003, который можно скачать <a href="http://www.download.com/Microsoft-Open-XML-Converter/3000-18483_4-146736.html">по этой ссылке</a>. Этот конвертер доступен для Windows и Mac.</p>
   
-    <p>Office Open XML can be converted directly to Open Document Format and back by means of the ODF converter, available <a href="http://odf-converter.sourceforge.net/download.html">here</a>. This utility requires a version of MS Office (XP/2003/2007).<br/></p>
+    <p>Office Open XML можно напрямую преобразовать к Open Document Format и обратно с помощью конвертера ODF, доступного <a href="http://odf-converter.sourceforge.net/download.html">по этой ссылке</a>. Эта программа работает с Microsoft Office (XP/2003/2007).<br/></p>
 
-    <p>Mac OS X users can convert directly from Office Open XML to OpenDocument Format and back in <a href="http://www.neooffice.org/">NeoOffice</a>.</p>
+    <p>Пользователи Mac OS X могут выполнять преобразования между форматами Office Open XML и OpenDocument Format в <a href="http://www.neooffice.org/">NeoOffice</a>.</p>
 
-    <p>Linux users can use this version of the standalone <a href="http://www.oooninja.com/2008/01/convert-openxml-docx-etc-in-linux-using.html">conversion utility</a> to convert directly between Office Open XML and OpenDocument Format.</p>
+    <p>Пользователи GNU/Linux могут воспользоваться отдельной <a href="http://www.oooninja.com/2008/01/convert-openxml-docx-etc-in-linux-using.html">программой</a> для преобразования между форматами Office Open XML и OpenDocument Format.</p>
 
-    <p>Recent versions of OpenOffice.org are able to convert between Microsoft Office 2007 and Open Document Format.</p>
+    <p>Последние версии OpenOffice.org также могут выполнять преобразование между Microsoft Office 2007 и Open Document Format.</p>
 
   </li>
 
   <li>
 
-    <p><strong>Microsoft Office 97-2003 (Microsoft Word/Excel/Powerpoint 2003):</strong></p>
+    <p><strong>Microsoft Office 97–2003 (Microsoft Word/Excel/Powerpoint 2003):</strong></p>
 
-    <p>These file formats are proprietary, binary, and until recently
-were not publicly documented, all characteristics which make them
-extremely difficult to handle in a CAT tool.&nbsp;</p>
+    <p>Это проприетарные, двоичные и до недавнего времени плохо задокументированные форматы, что делает их обработку крайне сложной для системы автоматизированного перевода.&nbsp;</p>
     
-    <p>Some CAT tools solve this problem, at least for MS Word, by working
-within Word itself; most other CAT tools convert to RTF and back, often
-invisibly for the translator.</p>
+    <p>Некоторые программы CAT решают эту проблему, по крайней мере для MS Word, работая непосредственно с Word; большинство других программ такой направленности проводят преобразование в RTF и обратно, часто незаметно для пользователя.</p>
 
-    <p>OmegaT does not support these formats directly. Instead, they must first be converted manually to Office Open XML (MS Office 2007/2010) or Open Document format (LibreOffice or OpenOffice.org) before they can be handled in OmegaT. (OmegaT is far from unique in this respect: many other CAT tools convert source files to a different format, in some cases in the background without the translator being aware of the fact, before they are translated.)</p>
+    <p>OmegaT напрямую не поддерживает эти форматы. Чтобы работать с ними в OmegaT, их нужно предварительно вручную преобразовать в формат Office Open XML (MS Office 2007/2010) или Open Document format (LibreOffice или OpenOffice.org). (OmegaT совсем неуникальна в этом смысле: множество других программ CAT преобразуют файлы в другой формат, иногда в фоне без ведома переводчика, прежде чем их можно будет переводить.)</p>
 
   </li>
 
@@ -67,17 +59,14 @@ invisibly for the translator.</p>
         
     <p><strong>RTF (Rich Text Format):</strong></p>
 
-    <p>RTF is structurally quite different from the Microsoft Office
-98-2003 file format, but with regard to OmegaT, the same applies: it is not supported directly and must first be converted to .docx (MS Office 2007/2010) or Open Document format (LibreOffice/OpenOffice.org).</p>
+    <p>RTF по своей структуре значительно отличается от формата Microsoft Office 98-2003, но для OmegaT ситуация отличается мало: формат не поддерживается напрямую и должен быть преобразован к .docx (MS Office 2007/2010) или Open Document format (LibreOffice/OpenOffice.org).</p>
 
   </li>
 
   <li>
     <p><strong>Open Document Format: LibreOffice/OpenOffice.org/NeoOffice Writer/Calc/Impress</strong></p>
     
-    <p>These file formats are the equivalent of Microsoft Office's
-formats. The Open Document Format is an international standard and has
-replaced the former proprietary (but open) Star Office file format (two different but very similar file formats). OmegaT has file filters for both Open Document Format and for the Star Office format which it replaced. These file filters are excellent, and the risk of damaging the formatting of a LibreOffice, OpenOffice.org, etc. file during translation in OmegaT is extremely low.</p>
+    <p>Эти форматы схожи с форматами Microsoft Office. Open Document Format — это международный стандарт, пришедший на смену проприетарному (но открытому) формату файлов Star Office (два различных, но при этом очень похожих формата файлов). В OmegaT есть файловые фильтры как для Open Document Format, так и для формата Star Office, который был заменён первым. Эти файловые фильтры считаются очень надёжными, и риск повреждения форматирования LibreOffice, OpenOffice.org и&nbsp;т.&nbsp;д. при переводе таких файлов в OmegaT крайне низок.</p>
 
   </li>
 
@@ -85,123 +74,114 @@ replaced the former proprietary (but open) Star Office file format (two differen
     
     <p><strong>HTML; XHTML:</strong></p>
 
-    <p>HTML and XHTML, its XML equivalent, are the most common file
-format for web pages. Again, OmegaT has excellent file filters for
-both. Like OpenOffice.org files, these file formats can be translated
-in OmegaT with very little risk of corruption. It is however worth customizing the filter settings for optimum results.</p>
+    <p>HTML и XHTML, его XML эквивалент, являются наиболее распространёнными файловыми форматами веб-страниц. Опять же, в OmegaT есть замечательные фильтры для них обоих. Так же как и файлы OpenOffice.org, эти файлы можно переводить в OmegaT, почти не опасаясь их повредить. Однако для достижения оптимальных результатов рекомендуется провести настройку файлового фильтра.</p>
 
   </li>
 
 </ul>
 
 
-<h3>Translation memories</h3>
+<h3>Памяти переводов</h3>
 
-<p>An international standard exists for translation memories: TMX, or Translation Memory eXchange. It has been widely adopted and is supported by almost all current CAT tools.</p>
+<p>Для памяти переводов существует международный стандарт: TMX или Translation Memory eXchange. Он получил широкое распространение и поддерживается почти всеми современными программами CAT.</p>
 
 
-<p>The TMX standard exists both in different <strong>versions</strong> and in different <strong>levels</strong>.
-The distinction is important for compatibility purposes. The standard is still undergoing development; this is what the different versions refer to. The levels refer to the formatting information that is contained in the TMX file:</p>
+<p>Стандарт TMX описан для разных <strong>версий</strong> и для разных <strong>уровней</strong>. Эти различия необходимы для обеспечения совместимости. Стандарт всё ещё находится в разработке. Далее описаны различия между его версиями. Уровни описывают информацию о форматировании, содержащуюся в файле TMX:</p>
 
 <ul>
 
   <li>
     
-    <p>Level 1 TMX files contain no formatting information.</p>
+    <p>Файлы TMX 1-го уровня не содержат информации о форматировании.</p>
 
   </li>
 
   <li>
     
-    <p>Level 2 TMX files contain formatting information, but these files are typically only compatible when the same CAT tool is used. In other words, if an OmegaT user finds a 100% match in a Level 2 OmegaT TMX file, it can be accepted without requiring adaptation, but the same would not be true for a Level 2 TMX file produced by a different CAT tool (or vice-versa). This has repercussions for workflows in which CAT tool users (typically customers) expect to receive translation memory files and to have 100% matches inserted automatically.</p>
+    <p>Файлы TMX 2-го уровня содержат информацию о форматировании, но обычно они совместимы только с той программой CAT, в которой они были созданы. Другими словами, если пользователь OmegaT находит 100% совпадение в файле TMX 2-го уровня, созданном в OmegaT, его можно использовать без доработки, но для файла TMX 2-го уровня, созданного в другой программе CAT, это уже будет не так (и наоборот). Это накладывает определённые ограничения на работу пользователей с программами автоматизированного перевода (обычно клиентов), когда для 100% совпадений они ожидают получать их автоматическую замену переводами.</p>
 
   </li>
 
   <li>
     
-    <p>Level 3 TMX files contain formatting information in a form that can be read by other CAT tools. Support for Level 3 in CAT tools is rare.</p>
+    <p>Файлы TMX 3-го уровня содержат информацию о форматировании, доступную для чтения другими программами CAT. Программы автоматизированного перевода редко поддерживают 3-й уровень TMX.</p>
 
   </li>
 
 </ul>
 
-<p>Certain other CAT tools (such as TRADOS) are able to export different TMX files in different versions. OmegaT
-supports all current versions of TMX, but is likely to deliver better match results if the TMX file is version 1.4b.&nbsp;</p>
+<p>Некоторые программы CAT (например, TRADOS) способны экспортировать файлы TMX в различных версиях. OmegaT поддерживает все существующие версии TMX, но для получения наилучших результатов рекомендуется использовать версию 1.4b.&nbsp;</p>
 
-<p>Tools which support different levels of TMX files are in principle still compatible with each other. The formatting information contained in the higher levels will be meaningless to the "other" tool, but the textual information can still be viewed, fuzzy matches found, etc.</p>
+<p>Программы, поддерживающие различные уровни файлов TMX, в принципе также совместимы между собой. Данные о форматировании, содержащиеся в более высоких уровнях, ничего не будут значить для «другой» программы, но текстовые данные всё ещё будут доступны для просмотра, нечётких совпадений и&nbsp;т.&nbsp;д.</p>
 
 
-<p>OmegaT uses the international TMX standard as its native translation memory format. Some CAT tools still employ dedicated proprietary translation memory formats, but virtually all support the import and export of TMX files. In practice, it is therefore possible for translators to deliver translation memories to customers and vice-versa, and for the recipient to use these files for immediate or future reference; if the files are to be used within an automated workflow, however, the constraint described above applies.</p>
+<p>OmegaT использует международный стандарт TMX в качестве внутреннего формата хранения памяти переводов. Некоторые программы CAT всё ещё используют собственные форматы памяти переводов, но практически все из них поддерживают импорт и экспорт файлов TMX. Таким образом, на практике у переводчиков есть возможность обмениваться памятью переводов со своими клиентами, а у получателей этих файлов — возможность использовать их для текущей и будущей работы. Однако если эти файлы планируется использовать в автоматизированном рабочем процессе, то нужно учитывать вышеописанные ограничения.</p>
 
-<p>Further points to note regarding TMX files:</p>
+<p>Дополнительные замечания о файлах TMX:</p>
 
-<p>The TMX standard contains definitions of what characters are permissible. Not all CAT tools are equally strict in their observance of these definitions; consequently, some CAT tools are unable to open TMX files produced by certain other CAT tools directly. OmegaT is generally observant of the conditions and tolerant of other tools' failure to observe them; should problems arise here, however, they can generally be resolved fairly easily by a search &amp; replace in a text editor of the illegal character in the TMX file.</p>
+<p>Стандарт TMX описывает разрешённые к использованию символы. Не все программы CAT одинаково строго следуют этим ограничениям, в результате чего некоторые из этих программ оказываются неспособными открывать файлы TMX, созданные в других программах CAT. OmegaT старается придерживаться этих ограничений и терпима к их вольной трактовке другими программами. Тем не менее если из-за этого всё же возникают проблемы, решить их довольно просто с помощью поиска и замены недопустимых для TMX символов в обычном текстовом редакторе.</p>
 
-<p>TMX files are in the Unicode encoding, but may be UTF-8 or UTF-16. TMX files produced on Windows systems may begin with a byte-order mark (BOM). This differences do not generally lead to compatibility problems.</p>
+<p>Файлы TMX используют кодировку Unicode, в частности UTF-8 или UTF-16. Файлы TMX, созданные в Windows, могут начинаться с маркера последовательности байтов (BOM). Это различие обычно не приводит к проблемам совместимости.</p>
 
-<p>Compatibility problems may be caused by differences in the language codes employed. OmegaT supports language codes in the format "xx", "XX", "xx-YY" and "XX-YY", where xx or XX is the language, yy or YY the region. Strictly speaking, the ISO standard for language codes requires "xx-YY" (for example: "en-GB" for British English); although this variant is supported by OmegaT, the default convention offered by OmegaT is "XX-YY", e.g. "EN-GB". OmegaT is tolerant when reading TMX files: it will accept files with en-GB, en-US, en, EN, etc. Not all CAT tools exhibit the same tolerance and some may&nbsp;not therefore display the expected matches if the language codes are not sufficiently compliant. This incompatibility can be resolved by searching for and
-replacing the relevant language codes in the TMX file in a suitable text editor. Another possible source of incompatibility are three-digit language codes, which are not supported by OmegaT at all. (This incidentally is a limitation of Java, not of OmegaT itself.) </p>
+<p>Проблемы совместимости могут возникать при различных способах указания языковых кодов. OmegaT поддерживает языковые коды в формате «xx», «XX», «xx-YY» и «XX-YY», где «xx» или «XX» обозначают язык, а «yy» или «YY» — регион. Строго говоря, стандарт ISO для языковых кодов требует их указания в формате «xx-YY» (например, «en-GB» для британского английского). Хотя такой вариант поддерживается в OmegaT, по умолчанию OmegaT использует формат «XX-YY», например, «EN-GB». При чтении файлов TMX OmegaT терпимо относится к языковым кодам: файлы с кодами «en-GB», «en-US», «en», «EN» и&nbsp;т.&nbsp;д. будут успешно распознаны. Не все программы CAT проявляют такую же терпимость и могут не находить совпадения, если языковые коды недостаточно совместимы для них. Эта проблема может быть решена с помощью замены языковых кодов файлов TMX в текстовом редакторе. Ещё одним возможным источников проблем совместимости могут выступать языковые коды, состоящие из трёх цифр, которые никак не поддерживаются в OmegaT. (В данном случае это ограничение Java, а не самой OmegaT.) </p>
 
-<p>Points regarding proprietary translation memory files:</p>
+<p>Замечания о проприетарных форматах файлов памяти переводов:</p>
 
-<p>The traditional Wordfast translation memory file format is of particular interest owing to its simplicity: it consists of a
-plain-text file with a translation unit (segment) on each line in which the source and target are separated by a tab. This format can be converted easily to the TMX format by third-party utilities such as <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a> can also be used for this purpose.</p>
+<p>Традиционный формат файлов памяти переводов Wordfast интересен, в частности, своей простотой: он представляет собой обычный текстовый файл с единицей перевода (сегментом) в каждой отдельной строке, где источник и перевод разделены знаком табуляции. Этот формат можно легко преобразовать к TMX с помощью сторонних программ, например, <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. Также для этой задачи может быть использован <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a>.</p>
 
-<h3>Glossary files</h3>
+<h3>Файлы глоссариев</h3>
 
-<p>OmegaT's glossary files are plain-text files in the format:</p>
+<p>Файлы глоссариев OmegaT — это простые текстовые файлы в следующем формате:</p>
 
-<p>source term&nbsp;&nbsp;&nbsp; &lt;tab&gt;&nbsp;&nbsp;&nbsp; target term&nbsp;&nbsp;&nbsp; &lt;tab&gt;&nbsp;&nbsp;&nbsp; additional information</p>
+<p>исходный термин&nbsp;&nbsp;&nbsp; &lt;знак табуляции&gt;&nbsp;&nbsp;&nbsp; перевод термина&nbsp;&nbsp;&nbsp; &lt;знак табуляции&gt;&nbsp;&nbsp;&nbsp; дополнительная информация</p>
 
-<p>Some other CAT tools are able to import and export glossary files in this format, or in a similar plain-text format which can be produced from it very easily (for example by a search &amp; replace operation in Microsoft Word).</p>
+<p>Некоторые из программ CAT способны импортировать и экспортировать файлы глоссариев в таком формате или в похожем текстовом формате, который очень легко можно из них получить (например, с помощью поиска и замены в Microsoft Word).</p>
 
-<p>OmegaT is also capable of reading glossaries in TBX, the industry-standard format for glossary files.</p>
+<p>OmegaT также поддерживает чтение глоссариев в формате TBX, промышленном стандарте файлов глоссариев.</p>
 
-<p>OmegaT cannot import or read glossary files in proprietary binary formats, such as Trados Multiterm.</p>
+<p>OmegaT не способна импортировать или читать файлы глоссариев в проприетарных форматах, таких как Trados Multiterm.</p>
 
-<h3>Bilingual CAT-tool formats</h3>
+<h3>Двуязычные форматы программ CAT</h3>
 
-<p>Many CAT tools make use of an intermediate bilingual file format, i.e. a file containing both source and target language segments, and in some cases also the structure of the original file. Originally, these bilingual file formats may have been a by-product of the tool's architecture. They have however become an important phenomenon in translation workflows involving CAT tools, and they&nbsp;often present the greatest obstacle to compatibility between OmegaT and other CAT tools (or for that matter between CAT tools in general).</p>
+<p>Многие программы CAT используют промежуточные двуязычные форматы файлов, т.&nbsp;е. файлов, содержащих как сегменты источника, так и сегменты перевода, а иногда и структуру оригинального файла. Изначально такие двуязычные файловые форматы могли быть побочными продуктами архитектуры программ. Однако со временем они стали важным феноменом в рабочем процессе, включающим в себя программы CAT, и часто они вызывают наибольшее затруднение в организации совместимости между OmegaT и другими программами CAT (или, если на то пошло, между программами CAT вообще).</p>
 
-<p>There are at least three reasons why a customer may request delivery of a translation in a particular bilingual file format (rather than simply delivery of the translated file and possibly also the translation memory):</p>
+<p>Существует как минимум три причины, по которым заказчик может потребовать предоставить перевод в конкретном двуязычном файловом формате (вместо переведённого текста и, возможно, памяти перевода):</p>
 
-<p>1. Some CAT tools, notably TRADOS, are able to import a wide range of file formats, including desktop publishing formats, and to prepare them for translation in the tool concerned. The "prepared" form is typically the tool's bilingual file format. Without preparation in this way, the original file format may be accessible to the translator.</p>
+<p>1. Некоторые программы CAT, в частности TRADOS, способны импортировать большое количество форматов файлов, включая издательские форматы, и подготавливать их к переводу в этой программе. Такая «подготовленная» форма обычно представляет собой двуязычный формат файла этой программы. Без такой подготовки переводчику может быть доступен оригинальный формат файла.</p>
 
-<p>2. The translation stage is only part of the customer's workflow. The translation may for example be passed to a checker for editing. If the checker's changes are to be included in a translation memory repository maintained by the customer, the changes need to be made <i>before</i> the final documents are created. This can be done either within the CAT tool concerned, or in some cases in an external bilingual file format which the tool is capable of reading.</p>
+<p>2. Этап перевода является лишь частью рабочего процесса заказчика. Например, перевод может далее передаваться на проверку или редактирование. Если изменения редактора должны быть включены в репозиторий памяти переводов, находящийся у заказчика, то эти изменения должны быть сделаны <i>перед</i> созданием конечных документов. Это может быть сделано либо в данной программе CAT, либо, в некоторых случаях, во внешнем двуязычном формате файлов, который поддерживается этой программой.</p>
 
-<p>3. The customer wishes to receive a translation memory against which texts can be run in the future: in other words, to "pretranslate" future texts against an existing translation memory. In order for this process to be as automatic as possible, two conditions must in particular be met: firstly, the translation memory must contain formatting information (see above); and secondly, the segmentation rules applied to the text must be the same as those applied when the translation memory (or part of it) was produced. The easiest way for a customers to ensure that these two conditions are met is for them to pretranslate the text themselves before passing it to the translator (thereby defining how it is segmented), and to create the translation memory in the CAT tool of their choice after receiving the translated intermediate bilingual file from the translator (thereby ensuring that the formatting information contained within the translation memory will be compatible with future projects).</p>
+<p>3. Заказчик желает получить память переводов, которая будет использована для будущих переводов; другими словами, для «предварительного перевода» будущих текстов с существующей памятью переводов. Чтобы этот процесс был максимально автоматизирован, необходимо выполнение двух условий: во-первых, память переводов должна содержать информацию о форматировании (см.&nbsp;выше), и, во-вторых, правила сегментации, применённые к тексту, должны совпадать с теми, что были использованы при создании памяти переводов (или её части). Самый простой способ для заказчика убедиться в том, что оба этих условия выполнены, это самостоятельно выполнить предварительный перевод (таким образом задав сегментацию) и создать память переводов в системе автоматизированного перевода на его выбор после получения переведённого промежуточного двуязычного файла от переводчика (тем самым гарантируя то, что информация о форматировании, содержащаяся в памяти переводов, будет совместима с будущими проектами).</p>
 
-<p>Several of the bilingual file formats can be handled by OmegaT, and not necessarily with great effort. An understanding of the processes involved is however important. The individual bilingual file formats are described below.</p>
+<p>Некоторые из двуязычных форматов файлов можно передавать в OmegaT, не обязательно прилагая при этом большие усилия. Однако важно понимать суть процессов, происходящих при этом. Ниже описаны конкретные примеры двуязычных форматов файлов.</p>
 
-<p><strong>XLIFF</strong></p>
+<p><strong>Файлы XLIFF</strong></p>
 
-<p>XLIFF is the industry-standard bilingual file format. It is supported by several CAT tools, and in fact some CAT tools are
-effectively "designed around" the XLIFF standard: Heartsome and Swordfish are examples. Since it is a standard, an advantage of XLIFF is that file filters provided by one CAT tool vendor for conversion between a certain format and XLIFF (and, following completion of the translation workflow, back again) can in theory be used to prepare files in the format concerned for translation in any CAT tool capable of supporting XLIFF. In practice, working with the XLIFF workflow often requires the use of tools that are not very user-friendly.</p>
+<p>XLIFF представляет собой промышленный стандарт двуязычного формата файла. Он поддерживается несколькими программами CAT, а некоторые из этих программ по сути «созданы вокруг» стандарта XLIFF: Heartsome и Swordfish одни из них. Поскольку это стандарт, XLIFF обладает преимуществом того, что файловые фильтры одного производителя программ CAT для преобразования между определённым форматом и XLIFF (и в обратную сторону после перевода) в теории могут быть использованы для подготовки файлов в формате, подходящем для их перевода в любой программе CAT, поддерживающей XLIFF. На практике использование в рабочем процессе XLIFF часто требует применения не очень дружественных к пользователю инструментов.</p>
 
-<p>OmegaT has rudimentary support for XLIFF, and a procedure for using XLIFF in OmegaT in conjunction with the Rainbow tools can be found <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">here</a>. The filters available are mainly for file formats peculiar to the IT industry rather than end-user files.<a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm"></a></p>
+<p>В OmegaT поддержка XLIFF находится в зачаточном состоянии. Ознакомиться с процедурой использования XLIFF в OmegaT вместе с Rainbow tools можно <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">здесь</a>. Доступные файловые фильтры представляют интерес главным образом для специалистов в информационных технологиях, но не для конечных пользователей.<a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm"></a></p>
 
-<p><strong>Trados "uncleaned RTF"</strong></p>
+<p><strong>Trados «неочищенный RTF»</strong></p>
 
-<p>The Trados "uncleaned" RTF file format, often referred to simply as "uncleaned files", has for many years been the most common bilingual file format used in translation workflows. It owes its origins to the use of MS Word as an interface for the Trados CAT tool. In addition to Trados, however, several other CAT tools also support the "uncleaned RTF" format, notably Wordfast Classic. </p>
+<p>Файловый формат Trados «неочищенный RTF», часто называемый просто «неочищенные файлы», многие годы был самым распространённым двуязычным форматом файлов, используемым в процессе перевода. Своим происхождением он обязан MS Word, выступавшему в качестве интерфейса для системы автоматизированного перевода Trados. Однако помимо Trados он поддерживается и некоторыми другими программами CAT, в частности Wordfast Classic. </p>
 
-<p>Essentially, this format consists of an RTF file in which the source and target segments alternate. These segments are marked and delimited by special characters and MS Word formatting styles.</p>
+<p>По сути этот формат представляет собой файл RTF, в котором чередуются исходные и переведённые сегменты. Эти сегменты обозначаются и разделяются специальными символами и стилями форматирования MS Word.</p>
 
-<p>A script (for Windows only) and procedure was recently (2008) developed enabling OmegaT users to produce Trados uncleaned RTF files for delivery at the end of their translation stage. For details, see the&nbsp;<a href="export_uncleaned_rtf">"Exporting from OmegaT to uncleaned RTF" HOWTO</a>.</p>
+<p>Недавно (2008) были созданы скрипт (только для Windows) и процедура, позволяющие пользователям OmegaT получать неочищенные файлы RTF Trados для передачи их заказчику по окончании процесса перевода. За подробностями обратитесь к&nbsp;<a href="export_uncleaned_rtf">HowTo по экспорту неочищенного RTF из OmegaT</a>.</p>
 
 <p><strong>Trados TTX</strong></p>
 
-<p>Trados TTX format is the counterpart to the "uncleaned RTF" format for Trados Tag Editor, which unlike Trados Workbench, does not work in direct combination with MS&nbsp;Word. TTX is an XML-based format. An <a href="http://www.opentag.com/okapi/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">OmegaT plugin</a> is now available by means of which this format can be handled in OmegaT.</p>
+<p>Формат Trados TTX дополняет формат «неочищенный RTF» для Trados Tag Editor, который в отличие от Trados Workbench не работает в комбинации с MS&nbsp;Word. TTX — это формат, основанный на XML. Сейчас уже доступен <a href="http://www.opentag.com/okapi/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">плагин для OmegaT</a>, с помощью которого с этим форматом можно работать в OmegaT.</p>
 
-<p><strong>Wordfast TXML</strong></p>
+<p><strong>Файлы Wordfast TXML</strong></p>
 
-<p>Wordfast TXML is the native internal format of Wordfast's new Wordfast Professional (also known as Wordfast 6.0). As its name suggests, it is an XML-based format. It is supported by OmegaT.</p>
+<p>Wordfast TXML представляет собой родной внутренний формат Wordfast Professional (также известной как Wordfast 6.0). Как можно понять из его названия, этот формат основан на XML. OmegaT его поддерживает напрямую.</p>
 
-<p><strong>Déjà Vu "External View"</strong></p>
+<p><strong>Déjà Vu «External View»</strong></p>
 
-<p>An interesting feature of Déjà Vu DVX is its "External View" file format. This file format enables OmegaT users to deliver
-bilingual files to users of Déjà Vu DVX, who are then able to edit them further or to incorporate them into automated workflows. For details, see the <a href="compatibility_deja_vu">Déjà Vu "External View" HOWTO</a>.<br/></p>
+<p>Интересной возможностью Déjà&nbsp;Vu DVX является её файловый формат «External View». Этот формат позволяет пользователям OmegaT передавать двуязычные файлы пользователям Déjà&nbsp;Vu DVX, которые в дальнейшем могут их редактировать или использовать в своих автоматизированных рабочих процессах. За подробностями обратитесь к <a href="compatibility_deja_vu">HowTo по Déjà&nbsp;Vu «External View»</a>.<br/></p>
 
-<p>Copyright Marc Prior 2009-2014</p>
+<p>Copyright Марк Прайор 2009–2014</p>
 
 </div>
 
