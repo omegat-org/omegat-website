@@ -1,0 +1,61 @@
+global:
+  title: OmegaT - A ferramenta de memória de tradução livre
+  description: O OmegaT é uma ferramenta de memória de tradução livre escrita em linguagem Java.
+
+menu:
+  languages: Idiomas
+  about: Sobre
+  documentation: Documentação
+  contact: Contato
+  download: Baixe aqui
+  resources: Recursos
+
+footer:
+  connect: Conectar
+  omegat_project: O projeto OmegaT
+  documentation: Documentação
+
+titles:
+  404: Página não encontrada
+  about: Sobre
+  contact: Contato e suporte
+  documentation: Documentação
+  download: Baixe aqui
+  home: OmegaT - A ferramenta de memória de tradução livre
+  philosophy: Filosofia
+  resources: Recursos
+  manual: Manual
+  tutorials: Tutoriais
+  howto: Instruções
+  reviews: Análises
+  sponsorship: Patrocinadores
+  howtos:
+     compatibility: Compatibilidade
+     compatibility_deja_vu: Instruções - A compatibilidade do OmegaT com o Déjà Vu.
+     compiling_from_source: Instruções - Compilando o OmegaT a partir do código-fonte
+     docx: Instruções - Traduzindo arquivos do Word 2007 no OmegaT
+     export_uncleaned_rtf: Instruções - Exportar do OmegaT para o formato "RFT bilíngue com tags do Trados"
+     google_translate: Instruções - Utilizando o Google Translate no OmegaT
+     iceni_infix: Instruções - Traduzindo arquivos PDF com Iceni Infix e OmegaT
+     linux: Instruções - OmegaT no Linux
+     localizing_omegat: Instruções - Traduzindo o OmegaT para o seu idioma
+     ms_translator: Instruções - Utilizando o Microsoft Translator no OmegaT
+     new_filter: Instruções - Criar um novo filtro de arquivo
+     preview: Instruções - Adicionado uma função de visualização ao OmegaT
+     priorview: Instruções - O utilitário de visualização "Priorview"
+     prop12m: Instruções - Propagação e correspondência única ou múltipla
+     spelling: Instruções - Verificação ortográfica
+     text_export: Instruções - Usando a função do OmegaT de exportação de texto (interface de script).
+     tokenizer: Instruções - Usando o tokenizer do OmegaT
+
+# Platforms name
+windows_jre: Windows com JRE
+windows_jre64b: Windows com 64-bit JRE
+windows_nojre: Windows sem JRE
+osx_signed: OS X assinado
+osx_unsigned: OS X não assinado
+linux_jre: Linux com JRE
+linux_jre64b: Linux com 64-bit JRE
+nojre: Multiplataforma sem JRE
+webstart: Web Start
+source: Código fonte.
