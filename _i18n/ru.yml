@@ -31,22 +31,22 @@ titles:
   sponsorship: Спонсорская поддержка
   howtos:
      compatibility: Совместимость
-     compatibility_deja_vu: HowTo: Совместимость OmegaT с форматом Déjà Vu
-     compiling_from_source: HowTo: Сборка OmegaT из исходного кода
-     docx: HowTo: Перевод файлов Word 2007 в OmegaT
-     export_uncleaned_rtf: HowTo: Экспорт из OmegaT в формат «Неочищенный RTF Trados»
-     google_translate: HowTo: Использование Google Translate в OmegaT
-     iceni_infix: HowTo: Перевод файлов PDF с помощью Iceni Infix и OmegaT
-     linux: HowTo: Использование OmegaT в Linux
-     localizing_omegat: HowTo: Перевод OmegaT на ваш язык
-     ms_translator: HowTo: Использование Microsoft Translator в OmegaT
-     new_filter: HowTo: Создание нового файлового фильтра
-     preview: HowTo: Добавление функции предварительного просмотра в OmegaT
-     priorview: HowTo: Инструмент предварительного просмотра "Priorview"
-     prop12m: HowTo: Автоматическое копирование переводов и создание альтернативных вариантов перевода не уникальных сегментов
-     spelling: HowTo: Проверка орфографии
-     text_export: HowTo: Использование функции экспорта текста в OmegaT (интерфейс для скриптов)
-     tokenizer: HowTo: Использование модуля токенизации в OmegaT
+     compatibility_deja_vu: Совместимость OmegaT с форматом Déjà Vu
+     compiling_from_source: Сборка OmegaT из исходного кода
+     docx: Перевод файлов Word 2007 в OmegaT
+     export_uncleaned_rtf: Экспорт из OmegaT в формат «Неочищенный RTF Trados»
+     google_translate: Использование Google Translate в OmegaT
+     iceni_infix: Перевод файлов PDF с помощью Iceni Infix и OmegaT
+     linux: Использование OmegaT в Linux
+     localizing_omegat: Перевод OmegaT на ваш язык
+     ms_translator: Использование Microsoft Translator в OmegaT
+     new_filter: Создание нового файлового фильтра
+     preview: Добавление функции предварительного просмотра в OmegaT
+     priorview: Инструмент предварительного просмотра "Priorview"
+     prop12m: Автоматическое копирование переводов и создание альтернативных вариантов перевода не уникальных сегментов
+     spelling: Проверка орфографии
+     text_export: Использование функции экспорта текста в OmegaT (интерфейс для скриптов)
+     tokenizer: Использование модуля токенизации в OmegaT
 
 # Platforms name
 windows_jre: Windows с JRE
