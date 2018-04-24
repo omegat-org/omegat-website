@@ -1,0 +1,75 @@
+
+<div class="container">
+
+
+<h3>Pozadí</h3>
+
+<p>Nejmodernější nástroje CAT zobrazují text spíše ve formě segmentů než v jejich konečném rozložení a formátování. Ačkoliv toto má spoustu výhod, překladateli se může hodit možnost, když by mohl vidět konečné rozložení a formátování textu již během překladu. Z tohoto důvodu poskytují mnohé CAT nástroje funkci náhledu, která ukazuje rozložení a formátování i bez toho, aby překladatel musel vytvářet cílové dokumenty a otvírat je v oddělené aplikaci (obvykle textový procesor). OmegaT nemá integrovanou funkci náhledu, ale je možné poskytnout téměř stejnou funkci za použití dodatečného softwaru. Tento návod popisuje obecné zásady pro nastavení funkce náhledu.</p>
+
+<h3>Zásady</h3>
+
+<p>V ideálním případě by zobrazovací doplněk měl dělat dvě věci:</p>
+
+<ul>
+
+<li>Měl by zobrazit text, který se co nejvíce přibližuje v uspořádání a formátování konečnému dokumentu.</li>
+
+<li>Běl by průběžně aktualizovat obsah dokumentu.</li>
+
+</ul>
+
+
+<h3>Prohlížeč</h3>
+
+<p>Když překládáte soubory .html, vhodným řešením je použít internetový prohlížeč s automatickým obnovováním a tím dosáhnete funkce náhledu. Příklady prohlížečů s automatickým obnovováním:</p>
+
+<ul>
+
+<li>Firefox:<br/> Uživatelé Windows, kteří Firefox dosud nepoužívají si jej mohou <a href="http://www.mozilla.org">stáhnout z webu www.mozilla.org</a>; většina uživatelů Linuxu jej budou mít instalován, nebo si jej mohou instalovat prostřednictvím repozitáře své distribuce. Funkci automatického obnovování do Firefoxu přidáte tak, že <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">instalujete doplněk „ReloadEvery“</a>.</li>
+
+<li>Opera:<br/> Opera je dostupná pro všechny platformy; je také hodně rychlá a není náročná na hardware. <a href="http://www.opera.com">Stáhněte si ji z webu www.opera.com</a> (nebo u uživatelů Linuxu: přes repozitář své distribuce). Funkce automatického obnovování je již obsažena.</li>
+
+<li>Chrome:<br/> Chrome je také poskytován pro všechny platformy. <a href="https://www.google.com/chrome/browser/desktop/index.html">Stáhněte si Chrome z www.google.com/chrome</a>. Funkci automatického obnovování přidáte <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">stažením a instalací rozšíření Auto Refresh Plus</a> z obchodu Web Store. </li>
+
+</ul>
+
+<p>Možná <i>nebudete</i> chtít použít svůj běžný prohlížeč pro zobrazování náhledu, budete jej chtít využít k rešerši na internetu místo toho, abyste pořád museli překlikávat mezi panely, pak tedy instalujte další prohlížeč, který bude plnit funkci náhledu.</p>
+
+<p>Po té, co si vyberete a instalujete vhodný prohlížeč (anebo požadovaný doplněk), otevřete přeložený soubor z adresáře /target ve vašem projektu:</p>
+
+<ul>
+
+<li>U Firefoxu: přes Soubor &gt; Otevřít soubor</li>
+<li>U Opery: přes Opera &gt; Stránka &gt; Otevřít</li>
+
+</ul>
+
+<p>Dále povolte automatické obnovování. Jak ve Firefoxu, tak v Opeře, je možno toto aktivovat kliknutím pravým tlačítkem myši v přeloženém souboru .thml, který je otevřen, a vyberte Obnovyt každých (Reload every) &gt; vyberte požadovaný interval (např. 5 sekund).</p>
+
+<p>Nyní tedy máte funkci náhledu. Zobrazení se aktualizuje po té, co uložíte projekt a zadáte vytvořit přeložené dokumenty v prostředí OmegaT pomocí Ctrl+s, Ctrl+d. Změna bude viditelná po zpoždění, nejpozději po takovém intervalu, který jste zadali (plus čas, který potřebuje OmegaT k uložení a vytvoření cílových souborů). Váš prohlížeč nebude automaticky posouvat text na pozici, kde zrovna překládáte; toto musíte dělat sami. Ale minimálně zůstane na stejném místě v textu, které zobrazoval při aktualizaci.</p>
+
+<h3>Náhled souborů textových procesorů</h3>
+
+<p>Otevřít přeložený cílový soubor v prohlížeči je snadné, když se u zdroje jedná o formát .html, ale překlady se více týkají souborů textových procesorů, které jsou u zpracování v OmegaT běžně zastoupeny formáty .docx nebo .odt. I tady můžete použít popsané řešení s prohlížečem k nahlížení obsahu těchto souborů, ale budete také potřebovat za a) konvertor ke konvertování souborů z formátu .html a za b)nástroj k automatickému spouštění konvertoru, tak abyste nemuseli konvertovat tyto soubory ručně.</p>
+
+<p>Zde jsou popsány dva programy, které lze jako konvertory použít: Abiword a LibreOffice.</p>
+
+<p>Abiword a LibreOffice jsou oba textové procesory a kancelářské balíky. Oba jsou zdarma, dostupné pro množství různých platforem, můžete konvertovat soubory .docx a .odt na formát .html.</p>
+
+<p>Abiword je poměrně malý soubor ke stažení a má svižný chod. Má funkci příkazového řádku pro konvertování souborů .docx a .odt na formát .html. Pro uživatele Linuxu je instalace velmi jednoduchá a pro uživatele Windows také dosti jednoduchá. <a href="http://www.abisource.com/download/">Stáhněte si Abiword zde</a>.</p>
+
+<p>LibreOffice je komplexní kancelářský balík podobný Microsoft Office. Lze jej využít ke konvertování souborů .docx a .odt na formát .html, ale aby to šlo přes příkazový řádek, bude zapotřebí rozšíření Unoconv. <a href="http://www.libreoffice.org/">LibreOffice si stáhněte zde</a>; <a href="http://dag.wieers.com/home-made/unoconv/">Rozšíření Unoconv si stáhněte zde</a>.</p>
+
+<p>Jakmile budete mít nainstalováno buď Abiword nebo kombinaci LibreOffice+Uniconv, můžete konvertovat cílové soubory vyprodukované OmegaT na formát .html tak, aby byly dostupné pro prohlížeč. Nezapomeňte, že nejprve se musí uložit v OmegaT a vytvořit přeložené dokumenty, pak spustit konverzní nástroj, pak počkat až se aktualizuje náhled v prohlížeči.</p>
+
+<p>Existuje spousta způsobů, jak tohoto dosáhnout, ale jedno praktické řešení nabízí použití skriptu, který „očekává“ změny v přeložených souborech vyprodukovaných v OmegaT a pak, jakmile detekuje změnu, automaticky spustí nástroj, který konvertuje soubory na formát .html tak, aby je bylo možno zobrazit v internetovém prohlížeči. Schématické znázornění je níže:</p>
+<p><img src="{{ '/img/preview_flow.png' | prepend: site.baseurl_root }}" alt="preview_flow.png"></img></p>
+
+<p>Příklad skriptu, který dosáhne popsané funkce je popsán v části <a href="priorview.html">Návod: Priorview</a>.</p>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+

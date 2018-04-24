@@ -1,0 +1,120 @@
+
+<div class="container">
+
+
+<h3>Pozadí a principy</h3>
+
+<p>Priorview je malý nástroj, který poskytuje funkci náhledu použitelnou ve spolupráci s OmegaT. Více informací o pozadí a principech najdete v části návodu <a href="preview.html">Návod: Náhled</a>. Tento návod popisuje použití nástroje Priorview v prostředí <b>Windows a Linuxu</b>. Pokud používáte Mac OS X, můžete si <a href="{{ '/files/priorview_for_mac.zip' | prepend: site.baseurl_root }}">zde stáhnout verzi pro Priorview pro Mac</a>. Verze pro Mac OS X zatím nebyla zdokumentována a níže uvedené informace se k této verzi <b>nevztahují</b>.</p>
+
+<h3>Požadovaný software</h3>
+
+<p>Pro použití Priorview na Windows nebo Linuxu bude potřebovat následující:</p>
+
+<p>1. <b>Internetový prohlížeč</b>, konkrétně buď:</p>
+
+<ul>
+
+<li><a href="http://www.opera.com">Opera</a><br/>or</li>
+
+<li><a href="http://www.mozilla.org">Firefox</a> spolu s doplňkem <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">„ReloadEvery“ </a>, které se stará o automatické obnovení zobrazeného obsahu.<br/> Nejprve instalujte Firefox (pokud jej tedy ještě nemáte nainstalován), a až potom doplněk ReloadEvery.</li>
+
+<li><i>(Stahujte přes poskytnutý odkaz; uživatelé Linuxu mohou instalovat z repozitáře dané distribuce, pokud je tam tento obsah k dispozici.)</i></li>
+
+</ul>
+
+<p>2. <b>Nástroj pro konverzi</b>, obzvláště buď::</p>
+
+<ul>
+
+<li><a href="http://www.abisource.com/download/">Abiword</a><br/>or</li>
+
+<li><a href="http://www.libreoffice.org/">LibreOffice</a> spolu s <a href="http://dag.wieers.com/home-made/unoconv/">doplňkem Unoconv</a></li>
+
+</ul>
+
+<p>3. <b><a href="http://www.tcl.tk/software/tcltk/">Tcl/Tk</a></b></p>
+
+<p>Téměř jakákoliv aktuální verze Tcl/Tk bude pravděpodobně dostačující, ale je nutné mít oba, jak Tcl (interpret skriptování) a Tk (grafická komponenta).</p>
+
+<p>4. <b><a href="{{ '/files/priorview.zip' | prepend: site.baseurl_root }}">Priorview</a></b></p>
+
+<p>Priorview nainstalujete tak, že jednoduše rozbalíte archív zip v libovolné vhodné lokaci na pevném disku. Ke spuštění Priorview otevřete okno příkazového řádku a napište:</p>
+
+<p>cd <i>cesta</i></p>
+
+<p>kde <i>cesta</i> je celý název cesty k adresáři, ve kterém je uložen preview.tcl. Pak napište:</p>
+
+<p>wish priorview.tcl</p>
+
+<p>Můžete ještě jednodušeji spouštět přes skriptový soubor, tj. prostý textový soubor, ve kterém jsou tyto uvedené dva řádky.</p>
+
+<h3>Použití Priorview</h3>
+
+<p>Když instalace dopadla dobře, vše by se po spuštění mělo zobrazit jak je to popsáno výše. Abyste toho dosáhli, vyberte:</p>
+
+<ul>
+
+<li>jméno cílového souboru (v cílovém adresáři vašeho projektu OmegaT /target);</li>
+
+<li>instalovaný internetový prohlížeč</li>
+
+<li>frekvenci, ve které má skript kontrolovat, zda jsou v tomto souboru změny (tzv. dotazovací interval);</li>
+
+<li>instalovaný nástroj pro konverzi souboru.</li>
+
+</ul>
+
+<p>Když jste vybrali všechno toto, zobrazí se tlačítko Start. Jakmile bude aktivováno, spustí váš internetový prohlížeč se vzorovou stránkou, na které je výzva k nastavení obnovovací funkce, což byste měli následně provést a pak v OmegaT stiskněte Ctrl+S, Ctrl+D, aby se tím iniciovala automatická aktualizace zobrazeného obsahu v internetovém prohlížeči.</p>
+
+<p>Během chodu Priorview můžete:</p>
+
+<ul>
+
+<li>přerušit chod a restart;</li>
+
+<li>vybrat nový soubor (pokud pracujete na projektu obsahujícím několik souborů, nemusíte znovu spouštět Priorview když dosáhnete konec souboru; můžete jednoduše vybrat položku další (next));</li>
+
+<li>změnit interval dotazování.</li>
+
+</ul>
+
+<p>Jakmile je Priorview spuštěn, již nemůžete vybrat jiný prohlížeč nebo nástroj pro konverzi; proto jsou po spuštění tyto možnosti skryté. Abyste mohli vybrat jiný prohlížeč nebo nástroj pro konverzi, musíte Priorview zavřít a spustit nanovo.</p>
+
+<p>Ukončovací tlačítko (‚Quit‘) zavře Priorview a také vymaže dočasné soubory, které byly vytvořeny. (Jiné metody zavření Priorview dočasné soubory nesmaže.)</p>
+
+<p><img src="{{ '/img/preview_ss.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"></img></p>
+
+<p><i>Vydání prohlášení Evropské komise (ve formátu .odt) v OmegaT a níže v průběžném zobrazení přeloženého textu zobrazené v Opeře. Dole vpravo: nástroj Priorview. Rozložení stránky ukázané zde slouží jen ilustraci; samozřejmě si můžete rozložit okno dle svých přestav.</i></p>
+
+
+<h3>Odstraňování problémů</h3>
+
+<p>Pokud cesta k umístění souboru priorview.tcl obsahuje mezery, vložte ji do uvozovek, např.:</p>
+
+<p>cd "C:\Moje Soubory\priorview"</p>
+
+<p>Pokud se nedaří spustit Priorview:</p>
+
+<p>Záleží na verzi Tcl/Tk, kterou máte instalovánu, možná budete muset přidat číslo verze do příkazu ‚wish‘, např.:</p>
+
+<p>wish8.5 priorview.tcl</p>
+
+<p>Dbejte na správné zadávání malých a velkých písmen.</p>
+
+<p>Pokud se v internetovém prohlížeči neaktualizuje náhled, zkontrolujte následující:</p>
+
+<ul>
+
+<li>Zda jste nezapomněli v OmegaT aktivovat Ctrl+S a Ctrl+D. Dokud tak neučiníte, tak nebudou zobrazeny žádné změny!</li>
+
+<li>Zda jste správně instalovali nástroj pro konverzi a správně funguje. Toto můžete otestovat vhodným níže uvedeným příkazem v příkazové řádce (terminálu/konzoli/DOS prompt). V každém případě, <i>file</i> je jméno souboru .docx nebo .odt. Pokud vše sedí, bude vytvořena .html verze souboru:<br/> Pro Abiword:<br/> <kbd>abiword --to=html <i>file</i></kbd><br/> Pro LibreOffice+Unoconv:<br/> <kbd>unoconv -f html <i>file</i></kbd></li>
+
+<li>Zda jste nastavili interval automatického obnovování v prohlížeči.</li>
+
+</ul>
+
+<br/><br/>
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>

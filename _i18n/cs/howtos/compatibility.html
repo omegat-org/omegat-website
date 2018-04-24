@@ -1,0 +1,187 @@
+<div class="container">
+
+
+
+<p>Tento návod popisuje informace o kompatibilitě aplikace OmegaT s ostatními programy.</p>
+
+<h3>Obecné poznámky</h3>
+
+<p>V současnosti je standardní postup takový, že profesionální překladatelé dostávají a odevzdávají texty v digitální podobě, uživatelé OmegaT samozřejmě mají zájem na tom, aby byla zajištěna kompatibilita s ostatními programy. Tento návod (HOWTO) má za cíl poskytnout informace o této oblasti.</p>
+
+<p>Obecné poznámky: „kompatibilita“ je jen zřídka naprosto jednoznačná, typu „ano“ a „ne“. Když prodejce programu prohlašuje, že jeho produkt je kompatibilní s jiným software, tato kompatibilita zřídka dosahuje 100%. A naopak, když některé produkty nejsou zjevně přímo kompatibilní, je často možné nalézt postupy, které lze použít současně u různých programů. Otázkou, která tu musí být zodpovězena je, zda jsou tyto postupy přijatelné v rámci výsledků a vynaloženého úsilí, a lze očekávat, že odpověď bude u každého uživatele trochu jiná. Jinými slovy, „kompatibilita“ se netýká jen produktu, ale také pracovního postupu.<br/>
+
+</p>
+
+
+<h3>Operační systémy</h3>
+
+<p>OmegaT poběží pod jakýmkoliv systémem, na kterém je možno nainstalovat prostředí JRE (Java Runtime Environment). V současnosti sem patří všechny verze Microsoft Windows od verze Windows 98 a novější, Mac OS X a většina Linuxových distribucí. </p>
+
+<h3>Zdrojové texty (soubory na překlad)</h3>
+
+<p>Aktuální seznam všech podporovaných souborových formátů se nachází v uživatelské příručce OmegaT. Níže uvedený seznam <strong>není</strong> kompletním seznamem všech souborových formátů, které umí OmegaT zpracovat, ale je omezený na vybrané typy dle konkrétního zájmu běžného uživatele.</p>
+
+<ul>
+
+  <li>
+    
+    <p><strong>Microsoft Office 2007-2010 (Word, Excel, PowerPoint 2007-2010); Office Open XML:</strong></p>
+
+    <p>Aplikace OmegaT je schopná pracovat s aktuálními formáty Microsoft Office přímo, a to bez konverze z nebo do jiných formátů.</p>
+
+<p>Formáty souborů Microsoft Office 2007 (též známý jako Office Open XML nebo .docx) je radikálně odlišný od formátů Office 97-2003. Ve skutečnosti je jejich struktura velmi podobná té, která se používá u souborů OpenOffice.org: skládá se z archivu zip, který obsahuje hned několik souborů, a soubory obsahující text se zakládají na standardu XML. Nástroje CAT mohou tento typ souborů lépe zpracovávat, tzn. že je podporují a zpracovávají přímo. Souborové formáty Microsoft Office 2007-2010 můžete zpracovávat s programem OmegaT přímo; více informací naleznete <a href="./docx.html">zde</a>.</p>
+    
+    <p>Pro Uživatele Microsoft Office, kteří (ještě) nemají verzi 2007, převod mezi Office Open XML a Microsoft Office 97-2003 se dá provést použitím konvertoru jako plugin od Microsoftu dostupného <a href="http://www.download.com/Microsoft-Open-XML-Converter/3000-18483_4-146736.html">zde</a>. Tento konvertor je dostupný pro Windows a Mac.</p>
+  
+    <p>Office Open XML lze převést přímo na OpenDocument Format a zpět prostřednictvím konvertoru ODF, dostupného <a href="http://odf-converter.sourceforge.net/download.html">zde</a>. Tento nástroj vyžaduje verze MS Office (XP/2003/2007).<br/></p>
+
+    <p>Uživatelé Mac OS X mohou převádět přímo z Office OpenXML na OpenDocument Format a zpět v <a href="http://www.neooffice.org/">NeoOffice</a>.</p>
+
+    <p>Uživatelé Linuxu mohou použít tuto verzi samostatného <a href="http://www.oooninja.com/2008/01/convert-openxml-docx-etc-in-linux-using.html">konverzního nástroje</a> pro převod přímo mezi Office Open XML a OpenDocument Format.</p>
+
+    <p>Současné verze OpenOffice.org jsou schopné provádět konverzi souborů mezi formáty Microsoft Office 2007 a Open Document Format.</p>
+
+  </li>
+
+  <li>
+
+    <p><strong>Microsoft Office 97-2003 (Microsoft Word/Excel/Powerpoint 2003):</strong></p>
+
+    <p>Tyto souborové formáty jsou proprietární, binární, a donedávna nebyly veřejně zdokumentované, toto jsou vlastnosti, které zásadním způsobem komplikují zpracování těchto souborů pomocí nástrojů CAT.&nbsp;</p>
+    
+    <p>Některé CAT nástroje řeší tento problém, přinejmenším pro MS Word, zpracováním uvnitř samotného Wordu; většina ostatních CAT nástrojů převedou soubor do RTF a zpět, často to překladatel ani nevnímá.</p>
+
+    <p>OmegaT tyto formáty nepodporuje přímo. Místo toho ještě před zahájením práce v OmegaT musí být takové soubory konvertovány ručně na formát Office Open XML (MS Office 2007/2010) nebo formát Open Document (LibreOffice nebo OpenOffice.org). (OmegaT není v tomto směru jedinečná: spousta jiných CAT nástrojů konvertují zdrojové soubory na jiné formáty, v některých případech to provádí před překladem na pozadí aniž by si této skutečnosti byl překladatel vědom.)</p>
+
+  </li>
+
+  <li>
+        
+    <p><strong>RTF (Rich Text Format):</strong></p>
+
+    <p>RTF je strukturálně zcela odlišný od formátu souborů Microsoft Office 97-2003, ale s ohledem na OmegaT vyžaduje stejné zacházení: není přímo podporovaný a nejprve musí být převeden na formát .docx (MS Office 20070/2010) nebo na formát Open Document (LibreOffice/OpenOffice.org.).</p>
+
+  </li>
+
+  <li>
+    <p><strong>Formát Open Document: LibreOffice/OpenOffice.org/NeoOffice Writer/Calc/Impress</strong></p>
+    
+    <p>Tyto souborové formáty odpovídají formátům Microsoft Office. Formát Open Document představuje mezinárodní standard a nahradil proprietární (ale otevřený) formát Star Office; toto jsou ve skutečnosti dva různé, i když velmi podobné souborové formáty. OmegaT obsahuje souborové filtry pro oba formáty Open Document a pro formát Star Office, který je nahradil. Tyto souborové filtry jsou velmi propracované, a riziko poškození formátování souboru LibreOffice, OpenOffice.org, atd. během překladu s OmegaT je zcela nepatrné.</p>
+
+  </li>
+
+  <li>
+    
+    <p><strong>HTML; XHTML:</strong></p>
+
+    <p>HTML a XHTML, jako jeho XML ekvivalent, jsou nejběžnější souborové formáty pro webové stránky. Souborové filtry OmegaT pro tyto dva formáty jsou také velmi dobře propracované. Podobně jako u souborů OpenOffice.org, lze tyto formáty překládat v OmegaT s velmi malým rizikem poškození. Nicméně má svůj význam individuálně si upravit nastavení filtrů pro optimální výsledky.</p>
+
+  </li>
+
+</ul>
+
+
+<h3>Překladové paměti</h3>
+
+<p>Pro překladové paměti existuje mezinárodní standard: TMX, neboli Translation Memory eXchange (Výměna překladových pamětí). Byl přijat velkou částí uživatelů a je podporován téměř všemi současnými CAT nástroji.</p>
+
+
+<p>Standard TMX existuje jak v různých <strong>verzích</strong>, tak i na různých <strong>úrovních</strong>. Rozlišování je důležité pro účely kompatibility. Standard se stále vyvíjí; na tuto skutečnost odkazují samotné různé verze. Každá úroveň („Level“) obsahuje specifické údaje k formátování obsažené v souboru TMX:</p>
+
+<ul>
+
+  <li>
+    
+    <p>Level 1 souborů TMX neobsahuje žádné formátovací údaje.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Level 2 souborů TMX obsahuje formátovací údaje, ale tyto soubory jsou zpravidla kompatibilní jen tehdy, když jsou používány stejným CAT nástrojem. Jinými slovy, když uživatel OmegaT najde stoprocentní shodu na úrovni 2 souboru OmegaT TMX, může to být akceptováno bez vyžadování dalších úprav, ale to samé nemusí být docíleno na úrovni 2 souboru TMX, který vytvořil jiný CAT nástroj (nebo naopak). Toto má dopad na průběh práce, kdy uživatelé CAT nástrojů (zejména zákazníci) očekávají obdržení souborů s překladovou pamětí a získat tak možnost automatického vkládání stoprocentních shod.</p>
+
+  </li>
+
+  <li>
+    
+    <p>Level 3 souborů TMX obsahuje formátovací údaje zapsané takovým způsobem, který  umí číst i ostatní CAT nástroje. Podpora pro Level 3 u CAT nástrojů je poměrně vzácná.</p>
+
+  </li>
+
+</ul>
+
+<p>Vybrané jiné CAT nástroje (jako např. TRADOS) jsou schopné exportovat různé soubory TMX v různých verzích. OmegaT podporuje všechny současné verze TMX, ale pravděpodobně budou lepší výsledky, když soubory TMX budou ve verzi 1.4b.&nbsp;</p>
+
+<p>Nástroje, které podporují různé úrovně souborů TMX jsou v zásadě mezi sebou stále kompatibilní. Formátovací údaje obsažené ve vyšší úrovni budou pro „ostatní“ nástroje bezvýznamné, ale textová informace bude zobrazována i tak, je možno nalézt shody, atd.</p>
+
+
+<p>OmegaT používá mezinárodní standardy TMX jako svůj nativní formát překladové paměti. Některé CAT nástroje stále využívají vyhrazené proprietární formáty překladových pamětí, ale ve skutečnosti všechny podporují import a export souborů TMX.  V praxi to vypadá tak, že překladatelé mohou odevzdávat překladové paměti svým zákazníkům a naopak, a pro příjemce slouží tyto soubory buď jako bezprostřední nebo budoucí reference; jestli se mají tyto soubory použít pro automatický pracovní postup je nutno počítat se zmíněným způsobem použití. </p>
+
+<p>Jiné důležité body ohledně souborů TMX:</p>
+
+<p>Standard TMX obsahuje definici, které znaky jsou přípustné. Ne všechny CAT nástroje jsou stejně přísné při zachovávání těchto definicí, proto některé CAT nástroje nejsou schopné přímo otevřít soubory TMX, které vytvořily určité jiné CAT nástroje. OmegaT zásadně dodržuje podmínky a je v mnohém tolerantní, přitom si všímá pochybení jiných nástrojů; pokud tu nastanou problémy, je možno je obecně řešit poměrně jednoduše přes funkci Najít a nahradit v textovém editoru a ošetřit tak nepovolené znaky v souboru TMX.</p>
+
+<p>Soubory TMX jsou kódovány v Unicode, mohou mít kódování UTF-8 nebo UTF-16. Soubory TMX, které byly vytvořeny pod Windows, mohou začínat označením pořadí bajtů („byte-order mark“; BOM). Tento rozdíl v zásadě nevede k problémům s kompatibilitou.</p>
+
+<p>Problémy kompatibility mohou vyvstat z rozdílů v použitých jazykových kódech. OmegaT podporuje jazykové kódy ve formátu „xx“, „XX“, „xxYY“ a „XX-YY“, kde xx nebo XX znamená jazyk, yy nebo YY znamená region. Přesněji řečeno, ISO standard pro jazykové kódy vyžaduje formát „xx-YY“ (např.: „en-GB“ pro britskou angličtinu); i když tuto variantu OmegaT podporuje, výchozí konvence v OmegaT nabízí formát „XX-YY“, např. „EN-GB“. OmegaT je tolerantní když čte soubory TMX: přijme soubory s en-GB, en-US, en, EN, adt. Ne všechny CAT nástroje poskytují stejnou míru tolerance a některé proto nezobrazí očekávané shody, pokud jazykové kódy nejsou dostatečně vyhovující. Tato nekompatibilita se dá řešit vyhledáním a nahrazením příslušných kódů jazyků v souboru TMX v odpovídajícím textovém editoru. Jiným zdrojem nekompatibility jsou tříciferné kódy jazyků, které OmegaT vůbec nepodporuje. (Toto je náhodou omezení Javy, ne samotné aplikace OmegaT.) </p>
+
+<p>Pár bodů ohledně proprietárních souborů překladových pamětí:</p>
+
+<p>Tradiční formát soubor překladové paměti programu Wordfast budí zvláštní zájem, což vychází z jeho jednoduchosti: sestává z prostého textového souboru s překladovou jednotkou (segmentem) na každém řádku, na kterém jsou zdroj a cíl od sebe odděleni tabulátorem. Tento formát lze jednoduše převést na formát TMX pomocí nástrojů třetích stran, jako je např. <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. Pro tento účel lze také použít <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a>.</p>
+
+<h3>Soubory glosáře</h3>
+
+<p>Soubory glosáře OmegaT jsou soubory obsahující prostý text ve formátu:</p>
+
+<p>výraz zdrojového jazyka&nbsp;&nbsp;&nbsp; &lt;tab&gt;&nbsp;&nbsp;&nbsp; výraz cílového jazyka&nbsp;&nbsp;&nbsp; &lt;tab&gt;&nbsp;&nbsp;&nbsp; dodatečná informace</p>
+
+<p>Některé jiné CAT nástroje jsou schopné importovat a exportovat soubory glosáře v tomto formátu, nebo v podobném formátu prostého textu, které lze jednoduše vytvářet ze souborů glosáře(například pomocí operací hledat &amp; nahradit v Microsoft Wordu).</p>
+
+<p>OmegaT také umí číst glosáře ve formátu TBX, což je průmyslový standard pro formát souborů glosáře.</p>
+
+<p>OmegaT nemůže importovat nebo číst soubory glosáře v proprietárních binárních formátech, jako je např. Trados Multiterm.</p>
+
+<h3>Dvoujazyčné formáty nástrojů CAT</h3>
+
+<p>Spousta CAT nástrojů využívá zprostředkovaný formát dvoujazyčného souboru, např. soubor obsahující jak segmenty zdrojového, tak i cílového jazyka, a v některých případech také strukturu původního souboru. Původně byly tyto formáty dvoujazyčných souborů produkovány vždy podle architektury daného nástroje. Nicméně se staly důležitým fenoménem při překladu za využití CAT nástrojů, a častou představují největší překážku v kompatibilitě mezi OmegaT a jinými CAT nástroji (nebo vlastně obecně mezi CAT nástroji).</p>
+
+<p>Existují nejméně tři důvody proč zákazník může vyžadovat dodání překladu v určitém formátu dvoujazyčného souboru (místo toho, aby jednoduše požadoval jen přeložený soubor a eventuálně také překladovou paměť):</p>
+
+<p>1. Některé CAT nástroje, zejména TRADOS, jsou schopné importovat širokou škálu souborových formátů, včetně formátů desktop publishing, a připravit je na překlad v příslušném nástroji. Taková „připravená“ forma je zpravidla právě formát dvoujazyčného souboru daného nástroje. Bez přípravy tímto způsobem, může být formát souboru pro překladatele nepřístupný.</p>
+
+<p>2. Překlad je jen částí uceleného průběhu práce daného zákazníka. Překlad může být např. předán korektorovi k dalším úpravám. Pokud by úpravy korektora měly být zahrnuty v úložišti překladové paměti, kterou si chce zákazník ponechat, musí být tyto změny provedeny <i>před</i> tím, než jsou vytvořeny finální dokumenty. Toto může být provedeno buď s příslušným CAT nástrojem nebo v některých případech v externím formátu dvoujazyčných souborů, které zvládá daný nástroj přečíst.</p>
+
+<p>3. Zákazník si přeje obdržet překladovou paměť, za jejíž pomoci může v budoucnu zpracovat jiné texty: jinými slovy, k provedení „předběžného překladu“ budoucích textů, na základě stávající překladové paměti. Aby bylo možno tento proces provést automaticky, musí být splněn dvě podmínky: za prvé, překladová paměť musí obsahovat formátovací údaje (vizte výše); a za druhé pravidla segmentace, která jsou aplikována na text, musí být stejná jako ta, která byla užita při vytvoření překladové paměti (nebo její části). Pro zákazníka je nejjednodušším způsobem, jak si zajistit, že tyto dvě podmínky jsou dodrženy, je, že si sám provede předběžný překlad textu před tím, než text předá překladateli (definování způsobu segmentace), a vytvořit překladovou paměť v CAT nástroje dle vlastního výběru po té, co obdrží přeložený zprostředkující dvoujazyčný soubor od překladatele (ujistí se, že formátovací údaje obsažené v překladové paměti budou kompatibilní s budoucími projekty).</p>
+
+<p>Některé formáty dvoujazyčných souborů lze zpracovat v OmegaT, a ne vždy s velkou námahou. Nicméně je důležité tomuto procesu rozumět. Jednotlivé formáty dvoujazyčných souborů jsou popsány níže.</p>
+
+<p><strong>XLIFF</strong></p>
+
+<p>XLIFF je průmyslový standardní formát pro dvoujazyčné soubory. Podporuje jej hned několik CAT nástrojů a prakticky jsou některé CAT nástroje efektivně „vyvíjeny“ pro XLIFF standard: například Heartsome a Swordfish. Protože se jedná o standard, tak výhodou XLIFF je, že filtry souborů, poskytované jedním producentem CAT nástrojů pro konverzi mezi určitým formátem a XLIFF (a následné dokončení práce na překladu, a zpět), mohou být teoreticky použity pro přípravu souborů ve formátu týkající se překladu v jakémkoliv CAT nástroji schopném podporovat XLIFF. Prakticky to znamená, že práce s XLIFF často vyžaduje užití nástrojů, které nejsou pro uživatele příliš komfortní.</p>
+
+<p>OmegaT má jen základní podporu pro XLIFF, a postup pro použití XLIFF v OmegaT ve spojení s nástroji Rainbow se nachází <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">zde</a>. Filtry dostupné pro formáty souborů jsou obzvláště příznačné spíše pro odvětví IT než pro soubory koncových uživatelů.<a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm"></a></p>
+
+<p><strong>Trados „uncleaned RFT“ / „nečištěné RTF“</strong></p>
+
+<p>Formát souborů Trados „uncleaned“ RFT, kterým se často říká „uncleaned files“ / „nečištěné soubory“, byl po mnoho let nejběžnějším formátem dvoujazyčných souborů, které se používaly při překladatelské práci. Svůj původ má v použití MS Word jakožto prostředí pro CAT nástroj Trados. Navíc kromě Tradosu, některé další CAT nástroje také podporují formát „uncleaned RFT“, zejména Wordfast Classic. </p>
+
+<p>V zásadě sestává tento formát ze souboru RTF, ve kterém se střídají zdrojové a cílové segmenty. Tyto segmenty jsou označeny a vymezeny speciálními znaky a styly formátování MS Word.</p>
+
+<p>Nedávno (2008) byl vyvinutý skript (jen pro Windows) a postup, který umožňuje uživatelům OmegaT vytvořit soubory Trados uncleaned RTF pro odevzdání po dokončení jejich překladu. Více informací naleznete v <a href="export_uncleaned_rtf">návodu „Export formátu z OmegaT do Trados uncleaned RTF“</a>.</p>
+
+<p><strong>Trados TTX</strong></p>
+
+<p>Formát Trados TTX tvoří protějšek k formátu „uncleaned RTF“ pro Trados Tag Editor, který narozdíl od Trados Workbench, nepracuje v přímé kombinaci s MS Wordem. TTX je formát založený na XML. <a href="http://www.opentag.com/okapi/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Plugin OmegaT</a> je teď dostupný pomocí takových prostředků, které umožní zpracovat tento formát v OmegaT.</p>
+
+<p><strong>Wordfast TXML</strong></p>
+
+<p>Formát Wordfast TXML je nativní interní formát nového programu Wordfast Professional (také známý jako Wordfast 6.0), z dílny Wordfast. Jak jeho jméno napovídá, je založen na formátu XML. OmegaT jej podporuje.</p>
+
+<p><strong>Déjà Vu „External Views“</strong></p>
+
+<p>Zajímavým rysem Déjà Vu je jeho souborový formát „External Views“. Tento formát umožňuje uživatelům OmegaT odevzdávat dvoujazyčné soubory uživatelům Déjà Vu DVX, kteří pak mohou nadále tyto soubory upravovat nebo je začlenit do svého automatického pracovního postupu. Více detailů naleznete v <a href="compatibility_deja_vu">návodu Déjà Vu „External Views“</a>.<br/></p>
+
+<p>Copyright Marc Prior 2009-2014</p>
+
+</div>
+

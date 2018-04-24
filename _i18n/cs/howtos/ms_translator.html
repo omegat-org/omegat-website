@@ -1,0 +1,62 @@
+<div class="container">
+- Při použití klíče Microsoft Translator API můžete využít strojový překlad Microsoft Translator v okně Strojový překlad v rámci OmegaT.<br /> - Abyste mohli použít klíč Microsoft Translator API, musíte registrovat svou aplikaci v obchodě Microsoft Azure Marketplace. OmegaT používá k identifikaci "Client ID" a "Client secret" dle vaší registrace.<br />
+
+<h3>Typ přihlášení</h3>
+<br />
+<a href="https://datamarket.azure.com/dataset/bing/microsofttranslator">https://datamarket.azure.com/dataset/bing/microsofttranslator</a> <br /> <br /> - Otevřete nahoře uvedenou stránku a [Přihlášení] do Microsoft Azure Marketplace.<br /> <br /> *Pokud ještě nemáte Microsoft účet, bude nejprve nutno si jej založit.<br /> <br /> - Po přihlášení do účtu Microsoft Azure Marketplace můžete získat typ přihlášení k používání překladače Microsoft Translator.<br /> - Můžete si vybrat z dostupných nabídky typu přihlášení, jak je to ukázáno v pravé části stránky. Pokud chcete vybrat základní typ přihlášení (zdarma, do 2 milionů znaků za měsíc), klikněte na [SIGN UP] / [ZAREGISTRUJTE SE] nahoře u výběru typu přihlášení.<br />
+
+<h3>Zaregistrujte svou aplikaci</h3>
+<br />
+- Klikněte na [My Account] / [Můj účet] v horní části stránky.<br /> - Klikněte na [DEVELOPERS] v levé části nemu "my account".<br /> <br /> <a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/developer/applications</a> <br /> <br /> - Klikněte na [REGISTER] jak vidíte pod "Registered Applications."<br /> - Regustrujte aplikaci s násedujícími informacemi:<br />    - Klientské ID: jakýkoliv řetězec ex.) my_clientid1<br />    - Jméno: jakýkoliv řetězec ex.) my_application01<br />    - Klientské heslo: Použijte řetězec, který je zobrazen ve výchozím nastavení<br />    - Přesměrovávací URI: Jakákoliv URI: (neplatná URL, je požadována při používání Microsoft Translator) ex.) http://dummy/<br /> - Po zaregistrování zkontrolujte, zda je vaše aplikace zobrazena na stránce "Registered Applications".<br /> <br /> <a href="https://datamarket.azure.com/developer/applications">https://datamarket.azure.com/developer/applications</a> <br />
+<br />
+
+<h3>Nastavení OmegaT</h3>
+<br />
+- OmegaT používá k identifikaci "Client ID" a "Client secret" dle vaší registrace.<br />
+
+<h4>Uživatelé Windows</h4>
+- Najděte soubor OmegaT.I4J.ini (v programovém adresáři OmegaT) a upravte následující řádky ve svém editoru prostého textu:<br /> <br /> - Před úpravou souboru OmegaT.l4J.ini<br />
+<pre>
+# Microsoft Translator credentials
+#-Dmicrosoft.api.client_id=xxxxx
+#-Dmicrosoft.api.client_secret=xxxxx
+</pre>
+- Po úpravě OmegaT.l4J.ini (kde Client ID: my_clientid1)<br /> - Odstraňte "#" na začátku řádků a nahraďte "xxxxx" vaší identifikací "Client ID" a heslem "Client secret".<br />
+<pre>
+# Microsoft Translator credentials
+-Dmicrosoft.api.client_id=my_clientid1
+-Dmicrosoft.api.client_secret=your Client secret
+</pre>
+- Uložte  OmegaT.l4J.ini.<br />
+<br />
+<h4>Uživatelé Mac:</h4>
+Pravý klik na OmegaT.app a vyberte „Show Package Contents“ [„Zobrazit obsah balíčku“].<br /> - Najděte soubor OmegaT.app/Contents/MacOS/OmegaT.sh a upravte následujcí řádky ve svém editoru prostého textu:<br /> <br /> - Před úpravou souboru OmegaT.sh<br />
+<pre>
+# Microsoft Translator credentials
+#MS_CLIENT_ID="-Dmicrosoft.api.client_id=xxxxx"
+#MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=xxxxx"
+</pre>
+- Po úpravě OmegaT.sh (kde Client ID: my_clientid1)<br /> - Odstraňte "#" na začátku řádků a nahraďte "xxxxx" vaší identifikací "Client ID" a heslem "Client secret".<br />
+<pre>
+# Microsoft Translator credentials
+MS_CLIENT_ID="-Dmicrosoft.api.client_id=my_clientid1"
+MS_CLIENT_SECRET="-Dmicrosoft.api.client_secret=your Client secret"
+</pre>
+- Uložit OmegaT.sh.<br />
+<br />
+<h4>Uživatelé Linuxu:</h4>
+- Přidejte následující možnosti při spouštění OmegaT (kde Client ID: my_clientid1)<br />
+<pre>
+java -jar -Dmicrosoft.api.client_id=my_clientid1 -Dmicrosoft.api.client_secret=your Client secret OmegaT.jar
+</pre>
+
+
+<h3>Použití nástroje Microsoft Translator v OmegaT</h3>
+<br />
+- Spusťte OmegaT a otevřete svůj projekt.<br /> - Vyberte Možnosti &gt; Strojový překlad<br /> - Zkontrolujte [Microsoft Translator]<br /> - Když označíte jakýkoliv segment, pak bude jeho překlad zobrazen v okně Strojový překlad apliakace OmegaT.<br />    - Pokud nalzenete hlášení obsahující "Bad Request" / "Nesprávný dotaz" v okně Strojový překlad, zkontrolujte jestli jsou zadané správně hodnoty pro přihlášení "Client ID" a heslo "Client secret".<br /> - Ctrl+M (nebo Command+M na Macu) nahradí současný překlad segmentu výsledkem strojového překladu.<br />
+
+<h3>Jak se dozvím, kdy prekročím svůj měsíční limit?</h3>
+<br />
+<a href="https://datamarket.azure.com/account/datasets">https://datamarket.azure.com/account/datasets</a> <br /> <br /> - Svůj měsíční limit pro použití strojového překladu můžete zkontrolovat ve svém účtu po přihlášení na nahoře zmíněnou stránku. Pole "Status" ukazuje limit jako např. "Zbývá 1 998 890 znaků".<br /> <br /> Autorská práva Will Helton a Japonský lokalizační tým OmegaT 2012-2015<br />
+
+</div>

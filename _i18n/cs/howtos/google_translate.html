@@ -1,0 +1,61 @@
+<div class="container">
+  <p>Vedle webové stránky, do které uživatelé mohou prostě vložit text k překladu, poskytuje Google Překladač prostředí (API), které mohou využívat CAT nástroje k přístupu k této službě. Od prosince 2011 Google uživatelům používání této služby zpoplatnil. Tento návod popisuje jak tuto funkci v OmegaT nastavit.</p>
+  <p>1. Pokud dosud u Google nemáte aktivní účet, tak si na adrese google.com účet založte.</p>
+  <p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Přejděte na tento link, kde si u Google zažádáte o</a> klíč Google Translate API v2. Při této proceduře musíte mít po ruce údaje o své kreditní kartě. Google vygeneruje váš API klíč, což je řetězec s průměrně 39 znaky.</p>
+  <p>3. Zadejte tento klíč do přihlašovacího okénka v OmegaT, a to jedním z následujících způsobů, v závislosti na tom, zda používáte Windows, Mac nebo jestli spouštíte OmegaT z příkazového řádku nebo prostřednictvím skriptu:</p>
+  <p>
+    <b>Uživatelé Windows</b>
+  </p>
+  <p>3.1. Najděte si konfigurační soubor OmegaT.l4J.ini (výchozí umístění je C:\Program Files (x86)\OmegaT).</p>
+  <p>3.2. Je možné, že pro úpravy tohoto souboru budete muset mít aktivní status administrátora, nebo tento soubor dočasně přesuňte na jiné umístění na svém harddisku.</p>
+  <p>3.3. Otevřete soubor OmegaT.l4J.ini v nějakém editoru prostého textu (např. Poznámkový blok)</p>
+  <p>3.4. Hledejte následující řádky;</p>
+  <pre>
+# Google Translate v2 API key
+#-Dgoogle.api.key=xxxxx
+</pre>
+  <p>A odstraňte "#" v hlavičce řádku -Dgoogle.api.key.</p>
+  <pre>
+# Google Translate v2 API key
+-Dgoogle.api.key=xxxxx
+</pre>
+  <p>(kde "xxxxx" je klíč API poskytnutý Google).</p>
+  <p>3.5. Uložte soubor OmegaT.l4J.ini (a pokud nutno, přesuňte jej zpět do adresáře OmegaT).</p>
+  <p>
+    <b>Uživatelé Mac:</b>
+  </p>
+  <p>3.6. Pravý klik na OmegaT.app a vyberte „Show Package Contents“ [„Zobrazit obsah balíčku“].</p>
+  <p>3.7. Hledejte soubor OmegaT.app/Contents/MacOS/OmegaT.sh a vyberte upřednostňovaný editor pro otevření souboru.</p>
+  <p>3.8. Hledejte následující řádky;
+<pre>
+# Google Translate v2 API key
+#GOOGLE_API_KEY="-Dgoogle.api.key=0123456789A0123456789B0123456789C0123456789D"
+</pre>
+A odstraňte znak "#" v hlavičce řádku. Tento řádek definuje GOOGLE_API_KEY.</p>
+  <pre>
+# Google Translate v2 API key
+GOOGLE_API_KEY="-Dgoogle.api.key=XXXXXXXX"
+</pre>
+  <p>kde „XXXXXXXX“ zastupuje API klíč od Google.</p>
+  <p>3.9 Uložit OmegaT.sh.</p>
+  <p>
+    <b>Uživatelé Linuxu:</b>
+  </p>
+  <p>3.10 Ujistěte se, že máte instalován program Kaptain launcher (<a href="./linux.html">v případě potřeby se ještě podívejte na návod Linux</a>), pak vložte klíč Google Translate API key do odpovídajícího pole v záložce propojení [záložka ‚Connectivity‘].</p>
+  <p>
+    <b>Uživatelé, kteří spouští OmegaT z příkazové řádky nebo prostřednictvím skriptu:</b>
+  </p>
+  <p>3.11 Přidejte následující parametr do spouštěcího příkazu:</p>
+  <p>-Dgoogle.api.key=XXXXXXXX</p>
+  <p>kde „XXXXXXXX“ zastupuje API klíč od Google.</p>
+  <p>Základní spouštěcí příkaz s přidaným klíčem Google Translate API bude tedy vypadat takto:</p>
+  <p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
+  <p>4. Konfigurace v OmegaT</p>
+  <p>4.1. Spušťte OmegaT</p>
+  <p>4.2. Vyberte Možnosti &gt; Strojový překlad</p>
+  <p>4.3. Zaznačte Google Translate v2 (a nechejte ostatní volby nezaznačené)</p>
+  <p>5. Poznámky:</p>
+  <p>5.1 Strojový překlad společnosti Google představuje placenou službu (20 USD za milion znaků). Přes svůj Google účet můžete kontrolovat své denní využití. V horní nabídce:</p>
+  <p>Další &gt; Ještě další &gt; Code &gt; APIs Console &gt; Service/Translate API</p>
+  <p>Copyright Milan Hubacek a Marc Prior 2011</p>
+</div>

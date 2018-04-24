@@ -1,0 +1,223 @@
+<div class="container">
+  <h2>Další zdroje pro OmegaT</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-tokenizers/">Plugin Tokenizer</a>
+        </td>
+        <td>Poskytuje rozlišování skloňovaných/časovaných forem mezi záznamy přibližných překladů a záznamy v glosáři. Je tu také <a href="howtos/tokenizer.html">návod, který popisuje doplněk/plugin tokenizerů</a>.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-LanguageTool/">Plugin LanguageTool</a>
+        </td>
+        <td>Kontroluje jazykové chyby (styl, gramatiku, atd.).</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-Scripting/">Plugin skriptování</a>
+        </td>
+        <td>Umožňuje, aby externí skripty přistupovaly k funkcím OmegaT. (Nezaměňujte s funkcí „Export textu“, která také umožňuje použití skriptů v rámci OmegaT, ale na daleko základnější úrovni.)</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Plugin filtrů Okapi</a>
+        </td>
+        <td>Poskytuje filtry pro zpracování dalších souborových formátů, včetně Trados TTX.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Plugin Apertium</a>
+        </td>
+        <td>Integruje funkci strojového překladu Apertium do OmegaT</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/yoursdearboy/omegat-browser">Plugin pro prohlížeč</a>
+        </td>
+        <td>Rychlý přístup na webové stránky. Podpora pro webové stránky může být skriptována v Groovy.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Důležitá informace: aby bylo možno doplňky/pluginy používat, musíte mít instalovánu aktuálnější verzi OmegaT.    </p>
+  <h3>Nástroje</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/aligner.zip' | prepend: site.baseurl_root }}">„Aligner“ zarovnávací nástroj</a>
+        </td>
+        <td>Programovací jazyk Python. Přispěl Dmitri Gabinski.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://bligner.aligner.free.fr">„Bligner“ zarovnávací nástroj</a>
+        </td>
+        <td>Programovací jazyk Python/Perl. Přispěl Didier Briel.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/TMXMerger.zip' | prepend: site.baseurl_root }}">TMXMerger</a>
+        </td>
+        <td>Skript Java pro příkazový řádek na sloučení dvou nebo více souborů TMX. Přispěl Henry Pijffers.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/TMXCleaner-1.0.RC1.zip' | prepend: site.baseurl_root }}">TMXCleaner</a>
+        </td>
+        <td>Skript Java pro příkazový řádek na odstranění „nadbytečných“ překladových jednotek ze souboru TMX: smaže všechny překladové jednotky (translation units; TU), které nemají cílový segment, nebo takové, ve kterých je cílový segment identický se zdrojovým segmentem. Přispěl Henry Pijffers.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic.zip' | prepend: site.baseurl_root }}">Toxic</a>
+        </td>
+        <td>Nástroj pro převod souborů Trados TagEditor (TTX) do vybraného souboru, který tím umožní otevření a překlad v OmegaT. Tento soubor skriptů se určitě hodí autorům skriptů, kteří ovládají tcl/tk. Ostatním uživatelům doporučujeme používat místo toho <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Plugin filtrů Okapi</a>. Toxic dodal Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_windows.zip' | prepend: site.baseurl_root }}">Toxic pro Windows</a>
+        </td>
+        <td>Verze Toxic spustitelná pod Windows</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_linux.zip' | prepend: site.baseurl_root }}">Toxic pro Linux</a>
+        </td>
+        <td>Verze Toxic spustitelná pod Linuxem</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_scripts.zip' | prepend: site.baseurl_root }}">Skripty Toxic</a>
+        </td>
+        <td>Skriptová verze Toxic. Není závislá na platformě; vyžaduje tcl/tk.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/stripper.zip' | prepend: site.baseurl_root }}">Stripper</a>
+        </td>
+        <td>Skript pro získávání textu pro překlad ze souborů bez formátování (plain-text) (např. počítačový zdrojový kód) a pro jeho překlad v OmegaT. Vyžaduje tcl/tk. Přispěl Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/tkount.zip' | prepend: site.baseurl_root }}">TKount</a>
+        </td>
+        <td>Nástroj počítání textu. Vyžaduje tcl/tk, Abiword a pdftotext. Testováno pod Linuxem. Přispěl Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/ondiloto.zip' | prepend: site.baseurl_root }}">Ondiloto</a>
+        </td>
+        <td>ONline DIctionary LOokup TOol (Nástroj pro procházení slovníků online) Vyžaduje Linux, w3m a tcl/tk (oba jsou obecně podporovány pod Linuxem) Přispěl Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="howtos/priorview.html">Priorview</a>
+        </td>
+        <td>Nástroj Tcl/tk, který zprostředkovává náhled přeložených souborů, a to tak, že text bude zobrazen včetně použitého formátování. Přispěl Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/WF.zip' | prepend: site.baseurl_root }}">Převod souborů TMX Wordfast</a>
+        </td>
+        <td>Konvertuje překladové paměti ve formátu TMX vytvořené Wordfastem do formátu, který může být použitý v OmegaT. Přispěl Dmitri Gabinski. </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Různé zdroje</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/training/translation_memory_training_course.zip' | prepend: site.baseurl_root }}">Tréninkový kurz</a>
+        </td>
+        <td>Tréninkový kurz OmegaT. Sestává z modelového studentského manuálu s instrukcemi na použití pro školitele, a z ukázkových zdrojů.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegat-icons.zip' | prepend: site.baseurl_root }}">Ikony</a>
+        </td>
+        <td>Výběr alternativních ikon pro užití s OmegaT.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/sample_texts_1.0.zip' | prepend: site.baseurl_root }}">Ukázkové texty</a>
+        </td>
+        <td>Pro testování a ukázku OmegaT.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Zdroje pro lokalizaci</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">Archiv pro TMX určených pro lokalizaci</a>
+        </td>
+        <td>Soubory TMX pro lokalizaci dokumentace OmegaT a těchto stránek, určeno zejména pro lokalizátory.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omt_website.zip' | prepend: site.baseurl_root }}">Tyto webové stránky</a>
+        </td>
+        <td>Soubory těchto stránek, ve vhodném balíčku pro ty, kteří je chtějí lokalizovat.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Software třetích stran</h2>
+  <h3>Software třetích stran vhodný pro spolupráci s aplikací OmegaT</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="howtos/spelling.html#repositories">Slovníky kontroly pravopisu</a>
+        </td>
+        <td>Online úložiště slovníků kontroly pravopisu, které lze využít v programu OmegaT</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://openoffice.org/">OpenOffice.org</a>
+          <br/>
+          <a href="http://www.libreoffice.org/">Libre Office</a>
+        </td>
+        <td>Svobodné (kompatibilní) alternativy k Microsoft Office.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://okapiframework.org/">Okapi Framework</a>
+        </td>
+        <td>Rozsáhlá sada nástrojů pro přípravu souborů k překladu pomocí CAT nástrojů. Umožňuje tak překládat řadu formátů, které by aplikací OmegaT nešly nativně zpracovat. Podrobný návod je k dispozici na stránkách programu. </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/bitext2tmx">bitext2tmx</a>
+        </td>
+        <td>Zarovnávací (alignovací) nástroj třetí strany pro vytváření souborů překladových pamětí ze starších textů a jejich překladů</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/aligner">LF Aligner</a>
+        </td>
+        <td>Inteligentní nástroj příkazového řádku pro zarovnávání (alignování) určený k vytváření překladových pamětí ze zdrojových textů a jejich překladů.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.leuce.com/autoit/">Skripty a postupy Samuela Murraye.</a>
+        </td>
+        <td>Popisy a odkazy na skripty/postupy Samuela Murraye. Většina těchto skriptů vyžaduje MS Windows, i když některé postupy mohou být prováděny i na jiných platformách.<br/> Skripty / postupy pomohou při provádění následujících kroků:
+
+<ul>
+<li>Přeskočit segmenty obsahující určité znaky a řetězce znaků</li>
+<li>Extrahovat veškerý zdrojový text ze souborů projektu do jednoho velkého textového souboru.</li>
+<li>Vytvořit soubor TMX obsahující všechny řetězce se stejný zdrojem a cílem</li>
+<li>Přidat pojmy do glosáře během překladu pomocí OmegaT</li>
+<li>Přidat čísla do všech segmentů, a tím ze všech udělat „jedinečné“ segmenty</li>
+<li>Odstranit veškerý text kromě tagů, nebo všechny tagy kromě textu</li>
+<li>Kontrola pravopisu (různé postupy)</li>
+</ul>
+
+</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

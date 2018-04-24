@@ -1,0 +1,258 @@
+<!-- index -->
+  
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <h1>OmegaT, <small>svobodný nástroj využívající technologie překladových pamětí</small></h1>
+      <div class="title-buttons">
+        <a class="btn btn-primary" href="download" role="button">Stáhněte</a> <a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Informace na úvod</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal-get-started">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close close-yt" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title">Informace na úvod</h4>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="ytvideo embed-responsive-item" src="//www.youtube.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""></iframe>
+          </div>
+          <p class="text-center">Video <a href="https://www.youtube.com/channel/UC2EFKLWWI4gh9BGpMf0-_5g">CATguruEN</a> (Dominique Pivard)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-yt" data-dismiss="modal">Zavřít</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section">
+    <p class="lead"><strong>OmegaT</strong> je svobodná aplikace překladové paměti napsaná v jazyce Java. Je to nástroj určený pro profesionální překladatele. Nepřekládá za vás! (Software, který toto dělá, se nazývá „strojový překlad“, a budete ho muset hledat jinde.)</p>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Profesionální vlastnosti</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Hledání přibližných překladů</li>
+          <li>Podpora shodných překladů</li>
+          <li>Průběžné zpracování projektů obsahujících vícero souborů</li>
+          <li>Používání několika překladových pamětí současně</li>
+          <li>Uživatelské glosáře s rozeznáváním základních tvarů</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Pracuje s více než 30 souborovými formáty</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Microsoft Word, Excel, Power
+          
+          </li><li>XHTML a HTML</li>
+          <li>Open Document Format (LibreOffice, OpenOffice.org)</li>
+          <li>MediaWiki (Wikipedia)</li>
+          <li>Prostý text</li>
+          <li>...a přibližně dalších 30 formátů souborů</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Výkonné nástroje</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Podpora Unicode (UTF-8): může se používat s abecedami nezaloženými na latince</li>
+          <li>Podpora jazyků psaných zprava doleva</li>
+          <li>Vestavěná kontrola pravopisu</li>
+          <li>Kompatibilní s jinými aplikacemi pracujícími s překladovou pamětí  (TMX, TTX, TXML, XLIFF, SDLXLIFF)</li>
+          <li>Rozhraní pro Google překladač</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row im-centered">
+      <img alt="Snímek obrazovky OmegaT" src="{{site.baseurl_root}}/img/screenshots/main_window_{{ site.lang }}.png" class="img-responsive"/>
+    </div>
+  </div>
+  <div class="container-fluid section" id="page-download">
+    <div class="row">&#xA0;</div>
+    <div class="whitebox">
+      <h2>Stažení</h2>
+      <div class="header-line"><!----></div>
+      <p class="text-md-center"><strong>Aplikace OmegaT</strong> je k dispozici v několika různých verzích a to proto, aby si mohl každý vybrat vhodnou verzi.</p>
+
+
+      <div class="row">
+        <div class="col-md-2"><!-- padding -->
+          
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>Pro zjištění, která verze vám nejlépe vyhovuje, následujte níže uvedený odkaz Průvodce stažením.</p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>Jinak tedy, pokud již víte, kterou verzi si chcete stáhnout, klikněte na tlačítko pro získání přehledu různých dostupných verzí OmegaT.</p>
+        </div>
+        <div class="col-md-2"><!-- padding -->
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"><!-- padding -->
+          
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>
+            <a class="btn btn-primary" href="download#selector" role="button">Průvodce stažením</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>
+            <a class="btn btn-default" href="download#downloads" role="button">Přehled stahování</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">&#xA0;</div>
+
+    <div class="container-fluid versions">
+      <ul class="list-group">
+        <li class="list-group-item"><span class="badge"><a href="download#standard">{{site.data.versions.standard.name}}</a></span> Standardní verze</li>
+        <li class="list-group-item"><span class="badge"><a href="download#latest">{{site.data.versions.latest.name}}</a></span> Nejnovější verze</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid section" id="page-quotes-carousel">
+     <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel"><!-- Bottom Carousel Indicators -->
+        
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol><!-- Carousel Slides / Quotes -->
+        
+        
+        <div class="carousel-inner"><!-- Quote 1 -->
+        
+          
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote1.jpg" style="width: 100px;height:100px;" alt="Recenze uživatelů">
+                </div>
+                <div class="col-sm-9">
+                        <p>Dokonalý společník pro ty znás, kteří nevyžadují komplexnost, nýbrž výkonnost; glosáře, automatické doplňování a automatické překlady značně zefektivňují mou práci na překladech textu.</p>
+                  <small>Diego Merino - Překladatel EN &gt; ES  </small>
+                </div>
+              </div>
+            </blockquote>
+          </div><!-- Quote 2 -->
+          
+          <div class="item">
+            <blockquote>
+              <div class="row"><!--div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote2.jpg" style="width: 100px;height:100px;" alt="User portrait">
+                </div-->
+                
+                <div class="col-sm-12">
+                  <p>Překladatelé ODFAuthors a překladatelé do italštiny pro LibreOffice jsou hrdí na to, že používají tak dobrý nástroj pro svou práci pro komunitu LibreOffice.</p>
+                  <small>Valter Mura - Překladatel EN &gt; IT</small>
+                </div>
+              </div>
+            </blockquote>
+          </div><!-- Quote 3 -->
+          
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote3.jpg" style="width: 100px;height:100px;" alt="Recenze uživatelů">
+                </div>
+                <div class="col-sm-9">
+                  <p>Již přes deset let používám OmegaT jakožto profesionální překladatel, od jejích počátků využívám výhod jejího snadného použití a velmi nápomocného fóra. Široký rozsah funkcí, přehledné prostředí a - nejvíce důležité - konstatní, řádný open-source vývoj!</p>
+                  <small>Robert Corner, Institut Laue-Langevin, Francie</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div><!-- Carousel Buttons Next/Prev --><!--
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        -->
+        
+        
+        
+      </div>                          
+    </div>
+  </div>
+
+  <div class="container-fluid section" id="page-omegat-and-you">
+    <h2>Projekt OmegaT a Vy</h2>
+    <div class="header-line"><!----></div>
+    <p>OmegaT není pouze nějaký produkt, je to zajímavý projekt, a vy můžete být jeho součástí.</p>
+    <p>OmegaT je svobodný software. To znamená, že uživatelé jako Vy ho mohou svobodně stahovat a používat se zcela minimálními omezeními. Můžete jej též svobodně kopírovat a poskytovat dalším uživatelům.</p>
+    <p> OmegaT je tzv. open-source software. To znamená, že pokud se na to cítíte, smíte program OmegaT upravovat tak, aby vyhovoval Vašim vlastním požadavkům. Pro stoupence open-source softwaru je tato svoboda dokonce důležitější, než osvobození od povinnosti muset platit nějakou částku.</p>
+    <p>Projektu OmegaT by prospěla větší podpora od dobrovolníků téměř ve všech oblastech. I když spousta uživatelů je si toho vědoma, jejich reakce je často „Ale já neumím programovat!“. Programování je jistě nejdůležitější funkce, a bez programování nemůže existovat program. Ale programování není jediná práce, kterou je třeba udělat. Následuje seznam oblastí, ve kterých by byli další dobrovolníci víc než vítaní!</p>
+    <div class="row project">
+      <div class="col-sm-4"><!---->
+        <span class="glyphicon glyphicon-pencil">
+          
+        </span>
+        <h3>Tvorba dokumentace</h3>
+        <p><a href="documentation">Dokumentace</a> je velmi důležitá. Mnozí z Vás, kteří toto čtete asi budou překladatelé, kteří už přeložili množství uživatelské dokumentace. Uvažovali jste o tom, že byste sami napsali nějakou uživatelskou dokumentaci? Nenechte se dvakrát nutit, jistě byste to zvládli!</p>
+      </div>
+      <div class="col-sm-4"><!---->
+        <span class="glyphicon glyphicon-globe">
+          
+        </span>
+        <h3>Lokalizace</h3>
+        <p>Díky práci překladatelů v minulosti, bylo uživatelské rozhraní OmegaT anebo texty Nápovědy přeložené do několika jazyků.  To znamená, že jich zůstalo už jen několik tisíc. Lokalizace OmegaT do ostatních jazyků je též stále probíhajícím úkolem, i proto, že se stále přidávají nové vlastnosti a funkce. Více podrobností co obnáší lokalizace/překlad OmegaT najdete v návodu <a href="howtos/localizing_omegat">Návod: Lokalizace OmegaT</a>.</p>
+      </div>
+      <div class="col-sm-4"><!---->
+        <span class="glyphicon glyphicon-wrench">
+          
+        </span>
+        <h3>Testování</h3>
+        <p>Jednou z nejužitečnějších věcí, které mohou uživatelé OmegaT udělat je ... používat OmegaT. A když naleznou věci, které  nefungují, nebo nedostatky v dokumentaci, říci nám o nich.</p>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-sm-6"><!---->
+        <span class="glyphicon glyphicon-bullhorn">
+          
+        </span>
+        <h3>Publicita</h3>
+        <p>Napsali jste už někdy článek pro časopis Vaší profesní organizace? Pokud ne, tak proč nenapsat článek o používání OmegaT?</p>
+      </div>
+      <div class="col-sm-6"><!---->
+        <span class="glyphicon glyphicon-piggy-bank">
+          
+        </span>
+        <h3>Dary</h3>
+        <p>Pokud je pro Vás program OmegaT užitečný a rádi byste vyjádřili svou vděčnost poskytnutím <a href="https://sourceforge.net/p/omegat/donate/?source=website">daru</a>, můžete tak učinit na náš účet PayPal.</p>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-sm-6"><!---->
+        <span class="glyphicon glyphicon-cog">
+          
+        </span>
+        <h3>Programování (Java)</h3>
+        <p>Aplikace OmegaT je napsána v Javě. Pokud jste programátor a vyznáte se v Javě, prosím prohlédněte si dokumentaci ve <a href="download#downloadTrunk">zdrojovém kódu</a> pod /docs-devel pro informace jak začít.</p>
+      </div>
+      <div class="col-sm-6"><!---->
+        <span class="glyphicon glyphicon-cog">
+          
+        </span>
+        <h3>Programování (ne v Javě)</h3>
+        <p>Pokud umíte programovat v jiném jazyce, můžete napsat kód na podporu základní aplikace. Takový pomocný kód už byl napsaný například v jazycích Javascript, Groovy a Tcl/Tk.</p>
+      </div>
+      <div class="row project">
+        <div class="col-sm-12">
+          <p>Slyším Vás říkat: Ale já vůbec neumím programovat. A uvažovali jste někdy o tom, že se to naučíte? Pokud máte dostatečné všeobecné vědomosti o počítačích a vyberete si jednoduchý skriptovací jazyk jako Javascript nebo Tcl/Tk, mohli byste se naučit dost na to, abyste byli schopni psát jednoduché, ale užitečné skripty už za pár týdnů. Současným trendem je stálý profesní vývoj.</p>
+        </div>
+      </div>
+    </div>
+  </div>

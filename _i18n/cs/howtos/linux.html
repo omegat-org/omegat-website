@@ -1,0 +1,76 @@
+<div class="container">
+  <p>Tento návod poskytuje informace o použití OmegaT pod Linuxem. Tento text je zaměřen na uživatele, kteří jsou nováčci v Linuxu.</p>
+  <h3>Java</h3>
+  <p>OmegaT neběží uspokojivě pod všemi verzemi Javy. Pokud již máte na svém systému Javu instalovánu (což se dá předpokládat) a chcete použít stávající instalaci Javy na systémové úrovni ve spojení s OmegaT, nejprve zkontrolujte, jestli je tato kombinace vhodná. To učiníte tak, že otevřete terminál (také známý jako konzola nebo příkazový řádek; běžné programy jsou v prostředí KDE ‚konsole‘ a v prostředí GNOME ‚gnome-terminal‘) a napište:</p>
+  <p>java -version</p>
+  <p>Systém zobrazí podrobnosti o verzi Javy, která je na systémové úrovni již instalována.</p>
+  <p>Verze Javy od Oracle (dříve od Sun): zkontrolujte systémové požadavky v dokumentaci OmegaT (readme.txt / ctime.txt), zde naleznete přesně která verze Oracle Javy je zapotřebí (tj. zda je vaše verze Javy dostatečně aktuální).</p>
+  <p>Verze Javy třetích stran: do poměrně nedávné doby OmegaT šlo spustit jen pod vlastní verzí Javy od Oracle/Sun. OmegaT teď poběží i na implementaci Javy OpenJDK, která je dodávána v některých linuxových distribucích, ale některé funkce (jako celá sada voleb příkazového řádku) nemusí být dostupná; je možné, že bude obsaženo odlišné písmo; některé drobné závady byly již nahlášeny, jako např. zobrazení oken nebo funkce segmentace.</p>
+  <p>Jestli si nejste jistí, zda je vaše verze Javy vhodná, pak můžete:</p>
+  <ul>
+    <li>Jednoduše instalujte verzi OmegaT bez Javy a zkuste, jestli bude fungovat. Když ne, stále máte možnost instalovat lokální verzi Javy nebo jinou verzi Javy na systémové úrovni.</li>
+    <li>Instalujte druhou, ne-výchozí verzi Javy na systémové úrovni, spusťte OmegaT přímo za použití této verze.</li>
+    <li>Instalujte verzi OmegaT, která obsahuje prostředí Java.</li>
+  </ul>
+  <p>Pokud zjistíte, že verze Javy, která je instalována na systémové úrovni, není kompatibilní s OmegaT a chcete ji nahradit tuto verzi Javy verzí Javy od Oracle, nejprve zkontrolujte, zda je dostupný balíček Oracle pro vaši linuxovou distribuci (SUSE, Ubuntu, atd.). Pokud ano, o to je instalace potom jednodušší.</p>
+  <p>Pokud získáte verzi Javy Oracle přímo od Oracle, instalace bude doslova přímočará, ale budete ji muset ručně konfigurovat, aby byla výchozí verzí na systémové úrovni. Tento postup se nedoporučuje, zejména tehdy, pokud si v Linuxu nejste jistí.</p>
+  <p>Třetí možnost, tj. instalace verze OmegaT, která obsahuje Javu na lokální úrovni, je to vždy „jistá“ volba, a je doporučována.</p>
+  <h3>Výběr a stažení vhodné verze OmegaT</h3>
+  <p>Následující verze OmegaT jsou dostupné pro Linux:</p>
+  <p>„Standardní“, „Nejnovější“, „/trunk“ a „Webstart“. Verze „Nejnovější“ je doporučena. (Více informací o detailech v čem se verze liší najdete na stránce „Stažení“ na stránkách OmegaT.)</p>
+  <p>Bez/s obsaženou JRE, jt. multiplatformní bez JRE, např. „OmegaT_2.1.7_02_Beta_Without_JRE.zip“ a verze speciálně pro Linux včetně JRE, např. „OmegaT_2.1.7_02_Beta_Linux.tar.bz2“. Vyberte si verzi bez nebo s JRE, v závislosti na vaší situaci ohledně instalované verze Javy (viz výše).</p>
+  <p>Jakožto open-source aplikace, byla OmegaT začleněna do repozitářů různých distribucí Linuxu, takže je možno ji instalovat i touto cestou. Nicméně si uvědomte, že:</p>
+  <ul>
+    <li>Většina linuxových distribucí ve výchozím nastavení používá verzi Javy OpenJDK. V čase psaní tohoto textu OmegaT lépe poběží s verzí Javy od Oracle (viz výše).</li>
+    <li>Dodávaná verze OmegaT je obvykle „Standardní“ verze. Více funkcí se obvykle nachází v „Nejnovější“ verzi.</li>
+  </ul>
+  <p>Pod Linuxem je snadné instalovat více verzí OmegaT aniž by došlo ke konfliktům Tyto instalace ale budou vždy přistupovat k jednomu souboru s uživatelským nastavením (jedině, že by se spouštěly z různých uživatelských účtů).</p>
+  <h3>Instalace programu OmegaT</h3>
+  <p>Linuxová verze OmegaT je dodávána s vlastním instalačním skriptem: linux-install.sh. Tento skript:</p>
+  <ul>
+    <li>umístí programové soubory aplikace OmegaT do adresáře /opt/omegat/OmegaT-&lt;verze&gt;;</li>
+    <li>obsahuje skripty bash a kaptain launch script;</li>
+    <li>vytvoří spojení mezi /usr/local/bin a spouštěcími skripty.</li>
+  </ul>
+  <p>Skript bash je velmi jednoduchý soubor, který můžete upravovat ručně přes volby příkazového řádku týkající se spouštění a konfigurace OmegaT.</p>
+  <p>Skript Kaptain script (nebo „gramatika“, neboť skripty kaptain script se skládá je jednotlivých výrazů) umožňuje vybrat spouštěcí a konfigurační volby z přívětivějšího uživatelského rozhraní. Můžete například použít tento skript k vybrání jazyka uživatelského prostředí, přiřadit více paměti OmegaT nebo vložit heslo Google Překladače. Můžete si upravit spouštěcí skript kaptain script tak, že je uložíte jako výchozí hodnoty: jednoduše v textovém editoru pozměníte soubor omegat.kaptn. Soubor je pro přehlednost komentován. Aby skript kaptain script fungoval, je nutno nejprve instalovat balíček kaptain. Pokud se nenachází v repozitáři distribuce, můžete si jej <a href="http://kaptain.sourceforge.net">stáhnout z kaptain.sourceforge.net</a>.</p>
+  <p>
+  <img src="{{ '/img/kaptain.png' | prepend: site.baseurl_root }}" alt="preview_ss.png"/>
+  </p>
+  <p>
+    <i>Snímek obrazovky spouštěče kaptain pro OmegaT</i>
+  </p>
+  <p>Instalace skriptu poskytne větší pohodlí, ale jestli chcete, pořád je možno instalovat OmegaT na Linuxu ručně. Prostě rozbalte archív do adresáře dle svého výběru. Spouštěcí skripty v tomto případě nebudou zahrnuty do spouštěcí nabídky.</p>
+  <h3>Spouštění OmegaT z příkazového řádku</h3>
+  <p>OmegaT nemusí být spouštěna z příkazového řádku, ale pokud se k tomu odhodláte, získáte spoustu informací, které lze využít při řešení potíží v rámci odstraňování chyb programu (‚debugging‘). Abyste mohli spustit program z příkazového řádku, první otevřete okno terminálu (nepotřebujete práva roota). Přejděte do adresáře obsahujícího soubor OmegaT.jar, např.:</p>
+  <p>cd /opt/omegat/OmegaT_2.3.4</p>
+  <p>a potvrďte klávesou ENTER.</p>
+  <p>Pak vložte samotný spouštěcí příkaz a potvrďte ENTER. Základní spouštěcí příkaz zní:</p>
+  <p>java -jar OmegaT.jar</p>
+  <p>Příkazový řádek rozlišuje velká a malá písmena.</p>
+  <p>Pokud se spoléháte nebo chcete použít verzi Javy, která není instalována na systémové úrovni, pak příkaz nebude vykonán: první musíte systému sdělit, kde má Javu najít. Pakliže máte instalovánu verzi OmegaT včetně dodaného JRE, spouštěcí skript již cestu k Javě obsahuje. Pokud máte instalovánu dodatečnou verzi Javy, ale nejedná se o výchozí verzi na systémové úrovni, musíte pak zahrnout celou cestu binárního souboru Javy do spouštěcího příkazu. Bude to vypadat např. takto /usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java; během instalace si poznačte, kde je Java instalována, takže ji pak znovu lehko najdete. Příkaz by pak (v tomto případě) vypadal takto:</p>
+  <p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+  <p>Ve svém spouštěcím skriptu nezaměňte cestu k OmegaT.jar a cestu k příkazu java. První (s příkazem cd) je zapotřebí, pokud se váš spouštěcí skript nenachází ve stejném adresáři jako OmegaT.jar. Druhá část je zapotřebí, když verze Javy, kterou chcete použít, není výchozí instalací na úrovni systému.</p>
+  <h3>Spouštění OmegaT prostřednictvím spouštěcího skriptu</h3>
+  <p>Jak již bylo zmíněno, s OmegaT je poskytován spouštěcí skript bash. Jakmile je tento zkopírován nebo propojen do spouštěcí nabídky (pokud použijete dodaný instalační skript, tak se toto uskuteční automaticky), můžete spouštět OmegaT stiskem kláves <i>Alt+F2</i>, napsáním <i>omegat</i> a pak potvrzením ENTER.</p>
+  <p>Ve výchozím nastavení má tento spouštěcí bash skript prováděcí práva, ale váš systém může jeho oprávnění změnit (např. během rozbalování archivu) a možná tak tedy budete muset tomuto souboru udělit odpovídající práva pro spouštění.</p>
+  <h3>Uživatelsky příjemné spouštění OmegaT</h3>
+  <p>Spouštění OmegaT může být ještě příjemnější, a to tak, že aplikaci přidáte do nabídky spuštění, nebo si vložíte spouštěcí ikonu na svou pracovní plochu nebo panel pracovní plochy. Možností je mnoho, taktéž je mnoho procedur jak implementovat program v systému, tento počet vychází z množství distribucí.</p>
+  <h3>Vzhled písma v OmegaT pod Linuxem</h3>
+  <p>Vzhled písma v OmegaT pod Linuxem se může velmi lišit, vždy v závislosti na:</p>
+  <ul>
+    <li>Verzi použité Javy (stejné písmo může být různě zobrazeno ve verzích javy od Sun a OpenJDK)</li>
+    <li>Dostupná / vybraná písma</li>
+    <li>Velikost písma</li>
+    <li>Záleží na tom, jestli je povoleno vyhlazování písma (toto je volba spouštění přes příkazový řádek, ale je možno ji také použít ve spouštěcím kaptain skriptu)</li>
+  </ul>
+  <h3>Odinstalace OmegaT</h3>
+  <p>Odstranit veškeré zbytky OmegaT ze systému:</p>
+  <p>Smažte programový adresář OmegaT. Tento adresář můžete v budoucnu kdykoliv obnovit.</p>
+  <p>Smažte adresář /home/&lt;uživatel&gt;/.omegat ze všech uživatelských účtů, ve kterých jste OmegaT spouštěli. Toto způsobí smazání veškerých uživatelských nastavení, která byla kdy provedena (jako např. změny segmentačních pravidel) a - pokud je tento adresář smazán „řádně“, tj. nebyl jednoduše vložen do koše, nemůže být obnoven.</p>
+  <p>Smaže veškeré spouštěcí skripty a odstraňte vlastní přizpůsobení pracovního prostředí, která se týkají OmegaT.</p>
+  <p>Odinstalování OmegaT neodstraní projekty OmegaT z vašeho systému, jedině že byste je umístili uvnitř programového adresáře OmegaT nebo do adresáře / adresářů s konfiguračními soubory, což stejně není dobré místo pro ukládání uživatelských dat.</p>
+  <br/>
+  <br/>
+  <p>Copyright Marc Prior 2010-2012</p>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+  <p>Tento návod popisuje jak kompilovat OmegaT ze zdrojového kódu.</p>
+  <p>OmegaT je dodávána jako připravený balíček pro celou řadu platforem, včetně multiplatformní verze. Uživatelé proto sami nepotřebují kompilovat OmegaT. Kompilování OmegaT má své opodstatnění pro vývojáře, kteří chtějí dělat vlastní úpravy v kódu. </p>
+  <p>
+    <strong>1. Stáhněte a instalujte Java Development Kit (JDK)</strong>
+  </p>
+  <p>Je vyžadován <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a>. Pro OmegaT 4.0 a novější už není zapotřebí žádný dodatečný software.</p>
+  <p>Dřívější verze OmegaT vyžaduje <a href="http://ant.apache.org">Apache Ant</a>.</p>
+  <p>Možná budete muset nastavit proměnnou prostředí <code>JAVA_HOME</code> aby směřovala na umístění JDK.</p>
+  <p>
+    <strong>2. Kompilace kódu</strong>
+  </p>
+  <p>Otevřete si okno s příkazovým řádkem (konsole, okno DOS). Přejděte do kořene zdrojového kódu OmegaT (adresář obsahující soubor <code>build.gradle</code>), např.</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source</pre>
+  <p>
+    <em>OmegaT 4.0 nebo novější</em>
+  </p>
+  <p>Můžete spustit OmegaT přímo z příkazového řádku příkazem</p>
+  <pre>gradlew run</pre>
+  <p>Pokud to je vše, co vás zajímá, můžete přeskočit na krok 3a.</p>
+  <p>Pro sestavení programu OmegaT a všech asociovaných souborů, udělejte místot toho</p>
+  <pre>gradlew installDist</pre>
+  <p>Výsledky se budou nacházet v <code>build\install\OmegaT</code>.</p>
+  <p>
+    <em>Starší verze OmegaT</em>
+  </p>
+  <p>Uvnitř kořenového adresáře proveďte Apache Ant vložením ant executable. Je možné, že bude nutno vložit celou cestu, např.:</p>
+  <pre>C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</pre>
+  <p>Pokud se kompilace zdaří, uvidíte hlášení <code>„BUILD SUCCESSFUL“</code>. Pokud ne, ukáží se hlášení pro odstranění chyb a (snad) poskytnou tipy pro odstranění problému.</p>
+  <p>Pokud se kompilace zdařila, tak je zkompilovaná aplikace OmegaT umístěna v:</p>
+  <pre>OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>Na stejném místě přes příkazovou řádku změňte tento adresář, např. přes příkaz</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>a spusťte OmegaT: </p>
+  <pre>java -jar OmegaT.jar</pre>
+  <p>
+    <strong>3a. První příklad změn: změnit barvu zvýrazňování segmentů</strong>
+  </p>
+  <p>V adresáři <code>src/org/omegat/gui/editor</code> otevřete soubor <code>SegmentBuilder.java</code> v textovém editoru.</p>
+  <p>Najděte řádky:</p>
+  <pre>return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</pre>
+  <p>a</p>
+  <pre>b = Styles.COLOR_GREEN;</pre>
+  <p>a nahraďte  <code>COLOR_GREEN</code> tímto <code>COLOR_BLUE</code>.</p>
+  <p>V adresáři <code>src/org/omegat/util/gui</code> otevřete soubor <code>Styles.java</code> v textovém editoru.</p>
+  <p>Najděte řádek</p>
+  <pre>public static final Color COLOR_GREEN = new Color(192, 255, 192);</pre>
+  <p>a nahraďte  <code>COLOR_GREEN</code> tímto <code>COLOR_BLUE</code> a <code>192, 255, 192</code> tímto <code>225, 225, 255</code>.</p>
+  <p>
+    <strong>3b. Druhý příklad úprav: změnit počet přibližných překladů, jež se má zobrazovat, a to z pěti na deset</strong>
+  </p>
+  <p>V adresáři <code>/src/org/omegat/util</code> otevřete soubor <code>OConsts.java</code> v textovém editoru.</p>
+  <p>Najděte řádky:</p>
+  <pre>    /** Number of fuzzy matches to display */ [česky: Počet zobrazených přibližných shod]
+    public static final int MAX_NEAR_STRINGS = 5;</pre>
+  <p>a nahraďte <code>= 5</code> tímto <code>= 10</code>.</p>
+  <p>V obou příkladech provádějte kompilaci a testy dle postupu popsaného výše.</p>
+  <p>Copyright Marc Prior 2011-2012</p>
+</div>

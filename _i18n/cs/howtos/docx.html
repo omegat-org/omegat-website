@@ -1,0 +1,99 @@
+<div class="container">
+  <p>Tento návod poskytuje tipy k překladu Word 2007 a novější verze (Office Open XML, .docx) v OmegaT.</p>
+  <h3>Pozadí</h3>
+  <p>S příchodem Microsoft Office 2007, mají programy Microsoft Word, Excel a PowerPoint nový výchozí souborové formáty. Tyto soubory jsou formálně známy jako „Office Open XML“ a používají tyto koncovky (dle pořadí jmenovaných programů) .docx, .xlsx a .pptx. Tyto formáty jsou také použity v MS Office 2010. Pro přehlednost, když se bude na tyto formáty odkazovat níže, bude užito označení „souborové formáty MS Office 2007“.</p>
+  <p>OmegaT od verze 1.7.1 a novější, již umí pracovat s formáty Microsoft Office 2007 přímo, bez konverze. Po vydání OmegaT verze 2.1.8 je práce s těmito souborovými formáty v rámci OmegaT je pro uživatele ještě přehlednější.</p>
+  <h3>Výhody používání formátu .docx ve spojení s OmegaT</h3>
+  <p>Podle toho, jak zákazníci/autoři aktualizují Microsoft Office/Word na novější verze, tak překladatelé mohou očekávat stále častější dodávání zakázek v novém formátu. Oproti starším formátům .doc, .xls a .ppt, je možno tyto soubory zpracovat v OmegaT přímo, bez ztráty formátování jakožto důsledek konverze do a z jiných formátů.</p>
+  <p>Nový formát může také posloužit jako praktický způsob zpracování starších formátů .doc, .xls a .ppt, protože tyto lze převádět na své protějšky ve verzi MS Office 2007, překládat s OmegaT a v případě potřeby uložit opět v původním formátu. Tento postup představuje alternativu pro překladatele, kteří k tomuto účelu nechtějí používat OpenOffice.org.</p>
+  <h3>Převod na formát MS Office 2007</h3>
+  <p>Můžete převádět soubory MS Office 1997/2000/2003/XP na formát MS Office 2007 tak, že je otevřete v MS Office 2007 a uložíte je do nového formátu přes volbu „Uložit jako“. (Protože toto je nyní standardní formát, je v MS Office 207 popsán jako Word, Excel nebo Powerpoint.)</p>
+  <p>Pro uživatele, kteří nemají MS Office 2007 nebo 2010 a nechtějí si tento balík kupovat, poskytuje Microsoft <a href="http://www.microsoft.com/downloads/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;display">doplněk kompatibility</a> pro starší verze.</p>
+  <p>Uživatelé linuxu: jak MS Office 2007, tak doplněk kompatibility Microsoft poběží přes <a href="http://www.codeweavers.com">Crossover Linux.</a></p>
+  <h3>Na co je třeba dbát, když používáte formáty .docx, .xlsx a .pptx v OmegaT</h3>
+  <p>Ve verzích OmegaT starších než 2.1.8 se každá změna formátování v dokumentu MS Office 2007 projeví jako dlouhé řetězce vícenásobných tagů, které ve výsledku téměř znemožnili použití tohoto formátu. Od verze 2.1.8 jsou tyto vícenásobné tagy již ve výchozím stavu seskupeny (kondenzovány) do jednoho tagu. Uživatelé, kteří mají zájem překládat soubory MS Office 2007 by tudíž měli aktualizovat OmegaT na verzi 2.1.8 nebo novější.</p>
+  <p>(Ještě jednodušší práce s tagy v rámci dokumentů .docx je možná, ale už to bude stát ztrátu kontroly nad formátováním. Například, bez funkce „seskupení tagů“, kde u slova, které je ve zdrojovém textu tučně a kurzívou, si překladatel může vybrat že jej převede jen jako tučné nebo jen kurzívu. Když je aktivní funkce „seskupení tagů“ tak taková situace nemůže nastat. Většina uživatelů bude pravděpodobně téhož názoru, že zjednodušení práce na překladu má větší váhu než si ji ztěžovat složitým formátováním.)</p>
+  <p>Formát .docx je náchylný k produkování „nadbytečného“ formátovacího kódu, což má za následek množství nechtěných a nepotřebných tagů, které se pak zobrazjí v okně Editoru v OmegaT. Protože takové tagy jsou během překladu na obtíž, má jistě cenu zkusit odstranit tyto nadbytečné tagy před začátkem překladu pomocí OmegaT. Kromě OmegaT se s podobným problémem potýkají i jiné CAT nástroje, které pracují s formátem .docx a řešení situace jsou podobná nebo stejná.</p>
+  <h3>Jak odstranit nechtěné části kódu formátování ze souborů .docx</h3>
+  <ul>
+    <li>
+      <p>Word 2007 značkuje jakékoliv slovo, které není ve slovníku kontroly pravopisu, pomocí tagů, takže i pár slov, která se zdají být chybně napsány nakonec skončí v nepřeberném množství tagů. Jestli je každé jednotlivé slovo v OmegaT zobrazeno uvnitř tagů, je možné, že program Word se pokusil o kontrolu pravopisu bez přístupu k vhodnému slovníku pro kontrolu pravopisu a proto označil každé slovo za špatně napsané. Možné řešení je vypnout automatickou kontrolu pravopisu ve Wordu.</p>
+    </li>
+    <li>
+      <p>Automatické dělení slov na konci řádku také přidává nepotřebné tagy, takže tuto funkci vypněte. Může se stát, že to bude nutno nastavit u každého dokumentu, pak je postup v MS Word 2007 následující: Klikněte na kartu Rozložení stránky, ve skupině Vzhled stránky klikněte na Dělení slov; vyberte možnost Žádné.</p>
+    </li>
+    <li>
+      <p>Použijte funkci Najít a nahradit k nalezení dvojitých mezer (nahraďte je jednoduchými mezerami).</p>
+    </li>
+    <li>Pokud váš text obsahuje jak asijské, tak  „normální“ (např. znaky latinky) znaky, stiskněte Ctrl+A, tím vyberete celý text, a pak vyberte pro celý text jedno písmo. Buďte ale opatrní při výběru písma, které musí pak obsahovat obě potřebné sady pro asijské a „běžné“ znaky, např. MS Mincho, ale bez přípony názvu stylu „[text body]“.</li>
+    <li>
+      <p>Word 2007 vkládá tag na místě zalomení stránky, dokonce i když se jedná o automatické zalomení stránky. Tento tag zjevně nelze odstranit.</p>
+    </li>
+  </ul>
+  <p>Dokonce i po změnách nastavení Wordu, takže již nevkládá „nadbytečný“ kód, například automatické dělení slov, tak podobné části kódu se mohou v souboru stále vyskytovat a nelze je odstranit změnou nastavení. Odstranění těchto částí kódu je popsáno níže. Ještě dříve, než budete provádět níže uvedené instrukce k odstranění nadbytečného kódu, zkuste nejprve provést změny nastavení Wordu, nebo Word možná také vloží nadbytečný kód při novém otevření souboru.</p>
+  <h3>Nástroje třetích stran</h3>
+  <p>Jak již bylo zmíněno, tento problém s MS Word se nevyskytuje výhradně u OmegaT. Existují nástroje třetích stran aby si s tímto problémem poradily. Dva z nich jsou:</p>
+  <p><a href="http://asap-traduction.com/CodeZapper">CodeZapper</a> (nenákladný)</p>
+  <p><a href="http://www.translatortools.net/word-doccleaner.html">Document Cleaner</a> (zdrama)</p>
+  <h3>Srovnání formátování znaků</h3>
+  <p>Alternativou ke spuštění makra CodeZapper na vašem textu představuje „srovnání“ formátování. „Srovnání“ formátování znamená aplikování formátu prvního znaku ve výběru textu (např. jako celý odstavec) na všechny následující znaky. Toto ale není to samé jak „odstranění“ formátování, což by znamenalo změnu formátování na výchozí hodnotu dokumentu.</p>
+  <p>Můžete upravit formátování odstavce jen pomocí zkopírování celého odstavce v MS Word a vložením jej zpět přes sebe sama, takže celý odstavec převezme formátování prvního znaku.</p>
+  <h3>Manuální srovnání formátování znaků v odstavci</h3>
+  <p>Krok 1: Zobrazte si značky odstavce. Označte každý odstavec opakovaným kliknutím na něj, dokud není celý odstavec zvýrazněn. Pak přesuňte konec zvýraznění o jeden znak vlevo, a to tak, že nezahrnuje značku odstavce.</p>
+  <p>Krok 2: Zkopírujte zvýrazněný text (Ctr.+C)- Pak vyberte „Vložit jinak“ (Word 2003) nebo klikněte na šipku ve spodní části tlačítka „Vložit“ (Word 2007) pro zobrazení rozšířených možností funkce Vložit. Nakonec vložte obsah prostřednictvím položky „Neformátovaný text“.</p>
+  <p>Když odstavec obsahuje formátování v textu (tučné, kurzíva, odkazy, atd.), můžete buď:</p>
+  <p>- srovnat formátování těchto odstavců užitím makra jak je to popsáno výše, pak znovu vložit formátování; nebo</p>
+  <p>- označte jen text od začátku formátované části, zkopírujte tento text a vložte je znovu na stejnou pozici, doslova přes něj, pak opakujte tento krok na každé části textu obsahující formátování. </p>
+  <h3>Vytvoření makra pro srovnání formátování znaků daného odstavce</h3>
+  <p>Výše uvedené postupy můžete do jisté míry zautomatizovat vytvořením makra. Krátký úvod k vytváření makra (v MS Office 2007) najdete níže. (Detailnější popis najdete ve své příručce nebo klikněte <a href="http://office.microsoft.com/en-us/word-help/record-or-run-a-macro-HA010099769.aspx">zde</a>, <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">zde</a> nebo <a href="https://oit.nd.edu/assets/141085/word_2013_macros_qrg.pdf">zde</a>.) </p>
+  <p>Pokud jste dosud neučinili, pak si přidejte záložku vývojáře na pás karet: klikněte na tlačítko Office (nebo Soubor). Vyberte Možnosti. V zobrazeném okně klikněte na Oblíbené (Popular). Na pásu karet zaznačte Ukázat vývojářské funkce (Show Develper tab) a potvrďte OK. Zavřete Word.</p>
+  <p>Spusťte Word znovu, vytvořte nový wordovský dokument a přidejte odstavec zkušebního textu, minimálně tři řádky, např.:</p>
+  <p>Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec. Toto je odstavec.</p>
+  <p>Nahoře ve Wordu klikněte na tlačítku se symbolem odstavce a nechejte si zobrazit netisknutelné znaky.</p>
+  <p>Umístěte kurzor ve vašem odstavci textu (ne do první nebo poslední řádky).</p>
+  <p>Vytvořte makro:</p>
+  <p>Na kartě Vývojář, klikněte na Záznam makra.</p>
+  <p>V poli pro Název makra zapište název makra, např. „srovnatformat“. Aby bylo makro dostupné ve všech dokumentech, vyberte Normal.dotm v poli „Uložit makro v“. Než provedete změny v souboru Normal.dotm určitě si jej zálohujte v nezměněné podobě. </p>
+  <p>Klikněte na tlačítko Klávesnice. Klikněte na políčko pro novou klávesovou zkratku, pak zkuste najít takovou kombinaci kláves, která je ještě volná. Pokud je kombinace vaší volby již zadaná, zobrazí se odpovídající hlášení, pak takovou kombinaci smažte a zkuste najít další. Zdá se, že Ctrl+Shift+9 není přiřazeno k žádné jiné funkci v rámci základní instalace Wordu, ale sami si vyberte pro vás vhodnou klávesovou zkratku, která je ještě volná.</p>
+  <p>Klikněte na Přiřadit, a tím přiřadíte klávesou zkratku makru, které se chystáte zaznamenat. Kroky postupu následujte opravdu pečlivě, protože vše, co teď učiníte bude zaznamenáno do makra::</p>
+  <p>Ctrl+Šipka nahoru (toto posune kurzor na začátek odstavce)</p>
+  <p>Ctrl+Shift+Šipka dolů (toto vybere odstavec, včetně značky odstavce)</p>
+  <p>Shift+Šipka vlevo (toto posune konec výběru jeden znak vlevo, takže už nebude obsahovat samotnou značku odstavce)</p>
+  <p>Ctrl+C (toto zkopíruje odstavec)</p>
+  <p>Ctrl+V (toto vloží text odstavce zpět přes stávající odstavec)</p>
+  <p>Po zadání těchto příkazů klikněte na Konec záznamu.</p>
+  <p>Klikněte na Makra a vyberte srovnatformat (nebo jaké jste svému makru zadali jméno), a pak Upravit. Zobrazí se kód vašeho makra. Pro srovnatformat by to mělo vypadat takto:</p>
+  <p>___________________<br/> Sub srovnatformat()<br/> '<br/> ' srovnatformat macro<br/> '<br/> '<br/> Selection.MoveUp Unit:=wdParagraph, Count:=1<br/> Selection.MoveDown Unit:=wdParagraph, Count:=1, Extend:=wdExtend<br/> Selection.MoveLeft Unit:=wdWord, Count:=1, Extend:=wdExtend<br/> Selection.Copy<br/> Selection.PasteAndFormat (wdPasteDefault)<br/> End Sub<br/> ___________________</p>
+  <p>Změňte řádek:</p>
+  <p>        Selection.PasteAndFormat (wdPasteDefault)</p>
+  <p>na:</p>
+  <p>        Selection.PasteSpecial DataType:=wdPasteText</p>
+  <p>Uložte s Ctrl+S a zavřete okno editoru maker.</p>
+  <p>Pokud vše proběhlo dle plánu, vaše makro by teď mělo fungovat. Můžete jej otestovat, např. tak, že přidáte formátování jednomu slovu dokumentu, např. jedno slovo zadejte jako tučné. Teď prostě umístěte kurzor někam v odstavci a stiskněte Ctrl+Shift+9 
+(nebo kombinaci kláves, kterou jste pro makro vybrali) a měli byste vidět, že formátování zmilo.</p>
+  <p>Klávesovou zkratku můžete kdykoliv změnit. To uděláte tak, že kliknete na hlavní tlačítko „Office“, pak Možnosti (tlačítko vpravo od dialogu)</p>
+  <p>Klikněte na Upravit &gt; Vybrat příkazy. V zobrazeném seznamu vyberte Makra. Vyberte „srovnatformat“ (nebo jak jste si to nazvali).</p>
+  <p>V dolní části dialogového okna, vedle Klávesové zkratky, klikněte na Upravit.</p>
+  <p>V políčku Kategorie srolujte na položku Makra a vyberte ji. Pak na pravé straně, pod Makra, vyberte srovnatformat (nebo jak jste své makro nazvali). Současná zkratka se zobrazí v příslušném políčku. Můžete jej promazat tím, že jej vyberete a stisknete Delete. Můžete pak vložit novou klávesovou zkratku a přidat novou přes Přidat stejně, jako jste to učinili na začátku. Zavřete / potvrďte obsah dialogového okna.</p>
+  <p>Můžete použít podobné kroky k vytvoření tlačítka pro své makro:</p>
+  <p>Opět, klikněte na hlavní tlačítko „Office“, pak Možnosti.</p>
+  <p>Klikněte na Upravit &gt; Vybrat příkazy. V zobrazeném seznamu vyberte Makra. Vyberte své makro.</p>
+  <p>Klikněte na Přidat. Měli byste teď vidět, že příkaz makra ze zobrazí v pravém sloupci. Klikněte na Upravit.</p>
+  <p>Vyberte si symbol, pak OK &gt; OK. Symbol pro vaše makro by se měl zobrazit na liště nástrojů.</p>
+  <p>Toto makro je užitečné pro srovnání formátování celého odstavce, který obsahuje neviditelné formátování. Tam, kde odstavec obsahuje žádané formátování, musíte smazané formátování po srovnání formátování v odstavci opět obnovit. V odstavcích obsahujících spoustu formátování, může obnovení smazaného formátování představovat pořádnou práci navíc. Pro takovéto odstavce zvažte následující alternativy: </p>
+  <ul>
+    <li>
+      <p>Použijte makro CodeZapper od autora Dave Turner. </p>
+    </li>
+    <li>
+      <p>Sami si vytvořte druhé makro (s vlastním tlačítkem anebo klávesovou zkratkou) které umí srovnat formátování ve vybraném textu, namísto v celém odstavci. (Zaznamenejte dle popisu nahoře, ale jen se zaznamenanými příkazy Ctrl+C následované Ctrl+V.) Pak můžete zvýraznit text mezi místy, kde se mění formátování. Toto srovná formátování dané sekce textu, která má stejné, žádané, formátování a pak nebudete muset obnovovat smazané formátování celého odstavce.</p>
+    </li>
+    <li>
+      <p>Použijte makro pro srovnání formátovány pouze u takových odstavců, které obsahují jen málo formátování. Odstavce, které jste „nesrovnali“ budou obsahovat nadbytečné tagy, ale minimálně ostatní odstavce budou daleko „čistější“.</p>
+    </li>
+    <li>
+      <p>Pokročilejší uživatelé mohou vyzkoušet funkci OmegaT pro Export textu. Ve spojení se skriptem te-st-notags, tato funkce nabízí oddělené okno, ve kterém nejsou zobrazeny tagy. I nadále musíte během práce na překladu a jeho úpravou s tagy zacházet opatrně, ale můžete si text zobrazit v odděleném okně bez mnohdy nepřehledné hromady tagů.</p>
+    </li>
+  </ul>
+  <p>Copyright Marc Prior 2009-2011</p>
+</div>
