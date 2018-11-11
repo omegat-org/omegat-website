@@ -38,7 +38,7 @@
         }, {
             "id": "standard_webstart",
             "name": "webstart",
-            "link": "http://omegat.sourceforge.net/webstart/OmegaT.jnlp"
+            "link": "https://omegat.sourceforge.io/webstart/OmegaT.jnlp"
         }, {
             "id": "standard_source",
             "name": "source",
@@ -89,7 +89,7 @@
         }, {
             "id": "latest_webstart",
             "name": "webstart",
-            "link": "http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp"
+            "link": "https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp"
         }, {
             "id": "latest_source",
             "name": "source",

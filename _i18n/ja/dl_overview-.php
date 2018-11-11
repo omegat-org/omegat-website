@@ -131,8 +131,8 @@ href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20
 <td>
 
 <p><a
-href="http://omegat.sourceforge.net/webstart/OmegaT.jnlp">Web Start 通常版</a><br/><a
-href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp">Web Start 開発版</a><br/></p>
+href="https://omegat.sourceforge.io/webstart/OmegaT.jnlp">Web Start 通常版</a><br/><a
+href="https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp">Web Start 開発版</a><br/></p>
 
 </td>
 
