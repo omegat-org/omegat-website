@@ -4,6 +4,7 @@ _gh-pages
 _mess
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 *.swp
 _translations
 

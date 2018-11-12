@@ -143,11 +143,6 @@ supports all current versions of TMX, but is likely to deliver better match resu
 <p>Compatibility problems may be caused by differences in the language codes employed. OmegaT supports language codes in the format "xx", "XX", "xx-YY" and "XX-YY", where xx or XX is the language, yy or YY the region. Strictly speaking, the ISO standard for language codes requires "xx-YY" (for example: "en-GB" for British English); although this variant is supported by OmegaT, the default convention offered by OmegaT is "XX-YY", e.g. "EN-GB". OmegaT is tolerant when reading TMX files: it will accept files with en-GB, en-US, en, EN, etc. Not all CAT tools exhibit the same tolerance and some may&nbsp;not therefore display the expected matches if the language codes are not sufficiently compliant. This incompatibility can be resolved by searching for and
 replacing the relevant language codes in the TMX file in a suitable text editor. Another possible source of incompatibility are three-digit language codes, which are not supported by OmegaT at all. (This incidentally is a limitation of Java, not of OmegaT itself.) </p>
 
-<p>Points regarding proprietary translation memory files:</p>
-
-<p>The traditional Wordfast translation memory file format is of particular interest owing to its simplicity: it consists of a
-plain-text file with a translation unit (segment) on each line in which the source and target are separated by a tab. This format can be converted easily to the TMX format by third-party utilities such as <a href="http://groups.yahoo.com/group/wordfast/files/Wf2Tmx-1.0.11.37.zip">Wf2TMX</a>. <a href="http://anaphraseus.sourceforge.net/">Anaphraseus</a> can also be used for this purpose.</p>
-
 <h3>Glossary files</h3>
 
 <p>OmegaT's glossary files are plain-text files in the format:</p>
