@@ -57,6 +57,12 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
+ 
+assets:
+  defaults:
+    js:  { integrity: false }
+    css: { integrity: false }
+    img: { integrity: false }
 
 plugins_dir:
   - jekyll-sitemap
