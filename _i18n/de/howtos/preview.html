@@ -1,75 +1,71 @@
+
 <div class="container">
 
-<h2>HowTo: Adding a preview function to OmegaT</h2>
 
-<h3>Background</h3>
+<h3>Hintergrund</h3>
 
-<p>Most modern CAT tools display the text in segment-oriented form rather than with its ultimate layout and formatting. Although this has many advantages, it can be very useful for the translator to be able to see the ultimate layout and formatting whilst translating. For this reason, many CAT tools provide a preview function that shows the layout and formatting without the translator having to create the final document and open it in a separate application (usually a word processor). OmegaT does not have an integral preview function, but it is possible to provide much the same functionality using additional software. This HowTo describes the general principles for setting up a preview function.</p>
+<p>Die meisten modernen CAT-Tools zeigen den Text in segmentierter Form und nicht mit seinem endgültigen Layout und seiner endgültigen Formatierung an. Obwohl dies viele Vorteile bietet, kann es für den Übersetzer sehr nützlich sein, das ultimative Layout und die Formatierung während des Übersetzens zu sehen. Aus diesem Grund bieten viele CAT-Tools eine Vorschaufunktion, die das Layout und die Formatierung anzeigt, ohne dass der Übersetzer das endgültige Dokument erstellen und es in einer separaten Anwendung (normalerweise einem Textverarbeitungsprogramm) öffnen muss. OmegaT hat keine integrierte Vorschaufunktion, aber es ist möglich, mit zusätzlicher Software die gleiche Funktionalität bereitzustellen. Dieses HowTo beschreibt die allgemeinen Prinzipien für das Einrichten einer Vorschaufunktion.</p>
 
-<h3>Principles</h3>
+<h3>Prinzipien</h3>
 
-<p>Ideally, a viewer should do two things:</p>
+<p>Im Idealfall sollte die Vorschau zwei Dinge tun:</p>
 
 <ul>
 
-<li>It should display the text with something approaching the final layout and formatting.</li>
+<li>Sie sollte den Text so anzeigen, dass sie sich dem endgültigen Layout und der Formatierung nähert.</li>
 
-<li>It should be updated continually.</li>
+<li>Sie sollte ständig aktualisiert werden.</li>
 
 </ul>
 
 
-<h3>Browser</h3>
+<h3>Webbrowser</h3>
 
-<p>If you are translating .html files, a convenient solution is to use a browser with an automatic refresh function to provide a ready-made preview function. Examples of browsers with an automatic refresh function:</p>
-
-<ul>
-
-<li>Firefox:<br/>
-Windows users who are not already using Firefox can <a href="http://www.mozilla.org">download it from www.mozilla.org</a>; most Linux users will already have it installed, or can install it via their distributions' repositories. To add an automatic refresh function to Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">install the "ReloadEvery" add-on</a>.</li>
-
-<li>Opera:<br/>
-Opera is available for all platforms; it is also very fast and requires low hardware resources. <a href="http://www.opera.com">Download it from www.opera.com</a> (or for Linux users: through your distribution's repository). The automatic refresh function is built in.</li>
-
-<li>Chrome:<br/>
-Chrome is also available for all platforms. <a href="http://www.google.com/chrome">Download Chrome from www.google.com/chrome</a>. To add the auto refresh function to Chrome, <a href="http://chrome.google.com/webstore/detail/oilipfekkmncanaajkapbpancpelijih">download and install the Auto Refresh Plus extension</a> from the Web Store. </li>
-
-</ul>
-
-<p>You may prefer <i>not</i> to use your usual browser for the preview function so as to keep it free for Internet browsing rather than having constantly to switch tabs, so you can regard installing an additional browser for the preview function as an advantage.</p>
-
-<p>After selecting and installing a suitable browser (and/or the required add-on), open your translated file in the /target folder of your project:</p>
+<p>Wenn Sie HTML-Dateien übersetzen, ist eine bequeme Lösung, einen Browser mit einer automatischen Aktualisierungsfunktion zu verwenden, um eine vorgefertigte Vorschaufunktion bereitzustellen. Beispiele für Browser mit einer automatischen Aktualisierungsfunktion:</p>
 
 <ul>
 
-<li>Using Firefox: with File > Open File</li>
-<li>Using Opera: with Opera > Page > Open</li>
+<li>Firefox:<br/> Windows-Benutzer, die Firefox noch nicht verwenden, können <a href="http://www.mozilla.org">ihn von www.mozilla.org herunterladen</a>; Die meisten Linux-Benutzer haben ihn bereits installiert oder können ihn über die Repositorys ihrer Distributionen installieren. Um Firefox eine automatische Aktualisierungsfunktion hinzuzufügen, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installieren Sie das "ReloadEvery"-Addon</a>.</li>
+
+<li>Opera:<br/> Opera ist für jede Plattform verfügbar, er ist auch sehr schnell und benötigt wenige Hardware-Ressourcen. <a href="http://www.opera.com">Laden Sie ihn von www.opera.com</a> herunter (oder für Linuxbenutzer über das Repository Ihrer Distribution). Die automatische Aktualisierungsfunktion ist eingebaut.</li>
+
+<li>Chrome:<br/> Chrome ist auch für alle Plattformen verfügbar. <a href="https://www.google.com/chrome/browser/desktop/index.html">Laden Sie Chrome von www.google.com/chrome herunter.</a>. Um die automatische Aktualisierungsfunktion hinzuzufügen, <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">laden Sie die Auto Refresh Plus-Erweiterung</a> aus dem Webstore herunter und installieren Sie sie. </li>
 
 </ul>
 
-<p>Now enable automatic refreshing. In both Firefox and Opera, this can be done by right-clicking in the translated .html file you have opened, then Reload every > select a desired interval (e.g. 5 seconds).</p>
+<p>Möglicherweise bevorzugen Sie, Ihren üblichen Browser <i>nicht</i> für die Vorschaufunktion zu verwenden, um ihn für das Surfen im Internet frei zu halten, anstatt ständig Tabs zu wechseln. Daher könnte die Installation eines zusätzlichen Browsers für die Vorschaufunktion von Vorteil sein.</p>
 
-<p>You now have a preview function. To update the display, you must still save and create your target document in OmegaT with Ctrl+s, Ctrl+d. The change will then become visible after a delay of at most the interval you selected (plus the time taken by OmegaT to save and produce the target files). Your browser won't automatically scroll as you work through the text; you have to do that yourself. But it will at least stay at the same point in the text when the view is updated.</p>
+<p>Nachdem Sie einen geeigneten Browser (und / oder das erforderliche Add-On) ausgewählt und installiert haben, öffnen Sie Ihre übersetzte Datei im Ordner /target Ihres Projekts:</p>
 
-<h3>Previewing word-processing files</h3>
+<ul>
 
-<p>Opening your translated target file in a browser is easy when your source file is in .html format, but translations more often involve word-processing files, which in OmegaT are usually handled in .docx or .odt format. You can still use the browser solution described above to preview the translations of these files, but you will then also need a) a converter to convert the file to .html format, and b) a utility to launch the converter automatically so that you don't have to convert the files manually.</p>
+<li>Firefox verwenden: mit Datei &gt; Datei öffnen</li>
+<li>Opera verwenden: mit Opera &gt; Seite &gt; Öffnen</li>
 
-<p>Two programs that can be used as converters are described here: Abiword and LibreOffice.</p>
+</ul>
 
-<p>Abiword and LibreOffice are a word processor and an office suite respectively. Both are free, available for a number of different platforms, and can convert .docx and .odt files to .html format.</p>
+<p>Aktivieren Sie nun das automatische Neuladen. Sowohl in Firefox als auch in Opera kann dies geschehen, indem Sie mit der rechten Maustaste in die übersetzte .html-Datei klicken, die Sie geöffnet haben, und dann auf "Neu laden alle &gt;" ein gewünschtes Intervall auswählen (z. B. 5 Sekunden).</p>
 
-<p>Abiword is a relatively small download and is very fast in use. It has a command-line function for converting .docx and .odt files to .html format. It is very easy for Linux users and fairly easy for Windows users to install. <a href="http://www.abisource.com/download/">Download Abiword here</a>.</p>
+<p>Sie haben jetzt eine Vorschaufunktion. Um die Anzeige zu aktualisieren, müssen Sie Ihr Zieldokument in OmegaT mit Strg + S, Strg + Umschalt + D speichern und erstellen. Die Änderung wird dann nach einer Verzögerung von höchstens dem von Ihnen gewählten Intervall sichtbar (zuzüglich der Zeit, die OmegaT benötigt, um die Zieldateien zu speichern und zu erzeugen). Ihr Browser wird, während sie arbeiten, nicht automatisch durch den Text scrollen, das müssen Sie selber tun. Aber er wird zumindest an dem gleichen Punkt im Text bleiben, wenn die Ansicht aktualisiert wird.</p>
 
-<p>LibreOffice is a fully featured office suite similar to Microsoft Office. It can also be used to convert .docx and .odt files to .html format, but to do so from the command line, it also requires Unoconv, a plug-in. <a href="http://www.libreoffice.org/">Download LibreOffice here</a>; <a href="http://dag.wieers.com/home-made/unoconv/">download the Unoconv plug-in here</a>.</p>
+<h3>Vorschau von Textverarbeitungsdateien</h3>
 
-<p>Once you have installed either Abiword or the LibreOffice+Uniconv combination, you can convert the target files produced by OmegaT to html format in order for them to be read by the browser. Remember that you will first have to save in OmegaT and produce the translated documents, then launch the conversion utility, then wait for the display to be updated in the browser.</p>
+<p>Es ist einfach, das übersetzte Zieldokument in einem Browser zu öffnen, wenn das Quelldokument eine Datei im HTML-Format ist, aber Übersetzungen betreffen öfter Textverarbeitungsdateien, die in OmegaT meistens im .docx- oder .odt-Format bearbeitet werden. Sie können die oben beschriebene Browser-Lösung immer noch verwenden, um eine Vorschau der Übersetzungen dieser Dateien anzuzeigen, aber Sie benötigen dann a) einen Konverter zum Konvertieren der Datei in das .html-Format und b) ein Dienstprogramm, um den Konverter automatisch zu starten, so dass Sie die Konvertierung nicht manuell starten müssen.</p>
 
-<p>There are numerous ways of achiving this, but one practical solution is to use a script which "listens" for changes in the translated file(s) produced by OmegaT and then, when a change is detected, automatically launches the utility which converts the file(s) to html format in order for them to be read by the browser. A schematic diagram is shown below:</p>
+<p>Zwei Programme, die zum Konvertieren benutzt werden können, sind hier beschrieben: Abiword und LibreOffice.</p>
 
-<p><img src="/img/preview_flow.png" alt="preview_flow.png"></img></p>
+<p>Abiword und LibreOffice sind ein Textverarbeitungsprogramm und jeweils eine Sammlung von Büroanwendungen. Beide sind kostenlos, verfügbar für eine Anzahl unterschiedlicher Plattformen und können .docx- und .odt-Dateien nach HTML konvertieren.</p>
 
-<p>An example script that achieves this function is described in the <a href="priorview.html">Priorview Howto</a>.</p>
+<p>Abiword ist ein relativ kleiner Download und sehr schnell zu benutzen. Es hat eine Kommandozeilenfunktion zum Konvertieren von .docx- und odt-Dateien nach HTML. Es ist für Linuxbenutzer sehr einfach und Windowsbenutzer ziemlich einfach zu installieren. <a href="http://www.abisource.com/download/">Laden Sie Abiword hier herunter</a>.</p>
+
+<p>LibreOffice ist eine vollständig ausgestattete Sammlung von Büroanwendungen, ähnlich zu Microsoft Office. Es kann auch benutzt werden, um .docx- und .odt-Dateien ins .html-Format  zu konvertieren, aber um das von der Kommandozeileaus zu tun, benötigt es auch Unoconv, ein Plugin. <a href="http://www.libreoffice.org/">Laden Sie LibreOffice hier herunter</a>; <a href="http://dag.wieers.com/home-made/unoconv/">Laden Sie das Unoconv-Plugin hier herunter</a>.</p>
+
+<p>Wenn Sie einmal Abiword oder die Kombination LibreOffice+Unoconv installiert haben, können Sie von OmegaT erstellte Zieldateien ins HTML-Format konvertieren, um vom Browser gelesen werden zu können. Denken Sie daran, dass Sie erst in OmegaT speichern und die übersetzten Dokumente erstellen, dann das Konertierungswerkzeug starten und dann darauf warten müssen, dass die Ansicht im Browser aktualisiert wird.</p>
+
+<p>Es gibt zahlreiche Wege, um das zu erreichen, aber eine praktische Lösung ist, ein Skript zu benutzen, das auf Änderungen der von OmegaT erstellten übersetzten Dateien "lauscht" und dann, wenn eine Änderung entdeckt wird, automatisch das Werkzeug startet, welches die Datei(en) ins HTML-Format konvertiert, damit es von Browser gelesen werden kann. Ein schematisches Diagramm wird unten gezeigt:</p>
+<p><img src="{{ '/img/preview_flow.png' | prepend: site.baseurl_root }}" alt="preview_flow.png"></img></p>
+
+<p>Ein Beispielskript, das diese Funktion erfüllt, ist im <a href="priorview.html">Priorview-Howto</a> beschrieben.</p>
 
 <br/><br/>
 

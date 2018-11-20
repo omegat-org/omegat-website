@@ -1,33 +1,28 @@
 <div class="container">
 
-<h2>OmegaT HowTo: OmegaT compatibility with D&eacute;j&agrave; Vu</h2>
+  <p>Dieses HowTo beschreibt, wie Sie OmegaT in Verbindung mit Atril's Déjà Vu CAT-Werkzeug verwenden.</p>
 
-<p>This HowTo describes how to use OmegaT in conjunction with Atril's D&eacute;j&agrave; Vu CAT tool. </p>
+  <h3>Hintergrundsituation</h3>
 
-<h3>Background situation</h3>
+  <p>Sie sind OmegaT-Nutzer und werden von einem Kunden gebeten, eine Übersetzung im Déjà Vu-Dateiformat zu liefern. Dies kann (für Déjà Vu DVX) durch Verwendung von Déjà Vus "Externe Ansicht"-Dateiformat erreicht werden.</p>
 
-<p>You are an OmegaT user and are requested by a customer to deliver a translation in D&eacute;j&agrave; Vu's
-file format. This can be achieved (for D&eacute;j&agrave; Vu DVX) by use of&nbsp;D&eacute;j&agrave; Vu's "External Views" file format. </p>
+  <h3>Déjà Vu "Externe Ansicht"</h3>
 
-<h3>D&eacute;j&agrave; Vu "External View"</h3>
+  <p>Das Déjà Vu "Externe Ansicht"-Dateiformat ist eine Funktion von Déjà Vu DVX. Es ermöglicht Redakteuren, die Déjà Vu nicht besitzen, die in Déjà Vu produzierten Übersetzungen so zu bearbeiten, dass Änderungen leicht wiedereingefügt werden können. Genauso können Benutzer von CAT-Tools, einschließlich OmegaT, die Déjà Vu nicht besitzen, Dateien übersetzen, die von einem Déjà Vu-Benutzer erstellt wurden.</p>
 
-<p>The D&eacute;j&agrave; Vu "External View" file format is a feature of&nbsp;D&eacute;j&agrave; Vu DVX. It enables editors who do not possess D&eacute;j&agrave; Vu to edit translations produced in&nbsp;D&eacute;j&agrave; Vu in such a way that amendments can be reincorporated easily. In the same way, users of CAT tools, including OmegaT, who do not possess&nbsp;D&eacute;j&agrave; Vu can translate files prepared by a&nbsp;D&eacute;j&agrave; Vu user.</p>
+  <p>Eine Déjà Vu "Externe Ansicht"-Datei hat die Form einer RTF-Datei, die eine mehrspaltige Tabelle enthält, einschließlich Spalten für den Quell- und den Zieltext, in denen jedes Segment eine Tabellenzelle belegt. In einer noch nicht übersetzten "Externe Ansicht"-Datei ist die Zielspalte leer. Eine "übersetzte" externe Ansichtsdatei wird erzeugt, indem die Übersetzung in die Zielspalte eingegeben wird. Gehen Sie wie folgt vor, um die Datei in OmegaT zu übersetzen:</p>
 
-<p>A&nbsp;D&eacute;j&agrave; Vu "External View" file takes the form of an RTF file containing a multi-column table, including columns for the source and target text in which each segment occupies a table cell. In an as-yet untranslated "External View" file, the target column is empty. A "translated" External View file is produced by entering the translation in the target column. To translate the file in OmegaT, proceed as follows:</p>
+  <p>1. Konvertieren Sie die RTF-Datei ins OpenOffice.org-Format.</p>
 
-<p>1. Convert the file from RTF to OpenOffice.org format.</p>
+  <p>2. Erstellen Sie eine Kopie der externen Ansichtsdatei und löschen Sie daraus den Inhalt aller Spalten außer der Quelltextspalte.</p>
 
-<p>2. Make a copy of the External View file, and delete from it the content of all columns except the source-text column.</p>
+  <p>3. Übersetzen Sie diese Datei in OmegaT auf die übliche Weise. Inline-Tags in Segmenten haben die Form von Seriennummern in geschweiften Klammern, d. h. {1}, {2}, usw. Achten Sie darauf, diese auf die gleiche Weise zu bewahren, wie Sie OmegaTs eigene Inline-Tags handhaben würden (die Inline-Tag-Funktionalität von OmegaT, wie die Tag-Validierungsfunktion, ist in diesem Fall jedoch nicht verfügbar).</p>
 
-<p>3. Translate this file in OmegaT in the usual way. Inline tags within segments take the form of serial numbers within curly brackets, i.e. {1}, {2}, etc. Be careful to preserve these in the same way that you would handle OmegaT's own inline tags (the inline tag functionality of OmegaT, such as the tag validation function, is not available in this case, however).</p>
+  <p>4. Nachdem Sie die Übersetzung abgeschlossen und die übersetzten Dokumente erstellt haben, kopieren Sie die übersetzte Spalte aus der übersetzten Datei zurück in die <i>Ziel</i>-Spalte der Originaldatei.</p>
 
-<p>4. After completing the translation and creating the translated documents, copy the translated column from the translated file back&nbsp;into the <span style="font-style: italic;">target</span> column of the original file.</p>
+  <p>5. Konvertieren Sie die Datei zurück in das RTF-Format.</p>
 
-<p>5. Convert the file back to RTF format.</p>
+  <p>Damit dieses Verfahren verwendet werden kann, muss der Déjà Vu-Benutzer die Quelltextdatei vorbereiten und sie dem Übersetzer im Déjà Vu "External View"-Format zur Verfügung stellen. More information on the format and the procedure for its creation, for both users of Déjà Vu and of other CAT tools on the helpful <a href="http://simmer-lossner.blogspot.com/2008/11/dj-vu-x-as-editing-tool-for-trados-jobs.html">blog maintained by Kevin Lossner</a>.</p>
 
-<p>In order for this procedure to be used, the D&eacute;j&agrave; Vu user must prepare the source text file and supply it to the translator in the D&eacute;j&agrave; Vu "External View" format. More information on the format and the procedure for its creation, for both users of D&eacute;j&agrave; Vu and of other CAT tools, can be found on the <a href="http://www.atril.com/docs/DVX/InstructionsExternalView.pdf">relevant Atril page</a>, and on the helpful <a href="http://simmer-lossner.blogspot.com/2008/11/dj-vu-x-as-editing-tool-for-trados-jobs.html">blog maintained by Kevin Lossner</a>.</p>
-
-<p>Copyright Marc Prior 2009-2011</p>
-
+  <p>Copyright Marc Prior 2009-2011</p>
 </div>
-

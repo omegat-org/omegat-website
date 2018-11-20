@@ -1,28 +1,25 @@
 <div class="container">
-
-<h2>OmegaT HowTo: <br/>Exporting from OmegaT to "Trados uncleaned RTF" format</h2>
-
-<p>This HowTo explains how to produce an "uncleaned RTF" file from an OmegaT project. This format may be a practical interchange format for users of other CAT tools, particularly Trados and Wordfast Classic.</p> 
-
-<p>Points to note:</p>
-<p>This code/procedure combination has not yet been thoroughly tested (though initial reports are promising).</p>
-<p>The script is available for the Windows platform only.</p>
-<p>It only enables translators to generate (i.e. deliver) Trados uncleaned files. It does not enable them to "translate" bilingual files supplied by their customers.</p>
-
-<p><strong>1. Insert Trados segment delimiters</strong></p>
-
-<p>To produce a bilingual OpenOffice.Org file containing the Trados segment delimiters, close the OmegaT project, then run the following AutoIt script (requires Windows) on the project's project_save.tmx file:</p>
-
-<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip</a>
-<p><strong>2. Create target documents</strong></p>
-
-<p>Create the target documents as usual and convert the file to Microsoft Word.</p>
-
-<p><strong>3. Apply styles to delimiters</strong></p>
-
-<p>In Microsoft Word, run the following macro to apply the relevant styles to the target document(s):</p>
-
-<p>Private Sub AddTw4winStyles()<br/>
+  <p>Dieses HowTo erklärt, wie man eine "unbereinigte RTF"-Datei aus einem OmegaT-Projekt erstellt. Dieses Format kann ein praktisches Austauschformat für Benutzer anderer CAT-Tools sein, insbesondere Trados und Wordfast Classic.</p>
+  <p>Zu beachtende Punkte:</p>
+  <p>Diese Code- / Prozedur-Kombination wurde noch nicht gründlich getestet (obwohl erste Berichte vielversprechend sind).</p>
+  <p>Das Skript ist nur für die Windows-Plattform verfügbar.</p>
+  <p>Es ermöglicht Übersetzern nur, unbereinigte Dateien für Trados zu erzeugen (d. h. zu liefern). Es ermöglicht ihnen nicht, zweisprachige Dateien ihrer Kunden zu "übersetzen".</p>
+  <p>
+    <strong>1. Fügen Sie Trados-Segmentbegrenzer ein</strong>
+  </p>
+  <p>Um eine zweisprachige OpenOffice.Org-Datei zu erstellen, die die Trados-Segmentbegrenzer enthält, schließen Sie das OmegaT-Projekt, und führen Sie dann das folgende AutoIt-Skript (erfordert Windows) für die Projektdatei des Projekts: project_save.tmx aus:</p>
+  <p>
+    <a href="http://www.leuce.com/autoit/uncleanifyTMX.zip">www.leuce.com/autoit/uncleanifyTMX.zip</a>
+  </p>
+  <p>
+    <strong>2. Zieldateien erstellen</strong>
+  </p>
+  <p>Erstellen Sie die Zieldokumente wie gewohnt und konvertieren Sie die Dateien zu Microsoft Word.</p>
+  <p>
+    <strong>3. Formatierungen auf Trennzeichen anwenden</strong>
+  </p>
+  <p>Führen Sie in Microsoft Word das folgende Makro aus, um die relevanten Formatierungen auf das / die Zieldokument(e) anzuwenden:</p>
+  <p>Private Sub AddTw4winStyles()<br/>
 
 On Error Resume Next<br/>
 
@@ -81,8 +78,5 @@ End With<br/>
 End Sub<br/>
 
 </p>
-
-<p>Copyright Marc Prior 2009-2011</p>
-
+  <p>Copyright Marc Prior 2009-2011</p>
 </div>
-
