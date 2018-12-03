@@ -97,6 +97,6 @@
         }]
     },
     "trunk": "https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk",
-    "nightly": "https://omegat.ci.cloudbees.com/job/omegat-trunk/",
+    "nightly": "https://sourceforge.net/projects/omegat/files/Nightly/",
     "legacy": "http://sourceforge.net/projects/omegat/files/OmegaT - Legacy/"
 }
