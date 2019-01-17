@@ -124,6 +124,7 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
         <p>Based on your choices, we recommand you use:</p>
         <h3><a id="wizard-result-version" href="#">some version</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Download</a>
+	
         <div id="wizard-result-osx" style="display:none;">
           <p>If this version is not available, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p> 
         </div>
@@ -154,6 +155,28 @@ a willingness to read and follow the instructions. If you have a natural
 aversion to reading instructions, and your approach to new software is to click
 on every button you see until something resembling the desired effect occurs,
 then OmegaT is probably not suitable for you.</p>
+
+<!-- Donation slider -->
+<div class="donation-section section">
+	<div class="donation-call">
+		<h3>Before proceeding</h3>
+
+		<span>Have you considered donating to OmegaT? Even though this software is free, if you find OmegaT useful and would like to express your gratitude, you can make a donation on our Paypal account.</span>
+
+		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
+		
+		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
+			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="item_name" value="Donation to OmegaT - multiplatform CAT tool">
+			<input type="hidden" name="currency_code" value="USD">
+
+			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD
+			<a class="btn btn-primary" href="#" id="donate-button">Donate</a>
+		</form>
+	</div>
+	{% asset donation.js %}
+</div>
 
 <h3 id="standard">Standard Version - {{site.data.versions.standard.name}}</h3>
 
