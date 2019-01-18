@@ -113,6 +113,28 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 <h4>Profil utilisateur</h4>
 <p>Bien que l'installation et l'utilisation d'OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d'une manière générale, vous avez une certaine aversion pour la lecture d'instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l'attente que quelque chose ressemblant à l'effet recherché se produise, alors OmegaT n'est probablement pas le bon outil pour vous.</p>
 
+<!-- Donation slider -->
+<div class="donation-section section">
+	<div class="donation-call">
+		<h3>Avant de continuer</h3>
+
+		<span>Avez-vous pensé à faire un don à OmegaT ? Bien que ce logiciel soit gratuit, si vous trouvez OmegaT utile et si vous souhaitez exprimer votre gratitude, vous pouvez faire un don sur notre compte Paypal.</span>
+
+		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
+		
+		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
+			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="item_name" value="Donation to OmegaT - multiplatform CAT tool">
+			<input type="hidden" name="currency_code" value="USD">
+
+			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD
+			<a class="btn btn-primary" href="#" id="donate-button">Contribuer</a>
+		</form>
+	</div>
+	{% asset donation.js %}
+</div>
+
 <h3 id="standard">Version standard - {{site.data.versions.standard.name}}</h3>
 
 <p>La version standard nécessite Java {{site.data.versions.standard.java_version}}. Il s'agit de la version normalement utilisée&nbsp;; elle se distingue par sa fiabilité. La documentation qui l'accompagne est relativement à jour, du moins en ce qui concerne la documentation en anglais. Elle n'intègre cependant pas toutes les fonctionnalités de la version «&nbsp;récente&nbsp;».</p>
