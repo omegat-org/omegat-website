@@ -111,28 +111,29 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 <p>Les fichiers au format Microsoft Office XML peuvent être traduits directement dans OmegaT. Par contre, les fichiers créés dans un format MS Word, Excel ou Powerpoint plus ancien doivent être convertis dans les formats correspondants d'OpenOffice.org, Apache OpenOffice ou LibreOffice (suites bureautiques libres et gratuites). Vous pouvez obtenir Apache OpenOffice ou LibreOffice à partir de la page «&nbsp;Logiciels tiers&nbsp;» accessible via le menu sur la gauche de l'écran.</p>
 
 <h4>Profil utilisateur</h4>
-<p>Bien que l'installation et l'utilisation d'OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d'une manière générale, vous avez une certaine aversion pour la lecture d'instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l'attente que quelque chose ressemblant à l'effet recherché se produise, alors OmegaT n'est probablement pas le bon outil pour vous.</p>
+<p>Bien que l'installation et l'utilisation d'OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d'une manière générale, vous avez une certaine aversion pour la lecture d'instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l'attente que quelque chose ressemblant à l'effet recherché se produise, alors OmegaT n'est probablement pas le bon outil pour vous.</p><!-- Donation slider -->
 
-<!-- Donation slider -->
+
 <div class="donation-section section">
 	<div class="donation-call">
-		<h3>Avant de continuer</h3>
+		<h3>Avant de commencer</h3>
 
-		<span>Avez-vous pensé à faire un don à OmegaT ? Bien que ce logiciel soit gratuit, si vous trouvez OmegaT utile et si vous souhaitez exprimer votre gratitude, vous pouvez faire un don sur notre compte Paypal.</span>
+		<span>Avez-vous envisagé de faire un don à OmegaT&nbsp;? Bien que ce logiciel soit gratuit, si vous le trouvez utile et que vous souhaitez exprimer votre gratitude, vous pouvez faire un don sur notre compte Paypal.</span>
 
 		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
 		
 		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
 			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
 			<input type="hidden" name="cmd" value="_donations">
-			<input type="hidden" name="item_name" value="Donation to OmegaT - multiplatform CAT tool">
+			<input type="hidden" name="item_name" value="Don à OmegaT - outil de TAO multiplateforme">
 			<input type="hidden" name="currency_code" value="USD">
 
-			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD
-			<a class="btn btn-primary" href="#" id="donate-button">Contribuer</a>
+			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">Faire un don</a>
 		</form>
 	</div>
+	
 	{% asset donation.js %}
+
 </div>
 
 <h3 id="standard">Version standard - {{site.data.versions.standard.name}}</h3>
@@ -152,20 +153,26 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
+      
       {% if platform.noInfo != true %}
+          
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_{{ platform.name }}"></div>
+      
       {% endif %}
+      
       </td>
       <td>
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
+      
       {% endif %}
+      
       </td>
   </tr>
+
 {% endfor %}
+  
   </tbody>
 
 </table>
@@ -187,19 +194,25 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
+      
       {% if platform.noInfo != true %}
+          
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      
       {% endif %}
+      
       </td>
       <td>
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
+      
       {% endif %}
+      
       </td>
   </tr>
+
 {% endfor %}
+  
   </tbody>
 
 </table>
