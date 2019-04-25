@@ -51,18 +51,18 @@
             "id": "latest_windows_jre",
             "name": "windows_jre",
             "noInfo": true,
-            "fileName": "Windows.exe"
+            "fileName": "Windows_Signed.exe"
         }, {
             "id": "latest_windows_jre64b",
             "name": "windows_jre64b",
             "noInfo": true,
-            "fileName": "Windows_64.exe"
+            "fileName": "Windows_64_Signed.exe"
 
         }, {
             "id": "latest_windows_nojre",
             "name": "windows_nojre",
             "noInfo": true,
-            "fileName": "Windows_without_JRE.exe"
+            "fileName": "Windows_without_JRE_Signed.exe"
         }, {
             "id": "latest_osx_signed",
             "name": "osx_signed",
