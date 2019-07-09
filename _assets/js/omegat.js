@@ -91,7 +91,7 @@ $(document).ready(function () {
                 type: $('input[name=optType]:checked').val(),
                 os: $('input[name=optOS]:checked').val(),
                 jre: $('input[name=optJRE]:checked').val(),
-                version: $('input[name=optVersion]:checked').val()
+                version: 'standard', //$('input[name=optVersion]:checked').val()
             };
 
             //console.log(sel);
@@ -110,7 +110,10 @@ $(document).ready(function () {
 
         var navigateWizard = function (currentTab, sel) {
             if (currentTab == 'install-type') {
-                showTab('version');
+                //showTab('version');
+                if (sel.type != 'webstart') {
+                    showTab('operating-system');
+                }
             } else if (currentTab == ('version')) {
                 if (sel.type != 'webstart') {
                     showTab('operating-system');
@@ -145,7 +148,7 @@ $(document).ready(function () {
             var type = sel.type;
             var os = sel.os;
             var jre = sel.jre;
-            var version = sel.version;
+            var version = 'standard'; // sel.version;
 
             if (os == 'other') {
                 os = 'linux';
@@ -216,4 +219,5 @@ $(document).ready(function () {
         document.cookie = k + '=' + v + ';expires=' + date.toGMTString() + ';path=/';
     }
 
-});
+});
+

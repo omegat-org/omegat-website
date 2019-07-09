@@ -16,9 +16,11 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
             <li>
               <a href="#tab-install-type" data-toggle="tab">Installation Type</a>
             </li>
+            <!--
             <li>
               <a href="#tab-version" data-toggle="tab">Version</a>
             </li>
+            -->
             <li>
               <a href="#tab-operating-system" data-toggle="tab">Operating System</a>
             </li>
@@ -103,6 +105,7 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
           without JRE included.</p>
         </div>
       </div>
+      <!--
       <div class="tab-pane fade" id="tab-version">
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
@@ -120,6 +123,7 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
           </div>
         </div>
       </div>
+      -->
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
         <p>Based on your choices, we recommand you use:</p>
         <h3><a id="wizard-result-version" href="#">some version</a></h3>
@@ -182,7 +186,7 @@ then OmegaT is probably not suitable for you.</p>
 
 <p>The Standard version requires Java {{site.data.versions.standard.java_version}}. It has usually been in use for some time and is therefore
 proven. Its documentation, at least in English, is usually reasonably up to
-date. It will however lack some of the features of the "Latest" version.</p>
+date.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -214,7 +218,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   </tbody>
 
 </table>
-
+<!--
 <h3 id="latest">Latest Version - {{site.data.versions.latest.name}}</h3>
 
 <p>The Latest version requires Java {{site.data.versions.latest.java_version}}. It is a more recent version than the Standard version and
@@ -238,7 +242,7 @@ prefer the Latest version.</p>
       <td class="version-name">{% translate platform.name %}</td>
       <td>
       {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
       {% endif %}
       </td>
       <td>
@@ -253,6 +257,7 @@ prefer the Latest version.</p>
   </tbody>
 
 </table>
+-->
 
 <h3 id="downloadTrunk">Developer Version</h3>
 
