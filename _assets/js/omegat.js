@@ -91,7 +91,7 @@ $(document).ready(function () {
                 type: $('input[name=optType]:checked').val(),
                 os: $('input[name=optOS]:checked').val(),
                 jre: $('input[name=optJRE]:checked').val(),
-                version: 'standard', //$('input[name=optVersion]:checked').val()
+                version: $('input[name=optVersion]:checked').val()
             };
 
             //console.log(sel);
