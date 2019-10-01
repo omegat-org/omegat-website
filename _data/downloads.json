@@ -32,11 +32,6 @@
             "noInfo": true,
             "fileName": "Linux_64.tar.bz2"
         }, {
-            "id": "standard_linux_jre",
-            "name": "linux_jre",
-            "noInfo": true,
-            "fileName": "Linux.tar.bz2"
-        }, {
             "id": "standard_linux_nojre",
             "name": "nojre",
             "noInfo": true,
@@ -51,7 +46,7 @@
             "fileName": "Source.zip"
         }]
     },
-    "trunk": "https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk",
+    "master": "https://sourceforge.net/p/omegat/code/ci/master/tarball",
     "nightly": "https://sourceforge.net/projects/omegat/files/Nightly/",
     "legacy": "http://sourceforge.net/projects/omegat/files/OmegaT - Legacy/"
 }
