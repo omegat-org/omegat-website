@@ -197,7 +197,7 @@ date.<!--It will however lack some of the features of the "Latest" version.--></
     </tr>
   </thead>
   <tbody>
-{% for platform in site.data.downloads.standard.platforms %}
+{% for platform in site.data.downloads.latest.platforms %}
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
@@ -210,7 +210,7 @@ date.<!--It will however lack some of the features of the "Latest" version.--></
       {% if platform.link != null %}
         <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
       {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
       {% endif %}
       </td>
   </tr>
