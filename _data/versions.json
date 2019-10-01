@@ -1,12 +1,12 @@
 {
     "standard": {
-        "name": "OmegaT 5.0.0",
-        "version": "5.0.0",
+        "name": "OmegaT 4.3.0",
+        "version": "4.3.0",
         "java_version": 8
     },
     "latest": {
         "name": "OmegaT 5.0.0",
-        "version": "5.0.0",
+        "version": "5.0.0_Beta",
         "java_version": 8
     }
 }
