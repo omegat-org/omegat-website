@@ -21,7 +21,7 @@
         }, {
             "id": "standard_osx_signed",
             "name": "osx_signed",
-            "fileName": "Mac_Signed.zip"
+            "fileName": "Mac_Notarized.zip"
         }, {
             "id": "standard_osx_unsigned",
             "name": "osx_unsigned",
