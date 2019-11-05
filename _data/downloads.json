@@ -72,7 +72,7 @@
         }, {
             "id": "latest_osx_signed",
             "name": "osx_signed",
-            "fileName": "Mac_Signed.zip"
+            "fileName": "Mac_Notarized.zip"
         }, {
             "id": "latest_osx_unsigned",
             "name": "osx_unsigned",
