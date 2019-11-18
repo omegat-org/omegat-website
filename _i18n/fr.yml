@@ -7,6 +7,7 @@ menu:
   about: À propos
   documentation: Documentation
   contact: Contact
+  support: Assistance
   download: Téléchargement
   resources: Ressources
 
@@ -19,6 +20,7 @@ titles:
   404: Page Not Found
   about: À propos
   contact: Contact et assistance
+  support: Assistance
   documentation: Documentation
   download: Téléchargement
   home: OmegaT, l'outil libre de TAO

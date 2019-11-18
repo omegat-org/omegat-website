@@ -11,8 +11,8 @@
             <li><a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="{{ '/img/sourceforge.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Sourceforge</a></li>
             <li><a href="https://github.com/omegat-org/"><img alt="Github" src="{{ '/img/github.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Github</a></li>
             <li><a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="{{ '/img/twitter.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Twitter</a></li>
-            <li><a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="{{ '/img/facebook.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Facebook</a></li>
-			<li><a href="https://telegram.me/joinchat/IswSVw9XMwz0J-w9aoz5iA"><img alt="Telegram" src="{{ '/img/telegram.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Telegram</a></li>
+            <li><a href="{{ site.data.links.facebook }}"><img alt="Facebook" src="{{ '/img/facebook.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Facebook</a></li>
+			<li><a href="{{ site.data.links.telegram }}"><img alt="Telegram" src="{{ '/img/telegram.svg' | prepend: site.baseurl_root }}" height="24" width="24"/> Telegram</a></li>
           </ul>
         </div>
       </div>
@@ -33,7 +33,7 @@
         <div class="footer-links">
           <ul>
             <li>
-            <a href="{% tl contact %}"><span class="glyphicon glyphicon-envelope"></span> {% t titles.contact %}</a>
+            <a href="{% tl support %}"><span class="glyphicon glyphicon-envelope"></span> {% if (site.translations[site.lang]['titles']['support']) %}{% t titles.support %}{% else %}{% t titles.contact %}{% endif %}</a>
             </li>
             <li>
             <a href="{% tl about %}"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
@@ -45,5 +45,5 @@
         </div>
       </div>
   </div>
-  <p class="footer-copyright">Copyright &#xA9; 2018 - <a href="{{site.baseurl}}/">omegat.org</a></p>
+  <p class="footer-copyright">Copyright &#xA9; 2019 - <a href="{{site.baseurl}}/">omegat.org</a></p>
 </footer>

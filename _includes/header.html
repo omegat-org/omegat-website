@@ -16,6 +16,9 @@
         <li><a href="{% tl download %}">{% t menu.download %}</a></li>
       </ul>
       <ul class="nav navbar-nav">
+        {% if (site.translations[site.lang]['menu']['support']) %}
+        <li><a href="{% tl support %}">{% t menu.support %}</a></li>
+        {% endif %}
         <li><a href="{% tl resources %}">{% t menu.resources %}</a></li>
         <li><a href="{% tl documentation %}">{% t menu.documentation %}</a></li>
       </ul>

@@ -9,6 +9,7 @@ menu:
   contact: Contact
   download: Download
   resources: Resources
+  support: Support
 
 footer:
   connect: Connect
@@ -19,6 +20,7 @@ titles:
   404: Page Not Found
   about: About
   contact: Contact and Support
+  support: Support
   documentation: Documentation
   download: Download
   home: OmegaT - The Free Translation Memory Tool
