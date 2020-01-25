@@ -1,65 +1,63 @@
----
-footer:
-  connect: Connect
-  documentation: Dokumentaatio
-  omegat_project: The OmegaT Project
 global:
-  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
-  title: 'OmegaT - The Free Translation Memory Tool'
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
+  title: OmegaT – vapaa käännöstyökalu
+  description: OmegaT on vapaa käännöstyökalu ammattimaisille kääntäjille. Se on open source -pohjainen ja kirjoitettu Java-kielellä.
+
 menu:
-  about: Tekijöiden esittely
-  contact: Yhteystiedot ja tuki
+  languages: Kielet
+  about: Tietoja
   documentation: Dokumentaatio
-  download: OmegaT:n lataaminen
-  languages: Languages
-  resources: OmegaT:n muut resurssit
-nojre: Cross-platform without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
-source: Source code
+  contact: Yhteystiedot
+  download: Lataa
+  resources: Resurssit
+  support: Tuki
+
+footer:
+  connect: Ota yhteyttä
+  omegat_project: OmegaT-projekti
+  documentation: Dokumentaatio
+
 titles:
-  404: Page Not Found
-  3rd_party: Kolmannen osapuolen ohjelmat
-  about: Tekijöiden esittely
+  404: Sivua ei löydy
+  about: Tietoja
   contact: Yhteystiedot ja tuki
+  support: Tuki
   documentation: Dokumentaatio
-  download: OmegaT:n lataaminen
-  home: 'OmegaT - The Free Translation Memory Tool'
-  howto: How-To
+  download: Lataa
+  home: OmegaT – vapaa käännöstyökalu
+  philosophy: Filosofia
+  resources: Resurssit
+  manual: Käyttöopas
+  tutorials: Opasohjelmat
+  howto: Miten…
+  reviews: Arvioinnit
+  sponsorship: Sponsorit
   howtos:
-    compatibility: Compatibility
-    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
-    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
-    docx: 'Howto - Translating Word 2007 files in OmegaT'
-    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
-    google_translate: 'Howto - Using Google Translate in OmegaT'
-    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
-    linux: OmegaT on Linux HowTo
-    localizing_omegat: 'Howto - Translating OmegaT into your language'
-    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
-    new_filter: 'Howto - Creating a new file filter'
-    preview: 'Howto - Adding a preview function to OmegaT'
-    priorview: 'Howto - The "Priorview" preview utility'
-    prop12m: Propagation and one-to-many matching HowTo
-    spelling: 'Howto - Spellchecking'
-    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
-    tokenizer: 'Howto - Using the OmegaT tokenizer'
-  howtos/compatibility: 'XLIFF '
-  index: 'OmegaT:n esittely</a>'
-  involved: OmegaT-projekti ja sinä
-  jre: 'JRE</a>'
-  manual: Manual
-  philosophy: Ajattelutapa
-  requirements: Vaatimukset
-  resources: OmegaT:n muut resurssit
-  reviews: 'Arvioita OmegaT:stä</a>'
-  screenshots: 'Kuvakaappaukset</a>'
-  sponsorship: Sponsorship
-  translation-info: OmegaT:n kääntäminen omalle kielellesi
-  tutorials: Tutorials
+     compatibility: Yhteensopivuus
+     compatibility_deja_vu: Miten tämä tehdään? – OmegaT:n yhteensopivuus Déjà Vun kanssa
+     compiling_from_source: Miten tämä tehdään? – OmegaT:n kääntäminen lähdekoodista
+     docx: Miten tämä tehdään? – Word 2007 -tiedostojen kääntäminen OmegaT:ssä
+     export_uncleaned_rtf: Miten tämä tehdään? – Vienti OmegaT:stä Trados uncleaned RTF -muotoon
+     google_translate: Miten tämä tehdään? – Google Translaten käyttö OmegaT:ssä
+     iceni_infix: Miten tämä tehdään? – PDF-tiedostojen kääntäminen Iceni Infixin ja OmegaT:n avulla
+     linux: Ohjeita OmegaT:n käyttöön Linuxissa
+     localizing_omegat: Miten tämä tehdään? – OmegaT:n kääntäminen omalle kielelle
+     ms_translator: Miten tämä tehdään? – Microsoft Translatorin käyttö OmegaT:ssä
+     new_filter: Miten tämä tehdään? – Uuden tiedostosuodattimen luonti
+     preview: Miten tämä tehdään? – Esikatselutoiminnon lisääminen OmegaT:hen
+     priorview: Miten tämä tehdään? – Priorview-esikatseluohjelma
+     prop12m: Miten tämä tehdään? – Ehdotukset ja yksi–monta-osumat
+     spelling: Miten tämä tehdään? – Oikeinkirjoituksen tarkistus
+     text_export: Miten tämä tehdään? – OmegaT:n tekstinvientitoiminnon käyttäminen (komentosarjanäkymä)
+     tokenizer: Miten tämä tehdään? – OmegaT:n saneistimen käyttö
+
+# Platforms name
+windows_jre: Windows, jossa on JRE
+windows_jre64b: Windows, jossa on 64-bittinen JRE
+windows_nojre: Windows ilman JRE:tä
+osx_signed: OS X Notarized
+osx_unsigned: OS X Unsigned
+linux_jre: Linux, jossa on JRE
+linux_jre64b: Linux, jossa on 64-bittinen JRE
+nojre: Käyttöliittymästä riippumaton versio ilman JRE:tä
 webstart: Web Start
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
+source: Lähdekoodi
