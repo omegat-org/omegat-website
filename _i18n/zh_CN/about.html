@@ -1,115 +1,68 @@
 <div class="container">
-		
-<h2>了解我们</h2>
-		
-<h3>有关本站</h3>
-		
 
-<table>
-		<tbody>
+  <div class="text-md-center">
+  <h3>网站内容作者</h3>
+  <ul class="list-unstyled">
+    
+    {% for author in site.data.credits.website %}
+      
+      <li>{{ author }}</li>
+    
+    {% endfor %}
+  
+  </ul>
 
-    <tr>
+  <h3>网站设计</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>
 
-      <td>This language version:</td>
+  
 
-      <td>Marc Prior   </td>
+  {% if site.lang != "en" %}
+  
+  <h3>英语版本译者</h3>
+  <ul class="list-unstyled">
+    
+    {% for translator in site.data.credits.translators[site.lang] %}
+      
+      <li>{{ translator }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+  
+  {% endif %}
+  
+  </div>
 
-    </tr>
-
-  </tbody>
-
-</table>
-
-<p/>
-
-<h3>OmegaT项目</h3>
-
-<p>OmegaT项目由一个非正式的国际志愿者组织维护。其目的是开发，分发和支持使用OmegaT，一个开源翻译记忆软件应用程序。</p>
-
-<p>该项目的主要成员是：</p>
-
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Keith Godfrey</td>
-
-      <td>Original author of the OmegaT application</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Aaron Madlon-Kay</td>
-
-      <td>Project manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Alex Buloichik</td>
-
-      <td>Lead developer</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Aaron Madlon-Kay</td>
-
-      <td>Integration manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Marc Prior</td>
-
-      <td>Website manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Vincent Bidaux</td>
-
-      <td>Documentation manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Kos Ivantsov</td>
-
-      <td>Localization manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>开发者们</td>
-
-      <td>Keith Godfrey, Zoltan Bartko, Volker Berlin, Didier Briel,
-    Kim Bruning, Alex Buloichik, Thomas Cordonnier, Sandra Jean Chua, Enrique Estévez Fernández,
-    Martin Fleurke, Wildrich Fourie, Phillip Hall, Jean-Christophe Helary, Chihiro Hio, Thomas Huriaux, 
-    Hans-Peter Jacobs, Kyle Katarn, Piotr Kulik, Ibai Lakunza Velasco, Guido Leenders, Aaron Madlon-Kay, 
-    Fabián Mandelbaum, Manfred Martin, Adiel Mittmann, Hiroshi Miura, John Moran, Maxym Mykhalchuk, Arno Peters, 
-    Henry Pijffers, Briac Pilpré, Tiago Saboga, Andrzej Sawuła, 
-    Benjamin Siband, Yu Tang, Rashid Umarov, Antonio Vilei, Ilia Vinogradov, Martin Wunderlich and Michael Zakharov</td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-
-<p> <a href="philosophy.html">这里</a>描述了项目的理念。</p>
-<p>自项目成立以来，已经得到了几十个其他贡献者的支持，太多而不能在这里提到，但对他们的帮助，我们非常感谢。<br/>
-
-</p>
-
+  <h2>OmegaT 项目</h2>
+  <p>OmegaT 项目由非一个正式的国际志愿者小组维护。其目的是开发、发行开源翻译记忆软件 OmegaT，并对 OmegaT 的使用提供支持。</p>
+  <p>该项目的主要成员是：</p>
+  <div class="text-md-center">
+    <h3>OmegaT 应用程序的原作者</h3>
+    <p>Keith Godfrey</p>
+    <h3>项目经理</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>首席开发人员</h3>
+    <p>Alex Buloichik</p>
+    <h3>集成经理</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>网站经理</h3>
+    <p>Marc Prior</p>
+    <h3>文档经理</h3>
+    <p>Vincent Bidaux</p>
+    <h3>本地化经理、用户组主管</h3>
+    <p>Kos Ivantsov</p>
+    <h3>开发人员</h3>
+    <ul class="list-unstyled">
+      
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    
+    </ul>
+  </div>
+  <p>项目理念在<a href="philosophy.html">此处</a>有所描述。</p>
+  <p>自项目启动以来，它已经得到了许多其他贡献者的支持，人数太多在此无法全部列出，但我们非常感激他们的帮助。</p>
 </div>
-

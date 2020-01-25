@@ -1,68 +1,63 @@
----
-footer:
-  connect: Connect
-  documentation: 文档
-  omegat_project: The OmegaT Project
 global:
+  title: OmegaT——免费的翻译记忆工具
   description: OmegaT is a free open-source translation memory application for professional translators written in Java.
-  title: 'OmegaT - The Free Translation Memory Tool'
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
+
 menu:
-  about: 了解我们
-  contact: 联系和支持
+  languages: 语言
+  about: 关于
   documentation: 文档
+  contact: 联系
   download: 下载
-  languages: Languages
-  resources: 其他OmegaT资源
-nojre: Cross-platform without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
-source: Source code
+  resources: 资源
+  support: Support
+
+footer:
+  connect: 连接
+  omegat_project: OmegaT项目
+  documentation: 文档
+
 titles:
-  404: Page Not Found
-  3rd_party: 第三方软件
-  Download OmemaT: 下载
-  'OmegaT - Documentation': 文档
-  'OmegaT, the free memory translation tool,requirements': 需求
-  'OmegaT, the free translation memory tool': OmegaT介绍
-  about: 了解我们
+  404: 页面不存在
+  about: 关于
   contact: 联系和支持
+  support: Support
   documentation: 文档
   download: 下载
-  en_howtos_localizing_index: OmegaT基础知识：将 OmegaT翻译成你的语言
-  home: 'OmegaT - The Free Translation Memory Tool'
-  howto: How-To
-  howtos:
-    compatibility: Compatibility
-    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
-    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
-    docx: 'Howto - Translating Word 2007 files in OmegaT'
-    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
-    google_translate: 'Howto - Using Google Translate in OmegaT'
-    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
-    linux: OmegaT on Linux HowTo
-    localizing_omegat: 'Howto - Translating OmegaT into your language'
-    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
-    new_filter: 'Howto - Creating a new file filter'
-    preview: 'Howto - Adding a preview function to OmegaT'
-    priorview: 'Howto - The "Priorview" preview utility'
-    prop12m: Propagation and one-to-many matching HowTo
-    spelling: 'Howto - Spellchecking'
-    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
-    tokenizer: 'Howto - Using the OmegaT tokenizer'
-  index: OmegaT介绍
-  involved: OmegaT项目和你
-  manual: Manual
+  home: OmegaT——免费的翻译记忆工具
   philosophy: 理念
-  requirements: 需求
-  resources: 其他OmegaT资源
-  reviews: Reviews of OmegaT
-  screenshots: 屏幕截图
+  resources: 资源
+  manual: 手册
+  tutorials: 教程
+  howto: How-To
+  reviews: 评论
   sponsorship: 赞助
-  tutorials: Tutorials
-  usergroups: 用户讨论组
-webstart: Web Start
+  howtos:
+     compatibility: 兼容性
+     compatibility_deja_vu: Howto - OmegaT和Déjà Vu的兼容
+     compiling_from_source: Howto - 从源码编译OmegaT
+     docx: Howto - 在OmegaT中翻译Word2007格式的文件
+     export_uncleaned_rtf: Howto - 从OmegaT导出 Trados 的 uncleaned RTF 格式文件
+     google_translate: Howto - 在OmegaT中使用谷歌翻译
+     iceni_infix: Howto - 使用Iceni Infix和OmegaT翻译PDF文件
+     linux: OmegaT on Linux HowTo
+     localizing_omegat: Howto - 用你的语言翻译OmegaT
+     ms_translator: Howto - 在OmegaT中使用微软翻译
+     new_filter: Howto - 创建新的文件筛选器
+     preview: Howto - 给OmegaT添加预览功能
+     priorview: Howto - "Priorview"预览工具
+     prop12m: 传送和一对多匹配
+     spelling: Howto - 拼写检查
+     text_export: Howto - 使用OmegaT 文本输出功能 (脚本界面)
+     tokenizer: Howto - 使用OmegaT的分词器
+
+# Platforms name
 windows_jre: Windows with JRE
 windows_jre64b: Windows with 64-bit JRE
 windows_nojre: Windows without JRE
+osx_signed: OS X Notarized
+osx_unsigned: OS X Unsigned
+linux_jre: Linux with JRE
+linux_jre64b: Linux with 64-bit JRE
+nojre: Cross-platform without JRE
+webstart: Web Start
+source: 源代码
