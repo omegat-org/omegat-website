@@ -92,6 +92,7 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
         <p>Gebaseerd op uw keuzes, bevelen wij aan om te gebruiken:</p>
         <h3><a id="wizard-result-version" href="#">willekeurige versie</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Downloaden</a>
+	
         <div id="wizard-result-osx" style="display:none;">
           <p>Als deze versie niet beschikbaar is, kunt u proberen <a href="#" id="wizard-result-unsigned">de niet-ondertekende versie te downloaden</a>.</p> 
         </div>
@@ -104,15 +105,38 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 
 <h4>Systeemvereisten</h4>
 
-<p>OmegaT zal werken op elk systeem waarop de JRE (Java Runtime Environment) is of kan worden geïnstalleerd. De JRE wordt nu verschaft met OmegaT en hoeft niet afzonderlijk te worden verkregen. OmegaT is succesvol geïnstalleerd op Windows (alle versies vanaf 98 en hoger), Macintosh OS X en Linux.</p>
+<p>OmegaT zal kunnen worden uitgevoerd op elk systeem waarop de toepasselijke JRE (Java Runtime Environment) is of kan worden geïnstalleerd. De JRE wordt nu verschaft met OmegaT en hoeft niet afzonderlijk te worden verkregen. OmegaT is succesvol geïnstalleerd op Windows (alle versies vanaf 98 en hoger), Macintosh OS X en Linux.</p>
 <p>Bestanden in de indeling van Microsoft Office 2007 XML kunnen direct worden vertaald in OmegaT. Bestanden in oudere indelingen van MS Word, Excel en Powerpoint kunnen worden vertaald nadat zij zijn geconverteerd naar de equivalente huidige indeling van Microsoft Office, of als alternatief naar de indeling Office Open XML, wat kan worden gedaan in OpenOffice.org of LibreOffice (ook gratis). Volg de koppeling met de knop "Derden software" links om OpenOffice.org of LibreOffice te verkrijgen.</p>
 
 <h4>Gebruikersvereisten</h4>
-<p>OmegaT is niet bijzonder moeilijk te installeren of te gebruiken, maar het vereist wel de bereidheid om de instructies te lezen en op te volgen. Als u een natuurlijke aversie heeft voor het lezen van instructies, en uw aanpak voor nieuwe software bestaat uit het klikken op elke knop die u ziet totdat er iets verschijnt dat op het gewenste effect lijkt, dan is OmegaT waarschijnlijk niet geschikt voor u.</p>
+<p>OmegaT is niet bijzonder moeilijk te installeren of te gebruiken, maar het vereist wel de bereidheid om de instructies te lezen en op te volgen. Als u een natuurlijke aversie heeft voor het lezen van instructies, en uw aanpak voor nieuwe software bestaat uit het klikken op elke knop die u ziet totdat er iets verschijnt dat op het gewenste effect lijkt, dan is OmegaT waarschijnlijk niet geschikt voor u.</p><!-- Donation slider -->
 
-<h3 id="downloads">Standaard versie - {{site.data.versions.standard.name}}</h3>
 
-<p>De versie Standaard is meestal al enige tijd in gebruik en heeft zich daardoor al bewezen. De documentatie daarvan, ten minste in het Engels, is meestal redelijk bijgewerkt. Er zullen echter enkele mogelijkheden uit de versie "Laatste" ontbreken.</p>
+<div class="donation-section section">
+	<div class="donation-call">
+		<h3>Voordat u doorgaat</h3>
+
+		<span>Heeft u overwogen om aan OmegaT te doneren? Zelfs omdat deze software gratis is, als u vindt dat OmegaT nuttig is en u zou uw dank willen tonen, kunt u een donatie doen op ons account van Paypal.</span>
+
+		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
+		
+		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
+			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="item_name" value="Donation to OmegaT - multiplatform CAT tool">
+			<input type="hidden" name="currency_code" value="USD">
+
+			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">Doneren</a>
+		</form>
+	</div>
+	
+	{% asset donation.js %}
+
+</div>
+
+<h3 id="standard">Standaard versie - {{site.data.versions.standard.name}}</h3>
+
+<p>De versie Standaard vereist Java {{site.data.versions.standard.java_version}}. Die is gewoonlijk al enige tijd in gebruik en heeft zich daardoor al bewezen.a De documentatie daarvan, ten minste in het Engels, is meestal redelijk bijgewerkt.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -139,12 +163,8 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
       
       </td>
       <td>
-      
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
-      
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Downloaden</a></td>
+      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Downloaden</a></td>
       
       {% endif %}
       
@@ -159,7 +179,7 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 
 <h3 id="latest">Laatste versie - {{site.data.versions.latest.name}}</h3>
 
-<p>De versie Laatste is een meer recente versie dan de versie Standaard en bevat nieuwe mogelijkheden die niet aanwezig zijn in die laatste. De versie Laatste zal meestal redelijk stabiel en bruikbaar zijn, maar zou enkele problemen kunnen hebben. Documentatie, in het bijzonder over nieuwe mogelijkheden, zal minder uitgebreid zijn dan die van de versie Standaard. Gebruikers die al enige ervaring hebben met OmegaT prefereren vaak de versie Laatste.</p>
+<p>De versie Laatste vereist Java {{site.data.versions.latest.java_version}}. Het is een meer recente versie dan de versie Standaard en bevat nieuwe mogelijkheden die niet aanwezig zijn in die laatste. De versie Laatste zal meestal redelijk stabiel en bruikbaar zijn, maar zou enkele problemen kunnen hebben. Documentatie, in het bijzonder over nieuwe mogelijkheden, zal minder uitgebreid zijn dan die van de versie Standaard. Gebruikers die al enige ervaring hebben met OmegaT prefereren vaak de versie Laatste.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -178,19 +198,13 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
       <td>
       
       {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
+          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
       {% endif %}
       
       </td>
       <td>
-      
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
-      
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Downloaden</a></td>
+      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Downloaden</a></td>
       
       {% endif %}
       
@@ -205,7 +219,7 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 
 <h3 id="downloadTrunk">Ontwikkelversie</h3>
 
-<p>De versie "/trunk" is een allernieuwste, "alfa"-versie, nog in ontwikkeling. Vooraf gebouwde binaries zijn beschikbaar als Nightly Builds.</p>
+<p>De versie "master" is het nieuwste van het nieuwste, versie "alfa" is nog steeds in ontwikkeling. Vooraf gebouwde binaries zijn beschikbaar als Nightly Builds.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,10 +231,10 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
   </thead>
   <tbody>
   <tr>
-      <td>Trunk</td>
-      <td><!----><span rel="popover" data-platform="trunk" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      <td>Master</td>
+      <td><!----><span rel="popover" data-platform="master" data-content="" class="glyphicon glyphicon-info-sign"></span>
       </td>
-      <td><a class="btn btn-primary" href="{{ site.data.downloads.trunk }}" role="button">Downloaden</a></td>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Downloaden</a></td>
   </tr>
   <tr>
       <td>Nightly Builds</td>
@@ -244,15 +258,13 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 
 <p>Als u de versie van OmegaT met JRE installeert, zelfs als de JRE al is geïnstalleerd op uw computer, zal OmegaT's JRE afzonderlijk worden geïnstalleerd en zal er geen conflicten mee veroorzaken. Het is daarom altijd veilig om de versie van OmegaT met JRE te installeren. Indien u niet zeker weet of u een geschikte versie van de JRE heeft, selecteer dan een versie met JRE, (of de versie Default). </p>
 
-<p><strong>Mac OS X-gebruikers</strong>: de JRE is standaard geïnstalleerd op Mac OS X; er is daarom geen versie voor Mac OS X met de JRE.</p>
-
 <p><strong>Linux-gebruikers</strong>: de meeste Linux-distributies zijn uitgerust met een Java Runtime Environment, maar sommige open-bron implementaties werken niet goed met OmegaT (hoewel dit niet direct zou hoeven te blijken). Indien u relatief nieuw bent met Linux, raden we u aan om een versie van OmegaT te installeren waarin de JRE is opgenomen. Meer ervaren Linux-gebruikers zouden kunnen prefereren om de Oracle (voorheen Sun) JRE op systeemniveau te installeren.
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Ondertekend/Niet ondertekend</h4>
 
-<p>Mac OS X heeft een mogelijkheid, genaamd Gatekeeper, die de veiligheid verhoogt door het moeilijk te maken om niet ondertekende programma's uit te voeren. OmegaT voor Mac OS X is beschikbaar in zowel ondertekende als niet ondertekende versies; functioneel zijn zij identiek, maar de voorkeur gata uit naar de ondertekende versie omdat die door het systeem wordt herkend als zijnde afkomstig van ene bekende ontwikkelaar.</p>
+<p>Mac OS X heeft een mogelijkheid, genaamd Gatekeeper, die de veiligheid verhoogt door het moeilijk te maken om niet ondertekende programma's uit te voeren. OmegaT voor Mac OS X is beschikbaar in zowel ondertekende als niet ondertekende versies; functioneel zijn zij identiek, maar de voorkeur gaat uit naar de ondertekende versie omdat die door het systeem wordt herkend als zijnde afkomstig van een bekende ontwikkelaar.</p>
 
 <p>Er kan een vertraging optreden bij het publiceren van ondertekende versies. Gebruikers die haast hebben kunnen in plaats daarvan de niet ondertekende versie; als u moeilijkheden ondervindt bij het starten van de app, bekijk dan <a href="https://support.apple.com/kb/ph14369">How to open een app van een niet bekende ontwikkelaar</a>.</p>
 </div>
@@ -260,7 +272,7 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing_unsigned">Ondertekend/Niet ondertekend</h4>
 
-<p>Mac OS X heeft een mogelijkheid, genaamd Gatekeeper, die de veiligheid verhoogt door het moeilijk te maken om niet ondertekende programma's uit te voeren. OmegaT voor Mac OS X is beschikbaar in zowel ondertekende als niet ondertekende versies; functioneel zijn zij identiek, maar de voorkeur gata uit naar de ondertekende versie omdat die door het systeem wordt herkend als zijnde afkomstig van ene bekende ontwikkelaar.</p>
+<p>Mac OS X heeft een mogelijkheid, genaamd Gatekeeper, die de veiligheid verhoogt door het moeilijk te maken om niet ondertekende programma's uit te voeren. OmegaT voor Mac OS X is beschikbaar in zowel ondertekende als niet ondertekende versies; functioneel zijn zij identiek, maar de voorkeur gaat uit naar de ondertekende versie omdat die door het systeem wordt herkend als zijnde afkomstig van een bekende ontwikkelaar.</p>
 
 <p>Er kan een vertraging optreden bij het publiceren van ondertekende versies. Gebruikers die haast hebben kunnen in plaats daarvan de niet ondertekende versie; als u moeilijkheden ondervindt bij het starten van de app, bekijk dan <a href="https://support.apple.com/kb/ph14369">How to open een app van een niet bekende ontwikkelaar</a>.</p>
 </div>
@@ -276,9 +288,9 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 </div>
 
 
-<div id="popover_content_trunk" style="display:none">
-    <p>De /trunk (alpha) versie reflecteert de allerlaatste status van ontwikkeling. Hij wordt alleen aanbevolen voor serieuze ontwikkelaars en testers. Hij kan ook worden verkregen met behulp van de opdracht in Subversion:</p>
-    <p><kbd>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</kbd></p>
+<div id="popover_content_master" style="display:none">
+    <p>De versie "master" (alfa) reflecteert de laatste staat van ontwikkeling. Hij wordt alleen aanbevolen voor serieuze ontwikkelaars en testers. Hij kan ook worden verkregen met de opdracht voor Git:</p>
+    <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
 <div id="popover_content_nightly" style="display:none">

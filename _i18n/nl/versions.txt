@@ -1,9 +1,0 @@
-<?php
-$standard_name="3.1.9 update 4";
-$standard_number="3.1.9_04";
-$latest_name="3.5.2 update 1";
-$latest_number="3.5.2_01";
-$min_jre_version="1.6";
-$tokenizers_number="0.5-2.1";
-$nightly_builds_url="https://omegat.ci.cloudbees.com/job/omegat-trunk/";
-?>
