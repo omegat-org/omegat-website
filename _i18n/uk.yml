@@ -1,28 +1,30 @@
 global:
   title: OmegaT — безкоштовна програма для перекладу
-  description: OmegaT — це безкоштовна програма з перекладацькою пам’яттю, розрахована на професійних перекладачів. Написана на Java.
+  description: OmegaT — це безкоштовна програма з перекладацькою пам'яттю, розрахована на професійних перекладачів. Написана на Java.
 
 menu:
   languages: Мови
   about: Про програму
   documentation: Документація
   contact: Контактна інформація
-  download: Завантажити OmegaT
+  download: Завантажити
   resources: Додаткові ресурси для OmegaT
+  support: Підтримка
 
 footer:
-  connect: OmegaT у мережі
-  omegat_project: Проект OmegaT
+  connect: Зв'язок
+  omegat_project: Проєкт OmegaT
   documentation: Документація
 
 titles:
-  404: Сторінку не знайдено
+  404: Хм :( Сторінку не знайдено
   about: Про програму
   contact: Контакти та підтримка
+  support: Підтримка
   documentation: Документація
-  download: Завантажити OmegaT
+  download: Завантажити
   home: OmegaT — безкоштовна програма для перекладу
-  philosophy: Філософія
+  philosophy: Філософія проєкту
   resources: Додаткові ресурси для OmegaT
   manual: Інструкція користувача
   tutorials: Тьюторіали
@@ -30,7 +32,7 @@ titles:
   reviews: Огляди OmegaT
   sponsorship: Спонсори
   howtos:
-     compatibility: Compatibility
+     compatibility: Сумісність
      compatibility_deja_vu: Howto - OmegaT compatibility with Déjà Vu
      compiling_from_source: Howto - Compiling OmegaT from the source code
      docx: Howto - Translating Word 2007 files in OmegaT
@@ -49,13 +51,13 @@ titles:
      tokenizer: Howto - Using the OmegaT tokenizer
 
 # Platforms name
-windows_jre: Версія для Windows з JRE
-windows_jre64b: Версія для Windows з JRE (64 біти)
+windows_jre: Версія для Windows із JRE
+windows_jre64b: Версія для Windows із JRE (64 біти)
 windows_nojre: Версія для Windows без JRE
-osx_signed: Версія для OS X (з підписом)
-osx_unsigned: Версія для OS X (без підпису)
-linux_jre: Версія для Linux з JRE
-linux_jre64b: Версія для Linux з JRE (64 біти)
-nojre: Крос-платформна версія без JRE
+osx_signed: Версія для OS X (завірена)
+osx_unsigned: Версія для OS X (незавірена)
+linux_jre: Версія для Linux із JRE
+linux_jre64b: Версія для Linux із JRE (64 біти)
+nojre: Кросплатформна версія без JRE
 webstart: Версія Web Start
-source: Джерельний код
+source: Програмний код

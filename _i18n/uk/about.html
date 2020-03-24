@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="text-md-center">
+  <h3>Автори наповнення вебсайту</h3>
+  <ul class="list-unstyled">
+    
+    {% for author in site.data.credits.website %}
+      
+      <li>{{ author }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+
+  <h3>Дизайн вебсайту</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>
+
+  
+
+  {% if site.lang != "en" %}
+  
+  <h3>Перекладачі англійської версії</h3>
+  <ul class="list-unstyled">
+    
+    {% for translator in site.data.credits.translators[site.lang] %}
+      
+      <li>{{ translator }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+  
+  {% endif %}
+  
+  </div>
+
+  <h2>Проєкт OmegaT</h2>
+  <p>Проєкт OmegaT підтримує неформальна інтернаціональна група ентузіастів. Наша мета - це розробка, поширення та підтримка користувачів OmegaT, перекладацької програми з відкритим кодом, в основі якої лежить пам'ять перекладів.</p>
+  <p>Основні члени проєктної групи</p>
+  <div class="text-md-center">
+    <h3>Автор OmegaT</h3>
+    <p>Keith Godfrey</p>
+    <h3>Проєктний менеджер</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Головний розробник</h3>
+    <p>Alex Buloichik</p>
+    <h3>Відповідальний за інтеграції</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Менеджер сайту</h3>
+    <p>Marc Prior</p>
+    <h3>Відповідальний за документацію</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Відповідальний за локалізацію, менеджер групи підтримки користувачів</h3>
+    <p>Kos Ivantsov</p>
+    <h3>Розробники</h3>
+    <ul class="list-unstyled">
+      
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    
+    </ul>
+  </div>
+  <p>Філософія проєкту описана <a href="philosophy.html">тут</a>.</p>
+  <p>З початку існування проєкту до нього доклали рук десятки людей. Ми не можемо згадати на цій сторінці всіх, але ми дуже вдячні їм за допомогу.</p>
+</div>
