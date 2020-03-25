@@ -4,7 +4,7 @@ global:
 
 menu:
   languages: Мови
-  about: Про програму
+  about: Про нас
   documentation: Документація
   contact: Контактна інформація
   download: Завантажити
@@ -18,7 +18,7 @@ footer:
 
 titles:
   404: Хм :( Сторінку не знайдено
-  about: Про програму
+  about: Про нас
   contact: Контакти та підтримка
   support: Підтримка
   documentation: Документація
@@ -26,7 +26,7 @@ titles:
   home: OmegaT — безкоштовна програма для перекладу
   philosophy: Філософія проєкту
   resources: Додаткові ресурси для OmegaT
-  manual: Інструкція користувача
+  manual: Посібник користувача
   tutorials: Тьюторіали
   howto: Практичні вказівки How To
   reviews: Огляди OmegaT
