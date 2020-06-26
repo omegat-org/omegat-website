@@ -1,0 +1,63 @@
+global:
+  title: OmegaT - L’attrezzu liberu di memoria di traduzzione
+  description: OmegaT hè un appiecazione di memoria di traduzzione, liberu è à « fonte aperta », scitta in Java per i traduttori prufessiunali.
+
+menu:
+  languages: Lingue
+  about: Apprupositu
+  documentation: Documentazione
+  contact: Cuntattu
+  download: Scaricà
+  resources: Risorse
+  support: Assistenza
+
+footer:
+  connect: Cunnettassi
+  omegat_project: U prughjettu OmegaT
+  documentation: Documentazione
+
+titles:
+  404: A pagina ùn esiste micca
+  about: Apprupositu
+  contact: Cuntattu è Assistenza
+  support: Assistenza
+  documentation: Documentazione
+  download: Scaricà
+  home: OmegaT - L’attrezzu liberu di memoria di traduzzione
+  philosophy: Filosufia
+  resources: Risorse
+  manual: Manuale
+  tutorials: Furmazioni autonome
+  howto: Cumu fà…
+  reviews: Articuli
+  sponsorship: Cumparaticu
+  howtos:
+     compatibility: Cumpatibilità
+     compatibility_deja_vu: Cumufà - Cumpatibilità d’OmegaT cù Déjà Vu (in inglese)
+     compiling_from_source: Cumufà - Creazione di prugramma d’esecuzione OmegaT à partesi di u codice di fonte (in inglese)
+     docx: Cumufà - Traduzzione di schedarii Microsoft Office, sopratuttu Word 2007, cù OmegaT (in inglese)
+     export_uncleaned_rtf: Cumufà - Espurtà da OmegaT ver di u furmatu micca pulitu « Trados uncleaned RTF » (in inglese)
+     google_translate: Cumufà - Impiegu di Google Translate cù OmegaT (in inglese)
+     iceni_infix: Cumufà - Traduzzione di schedarii PDF cù Iceni Infix è OmegaT (in inglese)
+     linux: Cumufà - Impiegu d’OmegaT nant’à Linux (in inglese)
+     localizing_omegat: Cumufà - Traduzzione è lucalisazione d’OmegaT in a vostra lingua (in inglese)
+     ms_translator: Cumufà - Impiegu di Microsoft Translator cù OmegaT (in inglese)
+     new_filter: Cumufà - Creazione d’un novu filtru di schedariu (in inglese)
+     preview: Cumufà - Aghjuntu d’una funzione di previsualizazione (in inglese)
+     priorview: Cumufà - Utilitariu « Priorview » di previsualizazione (in inglese)
+     prop12m: Cumufà - Funzioni di prupagazione è di traduzzione multiple (in inglese)
+     spelling: Cumufà - Impiegu d’un cuntrullore d’ortugrafia (in inglese)
+     text_export: Cumufà - Impiegu di a funzione d’espurtazione di testu (in inglese)
+     tokenizer: Cumufà - Impiegu d’un analizatore lessicale (in inglese)
+
+# Platforms name
+windows_jre: Windows cù JRE
+windows_jre64b: Windows cù JRE 64-bit
+windows_nojre: Windows senza JRE
+osx_signed: OS X nutariatu
+osx_unsigned: OS X senza firma
+linux_jre: Linux cù JRE
+linux_jre64b: Linux cù JRE 64-bit
+nojre: Multi-piattaforma senza JRE
+webstart: Web Start
+source: Codice di fonte
