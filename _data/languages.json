@@ -8,6 +8,10 @@
     "enabled": true,
     "label": "Catal&#xE0;"
 }, {
+    "code": "co",
+    "enabled": true,
+    "label": "Corsu"
+}, {
     "code": "cs",
     "enabled": true,
     "label": "&#x10C;e&#x161;tina"
@@ -115,4 +119,5 @@
     "code": "zh_TW",
     "enabled": true,
     "label": "&#x7E41;&#x9AD4;&#x4E2D;&#x6587;"
-}]
+}]
+
