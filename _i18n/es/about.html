@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="text-md-center">
+  <h3>Autores del contenido del sitio web</h3>
+  <ul class="list-unstyled">
+    
+    {% for author in site.data.credits.website %}
+      
+      <li>{{ author }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+
+  <h3>Diseño del sitio web</h3>
+  <ul class="list-unstyled">
+    <li>Briac Pilpré</li>
+  </ul>
+
+  
+
+  {% if site.lang != "en" %}
+  
+  <h3>Traducciones de la versión en inglés</h3>
+  <ul class="list-unstyled">
+    
+    {% for translator in site.data.credits.translators[site.lang] %}
+      
+      <li>{{ translator }}</li>
+    
+    {% endfor %}
+  
+  </ul>
+  
+  {% endif %}
+  
+  </div>
+
+  <h2>El proyecto OmegaT</h2>
+  <p>El proyecto OmegaT es mantenido por un grupo informal e internacional de voluntarios. Su objetivo es desarrollar, distribuir y dar soporte al uso de OmegaT, un programa de memorias de traducción de código abierto.</p>
+  <p>Ls miembros principales del proyecto son:</p>
+  <div class="text-md-center">
+    <h3>Autor original de la aplicación OmegaT</h3>
+    <p>Keith Godfrey</p>
+    <h3>Administrador de proyecto</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Desarrollador jefe</h3>
+    <p>Alex Buloichik</p>
+    <h3>Administrador de integración</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Administrador web</h3>
+    <p>Marc Prior</p>
+    <h3>Administrador de documentación</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Administrador de localización, administrador del grupo de usuarios</h3>
+    <p>Kos Ivantsov</p>
+    <h3>Desarrolladores</h3>
+    <ul class="list-unstyled">
+      
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    
+    </ul>
+  </div>
+  <p>La filosofía del proyecto está descrita <a href="philosophy.html">aquí</a>.</p>
+  <p>Desde su origen, el proyecto ha recibido el apoyo de docenas de otros colaboradores, demasiados para mencionarlos aquí, pero cuya ayuda agradecemos encarecidamente.</p>
+</div>
