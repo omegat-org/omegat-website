@@ -1,77 +1,63 @@
----
-footer:
-  connect: Connect
-  documentation: Documentation
-  omegat_project: The OmegaT Project
 global:
-  description: OmegaT is a free open-source translation memory application for professional translators written in Java.
-  title: 'OmegaT - The Free Translation Memory Tool'
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
+  title: OmegaT, 自由に使える翻訳メモリツール
+  description: OmegaT は、Java で書かれたオープンソースで自由ソフトウェアであり、翻訳プロフェッショナルのための翻訳メモリプログラムです。
+
 menu:
-  about: 貢献者
-  contact: 連絡先とサポート
-  documentation: Documentation
+  languages: 言語設定
+  about: OmegaT について
+  documentation: 文書
+  contact: 連絡先
   download: ダウンロード
-  languages: Languages
-  resources: その他のリソース
-nojre: Cross-platform without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
-source: Source code
+  resources: リソース
+  support: サポート
+
+footer:
+  connect: つながる
+  omegat_project: OmegaT プロジェクト
+  documentation: 文書
+
 titles:
-  404: Page Not Found
-  3rd_party: 関連プログラム
-  about: 貢献者
+  404: ページが見つかりません
+  about: OmegaT について
   contact: 連絡先とサポート
-  documentation: Documentation
+  support: サポート
+  documentation: 文書
   download: ダウンロード
-  home: 'OmegaT - The Free Translation Memory Tool'
-  howto: How-To
-  howtos:
-    compatibility: Compatibility
-    compatibility_deja_vu: 'Howto - OmegaT compatibility with Déjà Vu'
-    compiling_from_source: 'Howto - Compiling OmegaT from the source code'
-    docx: 'Howto - Translating Word 2007 files in OmegaT'
-    export_uncleaned_rtf: "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format"
-    google_translate: 'Howto - Using Google Translate in OmegaT'
-    iceni_infix: 'Howto - Translating PDF files with Iceni Infix and OmegaT'
-    linux: OmegaT on Linux HowTo
-    localizing_omegat: 'Howto - Translating OmegaT into your language'
-    ms_translator: 'Howto - Using Microsoft Translator in OmegaT'
-    new_filter: 'Howto - Creating a new file filter'
-    preview: 'Howto - Adding a preview function to OmegaT'
-    priorview: 'Howto - The "Priorview" preview utility'
-    prop12m: Propagation and one-to-many matching HowTo
-    spelling: 'Howto - Spellchecking'
-    text_export: 'Howto - Using the OmegaT text export function (scripting interface)'
-    tokenizer: 'Howto - Using the OmegaT tokenizer'
-  howtos/compatibility: OmegaT 技術情報：OmegaT の互換性
-  howtos/compatibility_deja_vu: OmegaT 技術情報：Déjà Vu との互換性
-  howtos/compiling_from_source: OmegaT 技術情報：<br/>OmegaT のソースコードからのコンパイル
-  howtos/docx: OmegaT 技術情報：<br/>Word 2007（Office Open XML、.docx）ファイルを OmegaT で翻訳
-  howtos/export_uncleaned_rtf: OmegaT 技術情報：<br/>OmegaT から「Trados uncleaned RTF」形式へのエクスポート
-  howtos/google_translate: OmegaT 技術情報：<br/>OmegaT で Google Translate を使用
-  howtos/google_translate_ja: OmegaT 技術情報：<br/>OmegaT で Google Translate を使用
-  howtos/iceni_infix: 技術情報：Iceni Infix と OmegaT を使って PDF ファイルを翻訳
-  howtos/linux: OmegaT 技術情報：Linux
-  howtos/new_filter: 技術情報：新しいファイルフィルターの作成
-  howtos/preview: 技術情報：OmegaT へのプレビュー機能の追加
-  howtos/priorview: 技術情報：プレビューユーティリティー Priorview
-  howtos/prop12m: 技術情報：翻訳自動反映と複数訳文
-  howtos/spelling: OmegaT 技術情報：綴り確認
-  howtos/text_export: OmegaT 技術情報：<br/>OmegaT のテキスト出力機能（外部スクリプト向け）の使用
-  index: OmegaT とは
-  involved: あなたにできること
-  manual: Manual
+  home: OmegaT, 自由に使える翻訳メモリツール
   philosophy: 理念
-  requirements: 要件
-  resources: その他のリソース
-  reviews: OmegaT のレビュー
-  screenshots: スクリーンショット
+  resources: リソース
+  manual: 取扱説明書
+  tutorials: 手引書
+  howto: ハウツー
+  reviews: レビュー
   sponsorship: 資金援助
-  tutorials: Tutorials
+  howtos:
+     compatibility: 互換性
+     compatibility_deja_vu: Howto - OmegaT と Déjà Vu との互換性
+     compiling_from_source: Howto - OmegaT をソースコードからコンパイルする
+     docx: Howto - Word 2007 ファイルを OmegaT に翻訳する
+     export_uncleaned_rtf: Howto - OmegaT から「Trados uncleaned RTF」フォーマットへのエクスポート
+     google_translate: Howto - Google Translate を OmegaT で利用する
+     iceni_infix: Howto - Iceni infixとOmegaTによるPDFファイルの翻訳
+     linux: Linux上のOmegaT 技術情報
+     localizing_omegat: Howto - OmegaT をご使用の言語に翻訳する
+     ms_translator: Howto - Microsoft Translator を OmegaT で利用する
+     new_filter: Howto-新しいファイルフィルターを作成する
+     preview: Howto - OmegaT へプレビュー機能を追加する
+     priorview: Howto - 「Priorview」プレビュー・ユーティリティーを利用する
+     prop12m: 技術情報：翻訳自動反映と複数訳文
+     spelling: Howto - スペルチェック
+     text_export: Howto - OmegaT のテキスト出力機能（外部スクリプト向け）を利用する
+     tokenizer: Howto - OmegaT トークナイザーを使用する
+
+# Platforms name
+windows_jre: Windows (JRE付き)
+windows_jre64b: Windows (64-bit, JRE付き)
+windows_nojre: Windows (JRE無し)
+osx_signed: OS X(認証済み)
+osx_unsigned: OS X (未署名)
+linux_jre: Linux (JRE付き)
+linux_jre64b: Linux (64-bit、 JRE付き)
+nojre: クロスプラットフォーム(JRE無し)
 webstart: Web Start
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
+source: ソースコード
