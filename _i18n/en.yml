@@ -44,7 +44,6 @@ titles:
      ms_translator: Howto - Using Microsoft Translator in OmegaT
      new_filter: Howto - Creating a new file filter
      preview: Howto - Adding a preview function to OmegaT
-     priorview: Howto - The "Priorview" preview utility
      prop12m: Propagation and one-to-many matching HowTo
      spelling: Howto - Spellchecking
      text_export: Howto - Using the OmegaT text export function (scripting interface)
