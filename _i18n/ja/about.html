@@ -1,101 +1,49 @@
 <div class="container">
-		
-<h2>貢献者</h2>
-		
-<h3>このサイトについて</h3>
-		
-<p>このサイトは、OmegaT プロジェクトを代表して以下のメンバーが管理しています。</p>
 
-<table>
-		<tbody>
-    <tr>
+  <h2>OmegaT プロジェクト</h2>
+  <p>OmegaT プロジェクトは、非公式の国際ボランティアグループにより維持されています。その目的は、オープンソース翻訳メモリプログラムである OmegaT の開発、配布、利用支援を行うことです。</p>
+  <p>プロジェクトの主要メンバー：</p>
+  <div class="text-md-center">
+    <h3>OmegaT ソフトウェアの原著者</h3>
+    <p>Keith Godfrey</p>
+    <h3>プロジェクトマネージャー</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>開発リーダー</h3>
+    <p>Alex Buloichik</p>
+    <h3>統合マネージャー</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Webサイトマネージャー</h3>
+    <p>Briac Pilpré</p>
+    <h3>文書マネージャー</h3>
+    <p>Vincent Bidaux</p>
+    <h3>地域化マネージャー兼ユーザーグループオーナー</h3>
+    <p>Kos Ivantsov</p>
+    <h3>開発者</h3>
+    <ul class="list-unstyled">
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 
-      <td>この言語版：</td>
+  <div class="text-md-center">
+    <h3>Webサイトのコンテンツ作成者</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
 
-      <td><a href="https://groups.google.com/forum/#!forum/omegat-doc-ja">OmegaT 日本語化チーム</a></td>
+    {% if site.lang != "en" %}
+    <h3>英日翻訳者</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
 
-    </tr>
-
-  </tbody>
-
-</table>
-
-<p/>
-
-<h3>OmegaT プロジェクト</h3>
-
-<p>OmegaT プロジェクトは、非公式の国際ボランティアグループにより維持されています。その目的は、オープンソース翻訳メモリプログラムである OmegaT の開発、配布、利用支援を行うことです。</p>
-
-<p>プロジェクトの主要メンバー：</p>
-
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Keith Godfrey</td>
-
-      <td>OmegaT ソフトウェアの原著者</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Aaron Madlon-Kay</td>
-
-      <td>開発マネージャー</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Alex Buloichik</td>
-
-      <td>開発リーダー</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Marc Prior</td>
-
-      <td>プロジェクトコーディネーター兼ウェブサイトマネージャー</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Vincent Bidaux</td>
-
-      <td>文書マネージャー</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Kos Ivantsov</td>
-
-      <td>地域化マネージャー兼ユーザーグループオーナー</td>
-
-    </tr>
-
-    <tr>
-
-      <td>開発者</td>
-
-      <td>Keith Godfrey、Zoltan Bartko、Volker Berlin、Didier Briel、Kim Bruning、Alex Buloichik、Thomas Cordonnier、Sandra Jean Chua、Martin Fleurke、Wildrich Fourie、Phillip Hall、Jean-Christophe Helary、Thomas Huriaux、Hans-Peter Jacobs、Kyle Katarn、Piotr Kulik、Ibai Lakunza Velasco、Guido Leenders、Aaron Madlon-Kay、Fabián Mandelbaum、John Moran、Maxym Mykhalchuk、Arno Peters、Henry Pijffers、Briac Pilpré、Tiago Saboga、Andrzej Sawuła、Benjamin Siband、Yu Tang、Rashid Umarov、Antonio Vilei、Martin Wunderlich、Michael Zakharov</td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-
-<p>プロジェクトの理念は<a href="philosophy.html">こちら</a>に書かれています。</p>
-<p>プロジェクト発足時から、ほかにここに書ききれないほど多くの方々から支援をいただきました。皆様の助力に深く感謝します。<br/>
-
-</p>
-
+  <p>プロジェクトの理念は<a href="philosophy.html">こちら</a>に書かれています。</p>
+  <p>プロジェクト発足時から、ほかにここに書ききれないほど多くの方々から支援をいただきました。皆様の助力に深く感謝します。</p>
 </div>
-

@@ -1,367 +1,143 @@
 <div class="container">
-	
-<h2>文書</h2>
-
-<h3>取扱説明書</h3>
-
-
-
-
-<p>OmegaT には、総合的な取扱説明書が付いています。OmegaT の中で取扱説明書を参照するには、メニューから［ヘルプ］→［取扱説明書...］を選ぶか、F1 キーを押します。</p>
-
-<p>お手軽スタートガイドは、OmegaT の主要機能とその使い方を紹介するもので、OmegaT を起動すると最初に表示されます。</p>
-
-<p>取扱説明書は、OmegaT を起動していないときでも参照することができます。OmegaT のプログラムフォルダー配下の「docs」フォルダーを開いてください。</p>
-
-<table>
-
+  <h3 id="manual">取扱説明書</h3>
+  <p>OmegaT には、総合的な取扱説明書が付いています。OmegaT の中で取扱説明書を参照するには、メニューから［ヘルプ］→［取扱説明書...］を選ぶか、F1 キーを押します。</p>
+  <p>お手軽スタートガイドは、OmegaT の主要機能とその使い方を紹介するもので、OmegaT を起動したときにデフォルトで表示されます。</p>
+  <p>取扱説明書は、OmegaT を起動していないときでも参照することができます。OmegaT のプログラムフォルダー配下の「docs」フォルダーを開いてください。</p>
+  <table class="table">
     <tr>
-
-      <td><?php $link='<a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%20'.$standard_name.'/OmegaT_documentation_en.PDF/download"
->'; $endlink='</a>';?> <?php echo $link ?>オンラインの取扱説明書<?php echo $endlink ?></td>
-
-		<td>PDF 形式の取扱説明書です（OmegaT バージョン <?php echo $standard_name ?> 用）。</td>
-
-		</tr>
-
-</table>
-
-
-
-<h3>手引書</h3>
-
-<p>以下の手引書をオンラインで、あるいはダウンロードして利用できます。</p>
-
-<table>
-
+      <td>
+        <a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/{{ site.data.versions.standard.name }}/OmegaT_documentation_en.PDF/download">オンライン取扱説明書j</a>
+      </td>
+      <td>PDF形式のOmegaT取扱説明書です({{ site.data.versions.standard.name }})。</td>
+    </tr>
     <tr>
-
-      <td><a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">初心者向け手引書</a></td>
-
-		<td>Susan Welsh 著（OpenDocument Format）</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">初心者向け手引書</a></td>
-
+      <td>
+        <a href="https://omegat.sourceforge.io/manual-standard/">HTML版オンライン取扱説明書</a>
+      </td>
+      <td>OmegaT 通常版の HTML 版取扱説明書です。</td>
+    </tr>
+  </table>
+  <h3 id="tutorials">手引書</h3>
+  <p>以下の手引書をオンラインで、あるいはダウンロードして利用できます。</p>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">初心者向け手引書</a>
+      </td>
+      <td>Susan Welsh 著（OpenDocument Format）</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">初心者向け手引書</a>
+      </td>
       <td>Susan Welsh 著（PDF 形式）。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://wiki.impressive-media.de/doc/schnelles-und-effizientes-%C3%BCbersetzen-mit-omegat-statt-poedit">Schnelles und effizientes Übersetzen mit OmegaT</a></td>
-
-      <td>OmegaT 使い方の手ほどき、Thomas Zahreddin および Eugen Mayer 著（ドイツ語）</td>
-
-</tr>
-
-
-</table>
-
-
-
-<h3>技術情報</h3>
-
-<p>OmegaT の機能とその使い方に関する技術情報です。内容は高度なものから初心者向けまでさまざまですが、取扱説明書で触れていない話題を扱っています。</p>
-
-<table>
-
+    </tr>
     <tr>
-
-      <td></td>
-
-		<td><strong>互換性について</strong></td>
-
-		</tr>
-
+      <td>
+        <a href="https://blog.wtigga.com/omegat/">В помощь переводчику: 10 советов по OmegaT</a>
+      </td>
+      <td>Vladimir Zhdanov 著（ロシア語）</td>
+    </tr>
     <tr>
+      <td>
+        <a href="https://www.multitude.trd.br/omegat-2/">Recursos do OmegaT: primeiros passos</a>
+      </td>
+      <td>Sheila Gomes 著（ブラジルのポルトガル語）</td>
+    </tr>
 
-      <td><a href="howtos/compatibility">OmegaT の互換性</a></td>
-
-		<td>OmegaT と、いくつかのプログラムとの互換性について説明しています。さらに詳しい個別の技術情報へのリンクがあります。</td>
-
-		</tr>
-
+  </table>
+  <h3>外部の文書</h3>
+  <p>外部サイトで公開されている技術情報です。比較的高度な話題を扱っています。</p>
+  <table class="table">
     <tr>
-
-      <td><a href="howtos/docx">docx ファイルとの互換性</a></td>
-
-		<td>OmegaT と、Microsoft Office 2007（特に Word 2007）形式ファイルとの互換性について説明しています。</td>
-
-		</tr>
-
-
-    <tr>
-
-      <td><a href="howtos/compatibility_deja_vu">Déjà Vu との互換性</a></td>
-
-		<td>OmegaT と Déjà Vu との互換性について説明しています。</td>
-
-		</tr>
-
-
-    <tr>
-
-      <td><a href="howtos/export_uncleaned_rtf">Uncleaned RTF</a></td>
-
-		<td>OmegaT で、Trados のバイリンガル（Uncleaned）RTF ファイルを取り扱う方法について説明しています。</td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/iceni_infix">Iceni Infix</a></td>
-
-		<td>OmegaT で、Iceni Infix を介して PDF ファイルを翻訳する方法について説明しています。</td>
-
-		</tr>
-
-    <tr>
-
-      <td></td>
-
-		<td><strong>機能について</strong></td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/spelling">綴り確認</a></td>
-
-      <td>OmegaT の綴り確認機能について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/prop12m">翻訳自動反映と複数訳文</a></td>
-
-      <td>OmegaT の翻訳自動反映と複数訳文機能について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/google_translate">Google Translate</a></td>
-
-      <td>OmegaT で Google Translate を使う方法について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/ms_translator">Microsoft Translator</a></td>
-
-      <td>Microsoft Translator を使うための設定について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/preview">プレビュー</a></td>
-
-      <td>OmegaT に訳文ファイルのプレビュー機能を設置する方法について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td></td>
-
-		<td><strong>高度な機能について</strong></td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/tokenizer">OmegaT トークナイザープラグイン</a></td>
-
-      <td>OmegaT の用語集と参考訳文を、単語の語尾変化に対応させます。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/text_export">OmegaT テキスト出力機能</a></td>
-
-      <td>OmegaT のテキスト出力機能（外部スクリプト向け）の使い方を説明しています。</td>
-
-</tr>
-
-    <tr>
-
-      <td></td>
-
-		<td><strong>その他</strong></td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/compiling_from_source">OmegaT のソースコードからのコンパイル</a></td>
-
-		<td>OmegaT をソースコードからコンパイルする方法について説明しています。</td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/new_filter">新しいファイルフィルターの作成</a></td>
-
-		<td>OmegaT で翻訳対象とする新しいファイル形式のためのフィルターを作成する方法について説明しています。</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/localizing_omegat">OmegaT の地域化</a></td>
-
-      <td>OmegaT を地域化する際の管理上および技術的な手順について説明しています。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/linux">Linux での OmegaT の使用</a></td>
-
-      <td>特に Linux 初心者を対象にした情報をまとめています。</td>
-
-</tr>
-
-</table>
-
-<h3>外部の文書</h3>
-
-<p>外部サイトで公開されている技術情報です。比較的高度な話題を扱っています。</p>
-
-<table>
-
-    <tr>
-
-      <td><a href="http://translatedfiles.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT">NetBeans IDE の翻訳</a> </td>
-
+      <td>
+        <a href="https://nblocalization.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT.html">NetBeans IDE の翻訳</a>
+      </td>
       <td>OmegaT を使って NetBeans IDE を地域化する方法。</td>
-
     </tr>
-
     <tr>
-
-      <td><a href="http://www.magentocommerce.com/wiki/how_to_translate_magento_using_omegat_software">Magento の翻訳</a> </td>
-
+      <td>
+        <a href="http://www.magenshop.com/magento-wiki/how-to-translate-magento-using-omegat-software.html">Magento の翻訳</a>
+      </td>
       <td>OmegaT を使って Magento を地域化する方法。</td>
-
     </tr>
-
     <tr>
-
-      <td><a href="http://wpml.org/documentation/translating-your-contents/using-desktop-cat-tools/translating-wordpress-xliff-files-in-omegat/">WordPress XLIFF ファイルの翻訳</a> </td>
-
+      <td>
+        <a href="http://wpml.org/documentation/translating-your-contents/using-desktop-cat-tools/translating-wordpress-xliff-files-in-omegat/">WordPress XLIFF ファイルの翻訳</a>
+      </td>
       <td>OmegaT を使って、WordPress から出力した XLIFF ファイルを地域化する方法。</td>
-
     </tr>
-
     <tr>
-
-		<td><a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">Rainbow と OmegaT による翻訳</a></td>
-
-		<td>Rainbow の Text Extraction と Text Merging ユーティリティーを使って、OmegaT で翻訳するファイルの前処理や後処理を行う方法を、順を追って説明しています。これらのユーティリティーは、OmegaT が未対応のファイル形式と、OmegaT が対応している XLIFF 形式との間で、変換を行います。</td>
-
+      <td>
+        <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">Rainbow と OmegaT による翻訳</a>
+      </td>
+      <td>Rainbow の Text Extraction と Text Merging ユーティリティーを使って、OmegaT で翻訳するファイルの前処理や後処理を行う方法を、順を追って説明しています。これらのユーティリティーは、OmegaT が未対応のファイル形式と、OmegaT が対応している XLIFF 形式との間で、変換を行います。</td>
     </tr>
-
-</table>
-
-
-<h3>トレーニングビデオ</h3>
-
-<table>
-
+  </table>
+  <h3>トレーニングビデオ</h3>
+  <table class="table">
     <tr>
-
-      <td><a href="http://www.youtube.com/playlist?list=PLFED193FA64E53D60">OmegaT のビデオリスト</a></td>
-
-		<td>Qabiria YouTube チャンネルの OmegaT ビデオ集です。</td>
-
+      <td>
+        <a href="http://www.youtube.com/playlist?list=PLFED193FA64E53D60">OmegaT のビデオリスト</a>
+      </td>
+      <td>Qabiria YouTube チャンネルの OmegaT ビデオ集です。</td>
     </tr>
-
     <tr>
-
-      <td><a href="http://www.youtube.com/watch?v=iakqcUvRsEU">OmegaT 導入手引書</a></td>
-
-		<td>John Moran による OmegaT の紹介ビデオ（英語）です。</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=waW8nXGyUBU">ビデオ１</a></td>
-
+      <td>
+        <a href="http://www.youtube.com/watch?v=iakqcUvRsEU">OmegaT 導入手引書</a>
+      </td>
+      <td>John Moran による OmegaT の紹介ビデオ（英語）です。</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=waW8nXGyUBU">ビデオ１</a>
+      </td>
       <td>Miguel Navarro による YouTube OmegaT シリーズより（スペイン語）。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=9oRsBcRXflE">ビデオ２</a></td>
-
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=9oRsBcRXflE">ビデオ２</a>
+      </td>
       <td>Miguel Navarro による YouTube OmegaT シリーズより（スペイン語）。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=8m2_R6L84PE">ビデオ３</a></td>
-
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=8m2_R6L84PE">ビデオ３</a>
+      </td>
       <td>Miguel Navarro による YouTube OmegaT シリーズより（スペイン語）。</td>
-
-</tr>
-
-</table>
-
-
-<h3>書籍</h3>
-
-<table>
-
-
-
-<tr>
-
-      <td><a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager">Guida completa a OmegaT: tecniche, trucchi e consigli per traduttori e project manager</a></td>
-
+    </tr>
+  </table>
+  <h3>書籍</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager">Guida completa a OmegaT: tecniche, trucchi e consigli per traduttori e project manager</a>
+      </td>
       <td>Marco Cevoli と Sergio Alasia の共著（イタリア語）。</td>
-
-</tr>
-
-</table>
-
-<h3>ブログ</h3>
-
-<table>
-
-<tr>
-
-      <td><a href="http://www.velior.ru/blog/en/tag/omegat/">Velior の会社ブログ<br/>翻訳と<br/>翻訳業界について</a></td>
-
+    </tr>
+  </table>
+  <h3>トレーニング</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://qabiria.com/s/learnomegat">自己学習型オンライントレーニングコース(英語)(有料)</a>
+      </td>
+      <td>Marco Cevoli と Sergio Alasia の共著</td>
+    </tr>
+  </table>
+  <h3>ブログ</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://www.velior.ru/tag/omegat/">Velior の会社ブログ<br/>翻訳と<br/>翻訳業界について</a>
+      </td>
       <td>OmegaT に関するブログカテゴリー（英語）。</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.velior.ru/blog/ru/tag/omegat/">Velior の会社ブログ<br/>翻訳と<br/>翻訳業界について</a></td>
-
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.velior.ru/blog/ru/tag/omegat/">Velior の会社ブログ<br/>翻訳と<br/>翻訳業界について</a>
+      </td>
       <td>OmegaT に関するブログカテゴリー（ロシア語）。</td>
-
-</tr>
-
-</table>
-
-
-
-
-	</div>
-
+    </tr>
+  </table>
+</div>
