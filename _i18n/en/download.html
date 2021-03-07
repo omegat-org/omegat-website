@@ -1,5 +1,5 @@
 <div class="container">
-		
+
 <p class="lead">Links are provided below to the various versions of OmegaT. If
 you are confused about which version to download, you can use the <a
 href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
@@ -124,9 +124,9 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
         <p>Based on your choices, we recommand you use:</p>
         <h3><a id="wizard-result-version" href="#">some version</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Download</a>
-	
+
         <div id="wizard-result-osx" style="display:none;">
-          <p>If this version is not available, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p> 
+          <p>If this version is not available, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p>
         </div>
       </div>
     </div>
@@ -164,7 +164,7 @@ then OmegaT is probably not suitable for you.</p>
 		<span>Have you considered donating to OmegaT? Even though this software is free, if you find OmegaT useful and would like to express your gratitude, you can make a donation on our Paypal account.</span>
 
 		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
-		
+
 		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
 			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
 			<input type="hidden" name="cmd" value="_donations">
@@ -304,34 +304,36 @@ space on your hard drive. In this case, do not select the Default version; selec
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
-<h4 id="about_signing">Signed/Unsigned</h4>
+<h4 id="about_signing">Notarized vs Unsigned</h4>
 
-<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
+<p>macOS tries to increase security by making it difficult to run unverified programs.</p>
 
-<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
+<p>OmegaT for macOS is available in both Notarized and Unsigned versions; they are functionally identical, but the Notarized version is preferred as it is recognized by the system as being a) published by a known developer, and b) scanned by Apple.</p>
+
+<p>There may be a delay in publishing the Notarized version. Users in a hurry can use the Unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing_unsigned">Signed/Unsigned</h4>
+<h4 id="about_signing">Notarized vs Unsigned</h4>
 
-<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
+<p>macOS tries to increase security by making it difficult to run unverified programs.</p>
 
-<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
+<p>OmegaT for macOS is available in both Notarized and Unsigned versions; they are functionally identical, but the Notarized version is preferred as it is recognized by the system as being a) published by a known developer, and b) scanned by Apple.</p>
+
+<p>There may be a delay in publishing the Notarized version. Users in a hurry can use the Unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
 </div>
 
 <div id="popover_content_webstart" style="display:none">
       <p>The Web Start version offers an alternative means of installing OmegaT on your computer.</p>
       <p>With this version, future updates will be installed automatically.</p>
       <p>During installation, depending on your operating system, you may
-      receive several security warnings.<br/>The certificate is signed by <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, a
-      French registered company.</p>
+      receive several security warnings.<br/>The certificate is signed by OmegaT's lead developer.</p>
       <p>The permissions you give to this version (which may be described as
       "unrestricted access to the computer") are no different from the
       permissions you assign to the local version, i.e., an access to the hard
       drive of your computer.</p>
       <p>In order to install the Web start version, you must already have Java
-      version 1.3 or later installed on your computer.</p>
+      version 1.8 or later installed on your computer.</p>
       <p>Privacy information: OmegaT Java Web Start does not save any of your
       information to OmegaT's web servers. The application runs on your
       machine. Your documents and translation memories remain on your computer,
@@ -348,7 +350,7 @@ space on your hard drive. In this case, do not select the Default version; selec
 </div>
 
 <div id="popover_content_nightly" style="display:none">
-  <p>Periodic builds are available on Sourceforge.</p>
+  <p>Periodic builds are available on SourceForge.</p>
 </div>
 
 <div id="popover_content_source" style="display:none">
@@ -357,4 +359,3 @@ space on your hard drive. In this case, do not select the Default version; selec
     versions.</p>
 </div>
 </div>
-
