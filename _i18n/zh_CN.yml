@@ -44,7 +44,6 @@ titles:
      ms_translator: 指南：在 OmegaT 中使用 Microsoft Translator
      new_filter: 指南：创建新的文件过滤器
      preview: 指南：给 OmegaT 添加预览功能
-     priorview: 指南：“Priorview”预览工具
      prop12m: 翻译传播和一对多匹配指南
      spelling: 指南：拼写检查
      text_export: 指南：使用 OmegaT 文本导出功能 (脚本界面)
@@ -54,8 +53,8 @@ titles:
 windows_jre: Windows，带 JRE
 windows_jre64b: Windows，带 64 位 JRE
 windows_nojre: Windows，不带 JRE
-osx_signed: OS X，已公证
-osx_unsigned: OS X，未签名
+osx_signed: macOS，已公证
+osx_unsigned: macOS，未签名
 linux_jre: Linux，带 JRE
 linux_jre64b: Linux，带 64 位 JRE
 nojre: 跨平台，不带 JRE
