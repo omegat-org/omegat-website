@@ -1,6 +1,6 @@
 global:
-  title: OmegaT - Das freie Translation-Memory-Werkzeug
-  description: OmegaT ist eine freie, in Java geschriebene OpenSource Translation Memory-Anwendung für professionelle Übersetzer.
+  title: OmegaT - Das kostenlose Translation-Memory-Tool
+  description: OmegaT ist eine kostenlose, in Java geschriebene Open-Source-Translation-Memory-Anwendung für professionelle Übersetzer.
 
 menu:
   languages: Sprachen
@@ -9,9 +9,10 @@ menu:
   contact: Kontakt
   download: Download
   resources: Ressourcen
+  support: Support
 
 footer:
-  connect: Verbinden
+  connect: Social Media
   omegat_project: Das OmegaT-Projekt
   documentation: Dokumentation
 
@@ -19,43 +20,43 @@ titles:
   404: Seite nicht gefunden
   about: Über
   contact: Kontakt und Support
+  support: Support
   documentation: Dokumentation
   download: Download
-  home: OmegaT - Das freie Translation-Memory-Werkzeug
+  home: OmegaT - Das kostenlose Translation-Memory-Tool
   philosophy: Philosophie
   resources: Ressourcen
-  manual: Handbuch
+  manual: Bedienungsanleitung
   tutorials: Tutorials
-  howto: HowTo
+  howto: Anleitung
   reviews: Bewertungen
   sponsorship: Sponsoring
   howtos:
      compatibility: Kompatibilität
-     compatibility_deja_vu: HowTo - OmegaT-Kompatibilität mit Déjà Vu
-     compiling_from_source: HowTo - OmegaT aus dem Quellcode kompilieren
-     docx: HowTo - Word 2007-Dateien in OmegaT übersetzen
-     export_uncleaned_rtf: HowTo - aus OmegaT ins "Trados unbereinigtes RTF"-Format exportieren
-     google_translate: HowTo - Google Translate in OmegaT benutzen
-     iceni_infix: HowTo - PDF-Dateien mit Iceni Infix und OmegaT übersetzen
-     linux: HowTo - OmegaT auf Linux
-     localizing_omegat: HowTo - OmegaT in Ihre Sprache übersetzen
-     ms_translator: HowTo - Microsoft Translator in OmegaT benutzen
-     new_filter: HowTo - einen neuen Dateifilter erstellen
-     preview: HowTo - eine Vorschaufunktion zu OmegaT hinzufügen
-     priorview: HowTo - das "Priorview"-Vorschauwerkzeug
-     prop12m: HowTo - Propagierung und Eins-zu-viele-Abgleich
-     spelling: HowTo - Rechtschreibprüfung
-     text_export: Howto - die OmegaT Textexport-Funktion benutzen (Skripts)
-     tokenizer: Howto - den OmegaT-Tokenizer benutzen
+     compatibility_deja_vu: Anleitung - OmegaT-Kompatibilität mit Déjà Vu
+     compiling_from_source: Anleitung - OmegaT anhand des Quellcodes kompilieren
+     docx: Anleitung - Word-2007-Dateien in OmegaT übersetzen
+     export_uncleaned_rtf: Anleitung - Exportieren von OmegaT in das Format 'Trados uncleaned RTF'
+     google_translate: Anleitung - Google Translate in OmegaT benutzen
+     iceni_infix: Anleitung - PDF-Dateien mit Iceni Infix und OmegaT übersetzen
+     linux: Anleitung - OmegaT auf Linux
+     localizing_omegat: Anleitung - OmegaT in Ihre Sprache übersetzen
+     ms_translator: Anleitung - Microsoft Translator in OmegaT benutzen
+     new_filter: Anleitung - Einen neuen Dateifilter erstellen
+     preview: Anleitung - Eine Vorschaufunktion zu OmegaT hinzufügen
+     prop12m: Anleitung - Propagation und One-to-many-Abgleich
+     spelling: Anleitung - Rechtschreibprüfung
+     text_export: Anleitung - Die OmegaT-Textexportfunktion verwenden (Scripting-Schnittstelle)
+     tokenizer: Anleitung - Den OmegaT-Tokenizer benutzen
 
 # Platforms name
 windows_jre: Windows mit JRE
-windows_jre64b: Windows mit 64-bit JRE
+windows_jre64b: Windows mit 64-Bit-JRE
 windows_nojre: Windows ohne JRE
-osx_signed: OS X signiert
-osx_unsigned: OS X unsigniert
+osx_signed: macOS Notarisiert
+osx_unsigned: macOS Unsigniert
 linux_jre: Linux mit JRE
-linux_jre64b: Linux mit 64-bit JRE
+linux_jre64b: Linux mit 64-Bit-JRE
 nojre: Plattformübergreifend ohne JRE
-webstart: Webstart
+webstart: Web Start
 source: Quellcode
