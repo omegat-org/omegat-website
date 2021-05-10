@@ -1,5 +1,5 @@
 <div class="container">
-		
+
 <p class="lead">Alla on linkkejö OmegaT:n eri versioihin. Jos et oikein tiedä, minkä version tarvitset, käytä <a
 href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 
@@ -54,13 +54,13 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="other" name="optOS"/>Muu</label>
-          <p>Muihin käyttöjärjestelmiin (esim. FreeBSD ja Solaris) sopiva asennus.<br/> <i>OmegaT:n voi asentaa mihin tahansa käyttöjärjestelmään, jossa Java Runtime Environment 1.6 toimii.</i></p>
+          <p>Muihin käyttöjärjestelmiin (esim. FreeBSD ja Solaris) sopiva asennus.<br/> <i>OmegaT:n voi asentaa mihin tahansa käyttöjärjestelmään, jossa Java Runtime Environment 1.8 toimii.</i></p>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-jre">
         <p class="with-windows-jre" style="display:none;">Valitse, lataatko OmegaT:n ilman Java Runtime Environmentia (JRE) vai sen kanssa. Jos Windows-koneellasi on jo sopiva JRE, valitse versio ilman JRE:tä. Jos sitä ei ole tai et ole varma, valitse versio, jossa on JRE.</p>
         <div class="with-linux-jre" style="display:none;">
-          <p>Tavallisesti OmegaT toimii kaikissa Linux-järjestelmissä, joihin voi asentaa sopivan Java Runtime Environment (JRE) -version. Tällä hetkellä OmegaT vaatii JRE-version 1.6 tai uudemman. Voit tarkistaa, mikä JRE Linuxissasi on tai onko sitä ollenkaan kirjoittamalla konsoliin (komentoikkunaan):</p>
+          <p>Tavallisesti OmegaT toimii kaikissa Linux-järjestelmissä, joihin voi asentaa sopivan Java Runtime Environment (JRE) -version. Tällä hetkellä OmegaT vaatii JRE-version 1.8 tai uudemman. Voit tarkistaa, mikä JRE Linuxissasi on tai onko sitä ollenkaan kirjoittamalla konsoliin (komentoikkunaan):</p>
           <pre>$ <strong>java -version</strong></pre>
           <p>Jos et ole varma, onko järjestelmässäsi sopivaa JRE:tä, voit tallentaa ja asentaa OmegaT-version, jossa on JRE. Tätä JRE-versiota on turvallista käyttää, sillä se toimii ainoastaan paikallisessa OmegaT:ssä eikä aiheuta ristiriitaa muiden JRE-asennusten kanssa tai korvaa tai poista niitä.</p>
         </div>
@@ -92,9 +92,9 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
         <p>Valintojesi perusteella sinulle näyttää sopivan parhaiten:</p>
         <h3><a id="wizard-result-version" href="#">joku versio</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Lataa</a>
-	
+
         <div id="wizard-result-osx" style="display:none;">
-          <p>Jos tätä versiota ei ole saatavilla, voit yrittää <a href="#" id="wizard-result-unsigned">ladata version, jossa ei ole allekirjoitusta</a>.</p> 
+          <p>Jos tätä versiota ei ole saatavilla, voit yrittää <a href="#" id="wizard-result-unsigned">ladata version, jossa ei ole allekirjoitusta</a>.</p>
         </div>
       </div>
     </div>
@@ -109,9 +109,9 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 <p>Microsoft Officen XML-muotoisia tiedostoja voi kääntää suoraan OmegaT:ssä. Vanhemmat MS Word-, Excel- ja Powerpoint-tiedostot täytyy ennen kääntämistä muuttaa vastaaviin nykyisiin Microsoft Office -muotoihin tai Office Open XML -muotoon, jonka voi tehdä OpenOffice.orgissa tai LibreOfficessa (sielläkin vapaasti). Vasemmalta löytyvästä linkistä Kolmannen osapuolen ohjelmistot löydät OpenOffice.orgin ja LibreOfficen ja voit asentaa ne itsellesi.</p>
 
 <h4>Käyttövaatimukset</h4>
-<p>OmegaT:tä ei ole erityisemmin hankalaa asentaa tai käyttää, mutta se vaatii halun lukea ja noudattaa ohjeistusta. Jos olet vastahakoinen lukemaan ohjeita ja mieluummin painelet uuden ohjelmiston jokaista painiketta niin kauan, että saat jotakin halutun kaltaista näkyviin, OmegaT ei välttämättä sovi sinulle.</p><!-- Donation slider -->
+<p>OmegaT:tä ei ole erityisemmin hankalaa asentaa tai käyttää, mutta se vaatii halun lukea ja noudattaa ohjeistusta. Jos olet vastahakoinen lukemaan ohjeita ja mieluummin painelet uuden ohjelmiston jokaista painiketta niin kauan, että saat jotakin halutun kaltaista näkyviin, OmegaT ei välttämättä sovi sinulle.</p>
 
-
+<!-- Donation slider -->
 <div class="donation-section section">
 	<div class="donation-call">
 		<h3>Ennen kuin jatkat</h3>
@@ -119,7 +119,7 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 		<span>Oletko miettinyt lahjoitusta OmegaT-projektille? Vaikka OmegaT on ilmainen, mutta ohjelma on mielestäsi hyödyllinen ja haluat kiittää siitä, voit tehdä lahjoituksen PayPal-tilillemme.</span>
 
 		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
-		
+
 		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
 			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
 			<input type="hidden" name="cmd" value="_donations">
@@ -129,9 +129,7 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">Lahjoita</a>
 		</form>
 	</div>
-	
 	{% asset donation.js %}
-
 </div>
 
 <h3 id="standard">Standardiversion – {{site.data.versions.standard.name}}</h3>
@@ -147,32 +145,22 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
     </tr>
   </thead>
   <tbody>
-
 {% for platform in site.data.downloads.standard.platforms %}
-  
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      
       {% if platform.noInfo != true %}
-          
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_{{ platform.name }}"></div>
-      
       {% endif %}
-      
       </td>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Lataa</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Lataa</a></td>
-      
       {% endif %}
-      
       </td>
   </tr>
-
 {% endfor %}
-  
   </tbody>
 
 </table>
@@ -190,29 +178,21 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
     </tr>
   </thead>
   <tbody>
-
 {% for platform in site.data.downloads.latest.platforms %}
- 
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      
       {% if platform.noInfo != true %}
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
       {% endif %}
-      
       </td>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Lataa</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Lataa</a></td>
-      
       {% endif %}
-      
       </td>
   </tr>
-
 {% endfor %}
-  
   </tbody>
 
 </table>
@@ -232,13 +212,13 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
   <tbody>
   <tr>
       <td>Master</td>
-      <td><!----><span rel="popover" data-platform="master" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      <td><span rel="popover" data-platform="master" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
       </td>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Lataa</a></td>
   </tr>
   <tr>
       <td>Öiset käännökset</td>
-      <td><!----><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
       </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Lataa</a></td>
   </tr>
   </tbody>
@@ -262,28 +242,31 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
-<h4 id="about_signing">Allekirjoitettu/allekirjoittamaton</h4>
+<h4 id="about_signing">Mitä eroa on Notarized- ja Unsigned-ohjelmilla?</h4>
 
-<p>Gatekeeper on macOS:n ominaisuus, joka tekee allekirjoittamattomien ohjelmien ajamisesta vaikeaa ja parantaa näin turvallisuutta. OmegaT:stä on olemassa sekä allekirjoitettu että allekirjoittamaton versio Maciin. Niissä on samat toiminnot, mutta on suositeltavaa käyttää allekirjoitettua versiota, sillä järjestelmä tunnistaa sen tunnistetun kehittäjän ohjelmaksi.</p>
+<p>Mac-käyttöjärjestelmä pyrkii parantamaan turvallisuutta vaikeuttamalla vahvistamattomien ohjelmien käyttöä.</p>
 
-<p>Allekirjoitettujen versioiden julkaisu voi tapahtua viiveellä. Jos sinulla on kiire, voit käyttää allekirjoittamatonta versiota. Jos ohjelman käynnistäminen on vaikeaa, tarkista ohjeet <a href="https://support.apple.com/kb/ph14369">tunnistamattomalta kehittäjältä tulevan ohjelman asentamiseen </a>.</p>
+<p>OmegaT on saatavilla Mac-käyttöjärjestelmään sekä Notarized- että Unsigned-versiona. Niissä on täysin samat toiminnot, mutta käytettäväksi suositellaan Notarized-versiota, koska käyttöjärjestelmä tunnistaa, että a) se on tunnetun kehittäjän julkaisema ja b) Apple on skannannut sen.</p>
+
+<p>Voi kestää jonkin aikaa, ennen kuin ohjelmasta julkaistaan Notarized-versio. Jos sinulla on kiire, voit käyttää allekirjoittamatonta versiota. Jos ohjelman käynnistäminen on vaikeaa, tarkista ohjeet <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">tunnistamattomalta kehittäjältä tulevan ohjelman asentamiseen </a>.</p>
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing_unsigned">Allekirjoitettu/allekirjoittamaton</h4>
+<h4 id="about_signing">Mitä eroa on Notarized- ja Unsigned-ohjelmilla?</h4>
 
-<p>Gatekeeper on macOS:n ominaisuus, joka tekee allekirjoittamattomien ohjelmien ajamisesta vaikeaa ja parantaa näin turvallisuutta. OmegaT:stä on olemassa sekä allekirjoitettu että allekirjoittamaton versio Maciin. Niissä on samat toiminnot, mutta on suositeltavaa käyttää allekirjoitettua versiota, sillä järjestelmä tunnistaa sen tunnistetun kehittäjän ohjelmaksi.</p>
+<p>Mac-käyttöjärjestelmä pyrkii parantamaan turvallisuutta vaikeuttamalla vahvistamattomien ohjelmien käyttöä.</p>
 
-<p>Allekirjoitettujen versioiden julkaisu voi tapahtua viiveellä. Jos sinulla on kiire, voit käyttää allekirjoittamatonta versiota. Jos ohjelman käynnistäminen on vaikeaa, tarkista ohjeet <a href="https://support.apple.com/kb/ph14369">tunnistamattomalta kehittäjältä tulevan ohjelman asentamiseen </a>.</p>
+<p>OmegaT on saatavilla Mac-käyttöjärjestelmään sekä Notarized- että Unsigned-versiona. Niissä on täysin samat toiminnot, mutta käytettäväksi suositellaan Notarized-versiota, koska käyttöjärjestelmä tunnistaa, että a) se on tunnetun kehittäjän julkaisema ja b) Apple on skannannut sen.</p>
+
+<p>Voi kestää jonkin aikaa, ennen kuin ohjelmasta julkaistaan Notarized-versio. Jos sinulla on kiire, voit käyttää allekirjoittamatonta versiota. Jos ohjelman käynnistäminen on vaikeaa, tarkista ohjeet <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">tunnistamattomalta kehittäjältä tulevan ohjelman asentamiseen </a>.</p>
 </div>
 
 <div id="popover_content_webstart" style="display:none">
       <p>Web Start -versio tarjoaa vaihtoehtoisen tavan asentaa OmegaT koneellesi.</p>
       <p>Tässä versiossa tulevat päivitykset asennetaan automaattisesti.</p>
-      <p>Asennuksen aikana saatat saada useita turvallisuusvaroituksia, käyttöjärjestelmäsi riippuen.<br/>Sertifikaatin on allekirjoittanut <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, Ranskassa rekisteröity yritys.</p>
+      <p>Asennuksen aikana saatat saada useita turvallisuusvaroituksia, käyttöjärjestelmäsi riippuen.<br/>Sertifikaatin on allekirjoittanut OmegaT:n pääkehittäjä.</p>
       <p>Oikeudet, jotka annat tälle versiolle (vaikkapa "rajoittamaton tietokoneen käyttöoikeus"), ovat täsmälleen samat kuin paikallisella versiolla, eli se voi käyttää tietokoneen kovalevyä.</p>
-      <p>Koneellasi on oltava Java 1.3 tai uudempi, jotta voit asentaa Web Start -version.</p>
+      <p>Jotta voit asentaa Web Start -version, koneellasi on oltava asennettuna Java 1.8 tai tätä uudempi versio.</p>
       <p>Tietosuojatiedot: OmegaT Java Web Start ei tallenna mitään tietoja käyttäjästä OmegaT:n verkkopalvelimelle. Sovellus on käynnissä ainostaan omalla koneellasi. Käyttämäsi asiakirjat ja käännösmuistit pysyvät omalla koneellasi, eikä OmegaT-projektilla ole pääsyä työhösi tai tietoihisi.</p>
 </div>
 
@@ -301,4 +284,3 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
     <p>Tavallinen käyttäjä ei tarvitse lähdekoodipaketteja, vaan ne on tarkoitettu vain ohjelmistokehittäjille. Paketit löytyvät vastaavien käännettyjen versioiden kansioista.</p>
 </div>
 </div>
-

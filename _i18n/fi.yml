@@ -44,7 +44,6 @@ titles:
      ms_translator: Miten tämä tehdään? – Microsoft Translatorin käyttö OmegaT:ssä
      new_filter: Miten tämä tehdään? – Uuden tiedostosuodattimen luonti
      preview: Miten tämä tehdään? – Esikatselutoiminnon lisääminen OmegaT:hen
-     priorview: Miten tämä tehdään? – Priorview-esikatseluohjelma
      prop12m: Miten tämä tehdään? – Ehdotukset ja yksi–monta-osumat
      spelling: Miten tämä tehdään? – Oikeinkirjoituksen tarkistus
      text_export: Miten tämä tehdään? – OmegaT:n tekstinvientitoiminnon käyttäminen (komentosarjanäkymä)
@@ -54,8 +53,8 @@ titles:
 windows_jre: Windows, jossa on JRE
 windows_jre64b: Windows, jossa on 64-bittinen JRE
 windows_nojre: Windows ilman JRE:tä
-osx_signed: OS X Notarized
-osx_unsigned: OS X Unsigned
+osx_signed: macOS Notarized
+osx_unsigned: macOS Unsigned
 linux_jre: Linux, jossa on JRE
 linux_jre64b: Linux, jossa on 64-bittinen JRE
 nojre: Käyttöliittymästä riippumaton versio ilman JRE:tä

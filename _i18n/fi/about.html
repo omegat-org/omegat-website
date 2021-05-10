@@ -1,41 +1,5 @@
 <div class="container">
 
-  <div class="text-md-center">
-  <h3>Sivuston sisällön tekijät</h3>
-  <ul class="list-unstyled">
-    
-    {% for author in site.data.credits.website %}
-      
-      <li>{{ author }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-
-  <h3>Nettisivujen suunnittelu</h3>
-  <ul class="list-unstyled">
-    <li>Briac Pilpré</li>
-  </ul>
-
-  
-
-  {% if site.lang != "en" %}
-  
-  <h3>Suomenkielisen version kääntänyt</h3>
-  <ul class="list-unstyled">
-    
-    {% for translator in site.data.credits.translators[site.lang] %}
-      
-      <li>{{ translator }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-  
-  {% endif %}
-  
-  </div>
-
   <h2>OmegaT-projekti</h2>
   <p>OmegaT on avoimeen lähdekoodiin perustuva käännösmuistisovellus. OmegaT-projektia ylläpitää epämuodollinen ja kansainvälinen vapaaehtoisten ryhmä, jonka tarkoituksena on kehittää ja jakaa ohjelmistoa sekä tarjota tukea sen käyttöön.</p>
   <p>Projektissa pääosia näyttelevät:</p>
@@ -49,20 +13,37 @@
     <h3>Integrointikoordinaattori</h3>
     <p>Aaron Madlon-Kay</p>
     <h3>Nettisivukoordinaattori</h3>
-    <p>Marc Prior</p>
+    <p>Briac Pilpré</p>
     <h3>Dokumentaatiokoordinaattori</h3>
     <p>Vincent Bidaux</p>
     <h3>Lokalisointikoordinaattori, käyttäjäryhmän omistaja</h3>
     <p>Kos Ivantsov</p>
     <h3>Kehittäjät</h3>
     <ul class="list-unstyled">
-      
       {% for dev in site.data.contributors %}
       {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
       {% endfor %}
-    
     </ul>
   </div>
+
+  <div class="text-md-center">
+    <h3>Sivuston sisällön tekijät</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if site.lang != "en" %}
+    <h3>Suomenkielisen version kääntänyt</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+
   <p>Projektin taustalla olevaa filosofiaa kuvataan <a href="philosophy.html">täällä</a>.</p>
   <p>Projektin käynnistymisestä lähtien mukana on ollut suuri joukko tukijoita, joiden kaikkien nimiä tässä ei ole tilaa mainita. Olemme erittäin kiitollisia heidän avustaan.</p>
 </div>
