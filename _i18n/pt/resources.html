@@ -1,158 +1,212 @@
 <div class="container">
-	
-<h2>Outros recursos OmegaT</h2>
-
-
-	
-<h3>Utilities</h3>
-
-
-	
-<table>
-
-  <tbody>
-
-    <tr>
-
-      <td><a href="/files/OOoSegMacros-v0.3.txt">Macros de segmenta&ccedil;o para OpenOffice.org</a></td>
-
-
-		<td>Contribui&ccedil;o de Benjamin Siband. Permite segmentar o texto por frase em vez de ser por par&aacute;grafo.</td>
-
-    </tr>
-
-
-	<tr>
-
-	<td><a href="/files/OOoSegMacros-v0.3-README.txt">Leia-me (ReadMe)</a></td>
-
-
-		<td>Descritivo dos macros de segmenta&ccedil;o feitos por Benjamin Siband</td>
-
-
-	</tr>
-
-
-		<tr>
-
-      <td><a href="/files/strip_it">stripIT macro</a></td>
-
-
-		<td>Macro para remover etiquetas de ficheiros TMX. Contribui&ccedil;o de Sonja Tomaskovic.</td>
-
-    </tr>
-
-
-		<tr>
-
-      <td><a href="/files/aligner.zip">Utilit&aacute;rio de alinhamento</a></td>
-
-
-		<td>Contribui&ccedil;o de Dmitri Gabinski. Escrito em Python.</td>
-
-    </tr>
-
-
-		<tr>
-
-
-		</tr>
-
-    <tr>
-
-      <td><a href="/files/TMXMerger.zip">TMXMerger</a></td>
-
-      <td>Java command-line script for merging two or more TMX files. Contributed by Henry Pijffers.</td>
-
-    </tr>
-
-    <tr>
-
-      <td><a href="/files/TMXCleaner-1.0.RC1.zip">TMXCleaner</a></td>
-
-      <td>Java command-line script for removing "superfluous"
-translation units from a TMX file: deletes all TUs without target
-segment or in which the target segment is identical to the source
-segment. Contributed by Henry Pijffers.</td>
-
-    </tr>
-
-
-		<tr>
-
-
-		</tr>
-
-    <tr>
-
-      <td><a href="/files/omegatk/extspell-1.1.3.zip">Extspell</a></td>
-
-
-		<td>Extspell verificador de ortografia externo. Contribui&ccedil;o
-de Marc Prior. Necessita de tcl/tk e Aspell ( ambos Software Livre em
-todas as plataformas).</td>
-
-    </tr>
-
-
-				<tr>
-
-
-		</tr>
-
-    <tr>
-
-      <td><a href="/files/WF.zip">Conversor de ficheiro TMX do Wordfast</a></td>
-
-
-		<td>Converte mem&oacute;rias de tradu&ccedil;o em TMX (Wordfast)
-num formato aceite pelo OmegaT. Contribui&ccedil;o de Dmitri Gabinski. </td>
-
-    </tr>
-
-
-		
-  
-  </tbody>
-</table>
-
-
-	
-<h3>Recursos Diversos</h3>
-
-
-	
-<table>
-
-  <tbody>
-
-    <tr>
-
-
-		<td><a href="/files/icons.zip">&Iacute;cones</a></td>
-
-
-		<td>Selec&ccedil;o de &iacute;cones alternativos para usar com o OmegaT.</td>
-
-    </tr>
-
-
-	<tr>
-
-	<td><a href="/files/sample_texts_1.0.zip">Tetxos de amostra</a></td>
-
-
-		<td>Para testar e demonstrar o OmegaT.</td>
-
-
-	</tr>
-
-  
-  </tbody>
-</table>
-
-
-	</div>
-
-
-	
+  <h2>Outros recursos do OmegaT</h2>
+  <h3>Extensões</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Extensão Filtros Okapi</a>
+        </td>
+        <td>Fornece filtros para o tratamento de outros formatos de ficheiro, incluindo Trados TTX, e Markdown.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Extensão Apertium</a>
+        </td>
+        <td>Integra a funcionalidade de tradução automática Apertium no OmegaT.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/yoursdearboy/omegat-browser">Extensão para navegador web</a>
+        </td>
+        <td>Acesso rápido aos sítios web. O suporte a sítios web pode ser programado em Groovy.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-textra-plugin">Extensão TexTra</a>
+        </td>
+        <td>Integra o motor de tradução automática neural TexTra no OmegaT. O TexTra API é fornecido livremente pelo NICT, agência de investigação do governo japonês.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-plugin-epwing">Extensão EPWING</a>
+        </td>
+        <td>Fornece funcionalidade para ler o formato de dicionários EPWING.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Importante: as extensões listadas funcionam com o OmegaT versão 4 e superior.</p>
+  <h3>Utilitários</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/aligner.zip' | prepend: site.baseurl_root }}">Utilitário de alinhamento "Aligner"</a>
+        </td>
+        <td>Escrito em Python. Contribuição de Dmitri Gabinski.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://bligner.aligner.free.fr">Utilitário de alinhamento "Bligner"</a>
+        </td>
+        <td>Escrito em Python/Perl. Contribuição de Didier Briel.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/TMXMerger.zip' | prepend: site.baseurl_root }}">TMXMerger</a>
+        </td>
+        <td>Script de linha de comando Java para a união de dois ou mais ficheiros TMX. Contribuição de Henry Pijffers.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/TMXCleaner-1.0.RC1.zip' | prepend: site.baseurl_root }}">TMXCleaner</a>
+        </td>
+        <td>Script de linha de comando Java para remover unidades de tradução "supérfluas" de um ficheiro TMX: elimina todas as TUs sem segmento-alvo ou nas quais o segmento-alvo é idêntico ao segmento-fonte. Contribuição de Henry Pijffers.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic.zip' | prepend: site.baseurl_root }}">Toxic</a>
+        </td>
+        <td>Utilitário para conversão de ficheiros Trados TagEditor (TTX) para um formato intermédio, permitindo a sua tradução no OmegaT. Esta colecção de scripts pode ser útil para programadores com conhecimentos de tcl/tk. Outros utilizadores são aconselhados a utilizar em vez disso a extensão <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Filtros Okapi</a>. Toxic é uma contribuição de Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_windows.zip' | prepend: site.baseurl_root }}">Toxic para Windows</a>
+        </td>
+        <td>Versão Windows executável do Toxic.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_linux.zip' | prepend: site.baseurl_root }}">Toxic para Linux</a>
+        </td>
+        <td>Versão binária Linux do Toxic.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/toxic_scripts.zip' | prepend: site.baseurl_root }}">Scripts Toxic</a>
+        </td>
+        <td>Versões script do Toxic. Independentes da plataforma; requerem tcl/tk.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/stripper.zip' | prepend: site.baseurl_root }}">Stripper</a>
+        </td>
+        <td>Script para extrair texto para tradução de ficheiros de texto simples (por exemplo, código fonte informático) para tradução no OmegaT. Requer tcl/tk. Contribuição de Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/tkount.zip' | prepend: site.baseurl_root }}">TKount</a>
+        </td>
+        <td>Utilitário de contagem de texto TKount. Requer tcl/tk, Abiword e pdftotext. Foi testado em Linux. Contribuição de Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegatk/ondiloto.zip' | prepend: site.baseurl_root }}">Ondiloto</a>
+        </td>
+        <td>ONline DIctionary LOokup TOol. Requer Linux, w3m e tcl/tk (ambos geralmente fornecidos com o Linux). Contribuição de Marc Prior.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/WF.zip' | prepend: site.baseurl_root }}">Conversor de ficheiros Wordfast TMX</a>
+        </td>
+        <td>Converte memórias de tradução em formato TMX geradas pelo Wordfast para um formulário que pode ser lido pelo OmegaT. Contribuição de Dmitri Gabinski. </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Recursos diversos</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/training/translation_memory_training_course.zip' | prepend: site.baseurl_root }}">Curso de formação</a>
+        </td>
+        <td>Curso de formação OmegaT. Consiste num manual do aluno modelo com instruções aos formadores para adaptação, e exemplos de recursos.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omegat-icons.zip' | prepend: site.baseurl_root }}">Ícones</a>
+        </td>
+        <td>Selecção de ícones alternativos para utilização com o OmegaT.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/sample_texts_1.0.zip' | prepend: site.baseurl_root }}">Exemplos de textos</a>
+        </td>
+        <td>Para testar e demonstrar o OmegaT.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Recursos de localização</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">Repositório de TMX de localização</a>
+        </td>
+        <td>TMX de ficheiros de localização da documentação do OmegaT e deste sítio, para utilização pelos tradutores.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ '/files/omt_website.zip' | prepend: site.baseurl_root }}">Este sítio web</a>
+        </td>
+        <td>Os ficheiros deste sítio, num pacote conveniente para aqueles que o desejem traduzir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Programas de terceiros</h2>
+  <h3>Programas informáticos de terceiros para utilização com o OmegaT</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="howtos/spelling.html#repositories">Dicionários ortográficos</a>
+        </td>
+        <td>Repositórios online de dicionários ortográficos para utilização no OmegaT.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://openoffice.org/">OpenOffice.org</a>
+          <br/>
+          <a href="http://www.libreoffice.org/">Libre Office</a>
+        </td>
+        <td>Alternativas (compatíveis) gratuitas ao Microsoft Office.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://okapiframework.org/">Okapi Framework</a>
+        </td>
+        <td>Um conjunto abrangente de utilitários para a preparação de ficheiros para tradução numa ferramenta CAT. Permite a tradução de vários formatos de ficheiro que não podem ser tratados nativamente no OmegaT. Está disponível um tutorial detalhado. </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/bitext2tmx">bitext2tmx</a>
+        </td>
+        <td>Ferramenta de alinhamento GUI para a produção de ficheiros de memória de tradução a partir de textos antigos e as suas traduções.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://sourceforge.net/projects/aligner">LF Aligner</a>
+        </td>
+        <td>Uma ferramenta de linha de comando inteligente de alinhamento para a produção de ficheiros de memória de tradução a partir de textos antigos e das suas traduções.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.leuce.com/autoit/">Os scripts e procedimentos do Samuel Murray</a>
+        </td>
+        <td>Descrições e ligações aos scripts/procedimentos do Samuel Murray. A maioria destes scripts requer MS Windows, embora alguns procedimentos também possam funcionar noutras plataformas.<br/> Os scripts/procedimentos estão disponíveis para lhe permitir fazer o seguinte:
+
+<ul>
+<li>Saltar segmentos contendo um determinado conjunto de caracteres</li>
+<li>Extrair todo o texto original dos ficheiros do projecto num único e grande ficheiro de texto</li>
+<li>Criar um ficheiro TMX contendo todas as cadeias, com fonte e alvo idênticos</li>
+<li>Acrescentar termos a um glossário enquanto se traduz em OmegaT</li>
+<li>Adicionar números a todos os segmentos, tornando-os todos "únicos".</li>
+<li>Remover todo o texto excepto etiquetas, ou todas as etiquetas excepto texto</li>
+<li>Verificar ortografia (vários procedimentos)</li>
+</ul>
+
+</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
