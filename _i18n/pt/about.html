@@ -1,112 +1,49 @@
 <div class="container">
-		
-<h2>Who we are</h2>
-		
-<h3>About this site</h3>
-		
 
-<table>
-		<tbody>
+  <h2>O projecto OmegaT</h2>
+  <p>O projecto OmegaT é mantido por um grupo informal e internacional de voluntários. O seu objectivo é desenvolver, distribuir e apoiar a utilização do OmegaT, uma aplicação de memória de tradução de código aberto.</p>
+  <p>Os principais membros do projecto são:</p>
+  <div class="text-md-center">
+    <h3>Autor original da aplicação OmegaT</h3>
+    <p>Keith Godfrey</p>
+    <h3>Gestor do projecto</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Programador principal</h3>
+    <p>Alex Buloichik</p>
+    <h3>Gestor de integração</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Gestor do sítio web</h3>
+    <p>Briac Pilpré</p>
+    <h3>Gestor da documentação</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Gestor de localização, proprietário do grupo de utilizadores</h3>
+    <p>Kos Ivantsov</p>
+    <h3>Programadores</h3>
+    <ul class="list-unstyled">
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 
+  <div class="text-md-center">
+    <h3>Autores do conteúdo do sítio web</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
 
-    <tr>
+    {% if site.lang != "en" %}
+    <h3>Tradutores da versão inglesa</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
 
-      <td>This language version:</td>
-
-      <td>Marc Prior   </td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-<p></p>
-
-<h3>The OmegaT project</h3>
-
-<p>The OmegaT project is maintained by an informal, international group
-of volunteers. Its purpose is to develop, distribute and support the
-use of OmegaT, an open-source translation memory software application.</p>
-
-<p>The principal members of the project are:</p>
-
-<table>
-		<tbody>
-
-    <tr>
-
-      <td>Keith Godfrey</td>
-
-      <td>Original author of the&nbsp;OmegaT application</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Aaron Madlon-Kay</td>
-
-      <td>Development manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Alex Buloichik</td>
-
-      <td>Lead developer</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Marc Prior</td>
-
-      <td>Project co-ordinator and website manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Vincent Bidaux</td>
-
-      <td>Documentation manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Kos Ivantsov</td>
-
-      <td>Localization manager</td>
-
-    </tr>
-
-    <tr>
-
-      <td>Developers</td>
-
-      <td>Keith Godfrey, Zoltan Bartko, Volker Berlin, Didier Briel,
-    Kim Bruning, Alex Buloichik, Thomas Cordonnier, Sandra Jean Chua, 
-    Martin Fleurke, Wildrich Fourie, Phillip Hall, Jean-Christophe Helary, Thomas Huriaux, 
-    Hans-Peter Jacobs, Kyle Katarn, Ibai Lakunza Velasco, Guido Leenders, Aaron Madlon-Kay, 
-    Fabián Mandelbaum, John Moran, Maxym Mykhalchuk, Arno Peters, 
-    Henry Pijffers, Briac Pilpré, Tiago Saboga, Andrzej Sawuła, 
-    Benjamin Siband, Yu Tang, Rashid Umarov, Antonio Vilei, Martin Wunderlich and Michael Zakharov</td>
-
-    </tr>
-
-  </tbody>
-
-</table>
-
-
-<p>The philosophy of the project is described <a href="philosophy.html">here</a>.</p>
-<p>Since the project's inception, it has received the support of dozens
-of other contributors, too numerous to mention here, but for whose help we
-are very grateful.<br />
-
-</p>
-
+  <p>A filosofia do projecto é descrita <a href="philosophy.html">aqui</a>.</p>
+  <p>Desde o seu início que o projecto recebeu o apoio de dezenas de outros colaboradores, demasiado numerosos para mencionar aqui, mas por cuja ajuda estamos muito gratos.</p>
 </div>
-

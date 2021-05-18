@@ -1,47 +1,42 @@
 <div class="container">
   <h2>Andere OmegaT-Ressourcen</h2>
+  <h3>Plugins</h3>
   <table class="table">
     <tbody>
       <tr>
         <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-tokenizers/">Tokenizer Plugin</a>
+          <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi Filters Plugin</a>
         </td>
-        <td>Fügt dem OmegaT-Glossar die Erkennung von flektierten Formen und Funktionen zur unscharfen Suche (Fuzzy-Matching) zu. Ein <a href="howtos/tokenizer.html">HowTo zur Beschreibung des Tokenizers Plug-Ins</a> ist ebenfalls verfügbar.</td>
+        <td>Bietet Filter für die Verarbeitung weiterer Dateiformate, einschließlich Trados TTX und Markdown.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-LanguageTool/">Sprachwerkzeug-Plugin</a>
+          <a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Apertium Plugin</a>
         </td>
-        <td>Prüft auf Sprachfehler (Stil, Grammatik, usw.).</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-Scripting/">Scripting-Plugin</a>
-        </td>
-        <td>Ermöglicht externen Skripten den Zugriff auf die Funktionalität von OmegaT. (Nicht zu verwechseln mit der "Text Export"-Funktion, die es auch ermöglicht, Skripte mit OmegaT zu verwenden, aber auf einer grundlegenderen Ebene.)</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi Filter-Plugin</a>
-        </td>
-        <td>Bietet Filter für die Verarbeitung weiterer Dateiformate, einschließlich Trados TTX.</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Apertium-Plugin</a>
-        </td>
-        <td>Integriert die Apertium-Funktionalität zur maschinellen Übersetzung in OmegaT.</td>
+        <td>Integriert den maschinellen Übersetzungsdienst von Apertium in OmegaT.</td>
       </tr>
       <tr>
         <td>
           <a href="https://github.com/yoursdearboy/omegat-browser">Browser-Plugin</a>
         </td>
-        <td>Schneller Zugriff auf Webseiten. Die Website-Unterstützung kann in Groovy geschrieben werden.</td>
+        <td>Schneller Zugriff auf Webseiten. Die Website-Unterstützung kann in Groovy programmiert werden.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-textra-plugin">TexTra-Plugin</a>
+        </td>
+        <td>Integriert den neuronalen maschinellen Übersetzungsdienst von TexTra in OmegaT. Die TexTra-API wird von NICT, der staatlichen japanischen Forschungsagentur, kostenlos zur Verfügung gestellt.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-plugin-epwing">EPWING-Plugin</a>
+        </td>
+        <td>Bietet Funktionalität zum Lesen des EPWING-Wörterbuchformats.</td>
       </tr>
     </tbody>
   </table>
-  <p>Wichtig: Um die Plug-Ins verwenden zu können, müssen Sie möglicherweise eine neuere Version von OmegaT installieren.    </p>
-  <h3>Dienstprogramme</h3>
+  <p>Wichtig: Die hier aufgelisteten Plugins funktionieren mit OmegaT Version 4 und höher.</p>
+  <h3>Hilfsprogramme</h3>
   <table class="table">
     <tbody>
       <tr>
@@ -72,19 +67,19 @@
         <td>
           <a href="{{ '/files/toxic.zip' | prepend: site.baseurl_root }}">Toxic</a>
         </td>
-        <td>Dienstprogramm zum Konvertieren von Trados TagEditor-Dateien (TTX) in ein Zwischenformat, damit sie in OmegaT übersetzt werden können. Diese Sammlung von Skripten kann für Programmierer mit Kenntnissen von Tcl/Tk nützlich sein. Anderen Benutzern wird empfohlen, stattdessen das <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi Filter-Plugin</a> zu verwenden. Toxic wurde zur Verfügung gestellt von Marc Prior.</td>
+        <td>Hilfsprogramm zum Konvertieren von Trados-TagEditor-Dateien (TTX) in ein Zwischenformat, damit sie in OmegaT übersetzt werden können. Diese Sammlung von Skripten kann für Programmierer mit Tcl/Tk-Kenntnissen nützlich sein. Anderen Benutzern wird empfohlen, stattdessen das <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi-Filter-Plugin</a> zu verwenden. Toxic wurde zur Verfügung gestellt von Marc Prior.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/toxic_windows.zip' | prepend: site.baseurl_root }}">Toxic für Windows</a>
         </td>
-        <td>Ausführbare Windowsversion von Toxic.</td>
+        <td>Ausführbare Windows-Version von Toxic.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/toxic_linux.zip' | prepend: site.baseurl_root }}">Toxic für Linux</a>
         </td>
-        <td>Linux-Binärversion von Toxic.</td>
+        <td>Binäre Linux-Version von Toxic.</td>
       </tr>
       <tr>
         <td>
@@ -96,29 +91,23 @@
         <td>
           <a href="{{ '/files/omegatk/stripper.zip' | prepend: site.baseurl_root }}">Stripper</a>
         </td>
-        <td>Skript zum Extrahieren von Text aus reinen Textdateien (z. B. Computerquelltext) zur Übersetzung in OmegaT. Benötigt Tcl/Tk. Zur Verfügung gestellt von Marc Prior.</td>
+        <td>Skript zum Extrahieren von Text aus reinen Textdateien (z. B. Computer-Quellcode) zur Übersetzung in OmegaT. Benötigt Tcl/Tk. Zur Verfügung gestellt von Marc Prior.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/omegatk/tkount.zip' | prepend: site.baseurl_root }}">TKount</a>
         </td>
-        <td>TKount Textzählwerkzeug. Benötigt Tcl/Tk, Abiword und pdftotext. Wurde unter Linux getestet. Zur Verfügung gestellt von Marc Prior.</td>
+        <td>Textzählprogramm. Benötigt Tcl/Tk, Abiword und pdftotext. Wurde unter Linux getestet. Zur Verfügung gestellt von Marc Prior.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/omegatk/ondiloto.zip' | prepend: site.baseurl_root }}">Ondiloto</a>
         </td>
-        <td>ONline DIctionary LOokup TOol (Dienstprogramm um in Onlinewörterbüchern zu suchen). Benötigt Linux, w3m und Tcl/Tk (beide werden normalerweise mit Linux geliefert). Zur Verfügung gestellt von Marc Prior.</td>
+        <td>ONline DIctionary LOokup TOol (Tool, um in Online-Wörterbüchern zu suchen). Benötigt Linux, w3m und Tcl/Tk (beide werden normalerweise mit Linux geliefert). Zur Verfügung gestellt von Marc Prior.</td>
       </tr>
       <tr>
         <td>
-          <a href="howtos/priorview.html">Priorview</a>
-        </td>
-        <td>Das Tcl/Tk-Dienstprogramm bietet eine formatierte Layout-Vorschau von übersetzten Dateien. Zur Verfügung gestellt von Marc Prior.</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="{{ '/files/WF.zip' | prepend: site.baseurl_root }}">Wordfast TMX-Dateikonvertierer</a>
+          <a href="{{ '/files/WF.zip' | prepend: site.baseurl_root }}">Wordfast-TMX-Datei-Konvertierer</a>
         </td>
         <td>Konvertiert von Wordfast erzeugte Translation Memories im TMX-Format in ein Format, das von OmegaT gelesen werden kann. Zur Verfügung gestellt von Dmitri Gabinski. </td>
       </tr>
@@ -131,7 +120,7 @@
         <td>
           <a href="{{ '/files/training/translation_memory_training_course.zip' | prepend: site.baseurl_root }}">Trainingskurse</a>
         </td>
-        <td>OmegaT-Trainingskurs. Besteht aus einem Muster-Handbuch für Schüler mit Anweisungen für Trainer zur Anpassung und Beispielressourcen.</td>
+        <td>OmegaT-Trainingskurs. Besteht aus einer Muster-Bedienungsanleitung für Schüler mit Anweisungen für Trainer zur Anpassung und Beispielressourcen.</td>
       </tr>
       <tr>
         <td>
@@ -147,14 +136,14 @@
       </tr>
     </tbody>
   </table>
-  <h3>Übersetzungsressourcen</h3>
+  <h3>Lokalisierungsressourcen</h3>
   <table class="table">
     <tbody>
       <tr>
         <td>
-          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">TMX-Repository von Übersetzungen</a>
+          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">TMX-Repository für die Lokalisierung</a>
         </td>
-        <td>TMX-Dateien von Übersetzungen der OmegaT-Dokumentation und dieser Website zur Verwendung durch Übersetzer.</td>
+        <td>TMX-Dateien für die Lokalisierung der OmegaT-Dokumentation und dieser Webseite.</td>
       </tr>
       <tr>
         <td>
@@ -172,7 +161,7 @@
         <td>
           <a href="howtos/spelling.html#repositories">Rechtschreibwörterbücher</a>
         </td>
-        <td>Online-Repositories von Rechtschreibwörterbücher zur Verwendung in OmegaT.</td>
+        <td>Online-Repositories von Rechtschreibwörterbüchern zur Verwendung in OmegaT.</td>
       </tr>
       <tr>
         <td>
@@ -180,39 +169,39 @@
           <br/>
           <a href="http://www.libreoffice.org/">Libre Office</a>
         </td>
-        <td>Freie (kompatible) Alternative zu Microsoft Office.</td>
+        <td>Kostenlose (kompatible) Alternativen zu Microsoft Office.</td>
       </tr>
       <tr>
         <td>
           <a href="http://okapiframework.org/">Okapi-Framework</a>
         </td>
-        <td>Eine umfassende Sammlung von Dienstprogrammen zum Vorbereiten von Dateien für die Übersetzung in einem CAT-Tool. Ermöglicht die Übersetzung einer Reihe von Dateiformaten, die nativ in OmegaT nicht bearbeitet werden können. Ein ausführliches Tutorial ist verfügbar. </td>
+        <td>Eine umfassende Sammlung von Hilfsprogrammen zum Vorbereiten von Dateien, um sie in einem CAT-Tool übersetzen zu können. Ermöglicht die Übersetzung einer Reihe von Dateiformaten, die nativ in OmegaT nicht bearbeitet werden können. Ein ausführliches Tutorial ist verfügbar. </td>
       </tr>
       <tr>
         <td>
           <a href="http://sourceforge.net/projects/bitext2tmx">bitext2tmx</a>
         </td>
-        <td>GUI-Ausrichtungs-Tool zur Erstellung von Translation-Memory-Dateien aus Legacy-Texten und deren Übersetzungen.</td>
+        <td>GUI-Ausrichtungs-Tool zum Erstellen von Translation-Memory-Dateien aus veralteten Texten und deren Übersetzungen.</td>
       </tr>
       <tr>
         <td>
           <a href="http://sourceforge.net/projects/aligner">LF Aligner</a>
         </td>
-        <td>Ein intelligentes Befehlszeilen-Ausrichtungstool zum Erstellen von Translation Memory-Dateien aus alten Texten und deren Übersetzungen.</td>
+        <td>Ein intelligentes Befehlszeilen-Ausrichtungs-Tool zum Erstellen von Translation-Memory-Dateien aus veralteten Texten und deren Übersetzungen.</td>
       </tr>
       <tr>
         <td>
           <a href="http://www.leuce.com/autoit/">Samuel Murray's Skripte und Prozeduren</a>
         </td>
-        <td>Beschreibungen von und Links zu Samuel Murrays Skripten / Prozeduren. Die meisten dieser Skripte erfordern MS Windows, obwohl einige Prozeduren auch auf anderen Plattformen funktionieren. <br/> Es stehen Skripte / Prozeduren zur Verfügung, mit denen Sie Folgendes tun können:
+        <td>Beschreibungen von und Links zu Samuel Murray's Skripten/Abläufe. Die meisten dieser Skripte erfordern MS Windows, obwohl einige Abläufe auch auf anderen Plattformen funktionieren. <br/> Es stehen Skripte/Abläufe zur Verfügung, mit denen Sie Folgendes tun können:
 
 <ul>
-<li>Überspringen Sie Segmente, die bestimmte Zeichensätze enthalten</li>
-<li>Extrahieren Sie den gesamten Quelltext aus den Projektdateien in eine einzelne, große Textdatei</li>
-<li>Erstellen Sie eine TMX-Datei, die alle Zeichenfolgen mit identischer Quelle und demselben Ziel enthält</li>
-<li>Fügen Sie während der Übersetzung in OmegaT Begriffe zu einem Glossar hinzu</li>
-<li>Fügen Sie allen Segmenten Nummern hinzu, die sie alle "einzigartig" machen</li>
-<li>Entfernen Sie den gesamten Text außer Tags oder alle Tags außer Text</li>
+<li>Segmente überspringen, die bestimmte Zeichensätze enthalten</li>
+<li>Den gesamten Quelltext aus den Projektdateien in eine einzelne, große Textdatei extrahieren</li>
+<li>Eine TMX-Datei erstellen, die alle Zeichenketten enthält, deren Quelle und Ziel identisch sind</li>
+<li>Begriffe während der Übersetzung zu einem Glossar hinzufügen</li>
+<li>Alle Segmente mit Nummern versehen, so dass sie alle "einmalig" sind</li>
+<li>Sämtlichen Text außer Tags entfernen, oder alle Tags außer Text entfernen</li>
 <li>Rechtschreibprüfung (verschiedene Verfahren)</li>
 </ul>
 

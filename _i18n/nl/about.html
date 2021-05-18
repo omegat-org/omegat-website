@@ -1,41 +1,5 @@
 <div class="container">
 
-  <div class="text-md-center">
-  <h3>Auteurs van inhoud van de website:</h3>
-  <ul class="list-unstyled">
-    
-    {% for author in site.data.credits.website %}
-      
-      <li>{{ author }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-
-  <h3>Ontwerp van de website</h3>
-  <ul class="list-unstyled">
-    <li>Briac Pilpré</li>
-  </ul>
-
-  
-
-  {% if site.lang != "en" %}
-  
-  <h3>Vertalers Engelse versie</h3>
-  <ul class="list-unstyled">
-    
-    {% for translator in site.data.credits.translators[site.lang] %}
-      
-      <li>{{ translator }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-  
-  {% endif %}
-  
-  </div>
-
   <h2>Het OmegaT-project</h2>
   <p>Het OmegaT-project wordt onderhouden door een informele, internationale groep van vrijwilligers. Het doel is het ontwikkelen, distribueren en ondersteunen van het gebruik van OmegaT, een open-bron softwaretoepassing met vertaalgeheugens.</p>
   <p>De meest belangrijke leden van het project zijn:</p>
@@ -49,20 +13,37 @@
     <h3>Integratie-manager</h3>
     <p>Aaron Madlon-Kay</p>
     <h3>Beheerder van de website</h3>
-    <p>Marc Prior</p>
+    <p>Briac Pilpré</p>
     <h3>Documentatie-manager</h3>
     <p>Vincent Bidaux</p>
     <h3>Localisatie-manager, eigenaar gebruikersgroep</h3>
     <p>Kos Ivantsov</p>
     <h3>Ontwikkelaars</h3>
     <ul class="list-unstyled">
-      
       {% for dev in site.data.contributors %}
       {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
       {% endfor %}
-    
     </ul>
   </div>
+
+  <div class="text-md-center">
+    <h3>Auteurs van inhoud van de website:</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if site.lang != "en" %}
+    <h3>Vertalers Engelse versie</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+
   <p>De filosofie van het project wordt <a href="philosophy.html">hier</a> beschreven.</p>
   <p>Sinds het begin van het project heeft het de ondersteuning ontvangen van vele anderen die hebben bijgedragen, te veel om hier op te noemen, maar voor wiens hulp we heel dankbaar zijn.</p>
 </div>

@@ -1,0 +1,49 @@
+<div class="container">
+
+  <h2>Proze OmegaT</h2>
+  <p>Proze OmegaT li existe gras-a enn group informel ek internasional benevol. So lobzektif li devlop, distribie ek promouvwar OmegaT, enn program 'open source' memwar tradiksion.</p>
+  <p>Bann akter prinsipal proze la:</p>
+  <div class="text-md-center">
+    <h3>Kreater program OmegaT</h3>
+    <p>Keith Godfrey</p>
+    <h3>Project manager</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Devloper prinsipal</h3>
+    <p>Alex Buloichik</p>
+    <h3>Integration manager</h3>
+    <p>Aaron Madlon-Kay</p>
+    <h3>Responsab sit Internet</h3>
+    <p>Briac Pilpré</p>
+    <h3>Responsab dokimantasion</h3>
+    <p>Vincent Bidaux</p>
+    <h3>Responsab lokalizasion, propriyeter group itilizater</h3>
+    <p>Kos Ivantsov</p>
+    <h3>Bann devloper</h3>
+    <ul class="list-unstyled">
+      {% for dev in site.data.contributors %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="text-md-center">
+    <h3>Oter bann konteni sit Internet</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if site.lang != "en" %}
+    <h3>Tradikter version morisien</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+
+  <p>Filozofi proze-la li finn dekrir <a href="philosophy.html">isi</a>.</p>
+  <p>Depi so koumansman, proze-la finn gagn soutien boukou lezot dimounn, tro boukou pou kapav sit zot tou isi. Toutfwa, nou tre rekonesan pou zot led.</p>
+</div>
