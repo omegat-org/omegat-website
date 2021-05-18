@@ -28,7 +28,7 @@ GEM
       yell (~> 2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    jekyll (3.6.1)
+    jekyll (3.6.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -121,7 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer
-  jekyll (= 3.6.1)
+  jekyll (= 3.6.3)
   jekyll-assets
   jekyll-feed (~> 0.6)
   jekyll-multiple-languages-plugin
