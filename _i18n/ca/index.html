@@ -1,18 +1,258 @@
-<div class="jumbotron"><div class="container-fluid"><h1>Presentació de l'OmegaT</h1></div></div>
-<div class="container">
 
-<p>L'OmegaT és una aplicació de memòria de traducció lliure escrita en Java. És una eina adreçada als traductors professionals. No tradueix per l'usuari! (El programari que fa això es coneix com programari de «traducció automàtica» i no el trobareu aquí). L'OmegaT inclou les funcions següents:</p>
-<ul>
-<li>Cerca de coincidències parcials</li>
-					<li>Propagació de coincidències</li>
-					<li>Processament simultani de projectes amb diversos fitxers</li>
-					<li>Utilització simultània de diverses memòries de traducció</li>
-					<li>Glossaris d'usuari amb reconeixement de les formes flexionades</li>
-					<li>Alguns dels formats de fitxer admesos són:<br/>Microsoft Word, Excel, PowerPoint (.docx, .xlsx, .pptx)<br/>XHTML i HTML<br/>Open Document Format (LibreOffice, OpenOffice.org)<br/>MediaWiki (Viquipèdia)<br/>Text net<br/>Uns altres 30 formats de fitxer</li>
-					<li>Compatibilitat amb Unicode (UTF-8): es pot utilitzar amb alfabets no llatins</li>
-					<li>Compatibilitat amb idiomes que s'escriuen de dreta a esquerra</li>
-					<li>Verificador ortogràfic integrat</li>
-					<li>Compatibilitat amb altres aplicacions de memòria de traducció (TMX, TTX, TXML, XLIFF, SDLXLIFF)</li>
-					<li>Interfície per a utilitzar el Traductor de Google</li>
-</ul>
-</div>
+  <!-- index -->
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <h1>OmegaT <small>l'eina lliure de memòria de traducció</small></h1>
+      <div class="title-buttons">
+        <a class="btn btn-primary" href="download" role="button">Baixa</a> <a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Introducció</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal-get-started">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close close-yt" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title">Introducció a l'OmegaT</h4>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="ytvideo embed-responsive-item" src="//www.youtube.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""></iframe>
+          </div>
+          <p class="text-center">Vídeo de <a href="https://www.youtube.com/channel/UC2EFKLWWI4gh9BGpMf0-_5g">CATguruEN</a> (Dominique Pivard)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-yt" data-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section">
+    <p class="lead">
+L'<strong>OmegaT</strong> és una aplicació lliure de memòria de traducció que funciona en el Windows, macOS, Linux... És una eina pensada per a la traducció professional. No tradueix per si mateixa! (El programari que fa això s'anomena «traducció automàtica» i l'haureu de cercar en una altra banda).</p>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Característiques professionals</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Coincidències parcials</li>
+          <li>Propagació de coincidències</li>
+          <li>Processament simultani de projectes amb diversos fitxers</li>
+          <li>Ús simultani de diverses memòries de traducció</li>
+          <li>Glossaris d'usuari amb reconeixement de formes flexionades</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Treballeu amb més de 30 formats de fitxer</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Microsoft Word, Excel, PowerPoint
+          </li><li>XHTML i HTML</li>
+          <li>Format OpenDocument (LibreOffice, OpenOffice.org)</li>
+          <li>MediaWiki (Viquipèdia)</li>
+          <li>Text sense format</li>
+          <li>...i prop de 30 altres formats de fitxer</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Eines potents</h3>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>Compatibilitat amb Unicode (UTF-8): es pot utilitzar amb alfabets no llatins</li>
+          <li>Compatibilitat amb llengües amb escriptura de dreta a esquerra</li>
+          <li>Corrector ortogràfic integral</li>
+          <li>Compatible amb altres aplicacions de memòries de traducció (TMX, TTX, TXML, XLIFF, SDLXLIFF)</li>
+          <li>Interfície al Traductor de Google</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row im-centered">
+      <img alt="Captura de pantalla de l'OmegaT" src="{{site.baseurl_root}}/img/screenshots/main_window_{{ site.lang }}.png" class="img-responsive"/>
+    </div>
+  </div>
+  <div class="container-fluid section" id="page-download">
+    <div class="row">&#xA0;</div>
+    <div class="whitebox">
+      <h2>Baixa</h2>
+      <div class="header-line"><!----></div>
+      <p class="text-md-center">L'<strong>OmegaT</strong> està disponible en moltes versions diferents per a satisfer la diversitat de requisits dels usuaris.</p>
+
+
+      <div class="row">
+        <div class="col-md-2">
+          <!-- padding -->
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>Per a trobar la versió més adequada per a vós, seguiu l'enllaç següent al selector de baixades.</p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>Alternativament, si ja sabeu quina versió voleu baixar, feu clic en el botó per a veure les diferents versions de l'OmegaT disponibles.</p>
+        </div>
+        <div class="col-md-2">
+          <!-- padding -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <!-- padding -->
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>
+            <a class="btn btn-primary" href="download#selector" role="button">Selector de baixades</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p>
+            <a class="btn btn-default" href="download#downloads" role="button">Informació general de les baixades</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">&#xA0;</div>
+
+    <div class="container-fluid versions">
+      <ul class="list-group">
+        <li class="list-group-item"><span class="badge"><a href="download#standard">{{site.data.versions.standard.name}}</a></span> Versió estàndard</li>
+        <li class="list-group-item"><span class="badge"><a href="download#latest">{{site.data.versions.latest.name}}</a></span> Versió més recent</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid section" id="page-quotes-carousel">
+     <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote1.jpg" style="width: 100px;height:100px;" alt="Fotografia de l'usuari">
+                </div>
+                <div class="col-sm-9">
+                        <p>És el complement perfecte per als que no necessitem complexitat, sinó eficiència; els glossaris, l'emplenament automàtic i la traducció automàtica milloren molt l'eficiència de la meva feina en traducció literària.</p>
+                  <small>Diego Merino: traductor EN &gt; ES  </small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <!--div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote2.jpg" style="width: 100px;height:100px;" alt="User portrait">
+                </div-->
+                <div class="col-sm-12">
+                  <p>ODFAuthors i l'equip de traducció a l'italià del LibreOffice estan orgullosos d'utilitzar una eina tan bona per al gran esforç que duen a terme en la comunitat del LibreOffice.</p>
+                  <small>Valter Mura: traductor EN &gt; IT</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote3.jpg" style="width: 100px;height:100px;" alt="Fotografia de l'usuari">
+                </div>
+                <div class="col-sm-9">
+                  <p>He utilitzat l'OmegaT com a traductor professional durant més de deu anys i m'he beneficiat des del principi de la facilitat d'ús i un fòrum realment útil. Té un amplíssim ventall de funcions, una interfície neta i, el que és més important, un desenvolupament de codi obert constant i habitual!</p>
+                  <small>Robert Corner, Institut Laue-Langevin, França</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <!--
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        -->
+      </div>                          
+    </div>
+  </div>
+
+  <div class="container-fluid section" id="page-omegat-and-you">
+    <h2>El projecte OmegaT i vós</h2>
+    <div class="header-line"><!----></div>
+    <p>L'OmegaT no és només un producte; és un projecte apassionant del qual podeu formar part.</p>
+    <p>L'OmegaT és programari lliure. Això significa que els usuaris tenen la llibertat de baixar-lo i utilitzar-lo amb molt poques restriccions. També sou lliure de copiar-lo i enviar-lo a altres persones.</p>
+    <p>L'OmegaT és programari de codi obert. Això significa que, si us sentiu disposat, podeu modificar l'OmegaT per a satisfer els vostres propis requisits. Per als defensors del programari de codi obert, aquesta llibertat és encara més important que l'exempció d'haver de pagar res.</p>
+    <p>El projecte OmegaT es beneficiaria d'un major suport per part de voluntaris en gairebé tots els àmbits. Tot i que molts usuaris en són conscients, la reacció sovint és: «Però jo no sé programar!». Programar és sens dubte la funció més important i, sense programació, no hi ha programa. Però no és l'única tasca que cal fer. A continuació trobareu una llista dels àmbits en què els voluntaris serien més que benvinguts!</p>
+    <div class="row project">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-pencil">
+          <!---->
+        </span>
+        <h3>Redacció de documentació</h3>
+        <p>La <a href="documentation">documentació</a> és molt important. Molts dels qui llegiu això sou traductors que heu traduït una gran quantitat de documentació per a l'usuari. Heu pensat escriure documentació d'usuari vós mateix? És tota una revelació!</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe">
+          <!---->
+        </span>
+        <h3>Localització</h3>
+        <p>Gràcies a la tasca dels traductors en el passat, la interfície d'usuari de l'OmegaT i els textos d'ajuda s'han traduït a diverses llengües. Això significa que només queden uns quants milers sense traducció! La localització de l'OmegaT a altres llengües també és una tasca constant, perquè constantment s'afegeixen característiques i funcions noves. Poseu-vos el contacte amb el <a href="mailto:localization@omegat.org">coordinador de la localització de l'OmegaT</a> per a conèixer els detalls del que implica la localització/traducció de l'OmegaT.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench">
+          <!---->
+        </span>
+        <h3>Proves</h3>
+        <p>Una de les coses més útils que poden fer els usuaris de l'OmegaT és... utilitzar l'OmegaT i quan trobin coses que no funcionen o deficiències en la documentació, avisar-nos.</p>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-bullhorn">
+          <!---->
+        </span>
+        <h3>Publicitat</h3>
+        <p>Heu escrit mai un article per la revista de la vostra associació professional? En cas que no, per què no escriviu un article sobre l'ús de l'OmegaT?</p>
+      </div>
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-piggy-bank">
+          <!---->
+        </span>
+        <h3>Donacions</h3>
+        <p>Si heu trobat útil l'OmegaT i voleu expressar el vostre agraïment fent una <a href="https://sourceforge.net/p/omegat/donate/?source=website">donació</a> al nostre compte de PayPal.</p>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-cog">
+          <!---->
+        </span>
+        <h3>Programació (Java)</h3>
+        <p>L'OmegaT està escrit en Java. Si programeu i teniu coneixements del Java, consulteu la documentació en el <a href="download#downloadTrunk">codi font</a> a /docs_devel per a obtenir informació sobre com començar.</p>
+      </div>
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-cog">
+          <!---->
+        </span>
+        <h3>Programació (no Java)</h3>
+        <p>Si podeu programar en un altre llenguatge, podeu escriure codi que complementi l'aplicació principal. Ja s'ha escrit codi auxiliar en JavaScript, Groovy i Tcl/Tk, per exemple.</p>
+      </div>
+      <div class="row project">
+        <div class="col-sm-12">
+          <p>Tanmateix, dieu que no teniu ni idea de programació. Bé, heu pensat aprendre? Si ja esteu familiaritzat fins a cert punt amb els ordinadors en general i trieu un llenguatge de scripts senzill com JavaScript o Tcl/Tk, en només unes setmanes podríeu aprendre prou per a escriure scripts senzills però útils. El desenvolupament professional continu és l'expressió de moda actual!</p>
+        </div>
+      </div>
+    </div>
+  </div>

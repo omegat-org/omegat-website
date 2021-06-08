@@ -1,357 +1,143 @@
-<div id="content">
-	
-<h2>Documentació</h2>
-
-<h3>Manuals d'usuari</h3>
-
-
-
-
-<p>L'OmegaT inclou un manual d'usuari complet. Per consultar-lo des de l'OmegaT, aneu a Ajuda &gt; Manual d'usuari, o bé premeu F1.</p>
-
-<p>A la interfície d'usuari de l'OmegaT es mostra per defecte una Guia d'inici ràpid on s'informa a l'usuari dels procediments i les funcions principals del programa.</p>
-
-<p>També podeu accedir al manual d'usuari que es proporciona amb l'OmegaT sense haver d'iniciar el programa. El trobareu a la carpeta «docs» de la carpeta del programa OmegaT.</p>
-
-<table>
-
+<div class="container">
+  <h3 id="manual">Manuals d'usuari</h3>
+  <p>L'OmegaT inclou un complet manual d'usuari. Per a obrir el manual des de l'OmegaT, només cal que seleccioneu «Ajuda &gt; Manual d'usuari» o premeu la tecla F1.</p>
+  <p>Per defecte, es mostra una guia d'inici ràpid en la interfície d'usuari de l'OmegaT, que us guia pels procediments i funcions principals del programa.</p>
+  <p>També podeu accedir al manual d'usuari proporcionat amb l'OmegaT sense iniciar el programa. El trobareu en la carpeta «docs» en la carpeta de programa de l'OmegaT.</p>
+  <table class="table">
     <tr>
-
-      <td><a
-href="https://omegat.sourceforge.io/manual-standard/"
-><?php $link=''; $endlink='';?> <?php echo $link ?>Manual d'usuari en línia<?php echo $endlink ?></a></td>
-
-		<td>Manual d'usuari de l'OmegaT en format html (versió més recent en anglès: <?php echo $standard_name ?>).</td>
-
-		</tr>
-
-</table>
-
-
-
-<h3>Programes d'aprenentatge</h3>
-
-<p>Hi ha disponibles els programes d'aprenentatge següents, que es poden consultar en línia o baixar-los:</p>
-
-<table>
-
+      <td>
+        <a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/{{ site.data.versions.standard.name }}/OmegaT_documentation_en.PDF/download">Manual d'usuari en línia</a>
+      </td>
+      <td>Manual d'usuari de l'OmegaT en format PDF ({{ site.data.versions.standard.name }}).</td>
+    </tr>
     <tr>
-
-      <td><a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">Programa d'aprenentatge de l'OmegaT per a principiants de les eines TAO</a></td>
-		<td>De Susan Welsh (Open Document Format).</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">Programa d'aprenentatge de l'OmegaT per a principiants de les eines TAO</a></td>
-
-      <td>De Susan Welsh (format PDF).</td>
-
-</tr>
-
-</table>
-
-
-
-<h3>Manuals</h3>
-
-<p>Es tracta de documents informatius que formen part d'aquest lloc web. Contenen informació sobre determinats processos i funcions de l'OmegaT adreçats als usuaris avançats i que no s'expliquen al manual d'usuari.</p>
-
-<table>
-
+      <td>
+        <a href="https://omegat.sourceforge.io/manual-standard/">Manual d'usuari en HTML en línia</a>
+      </td>
+      <td>Manual d'usuari en HTML per a la versió estàndard de l'OmegaT.</td>
+    </tr>
+  </table>
+  <h3 id="tutorials">Tutorials</h3>
+  <p>Hi ha disponibles els tutorials següents en línia o per a baixar:</p>
+  <table class="table">
     <tr>
-
-      <td></td>
-
-		<td><strong>Manuals sobre compatibilitat</strong></td>
-
-		</tr>
-
+      <td>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">Tutorial de l'OmegaT per a principiants</a>
+      </td>
+      <td>Susan Welsh (format OpenDocument).</td>
+    </tr>
     <tr>
-
-      <td><a href="howtos/compatibility">Compatibilitat de l'OmegaT</a></td>
-
-		<td>S'hi explica la compatibilitat de l'OmegaT amb altres programes. Hi trobareu enllaços a manuals més específics.</td>
-
-		</tr>
-
+      <td>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">Tutorial de l'OmegaT per a principiants</a>
+      </td>
+      <td>Susan Welsh (format PDF).</td>
+    </tr>
     <tr>
-
-      <td><a href="howtos/docx">Compatibilitat amb .docx</a></td>
-
-		<td>S'hi explica la compatibilitat de l'OmegaT amb els fitxers del Microsoft Office 2007, en concret els del Word 2007.</td>
-
-		</tr>
-
-
+      <td>
+        <a href="https://blog.wtigga.com/omegat/">В помощь переводчику: 10 советов по OmegaT</a>
+      </td>
+      <td>Vladimir Zhdanov (en rus).</td>
+    </tr>
     <tr>
-
-      <td><a href="howtos/compatibility_deja_vu">Compatibilitat amb el&nbsp;Déjà&nbsp;Vu</a></td>
-
-		<td>S'hi explica la compatibilitat de l'OmegaT amb el Déjà&nbsp;Vu.</td>
-
-		</tr>
-
-
-    <tr>
-
-      <td><a href="howtos/export_uncleaned_rtf">RTF brut</a></td>
-
-		<td>S'hi explica com utilitzar l'OmegaT juntament amb el format RTF bilingüe del Trados (fitxers «bruts»).</td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/iceni_infix">Infix d'Iceni</a></td>
-
-		<td>S'hi explica com utilitzar l'OmegaT juntament amb l'Infix d'Iceni per traduir fitxers en format PDF.</td>
-
-		</tr>
-
-    <tr>
-
-      <td></td>
-
-		<td><strong>Manuals de les funcions</strong></td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/spelling">Verificació ortogràfica</a></td>
-
-      <td>S'hi explica la funció de verificació ortogràfica de l'OmegaT.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/prop12m">Propagació i coincidència amb diverses traduccions</a></td>
-
-      <td>S'hi expliquen les funcions de propagació i de coincidència amb diverses traduccions de l'OmegaT.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/google_translate">Traductor de Google</a></td>
-
-      <td>S'hi explica com utilitzar l'OmegaT amb el Traductor de Google.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/ms_translator_mac">MS Translator al Mac</a></td>
-
-      <td>S'hi explica el procés de configuració del Microsoft Translator en un Mac.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/preview">Previsualització</a></td>
-
-      <td>S'hi explica com configurar una funció de previsualització per utilitzar-la amb l'OmegaT.</td>
-
-</tr>
-
-<tr>
-
-      <td></td>
-
-		<td><strong>Manuals de les funcions avançades</strong></td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/tokenizer">Connector d'analitzadors lèxics de l'OmegaT</a></td>
-
-      <td>Afegeix el reconeixement de les formes flexionades a les funcions del glossari i de les coincidències parcials de l'OmegaT.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/text_export">Funció d'exportació de text de l'OmegaT</a></td>
-
-      <td>Com s'utilitza la funció d'exportació de text de l'OmegaT (interfície de scripts).</td>
-
-</tr>
-
-    <tr>
-
-      <td></td>
-
-		<td><strong>Altres manuals</strong></td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/compiling_from_source">Compilació de l'OmegaT a&nbsp;partir del codi font</a></td>
-
-		<td>S'hi explica com compilar l'OmegaT a partir del codi font</td>
-
-		</tr>
-
-    <tr>
-
-      <td><a href="howtos/new_filter">Creació d'un nou filtre de fitxers</a></td>
-
-		<td>S'hi explica com crear un filtre que permeti traduir un format de fitxer nou amb l'OmegaT.</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="howtos/localizing_omegat">Localització de l'OmegaT</a></td>
-
-      <td>Procediment administratiu i tècnic per localitzar l'OmegaT.</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="howtos/linux">Utilització de l'OmegaT al&nbsp;Linux</a></td>
-
-      <td>S'adreça especialment als usuaris que encara no tenen molta experiència amb el Linux.</td>
-
-</tr>
-
-</table>
-
-<h3>Documentació externa</h3>
-
-<p>Informació sobre determinats processos i funcions de l'OmegaT per als usuaris avançats que es pot trobar en altres llocs web.</p>
-
-<table>
-
-    <tr>
-
-      <td><a href="https://nblocalization.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT">Traducció de l'entorn integrat de desenvolupament NetBeans</a> </td>
-
-      <td>Procediment per utilitzar l'OmegaT per a la localització de l'entorn integrat de desenvolupament NetBeans.</td>
-
+      <td>
+        <a href="https://www.multitude.trd.br/omegat-2/">Recursos do OmegaT: primeiros passos</a>
+      </td>
+      <td>Sheila Gomes (en portuguès del Brasil).</td>
     </tr>
 
+  </table>
+  <h3>Documentació externa</h3>
+  <p>Informació sobre els procediments i característiques de l'OmegaT per a usuaris avançats que es poden trobar en altres llocs web.</p>
+  <table class="table">
     <tr>
-
-      <td><a href="http://www.magenshop.com/magento-wiki/how-to-translate-magento-using-omegat-software">Com traduir Magento</a> </td>
-
-      <td>Procediment per utilitzar l'OmegaT per a la localització de Magento.</td>
-
+      <td>
+        <a href="https://nblocalization.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT.html">Traducció del NetBeans IDE</a>
+      </td>
+      <td>Procediment per a l'ús de l'OmegaT per a localitzar el NetBeans IDE.</td>
     </tr>
-
     <tr>
-
-      <td><a href="http://wpml.org/documentation/translating-your-contents/using-desktop-cat-tools/translating-wordpress-xliff-files-in-omegat/">Com traduir fitxers XLIFF del Wordpress</a> </td>
-
-      <td>Procediment per utilitzar l'OmegaT per a la localització dels fitxers XLIFF exportats del Wordpress.</td>
-
+      <td>
+        <a href="http://www.magenshop.com/magento-wiki/how-to-translate-magento-using-omegat-software.html">Com traduir el Magento</a>
+      </td>
+      <td>Procediment per a l'ús de l'OmegaT per a localitzar el Magento.</td>
     </tr>
-
     <tr>
-
-		<td><a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">Traducció amb el Rainbow i l'OmegaT</a></td>
-
-		<td>Manual detallat sobre com fer servir les utilitats d'extracció de text i de combinació de text del Rainbow per a processar els fitxers abans i després de traduir-los amb l'OmegaT. Aquestes utilitats permeten utilitzar l'OmegaT per traduir els formats de fitxer per als quals hi ha filtres de conversió d'XLIFF.</td>
-
+      <td>
+        <a href="http://wpml.org/documentation/translating-your-contents/using-desktop-cat-tools/translating-wordpress-xliff-files-in-omegat/">Com traduir fitxers XLIFF del Wordpress</a>
+      </td>
+      <td>Procediment per a utilitzar l'OmegaT per a localitzar fitxers XLIFF exportats del Wordpress.</td>
     </tr>
-
-</table>
-
-
-<h3>Vídeos formatius</h3>
-
-<table>
-
     <tr>
-
-      <td><a href="http://www.youtube.com/playlist?list=PLFED193FA64E53D60">Llista de reproducció dels&nbsp;vídeos&nbsp;de l'OmegaT</a></td>
-
-		<td>Vídeos de l'OmegaT al canal del YouTube de Qabiria.</td>
-
+      <td>
+        <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">Traducció amb el Rainbow i l'OmegaT</a>
+      </td>
+      <td>Guia pas a pas sobre com utilitzar les utilitats d'extracció de text i combinació de text del Rainbow per al preprocessament i el postprocessament dels fitxers que es traduiran amb l'OmegaT. Aquestes utilitats permeten utilitzar l'OmegaT per a traduir formats de fitxers per als quals hi ha disponibles filtres de conversió a XLIFF.</td>
     </tr>
-
+  </table>
+  <h3>Vídeos formatius</h3>
+  <table class="table">
     <tr>
-
-      <td><a href="http://www.youtube.com/watch?v=iakqcUvRsEU">Programa de presentació de&nbsp;l'OmegaT</a></td>
-
-		<td>Un vídeo introductori de l'OmegaT en anglès, fet per John Moran.</td>
-
-		</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=waW8nXGyUBU">Vídeo 1</a></td>
-
-      <td>De la sèrie de Miguel Navarro sobre l'OmegaT al YouTube (en espanyol).</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=9oRsBcRXflE">Vídeo 2</a></td>
-
-      <td>De la sèrie de Miguel Navarro sobre l'OmegaT al YouTube (en espanyol).</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.youtube.com/watch?v=8m2_R6L84PE">Vídeo 3</a></td>
-
-      <td>De la sèrie de Miguel Navarro sobre l'OmegaT al YouTube (en espanyol).</td>
-
-</tr>
-
-</table>
-
-
-<h3>Llibres</h3>
-
-<table>
-
-
-
-<tr>
-
-      <td><a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager">Guida completa a OmegaT: tecniche, trucchi e&nbsp;consigli&nbsp;per traduttori e project manager</a></td>
-
-      <td>De Marco Cevoli i Sergio Alasia (en italià).</td>
-
-</tr>
-
-</table>
-
-<h3>Blocs</h3>
-
-<table>
-
-<tr>
-
-      <td><a href="http://www.velior.ru/tag/omegat/">Bloc corporatiu de Velior<br/>sobre la traducció i la<br/>indústria de la traducció</a></td>
-
-      <td>Pàgines del bloc sobre l'OmegaT (en anglès).</td>
-
-</tr>
-
-<tr>
-
-      <td><a href="http://www.velior.ru/ru/tag/omegat-ru-2/">Bloc corporatiu de Velior<br/>sobre la traducció i la<br/>indústria de la traducció</a></td>
-
-      <td>Pàgines del bloc sobre l'OmegaT (en rus).</td>
-
-</tr>
-
-</table>
-
-
-
-
-	</div>
-
+      <td>
+        <a href="http://www.youtube.com/playlist?list=PLFED193FA64E53D60">Llista de reproducció de vídeos de l'OmegaT</a>
+      </td>
+      <td>Vídeos de l'OmegaT en el canal de YouTube de Qabiria.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=iakqcUvRsEU">Tutorial d'introducció a l'OmegaT</a>
+      </td>
+      <td>Vídeo d'introducció a l'OmegaT en anglès de John Moran.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=waW8nXGyUBU">Vídeo 1</a>
+      </td>
+      <td>De la sèrie a YouTube sobre l'OmegaT de Miguel Navarro (en castellà).</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=9oRsBcRXflE">Vídeo 2</a>
+      </td>
+      <td>De la sèrie a YouTube sobre l'OmegaT de Miguel Navarro (en castellà).</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.youtube.com/watch?v=8m2_R6L84PE">Vídeo 3</a>
+      </td>
+      <td>De la sèrie a YouTube sobre l'OmegaT de Miguel Navarro (en castellà).</td>
+    </tr>
+  </table>
+  <h3>Llibres</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager">Guida completa a OmegaT: tecniche, trucchi e consigli per traduttori e project manager</a>
+      </td>
+      <td>Marco Cevoli i Sergio Alasia. (En italià)</td>
+    </tr>
+  </table>
+  <h3>Formació</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://qabiria.com/s/learnomegat">Curs de formació en línia autodirigit (per a la compra)</a>
+      </td>
+      <td>Marco Cevoli i Sergio Alasia.</td>
+    </tr>
+  </table>
+  <h3>Blogs</h3>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://www.velior.ru/tag/omegat/">Blog corporatiu de Velior <br/>sobre la traducció i el <br/>sector de la traducció</a>
+      </td>
+      <td>Pàgines de blog sobre l'OmegaT. (En anglès)</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="http://www.velior.ru/blog/ru/tag/omegat/">Blog corporatiu de Velior <br/>sobre la traducció i el <br/>sector de la traducció</a>
+      </td>
+      <td>Pàgines de blog sobre l'OmegaT. (En rus)</td>
+    </tr>
+  </table>
+</div>
