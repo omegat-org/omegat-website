@@ -1,30 +1,13 @@
 <div class="container">
   <h2>Autres ressources OmegaT</h2>
+  <h3>Extensions</h3>
   <table class="table">
     <tbody>
       <tr>
         <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-tokenizers/">Tokenizer</a>
-        </td>
-        <td>Permet la reconnaissance des formes infléchies dans les correspondances partielles et dans les résultats du glossaire. Un <a href="howtos/tokenizer.html">guide pratique à propos du module Tokenizer</a> est également disponible.</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-LanguageTool/">LanguageTool</a>
-        </td>
-        <td>Vérificateur linguistique (erreurs de style, grammaire, etc.)</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-Scripting/">Scripting</a>
-        </td>
-        <td>Permet de contrôler des fonctionnalités d'OmegaT grâce à des scripts externes. Ce module est plus évolué que la fonction d'exportation de texte permettant également l'utilisation de scripts avec OmegaT.</td>
-      </tr>
-      <tr>
-        <td>
           <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Filtres Okapi</a>
         </td>
-        <td>Fournit des filtres pour gérer d'autres formats de fichiers, tels que Trados TTX.</td>
+        <td>Fournit des filtres pour gérer d'autres formats de fichiers, tels que Trados TTX et Markdown.</td>
       </tr>
       <tr>
         <td>
@@ -34,13 +17,25 @@
       </tr>
       <tr>
         <td>
-          <a href="https://github.com/yoursdearboy/omegat-browser">Browser plugin</a>
+          <a href="https://github.com/yoursdearboy/omegat-browser">Module Browser</a>
         </td>
         <td>Accès rapide aux sites web. La prise en charge des sites web peut être effectuée par des scripts Groovy.</td>
       </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-textra-plugin">Module TexTra</a>
+        </td>
+        <td>Intégration du moteur de traduction automatique neural TexTra avec OmegaT. L'API TexTra est offerte gratuitement par NICT, l'agence nationale de recherche du gouvernement japonais.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/miurahr/omegat-plugin-epwing">Module EPWING</a>
+        </td>
+        <td>Permet la lecture du format de dictionnaire EPWING.</td>
+      </tr>
     </tbody>
   </table>
-  <p>Important&nbsp;: l'utilisation de ces modules peut exiger l'installation d'une version d'OmegaT plus récente.    </p>
+  <p>Important&nbsp;: les extensions listées fonctionnent avec OmegaT version 4 et supérieure.</p>
   <h3>Utilitaires</h3>
   <table class="table">
     <tbody>
@@ -66,7 +61,7 @@
         <td>
           <a href="{{ '/files/TMXCleaner-1.0.RC1.zip' | prepend: site.baseurl_root }}">TMXCleaner</a>
         </td>
-        <td>Script de ligne de commande en Java permettant d'effacer les unités de traduction « superflues » dans un fichier TMX : il peut s'agir de toutes les unités de traduction sans segment cible ou dont le segment cible est identique au segment source. Contribution de Henry Pijffers.</td>
+        <td>Script de ligne de commande en Java permettant d'effacer les unités de traduction « superflues » dans un fichier TMX&nbsp;: il peut s'agir de toutes les unités de traduction sans segment cible ou dont le segment cible est identique au segment source. Contribution de Henry Pijffers.</td>
       </tr>
       <tr>
         <td>
@@ -96,7 +91,7 @@
         <td>
           <a href="{{ '/files/omegatk/stripper.zip' | prepend: site.baseurl_root }}">Stripper</a>
         </td>
-        <td>Stripper Script pour l'extraction de texte à partir de fichiers de texte brut (par ex. code source informatique) permettant la traduction avec OmegaT –  tcl/tk, requis. Contribution de Marc Prior.</td>
+        <td>Script pour l'extraction de texte à partir de fichiers de texte brut (par ex. code source informatique) permettant la traduction avec OmegaT -  tcl/tk, requis. Contribution de Marc Prior.</td>
       </tr>
       <tr>
         <td>
@@ -109,12 +104,6 @@
           <a href="{{ '/files/omegatk/ondiloto.zip' | prepend: site.baseurl_root }}">Ondiloto</a>
         </td>
         <td>ONline DIctionary LOokup TOol, utilitaire de recherche dans les dictionnaires en ligne –  Linux, w3m et tcl/tk requis (ces derniers sont généralement fournis avec Linux). Contribution de Marc Prior.</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="howtos/priorview.html">Priorview</a>
-        </td>
-        <td>Utilitaire Tcl/tk fournissant un aperçu de la mise en page formatée des fichiers traduits. Contribution de Marc Prior.</td>
       </tr>
       <tr>
         <td>
@@ -152,7 +141,7 @@
     <tbody>
       <tr>
         <td>
-          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">Référentiel TMX</a>
+          <a href="{{ '/files/tmx_repository.zip' | prepend: site.baseurl_root }}">dépôt des TMX de localisation</a>
         </td>
         <td>Fichiers TMX des différentes localisations d'OmegaT (documentation, site Web) à l'usage des localisateurs.</td>
       </tr>

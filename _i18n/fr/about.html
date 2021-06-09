@@ -1,18 +1,8 @@
 <div class="container">
 
-  <div class="text-md-center">
-  <h3>Auteurs du contenu du site</h3>
-  <ul class="list-unstyled">{% for author in site.data.credits.website %}<li>{{ author }}</li>{% endfor %}</ul>
-
-  <h3>Conception du site web</h3>
-  <ul class="list-unstyled">
-    <li>Briac Pilpré</li>
-  </ul>{% if site.lang != &quot;en&quot; %}<h3>Traducteurs de la version française</h3>
-  <ul class="list-unstyled">{% for translator in site.data.credits.translators[site.lang] %}<li>{{ translator }}</li>{% endfor %}</ul>{% endif %}</div>
-
   <h2>Le projet OmegaT</h2>
   <p>Le projet OmegaT existe grâce à un groupe informel et international de bénévoles. Son objectif est de développer, distribuer et promouvoir OmegaT, un logiciel open source de mémoire de traduction.</p>
-  <p>Les principaux acteurs du projet sont :</p>
+  <p>Les principaux acteurs du projet sont&nbsp;:</p>
   <div class="text-md-center">
     <h3>Créateur du logiciel OmegaT</h3>
     <p>Keith Godfrey</p>
@@ -20,21 +10,40 @@
     <p>Aaron Madlon-Kay</p>
     <h3>Développeur principal</h3>
     <p>Alex Buloichik</p>
-    <h3>Gestionnaire d&#39;intégration</h3>
+    <h3>Gestionnaire d'intégration</h3>
     <p>Aaron Madlon-Kay</p>
-    <h3>Coordinateur du projet et responsable du site Web</h3>
-    <p>Marc Prior</p>
+    <h3>Responsable du site Web</h3>
+    <p>Briac Pilpré</p>
     <h3>Responsable de la documentation</h3>
     <p>Vincent Bidaux</p>
-    <h3>Responsable de la localisation</h3>
+    <h3>Responsable de la localisation, propriétaire du groupe des utilisateurs</h3>
     <p>Kos Ivantsov</p>
     <h3>Développeurs</h3>
     <ul class="list-unstyled">
       {% for dev in site.data.contributors %}
-      {% if dev.name.size > 0 %}<li>{{ dev.name }}</li>{% endif %}
+      {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
       {% endfor %}
     </ul>
   </div>
-  <p>Pour mieux comprendre l&#39;esprit OmegaT, nous vous invitons à découvrir la <a href="philosophy.html">philosophie du projet</a>.</p>
-  <p>Depuis ses débuts, le projet a reçu le soutien de bien d&#39;autres contributeurs, hélas trop nombreux pour être cités ici, mais pour l&#39;aide desquels nous sommes très reconnaissants.</p>
+
+  <div class="text-md-center">
+    <h3>Auteurs du contenu du site</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if site.lang&nbsp;!= "en" %}
+    <h3>Traducteurs de la version française</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+
+  <p>Pour mieux comprendre l'esprit OmegaT, nous vous invitons à découvrir la <a href="philosophy.html">philosophie</a> du projet.</p>
+  <p>Depuis ses débuts, le projet a reçu le soutien de bien d'autres contributeurs, hélas trop nombreux pour être cités ici, mais pour l'aide desquels nous sommes très reconnaissants.</p>
 </div>
