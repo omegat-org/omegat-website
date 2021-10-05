@@ -152,13 +152,13 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      {% if platform.noInfo&nbsp;!= true %}
+      {% if platform.noInfo != true %}
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_{{ platform.name }}"></div>
       {% endif %}
       </td>
       <td>
-      {% if platform.link&nbsp;!= null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
       {% endif %}
       </td>
@@ -190,7 +190,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
       {% endif %}
       </td>
       <td>
-      {% if platform.link&nbsp;!= null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
       {% endif %}
       </td>

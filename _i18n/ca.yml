@@ -33,21 +33,21 @@ titles:
   sponsorship: Patrocini
   howtos:
      compatibility: Compatibilitat
-     compatibility_deja_vu: Guia: compatibilitat de l'OmegaT amb el Déjà Vu
-     compiling_from_source: Guia: compilació de l'OmegaT des del codi font
-     docx: Guia: traducció de fitxers del Word 2007 en l'OmegaT
-     export_uncleaned_rtf: Guia: exportació de l'OmegaT al format «RTF sense netejar del Trados»
-     google_translate: Guia: ús del Traductor de Google en l'OmegaT
-     iceni_infix: Guia: traducció de fitxers PDF amb l'Iceni Infix i l'OmegaT
+     compatibility_deja_vu: "Guia: compatibilitat de l'OmegaT amb el Déjà Vu"
+     compiling_from_source: "Guia: compilació de l'OmegaT des del codi font"
+     docx: "Guia: traducció de fitxers del Word 2007 en l'OmegaT"
+     export_uncleaned_rtf: "Guia: exportació de l'OmegaT al format «RTF sense netejar del Trados»"
+     google_translate: "Guia: ús del Traductor de Google en l'OmegaT"
+     iceni_infix: "Guia: traducció de fitxers PDF amb l'Iceni Infix i l'OmegaT"
      linux: Guia de l'OmegaT en el Linux
-     localizing_omegat: Guia: traducció de l'OmegaT a la vostra llengua
-     ms_translator: Guia: ús del Microsoft Translator en l'OmegaT
-     new_filter: Guia: creació d'un nou filtre de fitxers
-     preview: Guia: creació d'una funció de previsualització en l'OmegaT
+     localizing_omegat: "Guia: traducció de l'OmegaT a la vostra llengua"
+     ms_translator: "Guia: ús del Microsoft Translator en l'OmegaT"
+     new_filter: "Guia: creació d'un nou filtre de fitxers"
+     preview: "Guia: creació d'una funció de previsualització en l'OmegaT"
      prop12m: Guia de propagació i coincidències ambigües
-     spelling: Guia: correcció ortogràfica
-     text_export: Guia: ús de la funció d'exportació de text de l'OmegaT (interfície de scripts)
-     tokenizer: Guia: ús del lematitzador de l'OmegaT
+     spelling: "Guia: correcció ortogràfica"
+     text_export: "Guia: ús de la funció d'exportació de text de l'OmegaT (interfície de scripts)"
+     tokenizer: "Guia: ús del lematitzador de l'OmegaT"
 
 # Platforms name
 windows_jre: Windows amb el JRE
