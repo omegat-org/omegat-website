@@ -5,8 +5,8 @@
         "java_version": 8
     },
     "latest": {
-        "name": "OmegaT 5.7.0",
-        "version": "5.7.0_Beta",
+        "name": "OmegaT 5.7.1",
+        "version": "5.7.1_Beta",
         "java_version": 8
     }
 }
