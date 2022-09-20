@@ -60,11 +60,11 @@ jobs:
       #  run: htmlproofer --log-level :debug _site 2> links.log
       #  continue-on-error: true
 
-      - name: Archive checker log 🗄
-        uses: actions/upload-artifact@v1
-        with:
-          name: links-check.log
-          path: links.log
+      #- name: Archive checker log 🗄
+      #  uses: actions/upload-artifact@v1
+      #  with:
+      #    name: links-check.log
+      #    path: links.log
 
       - name: Upload artifact 🚚
         # Automatically uploads an artifact from the './_site' directory by default
