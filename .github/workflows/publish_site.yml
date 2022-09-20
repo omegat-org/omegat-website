@@ -47,8 +47,6 @@ jobs:
       - name: Patch jekyll/assets/utils.rb
         run: patch --verbose vendor/bundle/ruby/2.5.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
 
-      - run: cat vendor/bundle/ruby/2.5.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb
-
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
