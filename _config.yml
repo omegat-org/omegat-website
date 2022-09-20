@@ -78,6 +78,8 @@ plugins_dir:
   - jekyll-redirect-from
 
 exclude:
+  - training ## TEST ##
+  - files ## TEST ##
   - README
   - LICENSE
   - vendor
