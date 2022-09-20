@@ -14,7 +14,7 @@ ruby RUBY_VERSION
 #"gem "jekyll", "3.5.0"
 gem "jekyll", "3.6.3"
 gem "sprockets", "~> 3.7"
-gem "nokogiri", "1.11.2"
+gem "nokogiri", ">= 1.13.6"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
@@ -38,8 +38,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Please add the following to your Gemfile to avoid polling for changes:
 #gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
-# Cannot make html-proofer work on windows (libcurl not available)
-#if !Gem.win_platform?
-#   gem 'html-proofer'
-#end
