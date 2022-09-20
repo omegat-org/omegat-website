@@ -66,7 +66,7 @@ jobs:
           name: links-check.log
           path: links.log
 
-      - name: Upload artifact
+      - name: Upload artifact 🚚
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
 
@@ -78,6 +78,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 🎉
         id: deployment
         uses: actions/deploy-pages@v1
