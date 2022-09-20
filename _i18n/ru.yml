@@ -1,6 +1,6 @@
 global:
   title: OmegaT — свободная программа для автоматизации перевода
-  description: OmegaT — это свободная система автоматизированного перевода для профессиональных переводчиков, поддерживающая память переводов и написанная на языке программирования Java.
+  description: OmegaT — это свободная программа с открытым исходным кодом для профессиональных переводчиков, поддерживающая память переводов и написанная на Java.
 
 menu:
   languages: Языки
@@ -9,6 +9,7 @@ menu:
   contact: Связь
   download: Загрузка
   resources: Ресурсы
+  support: Поддержка
 
 footer:
   connect: OmegaT в Интернете
@@ -18,13 +19,14 @@ footer:
 titles:
   404: Страница не найдена
   about: О проекте
-  contact: Связь и поддержка
+  contact: Контакты и поддержка
+  support: Поддержка
   documentation: Документация
   download: Загрузка
   home: OmegaT — свободная программа для автоматизации перевода
   philosophy: Философия
   resources: Ресурсы
-  manual: Руководство пользователя
+  manual: Руководство
   tutorials: Учебные пособия
   howto: HowTo
   reviews: Обзоры
@@ -42,7 +44,6 @@ titles:
      ms_translator: Использование Microsoft Translator в OmegaT
      new_filter: Создание нового файлового фильтра
      preview: Добавление функции предварительного просмотра в OmegaT
-     priorview: Инструмент предварительного просмотра "Priorview"
      prop12m: Автоматическое копирование переводов и создание альтернативных вариантов перевода не уникальных сегментов
      spelling: Проверка орфографии
      text_export: Использование функции экспорта текста в OmegaT (интерфейс для скриптов)
@@ -52,8 +53,8 @@ titles:
 windows_jre: Windows с JRE
 windows_jre64b: Windows с 64-разрядной JRE
 windows_nojre: Windows без JRE
-osx_signed: OS X с электронной подписью
-osx_unsigned: OS X без электронной подписи
+osx_signed: macOS с электронной подписью
+osx_unsigned: macOS без электронной подписи
 linux_jre: Linux с JRE
 linux_jre64b: Linux с 64-разрядной JRE
 nojre: Кросс-платформенная версия без JRE
