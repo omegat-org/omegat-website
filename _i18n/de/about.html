@@ -1,46 +1,10 @@
 <div class="container">
 
-  <div class="text-md-center">
-  <h3>Webseitenmanager</h3>
-  <ul class="list-unstyled">
-    
-    {% for author in site.data.credits.website %}
-      
-      <li>{{ author }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-
-  <h3>Webdesign</h3>
-  <ul class="list-unstyled">
-    <li>Briac Pilpré</li>
-  </ul>
-
-  
-
-  {% if site.lang != "en" %}
-  
-  <h3>Übersetzer der englischen Version</h3>
-  <ul class="list-unstyled">
-    
-    {% for translator in site.data.credits.translators[site.lang] %}
-      
-      <li>{{ translator }}</li>
-    
-    {% endfor %}
-  
-  </ul>
-  
-  {% endif %}
-  
-  </div>
-
   <h2>Das OmegaT-Projekt</h2>
-  <p>Das OmegaT-Projekt wird von einer informellen, internationalen Gruppe von Freiwilligen gepflegt. Der Zweck ist, OmegaT, ein OpenSource-Übersetzungswerkzeug mit Translation Memory, zu entwickeln, zu verbreiten und die Benutzung zu unterstützen.</p>
+  <p>Das OmegaT-Projekt wird von einer informellen, internationalen Gruppe von Freiwilligen betreut. Der Zweck dieses Projekts ist es, OmegaT, ein Translation-Memory-Programm auf Open-Source-Basis, zu entwickeln, zu verbreiten und dessen Verwendung zu unterstützen.</p>
   <p>Die Hauptmitglieder des Projekts sind:</p>
   <div class="text-md-center">
-    <h3>Originalautor der OmegaT-Anwendung</h3>
+    <h3>Originalautor des OmegaT-Programms</h3>
     <p>Keith Godfrey</p>
     <h3>Projektmanager</h3>
     <p>Aaron Madlon-Kay</p>
@@ -49,20 +13,37 @@
     <h3>Integrationsmanager</h3>
     <p>Aaron Madlon-Kay</p>
     <h3>Webseitenmanager</h3>
-    <p>Marc Prior</p>
+    <p>Briac Pilpré</p>
     <h3>Dokumentationsmanager</h3>
     <p>Vincent Bidaux</p>
-    <h3>Übersetzungsmanager, Eigentümer der Benutzergruppe</h3>
+    <h3>Lokalisierungsmanager, Eigentümer der Benutzergruppe</h3>
     <p>Kos Ivantsov</p>
     <h3>Entwickler</h3>
     <ul class="list-unstyled">
-      
       {% for dev in site.data.contributors %}
       {% if dev.name.size &gt; 0 %}<li>{{ dev.name }}</li>{% endif %}
       {% endfor %}
-    
     </ul>
   </div>
-  <p>Die Philosophie des Projekts wird  <a href="philosophy.html">hier</a> beschrieben.</p>
+
+  <div class="text-md-center">
+    <h3>Autoren von Webseiteninhalten</h3>
+    <ul class="list-unstyled">
+      {% for author in site.data.credits.website %}
+        <li>{{ author }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if site.lang != "en" %}
+    <h3>Übersetzer der englischen Version</h3>
+    <ul class="list-unstyled">
+      {% for translator in site.data.credits.translators[site.lang] %}
+        <li>{{ translator }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+
+  <p>Die Philosophie des Projekts wird <a href="philosophy.html">hier</a> beschrieben.</p>
   <p>Das Projekt hat von Beginn an die Unterstützung von Dutzenden von Beitragenden bekommen, zu vielen, um sie alle hier erwähnen zu können, für deren Hilfe wir aber sehr dankbar sind.</p>
 </div>

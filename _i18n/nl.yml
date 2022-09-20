@@ -44,7 +44,6 @@ titles:
      ms_translator: Howto - Microsoft Translator gebruiken in OmegaT
      new_filter: Howto - Een nieuw bestandsfilter maken
      preview: HowTo -  Een functie Voorbeeld toevoegen aan OmegaT
-     priorview: HowTo - De functie Voorbeeld "Priorview"
      prop12m: Vergroten van overeenkomsten en een-tot-vele overeenkomsten HowTo
      spelling: Howto - Spellingscontrole
      text_export: Howto - De OmegaT functie Tekst exporteren gebruiken (interface Scripten)
@@ -54,8 +53,8 @@ titles:
 windows_jre: Windows met JRE
 windows_jre64b: Windows met 64-bit JRE
 windows_nojre: Windows zonder JRE
-osx_signed: OS X genotariseerd
-osx_unsigned: OS X niet ondertekend
+osx_signed: macOS Genotariseerd
+osx_unsigned: macOS Niet getekend
 linux_jre: Linux met JRE
 linux_jre64b: Linux met 64-bit JRE
 nojre: Cross-platform zonder JRE

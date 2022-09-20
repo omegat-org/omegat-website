@@ -44,7 +44,6 @@ titles:
      ms_translator: Cumufà - Impiegu di Microsoft Translator cù OmegaT (in inglese)
      new_filter: Cumufà - Creazione d’un novu filtru di schedariu (in inglese)
      preview: Cumufà - Aghjuntu d’una funzione di previsualizazione (in inglese)
-     priorview: Cumufà - Utilitariu « Priorview » di previsualizazione (in inglese)
      prop12m: Cumufà - Funzioni di prupagazione è di traduzzione multiple (in inglese)
      spelling: Cumufà - Impiegu d’un cuntrullore d’ortugrafia (in inglese)
      text_export: Cumufà - Impiegu di a funzione d’espurtazione di testu (in inglese)
@@ -54,8 +53,8 @@ titles:
 windows_jre: Windows cù JRE
 windows_jre64b: Windows cù JRE 64-bit
 windows_nojre: Windows senza JRE
-osx_signed: OS X nutariatu
-osx_unsigned: OS X senza firma
+osx_signed: macOS nutariatu
+osx_unsigned: macOS senza firma
 linux_jre: Linux cù JRE
 linux_jre64b: Linux cù JRE 64-bit
 nojre: Multi-piattaforma senza JRE

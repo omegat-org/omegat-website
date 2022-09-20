@@ -1,15 +1,15 @@
 global:
-  title: OmegaT, l'outil libre de TAO
-  description: OmegaT est un logiciel libre de TAO écrit en Java conçu et pour des traducteurs professionnels.
+  title: OmegaT - l'outil libre de TAO
+  description: OmegaT est un logiciel libre de TAO écrit en Java conçu par et pour des traducteurs professionnels.
 
 menu:
   languages: Langues
   about: À propos
   documentation: Documentation
   contact: Contact
-  support: Assistance
-  download: Téléchargement
+  download: Télécharger
   resources: Ressources
+  support: Assistance
 
 footer:
   connect: Réseaux sociaux
@@ -17,13 +17,13 @@ footer:
   documentation: Documentation
 
 titles:
-  404: Page Not Found
+  404: Aucun résultat
   about: À propos
   contact: Contact et assistance
   support: Assistance
   documentation: Documentation
-  download: Téléchargement
-  home: OmegaT, l'outil libre de TAO
+  download: Télécharger
+  home: OmegaT - l'outil libre de TAO
   philosophy: Philosophie
   resources: Ressources
   manual: Manuel
@@ -36,7 +36,7 @@ titles:
      compatibility_deja_vu: Guide - Compatibilité OmegaT avec Déjà Vu
      compiling_from_source: Guide - Compilation d'OmegaT à partir du code source
      docx: Guide - Traduire des fichiers Word 2007 avec OmegaT
-     export_uncleaned_rtf: Guide - Exportation vers le format "Trados non nettoyé RTF"
+     export_uncleaned_rtf: Guide - Exportation vers le format « Trados non nettoyé RTF »
      google_translate: Guide - Utilisation de Google Translate
      iceni_infix: Guide - Traduction de fichiers PDF avec Iceni Infix et OmegaT
      linux: OmegaT sur Linux
@@ -44,7 +44,6 @@ titles:
      ms_translator: Guide - Utilisation de Microsoft Translator avec OmegaT
      new_filter: Guide - Création d'un nouveau filtre de fichiers
      preview: Guide - Ajout d'une fonction de prévisualisation à OmegaT
-     priorview: Guide - L'utilitaire de prévisualisation "Priorview"
      prop12m: Propagation et traductions multiples
      spelling: Guide - Correcteur orthographique
      text_export: Guide - Utilisation de la fonction d'exportation de texte OmegaT (interface de script)
@@ -54,8 +53,8 @@ titles:
 windows_jre: Windows avec JRE
 windows_jre64b: Windows avec JRE 64 bits
 windows_nojre: Windows sans JRE
-osx_signed: OS X Signé
-osx_unsigned: OS X Non signé
+osx_signed: macOS Notarié
+osx_unsigned: macOS Non signé
 linux_jre: Linux avec JRE
 linux_jre64b: Linux avec JRE 64 bits
 nojre: Cross-platform sans JRE

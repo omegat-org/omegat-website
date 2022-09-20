@@ -64,6 +64,10 @@
     "enabled": true,
     "label": "&#x65E5;&#x672C;&#x8A9E;"
 }, {
+    "code": "mfe",
+    "enabled": true,
+    "label": "Morisyen"
+}, {
     "code": "nl",
     "enabled": true,
     "label": "Nederlands"

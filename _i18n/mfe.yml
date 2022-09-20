@@ -1,0 +1,62 @@
+global:
+  title: OmegaT - Enn Zouti Lib Memwar Tradiksion
+  description: OmegaT li enn program memwar tradiksion lib ki finn ekrir avek Java pou bann tradikter profesionel.
+
+menu:
+  languages: Lang
+  about: A-propo
+  documentation: Dokimantasion
+  contact: Kontak
+  download: 'Download'
+  resources: Resours
+  support: Asistans
+
+footer:
+  connect: Rezo sosial
+  omegat_project: Proze OmegaT
+  documentation: Dokimantasion
+
+titles:
+  404: Erer paz
+  about: A-propo
+  contact: Kontak ek asistans
+  support: Asistans
+  documentation: Dokimantasion
+  download: 'Download'
+  home: OmegaT - Enn Zouti Lib Memwar Tradiksion
+  philosophy: Filozofi
+  resources: Resours
+  manual: Gid
+  tutorials: Bann 'Tutorial'
+  howto: Bann Gid Pratik
+  reviews: Prezantasion
+  sponsorship: Parenaz
+  howtos:
+     compatibility: Konpatibilite
+     compatibility_deja_vu: Guide pratik - Konpatibilite OmegaT avek Déjà Vu
+     compiling_from_source: Guide pratik - Konpilasion OmegaT depi kod sours
+     docx: Guide pratik - Tradir bann fisie Word 2007 dan OmegaT
+     export_uncleaned_rtf: Guide pratik - Exportasion depi OmegaT an format 'Trados uncleaned RTF'
+     google_translate: Guide pratik - Itilizasion Google Translate dan OmegaT
+     iceni_infix: Guide pratik - Tradir bann fisie PDF avek Iceni Infix ek OmegaT
+     linux: OmegaT lor Linux
+     localizing_omegat: Guide pratik - Tradir OmegaT dan ou lalang
+     ms_translator: Guide pratik - Itilizasion Google Translate dan OmegaT
+     new_filter: Guide pratik - Kreasion enn nouvo filt
+     preview: Guide pratik - Kouma azout enn fonksion preview dan OmegaT
+     prop12m: Propagasion ek tradiksion miltip
+     spelling: Guide pratik - Verifikater lortograf
+     text_export: Guide pratik - Itilizasion fonksion exportasion text OmegaT (interfas skript)
+     tokenizer: Guide pratik - Itilizasion 'tokenizer' OmegaT
+
+# Platforms name
+windows_jre: Windows avek JRE
+windows_jre64b: Windows avek 64-bit JRE
+windows_nojre: Windows san JRE
+osx_signed: macOS version Noter
+osx_unsigned: macOS version Non Signe
+linux_jre: Linux avek JRE
+linux_jre64b: Linux avek 64-bit JRE
+nojre: Miltiplatform san JRE
+webstart: Web Start
+source: Kod sours
