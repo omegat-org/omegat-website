@@ -42,10 +42,6 @@
             "noInfo": true,
             "fileName": "Without_JRE.zip"
         }, {
-            "id": "standard_webstart",
-            "name": "webstart",
-            "link": "https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp"
-        }, {
             "id": "standard_source",
             "name": "source",
             "fileName": "Source.zip"
@@ -87,10 +83,6 @@
             "name": "nojre",
             "noInfo": true,
             "fileName": "Without_JRE.zip"
-        }, {
-            "id": "latest_webstart",
-            "name": "webstart",
-            "link": "https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp"
         }, {
             "id": "latest_source",
             "name": "source",
