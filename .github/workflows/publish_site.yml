@@ -30,30 +30,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎
         uses: actions/checkout@v3
 
-      - name: Setup Ruby
+      - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.5.5' # Not needed with a .ruby-version file
+          ruby-version: '2.7.6' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
-      - name: Setup Pages
+      - name: Setup Pages 📃
         id: pages
         uses: actions/configure-pages@v2
 
-      - name: Patch jekyll/assets/utils.rb
-        run: patch --verbose vendor/bundle/ruby/2.5.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
+      #- name: Install HTML Proofer 🔧
+      #  run: gem install html-proofer
 
-      - name: Build with Jekyll
+      - name: Patch jekyll/assets/utils.rb 🧷
+        run: patch --verbose vendor/bundle/ruby/2.7.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
+
+      - name: Build with Jekyll 🏗
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
-      - name: Upload artifact
+      #- name: Check for broken links 🧐🔗
+      #  run: htmlproofer --log-level :debug _site 2> links.log
+      #  continue-on-error: true
+
+      - name: Archive checker log 🗄
+        uses: actions/upload-artifact@v1
+        with:
+          name: links-check.log
+          path: links.log
+
+      - name: Upload artifact 🚚
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
 
@@ -65,6 +78,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 🎉
         id: deployment
         uses: actions/deploy-pages@v1
