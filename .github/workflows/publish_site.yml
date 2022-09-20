@@ -47,7 +47,7 @@ jobs:
       - name: Install HTML Proofer 🔧
         run: gem install html-proofer
 
-      - name: Patch jekyll/assets/utils.rb
+      - name: Patch jekyll/assets/utils.rb 🧷
         run: patch --verbose vendor/bundle/ruby/2.7.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
 
       - name: Build with Jekyll 🏗
