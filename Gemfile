@@ -12,7 +12,7 @@ ruby RUBY_VERSION
 
 # jekyll 3.5.0 doesn't work with jekyll-multiple-languages-plugin
 #"gem "jekyll", "3.5.0"
-gem "jekyll", "3.6.3"
+gem "jekyll", "3.9.2"
 gem "sprockets", "~> 3.7"
 gem "nokogiri", ">= 1.13.6"
 
