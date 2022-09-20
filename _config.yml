@@ -78,6 +78,7 @@ plugins_dir:
 exclude:
   - README
   - LICENSE
+  - vendor
   - Rakefile
   - Jenkinsfile
   - Gemfile
