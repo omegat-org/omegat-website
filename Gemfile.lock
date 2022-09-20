@@ -13,11 +13,13 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
     execjs (2.8.1)
     extras (0.3.0)
       forwardable-extended (~> 2.5)
     fastimage (2.2.6)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
@@ -74,12 +76,14 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
+    mini_portile2 (2.8.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.16.3)
-    nokogiri (1.13.8-x64-mingw32)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -109,7 +113,9 @@ GEM
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
+  ruby
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (= 3.9.2)
