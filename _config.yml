@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   It is a tool intended for professional translators.
 
 # the base hostname & protocol for your site, e.g. http://example.com
-url: "http://omegat.org"
+url: "https://omegat.org"
 baseurl: ""
 
 # Github
@@ -28,7 +28,7 @@ baseurl: ""
 #baseurl: "/omegat-website"
 
 # Used by the jekyll-seo-tag plugin
-logo: http://omegat.org/img/omegat_96.png
+logo: https://omegat.org/img/omegat_96.png
 twitter:
   username: OmegaTOfficial
 #facebook:
@@ -59,10 +59,12 @@ sass:
   style: compressed
  
 assets:
+  source_maps: false 
+  compression: true
+  gzip: true
   defaults:
-    js:  { integrity: false }
-    css: { integrity: false }
-    img: { integrity: false }
+    integrity:
+      {css,img,js}: false
 
 plugins_dir:
   - jekyll-sitemap
@@ -76,6 +78,8 @@ plugins_dir:
   - jekyll-redirect-from
 
 exclude:
+  #- training ## TEST ##
+  #- files ## TEST ##
   - README
   - LICENSE
   - vendor
