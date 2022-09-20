@@ -40,6 +40,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Cannot make html-proofer work on windows (libcurl not available)
-if !Gem.win_platform?
-   gem 'html-proofer'
-end
+#if !Gem.win_platform?
+#   gem 'html-proofer'
+#end
