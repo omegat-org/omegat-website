@@ -44,6 +44,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
 
+      - name: find and patch utils.rb
+        run: find / -name utils.rb
+        #run: patch XXX/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
+
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
