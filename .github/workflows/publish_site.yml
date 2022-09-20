@@ -44,9 +44,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
 
+      - run: pwd
+
       - name: find and patch utils.rb
-        run: find / -name utils.rb
-        #run: patch XXX/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
+        #run: find / -name utils.rb
+        run: patch  /home/runner/work/omegat-website/omegat-website/vendor/bundle/ruby/2.5.0/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
