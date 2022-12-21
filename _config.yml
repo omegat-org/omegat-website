@@ -43,8 +43,6 @@ social:
     - https://twitter.com/OmegaTOfficial
     - https://www.facebook.com/OmegaTOfficial
 
-google_analytics: UA-87327-16
-
 # i18n plugin, "en" is listed twice to force jekyll-multiple-languages-plugin
 # to create a "en/" folder, like the original OmegaT website.
 languages: [ "en" , "fr" ,"ar", "ca", "co", "cs", "de", "el", "es", "gl", "id", "ia", "it", "ko", "hu", "ja", "nl", "pl", "pt_BR", "pt", "ru", "sq", "sk", "si", "hr", "fi", "sv", "uk", "zh_CN", "zh_TW", "mfe", "en" ]
