@@ -1,0 +1,211 @@
+<div class="container">
+      <div>
+        <h2>Install OmegaT</h2>
+        </div>
+        <p>OmegaT comes in two editions:</p>
+        <div>
+          <dl>
+            <dt>
+              <span>Standard: OmegaT {{site.data.versions.standard.name}}</span>
+            </dt>
+            <dd>
+              <p>This edition is recommended for everyday use.</p>
+            </dd>
+            <dt>
+              <span>Developer: OmegaT Nightly</span>
+            </dt>
+            <dd>
+              <p>This edition is automatically generated every time new
+                code is added to OmegaT. It is used for testing
+                purposes.</p>
+            </dd>
+          </dl>
+        </div>
+        <p>The files are downloadable directly from <a href="https://omegat.org/download"
+            target="_top">https://omegat.org</a>.</p>
+        <div class="note">
+          <h4>Note</h4>
+          <p>OmegaT {{site.data.versions.standard.name}} requires a Java {{site.data.versions.standard.java_version}} Runtime
+            Environment (JRE) to run.</p>
+          <p>OmegaT packages are available both in versions bundled with Java, and
+            versions without it. Packages without Java rely on a Java {{site.data.versions.standard.java_version}} Runtime
+            Environment
+            installed systemwide.
+          </p>
+      <p>OmegaT {{site.data.versions.standard.name}} and later also support Java 11 Runtime Environment on any
+        platforms.</p>
+      <p>Due to licensing considerations, the OmegaT team recommends the Java
+        runtime Eclipse Temurin provided by the Eclipse Foundation's Adoptium Project, but any Java
+        {{site.data.versions.standard.java_version}}
+        compatible runtime environment should work.</p>
+    </div>
+    <section>
+          <div>
+            <h3>On Windows</h3>
+          </div>
+          <p>Double-click on the package you downloaded.</p>
+          <p>You can choose the language used during the installation and the
+            language used by OmegaT. You can also change this later by editing
+            <code class="filename">OmegaT.l4J.ini</code>.
+          </p>
+    </section>
+    <section>
+      <div>
+            <h3>On Linux</h3>
+      </div>
+      <p>Some Linux distributions offer OmegaT in their package manager. The
+        instructions given here apply to people who download the package from the
+        <a href="https://omegat.org/download" target="_top">https://omegat.org</a>
+        site and install it manually.
+      </p>
+      <p>Unpack/untar the file you downloaded. This creates a new
+        folder named after the package you downloaded. That folder contains
+        all the files needed to run OmegaT.</p>
+      <div class="note">
+        <h4>Note</h4>
+        <p>Although you can run OmegaT directly from the available
+          files, you can also run the <code>linux-install.sh</code>
+          script found there to have OmegaT installed in more appropriate
+          locations.</p>
+        <p>Running the script will require you to enter your
+          <code class="filename">sudo</code> password.
+        </p>
+        <p>The script checks for an existing installation of the same
+          OmegaT version in <code class="filename">/opt/omegat/</code>. If there isn’t
+          one, it installs the program in
+          <code class="filename">/opt/omegat/OmegaT_{{site.data.versions.standard.name}}</code> and sets it as the
+          default version (in
+          <code class="filename">/opt/omegat/OmegaT-default</code>).
+        </p>
+        </div>
+      <p>After the unpacking or installation is complete, you can
+        delete the downloaded file as it is no longer needed.</p>
+      </section>
+      <section>
+        <div>
+            <h3>On macOS</h3>
+          </div>
+          <p>Double click on the package you downloaded to unpack it. This
+            creates a folder called <code class="filename">OmegaT</code>. The folder contains
+            two files: <code class="filename">index.html</code> (the user guide index) and
+            <code class="filename">OmegaT.app</code> (the application). Copy the folder to a
+            suitable location (e.g. <code class="filename">Applications</code>).
+      </p>
+      <p>Eventually, drag and drop <code class="filename">OmegaT.app</code> onto the
+        Dock to easily access it.</p>
+      <p>Once you have done this, you can delete the downloaded file as it
+        is no longer needed.</p>
+      </section>
+      <section>
+            <div>
+              <h3>On other platforms</h3>
+            </div>
+        <p>This information applies to all systems that have a Java version
+          compatible with Java {{site.data.versions.standard.java_version}} Runtime Environment. That includes the platforms
+          described
+          above, but also the platforms for which specific packages are not
+          provided.</p>
+        <p>Download the <span class="emphasis">
+            <em>Cross-platform without JRE</em>
+          </span>
+          version.</p>
+        <div class="note">
+          <h3 class="title">Note</h3>
+          <p>The Eclipse Foundation provides OpenJDK Runtime Environments
+            JREs for many systems at <a href="https://adoptium.net/temurin"
+              target="_top">https://adoptium.net/temurin</a>.</p>
+          <p>IBM provides JREs for Linux PowerPC at <a
+              href="https://developer.ibm.com/languages/java/semeru-runtimes/downloads/"
+              target="_top">https://developer.ibm.com/languages/java/semeru-runtimes/downloads/</a>.</p>
+          <p>Follow the installation instructions of the package you
+            need.</p>
+      </div>
+      <p>Unpack the file that you downloaded. This creates a folder with
+        all the files necessary to run OmegaT.</p>
+      <p>Follow your system’s instructions to install OmegaT shortcuts in
+        convenient places of your choosing.</p>
+      </section>
+      <section>
+            <div>
+              <h3>Upgrade</h3>
+            </div>
+      <p>The changes between your version and the current version are
+        documented in the development site’s <a
+          href="https://sourceforge.net/p/omegat/code/ci/master/tree/release/changes.txt" target="_top">changes.txt</a>
+        file.</p>
+      <div>
+        <h4>Note</h4>
+        <p>If you decide to install a new version, keep the following in
+          mind:</p>
+        <div>
+          <ul>
+            <li>
+              <p>OmegaT’s preferences are stored in the configuration folder
+                and will <span class="emphasis">
+                  <em>not</em>
+                </span> be modified by the new version.</p>
+            </li>
+            <li>
+              <p>Projects that you have created in the past or are currently
+                using will <span class="emphasis">
+                  <em>not</em>
+                </span> be modified or deleted. OmegaT
+                projects are <span class="emphasis">
+                  <em>not</em>
+                </span> stored inside OmegaT. They are
+                separate objects that have no physical connection to the OmegaT
+                application itself.</p>
+            </li>
+            <li>
+              <p>Parameter files that are included in the downloaded OmegaT
+                package (especially the <code class="filename">OmegaT.l4J.ini</code> for Windows and the
+                <code class="filename">Configuration.properties</code> and
+                <code class="filename">Info.plist</code> files for macOS packages) might be
+                overwritten or deleted, so you may want to create a backup before
+                upgrading, if you have been using these files to modify OmegaT’s
+                launch parameters.
+              </p>
+            </li>
+            <li>
+              <p>The <code class="filename">plugins</code> and
+                <code class="filename">scripts</code> folders might be overwritten, so you
+                may want to create a backup before upgrading.
+              </p>
+            </li>
+            </ul>
+            </div>
+      </div>
+      <div>
+        <dl>
+          <dt>
+            <span>Over an existing version</span>
+          </dt>
+          <dd>
+            <p>To do this, simply select the same installation folder as the
+              existing installation when installing
+              the new version. The “old” version
+              of OmegaT will be overwritten, but settings made from the OmegaT
+              interface will be retained in the various configurations folders (see
+              above).</p>
+          </dd>
+          <dt>
+            <span>Alongside an existing
+              version</span>
+          </dt>
+          <dd>
+            <p>This will enable you to keep any number of versions side-by-side,
+              which you may wish to do until you feel comfortable with the new
+              version.</p>
+            <p>All the parameters located in the Configuration Folder will
+              be shared unless you specify a different configuration folder with the
+              <code class="literal">--config-dir=&lt;path&gt;</code> option from the OmegaT
+              options on the
+              command line . All the parameters located in a Project Folder will apply to
+              that project regardless of which version of OmegaT opens it.
+            </p>
+          </dd>
+          </dl>
+          </div>
+    </section>
+</section>
+</div>

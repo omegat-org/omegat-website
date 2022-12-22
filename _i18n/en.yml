@@ -8,6 +8,7 @@ menu:
   documentation: Documentation
   contact: Contact
   download: Download
+  install: Install
   resources: Resources
   support: Support
 
@@ -23,6 +24,7 @@ titles:
   support: Support
   documentation: Documentation
   download: Download
+  install: Install
   home: OmegaT - The Free Translation Memory Tool
   philosophy: Philosophy
   resources: Resources
