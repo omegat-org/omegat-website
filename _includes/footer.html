@@ -18,12 +18,15 @@
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>{% t footer.documentation %}</h4>
+        <h4><a href="{% tl documentation %}"> {% t footer.documentation %}</a></h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
             <li><a href="{% tl documentation %}#manual"><span class="glyphicon glyphicon-book"></span> {% t titles.manual %}</a></li>
-            <li><a href="{% tl documentation %}#tutorials"><span class="glyphicon glyphicon-user"></span> {% t titles.tutorials %}</a></li>
+            <li><a href="{% tl documentation %}#tutorials"><span class="glyphicon glyphicon-user"></span> {% t titles.tutorials
+                %}</a></li>
+            <li><a href="{% tl documentation %}#developers"><span class="glyphicon glyphicon-console"></span> {% t footer.developers
+                %}</a></li>
             <li><a href="{% tl reviews %}"><span class="glyphicon glyphicon-heart"></span> {% t titles.reviews %}</a></li>
           </ul>
         </div>
@@ -40,7 +43,7 @@
             <a href="{% tl about %}"><span class="glyphicon glyphicon-question-sign"></span> {% t titles.about %}</a>
             </li>
             <li>
-            <a href="{% tl philosophy %}"><span class="glyphicon glyphicon-console"></span> {% t titles.philosophy %}</a>
+            <a href="{% tl philosophy %}"><span class="glyphicon glyphicon-road"></span> {% t titles.philosophy %}</a>
             </li>
           </ul>
         </div>
