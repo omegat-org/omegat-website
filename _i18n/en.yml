@@ -16,6 +16,7 @@ footer:
   connect: Connect
   omegat_project: The OmegaT Project
   documentation: Documentation
+  developers: Contributing
 
 titles:
   404: Page Not Found
