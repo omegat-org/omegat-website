@@ -1,5 +1,5 @@
 <div class="container">
-		
+
 <p class="lead">以下のリンクから、さまざまなバージョンの OmegaT を入手できます。ダウンロードするバージョンがわからない場合は、<a
 href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a>を使用できます。</p>
 
@@ -45,8 +45,8 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
           <p>Windows システムへのインストール用。</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>MAC OS X</label>
-          <p>MAC OS X へのインストール用</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>macOSへのインストール用</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -92,9 +92,9 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
         <p>お客様の選択に基づいて、次のものを使用するように指示します。</p>
         <h3><a id="wizard-result-version" href="#">何らかのバージョン</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> ダウンロード</a>
-	
+
         <div id="wizard-result-osx" style="display:none;">
-          <p>このバージョンが使用できない場合は、<a href="#" id="wizard-result-unsigned">署名のないバージョン</a>をダウンロードしてみてください。</p> 
+          <p>このバージョンが使用できない場合は、<a href="#" id="wizard-result-unsigned">署名のないバージョン</a>をダウンロードしてみてください。</p>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 
 <h4>システム要件</h4>
 
-<p>OmegaT は、適正なJRE（Java Runtime Environment）がインストールされた、あるいはインストールできる、すべてのシステム上で動きます。JRE は、OmegaT と一緒に配布されていますが、別々に入手することもできます。OmegaT は、Windows（98 以降のすべての版）、Macintosh OS X、Linux にインストールできます。</p>
+<p>OmegaT は、適正なJRE（Java Runtime Environment）がインストールされた、あるいはインストールできる、すべてのシステム上で動きます。JRE は、OmegaT と一緒に配布されていますが、別々に入手することもできます。OmegaT は、Windows（98 以降のすべての版）、macOS、Linux にインストールできます。</p>
 <p>Microsoft Office XML 形式のファイルを、OmegaT で直接翻訳できます。それより古い形式の MS Word、Excel、Powerpoint ファイルは、対応する現在のMicrosoft Office 形式、または Office Open XML 形式へ変換したうえで翻訳できます。自由なソフトウェアの  LibreOfficeで(OpenOffice.orgも利用可 )変換できます。LibreOffice やOpenOffice.org  を入手するには、左にある「関連プログラム」ボタンのリンクをたどってください。</p>
 
 <h4>ユーザー要件</h4>
@@ -119,7 +119,7 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 		<span>OmegaTへの寄付を検討したことはありますか?このソフトウェアは無料ですが、OmegaTが役に立つので、寄付によって謝意を表したい、とお考えの方は、ペイパルアカウントにおねがいします。</span>
 
 		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
-		
+
 		<form action="https://www.paypal.com/cgi-bin/webscr" target="_paypal" id="donation-form" method="post">
 			<input type="hidden" name="business" value="thank.you.omegat@gmail.com">
 			<input type="hidden" name="cmd" value="_donations">
@@ -242,28 +242,31 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
-<h4 id="about_signing">署名あり/署名なし</h4>
+<h4 id="about_signing">認証済みと署名なし</h4>
 
-<p>Mac OS Xには、Gatekeeperと呼ばれる機能があります。この機能を使用すると、署名のないプログラムの実行が困難になるため、セキュリティが向上します。OmegaT for Mac OS Xには、署名付きバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+<p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
 
-<p>署名されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名されていないバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/kb/ph14369">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
+<p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+
+<p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing_unsigned">署名あり/署名なし</h4>
+<h4 id="about_signing">認証済みと署名なし</h4>
 
-<p>Mac OS Xには、Gatekeeperと呼ばれる機能があります。この機能を使用すると、署名のないプログラムの実行が困難になるため、セキュリティが向上します。OmegaT for Mac OS Xには、署名付きバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+<p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
 
-<p>署名されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名されていないバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/kb/ph14369">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
+<p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+
+<p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
 </div>
 
 <div id="popover_content_webstart" style="display:none">
       <p>Web Start 版は、OmegaT をインストールするもう一つの方法です。</p>
       <p>Web Start 版では、将来の更新版が自動インストールされます。</p>
-      <p>インストール中、OS によってはいくつかのセキュリティ警告が表示されることがあります。<br/>証明書は、フランスで登記された会社 <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a> によって署名されています。</p>
+      <p>インストール中、OS によってはいくつかのセキュリティ警告が表示されることがあります。<br/>この証明書は、OmegaTのリード開発者によって署名されています。</p>
       <p>この Web Start 版に与える権限（「コンピューターへの無制限アクセス」のように表示されることがあります）は、ローカル版に対して与えるものと同じで、コンピューターのハードディスクにアクセスすることを許可するものです。</p>
-      <p>Web Start 版をイントールするには、コンピューターに Java 1.3 以降がインストール済みである必要があります。</p>
+      <p>Web Start 版をイントールするには、コンピューターに Java 1.8 以降がインストール済みである必要があります。</p>
       <p>プライバシーについて：OmegaT Java Web Start は、ユーザーのコンピューターに関するいかなる情報も外部へ保存することはありません。プログラムは、ユーザーのコンピューター上で実行されます。ユーザーが作成した文書や翻訳メモリは、ユーザーのコンピューターに保存され、OmegaT プロジェクトがユーザーの作業内容や他の情報へアクセスすることはありません。</p>
 </div>
 
@@ -281,4 +284,3 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
     <p>ソースコードパッケージは、一般ユーザーには必要なく、開発者のみを対象としています。ソースコードパッケージは、該当するコンパイル済みバージョンのフォルダー内にあります。</p>
 </div>
 </div>
-

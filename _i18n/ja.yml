@@ -8,6 +8,7 @@ menu:
   documentation: 文書
   contact: 連絡先
   download: ダウンロード
+  install: インストール
   resources: リソース
   support: サポート
 
@@ -15,6 +16,7 @@ footer:
   connect: つながる
   omegat_project: OmegaT プロジェクト
   documentation: 文書
+  developers: 貢献
 
 titles:
   404: ページが見つかりません
@@ -23,8 +25,10 @@ titles:
   support: サポート
   documentation: 文書
   download: ダウンロード
+  install: インストール
   home: OmegaT, 自由に使える翻訳メモリツール
   philosophy: 理念
+  policies: ポリシー
   resources: リソース
   manual: 取扱説明書
   tutorials: 手引書
@@ -44,7 +48,6 @@ titles:
      ms_translator: Howto - Microsoft Translator を OmegaT で利用する
      new_filter: Howto-新しいファイルフィルターを作成する
      preview: Howto - OmegaT へプレビュー機能を追加する
-     priorview: Howto - 「Priorview」プレビュー・ユーティリティーを利用する
      prop12m: 技術情報：翻訳自動反映と複数訳文
      spelling: Howto - スペルチェック
      text_export: Howto - OmegaT のテキスト出力機能（外部スクリプト向け）を利用する
@@ -54,8 +57,8 @@ titles:
 windows_jre: Windows (JRE付き)
 windows_jre64b: Windows (64-bit, JRE付き)
 windows_nojre: Windows (JRE無し)
-osx_signed: OS X(認証済み)
-osx_unsigned: OS X (未署名)
+osx_signed: macOS (認証済み)
+osx_unsigned: macOS (署名なし)
 linux_jre: Linux (JRE付き)
 linux_jre64b: Linux (64-bit、 JRE付き)
 nojre: クロスプラットフォーム(JRE無し)
