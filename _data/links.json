@@ -1,5 +1,12 @@
 {
     "support": "https://sourceforge.net/projects/omegat/lists/omegat-users",
     "telegram": "https://t.me/omegatchat",
-    "facebook": "https://www.facebook.com/OmegaTOfficial"
+    "facebook": "https://www.facebook.com/OmegaTOfficial",
+    "groups.io": "https://omegat.groups.io/g/chat",
+    "mastodon": "https://floss.social/@OmegaTOfficial",
+    "twitter": "https://twitter.com/OmegaTOfficial",
+    "matrix": "https://matrix.to/#/#OmegaT:matrix.org",
+    "irc": "irc://irc.libera.chat/omegat",
+    "reddit": "https://www.reddit.com/r/OmegaT/",
+    "linkedin": "https://www.linkedin.com/groups/1769774/"
 }
