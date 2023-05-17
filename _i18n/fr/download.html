@@ -1,6 +1,6 @@
 <div class="container">
 
-<p class="lead">Les liens ci-dessous vous permettent de télécharger différentes versions d'OmegaT. Si vous ne savez pas quelle version utiliser, vous pouvez utiliser le <a
+<p class="lead">Les liens ci-dessous vous permettent de télécharger différentes versions d’OmegaT. Si vous ne savez pas quelle version utiliser, vous pouvez utiliser le <a
 href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a>.</p>
 
 <div id="download-wizard" class="panel panel-primary collapse">
@@ -13,13 +13,13 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="#tab-install-type" data-toggle="tab">Type d'installation</a>
+              <a href="#tab-install-type" data-toggle="tab">Type d’installation</a>
             </li>
             <li>
               <a href="#tab-version" data-toggle="tab">Version</a>
             </li>
             <li>
-              <a href="#tab-operating-system" data-toggle="tab">Système d'exploitation</a>
+              <a href="#tab-operating-system" data-toggle="tab">Système d’exploitation</a>
             </li>
             <li>
               <a href="#tab-jre" data-toggle="tab">JRE</a>
@@ -32,13 +32,13 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
       <div class="tab-pane fade in" id="tab-install-type">
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Classique</label>
-          <p>Dans cette version, l'installation est faite par l'utilisateur. C'est l'option habituelle des utilisateurs réguliers d'OmegaT. Dans le doute, sélectionnez cette version.</p>
+          <p>Dans cette version, c’est vous qui installez OmegaT. C’est l’option habituellement choisis. Dans le doute, sélectionnez cette version.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
           <p>La version Web Start est la version "installer et oublier".<br/>
-                <strong>Avantage</strong>&nbsp;: installation automatique des mises à jours sur l'ordinateur après le lancement de l'application.<br/>
-                <strong>Inconvénient</strong>&nbsp;: version incompatible avec les modules d'extension rendant certaines fonctions indisponibles.</p>
+                <strong>Avantage</strong> : installation automatique des mises à jours sur l’ordinateur après le lancement de l’application.<br/>
+                <strong>Inconvénient</strong> : version incompatible avec les modules d’extension rendant certaines fonctions indisponibles.</p>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
@@ -48,7 +48,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
-          <p>Installation sur macOS.</p>
+          <p>Installation sur macOS</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -56,48 +56,48 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="other" name="optOS"/>Autres</label>
-          <p>Installation sur divers autres systèmes d'exploitation (notamment FreeBSD et Solaris)<br/>
-          <i>OmegaT peut être installé sur tout système d'exploitation intégrant la version 1.8 de l'environnement d'exécution Java.</i></p>
+          <p>Installation sur divers autres systèmes d’exploitation (notamment FreeBSD et Solaris)<br/>
+          <i>OmegaT peut être installé sur tout système d’exploitation intégrant la version 1.8 de l’environnement d’exécution Java.</i></p>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-jre">
-        <p class="with-windows-jre" style="display:none;">Choisissez l'une des deux options de téléchargement proposées&nbsp;: avec ou sans environnement d'exécution Java (JRE). Si un JRE adéquat est déjà installé sur votre ordinateur, sélectionnez «&nbsp;Sans JRE&nbsp;». Si votre système ne dispose pas de la version appropriée, ou si vous n'en êtes pas certain, sélectionnez «&nbsp;Avec JRE&nbsp;».</p>
+        <p class="with-windows-jre" style="display:none;">Choisissez l’une des deux options de téléchargement proposées : avec ou sans environnement d’exécution Java (JRE). Si un JRE adéquat est déjà installé sur votre ordinateur, sélectionnez «&nbsp;Sans JRE&nbsp;». Si votre système ne dispose pas de la version appropriée, ou si vous n’en êtes pas certain, sélectionnez «&nbsp;Avec JRE&nbsp;».</p>
         <div class="with-linux-jre" style="display:none;">
-          <p>OmegaT peut normalement être exécuté sur tout système Linux intégrant l'environnement d'exécution Java (JRE). OmegaT requiert actuellement le JRE version 1.8 ou ultérieure. Pour vérifier la version présente sur votre système Linux, ouvrez une console (fenêtre de ligne de commande) et saisissez&nbsp;:</p>
+          <p>OmegaT peut normalement être exécuté sur tout système Linux intégrant l’environnement d’exécution Java (JRE). OmegaT requiert actuellement le JRE version 1.8 ou ultérieure. Pour vérifier la version présente sur votre système Linux, ouvrez une console (fenêtre de ligne de commande) et saisissez :</p>
           <pre>$ <strong>java -version</strong></pre>
-          <p>Si vous n'êtes pas certain d'avoir une version appropriée du JRE, vous pouvez télécharger et installer une version d'OmegaT avec JRE. Cette méthode est sûre et exclut tout conflit de versions (risques de remplacement/désinstallation) puisque ce JRE sera utilisé uniquement localement pour OmegaT.</p>
+          <p>Si vous n’êtes pas certain d’avoir une version appropriée du JRE, vous pouvez télécharger et installer une version d’OmegaT avec JRE. Cette méthode est sûre et exclut tout conflit de versions (risques de remplacement/désinstallation) puisque ce JRE sera utilisé uniquement localement pour OmegaT.</p>
         </div>
         <div class="radio jre32">
           <label><input type="radio" class="radio-primary" value="jre" name="optJRE"/>Avec JRE</label>
-          <p>Version d'OmegaT «&nbsp;piles incluses&nbsp;», fournie avec son environnement d'exécution Java. Son téléchargement est plus long et son installation demande plus d'espace sur le disque dur, mais elle est certaine de fonctionner. En cas de doute, choisissez cette option.</p>
+          <p>Version d’OmegaT «&nbsp;piles incluses&nbsp;», fournie avec son environnement d’exécution Java. Son téléchargement est plus long et son installation demande plus d’espace sur le disque dur, mais elle est certaine de fonctionner. En cas de doute, choisissez cette option.</p>
         </div>
         <div class="radio jre64">
           <label><input type="radio" class="radio-primary" value="jre64b" name="optJRE"/>Avec JRE 64-bit</label>
           <p>Le JRE inclus est la version 64 bits.</p>
-          <p class="jrelatest">Version d'OmegaT «&nbsp;piles incluses&nbsp;», fournie avec son environnement d'exécution Java. Son téléchargement est plus long et son installation demande plus d'espace sur le disque dur, mais elle est certaine de fonctionner. En cas de doute, choisissez cette option.</p>
+          <p class="jrelatest">Version d’OmegaT «&nbsp;piles incluses&nbsp;», fournie avec son environnement d’exécution Java. Son téléchargement est plus long et son installation demande plus d’espace sur le disque dur, mais elle est certaine de fonctionner. En cas de doute, choisissez cette option.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="nojre" name="optJRE"/>Sans JRE</label>
-          <p>Choisissez cette option si un environnement d'exécution Java adéquat est déjà installé sur l'ordinateur au niveau système.</p>
+          <p>Choisissez cette option si un environnement d’exécution Java adéquat est déjà installé sur l’ordinateur au niveau système.</p>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-version">
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
-          <p>La version «&nbsp;standard&nbsp;» est fournie avec une documentation complète (tout au moins en anglais)&nbsp;; elle a été soumise à des tests et a fait l'objet de corrections. Cette version est recommandée aux utilisateurs débutants.</p>
+          <p>La version «&nbsp;standard&nbsp;» est fournie avec une documentation complète (tout au moins en anglais) ; elle a été soumise à des tests et a fait l’objet de corrections. Cette version est recommandée aux personnes débutantes.</p>
           <div class="radio">
             <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Récente</label>
-            <p>La version «&nbsp;récente&nbsp;» («&nbsp;latest&nbsp;» sur le site de téléchargement) est la version la plus actuelle d'OmegaT. À ce stade de développement, elle peut comporter certains bogues mineurs et sa documentation peut manquer d'exactitude. Néanmoins, les versions « récentes » sont globalement stables et s'adressent aux utilisateurs ayant déjà une certaine expérience avec OmegaT.</p>
+            <p>La version «&nbsp;récente&nbsp;» («&nbsp;latest&nbsp;» sur le site de téléchargement) est la version la plus actuelle d’OmegaT. À ce stade de développement, elle peut comporter certains bogues mineurs et sa documentation peut manquer d’exactitude. Néanmoins, les versions « récentes » sont globalement stables et s’adressent aux personnes qui ont déjà une certaine expérience avec OmegaT.</p>
           </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
-        <p>D'après vos choix, nous vous recommandons d'utiliser&nbsp;:</p>
+        <p>D’après vos choix, nous vous recommandons d’utiliser :</p>
         <h3><a id="wizard-result-version" href="#">une certaine version</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Télécharger</a>
 
         <div id="wizard-result-osx" style="display:none;">
-          <p>Si cette version n'est pas disponible, vous pouvez essayer de <a href="#" id="wizard-result-unsigned">téléchargez la version non signée</a>.</p>
+          <p>Si cette version n’est pas disponible, vous pouvez essayer de <a href="#" id="wizard-result-unsigned">téléchargez la version non signée</a>.</p>
         </div>
       </div>
     </div>
@@ -108,18 +108,18 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 
 <h4>Configuration requise</h4>
 
-<p>OmegaT peut être exécuté sur tout système intégrant l'environnement d'exécution Java approprié (JRE, Java Runtime Environment). Le JRE étant désormais fourni avec OmegaT, il est inutile de le télécharger séparément. L'installation d'OmegaT a été concluante sur toutes les plateformes Windows (à partir de Windows 98), macOS et Linux.</p>
-<p>Les fichiers au format Microsoft Office XML peuvent être traduits directement dans OmegaT. Par contre, les fichiers créés dans un format MS Word, Excel ou Powerpoint plus ancien doivent être convertis dans les formats correspondants d'OpenOffice.org, Apache OpenOffice ou LibreOffice (suites bureautiques libres et gratuites). Vous pouvez obtenir Apache OpenOffice ou LibreOffice à partir de la page «&nbsp;Logiciels tiers&nbsp;» accessible via le menu sur la gauche de l'écran.</p>
+<p>OmegaT peut être exécuté sur tout système intégrant l’environnement d’exécution Java approprié (JRE, Java Runtime Environment). Le JRE étant désormais fourni avec OmegaT, il est inutile de le télécharger séparément. OmegaT a été installé avec succès sur Windows (toutes les versions à partir de 98), macOS et Linux.</p>
+<p>*Les fichiers au format Microsoft Office XML peuvent être traduits directement dans OmegaT. Par contre, les fichiers créés dans un format MS Word, Excel ou Powerpoint plus ancien doivent être convertis dans les formats correspondants d’OpenOffice.org, Apache OpenOffice ou LibreOffice (suites bureautiques libres et gratuites). Vous pouvez obtenir Apache OpenOffice ou LibreOffice à partir de la page «&nbsp;Logiciels tiers&nbsp;» accessible via le menu sur la gauche de l’écran.</p>
 
-<h4>Profil utilisateur</h4>
-<p>Bien que l'installation et l'utilisation d'OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d'une manière générale, vous avez une certaine aversion pour la lecture d'instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l'attente que quelque chose ressemblant à l'effet recherché se produise, alors OmegaT n'est probablement pas le bon outil pour vous.</p>
+<h4>Profil</h4>
+<p>Bien que l’installation et l’utilisation d’OmegaT ne présentent pas de difficulté particulière, il est vivement recommandé de prendre connaissance de la documentation fournie et de suivre les instructions indiquées. Si, d’une manière générale, vous avez une certaine aversion pour la lecture d’instructions et que vous avez tendance à découvrir un logiciel en cliquant partout dans l’attente que quelque chose ressemblant à l’effet recherché se produise, alors OmegaT n’est probablement pas le bon outil pour vous.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
 	<div class="donation-call">
 		<h3>Avant de commencer</h3>
 
-		<span>Avez-vous envisagé de faire un don à OmegaT&nbsp;? Bien que ce logiciel soit gratuit, si vous le trouvez utile et que vous souhaitez exprimer votre gratitude, vous pouvez faire un don sur notre compte Paypal.</span>
+		<span>Avez-vous envisagé de faire un don à OmegaT ? Bien que ce logiciel soit gratuit, si vous le trouvez utile et que vous souhaitez exprimer votre gratitude, vous pouvez faire un don sur notre compte Paypal.</span>
 
 		<input id="donation-slider" type="range" min="5" max="100" step="5" value="35" data-rangeslider>
 
@@ -137,7 +137,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 
 <h3 id="standard">Version standard - {{site.data.versions.standard.name}}</h3>
 
-<p>La version standard nécessite Java {{site.data.versions.standard.java_version}}. Il s'agit de la version normalement utilisée&nbsp;; elle se distingue par sa fiabilité. La documentation qui l'accompagne est relativement à jour, du moins en ce qui concerne la documentation en anglais.<!--It will however lack some of the features of the "Latest" version.--></p>
+<p>La version standard nécessite Java {{site.data.versions.standard.java_version}}. Il s’agit de la version normalement utilisée ; elle se distingue par sa fiabilité. La documentation qui l’accompagne est relativement à jour, du moins en ce qui concerne la documentation en anglais.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -152,13 +152,13 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
   <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      {% if platform.noInfo != true %}
+      {% if platform.noInfo&nbsp;!= true %}
           <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_{{ platform.name }}"></div>
       {% endif %}
       </td>
       <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% if platform.link&nbsp;!= null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
       {% endif %}
       </td>
@@ -170,7 +170,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 
 <h3 id="latest">Version récente (ou «&nbsp;Latest&nbsp;») - {{site.data.versions.latest.name}}</h3>
 
-<p>La version récente nécessite Java {{site.data.versions.latest.java_version}}. Il s'agit d'une version plus actuelle que la version standard et qui intègre de nouvelles fonctionnalités. Globalement, elle est relativement stable, mais elle peut comporter des bogues. D'autre part, sa documentation est moins détaillée, en particulier les informations concernant les nouvelles fonctions. Les utilisateurs qui ont l'habitude d'OmegaT préfèrent souvent la dernière version.</p>
+<p>La version récente nécessite Java {{site.data.versions.latest.java_version}}. Il s’agit d’une version plus actuelle que la version standard et qui intègre de nouvelles fonctionnalités. Globalement, elle est relativement stable, mais elle peut comporter des bogues. D’autre part, sa documentation est moins détaillée, en particulier les informations concernant les nouvelles fonctions. Les personnes qui ont l’habitude d’OmegaT préfèrent souvent la dernière version.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -185,12 +185,10 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
+      {% if platform.noInfo != true %} <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span> {% endif %}
       </td>
       <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
+      {% if platform.link&nbsp;!= null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Télécharger</a></td>
       {% endif %}
       </td>
@@ -229,53 +227,53 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 
 <h3>Versions obsolètes</h3>
 
-<p>Vous pouvez télécharger <a href="{{ site.data.downloads.legacy }}">d'anciennes versions obsolètes</a> ​​d'OmegaT.</p>
+<p>Vous pouvez télécharger <a href="{{ site.data.downloads.legacy }}">d’anciennes versions obsolètes</a> ​​d’OmegaT.</p>
 
-<p>Ces versions obsolètes sont des versions antérieures qui ont été remplacées. Pour la plupart des utilisateurs, elles sont sans intérêt. Certaines restrictions imposées par le système d'exploitation ou la version Java utilisés pourront toutefois obliger certains utilisateurs à préférer une version plus ancienne.</p>
+<p>Ces versions obsolètes sont des versions antérieures qui ont été remplacées. Pour la plupart d’entre vous, elles sont sans intérêt. Certaines restrictions imposées par le système d’exploitation ou la version Java utilisés pourront toutefois obliger certaines personnes à préférer une version plus ancienne.</p>
 
 <h3>Avec ou sans JRE</h3>
 
-<p>L'environnement d'exécution Java (JRE) doit être installé sur votre ordinateur pour qu'OmegaT puisse fonctionner.</p>
+<p>L’environnement d’exécution Java (JRE) doit être installé sur votre ordinateur pour qu’OmegaT puisse fonctionner.</p>
 
-<p>Si un JRE adéquat est déjà installé sur votre ordinateur, vous pouvez télécharger une version d'OmegaT sans JRE – le téléchargement sera plus rapide et l'installation demandera moins d'espace sur le disque dur. Dans ce cas, choisissez par exemple une version « standard » ou « récente » puis sélectionnez la variante portant la mention correspondante (« Java not included », « without_JRE »).</p>
+<p>Si un JRE adéquat est déjà installé sur votre ordinateur, vous pouvez télécharger une version d’OmegaT sans JRE – le téléchargement sera plus rapide et l’installation demandera moins d’espace sur le disque dur. Dans ce cas, choisissez par exemple une version « standard » ou « récente » puis sélectionnez la variante portant la mention correspondante (« Java not included », « without_JRE »).</p>
 
-<p>Si vous deviez installer OmegaT avec son JRE, alors qu'un JRE est déjà présent sur votre ordinateur, il n'y aura pas de conflit entre les versions en raison d'installations distinctes. Par conséquent, l'installation d'OmegaT avec le JRE reste la méthode la plus sûre. Si vous n'êtes pas certain d'avoir une version appropriée du JRE, sélectionnez la version d'OmegaT avec JRE (ou la version par défaut). </p>
+<p>Si vous deviez installer OmegaT avec son JRE, alors qu’un JRE est déjà présent sur votre ordinateur, il n’y aura pas de conflit entre les versions en raison d’installations distinctes. Par conséquent, l’installation d’OmegaT avec le JRE reste la méthode la plus sûre. Si vous n’êtes pas certain d’avoir une version appropriée du JRE, sélectionnez la version d’OmegaT avec JRE (ou la version par défaut). </p>
 
-<p><strong>Note à l'attention des utilisateurs de Linux</strong>&nbsp;: la plupart des distributions Linux sont fournies avec un environnement d'exécution Java, cependant certaines implémentations Open Source ne fonctionnent pas toujours correctement avec OmegaT (incompatibilité qui ne s'avère éventuellement pas immédiatement). Nous recommandons aux débutants sur Linux de choisir une version d'OmegaT avec JRE. Les utilisateurs avertis pourront préférer une installation du JRE d'Oracle (anciennement Sun) au niveau système.
+<p><strong>Si vous utilisez Linux</strong> : la plupart des distributions Linux sont fournies avec un environnement d’exécution Java. Cependant, certaines implémentations en source libre ne fonctionnent pas toujours correctement avec OmegaT (incompatibilité qui ne s’avère pas toujours immédiatement). Nous recommandons aux débutants sur Linux de choisir une version d’OmegaT avec JRE. Les personnes averties pourront préférer une installation du JRE d’Oracle (anciennement Sun) au niveau système.
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Notarié et non-signé</h4>
 
-<p>macOS tente d'augmenter la sécurité en rendant plus dure l'exécution de programmes non vérifiés.</p>
+<p>macOS tente d’augmenter la sécurité en rendant plus dure l’exécution de programmes non vérifiés.</p>
 
-<p>OmegaT pour macOS est disponible en version notariée et en version non-signée&nbsp;; les deux versions sont fonctionnellement identiques, mais la version notarié est préférée car elle est reconnue par le système comme étant a) publiée par un développeur connu et b) scannée par Apple.</p>
+<p>OmegaT pour macOS est disponible en version notariée et en version non-signée ; les deux versions sont fonctionnellement identiques, mais la version notariée est préférée car elle est reconnue par le système comme étant a) publiée par un développeur connu et b) scannée par Apple.</p>
 
-<p>Il peut y avoir un délai dans la publication des versions notariées. Les utilisateurs pressés peuvent utiliser la version non signée&nbsp;; si vous rencontrez des difficultés à lancer l'application, consultez l'article <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Comment ouvrir une application d'un développeur non identifié</a>.</p>
+<p>Il peut y avoir un délai dans la publication des versions notariées. Les personnes pressées peuvent utiliser la version non signée ; si vous rencontrez des difficultés à lancer l’application, consultez l’article <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Comment ouvrir une application d’un développeur non identifié</a>.</p>
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing">Notarié et non-signé</h4>
 
-<p>macOS tente d'augmenter la sécurité en rendant plus dure l'exécution de programmes non vérifiés.</p>
+<p>macOS tente d’augmenter la sécurité en rendant plus dure l’exécution de programmes non vérifiés.</p>
 
-<p>OmegaT pour macOS est disponible en version notariée et en version non-signée&nbsp;; les deux versions sont fonctionnellement identiques, mais la version notarié est préférée car elle est reconnue par le système comme étant a) publiée par un développeur connu et b) scannée par Apple.</p>
+<p>OmegaT pour macOS est disponible en version notariée et en version non-signée ; les deux versions sont fonctionnellement identiques, mais la version notariée est préférée car elle est reconnue par le système comme étant a) publiée par un développeur connu et b) scannée par Apple.</p>
 
-<p>Il peut y avoir un délai dans la publication des versions notariées. Les utilisateurs pressés peuvent utiliser la version non signée&nbsp;; si vous rencontrez des difficultés à lancer l'application, consultez l'article <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Comment ouvrir une application d'un développeur non identifié</a>.</p>
+<p>Il peut y avoir un délai dans la publication des versions notariées. Les personnes pressées peuvent utiliser la version non signée ; si vous rencontrez des difficultés à lancer l’application, consultez l’article <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Comment ouvrir une application d’un développeur non identifié</a>.</p>
 </div>
 
 <div id="popover_content_webstart" style="display:none">
-      <p>La version Web Start est une solution d'installation simple permettant d'exécuter la version actuelle d'OmegaT.</p>
-      <p>L'une des particularités de cette version est l'installation automatique des mises à jours.</p>
-      <p>Durant l'installation, en fonction de votre système d'exploitation, vous recevrez peut-être plusieurs avertissements de sécurité.<br/>Le certificat est signé par le développeur principal d'OmegaT.</p>
-      <p>Les autorisations que vous accordez à cette version (par exemple, un « accès illimité à l'ordinateur ») sont identiques aux autorisations que vous donnez à la version locale (c'est-à-dire un accès au disque dur de l'ordinateur).</p>
-      <p>L'installation de la version Web Start requiert Java 1.8 ou ultérieur sur votre ordinateur.</p>
-      <p>Engagement de confidentialité&nbsp;: le Java Web Start d'OmegaT ne stocke aucune de vos données sur les serveurs Web d'OmegaT. L'application est exécutée sur votre machine&nbsp;; vos documents et mémoires de traduction restent sur votre ordinateur et le projet OmegaT n'aura en aucun cas accès à vos travaux ou informations.</p>
+      <p>La version Web Start est une solution d’installation simple permettant d’exécuter la version actuelle d’OmegaT.</p>
+      <p>L’une des particularités de cette version est l’installation automatique des mises à jours.</p>
+      <p>Durant l’installation, en fonction de votre système d’exploitation, vous recevrez peut-être plusieurs avertissements de sécurité.<br/>Le certificat est signé par le développeur principal d’OmegaT.</p>
+      <p>Les autorisations que vous accordez à cette version (par exemple, un « accès illimité à l’ordinateur ») sont identiques aux autorisations que vous donnez à la version locale (c’est-à-dire un accès au disque dur de l’ordinateur).</p>
+      <p>L’installation de la version Web Start requiert Java 1.8 ou ultérieur sur votre ordinateur.</p>
+      <p>Engagement de confidentialité : le Java Web Start d’OmegaT ne stocke aucune de vos données sur les serveurs Web d’OmegaT. L’application est exécutée sur votre machine ; vos documents et mémoires de traduction restent sur votre ordinateur et le projet OmegaT n’aura en aucun cas accès à vos travaux ou informations.</p>
 </div>
 
 
 <div id="popover_content_master" style="display:none">
-    <p>La version de développement (alpha) reflète la phase de développement la plus récente. Elle n'est recommandée qu'aux développeurs et testeurs assidus. Elle peut également être obtenue via la commande git suivante&nbsp;:</p>
+    <p>La version de développement (alpha) reflète la phase de développement la plus récente. Elle n’est recommandée qu’aux développeurs et testeurs assidus. Elle peut également être obtenue via la commande git suivante :</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
@@ -284,6 +282,6 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
 </div>
 
 <div id="popover_content_source" style="display:none">
-    <p>Les paquets contenant le code source ne sont pas nécessaires à l'utilisation du logiciel, ils ne sont destinés qu'aux développeurs. Ils sont placés dans les dossiers des versions compilées correspondantes.</p>
+    <p>Les paquets contenant le code source ne sont pas nécessaires à l’utilisation du logiciel, ils ne sont destinés qu’aux développeurs. Ils sont placés dans les dossiers des versions compilées correspondantes.</p>
 </div>
 </div>

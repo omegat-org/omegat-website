@@ -2,9 +2,9 @@
   <!-- index -->
   <div class="jumbotron">
     <div class="container-fluid">
-      <h1>OmegaT <small>l'outil libre de TAO</small></h1>
+      <h1>OmegaT <small>l’outil libre de TAO</small></h1>
       <div class="title-buttons">
-        <a class="btn btn-primary" href="download" role="button">Télécharger</a> ​​<a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Démarrer</a>
+        <a class="btn btn-primary" href="Télécharger" role="button">Télécharger</a> ​​<a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Démarrer</a>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="modal-body">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="ytvideo embed-responsive-item" src="//www.youtube.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""></iframe>
+            <iframe class="ytvideo embed-responsive-item" src="//www.youtube-nocookie.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""></iframe>
           </div>
           <p class="text-center">Vidéo de <a href="https://www.youtube.com/channel/UC2EFKLWWI4gh9BGpMf0-_5g">CATguruEN</a> (Dominique Pivard)</p>
         </div>
@@ -32,8 +32,11 @@
   </div>
 
   <div class="container-fluid section">
-    <p class="lead">
-<strong>OmegaT</strong> est un logiciel libre de TAO conçu pour des traducteurs professionnels, qui fonctionne sous Windows, macOS ou Linux. Il ne traduit pas à votre place&nbsp;! Les logiciels qui le font sont classés dans la catégorie «&nbsp;traduction automatique&nbsp;» à laquelle vous devez vous référer si c'est ce que vous cherchez.</p>
+<p class="lead">
+<strong>OmegaT</strong> est une application de mémoire de traduction qui fonctionne sous Windows, macOS, Linux... C’est un outil destiné aux traductaires de profession. Il ne traduit pas à votre place . (Les logiciels qui effectuent cette opération sont appelés "traducteur automatique". OmegaT peut s’interfacer avec certains programmes de traduction automatique ou services Internet)</p>
+
+    <p class="lead">OmegaT est un logiciel libre. Cela signifie que des personnes comme vous peuvent le télécharger et l’utiliser sans aucune restriction. Vous êtes également libre de le copier et de le transmettre à d’autres personnes, voire de modifier OmegaT pour l’adapter à vos propres besoins. Une <a href="https://www.gnu.org/philosophy/free-sw.html">explication plus détaillée des logiciels libres</a> est disponible sur le site de la Free Software Foundation.</p>
+    
     <div class="row">
       <div class="col-md-4">
         <h3>Fonctions professionnelles</h3>
@@ -50,28 +53,28 @@
         <h3>Supporte plus de 30 formats de fichier</h3>
         <div class="header-line"><!----></div>
         <ul>
-          <li>Microsoft Word, Excel, Powerpoint
-          </li><li>XHTML et HTML</li>
-          <li>Open Document Format (LibreOffice, OpenOffice.org)</li>
+          <li>Microsoft Office Word, Excel, PowerPoint (2007 ou version ultérieure)</li>
+          <li>XHTML et HTML</li>
+          <li>OpenDocument Format (format de fichier natif pour LibreOffice, Apache OpenOffice)</li>
           <li>MediaWiki (Wikipédia)</li>
           <li>Texte brut</li>
-          <li>... et une trentaine d'autres formats de fichier</li>
+          <li>... et une trentaine d’autres formats de fichier</li>
         </ul>
       </div>
       <div class="col-md-4">
         <h3>Des outils puissants</h3>
         <div class="header-line"><!----></div>
         <ul>
-          <li>Prise en charge d'Unicode (UTF-8)&nbsp;: utilisation possible avec les alphabets non latins</li>
-          <li>Prise en charge des langues s'écrivant de droite à gauche</li>
-          <li>Vérificateur orthographique intégral</li>
-          <li>Compatibilité avec d'autres logiciels de mémoire de traduction (TMX, TTX, TXML, XLIFF, SDLXLIFF)</li>
-          <li>Interface avec Google Translate</li>
+          <li>Prise en charge d’Unicode : utilisation possible avec les alphabets et écritures divers</li>
+          <li>Prise en charge des langues s’écrivant de droite à gauche</li>
+          <li>Vérificateur orthographique intégré qui utilise les dictionnaires Hunspell (comme dans d’autres logiciels tels que LibreOffice ou Mozilla FireFox)</li>
+          <li>Compatible avec d’autres applications de mémoire de traduction via des formats d’échange tels que TMX, TTX, TXML, XLIFF, SDLXLIFF.</li>
+          <li>Interface avec les logiciels de traduction automatique, de traduction automatique neuronale et les services web</li>
         </ul>
       </div>
     </div>
     <div class="row im-centered">
-      <img alt="Capture d'écran d'OmegaT" src="{{site.baseurl_root}}/img/screenshots/main_window_{{ site.lang }}.png" class="img-responsive"/>
+      <img alt="Capture d’écran d’OmegaT" src="{{site.baseurl_root}}/img/screenshots/main_window_{{ site.lang }}.png" class="img-responsive"/>
     </div>
   </div>
   <div class="container-fluid section" id="page-download">
@@ -79,7 +82,7 @@
     <div class="whitebox">
       <h2>Télécharger</h2>
       <div class="header-line"><!----></div>
-      <p class="text-md-center"><strong>OmegaT</strong> se décline en différentes versions pour répondre à de nombreux profils utilisateur.</p>
+      <p class="text-md-center"><strong>OmegaT</strong> se décline en différentes versions pour répondre à de nombreux profils d’utilisation.</p>
 
 
       <div class="row">
@@ -87,7 +90,7 @@
           <!-- padding -->
         </div>
         <div class="col-md-4 text-md-center">
-          <p>Le sélecteur de téléchargement permet d'identifier la version la mieux adaptée à votre profil.</p>
+          <p>Le sélecteur de téléchargement permet d’identifier la version la mieux adaptée à votre profil.</p>
         </div>
         <div class="col-md-4 text-md-center">
           <p>Si néanmoins vous savez déjà quelle version télécharger, vous pouvez vous rendre directement à la page de présentation des téléchargements.</p>
@@ -102,12 +105,12 @@
         </div>
         <div class="col-md-4 text-md-center">
           <p>
-            <a class="btn btn-primary" href="download#selector" role="button">Sélecteur de téléchargement</a>
+            <a class="btn btn-primary" href="Sélecteur de téléchargement" role="button">Sélecteur de téléchargement</a>
           </p>
         </div>
         <div class="col-md-4 text-md-center">
           <p>
-            <a class="btn btn-default" href="download#downloads" role="button">Téléchargement</a>
+            <a class="btn btn-default" href="téléchargements#téléchargements" role="button">Téléchargement</a>
           </p>
         </div>
       </div>
@@ -116,8 +119,8 @@
 
     <div class="container-fluid versions">
       <ul class="list-group">
-        <li class="list-group-item"><span class="badge"><a href="download#standard">{{site.data.versions.standard.name}}</a></span> Version standard</li>
-        <li class="list-group-item"><span class="badge"><a href="download#latest">{{site.data.versions.latest.name}}</a></span> Dernière version</li>
+        <li class="list-group-item"><span class="badge"><a href="standard de téléchargement">{{site.data.versions.standard.name}}</a></span> Version standard</li>
+        <li class="list-group-item"><span class="badge"><a href="Dernier téléchargement">{{site.data.versions.latest.name}}</a></span> Dernière version</li>
       </ul>
     </div>
   </div>
@@ -140,10 +143,10 @@
             <blockquote>
               <div class="row">
                 <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote1.jpg" style="width: 100px;height:100px;" alt="Portrait d'utilisateur">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote1.jpg" style="width: 100px;height:100px;" alt="Portrait">
                 </div>
                 <div class="col-sm-9">
-                        <p>Le compagnon idéal pour ceux d'entre nous qui n'ont pas besoin de complexité mais d'efficacité&nbsp;; les glossaires, la saisie et la traduction automatique me rendent plus productif pour mes traductions littéraires.</p>
+                        <p>Le compagnon idéal pour ceux d’entre nous qui n’ont pas besoin de complexité mais d’efficacité ; les glossaires, la saisie et la traduction automatique me rendent plus productif pour mes traductions littéraires.</p>
                   <small>Diego Merino - Traducteur EN &gt; ES  </small>
                 </div>
               </div>
@@ -157,7 +160,7 @@
                   <img class="img-circle" src="{{site.baseurl_root}}/img/quote2.jpg" style="width: 100px;height:100px;" alt="User portrait">
                 </div-->
                 <div class="col-sm-12">
-                  <p>Les traducteurs italiens de LibreOffice et d'ODFAuthors sont fiers d'utiliser cet outil pour accomplir leur tâche au sein de la communauté LibreOffice.</p>
+                  <p>Les traductaires de LibreOffice et d’ODFAuthors vers l’italien ont la fierté d’utiliser cet outil pour accomplir leur tâche au sein de la communauté LibreOffice.</p>
                   <small>Valter Mura - Traducteur EN &gt; IT</small>
                 </div>
               </div>
@@ -168,10 +171,10 @@
             <blockquote>
               <div class="row">
                 <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote3.jpg" style="width: 100px;height:100px;" alt="Portrait d'utilisateur">
+                  <img class="img-circle" src="{{site.baseurl_root}}/img/quote3.jpg" style="width: 100px;height:100px;" alt="Portrait">
                 </div>
                 <div class="col-sm-9">
-                  <p>J'utilise OmegaT en tant que traducteur professionnel depuis plus de 10 ans, bénéficiant dès le départ de sa facilité d'utilisation et de son forum extrêmement utile. Une vaste palette de fonctions, une interface épurée et avant tout un développement constant et régulier grâce à l'open source&nbsp;!</p>
+                  <p>J’utilise OmegaT en tant que traducteur professionnel depuis plus de 10 ans, bénéficiant dès le départ de sa facilité d’utilisation et de son forum extrêmement utile. Une vaste palette de fonctions, une interface épurée et avant tout un développement constant et régulier grâce à ses sources en licence libre.</p>
                   <small>Robert Corner, Institut Laue-Langevin, France</small>
                 </div>
               </div>
@@ -191,32 +194,31 @@
   <div class="container-fluid section" id="page-omegat-and-you">
     <h2>Le projet OmegaT et vous</h2>
     <div class="header-line"><!----></div>
-    <p>OmegaT n'est pas seulement un logiciel, c'est aussi un projet passionnant dont vous pouvez aussi faire partie.</p>
-    <p>OmegaT est un logiciel libre. Les utilisateurs comme vous sont libres de télécharger et de l'utiliser presque sans aucune contrainte. Vous êtes également libre de le copier et de le distribuer à d'autres personnes.</p>
-    <p>OmegaT est un logiciel open source. Cela signifie que si vous le souhaitez, vous pouvez modifier OmegaT pour que le logiciel réponde à vos propres besoins. Pour les défenseurs des logiciels open source, cette liberté est encore plus importante que le fait de n'avoir rien à payer quoi que ce soit.</p>
-    <p>Le projet OmegaT profiterai d'un plus grand soutien de bénévoles dans presque tous les domaines. Bien que de nombreux utilisateurs le sache, leur réaction est souvent «&nbsp;Mais, je ne peux pas programmer&nbsp;!&nbsp;». La programmation est certainement la fonction la plus importante, et sans celle-ci, il n'y a pas de logiciel. Mais la programmation n'est pas le seul travail qui doit être fait. Voici une liste des domaines dans lesquels d'autres bénévoles seraient plus que bienvenus&nbsp;!</p>
+    <p>OmegaT n’est pas seulement un logiciel, c’est aussi un projet passionnant dont vous pouvez également faire partie.</p>
+    <p>Le projet OmegaT profiterait d’un plus grand soutien de bénévoles dans presque tous les domaines. Bien que de nombreuses personnes le sachent, leur réaction est souvent «&nbsp;Mais, je ne sais pas programmer&nbsp;!&nbsp;». La programmation est certainement la fonction la plus importante, et sans celle-ci, il n’y a pas de logiciel. Mais la programmation n’est pas le seul travail qui doit être fait. Voici une liste des domaines dans lesquels d’autres bénévoles seraient plus que bienvenus.</p>
     <div class="row project">
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-pencil">
           <!---->
         </span>
         <h3>Création de documentation</h3>
-        <p>La <a href="documentation">documentation</a> est un point essentiel. Vous êtes peut-être un traducteur qui a déjà traduit beaucoup de documentation utilisateur. Avez-vous songé à écrire vous-même de la documentation utilisateur&nbsp;? Ce sera peut-être une révélation&nbsp;!</p>
+        <p>La <a href="Documentation">documentation</a> est un point essentiel. Vous avec peut-être beaucoup d’expérience en traduction de manuels d’utilisation. Avez-vous songé à en écrire vous-même ? Ce sera peut-être une révélation !</p>
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-globe">
           <!---->
         </span>
         <h3>Localisation</h3>
-        <p>Grâce au travail de nombreux traducteurs, l'interface utilisateur et les textes d'aide d'OmegaT ont été traduits dans plusieurs langues. Il n'en reste plus que quelques milliers à faire&nbsp;! Localiser OmegaT dans d'autres langues est un travail continu, car de nouvelles fonctionnalités sont ajoutées en permanence. Veuillez contacter le <a href="mailto:localization@omegat.org">coordinateur de la localisation d'OmegaT</a> pour connaître les détails concernant la traduction et la localisation d'OmegaT.</p>
+        <p>Grâce à un grand nombre de collaborations, l’interface et les textes d’aide d’OmegaT ont été traduits dans de nombreuses langues. Il n’en reste plus que quelques milliers à faire ! Localiser OmegaT dans d’autres langues est un travail continu, car de nouvelles fonctionnalités sont ajoutées en permanence. Contactez le <a href="mailto:localization@omegat.org">coordinateur de la localisation d’OmegaT</a> pour en savoir plus sur la traduction et la localisation d’OmegaT.</p>
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-wrench">
           <!---->
         </span>
         <h3>Tests</h3>
-        <p>L'une des choses les plus utiles que les utilisateurs OmegaT peuvent faire est... d'utiliser OmegaT. Et lorsqu'ils trouvent des dysfonctionnements ou des lacunes dans la documentation, ils nous les remontent.</p>
-      </div>
+        <p>L’une des choses les plus utiles que vous puissiez faire est... d’utiliser OmegaT. Et lorsqu’ils trouvent des dysfonctionnements ou des lacunes dans la documentation, ils nous en informent.</p>
+    <p>Pensez aussi à tester les <a href="http://sourceforge.net/projects/omegat/files/Nightly/">constructions nocturnes</a> d’OmegaT qui peuvent contenir encore plus de nouveaux bogues fascinants !</p>
+    </div>
     </div>
     <div class="row project">
       <div class="col-sm-6">
@@ -224,7 +226,7 @@
           <!---->
         </span>
         <h3>Publicité</h3>
-        <p>Avez-vous déjà écrit un article dans journal concernant votre association professionnelle&nbsp;? Si c'est n'est pas le cas, pourquoi ne pas écrire un article sur l'utilisation d'OmegaT&nbsp;?</p>
+        <p>Avez-vous déjà écrit un article dans journal concernant votre association professionnelle ? Si c’est n’est pas le cas, pourquoi ne pas écrire un article sur l’utilisation d’OmegaT ?</p>
       </div>
       <div class="col-sm-6">
         <span class="glyphicon glyphicon-piggy-bank">
@@ -240,18 +242,18 @@
           <!---->
         </span>
         <h3>Programmation (Java)</h3>
-        <p>OmegaT est écrit en Java. Si vous êtes un développeur Java, consultez la documentation dans le <a href="download#downloadTrunk">code source</a> sous dans le répertoire /docs_devel pour savoir comment démarrer.</p>
+        <p>OmegaT est écrit en Java. Si vous êtes un programmeur et que vous connaissez Java, veuillez consulter le <a href="https://omegat.readthedocs.io/en/latest/">Guide de contribution à OmegaT</a>, ou son document source dans le <a href="download#downloadTrunk">code source</a> sous /docs_devel pour obtenir des informations sur la façon de commencer.</p>
       </div>
       <div class="col-sm-6">
         <span class="glyphicon glyphicon-cog">
           <!---->
         </span>
         <h3>Programmation (autre que Java)</h3>
-        <p>Si vous savez programmer dans un autre langage, vous pouvez écrire un code accessoire à l'application principale. Beaucoup de programmes ont été écrits en Javascript, Groovy ou Tcl/Tk par exemple.</p>
+        <p>Si vous savez programmer dans un autre langage, vous pouvez écrire un code accessoire à l’application principale. Beaucoup de programmes ont été écrits en Javascript, Groovy ou Tcl/Tk par exemple.</p>
       </div>
       <div class="row project">
         <div class="col-sm-12">
-          <p>Mais je ne sais pas du tout programmer, allez-vous dire. Eh bien, c'est peut-être le moment de commencer à apprendre&nbsp;? Si vous avez déjà de bonnes connaissances en informatique en général et que vous choisissez un langage de script simple comme Javascript ou Tcl / Tk, vous pouvez apprendre par vous-même de quoi pouvoir écrire des scripts simples et utiles en seulement quelques semaines. La formation professionnelle continue est à la mode&nbsp;!</p>
+          <p>Mais je ne sais pas du tout programmer, allez-vous dire. Eh bien, c’est peut-être le moment de commencer à apprendre ? Si vous avez déjà de bonnes connaissances en informatique en général et que vous choisissez un langage de script simple comme Javascript ou Tcl / Tk, vous pouvez apprendre par vous-même de quoi pouvoir écrire des scripts simples et utiles en seulement quelques semaines. La formation professionnelle continue est à la mode !</p>
         </div>
       </div>
     </div>
