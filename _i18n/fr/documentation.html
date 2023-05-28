@@ -1,36 +1,41 @@
 <div class="container">
-  <h3 id="manual">Guides</h3>
-  <p>OmegaT est accompagné d'un manuel de l'utilisateur complet. Le manuel est accessible directement depuis OmegaT via Aide &gt; Manuel de l'utilisateur ou via la touche «&nbsp;F1&nbsp;».</p>
-  <p>Un tutoriel de prise en main est affiché par défaut au lancement de l'interface utilisateur. Il présente les procédures et fonctions principales d'OmegaT.</p>
-  <p>Le manuel de l'utilisateur peut également être consulté sans avoir à ouvrir OmegaT&nbsp;: il est placé dans le dossier « docs&nbsp;» du dossier du programme OmegaT.</p>
+  <h3 id="manual">Manuels</h3>
+  <p>OmegaT est accompagné d’un manuel d’utilisation complet. Le manuel est accessible directement depuis OmegaT via Aide &gt; Manuel d’utilisation ou via la touche «&nbsp;F1&nbsp;».</p>
+  <p>Un tutoriel de prise en main est affiché par défaut au lancement de l’interface graphique. Il présente les procédures et fonctions principales d’OmegaT.</p>
+  <p>Le manuel d’utilisation peut également être consulté sans avoir à ouvrir OmegaT : il est placé dans le dossier « docs&nbsp;» du dossier du programme OmegaT.</p>
   <table class="table">
     <tr>
       <td>
-        <a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/{{ site.data.versions.standard.name }}/OmegaT_documentation_en.PDF/download">Manuel de l'utilisateur</a>
+        <a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/{{ site.data.versions.standard.name }}/OmegaT_documentation_en.PDF/download">Manuel d’utilisation</a>
       </td>
-      <td>Le manuel de l'utilisateur d'OmegaT en format PDF ({{ site.data.versions.standard.name }}).</td>
+      <td>Le manuel d’utilisation d’OmegaT en format PDF ({{ site.data.versions.standard.name }}).</td>
     </tr>
     <tr>
       <td>
-        <a href="https://omegat.sourceforge.io/manual-standard/">Manuel de l'utilisateur en ligne</a>
+        <a href="https://omegat.sourceforge.io/manual-standard/">Manuel d’utilisation en ligne</a>
       </td>
-      <td>Le manuel d'utilisation pour la version standard OmegaT.</td>
+      <td>Le manuel d’utilisation pour la version standard OmegaT.</td>
     </tr>
   </table>
   <h3 id="tutorials">Tutoriels</h3>
   <p>Tutoriel pour débutants par Susan Welsh (Open Document Format, en anglais).</p>
   <table class="table">
+    <tr><td><a href="https://hackmd.io/@omegat/for_cat_beginners">Tutoriel OmegaT pour débutant·es en TAO (édition 2020, en anglais)</a>
+    </td><td>par Susan Welsh, Marc Prior et Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/for_cat_beginners_ja">Tutoriel OmegaT pour débutant·es en TAO (édition 2020, en japonais)</a></td><td>par Susan Welsh, Marc Prior et Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/the_cat_power_tools">OmegaT the CAT power tools (en anglais)</a></td><td>par Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/the_cat_power_tools_ja">OmegaT the CAT power tools (en japonais)</a></td></tr>
     <tr>
       <td>
-        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">OmegaT for Beginners</a>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">Tutoriel OmegaT pour débutant·es (édition 2014, en anglais)</a>
       </td>
-      <td>Tutoriel pour débutants par Susan Welsh (format Open Document, en anglais).</td>
+      <td>par Susan Welsh (format Open Document).</td>
     </tr>
     <tr>
       <td>
-        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">OmegaT for Beginners</a>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">Tutoriel OmegaT pour débutant·es (édition 2014, en anglais)</a>
       </td>
-      <td>Tutoriel pour débutants par Susan Welsh (format PDF, en anglais).</td>
+      <td>par Susan Welsh (format PDF, en anglais).</td>
     </tr>
     <tr>
       <td>
@@ -40,38 +45,57 @@
     </tr>
     <tr>
       <td>
-        <a href="https://www.multitude.trd.br/omegat-2/">Recursos do OmegaT: primeiros passos</a>
+        <a href="https://www.multitude.trd.br/omegat-2/">Recursos do OmegaT : primeiros passos</a>
       </td>
       <td>"Resources OmegaT, premiers pas" par Sheila Gomes (en portugais brésilien).</td>
     </tr>
-
   </table>
-  <h3>Documentation externe</h3>
-  <p>Les informations mentionnées ci-après sont proposées sur d'autres sites et concernent diverses procédures et fonctions d'OmegaT. Elles s'adressent aux utilisateurs confirmés.</p>
+
+  <h3 id="developers">Documentation pour le développement</h3>
+  <p>OmegaT n’est pas seulement un logiciel, c’est aussi un projet passionnant dont vous pouvez également faire partie.</p>
+  <p>Les nouvelles contributions sont toujours les bienvenues !</p>
+  <p>Pour savoir comment aider, consultez notre documentation pour le développement :</p>
   <table class="table">
     <tr>
       <td>
-        <a href="https://nblocalization.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT.html">How to translate NetBeans IDE using OmegaT</a>
+        <a href="https://omegat.readthedocs.io/ ">Guide de contributions</a>
       </td>
-      <td>Procédure d'utilisation d'OmegaT pour la localisation de l'EDI de NetBeans (en anglais).</td>
+      <td>Le guide de contributions d’OmegaT.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/omegat-org/omegat/tree/master/docs_devel/docs">Texte source du guide de contributions</a>
+      </td>
+      <td>Le texte source du guide de contributions dans le dépôt OmegaT.</td>
+    </tr>
+  </table>
+
+  <h3>Documentation externe</h3>
+  <p>Les informations mentionnées ci-après sont proposées sur d’autres sites et concernent diverses procédures et fonctions d’OmegaT. Elles s’adressent aux personnes confirmées.</p>
+  <table class="table">
+    <tr>
+      <td>
+        <a href="http://translatedfiles.netbeans.org/docs/HOWTOs/How-to-translate-NetBeans-using-OmegaT.html">How to translate NetBeans IDE using OmegaT</a>
+      </td>
+      <td>Procédure d’utilisation d’OmegaT pour la localisation de l’EDI de NetBeans (en anglais).</td>
     </tr>
     <tr>
       <td>
         <a href="http://www.magenshop.com/magento-wiki/how-to-translate-magento-using-omegat-software.html">How to translate Magento using OmegaT software</a>
       </td>
-      <td>Procédure d'utilisation d'OmegaT pour la localisation de Magento (en anglais).</td>
+      <td>Procédure d’utilisation d’OmegaT pour la localisation de Magento (en anglais).</td>
     </tr>
     <tr>
       <td>
         <a href="http://wpml.org/documentation/translating-your-contents/using-desktop-cat-tools/translating-wordpress-xliff-files-in-omegat/">Translating WordPress XLIFF Files in OmegaT</a>
       </td>
-      <td>Procédure d'utilisation d'OmegaT pour la localisation de fichiers XLIFF exportés depuis Wordpress (en anglais).</td>
+      <td>Procédure d’utilisation d’OmegaT pour la localisation de fichiers XLIFF exportés depuis Wordpress (en anglais).</td>
     </tr>
     <tr>
       <td>
         <a href="http://okapi.sourceforge.net/Release/Shared/Help/tutorial_02.htm">Translating with Rainbow and OmegaT</a>
       </td>
-      <td>Guide méthodique concernant les utilitaires d'extraction et de fusion de texte de Rainbow pour pré- et post-traitement de fichiers à traduire avec OmegaT. Ces utilitaires permettent de travailler avec OmegaT sur des formats de fichier pour lesquels il existe des filtres de conversion XLIFF (en anglais).</td>
+      <td>Guide méthodique concernant les utilitaires d’extraction et de fusion de texte de Rainbow pour pré- et post-traitement de fichiers à traduire avec OmegaT. Ces utilitaires permettent de travailler avec OmegaT sur des formats de fichier pour lesquels il existe des filtres de conversion XLIFF (en anglais).</td>
     </tr>
   </table>
   <h3>Vidéos de formation</h3>
@@ -86,7 +110,7 @@
       <td>
         <a href="http://www.youtube.com/watch?v=iakqcUvRsEU">OmegaT introduction tutorial</a>
       </td>
-      <td>Vidéo d'introduction à OmegaT par John Moran (en anglais).</td>
+      <td>Vidéo d’introduction à OmegaT par John Moran (en anglais).</td>
     </tr>
     <tr>
       <td>
@@ -111,7 +135,7 @@
   <table class="table">
     <tr>
       <td>
-        <a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager">Guida completa a OmegaT: tecniche, trucchi e consigli per traduttori e project manager</a>
+        <a href="http://www.ultimabooks.it/guida-completa-a-omegat-tecniche-trucchi-e-consigli-per-traduttori-e-project-manager-1">Guida completa a OmegaT : tecniche, trucchi e consigli per traduttori e project manager</a>
       </td>
       <td>par Marco Cevoli et Sergio Alasia (en italien)</td>
     </tr>
@@ -129,13 +153,13 @@
   <table class="table">
     <tr>
       <td>
-        <a href="http://www.velior.ru/tag/omegat/">Velior's corporate blog <br/>on translation and the <br/>translation industry</a>
+        <a href="http://www.velior.ru/tag/omegat/">Velior’s corporate blog <br/>on translation and the <br/>translation industry</a>
       </td>
       <td>Blog sur OmegaT. (en anglais)</td>
     </tr>
     <tr>
       <td>
-        <a href="http://www.velior.ru/blog/ru/tag/omegat/">Velior's corporate blog <br/>on translation and the <br/>translation industry</a>
+        <a href="http://www.velior.ru/blog/ru/tag/omegat/">Velior’s corporate blog <br/>on translation and the <br/>translation industry</a>
       </td>
       <td>Blog sur OmegaT. (en russe)</td>
     </tr>

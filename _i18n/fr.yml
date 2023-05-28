@@ -1,6 +1,6 @@
 global:
-  title: OmegaT - l'outil libre de TAO
-  description: OmegaT est un logiciel libre de TAO écrit en Java conçu par et pour des traducteurs professionnels.
+  title: OmegaT - l’outil libre de TAO
+  description: OmegaT est un logiciel libre de TAO écrit en Java conçu par et pour des professionnelles et des professionnels de la traduction.
 
 menu:
   languages: Langues
@@ -8,6 +8,7 @@ menu:
   documentation: Documentation
   contact: Contact
   download: Télécharger
+  install: Installer
   resources: Ressources
   support: Assistance
 
@@ -15,6 +16,7 @@ footer:
   connect: Réseaux sociaux
   omegat_project: Le projet OmegaT
   documentation: Documentation
+  developers: Contribuer
 
 titles:
   404: Aucun résultat
@@ -23,18 +25,20 @@ titles:
   support: Assistance
   documentation: Documentation
   download: Télécharger
-  home: OmegaT - l'outil libre de TAO
+  install: Installer
+  home: OmegaT - l’outil libre de TAO
   philosophy: Philosophie
+  policies: Règles
   resources: Ressources
   manual: Manuel
   tutorials: Tutoriels
   howto: Guides pratiques
   reviews: Point sur OmegaT
-  sponsorship: Parrainage
+  sponsorship: Parrainages
   howtos:
      compatibility: Compatibilité
      compatibility_deja_vu: Guide - Compatibilité OmegaT avec Déjà Vu
-     compiling_from_source: Guide - Compilation d'OmegaT à partir du code source
+     compiling_from_source: Guide - Compilation d’OmegaT à partir du code source
      docx: Guide - Traduire des fichiers Word 2007 avec OmegaT
      export_uncleaned_rtf: Guide - Exportation vers le format « Trados non nettoyé RTF »
      google_translate: Guide - Utilisation de Google Translate
@@ -42,12 +46,12 @@ titles:
      linux: OmegaT sur Linux
      localizing_omegat: Guide - Traduire OmegaT dans votre langue
      ms_translator: Guide - Utilisation de Microsoft Translator avec OmegaT
-     new_filter: Guide - Création d'un nouveau filtre de fichiers
-     preview: Guide - Ajout d'une fonction de prévisualisation à OmegaT
+     new_filter: Guide - Création d’un nouveau filtre de fichiers
+     preview: Guide - Ajout d’une fonction de prévisualisation à OmegaT
      prop12m: Propagation et traductions multiples
      spelling: Guide - Correcteur orthographique
-     text_export: Guide - Utilisation de la fonction d'exportation de texte OmegaT (interface de script)
-     tokenizer: Howto - Utilisation du tokenizer OmegaT
+     text_export: Guide - Utilisation de la fonction d’exportation de texte OmegaT (interface de script)
+     tokenizer: Guide - Utilisation du lemmatiseur OmegaT
 
 # Platforms name
 windows_jre: Windows avec JRE
