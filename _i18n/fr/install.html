@@ -1,0 +1,132 @@
+<div class="container">
+      <div>
+        <h2>Installer OmegaT</h2>
+        </div>
+        <p>Il existe deux versions d’OmegaT.</p>
+        <div>
+          <dl>
+            <dt>
+              <span>Version standard : OmegaT {{site.data.versions.standard.name}}</span>
+            </dt>
+            <dd>
+              <p>Cette version est recommandée pour un usage quotidien.</p>
+            </dd>
+            <dt>
+              <span>Version de développement : OmegaT Nightly</span>
+            </dt>
+            <dd>
+              <p>Cette version est générée automatiquement à chaque fois que du code nouveau est intégré à OmegaT. Elle est utilisée pour effectuer des tests.</p>
+            </dd>
+          </dl>
+        </div>
+        <p>Les fichiers sont téléchargeables directement à partir de <a href="https://omegat.org/fr/download"
+            target="_top">https://omegat.org/fr</a></p>
+        <div class="note">
+          <h4>Remarque</h4>
+          <p>OmegaT {{site.data.versions.standard.name}} nécessite un environnement d’exécution Java {{site.data.versions.standard.java_version}} (JRE) pour fonctionner.</p>
+          <p>Les paquets d’OmegaT sont disponibles à la fois dans des versions avec Java, et dans des versions sans. Les paquets sans Java dépendent d’un environnement d’exécution Java {{site.data.versions.standard.java_version}} Runtime Environment installé sur l’ensemble du système.
+          </p>
+      <p>OmegaT {{site.data.versions.standard.name}} et les versions ultérieures supportent également l’environnement d’exécution Java 11 sur toutes les plateformes.</p>
+      <p>Pour des raisons de licence, l’équipe OmegaT recommande l’environnement d’exécution Java Eclipse Temurin fourni par le projet Adoptium de la Fondation Eclipse, mais tout environnement d’exécution Java {{site.data.versions.standard.java_version}} compatible devrait fonctionner.</p>
+    </div>
+    <section>
+          <div>
+            <h3>Sur Windows</h3>
+          </div>
+          <p>Double-cliquez sur le paquet que vous avez téléchargé.</p>
+          <p>Vous pouvez choisir la langue utilisée pendant l’installation et la langue qui sera utilisée par OmegaT. Vous pouvez également le modifier ultérieurement en éditant <code class="filename">OmegaT.l4J.ini</code>.
+          </p>
+    </section>
+    <section>
+      <div>
+            <h3>Sur Linux</h3>
+      </div>
+      <p>Certaines distributions de Linux proposent OmegaT dans leur gestionnaire de paquets. Les instructions données ici s’appliquent aux personnes qui téléchargent le paquet sur le site <a href="https://omegat.org/fr/download" target="_top">https://omegat.org</a> et l’installent manuellement.
+      </p>
+      <p>Décompressez/désarchivez le fichier que vous avez téléchargé. Un nouveau dossier du même nom que le paquet va être créé. Il contient tous les fichiers nécessaires à l’exécution d’OmegaT.</p>
+      <div class="note">
+        <h4>Remarque</h4>
+        <p>Bien qu’il soit possible de lancer OmegaT directement à partir des fichiers disponibles, vous pouvez aussi exécuter le script <code>inux-install.sh</code> qui s’y trouve pour installer OmegaT dans un emplacement plus approprié.</p>
+        <p>Pour exécuter le script, vous devez saisir votre mot de passe <code class="filename">sudo</code>.
+        </p>
+        <p>Le script va alors vérifier s’il existe déjà une installation de la même version d’OmegaT dans le dossier /opt/omegat/.<code class="filename"></code> S’il n’y en a pas, il installe le programme dans <code class="filename">/opt/omegat/OmegaT_{{site.data.versions.standard.name}}</code> et en fait la version par défaut (dans <code class="filename">/opt/omegat/OmegaT-default</code>).
+        </p>
+        </div>
+      <p>Une fois la décompression ou l’installation terminée, vous pouvez supprimer le fichier téléchargé car il n’est plus utile.</p>
+      </section>
+      <section>
+        <div>
+            <h3>Sur macOS</h3>
+          </div>
+          <p>Double-cliquez sur le paquet que vous avez téléchargé pour le décompresser. Un dossier nommé <code class="filename">OmegaT</code> est alors créé. Le dossier contient deux fichiers : <code class="filename">index.html</code> (l’index du manuel d’utilisation) et <code class="filename">OmegaT.app</code> (l’application). Copiez le dossier dans un emplacement approprié (par exemple:<code class="filename">Applications</code>).
+      </p>
+      <p>Si vous le souhaitez, faites glisser et déposez <code class="filename">OmegaT.app</code> sur le Dock pour y accéder facilement.</p>
+      <p>Une fois cette opération effectuée, vous pouvez supprimer le fichier téléchargé puisqu’il n’est plus utile.</p>
+      </section>
+      <section>
+            <div>
+              <h3>Sur d’autres plateformes</h3>
+            </div>
+        <p>Ces informations s’appliquent à tous les systèmes dont la version de Java est compatible avec l’environnement d’exécution de Java {{site.data.versions.standard.java_version}} Runtime Environment. Cela inclut les plates-formes décrites ci-dessus, mais aussi les plateformes pour lesquelles des paquets spécifiques ne sont pas fournis.</p>
+        <p>Téléchargez la version <span class="emphasis"><em>Multiplateforme sans JRE</em></span>.</p>
+        <div class="note">
+          <h3 class="title">Remarque</h3>
+          <p>La fondation Eclipse fournit des environnements d’exécution OpenJDK JRE pour de nombreux systèmes sur le site <a href="https://adoptium.net/temurin"
+              target="_top">https://adoptium.net/temurin</a>.</p>
+          <p>IBM fournit des JRE pour Linux PowerPC sur le site <a
+              href="https://developer.ibm.com/languages/java/semeru-runtimes/downloads/"
+              target="_top">https://developer.ibm.com/languages/java/semeru-runtimes/downloads/</a>.</p>
+          <p>Suivez les instructions d’installation du paquet dont vous avez besoin.</p>
+      </div>
+      <p>Décompressez le fichier que vous avez téléchargé. Un dossier contenant tous les fichiers nécessaires à l’exécution d’OmegaT va être créé.</p>
+      <p>Suivez les instructions de votre système pour installer des raccourcis d’OmegaT aux emplacements de votre choix.</p>
+      </section>
+      <section>
+            <div>
+              <h3>Mettre à jour</h3>
+            </div>
+      <p>Les changements entre votre version et la version actuelle sont documentés dans le fichier <a
+          href="https://sourceforge.net/p/omegat/code/ci/master/tree/release/changes.txt" target="_top">changes.txt</a> du site de développement.</p>
+      <div>
+        <h4>Remarque</h4>
+        <p>Si vous décidez d’installer une nouvelle version, gardez les éléments suivants à l’esprit :</p>
+        <div>
+          <ul>
+            <li>
+              <p>Les paramètres d’OmegaT sont stockés dans le dossier de configuration et ne seront <span class="emphasis"><em>pas</em></span> modifiés par la nouvelle version.</p>
+            </li>
+            <li>
+              <p>Les projets que vous avez créés auparavant ou que vous utilisez actuellement ne seront <span class="emphasis"><em>ni modifiés ni supprimés</em></span>. Les projets OmegaT ne sont <span class="emphasis"><em>pas</em></span> stockés dans d’OmegaT. Ce sont des objets distincts qui n’ont pas de lien physique avec l’application OmegaT en elle-même.</p>
+            </li>
+            <li>
+              <p>Les fichiers de paramètres inclus dans le paquet OmegaT téléchargé (en particulier le fichier <code class="filename">OmegaT.l4J.ini</code> pour Windows et les fichiers <code class="filename">Configuration.properties</code> et <code class="filename">Info.plist</code> pour les paquets macOS) peuvent être écrasés ou supprimés. Par conséquent, si vous avez utilisé ces fichiers pour modifier les paramètres de lancement d’OmegaT, vous pouvez créer une sauvegarde avant de procéder à la mise à jour.
+              </p>
+            </li>
+            <li>
+              <p>Les dossiers <code class="filename">plugins</code> et <code class="filename">scripts</code> risquent d’être écrasés, vous pouvez donc créer une sauvegarde avant de procéder à la mise à jour.
+              </p>
+            </li>
+            </ul>
+            </div>
+      </div>
+      <div>
+        <dl>
+          <dt>
+            <span>Par-dessus une version existante</span>
+          </dt>
+          <dd>
+            <p>Pour ce faire, il suffit de sélectionner le même dossier d’installation que celui de l’installation existante lorsque vous installez la nouvelle version. «&nbsp;L’ancienne&nbsp;» version d’OmegaT sera remplacée, mais les réglages effectués à partir de l’interface d’OmegaT seront conservés dans les différents dossiers de configuration (voir ci-dessus).</p>
+          </dd>
+          <dt>
+            <span>Parallèlement à une version existante</span>
+          </dt>
+          <dd>
+            <p>Cela vous permet de conserver côte à côte autant de versions que vous voulez, ce qui peut être utile jusqu’à ce que vous vous sentiez à l’aise avec la nouvelle version.</p>
+            <p>Tous les paramètres dans le dossier de configuration seront partagés à moins que vous ne spécifiiez un dossier de configuration différent avec l’option <code class="literal">--config-dir=&lt;path&gt;</code> à partir des options OmegaT sur la ligne de commande. Tous les paramètres situés dans un dossier de projet s’appliquent à ce projet, quelle que soit la version d’OmegaT utilisée pour l’ouvrir.
+            </p>
+          </dd>
+          </dl>
+          </div>
+    </section>
+</section>
+</div>
