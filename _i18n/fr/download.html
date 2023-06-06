@@ -185,7 +185,7 @@ href="#download-wizard" data-toggle="collapse">Sélecteur de téléchargement</a
  <tr id="{{ platform.id }}">
       <td class="version-name">{% translate platform.name %}</td>
       <td>
-      {% if platform.noInfo != true %} <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span> {% endif %}
+      {% if platform.noInfo != true %} <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span> {% endif %}
       </td>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Télécharger</a></td>
