@@ -2,7 +2,9 @@
 
 <p class="lead">Links are provided below to the various versions of OmegaT. If
 you are confused about which version to download, you can use the <a
-href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
+href="#download-wizard" data-toggle="collapse">Download selector</a>.
+
+Currently, we offer only a Standard version.</p>
 
 <div id="download-wizard" class="panel panel-primary collapse">
   <div class="panel-heading">
@@ -107,12 +109,12 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>The "Standard" version of OmegaT includes a full user manual (at
-          least in English) and will usually have been tested for some time to
+          least in English) and will have usually been tested for some time to
           eliminate any bugs. It is the recommended version for first-time users.</p>
           <div class="radio">
             <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Latest</label>
             <p>As its name suggests, the "Latest" version of Omegat is more up to
-          date. However, the user manual may no longer be up to date (and
+          date. However, the user manual may no longer be up-to-date (and
           therefore possibly confusing), and some minor bugs are possible.
           Nevertheless, the "Latest" versions of OmegaT are usually very stable
           and are recommended for any users who already have some experience with
@@ -121,7 +123,7 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
-        <p>Based on your choices, we recommand you use:</p>
+        <p>Based on your choices, we recommend you use:</p>
         <h3><a id="wizard-result-version" href="#">some version</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Download</a>
 
@@ -140,9 +142,9 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
 <p>OmegaT will run on any system on which the appropriate JRE (Java Runtime Environment)
 has been or can be installed. The JRE is now supplied with OmegaT and need not
 be obtained separately. OmegaT has been successfully installed on Windows (all
-versions from 98 onwards), macOS and Linux.</p>
+versions from Windows 8 onwards), macOS and Linux.</p>
 <p>Files in Microsoft Office XML format can be translated directly in OmegaT.
-Files in older MS Word, Excel and Powerpoint formats can be translated
+Files in older MS Word, Excel and PowerPoint formats can be translated
 following conversion to the equivalent current Microsoft Office formats, or
 alternatively to the Office Open XML format, which can be done in
 OpenOffice.org or LibreOffice (also free). To obtain OpenOffice.org or
@@ -204,9 +206,9 @@ date.<!--It will however lack some of the features of the "Latest" version.--></
       </td>
       <td>
       {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
+        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a>
       {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a>
       {% endif %}
       </td>
   </tr>
@@ -275,9 +277,9 @@ development. Pre-built binaries, are available as Nightly Builds.</p>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Download</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      <td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Download</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Download</a></td>
   </tr>
   </tbody>
 </table>
