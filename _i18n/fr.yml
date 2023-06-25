@@ -62,5 +62,4 @@ osx_unsigned: macOS Non signé
 linux_jre: Linux avec JRE
 linux_jre64b: Linux avec JRE 64 bits
 nojre: Cross-platform sans JRE
-webstart: Web Start
 source: Code source

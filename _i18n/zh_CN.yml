@@ -58,5 +58,4 @@ osx_unsigned: macOS，未签名
 linux_jre: Linux，带 JRE
 linux_jre64b: Linux，带 64 位 JRE
 nojre: 跨平台，不带 JRE
-webstart: Web Start
 source: 源代码

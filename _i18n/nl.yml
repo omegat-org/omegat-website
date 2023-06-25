@@ -58,5 +58,4 @@ osx_unsigned: macOS Niet getekend
 linux_jre: Linux met JRE
 linux_jre64b: Linux met 64-bit JRE
 nojre: Cross-platform zonder JRE
-webstart: Web Start
 source: Broncode

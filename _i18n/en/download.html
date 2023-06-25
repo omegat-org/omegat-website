@@ -16,12 +16,6 @@ Currently, we offer only a Standard version.</p>
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="#tab-install-type" data-toggle="tab">Installation Type</a>
-            </li>
-            <li>
-              <a href="#tab-version" data-toggle="tab">Version</a>
-            </li>
-            <li>
               <a href="#tab-operating-system" data-toggle="tab">Operating System</a>
             </li>
             <li>
@@ -32,18 +26,6 @@ Currently, we offer only a Standard version.</p>
       </div>
     </div>
     <div class="tab-content">
-      <div class="tab-pane fade in" id="tab-install-type">
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Traditional</label>
-          <p>The version for installation by the user, familiar to existing OmegaT users. If in doubt, select this version.</p>
-        </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>The Web Start version is the "install and forget" version.<br/>
-                <strong>The benefit</strong>: once launched, future updates of the Web Start version will be installed automatically on your computer.<br/>
-                <strong>The drawback</strong>: at present, this version cannot be used in conjunction with plug-ins, so not all functions are available.</p>
-        </div>
-      </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optWindows" value="windows" name="optOS"/>Windows</label>
@@ -111,15 +93,6 @@ Currently, we offer only a Standard version.</p>
           <p>The "Standard" version of OmegaT includes a full user manual (at
           least in English) and will have usually been tested for some time to
           eliminate any bugs. It is the recommended version for first-time users.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Latest</label>
-            <p>As its name suggests, the "Latest" version of Omegat is more up to
-          date. However, the user manual may no longer be up-to-date (and
-          therefore possibly confusing), and some minor bugs are possible.
-          Nevertheless, the "Latest" versions of OmegaT are usually very stable
-          and are recommended for any users who already have some experience with
-          OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -143,20 +116,6 @@ Currently, we offer only a Standard version.</p>
 has been or can be installed. The JRE is now supplied with OmegaT and need not
 be obtained separately. OmegaT has been successfully installed on Windows (all
 versions from Windows 8 onwards), macOS and Linux.</p>
-<p>Files in Microsoft Office XML format can be translated directly in OmegaT.
-Files in older MS Word, Excel and PowerPoint formats can be translated
-following conversion to the equivalent current Microsoft Office formats, or
-alternatively to the Office Open XML format, which can be done in
-OpenOffice.org or LibreOffice (also free). To obtain OpenOffice.org or
-LibreOffice, follow the link from "Third-party software" button on the
-left.</p>
-
-<h4>User requirements</h4>
-<p>OmegaT is not particularly difficult to install or use, but it does require
-a willingness to read and follow the instructions. If you have a natural
-aversion to reading instructions, and your approach to new software is to click
-on every button you see until something resembling the desired effect occurs,
-then OmegaT is probably not suitable for you.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -181,10 +140,6 @@ then OmegaT is probably not suitable for you.</p>
 </div>
 
 <h3 id="standard">Standard Version - {{site.data.versions.standard.name}}</h3>
-
-<p>The Standard version requires Java {{site.data.versions.standard.java_version}}. It has usually been in use for some time and is therefore
-proven. Its documentation, at least in English, is usually reasonably up to
-date.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,49 +172,7 @@ date.<!--It will however lack some of the features of the "Latest" version.--></
 
 </table>
 
-<h3 id="latest">Latest Version - {{site.data.versions.latest.name}}</h3>
-
-<p>The Latest version requires Java {{site.data.versions.latest.java_version}}. It is a more recent version than the Standard version and
-includes new features not present in the latter. The Latest version will
-usually be reasonably stable and usable, but may have some bugs. Documentation,
-particularly of new features, will be less comprehensive than that of the
-Standard version. Users who already have some experience with OmegaT often
-prefer the Latest version.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Detailed instructions</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Developer Version</h3>
-
-<p>The "master" version is a cutting-edge, "alpha" version, still in
-development. Pre-built binaries, are available as Nightly Builds.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -325,25 +238,6 @@ space on your hard drive. In this case, do not select the Default version; selec
 <p>There may be a delay in publishing the Notarized version. Users in a hurry can use the Unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>The Web Start version offers an alternative means of installing OmegaT on your computer.</p>
-      <p>With this version, future updates will be installed automatically.</p>
-      <p>During installation, depending on your operating system, you may
-      receive several security warnings.<br/>The certificate is signed by OmegaT's lead developer.</p>
-      <p>The permissions you give to this version (which may be described as
-      "unrestricted access to the computer") are no different from the
-      permissions you assign to the local version, i.e., an access to the hard
-      drive of your computer.</p>
-      <p>In order to install the Web start version, you must already have Java
-      version 1.8 or later installed on your computer.</p>
-      <p>Privacy information: OmegaT Java Web Start does not save any of your
-      information to OmegaT's web servers. The application runs on your
-      machine. Your documents and translation memories remain on your computer,
-      and the OmegaT project will have no access to your work or
-      information.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>The "master" (alpha) version reflects the very latest state of development. It
     is recommended for serious developers and testers only. It can also be obtained
@@ -351,7 +245,7 @@ space on your hard drive. In this case, do not select the Default version; selec
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Periodic builds are available on SourceForge.</p>
 </div>
 

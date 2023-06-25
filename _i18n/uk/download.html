@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Традиційний</label>
           <p>Це версія для встановлення користувачем. Це тип встановлення, що знайомий для всіх користувачів OmegaT. Якщо маєте сумніви, що вам обрати, беріть цю версію.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Версія Web Start</label>
-          <p>Версія Web Start - тип встановлення "встановив і забув"<br/> <strong>Переваги</strong>: після запуску оновлення для версії Web Start будуть встановлюватися автоматично.<br/> <strong>Недоліки</strong>: на даний момент ця версія не підтримує плагіни, тому доступні не всі функції OmegaT.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
           <p>Для встановлення на Windows.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Для встановлення на Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Для встановлення на macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Стандартна версія</label>
           <p>Стандартна версія OmegaT має повноцінну інструкцію користувача (щонайменше, англійською). До того ж, її, як правило, деякий час тестували на предмет помилок. Якщо ви вперше користуєтесь OmegaT — обирайте цю версію.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Остання версія</label>
-            <p>Як видно із назви, ця версія завжди новіша за стандартну. Але інструкція користувача може не встигати за змінами. Також ця версія значно менше тестується, тож можливі незначні баги. Незважаючи на це, "останні" версії OmegaT, як правило, дуже надійні, і їх рекомендується використовувати всім, хто вже має досвід використання OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,12 +97,7 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
 
 <h4>Системні вимоги</h4>
 
-<p>Як правило, OmegaT працює на будь-якій системі, де встановлена або може бути встановлена потрібна версія середовища Java (JRE). OmegaT може бути завантажена із власним JRE, тож нема потреби встановлювати його окремо. Можливість встановлення OmegaT протестована на Windows (всіх версій починаючи з 98), Macintosh OS X та Linux.</p>
-<p>Файли у форматі Microsoft Office XML можна перекладати у OmegaT без додаткової конвертації. Файли у старіших форматах MS Word, Excel та Powerpoint можна перекладати, попередньо сконвертувавши їх у відповідні сучасні формати Microsoft Office або ж у формати Office Open XML. Це можна зробити за допомогою OpenOffice.org чи LibreOffice (також вільне програмне забезпечення). Посилання на OpenOffice.org та LibreOffice можна знайти на сторінці "Додаткові ресурси для OmegaT".</p>
-
-<h4>Вимоги до користувача</h4>
-<p>OmegaT не те щоб важко встановити чи використовувати, але для цього потрібне бажання читати і виконувати інструкції. Якщо думка про читання інструкції викликає у вас огиду, а ваш підхід до освоєння нового програмного забезпечення - це "клацай все, що бачиш", - OmegaT не для вас.</p><!-- Donation slider -->
-
+<p>Як правило, OmegaT працює на будь-якій системі, де встановлена або може бути встановлена потрібна версія середовища Java (JRE). OmegaT може бути завантажена із власним JRE, тож нема потреби встановлювати його окремо. Можливість встановлення OmegaT протестована на Windows (всіх версій починаючи з 98), macOS та Linux.</p>
 
 <div class="donation-section section">
 	<div class="donation-call">
@@ -135,8 +122,6 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
 </div>
 
 <h3 id="standard">Стандартна версія — {{site.data.versions.standard.name}}</h3>
-
-<p>Стандартна версія вимагає Java {{site.data.versions.standard.java_version}}. Ця версія перевірена — вона вже деякий час використовується. Її функціонал покритий документацією (щонайменше, англійською мовою).<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -177,49 +162,7 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
 
 </table>
 
-<h3 id="latest">Остання версія - {{site.data.versions.latest.name}}</h3>
-
-<p>Остання версія вимагає Java версії {{site.data.versions.latest.java_version}}. Ця версія новіша, ніж стандартна, у ній може бути новий функціонал. Остання версія зазвичай достатньо надійна, але все ж можливі непередбачувані ситуації. Документація буде менш детальною та консистентною. Особливо це стосується нових функцій. Користувачі, що мають досвід використання OmegaT, часто надають перевагу останній версії.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Платформа</th>
-      <th>Детальні інструкції</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Завантажити</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Завантажити</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Версія для розробників</h3>
-
-<p>Це версія з гілки "master", альфа-версія, ще у процесі розробки. Скомпільовані файли доступні у форматі щоденних збірок.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -238,8 +181,8 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
   </tr>
   <tr>
       <td>Щоденні збірки</td>
-      <td><!----><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Завантажити</a></td>
+      <td><!----><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Завантажити</a></td>
   </tr>
   </tbody>
 </table>
@@ -264,7 +207,7 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Завірена та незавірена версії</h4>
 
-<p>Mac OS X має сервіс Gatekeeper, що створює перешкоди для запуску незавірених програм. OmegaT для Mac OS X доступна як у завіреному, так і в незавіреному вигляді. Функціонально вони ідентичні, але завірену версію система розпізнає як таку, що була опублікована відомим розробником.</p>
+<p>macOS має сервіс Gatekeeper, що створює перешкоди для запуску незавірених програм. OmegaT для macOS доступна як у завіреному, так і в незавіреному вигляді. Функціонально вони ідентичні, але завірену версію система розпізнає як таку, що була опублікована відомим розробником.</p>
 
 <p>Завірені версії можуть виходити із затримкою. Якщо часу чекати немає, то можете використати і незавірену версію. Виникли труднощі із запуском програми? Подивіться <a href="https://support.apple.com/kb/ph14369">як запустити програму від невідомого розробника</a>.</p>
 </div>
@@ -272,28 +215,17 @@ href="#download-wizard" data-toggle="collapse">Вибір версії</a>.</p>
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing_unsigned">Завірена та незавірена версії</h4>
 
-<p>Mac OS X має сервіс Gatekeeper, що створює перешкоди для запуску незавірених програм. OmegaT для Mac OS X доступна як у завіреному, так і в незавіреному вигляді. Функціонально вони ідентичні, але завірену версію система розпізнає як таку, що була опублікована відомим розробником.</p>
+<p>macOS має сервіс Gatekeeper, що створює перешкоди для запуску незавірених програм. OmegaT для macOS доступна як у завіреному, так і в незавіреному вигляді. Функціонально вони ідентичні, але завірену версію система розпізнає як таку, що була опублікована відомим розробником.</p>
 
 <p>Завірені версії можуть виходити із затримкою. Якщо часу чекати немає, то можете використати і незавірену версію. Виникли труднощі із запуском програми? Подивіться <a href="https://support.apple.com/kb/ph14369">як запустити програму від невідомого розробника</a>.</p>
 </div>
-
-<div id="popover_content_webstart" style="display:none">
-      <p>Версія Web Start — це альтернативний спосіб встановлення OmegaT.</p>
-      <p>Оновлення для цієї версії здіснюватимуться автоматично.</p>
-      <p>Під час встановлення ви можете отримати кілька попереджень від системи безпеки вашої операційної системи.<br/>Сертифікат підписаний компанією <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, що зареєстрована у Франції.</p>
-      <p>Для встановлення цієї версії ваша система може просити у вас "необмеженого доступу до комп'ютера". Але мається на увазі той самий дозвіл, що і для встановлення звичайної версії OmegaT, тобто доступ до жорстокого диску.</p>
-      <p>Для встановлення версії Web Start version у вас вже має бути середовище Java версії 1.3 чи більше.</p>
-      <p>Обробка персональних даних: OmegaT Java Web Start не надсилає ніяку вашу інформацію на сервери OmegaT. Програма працює на вашому комп'ютері. Ваші документи та ваша памʼять перекладів залишаються у вас на комп'ютері. Проєкт OmegaT не має доступу до вашої роботи чи ваших даних.</p>
-</div>
-
 
 <div id="popover_content_master" style="display:none">
     <p>Версія з гілки "master" (альфа-версія) відображує останній стан розвитку програми. Вона потрібна лише розробникам та тестувальникам. Її також можна отримати за допомогою команди git:</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Щоденні збірки доступні на Sourceforge.</p>
 </div>
 

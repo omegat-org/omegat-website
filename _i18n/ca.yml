@@ -58,5 +58,4 @@ osx_unsigned: macOS sense signar
 linux_jre: Linux amb el JRE
 linux_jre64b: Linux amb el JRE de 64 bits
 nojre: Multiplataforma sense el JRE
-webstart: Web Start
 source: Codi font

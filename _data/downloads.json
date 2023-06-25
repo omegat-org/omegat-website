@@ -6,22 +6,18 @@
             "id": "standard_windows_jre",
             "name": "windows_jre",
             "noInfo": true,
-            "fileName": "Windows_Signed.exe"
+            "fileName": "Windows_signed.exe"
         }, {
             "id": "standard_windows_jre64b",
             "name": "windows_jre64b",
             "noInfo": true,
-            "fileName": "Windows_64_Signed.exe"
+            "fileName": "Windows_64_signed.exe"
 
         }, {
             "id": "standard_windows_nojre",
             "name": "windows_nojre",
             "noInfo": true,
-            "fileName": "Windows_without_JRE_Signed.exe"
-        }, {
-            "id": "standard_osx_signed",
-            "name": "osx_signed",
-            "fileName": "Mac_Notarized.zip"
+            "fileName": "Windows_without_JRE_signed.exe"
         }, {
             "id": "standard_osx_unsigned",
             "name": "osx_unsigned",
@@ -38,48 +34,6 @@
             "fileName": "Without_JRE.zip"
         }, {
             "id": "standard_source",
-            "name": "source",
-            "fileName": "Source.zip"
-        }]
-    },
-    "latest": {
-        "folder": "OmegaT - Latest",
-        "platforms": [{
-            "id": "latest_windows_jre",
-            "name": "windows_jre",
-            "noInfo": true,
-            "fileName": "Windows_Signed.exe"
-        }, {
-            "id": "latest_windows_jre64b",
-            "name": "windows_jre64b",
-            "noInfo": true,
-            "fileName": "Windows_64_Signed.exe"
-
-        }, {
-            "id": "latest_windows_nojre",
-            "name": "windows_nojre",
-            "noInfo": true,
-            "fileName": "Windows_without_JRE_Signed.exe"
-        }, {
-            "id": "latest_osx_signed",
-            "name": "osx_signed",
-            "fileName": "Mac_Notarized.zip"
-        }, {
-            "id": "latest_osx_unsigned",
-            "name": "osx_unsigned",
-            "fileName": "Mac.zip"
-        }, {
-            "id": "latest_linux_jre64b",
-            "name": "linux_jre64b",
-            "noInfo": true,
-            "fileName": "Linux_64.tar.bz2"
-        }, {
-            "id": "latest_linux_nojre",
-            "name": "nojre",
-            "noInfo": true,
-            "fileName": "Without_JRE.zip"
-        }, {
-            "id": "latest_source",
             "name": "source",
             "fileName": "Source.zip"
         }]

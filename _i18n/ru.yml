@@ -58,5 +58,4 @@ osx_unsigned: macOS без электронной подписи
 linux_jre: Linux с JRE
 linux_jre64b: Linux с 64-разрядной JRE
 nojre: Кросс-платформенная версия без JRE
-webstart: Web Start
 source: Исходный код

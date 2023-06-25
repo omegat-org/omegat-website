@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>传统</label>
           <p>现有 OmegaT 用户所熟悉的由用户安装的版本。如果不确定，请选择此版本。</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Web Start 版本是“安装后不管（install and forget）”版本。<br/> <strong>优点</strong>：一旦启动，Web Start 版本未来的更新都会自动安装到你的计算机上。<br/> <strong>缺点</strong>：目前，这个版本不能和插件一起使用，因此并非所有功能都可用。</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
           <p>用于在 Windows系统上安装。</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>用于在 Mac OS X 上安装。</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>用于在 macOS 上安装。</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>标准</label>
           <p>OmegaT的“标准”版本包含完整的用户手册（至少有英语版本）并且通常已经过一段时间测试来消除各种 Bug。首次使用的用户推荐使用此版本。</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>最新</label>
-            <p>顾名思义，Omegat 的“最新”版本要更时新一些。但是，用户手册可能不再是最新的（因此可能会让人困惑），并且可能会出现小 Bug。尽管如此，OmegaT 的“最新”版本通常非常稳定，推荐任何已经拥有 OmegaT 经验的用户使用。</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -106,10 +98,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 <h4>系统要求</h4>
 
 <p>OmegaT 可在任何已安装或可安装相应 JRE（Java 运行环境）的系统上运行。OmegaT 现在自带 JRE，无需单独获取。OmegaT 已在 Windows（从 98 开始的所有版本）、Micintosh OS X 及 Linux 上成功安装。</p>
-<p>Microsoft Office XML 格式的文件可以直接在 OmegaT 中翻译。旧的 Microsoft Word、Excel 和 Powerpoint 格式的文件可以在转换到对等的当前 Microsoft Office 格式后翻译，或者也可在 OpenOffice.org 或 LibreOffice（同样免费）中转换成 Office Open XML 格式后进行翻译。要获取 OpenOffice.org 或 LibreOffice，请点击左方“第三方软件”按钮链接到相应网站。</p>
-
-<h4>用户要求</h4>
-<p>OmegaT 的安装或使用并不是特别困难，但确实需要阅读并遵循说明。如果您对阅读说明有一种天生的厌恶，并且您对新软件的处理方法是点击您看到的每个按钮，直到出现类似于所需效果的东西，那么 OmegaT 可能不适合您。</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 </div>
 
 <h3 id="standard">标准版本 — {{site.data.versions.standard.name}}</h3>
-
-<p>标准版本需要 Java {{site.data.versions.standard.java_version}}。它通常已投入使用一段时间，因此已得以验证。其文档，至少英文文档，通常是足够新的。<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -165,41 +151,7 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 
 </table>
 
-<h3 id="latest">最新版本 - {{site.data.versions.latest.name}}</h3>
-
-<p>最新版本需要Java {{site.data.versions.latest.java_version}}。它是比标准版本更新的版本，包括后者中不存在的新功能。最新版本通常相当稳定可用，但可能会有一些 Bug。文档，尤其是新功能的文档，将不如标准版本中那么全面。已经拥有 OmegaT 经验的用户往往更喜欢最新版本。</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>平台</th>
-      <th>详细说明</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">下载</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">下载</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">开发者版本</h3>
-
-<p>“master”版本是前沿的“alpha”版本，仍处于开发中。预构建的二进制文件以 Nightly Builds 的形式呈现。</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,9 +169,9 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">下载</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">下载</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">下载</a></td>
   </tr>
   </tbody>
 </table>
@@ -261,22 +213,12 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 <p>发布已公证版本可能会有延迟。着急的用户也可改用未签名版本；如果您在启动应用时遇到问题，请参考<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">如何打开未认证开发者的应用</a>。</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>Web Start 版本提供了另一种在电脑上安装 OmegaT 的方法。</p>
-      <p>使用此版本，将自动安装后续的更新。</p>
-      <p>在安装过程中，根据操作系统不同，您可能会收到若干安全警告。<br/>证书由 OmegaT 的首席开发人员签署。</p>
-      <p>您给予该版本的权限（可能会被描述为“对计算机的无限制访问”）与您赋予本地版本的权限并无不同，即，可访问计算机的硬盘驱动器。</p>
-      <p>要安装 Web start 版本，电脑上需要已安装有 Java 1.8 或更高版本。</p>
-      <p>隐私信息：OmegaT Java Web Start 不会将您的任何信息保存到 OmegaT 的 Web 服务器。应用程序在您的计算机上运行。您的文档和翻译记忆库都保留在您的计算机上，OmegaT 项目无法访问您的作品或信息。</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>“master”（alpha）版本反映了最新的开发状态。只推荐专业开发人员和测试人员使用。它也可以用 git 命令获取：</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>SourceForge 上提供了定期构建。</p>
 </div>
 

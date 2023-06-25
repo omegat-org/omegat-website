@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>通常インストール</label>
           <p>このパッケージは、ユーザーの手によってインストール作業が実行されます。以前からの OmegaT ユーザーには、おなじみの方法です。迷っているなら、このパッケージを選んでください。</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Web Start 版は、「世話要らず」なパッケージです。<br/><strong>利点</strong>:Web Start Web Startバージョンの今後の更新が自動的にコンピュータにインストールされます。<br/><strong>欠点</strong>: 現時点では、このバージョンをプラグインと組み合わせて使用することはできないため、すべての機能が使用可能になっているわけではありません。</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>通常版</label>
           <p>「通常版」の OmegaT には、完全な取扱説明書が含まれています（少なくとも英語版は、そうです）。また、バグを取り除くために、ある程度のテスト期間を経ています。OmegaT を初めて使うユーザーにお勧めです。</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>開発版</label>
-            <p>名前が示すとおり、「開発版」の OmegaT は通常版よりも新しい内容のバージョンです。ただし、取扱説明書はまだ更新されていないでしょう（そのため、機能が変更された部分で混乱するかもしれません）。また、致命的でないバグが、まだいくつか残っているかもしれません。それでも、「開発版」はたいていの場合、十分に安定して動作します。OmegaT をある程度使い慣れているユーザーであれば、お勧めできます。</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -106,10 +98,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 <h4>システム要件</h4>
 
 <p>OmegaT は、適正なJRE（Java Runtime Environment）がインストールされた、あるいはインストールできる、すべてのシステム上で動きます。JRE は、OmegaT と一緒に配布されていますが、別々に入手することもできます。OmegaT は、Windows（98 以降のすべての版）、macOS、Linux にインストールできます。</p>
-<p>Microsoft Office XML 形式のファイルを、OmegaT で直接翻訳できます。それより古い形式の MS Word、Excel、Powerpoint ファイルは、対応する現在のMicrosoft Office 形式、または Office Open XML 形式へ変換したうえで翻訳できます。自由なソフトウェアの  LibreOfficeで(OpenOffice.orgも利用可 )変換できます。LibreOffice やOpenOffice.org  を入手するには、左にある「関連プログラム」ボタンのリンクをたどってください。</p>
-
-<h4>ユーザー要件</h4>
-<p>OmegaT は、インストールや使用が特に難しいものではありませんが、説明を読んで習う意思が必要です。もし説明を読むのが嫌いで、新しいソフトウェアを使うに当たって、望みの効果らしきものが現れるまで、すべてのボタンをクリックしていく方法を好まれるのであれば、OmegaT はおそらくあなたに合っていないでしょう。</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 </div>
 
 <h3 id="standard">通常版 - {{site.data.versions.standard.name}}</h3>
-
-<p>通常版には、Java {{site.data.versions.standard.java_version}}が必要です。ある程度の評価試用期間を経ているため、動作は安定しています。取扱説明書については、少なくとも英語版は常に最新の内容になっています。<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -165,41 +151,7 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 
 </table>
 
-<h3 id="latest">最新版 - {{site.data.versions.latest.name}}</h3>
-
-<p>最新版には、Java {{site.data.versions.latest.java_version}}が必要です。通常版よりも新しいバージョンであり、通常版にはない新機能が含まれています。最新版は、大抵の利用では、十分に安定して使用できます。けれども、不具合やバグが少し残っているかもしれません。文書については、特に新機能を中心に、記載されていなかったり、草稿段階の記述だったりします。OmegaT を長期に利用しているユーザーは、最新版を選ぶことがよくあります。</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>プラットフォーム</th>
-      <th>詳細な手順</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">ダウンロード</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">ダウンロード</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">開発版</h3>
-
-<p>「master」バージョンは、開発中の最先端の「アルファ」バージョンです。ビルド済みバイナリは、Nightly Buildsとして利用できます。</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,9 +169,9 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">ダウンロード</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">ダウンロード</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">ダウンロード</a></td>
   </tr>
   </tbody>
 </table>
@@ -261,22 +213,12 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 <p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>Web Start 版は、OmegaT をインストールするもう一つの方法です。</p>
-      <p>Web Start 版では、将来の更新版が自動インストールされます。</p>
-      <p>インストール中、OS によってはいくつかのセキュリティ警告が表示されることがあります。<br/>この証明書は、OmegaTのリード開発者によって署名されています。</p>
-      <p>この Web Start 版に与える権限（「コンピューターへの無制限アクセス」のように表示されることがあります）は、ローカル版に対して与えるものと同じで、コンピューターのハードディスクにアクセスすることを許可するものです。</p>
-      <p>Web Start 版をイントールするには、コンピューターに Java 1.8 以降がインストール済みである必要があります。</p>
-      <p>プライバシーについて：OmegaT Java Web Start は、ユーザーのコンピューターに関するいかなる情報も外部へ保存することはありません。プログラムは、ユーザーのコンピューター上で実行されます。ユーザーが作成した文書や翻訳メモリは、ユーザーのコンピューターに保存され、OmegaT プロジェクトがユーザーの作業内容や他の情報へアクセスすることはありません。</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>「マスター」(アルファ)バージョンは、最新の開発状態を反映しています。これは、真剣に取り組んでいる開発者とテスト実施者以外にはお勧めしません。また、gitコマンドを使用して取得することもできます。</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>定期ビルドはSourceforgeで入手できます。</p>
 </div>
 

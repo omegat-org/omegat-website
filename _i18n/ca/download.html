@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Tradicional</label>
           <p>Versió perquè l'instal·li l'usuari, familiar per als usuaris existents de l'OmegaT. Si dubteu, seleccioneu aquesta versió.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>La versió Web Start és la versió per «instal·lar i oblidar-se'n».<br/> <strong>Avantatge</strong>: un cop iniciada, les actualitzacions futures de la versió Web Start s'instal·laran automàticament a l'ordinador.<br/> <strong>Desavantatge</strong>: actualment, aquesta versió no es pot utilitzar juntament amb connectors, o sigui que no estan disponibles totes les característiques.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
           <p>Per a la instal·lació en el Windows.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Per a la instal·lació en el Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Per a la instal·lació en el macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Estàndard</label>
           <p>La versió «estàndard» de l'OmegaT inclou un manual d'usuari complet (com a mínim en anglès) i normalment s'ha provat durant un temps per a eliminar qualsevol error. És la versió recomanada per als usuaris nous.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Més recent</label>
-            <p>Com suggereix el nom, la versió «més recent» de l'OmegaT està més actualitzada. Ara bé, pot ser que el manual d'usuari ja no estigui actualitzat (i, per tant, que pugui resultar confús) i és possible que hi hagi errors menors. Això no obstant, les versions «més recents» de l'OmegaT normalment són molt estables i les recomanem a qualsevol usuari que ja tingui una mica d'experiència amb l'OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,11 +97,7 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
 
 <h4>Requisits del sistema</h4>
 
-<p>L'OmegaT funcionarà en qualsevol sistema en què estigui instal·lada o es pugui instal·lar una versió adequada del JRE (Java Runtime Environment). El JRE ara s'inclou amb l'OmegaT i no cal obtenir-lo per separat. L'OmegaT s'ha instal·lat correctament en el Windows (totes les versions a partir del Windows 98), Macintosh OS X i Linux.</p>
-<p>Els fitxers en format XML del Microsoft Office es poden traduir directament en l'OmegaT. Els fitxers en formats antics del MS Word, Excel i Powerpoint es poden traduir després de convertir-los als formats actuals del Microsoft Office equivalents, o bé al format Office Open XML, conversió que es pot realitzar mitjançant l'OpenOffice.org o el LibreOffice (també lliures). Per a obtenir l'OpenOffice.org o el LibreOffice, seguiu l'enllaç del botó «Programari de tercers» a l'esquerra.</p>
-
-<h4>Requisits de l'usuari</h4>
-<p>L'OmegaT no és especialment difícil d'instal·lar o d'utilitzar, però requereix disposició a llegir i seguir les instruccions. Si teniu una aversió natural a la lectura d'instruccions i la vostra actitud amb el programari nou es basa a fer clic en cada botó que veieu fins que passa alguna cosa semblant a l'efecte desitjat, aleshores l'OmegaT probablement no és adequat per a vós.</p>
+<p>L'OmegaT funcionarà en qualsevol sistema en què estigui instal·lada o es pugui instal·lar una versió adequada del JRE (Java Runtime Environment). El JRE ara s'inclou amb l'OmegaT i no cal obtenir-lo per separat. L'OmegaT s'ha instal·lat correctament en el Windows (totes les versions a partir del Windows 98), macOS i Linux.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
 </div>
 
 <h3 id="standard">Versió estàndard: {{site.data.versions.standard.name}}</h3>
-
-<p>La versió estàndard requereix el Java {{site.data.versions.standard.java_version}}. Normalment ha estat en ús durant un temps i, per tant, se n'ha comprovat el bon funcionament. La documentació, com a mínim en anglès, normalment està força actualitzada.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -165,41 +151,7 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
 
 </table>
 
-<h3 id="latest">Versió més recent: {{site.data.versions.latest.name}}</h3>
-
-<p>La versió més recent requereix el Java {{site.data.versions.latest.java_version}}. És una versió més recent que la versió estàndard i inclou característiques noves que no estan presents en l'anterior. Normalment, la versió més recent serà raonablement estable i estarà en bones condicions, però és possible que tingui alguns errors. La documentació, especialment pel que fa a les noves característiques, serà menys exhaustiva que la de la versió estàndard. Els usuaris amb experiència amb l'OmegaT sovint prefereixen la versió més recent.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Plataforma</th>
-      <th>Instruccions detallades</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Baixa</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Baixa</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Versió de desenvolupament</h3>
-
-<p>La versió «mestra» és una versió sense polir, «alfa», en desenvolupament. Hi ha binaris precompilats disponibles com a compilacions diàries.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,9 +169,9 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Baixa</a></td>
   </tr>
   <tr>
-      <td>Compilacions diàries</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Baixa</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Baixa</a></td>
   </tr>
   </tbody>
 </table>
@@ -261,22 +213,12 @@ href="#download-wizard" data-toggle="collapse">selector de baixades</a>.</p>
 <p>Pot haver-hi un retard en la publicació de la versió validada. Els usuaris amb pressa poden utilitzar la versió sense signar en el seu lloc; si teniu problemes per a executar l'aplicació, consulteu <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">com obrir una aplicació d'un desenvolupador no identificat</a>.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>La versió Web Start ofereix una manera alternativa d'instal·lar l'OmegaT en l'ordinador.</p>
-      <p>Amb aquesta versió, les actualitzacions futures s'instal·laran automàticament.</p>
-      <p>Durant la instal·lació, segons el vostre sistema operatiu, és possible que rebeu diversos avisos de seguretat.<br/>El certificat està signat pel desenvolupador principal de l'OmegaT.</p>
-      <p>Els permisos que proporcioneu a aquesta versió (que es poden descriure com a «accés sense restriccions a l'ordinador») són idèntics als permisos que assigneu a la versió local; és a dir, permeten accedir al disc dur de l'ordinador.</p>
-      <p>Per a instal·lar la versió Web Start, ja heu de tenir instal·lada la versió 1.8 o superior del Java en l'ordinador.</p>
-      <p>Informació de privadesa: l'OmegaT amb el Java Web Start no desa cap informació en els servidors web de l'OmegaT. L'aplicació s'executa en el vostre ordinador. Els documents i les memòries de traducció romanen a l'ordinador i el projecte de l'OmegaT no tindrà accés a la vostra feina o informació.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>La versió «mestra» (alfa) reflecteix l'estat de desenvolupament més recent. Es recomana només per a desenvolupament i proves serioses. També la podeu obtenir mitjançant l'ordre del git següent:</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Hi ha disponibles compilacions periòdiques a SourceForge.</p>
 </div>
 

@@ -85,7 +85,7 @@ href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%20'.$standard_name.'/OmegaT_'.$standard_number.'_Windows_without_JRE.exe/download"
 >'; $endlink='</a>';?> <?php echo $link ?>Windows（JRE 無し）<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%20'.$standard_name.'/OmegaT_'.$standard_number.'_Mac.zip/download"
->'; $endlink='</a>';?> <?php echo $link ?>Mac OS X<?php echo $endlink ?><br/><?php $link='<a
+>'; $endlink='</a>';?> <?php echo $link ?>macOS<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%20'.$standard_name.'/OmegaT_'.$standard_number.'_Linux.tar.bz2/download"
 >'; $endlink='</a>';?> <?php echo $link ?>Linux（JRE 付き）<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%20'.$standard_name.'/OmegaT_'.$standard_number.'_Without_JRE.zip/download"
@@ -112,27 +112,13 @@ href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20'.$latest_name.'/OmegaT_'.$latest_number.'_Beta_Windows_without_JRE.exe/download"
 >'; $endlink='</a>';?> <?php echo $link ?>Windows（JRE 無し）<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20'.$latest_name.'/OmegaT_'.$latest_number.'_Beta_Mac.zip/download"
->'; $endlink='</a>';?> <?php echo $link ?>Mac OS X<?php echo $endlink ?><br/><?php $link='<a
+>'; $endlink='</a>';?> <?php echo $link ?>macOS<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20'.$latest_name.'/OmegaT_'.$latest_number.'_Beta_Linux.tar.bz2/download"
 >'; $endlink='</a>';?> <?php echo $link ?>Linux（JRE 付き）<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20'.$latest_name.'/OmegaT_'.$latest_number.'_Beta_Without_JRE.zip/download"
 >'; $endlink='</a>';?> <?php echo $link ?>クロスプラットフォーム（JRE 無し）<?php echo $endlink ?><br/><?php $link='<a
 href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20'.$latest_name.'/OmegaT_'.$latest_number.'_Beta_Source.zip/download"
 >'; $endlink='</a>';?> <?php echo $link ?>ソースコード<?php echo $endlink ?><br/></p>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td><b>Web Start 版</b></td>
-
-<td>
-
-<p><a
-href="https://omegat.sourceforge.io/webstart/OmegaT.jnlp">Web Start 通常版</a><br/><a
-href="https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp">Web Start 開発版</a><br/></p>
 
 </td>
 
@@ -171,7 +157,7 @@ href="https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp">Web Start 開発�
 
 <h3>プラットフォーム（OS）</h3>
 
-<p>プラットフォーム別の OmegaT パッケージが、Windows、Linux、Mac OS X 向けに配布されています。また、適切な JRE がインストール済みであれば、特定のプラットフォームに依存しないクロスプラットフォーム版も利用できます。</p>
+<p>プラットフォーム別の OmegaT パッケージが、Windows、Linux、macOS 向けに配布されています。また、適切な JRE がインストール済みであれば、特定のプラットフォームに依存しないクロスプラットフォーム版も利用できます。</p>
 
 <h3>JRE 付き/無し</h3>
 
@@ -181,7 +167,7 @@ href="https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp">Web Start 開発�
 
 <p>JRE をインストール済みのコンピューターに、JRE 付きの OmegaT をインストールしても問題はありません。OmegaT 用の JRE は、既存の JRE とは別の場所にインストールされ、特に衝突は起こしません。したがって、JRE 付きの OmegaT をインストールしておけば、どんな環境であっても安全といえます。もしコンピューターに適切なバージョンの JRE がインストール済みかどうか分からないときは、JRE 付き（またはデフォルト）のバージョンを選んでください。 </p>
 
-<p>Mac OS X ユーザー：Mac OS X には、デフォルトで JRE がインストールされています。そのため、Mac OS X 用の JRE 付き OmegaT はありません。</p>
+<p>macOS ユーザー：macOS には、デフォルトで JRE がインストールされています。そのため、macOS 用の JRE 付き OmegaT はありません。</p>
 
 <p>Linux ユーザー：ほとんどの Linux ディストリビューションは、Java 実行環境を同梱しています。しかし、オープンソース実装の JRE の中には、OmegaT が正常に動作しないものがあります（すぐに明確ではないかもしれません）。もし Linux に不慣れな場合は、JRE 付きの OmegaT を選ぶことをお勧めします。経験豊富な Linux ユーザーであれば、Oracle（旧 Sun）の JRE をシステムレベルでインストールすることを選ぶかもしれません。
 </p>

@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Klasik</label>
           <p>Instalasion par itilizater. Li lopsion abitiel bann itilizater regilie OmegaT. Si ou pe ezite, swazir sa version-la.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Version 'Web Start' li enn version "Instale apre bliye".<br/> <strong>Lavantaz</strong>: instalasion otomatik bann 'update' kan ou servi program-la lor ou ordinater.<br/> <strong>Dezavantaz</strong>: ou pa kapav servi bann modil pou lemoman, setadir pa tou bann fonksion ki pou disponib.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
           <p>Pou linstalasion lor Windows.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Pou linstalasion lor Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Pou linstalasion lor macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>Version "standard" OmegaT konpran enn gid litilizasion konplet (omwin an Angle). Li finn teste pou siprim tou bann bug. Li version ki nou rekomann bann nouvo itilizater.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Dernie version</label>
-            <p>Dernie version OmegaT li pli resan. Toutfwa, so gid litilizasion kapav pa azour (donk li kapav kree inpe konfizion), ek li kapav ena detrwa tipti bug. Malgre tou, bann dernie version zot plito stab ek zot rekomande pou bann itilizater ki deza ena enn sertin lexperyans avek OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,11 +97,7 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
 
 <h4>Konfigirasion sistem</h4>
 
-<p>OmegaT pou marse lor ninport ki sistem kot JRE (Java Runtime Environment) apropriye finn instale ouswa kapav instale. Etan done ki JRE fourni avek OmegaT, ou pa bizin telesarz ek instal li apar. OmegaT finn instale avek sikse lor Windows (tou bann version depi 98), Macintosh OS X ek Linux.</p>
-<p>Kapav tradir bann fisie format XML Microsoft Office direkteman dan OmegaT. Pou bann fisie MS Word, Excel ek Powerpoint ki pli ansien, kapav tradir zot apre enn konversion dan format Microsoft Office resan, ouswa format Open XML depi OpenOffice.org ou LibreOffice (gratwitman). Pou telesarz OpenOffice.org ou LibreOffice, al lor paz "Program tiers" (aksesib depi meni dan gos).</p>
-
-<h4>Profil itilizater</h4>
-<p>OmegaT pa difisil pou instale ek servi, me ou bizin oule lir ek swiv bann instriksion. Si ou pa siport bann instriksion, ou si ou lapros li plito klik lor tou bann bouton ziska ou resi fer enn kiksoz ki resanble seki ou ti anvi fer, alor kapav OmegaT pa enn bon zouti pou ou.</p>
+<p>OmegaT pou marse lor ninport ki sistem kot JRE (Java Runtime Environment) apropriye finn instale ouswa kapav instale. Etan done ki JRE fourni avek OmegaT, ou pa bizin telesarz ek instal li apar. OmegaT finn instale avek sikse lor Windows (tou bann version depi 98), macOS ek Linux.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
 </div>
 
 <h3 id="standard">Version standard - {{site.data.versions.standard.name}}</h3>
-
-<p>Version standard nesesit Java {{site.data.versions.standard.java_version}}. Li finn itilize depi inpe letan aster ek li finn fer so prev. So dokimantasion li plizoumwin azour, antouka an Angle.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -165,41 +151,7 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
 
 </table>
 
-<h3 id="latest">Dernie version - {{site.data.versions.latest.name}}</h3>
-
-<p>Dernie version nesesit Java {{site.data.versions.latest.java_version}}. Li enn version ki pli resan ki version standard, ek ki inklir bann nouvo fonksionalite. Normalman dernie version pou relativman stab ek itilizab, me li kapav ena detrwa bug. Dokimantasion, an partikilie lor bann nouvo fonksionalite, pou mwins detaye ki dan version standard. Bann itilizater ki ena lexperyans OmegaT souvan prefer dernie version.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Instriksion detaye</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">'Download'</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">'Download'</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Version devloper</h3>
-
-<p>Li enn "master" version ki ankor an version "alpha", setadir ki son devlopman pe kontigne. Bann 'pre-built binaries' disponib sou form bann 'Nightly Builds'.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,9 +169,9 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">'Download'</a></td>
   </tr>
   <tr>
-      <td>'Nightly Builds'</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">'Download'</a></td>
+      <td>'Weekly Builds'</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">'Download'</a></td>
   </tr>
   </tbody>
 </table>
@@ -261,22 +213,12 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
 <p>Pou pibliy bann version noter, li kapav pran inpe letan. Bann itilizater ki prese kapav servi version non signe anplas; si ou pe rankont bann difikilte letan ou lans program-la, lir lartik <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>Version 'Web Start' li enn lot fason pou instal OmegaT lor ou ordinater.</p>
-      <p>Avek sa version-la, bann 'update' pou instale otomatikman.</p>
-      <p>Pandan instalasion, ou kapav gagn plizier alert sekirite. Sa depann lor ou 'operating system'.<br/>Sertifika-la signe par prinsipal devloper OmegaT.</p>
-      <p>Bann otorizasion ki ou donn sa version-la (setadir "unrestricted access to the computer") pa diferan ki bann otorizasion ki ou donn enn version lokal (setadir akse 'hard drive' ou lordinater).</p>
-      <p>Pou instal version 'Web Start', ou bizin ena Java version 1.8 minimum instale lor ou ordinater.</p>
-      <p>Langazman konfidansialite: 'Web Start' Java OmegaT pa anrezistre okenn ou bann informasion lor bann server web OmegaT. Program-la fonksionn lor ou lordinater. Ou bann dokiman ek memwar tradiksion rest lor ou lordinater, ek proze OmegaT pena okenn akse ou travay ouswa ou bann informasion.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>Version "master" (alfa) li version devlopman ki pli resan. Nou rekomann li pou bann developer ek bann tester serye. Ou kapav ousi 'download' li atraver sa komann git-la:</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Bann konpilasion peryodik disponib lor Sourceforge.</p>
 </div>
 

@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Classica</label>
           <p>Cù sta versione, l’installazione hè fatta da l’utilizatore&nbsp;; ghjè quella di l’utilizatori avvezzi d’OmegaT. In casu di dubbitu, selezziunate sta versione.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Sta versione hè di tipu «&nbsp;Installà è scurdassi&nbsp;».<br/> <strong>Qualità</strong>&nbsp;: installazione autumatica di i rinnovi nant’à l’urdinatore dopu u lanciu di l’appiecazione.<br/> <strong>Difficultà</strong>&nbsp;: oghje, sta versione ùn pò micca esse impiegata cù i moduli d’estensione rendendu certi funzioni micca dispunibule.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
           <p>Per l’installazioni nant’à i sistemi Windows.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Per l’installazioni nant’à i sistemi Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Per l’installazioni nant’à i sistemi macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Classica</label>
           <p>A versione «&nbsp;Classica&nbsp;» d’OmegaT hè pruvista cù una documentazione sana (omancu in inglese) è hè stata pruvata è verificata per caccià i penseri. Ghjè a versione ricumandata per i principianti.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Ultima</label>
-            <p>A versione «&nbsp;Ultima&nbsp;» nant’à u situ di scaricamentu hè a più recente d’OmegaT. À stu livellu di sviluppu, sta versione pò cuntene certi penseri è a so documentazione hè forse incumpleta. Da bona regula, e versioni «&nbsp;Ultima&nbsp;» sò stabile ma sò fatte soprattuttu per l’utilizatori più esperti.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,11 +97,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 
 <h4>Cunfigurazione sistema</h4>
 
-<p>OmegaT pò esse lanciatu nant’à tuttu sistema chì cuntene l’ambiente d’esecuzione Java (JRE) appostu. Oghje chì u JRE hè pruvistu cù OmegaT, ùn hè più bisognu di scaricalu staccatamente. L’installazione hè stata riisciuta nant’à tutte e piattaforme Windows (da a versione 98 fin’à oghje), OS X Macintosh è Linux.</p>
-<p>I schedarii Microsoft Office à u furmatu XML ponu esse tradutti direttamente cù OmegaT. Invece chì quelli in un furmatu più vechju di MS Word, Excel o Powerpoint devenu esse cunvertiti, in primu locu, in i furmati equivalenti d’OpenOffice.org, d’Apache OpenOffice o di LibreOffice (seguiti di prugrammi di scagnu, libere è di rigalu). Pudete ottene OpenOffice.org o LibreOffice seguitendu a leia pruvista in a parte «&nbsp;Prugrammi terzi&nbsp;» di a pagina «&nbsp;Risorse&nbsp;».</p>
-
-<h4>Prufilu utilizatore</h4>
-<p>Bench’è l’installazione è l’adopru d’OmegaT ùn fussinu micca difficiule, ellu hè assai ricumandatu di leghje a documentazione distribuita è di seguità l’istruzzioni pruviste. S’è, da bona regula, ùn lighjite micca l’istruzzioni, è chì vi scuprite un novu prugramma clicchendu dapertuttu, è aspettendu ch’accade qualcosa chì s’assumiglia à l’effettu ricercatu, tandu OmegaT ùn hè micca fattu per voi.</p>
+<p>OmegaT pò esse lanciatu nant’à tuttu sistema chì cuntene l’ambiente d’esecuzione Java (JRE) appostu. Oghje chì u JRE hè pruvistu cù OmegaT, ùn hè più bisognu di scaricalu staccatamente. L’installazione hè stata riisciuta nant’à tutte e piattaforme Windows (da a versione 98 fin’à oghje), macOS è Linux.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 </div>
 
 <h3 id="standard">Versione classica - {{site.data.versions.standard.name}}</h3>
-
-<p>A versione classica richiesta a versione {{site.data.versions.standard.java_version}} di Java. Ghjè a versione impiegata di solitu perchè hà fattu e so prove dapoi un pezzu ma ùn cuntene micca e nove funzioni di l’ultima versione. A documentazione pruvista hè assai cumpleta, omancu in inglese.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -165,41 +151,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 
 </table>
 
-<h3 id="latest">Ultima versione - {{site.data.versions.latest.name}}</h3>
-
-<p>L’ultima versione richiesta a versione {{site.data.versions.latest.java_version}} di Java. Ghjè una versione più recente chì a versione classica è chì cuntene nove funzioni. Da bona regula, hè stabile ma pò dinù cuntene qualchì penseru. A so documentazione hè menu detagliata, soprattuttu l’infurmazioni nant’à e nove funzioni. L’utilizatori chì sò avvezzi à OmegaT preferiscenu aspessu l’ultima versione.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Piattaforma</th>
-      <th>Istruzzione detagliate</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Scaricà</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Scaricà</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Versione di sviluppu</h3>
-
-<p>A versione «&nbsp;Master&nbsp;» hè una versione «&nbsp;alfa&nbsp;» sempre in sviluppu. I binarii di custruzzione sò dispunibule cum’è «&nbsp;Nightly Builds&nbsp;».</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,9 +169,9 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Scaricà</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Scaricà</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Scaricà</a></td>
   </tr>
   </tbody>
 </table>
@@ -261,22 +213,12 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 <p>Forse ci vulerà à aspettà una cria per a publicazione di a versione nutarizata. L’utilizatori chì ùn volenu (o ùn ponu) micca aspettà puderanu impiegà a versione senza firma&nbsp;; in casu di penseru per lancià st’appiecazione, fighjate <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">cumu apre un’appiecazione da un sviluppatore micca identificatu</a>.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>A versione «&nbsp;Web Start&nbsp;» hè una suluzione d’installazione simplice permettendu d’impiegà a versione attuale d’OmegaT.</p>
-      <p>Cù sta versione i rinnovi dispunibule sò installati autumaticamente.</p>
-      <p>Durante l’installazione, secondu à u vostru sistema d’operazione, pudete riceve parechji avertimenti di sicurità.<br/>U certificatu hè firmatu da u sviluppatore principale d’OmegaT.</p>
-      <p>I permessi chì vo cuncidite à sta versione (chì ponu esse discritti cum’è un accessu «&nbsp;senza limita à l’urdinatore&nbsp;») sò listessi chì quelli chì vo cuncidite à a versione lucale (i.e.&nbsp;: un accessu à u discu duru di l’urdinatore).</p>
-      <p>L’installazione di a versione «&nbsp;Web Start&nbsp;» richiede chì a versione 1.8 (o ancu più recente) di Java sia installata nant’à u vostru urdinatore.</p>
-      <p>Impegnu di cunfidenzialità&nbsp;: a versione «&nbsp;Web Start&nbsp;» d’OmegaT ùn arregistra alcunu di i vostri dati nant’à i servitori d’OmegaT. L’appiecazione funziuneghja nant’à a vostra mascina. I vostri ducumenti è e vostre memorie di traduzzione stanu nant’à u vostru urdinatore è u prughjettu OmegaT ùn averà alcunu accessu à i vostri travaglii o infurmazioni.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>A versione «&nbsp;alfa&nbsp;» cuntene a fasa a più recente di u sviluppu di l’appiecazione OmegaT. Hè ricumandata solu per i sviluppatori è esperimentadori tercani. Pò dinù esse ottenuta cù quella cumanda git&nbsp;:</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Custruzzioni periodiche sò dispunibule nant’ SourceForge.</p>
 </div>
 

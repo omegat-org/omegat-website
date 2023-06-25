@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Standard</label>
           <p>Die Version für die benutzerdefinierte Installation, die den bestehenden OmegaT-Benutzern bereits vertraut ist. Wählen Sie im Zweifelsfall diese Version.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Die Web-Start-Version gemäß dem Motto "installieren und vergessen".<br/> <strong>Der Vorteil</strong>: Einmal gestartet, werden zukünftige Updates der Web-Start-Version automatisch auf Ihrem Computer installiert.<br/> <strong>Der Nachteil</strong>: Zurzeit kann diese Version nicht in Verbindung mit Plugins genutzt werden, sodass nicht alle Funktionen zur Verfügung stehen.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
           <p>Für die Installation auf einem Windows-System.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Für die Installation auf Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Für die Installation auf macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>Die "Standard"-Version von OmegaT enthält eine vollständige Bedienungsanleitung (zumindest in englischer Sprache) und wurde in der Regel bereits einige Zeit getestet, um jegliche Bugs zu beseitigen. Die empfohlene Version für Neueinsteiger.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Neueste</label>
-            <p>Wie der Name schon sagt, ist die "neueste" Version von Omegat mehr auf dem neuesten Stand. Allerdings kann es sein, dass die Bedienungsanleitung nicht mehr aktuell (und daher möglicherweise verwirrend) ist, und dass einige kleinere Bugs vorhanden sind. Dennoch sind die "neuesten" Versionen von OmegaT grundsätzlich sehr stabil und werden allen Benutzern empfohlen, die bereits etwas Erfahrung mit OmegaT haben.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,11 +97,7 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
 
 <h4>Systemvoraussetzungen</h4>
 
-<p>OmegaT wird auf jedem System laufen, auf dem eine geeignete JRE (Java Runtime Environment) installiert wurde oder installiert werden kann. Die JRE wird nun zusammen mit OmegaT bereitgestellt und muss nicht mehr separat erworben werden. OmegaT wurde erfolgreich unter Windows (alle Versionen ab 98), Macintosh OS X und Linux installiert.</p>
-<p>Dateien im Microsoft-Office-XML-Format können nun direkt in OmegaT übersetzt werden. Dateien in älteren MS-Word-, Excel- und PowerPoint-Formaten können nach der Konvertierung in die entsprechenden aktuellen Microsoft-Office-Formate übersetzt werden, oder alternativ in das Office-Open-XML-Format, was in OpenOffice.org oder LibreOffice (ebenfalls kostenlos) möglich ist. Um OpenOffice.org oder LibreOffice zu erhalten, folgen Sie dem Link "Software von Drittanbietern" auf der linken Seite.</p>
-
-<h4>Benutzeranforderungen</h4>
-<p>OmegaT ist nicht besonders schwierig zu installieren oder zu verwenden, aber es erfordert die Bereitschaft, die Anweisungen zu lesen und zu befolgen. Wenn Sie eine natürliche Abneigung gegen das Lesen von Anweisungen haben und Ihre Herangehensweise an neue Software darin besteht, auf alles mögliche zu klicken, bis der gewünschte Effekt eintritt, dann ist OmegaT wahrscheinlich nicht für Sie geeignet.</p>
+<p>OmegaT wird auf jedem System laufen, auf dem eine geeignete JRE (Java Runtime Environment) installiert wurde oder installiert werden kann. Die JRE wird nun zusammen mit OmegaT bereitgestellt und muss nicht mehr separat erworben werden. OmegaT wurde erfolgreich unter Windows (alle Versionen ab 98), macOS und Linux installiert.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -133,8 +121,6 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
 </div>
 
 <h3 id="standard">Standardversion - {{site.data.versions.standard.name}}</h3>
-
-<p>Die Standardversion benötigt Java {{site.data.versions.standard.java_version}}. Sie ist in der Regel schon länger im Einsatz und hat sich daher bewährt. Die Dokumentation, zumindest in englischer Sprache, ist grundsätzlich auf dem neuesten Stand.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -167,43 +153,7 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
 
 </table>
 
-<h3 id="latest">Neueste Version - {{site.data.versions.latest.name}}</h3>
-
-<p>Die neueste Version benötigt Java {{site.data.versions.latest.java_version}}. Sie ist aktueller als die Standardversion und enthält neue Features, über die die Standardversion nicht verfügt. Die neueste Version ist recht stabil und benutzbar, kann aber einige Bugs enthalten. Die Dokumentation, insbesondere für neue Features, wird weniger umfassend sein als die der Standardversion. Benutzer, die bereits etwas Erfahrung mit OmegaT haben, bevorzugen oft die neueste Version.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Plattform</th>
-      <th>Detaillierte Anleitung</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Entwicklerversion</h3>
-
-<p>Die Master-Version ist eine topaktuelle Alpha-Version, die sich noch in der Entwicklung befindet. Vorkompilierte Binärdateien sind als sogenannte Nightly Builds verfügbar.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -221,9 +171,9 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Download</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Download</a></td>
+      <td>Weekly Builds</td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      <td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Download</a></td>
   </tr>
   </tbody>
 </table>
@@ -265,22 +215,12 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
 <p>Es kann zu einer Verzögerung bei der Veröffentlichung der notarisierten Version kommen. Benutzer, die es eilig haben, können stattdessen die unsignierte Version verwenden; wenn Sie Schwierigkeiten mit dem Starten der App haben, schauen Sie sich <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Wie man eine App von einem unbekannten Entwickler öffnet</a> an.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>Die Web-Start-Version bietet eine alternative Möglichkeit, OmegaT auf Ihrem Computer zu installieren.</p>
-      <p>Mit dieser Version werden zukünftige Updates automatisch installiert.</p>
-      <p>Je nach Betriebssystem erhalten Sie während der Installation möglicherweise mehrere Sicherheitswarnungen.<br/>Das Zertifikat wurde vom leitenden Entwickler von OmegaT signiert.</p>
-      <p>Die Rechte, die Sie dieser Version geben (die man als "uneingeschränkten Zugriff auf den Computer" bezeichnen kann), unterscheiden sich nicht von den Rechten, die Sie der lokalen Version geben; diese ermöglichen den Zugriff auf die Festplatte des Computers.</p>
-      <p>Um die Web-Start-Version installieren zu können, muss mindestens Java Version 1.8 auf Ihrem Computer installiert sein.</p>
-      <p>Informationen zum Datenschutz: OmegaT Java Web Start speichert keine persönlichen Daten auf den Webservern von OmegaT. Das Programm läuft nur auf Ihrem Rechner. Die Dokumente und Translation Memories verbleiben auf Ihrem Computer, außerdem hat das OmegaT-Projekt keinen Zugriff auf Ihre Arbeit oder persönlichen Daten.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>Die Master- bzw. Alpha-Version spiegelt den neuesten Stand der Entwicklung wider. Sie wird nur ernsthaften Entwicklern und Testern empfohlen. Sie kann auch mit dem git-Befehl abgerufen werden:</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Regelmäßig erscheinende Builds sind auf SourceForge verfügbar.</p>
 </div>
 

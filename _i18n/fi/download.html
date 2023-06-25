@@ -33,10 +33,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Perinteinen</label>
           <p>OmegaT:n vanhoille käyttäjille tuttu itse asennettava versio. Jos olet epävarma, valitse tämä versio.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Web Start -versio on asenna-ja-unohda-versio.<br/> <strong>Hyvä puoli</strong>: Kun olet kerran käynnistänyt tämän, kaikki tulevat Web Start -päivitykset asentuvat tietokoneellesi automaattisesti.<br/> <strong>Huono puoli</strong>: Versiota ei tällä hetkellä voi käyttää yhdessä laajennusten kanssa, joten kaikki toiminnot eivät ole saatavilla.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -44,7 +40,7 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
           <p>Windows-käyttöjärjestelmään asennettava versio.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
           <p>Maciin asennettava versio.</p>
         </div>
         <div class="radio">
@@ -81,10 +77,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standardiversio</label>
           <p>OmegaT:n standardiversiosta on täydellinen käsikirja (ainakin englanniksi), ja sen testauksen aikana löytyneet on korjattu. Tämä on uusille OmegaT:n käyttäjille suositeltu versio.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Uusin</label>
-            <p>Kuten nimestä voi päätellä, OmegaT:n uusin versio on perusversiota päivitetympi. Käsikirja voi kuitenkin olla vanhentunut (ja siksi hämmentävä käyttää), ja ohjelmassa voi olla joitakin bugeja. Uusimmat OmegaT-versiot ovat silti melko vakaita, ja niitä suositellaan kokeneemmille OmegaT-käyttäjille.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -105,10 +97,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 <h4>Järjestelmävaatimukset</h4>
 
 <p>OmegaT toimii kaikissa järjestelmissä, joihin sopiva JRE (Java Runtime Environment) joko on asennettu tai voidaan asentaa. Nykyisin OmegaT:n mukana saa sopivan JRE:n, eikä sitä tarvitse asentaa erikseen. OmegaT:n asentaminen onnistuu Windosiin (versiosta 98 alkaen), Maciin ja Linuxiin.</p>
-<p>Microsoft Officen XML-muotoisia tiedostoja voi kääntää suoraan OmegaT:ssä. Vanhemmat MS Word-, Excel- ja Powerpoint-tiedostot täytyy ennen kääntämistä muuttaa vastaaviin nykyisiin Microsoft Office -muotoihin tai Office Open XML -muotoon, jonka voi tehdä OpenOffice.orgissa tai LibreOfficessa (sielläkin vapaasti). Vasemmalta löytyvästä linkistä Kolmannen osapuolen ohjelmistot löydät OpenOffice.orgin ja LibreOfficen ja voit asentaa ne itsellesi.</p>
-
-<h4>Käyttövaatimukset</h4>
-<p>OmegaT:tä ei ole erityisemmin hankalaa asentaa tai käyttää, mutta se vaatii halun lukea ja noudattaa ohjeistusta. Jos olet vastahakoinen lukemaan ohjeita ja mieluummin painelet uuden ohjelmiston jokaista painiketta niin kauan, että saat jotakin halutun kaltaista näkyviin, OmegaT ei välttämättä sovi sinulle.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -132,8 +120,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 </div>
 
 <h3 id="standard">Standardiversion – {{site.data.versions.standard.name}}</h3>
-
-<p>Standardiversio vaatii Java-version {{site.data.versions.standard.java_version}}. Versio on yleensä ollut käytössä jo jonkun aikaa, joten sitä on testattu hyvin. Sen (ainakin englanninkielinen) dokumentaatio on tavallisesti tarpeeksi ajan tasalla.<!--It will however lack some of the features of the "Latest" version.--></p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -164,41 +150,7 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 
 </table>
 
-<h3 id="latest">Uusin versio – {{site.data.versions.latest.name}}</h3>
-
-<p>Uusin versio vaatii Java-version {{site.data.versions.latest.java_version}}. Se on standardiversiota uudempi, ja siinä on uusia toimintoja, joita standardiversiossa ei ole. Uusin versio on melko vakaa ja käyttökelpoinen, mutta siinä voi olla bugeja. Uuden version dokumentaatio ei ole yhtä perusteellinen kuin standardiversiossa. Tämä koskee erityisesti uusia ominaisuuksia. Kokeneemmat OmegaT-käyttäjät suosivat usein uusinta versiota.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Käyttöympäristö</th>
-      <th>Yksityiskohtaiset ohjeet</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Lataa</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Lataa</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Kehittäjäversio</h3>
-
-<p>Tätä uusinta uutta edustavaa alfavaiheen master-versiota kehitetään vielä. Uutta versiota edeltäviä binääripaketteja saa öisinä käännöksinä.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -217,8 +169,8 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
   </tr>
   <tr>
       <td>Öiset käännökset</td>
-      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Lataa</a></td>
+      <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Lataa</a></td>
   </tr>
   </tbody>
 </table>
@@ -260,22 +212,12 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 <p>Voi kestää jonkin aikaa, ennen kuin ohjelmasta julkaistaan Notarized-versio. Jos sinulla on kiire, voit käyttää allekirjoittamatonta versiota. Jos ohjelman käynnistäminen on vaikeaa, tarkista ohjeet <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">tunnistamattomalta kehittäjältä tulevan ohjelman asentamiseen </a>.</p>
 </div>
 
-<div id="popover_content_webstart" style="display:none">
-      <p>Web Start -versio tarjoaa vaihtoehtoisen tavan asentaa OmegaT koneellesi.</p>
-      <p>Tässä versiossa tulevat päivitykset asennetaan automaattisesti.</p>
-      <p>Asennuksen aikana saatat saada useita turvallisuusvaroituksia, käyttöjärjestelmäsi riippuen.<br/>Sertifikaatin on allekirjoittanut OmegaT:n pääkehittäjä.</p>
-      <p>Oikeudet, jotka annat tälle versiolle (vaikkapa "rajoittamaton tietokoneen käyttöoikeus"), ovat täsmälleen samat kuin paikallisella versiolla, eli se voi käyttää tietokoneen kovalevyä.</p>
-      <p>Jotta voit asentaa Web Start -version, koneellasi on oltava asennettuna Java 1.8 tai tätä uudempi versio.</p>
-      <p>Tietosuojatiedot: OmegaT Java Web Start ei tallenna mitään tietoja käyttäjästä OmegaT:n verkkopalvelimelle. Sovellus on käynnissä ainostaan omalla koneellasi. Käyttämäsi asiakirjat ja käännösmuistit pysyvät omalla koneellasi, eikä OmegaT-projektilla ole pääsyä työhösi tai tietoihisi.</p>
-</div>
-
-
 <div id="popover_content_master" style="display:none">
     <p>Alfavaiheen master-versio edustaa kehityksen viimeisintä vaihetta, Se on tarkoitettu ainoastaan todellisille kehittäjille ja testaajille. Version saa myös git-komennolla</p>
     <p><kbd>git clone https://git.code.sf.net/p/omegat/code omegat-code</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Öiset käännökset löytyvät Sourceforgesta.</p>
 </div>
 

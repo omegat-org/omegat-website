@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Tradiční</label>
           <p>Verze pro instalaci uživateli, kteří mají již nějaké zkušenosti s OmegaT. Pokud si nevíte rady, berte tuto verzi.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Verze Web Start by se dala popsat jako „nainstalujte a zapomeňte na starosti“.<br/> <strong>Výhoda</strong>: jakmile program spustíte, budoucí aktualizace verze Web Start budou na váš počítač instalovány automaticky.<br/> <strong>Nevýhoda</strong>: v současnosti u této verze nejde instalovat doplňky, takže nejsou dostupné všechny fnkce.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
           <p>Pro instalaci na systému Windows</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Pro instalaci na Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Pro instalaci na macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>„Standardní“ verze OmegaT obsahuje kompletní uživatelskou příručku (minimálně anglicky) a zpravidla byla již nějaký čas testována, aby se vychytaly chyby. Toto je doporučená verze pro začátečníky.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Nejnovější</label>
-            <p>Jak už napovídá název, „Nejnovější“ verze OmegaT je přeci jen aktuálnější. Nicméně, uživatelská příručka již aktuální být nemusí (a proto může být zavádějící), je možné, že v této verzi se budou vyskytovat nějaké menší chyby) Nicméně „Nejnovější“ verze OmegaT jsou zpravidla velmi stabilní a jsou doporučeny pro všechny uživatele, kteří mají již nějakou zkušenost s OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -104,15 +96,13 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 
 <h4>Systémové požadavky</h4>
 
-<p>OmegaT je možno spustit pod jakýmkoliv systémem, na kterém je nainstalované nebo je možné nainstalovat prostředí JRE (Java Runtime Environment). Prostředí JRE se v současnosti dodává přímo s aplikací OmegaT a není zapotřebí si jej obstarávat zvlášť. Program OmegaT byl úspěšně instalován na systémech Windows (všechny verze od 98), Macintosh OS X a Linux.</p>
+<p>OmegaT je možno spustit pod jakýmkoliv systémem, na kterém je nainstalované nebo je možné nainstalovat prostředí JRE (Java Runtime Environment). Prostředí JRE se v současnosti dodává přímo s aplikací OmegaT a není zapotřebí si jej obstarávat zvlášť. Program OmegaT byl úspěšně instalován na systémech Windows (všechny verze od 98), macOS a Linux.</p>
 <p>Soubory ve formátu Microsoft Office 2007 XML je možné překládat v OmegaT přímo. Soubory ze staršího formátu MS Wordu, Excelu a PowerPointu lze překládat až po konverzi na ekvivalentní aktuální formáty Microsoft Office, nebo podobně na formát Office Open XML, což lze provést pomocí OpenOffice.org nebo LibreOffice (tento formát je také svobodný). OpenOffice.org nebo LibreOffice můžete stahovat přes link na tlačítku vlevo „Software třetích stran“.</p>
 
 <h4>Požadavky na uživatele</h4>
 <p>Aplikaci OmegaT není vůbec těžké nainstalovat nebo používat, ale vyžaduje to vůli číst a řídit se pokyny. Pokud máte přirozenou nevůli ke čtení pokynů, a Váš přístup k novému software je kliknout na každé tlačítko, které vidíte dokud se neobjeví něco podobající se požadovanému efektu, potom pro Vás aplikace OmegaT pravděpodobně není vhodná.</p>
 
 <h3 id="downloads">Standardní Verze - {{site.data.versions.standard.name}}</h3>
-
-<p>Standardní verze je obvykle již nějakou dobu používána a je tedy vyzkoušena. Její dokumentace, minimálně ta anglická, je zpravidla co nejaktuálnější. Nicméně zde budou chybět některé funkce „Nejnovější“ verze.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -153,51 +143,9 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 
 </table>
 
-<h3 id="latest">Nejnovější verze - {{site.data.versions.latest.name}}</h3>
-
-<p>Nejnovější verze představuje aktuálnější vydání než Standardní verze a ta obsahuje nové funkce, které ve Standardní verzi již nejsou zahrnuty. Nejnovější verze je zpravidla již dostatečně stabilní a použitelná, ale i tak může obsahovat nějaké chyby. Dokumentace, obzvláště nových vlastností, je pak méně ucelená než je tomu u stabilních verzí. Uživatelé, kteří mají již nějakou zkušenost s OmegaT často upřednostňují Nejnovější verzi.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platformy</th>
-      <th>Detailní instrukce</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Stáhnout</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Stáhnout</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Vývojová vzere</h3>
 
-<p>Verze „/trunk“ tvoří jistý předvoj, je to „alfa“ verze, ještě ve vývoji. Před-sestavené binární soubor jsou dostupné jako tzv. noční sestavení (Nightly Builds)</p>
+<p>Verze „/trunk“ tvoří jistý předvoj, je to „alfa“ verze, ještě ve vývoji. Před-sestavené binární soubor jsou dostupné jako tzv. noční sestavení (Weekly Builds)</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -215,9 +163,9 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
       <td><a class="btn btn-primary" href="{{ site.data.downloads.trunk }}" role="button">Stažení</a></td>
   </tr>
   <tr>
-      <td>Nightly Builds</td>
-      <td><!----><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Stažení</a></td>
+      <td>Weekly Builds</td>
+      <td><!----><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Stažení</a></td>
   </tr>
   </tbody>
 </table>
@@ -236,7 +184,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 
 <p>Nicméně, když instalujete verzi OmegaT i když je JRE na vašem počítači již instalováno, tak bude JRE pro OmegaT instalováno odděleně a nebude se stávajícím prostředím kolidovat. Proto je vždy jistější instalovat verzi OmegaT i s JRE. Pokud si nejste jisti, zda máte či nemáte odpovídající verzi JRE, vyberte si verzi s JRE (tj. výchozí verze) </p>
 
-<p><strong>Uživatelé Mac OS X</strong>: ve výchozím nastavení systému je JRE již instalováno, proto není k dispozici verze s JRE pro Mac OS X.</p>
+<p><strong>Uživatelé macOS</strong>: ve výchozím nastavení systému je JRE již instalováno, proto není k dispozici verze s JRE pro macOS.</p>
 
 <p><strong>Uživatelé Linuxu</strong>: většina linuxových distribucí je doplněna prostředím Java Runtime Environment, ale některé implementace open-source  nespolupracují v plné míře s aplikací OmegaT (i když to nemusí být zcela zjevné na první pohled). Pokud jste poměrně noví v Linuxu, doporučujeme vám vybrat si verzi OmegaT, kde je JRE obsaženo. Více zkušení uživatelé Linuxu možná budou preferovat instalaci Oracle (dříve Sun) JRE do svého systému.
 </p>
@@ -244,7 +192,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Podepsané/Nepodepsané</h4>
 
-<p>Mac OS X má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro Mac OS X je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
+<p>macOS má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro macOS je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
 
 <p>Při vydávání podepsaných verzí může docházet ke zpožděním. Uživatelé, kteří nechtějí čekat mohou nepodepsanou verzi také použít; pokud máte potíře se spouštěním aplikace, hledejte v nápovědě <a href="https://support.apple.com/kb/ph14369">jak otevřít aplikaci od neznámého vývojáře</a>.</p>
 </div>
@@ -252,28 +200,17 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing_unsigned">Podepsané/Nepodepsané</h4>
 
-<p>Mac OS X má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro Mac OS X je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
+<p>macOS má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro macOS je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
 
 <p>Při vydávání podepsaných verzí může docházet ke zpožděním. Uživatelé, kteří nechtějí čekat mohou nepodepsanou verzi také použít; pokud máte potíře se spouštěním aplikace, hledejte v nápovědě <a href="https://support.apple.com/kb/ph14369">jak otevřít aplikaci od neznámého vývojáře</a>.</p>
 </div>
-
-<div id="popover_content_webstart" style="display:none">
-      <p>Verze Web Start nabízí alternativní prostředek instalace OmegaT na váš počítač.</p>
-      <p>Prostřednictvím této verze se zajistí, že se budoucí nové verze budou instalovat automaticky.</p>
-      <p>V závislosti na operačním systému můžete obdržet několik bezpečnostních hlášení.<br/>Certifikát podepsala společnost <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, společnost registrovaná ve Francii.</p>
-      <p>Práva, která udělíte této verzi (která lze nazývat jako „neomezený přístup k počítači“) jsou identická s právy, která jste přidělili lokální verzi při její instalaci, tj. přístup na hard disk vašeho počítače.</p>
-      <p>Aby bylo možno instalovat verzi Web Start, musíte mít v počítači již nainstalovánu Javu 1.3 nebo novější.</p>
-      <p>Důvěrná informace: OmegaT Java Web Start neukládá žádné informace na server OmegaT. Aplikace běží pouze na vašem přístroji. Vaše dokumenty a překladové paměti zůstávají na vašem počítači a projekt OmegaT nemá žádný přístup k vaší práci nebo informacím. </p>
-</div>
-
 
 <div id="popover_content_trunk" style="display:none">
     <p>Verze /trunk (alfa) odpovídá nejaktuálnějšímu stavu vývoje. Je doporučená pouze pro zkušené vývojáře a zkušební provoz. Tuto verzi můžete získat přes příkaz pro subverzi:</p>
     <p><kbd>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Pravidelná sestavení jsou dostupná na Sourceforge.</p>
 </div>
 

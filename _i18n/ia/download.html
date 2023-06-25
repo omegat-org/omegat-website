@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Traditional</label>
           <p>Version pro le installation per le usator, familiar al usatores existente de OmegaT. Si tu es in dubita, selige iste version.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Web Start es le version "installa e oblida".<br/> Le beneficio: un vice lanceate le version Web Start, su futur actualisationes essera installate automaticamente sur tu computator.&lt;br1/&gt; <strong>Le disavantage</strong>: actualmente iste version non pote ser usate con le plugins, assi non tote le functiones es disponibile.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
           <p>Pro le installation sur le systemas Windows.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Pro le installation sur Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Pro le installation sur macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -82,10 +78,6 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>Le version "Standard" de OmegaT include un complete manual del usator (al minus in anglese) e habitualmente essere probate pro alicun tempore pro eliminar alicun defectos. Illo es le version recommendate pro le neophytos.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Ultime</label>
-            <p>Como su nomine suggere, le "Ultime" version de Omegat es le plus actualisate. Comocunque, le manual del usator pote esser non jam actualisate (e dunque possibilemente confuse), e qualque minor defectos es possibile. Totevia, le versiones "Ultime" de OmegaT es habitualmente multo stabile e es recommendate pro omne usatores qui jam ha alicun experientia con OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -104,15 +96,9 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 
 <h4>Requisitos del systema</h4>
 
-<p>OmegaT fluera sur tote le systemas operative sur le qual on pote installar un convenibile version del Java Runtime Environment (JRE). Le JRE es anque supplite con OmegaT, on non debe lo obtener separatemente. OmegaT esseva installate con bon successo sur Windows (tote le versiones a partir de Windows 98 in avante), Macintosh OS X e Linux.</p>
-<p>On pote render, directemente in OmegaT, le files in formato Microsoft Office XML. On pote alsi render le files in senior formatos MS Word, Excel e Powerpoint, con le previe conversion al actual formatos equivalente de Microsoft Office, o al formato Office Open XML, como on pote facer in OpenOffice.org o LibreOffice (alsi gratuite). Pro obtener OpenOffice.org o LibreOffice, seque le ligamine ex le button "Software de tertie partes" a sinistra.</p>
-
-<h4>Requisitos del usator</h4>
-<p>OmegaT non es particularmente difficile a installar o usar, ma illo require bon voluntate pro leger e sequer le instructiones. Si tu ha un natural aversion al lectura del instructiones, e tu approche a nove software es de cliccar sur cata button tu vide usque alicun cosa resimilante al effecto desiderate occurre, alora OmegaT non es probabilemente convenibile pro te.</p>
+<p>OmegaT fluera sur tote le systemas operative sur le qual on pote installar un convenibile version del Java Runtime Environment (JRE). Le JRE es anque supplite con OmegaT, on non debe lo obtener separatemente. OmegaT esseva installate con bon successo sur Windows (tote le versiones a partir de Windows 98 in avante), macOS e Linux.</p>
 
 <h3 id="downloads">Version standard - {{site.data.versions.standard.name}}</h3>
-
-<p>Le version Standard esseva habitualmente in uso pro alicun tempore e es dunque experimentate. Su documentation, al minus in anglese, es de costume rationabilemente actualisate. Illo tamen mancara de qualque characteristicas del version "Ultime".</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -153,51 +139,7 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 
 </table>
 
-<h3 id="latest">Ultime version - {{site.data.versions.latest.name}}</h3>
-
-<p>Le version Ultime es un version plus recente del version Standard e include nove characteristicas non presente in isto. Le version Ultime essera de costume rationabilemente stabile e usabile, ma pote haber alicun defectos. Documentation, in particular re nove characteristicas, essera minus comprehensive que cello del version Standard. Le usatores qui jam ha qualque experientia con OmegaT prefere sovente le version Ultime.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platteforma</th>
-      <th>Instructiones detaliate</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Discargamento</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Discargamento</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
 <h3 id="downloadTrunk">Version pro disveloppatores</h3>
-
-<p>Le version "/trunk" es un version "alpha" preliminar, ancora in disveloppamento. Files pre-compilate binari, es disponibile como compilationes Nightly.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -215,9 +157,9 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
       <td><a class="btn btn-primary" href="{{ site.data.downloads.trunk }}" role="button">Discargamento</a></td>
   </tr>
   <tr>
-      <td>Compilationes Nightly</td>
-      <td><!----><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"></span>
-      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.nightly }}" role="button">Discargamento</a></td>
+      <td>Compilationes Weekly</td>
+      <td><!----><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"></span>
+      </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Discargamento</a></td>
   </tr>
   </tbody>
 </table>
@@ -236,7 +178,7 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 
 <p>Si tu installa le version de OmegaT con JRE, anque si le JRE es ja installate sur tu computator, le JRE de OmegaT essera installate separatemente e non confligera con illo. Il es ergo sempre secur installar le version de OmegaT con JRE. Si tu non es secur de haber un version convenibile del JRE, selige un version con JRE (o le version Default). </p>
 
-<p><strong>Usatores de Mac OS X</strong>: JRE es ja installate normalmente sur Mac OS X; in consequentia non ha ulle version con JRE pro iste systema operative.</p>
+<p><strong>Usatores de macOS</strong>: JRE es ja installate normalmente sur macOS; in consequentia non ha ulle version con JRE pro iste systema operative.</p>
 
 <p><strong>Usatores de Linux</strong>: le major parte del distributiones de Linux es supplite con JRE, ma ulle installationes open-source non functiona debitemente con OmegaT (ben que isto pote non parer subito). Si tu es relativemente nove re Linux, nos te consilia de seliger un version de OmegaT con le JRE includite. Le usatores plus experte de Linux pote preferer de installar le JRE de Oracle, olim Sun, a nivello de systema.
 </p>
@@ -244,7 +186,7 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Signate/Non signate</h4>
 
-<p>Mac OS X ha un functionalitate nominate Gatekeeper que accresce le securitate per render difficile facer fluer programmas non signate. OmegaT pro Mac OS X es disponibile in ambe le versiones, signate e non signate; illos es functionalmente identic, ma le version signate es ideal pois que illos es recognoscite per le systema como esser publicate per un note disveloppator.</p>
+<p>macOS ha un functionalitate nominate Gatekeeper que accresce le securitate per render difficile facer fluer programmas non signate. OmegaT pro macOS es disponibile in ambe le versiones, signate e non signate; illos es functionalmente identic, ma le version signate es ideal pois que illos es recognoscite per le systema como esser publicate per un note disveloppator.</p>
 
 <p>On pote haber un retardo a publicar le versiones signate. Le usatores hastive pote usar le version non signate in vice; si tu ha difficultate a lancear le app, vide <a href="https://support.apple.com/kb/ph14369">como aperir un app de un disveloppator non identificate</a>.</p>
 </div>
@@ -252,28 +194,17 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing_unsigned">Signate/Non signate</h4>
 
-<p>Mac OS X ha un functionalitate nominate Gatekeeper que accresce le securitate per render difficile facer fluer programmas non signate. OmegaT pro Mac OS X es disponibile in ambe le versiones, signate e non signate; illos es functionalmente identic, ma le version signate es ideal pois que illos es recognoscite per le systema como esser publicate per un note disveloppator.</p>
+<p>macOS ha un functionalitate nominate Gatekeeper que accresce le securitate per render difficile facer fluer programmas non signate. OmegaT pro macOS es disponibile in ambe le versiones, signate e non signate; illos es functionalmente identic, ma le version signate es ideal pois que illos es recognoscite per le systema como esser publicate per un note disveloppator.</p>
 
 <p>On pote haber un retardo a publicar le versiones signate. Le usatores hastive pote usar le version non signate in vice; si tu ha difficultate a lancear le app, vide <a href="https://support.apple.com/kb/ph14369">como aperir un app de un disveloppator non identificate</a>.</p>
 </div>
-
-<div id="popover_content_webstart" style="display:none">
-      <p>Le version Web Start offere un medio alternative pro installar OmegaT sur tu computator.</p>
-      <p>Con iste version, le futur nove versiones essera installate automaticamente.</p>
-      <p>Durante le installation, dependente de tu systema operative, tu pote reciper plure advertimentos de securitate.<br/>Le certificato es signate per <a
-      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, un compania registrate francese.</p>
-      <p>Le permissiones que tu da a iste version (le qual pote esser describite como "accesso sin restriction al computator") non es differente del permissiones que tu assigna al version local, id es un accesso al disco dur de tu computator.</p>
-      <p>Pro installar le version Web start, tu debe jam haber installate sur tu computer le version Java 1.3 o plus tarde.</p>
-      <p>Information re le protection del confidentialitate: OmegaT Java Web Start registra nihil re tu informationes in le servitores de OmegaT. Le application flue sur tu machina. Tu documentos e tu memorias de traduction remane sur tu computator, e le projecto OmegaT habera nulle accesso a tu labor o a tu informationes.</p>
-</div>
-
 
 <div id="popover_content_trunk" style="display:none">
     <p>Le version /trunk (alpha) reflecte le ultimissime stato del disveloppamento. Illo es recommendate solmente pro disveloppatores experte e probatores. On pote anque lo obtener per le commando subversion:</p>
     <p><kbd>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</kbd></p>
 </div>
 
-<div id="popover_content_nightly" style="display:none">
+<div id="popover_content_weekly" style="display:none">
   <p>Compilationes periodic es disponibile sur Sourceforge.</p>
 </div>
 
