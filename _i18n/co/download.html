@@ -1,7 +1,7 @@
 <div class="container">
 
 <p class="lead">I liami inghjò vi permettenu di scaricà versioni sfarente d’OmegaT. S’è vo avete dubbitu apprupositu di a versione à scaricà, pudete impiegà u <a
-href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p>
+href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>. Oghje, ci hè solu una versione classica.</p>
 
 <div id="download-wizard" class="panel panel-primary collapse">
   <div class="panel-heading">
@@ -13,12 +13,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="#tab-install-type" data-toggle="tab">Tipu d’installazione</a>
-            </li>
-            <li>
-              <a href="#tab-version" data-toggle="tab">Versione</a>
-            </li>
-            <li>
               <a href="#tab-operating-system" data-toggle="tab">Sistema d’operazione</a>
             </li>
             <li>
@@ -29,12 +23,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       </div>
     </div>
     <div class="tab-content">
-      <div class="tab-pane fade in" id="tab-install-type">
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Classica</label>
-          <p>Cù sta versione, l’installazione hè fatta da l’utilizatore&nbsp;; ghjè quella di l’utilizatori avvezzi d’OmegaT. In casu di dubbitu, selezziunate sta versione.</p>
-        </div>
-      </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optWindows" value="windows" name="optOS"/>Windows</label>
@@ -42,7 +30,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
-          <p>Per l’installazioni nant’à i sistemi macOS.</p>
+          <p>Per l’installazioni nant’à macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -76,7 +64,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       </div>
       <div class="tab-pane fade" id="tab-version">
         <div class="radio">
-          <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Classica</label>
+          <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Classicu</label>
           <p>A versione «&nbsp;Classica&nbsp;» d’OmegaT hè pruvista cù una documentazione sana (omancu in inglese) è hè stata pruvata è verificata per caccià i penseri. Ghjè a versione ricumandata per i principianti.</p>
         </div>
       </div>
@@ -85,9 +73,11 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
         <h3><a id="wizard-result-version" href="#">qualchì versione</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Scaricà</a>
 
+<!-- 
         <div id="wizard-result-osx" style="display:none;">
           <p>S’è sta versione ùn hè micca dispunibule, pudete pruvà di <a href="#" id="wizard-result-unsigned">scaricà a versione senza firma</a>.</p>
         </div>
+ -->
       </div>
     </div>
   </div>
@@ -97,7 +87,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 
 <h4>Cunfigurazione sistema</h4>
 
-<p>OmegaT pò esse lanciatu nant’à tuttu sistema chì cuntene l’ambiente d’esecuzione Java (JRE) appostu. Oghje chì u JRE hè pruvistu cù OmegaT, ùn hè più bisognu di scaricalu staccatamente. L’installazione hè stata riisciuta nant’à tutte e piattaforme Windows (da a versione 98 fin’à oghje), macOS è Linux.</p>
+<p>OmegaT pò esse lanciatu nant’à tuttu sistema chì cuntene l’ambiente d’esecuzione Java (JRE) appostu. Oghje chì u JRE hè pruvistu cù OmegaT, ùn hè più bisognu di scaricalu staccatamente. L’installazione hè stata riisciuta nant’à tutte e piattaforme Windows (da a versione 8 fin’à oghje), macOS è Linux.</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -141,8 +131,10 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       {% endif %}
       </td>
       <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Scaricà</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Scaricà</a></td>
+      {% if platform.link != null %}
+        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a>
+      {% else %}
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a>
       {% endif %}
       </td>
   </tr>
@@ -169,7 +161,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       <td><a class="btn btn-primary" href="{{ site.data.downloads.master }}" role="button">Scaricà</a></td>
   </tr>
   <tr>
-      <td>Weekly Builds</td>
+      <td>Custruzzioni settimanale</td>
       <td><span rel="popover" data-platform="weekly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
       </td><td><a class="btn btn-primary" href="{{ site.data.downloads.weekly }}" role="button">Scaricà</a></td>
   </tr>
@@ -219,7 +211,7 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 </div>
 
 <div id="popover_content_weekly" style="display:none">
-  <p>Custruzzioni periodiche sò dispunibule nant’ SourceForge.</p>
+  <p>Custruzzioni periodiche sò dispunibule nant’à SourceForge.</p>
 </div>
 
 <div id="popover_content_source" style="display:none">
