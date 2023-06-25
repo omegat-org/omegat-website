@@ -126,20 +126,6 @@ href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%20
 
 <tr>
 
-<td><b>Web Start 版</b></td>
-
-<td>
-
-<p><a
-href="https://omegat.sourceforge.io/webstart/OmegaT.jnlp">Web Start 通常版</a><br/><a
-href="https://omegat.sourceforge.io/webstart-dev/OmegaT.jnlp">Web Start 開発版</a><br/></p>
-
-</td>
-
-</tr>
-
-<tr>
-
 <td><b>旧版</b></td>
 
 <td><p><a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Legacy/">新版に置き換えられた古いバージョン</a></p></td>
