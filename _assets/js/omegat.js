@@ -136,7 +136,6 @@ $(document).ready(function () {
         var findBestVersion = function (sel) {
             //var state = downloadWizard.data('state');
 
-            var type = sel.type;
             var os = sel.os;
             var jre = sel.jre;
             var version = 'standard'; // sel.version;
@@ -161,7 +160,7 @@ $(document).ready(function () {
 
             var btnLink = $('.version-download', $('#' + result)).attr('href') || '#';
 
-            var resultName = [$('#' + version).text(), $('.version-name', $('#' + result)).text()].join(' - ');
+            var resultName = [$('#' + version).text(), $('.version-name', $('#' + result)).text()].join(' - ').replace(/ - $/ ,'');
 
             $('#wizard-result-version').html(resultName);
             $('#wizard-result-version').attr('href', '#' + result);
@@ -171,6 +170,7 @@ $(document).ready(function () {
             if (os == 'osx') {
                 var unsignedHref = $('a', '#' + result.replace(/_signed$/, '_unsigned')).attr('href');
                 $('#wizard-result-unsigned').attr('href', unsignedHref);
+                $('#wizard-result').show();
                 $('#wizard-result-osx').show();
             } else {
                 $('#wizard-result-osx').hide();
