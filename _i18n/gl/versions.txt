@@ -5,5 +5,5 @@ $latest_name="3.5.2 update 1";
 $latest_number="3.5.2_01";
 $min_jre_version="1.6";
 $tokenizers_number="0.5-2.1";
-$nightly_builds_url="https://omegat.ci.cloudbees.com/job/omegat-trunk/";
+$weekly_builds_url="https://omegat.ci.cloudbees.com/job/omegat-trunk/";
 ?>
