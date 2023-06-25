@@ -58,5 +58,4 @@ osx_unsigned: macOS version Non Signe
 linux_jre: Linux avek JRE
 linux_jre64b: Linux avek 64-bit JRE
 nojre: Miltiplatform san JRE
-webstart: Web Start
 source: Kod sours

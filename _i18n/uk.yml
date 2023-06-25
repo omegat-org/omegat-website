@@ -54,10 +54,9 @@ titles:
 windows_jre: Версія для Windows із JRE
 windows_jre64b: Версія для Windows із JRE (64 біти)
 windows_nojre: Версія для Windows без JRE
-osx_signed: Версія для OS X (завірена)
-osx_unsigned: Версія для OS X (незавірена)
+osx_signed: Версія для macOS (завірена)
+osx_unsigned: Версія для macOS (незавірена)
 linux_jre: Версія для Linux із JRE
 linux_jre64b: Версія для Linux із JRE (64 біти)
 nojre: Кросплатформна версія без JRE
-webstart: Версія Web Start
 source: Програмний код

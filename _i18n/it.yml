@@ -52,10 +52,9 @@ titles:
 windows_jre: Windows con JRE
 windows_jre64b: Windows con JRE a 64 bit
 windows_nojre: Windows senza JRE
-osx_signed: OS X firmato
-osx_unsigned: OS X non firmato
+osx_signed: macOS firmato
+osx_unsigned: macOS non firmato
 linux_jre: Linux con JRE
 linux_jre64b: Linux con JRE a 64 bit
 nojre: Multi-piattaforma senza JRE
-webstart: Web Start
 source: Codice sorgente

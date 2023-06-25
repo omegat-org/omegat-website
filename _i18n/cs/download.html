@@ -34,10 +34,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
           <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Tradiční</label>
           <p>Verze pro instalaci uživateli, kteří mají již nějaké zkušenosti s OmegaT. Pokud si nevíte rady, berte tuto verzi.</p>
         </div>
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
-          <p>Verze Web Start by se dala popsat jako „nainstalujte a zapomeňte na starosti“.<br/> <strong>Výhoda</strong>: jakmile program spustíte, budoucí aktualizace verze Web Start budou na váš počítač instalovány automaticky.<br/> <strong>Nevýhoda</strong>: v současnosti u této verze nejde instalovat doplňky, takže nejsou dostupné všechny fnkce.</p>
-        </div>
       </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
@@ -45,8 +41,8 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
           <p>Pro instalaci na systému Windows</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
-          <p>Pro instalaci na Mac OS X.</p>
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <p>Pro instalaci na macOS.</p>
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
@@ -100,7 +96,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 
 <h4>Systémové požadavky</h4>
 
-<p>OmegaT je možno spustit pod jakýmkoliv systémem, na kterém je nainstalované nebo je možné nainstalovat prostředí JRE (Java Runtime Environment). Prostředí JRE se v současnosti dodává přímo s aplikací OmegaT a není zapotřebí si jej obstarávat zvlášť. Program OmegaT byl úspěšně instalován na systémech Windows (všechny verze od 98), Macintosh OS X a Linux.</p>
+<p>OmegaT je možno spustit pod jakýmkoliv systémem, na kterém je nainstalované nebo je možné nainstalovat prostředí JRE (Java Runtime Environment). Prostředí JRE se v současnosti dodává přímo s aplikací OmegaT a není zapotřebí si jej obstarávat zvlášť. Program OmegaT byl úspěšně instalován na systémech Windows (všechny verze od 98), macOS a Linux.</p>
 <p>Soubory ve formátu Microsoft Office 2007 XML je možné překládat v OmegaT přímo. Soubory ze staršího formátu MS Wordu, Excelu a PowerPointu lze překládat až po konverzi na ekvivalentní aktuální formáty Microsoft Office, nebo podobně na formát Office Open XML, což lze provést pomocí OpenOffice.org nebo LibreOffice (tento formát je také svobodný). OpenOffice.org nebo LibreOffice můžete stahovat přes link na tlačítku vlevo „Software třetích stran“.</p>
 
 <h4>Požadavky na uživatele</h4>
@@ -188,7 +184,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 
 <p>Nicméně, když instalujete verzi OmegaT i když je JRE na vašem počítači již instalováno, tak bude JRE pro OmegaT instalováno odděleně a nebude se stávajícím prostředím kolidovat. Proto je vždy jistější instalovat verzi OmegaT i s JRE. Pokud si nejste jisti, zda máte či nemáte odpovídající verzi JRE, vyberte si verzi s JRE (tj. výchozí verze) </p>
 
-<p><strong>Uživatelé Mac OS X</strong>: ve výchozím nastavení systému je JRE již instalováno, proto není k dispozici verze s JRE pro Mac OS X.</p>
+<p><strong>Uživatelé macOS</strong>: ve výchozím nastavení systému je JRE již instalováno, proto není k dispozici verze s JRE pro macOS.</p>
 
 <p><strong>Uživatelé Linuxu</strong>: většina linuxových distribucí je doplněna prostředím Java Runtime Environment, ale některé implementace open-source  nespolupracují v plné míře s aplikací OmegaT (i když to nemusí být zcela zjevné na první pohled). Pokud jste poměrně noví v Linuxu, doporučujeme vám vybrat si verzi OmegaT, kde je JRE obsaženo. Více zkušení uživatelé Linuxu možná budou preferovat instalaci Oracle (dříve Sun) JRE do svého systému.
 </p>
@@ -196,7 +192,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 <div id="popover_content_osx_signed" style="display:none">
 <h4 id="about_signing">Podepsané/Nepodepsané</h4>
 
-<p>Mac OS X má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro Mac OS X je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
+<p>macOS má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro macOS je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
 
 <p>Při vydávání podepsaných verzí může docházet ke zpožděním. Uživatelé, kteří nechtějí čekat mohou nepodepsanou verzi také použít; pokud máte potíře se spouštěním aplikace, hledejte v nápovědě <a href="https://support.apple.com/kb/ph14369">jak otevřít aplikaci od neznámého vývojáře</a>.</p>
 </div>
@@ -204,7 +200,7 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 <div id="popover_content_osx_unsigned" style="display:none">
 <h4 id="about_signing_unsigned">Podepsané/Nepodepsané</h4>
 
-<p>Mac OS X má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro Mac OS X je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
+<p>macOS má funkcionalitu zvanou Gatekeeper, která zvyšuje bezpečnost při stížení spouštění nepodepsaných programů. OmegaT pro macOS je k dispozici v obou verzích, jak podepsaná, tak nepodepsaná; mají identické funkce, ale podepsaná verze je přednostně rozpoznána systémem jakožto vydaná známým vývojářem.</p>
 
 <p>Při vydávání podepsaných verzí může docházet ke zpožděním. Uživatelé, kteří nechtějí čekat mohou nepodepsanou verzi také použít; pokud máte potíře se spouštěním aplikace, hledejte v nápovědě <a href="https://support.apple.com/kb/ph14369">jak otevřít aplikaci od neznámého vývojáře</a>.</p>
 </div>

@@ -62,5 +62,4 @@ osx_unsigned: macOS (署名なし)
 linux_jre: Linux (JRE付き)
 linux_jre64b: Linux (64-bit、 JRE付き)
 nojre: クロスプラットフォーム(JRE無し)
-webstart: Web Start
 source: ソースコード

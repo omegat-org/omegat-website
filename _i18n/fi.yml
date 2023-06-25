@@ -58,5 +58,4 @@ osx_unsigned: macOS Unsigned
 linux_jre: Linux, jossa on JRE
 linux_jre64b: Linux, jossa on 64-bittinen JRE
 nojre: Käyttöliittymästä riippumaton versio ilman JRE:tä
-webstart: Web Start
 source: Lähdekoodi

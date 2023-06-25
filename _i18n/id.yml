@@ -16,8 +16,8 @@ menu:
   languages: Languages
   resources: Sumber Daya Lain Untuk OmegaT
 nojre: Cross-platform without JRE
-osx_signed: OS X Signed
-osx_unsigned: OS X Unsigned
+osx_signed: macOS Signed
+osx_unsigned: macOS Unsigned
 source: Source code
 titles:
   404: Page Not Found
@@ -56,7 +56,6 @@ titles:
   screenshots: Screenshots
   sponsorship: Sponsorship
   tutorials: Tutorials
-webstart: Web Start
 windows_jre: Windows with JRE
 windows_jre64b: Windows with 64-bit JRE
 windows_nojre: Windows without JRE
