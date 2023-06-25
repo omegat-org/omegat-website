@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standaard</label>
           <p>De versie "Standaard" van OmegaT bevat een volledige gebruikershandleiding (tenminste in het Engels) en zal gewoonlijk al gedurende enige tijd zijn getest om eventuele problemen te elimineren. Dit is de aanbevolen versie voor gebruikers die OmegaT voor de eerste keer gebruiken.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Laatste</label>
-            <p>Zoals de naam al doet vermoeden is de versie "Laatste" van OmegaT meer recent. Echter: de gebruikershandleiding zou niet langer recent hoeven te zijn (en daardoor mogelijk zorgen voor verwarring), en enkele kleine problemen zijn mogelijk aanwezig. Niettegenstaande dat zijn de versies "Laatste" van OmegaT gewoonlijk zeer stabiel en worden daarom aanbevolen voor gebruikers die al enige ervaring met OmegaT hebben.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -134,8 +130,6 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
 
 <h3 id="standard">Standaard versie - {{site.data.versions.standard.name}}</h3>
 
-<p>De versie Standaard vereist Java {{site.data.versions.standard.java_version}}. Die is gewoonlijk al enige tijd in gebruik en heeft zich daardoor al bewezen.a De documentatie daarvan, ten minste in het Engels, is meestal redelijk bijgewerkt.<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -157,38 +151,6 @@ href="#download-wizard" data-toggle="collapse">Download selecteren</a> gebruiken
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Downloaden</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Downloaden</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">Laatste versie - {{site.data.versions.latest.name}}</h3>
-
-<p>De versie Laatste vereist Java {{site.data.versions.latest.java_version}}. Het is een meer recente versie dan de versie Standaard en bevat nieuwe mogelijkheden die niet aanwezig zijn in die laatste. De versie Laatste zal meestal redelijk stabiel en bruikbaar zijn, maar zou enkele problemen kunnen hebben. Documentatie, in het bijzonder over nieuwe mogelijkheden, zal minder uitgebreid zijn dan die van de versie Standaard. Gebruikers die al enige ervaring hebben met OmegaT prefereren vaak de versie Laatste.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platformen</th>
-      <th>Gedetailleerde instructies</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Downloaden</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Downloaden</a></td>
       {% endif %}
       </td>
   </tr>

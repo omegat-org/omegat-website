@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>„Standardní“ verze OmegaT obsahuje kompletní uživatelskou příručku (minimálně anglicky) a zpravidla byla již nějaký čas testována, aby se vychytaly chyby. Toto je doporučená verze pro začátečníky.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Nejnovější</label>
-            <p>Jak už napovídá název, „Nejnovější“ verze OmegaT je přeci jen aktuálnější. Nicméně, uživatelská příručka již aktuální být nemusí (a proto může být zavádějící), je možné, že v této verzi se budou vyskytovat nějaké menší chyby) Nicméně „Nejnovější“ verze OmegaT jsou zpravidla velmi stabilní a jsou doporučeny pro všechny uživatele, kteří mají již nějakou zkušenost s OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -111,8 +107,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
 <p>Aplikaci OmegaT není vůbec těžké nainstalovat nebo používat, ale vyžaduje to vůli číst a řídit se pokyny. Pokud máte přirozenou nevůli ke čtení pokynů, a Váš přístup k novému software je kliknout na každé tlačítko, které vidíte dokud se neobjeví něco podobající se požadovanému efektu, potom pro Vás aplikace OmegaT pravděpodobně není vhodná.</p>
 
 <h3 id="downloads">Standardní Verze - {{site.data.versions.standard.name}}</h3>
-
-<p>Standardní verze je obvykle již nějakou dobu používána a je tedy vyzkoušena. Její dokumentace, minimálně ta anglická, je zpravidla co nejaktuálnější. Nicméně zde budou chybět některé funkce „Nejnovější“ verze.</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -141,48 +135,6 @@ href="#download-wizard" data-toggle="collapse">Průvodce stažením</a></p>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Stáhnout</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Stáhnout</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
-<h3 id="latest">Nejnovější verze - {{site.data.versions.latest.name}}</h3>
-
-<p>Nejnovější verze představuje aktuálnější vydání než Standardní verze a ta obsahuje nové funkce, které ve Standardní verzi již nejsou zahrnuty. Nejnovější verze je zpravidla již dostatečně stabilní a použitelná, ale i tak může obsahovat nějaké chyby. Dokumentace, obzvláště nových vlastností, je pak méně ucelená než je tomu u stabilních verzí. Uživatelé, kteří mají již nějakou zkušenost s OmegaT často upřednostňují Nejnovější verzi.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platformy</th>
-      <th>Detailní instrukce</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Stáhnout</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Stáhnout</a></td>
       
       {% endif %}
       

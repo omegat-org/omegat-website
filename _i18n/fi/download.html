@@ -81,10 +81,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standardiversio</label>
           <p>OmegaT:n standardiversiosta on täydellinen käsikirja (ainakin englanniksi), ja sen testauksen aikana löytyneet on korjattu. Tämä on uusille OmegaT:n käyttäjille suositeltu versio.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Uusin</label>
-            <p>Kuten nimestä voi päätellä, OmegaT:n uusin versio on perusversiota päivitetympi. Käsikirja voi kuitenkin olla vanhentunut (ja siksi hämmentävä käyttää), ja ohjelmassa voi olla joitakin bugeja. Uusimmat OmegaT-versiot ovat silti melko vakaita, ja niitä suositellaan kokeneemmille OmegaT-käyttäjille.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -133,8 +129,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 
 <h3 id="standard">Standardiversion – {{site.data.versions.standard.name}}</h3>
 
-<p>Standardiversio vaatii Java-version {{site.data.versions.standard.java_version}}. Versio on yleensä ollut käytössä jo jonkun aikaa, joten sitä on testattu hyvin. Sen (ainakin englanninkielinen) dokumentaatio on tavallisesti tarpeeksi ajan tasalla.<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -156,38 +150,6 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Lataa</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Lataa</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">Uusin versio – {{site.data.versions.latest.name}}</h3>
-
-<p>Uusin versio vaatii Java-version {{site.data.versions.latest.java_version}}. Se on standardiversiota uudempi, ja siinä on uusia toimintoja, joita standardiversiossa ei ole. Uusin versio on melko vakaa ja käyttökelpoinen, mutta siinä voi olla bugeja. Uuden version dokumentaatio ei ole yhtä perusteellinen kuin standardiversiossa. Tämä koskee erityisesti uusia ominaisuuksia. Kokeneemmat OmegaT-käyttäjät suosivat usein uusinta versiota.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Käyttöympäristö</th>
-      <th>Yksityiskohtaiset ohjeet</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Lataa</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Lataa</a></td>
       {% endif %}
       </td>
   </tr>

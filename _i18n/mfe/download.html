@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>Version "standard" OmegaT konpran enn gid litilizasion konplet (omwin an Angle). Li finn teste pou siprim tou bann bug. Li version ki nou rekomann bann nouvo itilizater.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Dernie version</label>
-            <p>Dernie version OmegaT li pli resan. Toutfwa, so gid litilizasion kapav pa azour (donk li kapav kree inpe konfizion), ek li kapav ena detrwa tipti bug. Malgre tou, bann dernie version zot plito stab ek zot rekomande pou bann itilizater ki deza ena enn sertin lexperyans avek OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -134,8 +130,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
 
 <h3 id="standard">Version standard - {{site.data.versions.standard.name}}</h3>
 
-<p>Version standard nesesit Java {{site.data.versions.standard.java_version}}. Li finn itilize depi inpe letan aster ek li finn fer so prev. So dokimantasion li plizoumwin azour, antouka an Angle.<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -157,38 +151,6 @@ href="#download-wizard" data-toggle="collapse">Selekter 'Download'</a>.</p>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">'Download'</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">'Download'</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">Dernie version - {{site.data.versions.latest.name}}</h3>
-
-<p>Dernie version nesesit Java {{site.data.versions.latest.java_version}}. Li enn version ki pli resan ki version standard, ek ki inklir bann nouvo fonksionalite. Normalman dernie version pou relativman stab ek itilizab, me li kapav ena detrwa bug. Dokimantasion, an partikilie lor bann nouvo fonksionalite, pou mwins detaye ki dan version standard. Bann itilizater ki ena lexperyans OmegaT souvan prefer dernie version.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Instriksion detaye</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">'Download'</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">'Download'</a></td>
       {% endif %}
       </td>
   </tr>

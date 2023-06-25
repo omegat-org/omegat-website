@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
           <p>Le version "Standard" de OmegaT include un complete manual del usator (al minus in anglese) e habitualmente essere probate pro alicun tempore pro eliminar alicun defectos. Illo es le version recommendate pro le neophytos.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Ultime</label>
-            <p>Como su nomine suggere, le "Ultime" version de Omegat es le plus actualisate. Comocunque, le manual del usator pote esser non jam actualisate (e dunque possibilemente confuse), e qualque minor defectos es possibile. Totevia, le versiones "Ultime" de OmegaT es habitualmente multo stabile e es recommendate pro omne usatores qui jam ha alicun experientia con OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -111,8 +107,6 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
 <p>OmegaT non es particularmente difficile a installar o usar, ma illo require bon voluntate pro leger e sequer le instructiones. Si tu ha un natural aversion al lectura del instructiones, e tu approche a nove software es de cliccar sur cata button tu vide usque alicun cosa resimilante al effecto desiderate occurre, alora OmegaT non es probabilemente convenibile pro te.</p>
 
 <h3 id="downloads">Version standard - {{site.data.versions.standard.name}}</h3>
-
-<p>Le version Standard esseva habitualmente in uso pro alicun tempore e es dunque experimentate. Su documentation, al minus in anglese, es de costume rationabilemente actualisate. Illo tamen mancara de qualque characteristicas del version "Ultime".</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -141,48 +135,6 @@ href="#download-wizard" data-toggle="collapse">Selector de discargamento</a>.</p
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Discargamento</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Discargamento</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
-<h3 id="latest">Ultime version - {{site.data.versions.latest.name}}</h3>
-
-<p>Le version Ultime es un version plus recente del version Standard e include nove characteristicas non presente in isto. Le version Ultime essera de costume rationabilemente stabile e usabile, ma pote haber alicun defectos. Documentation, in particular re nove characteristicas, essera minus comprehensive que cello del version Standard. Le usatores qui jam ha qualque experientia con OmegaT prefere sovente le version Ultime.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platteforma</th>
-      <th>Instructiones detaliate</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Discargamento</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Discargamento</a></td>
       
       {% endif %}
       

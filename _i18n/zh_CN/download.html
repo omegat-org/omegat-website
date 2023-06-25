@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>标准</label>
           <p>OmegaT的“标准”版本包含完整的用户手册（至少有英语版本）并且通常已经过一段时间测试来消除各种 Bug。首次使用的用户推荐使用此版本。</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>最新</label>
-            <p>顾名思义，Omegat 的“最新”版本要更时新一些。但是，用户手册可能不再是最新的（因此可能会让人困惑），并且可能会出现小 Bug。尽管如此，OmegaT 的“最新”版本通常非常稳定，推荐任何已经拥有 OmegaT 经验的用户使用。</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -134,8 +130,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 
 <h3 id="standard">标准版本 — {{site.data.versions.standard.name}}</h3>
 
-<p>标准版本需要 Java {{site.data.versions.standard.java_version}}。它通常已投入使用一段时间，因此已得以验证。其文档，至少英文文档，通常是足够新的。<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -157,38 +151,6 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">下载</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">下载</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">最新版本 - {{site.data.versions.latest.name}}</h3>
-
-<p>最新版本需要Java {{site.data.versions.latest.java_version}}。它是比标准版本更新的版本，包括后者中不存在的新功能。最新版本通常相当稳定可用，但可能会有一些 Bug。文档，尤其是新功能的文档，将不如标准版本中那么全面。已经拥有 OmegaT 经验的用户往往更喜欢最新版本。</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>平台</th>
-      <th>详细说明</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">下载</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">下载</a></td>
       {% endif %}
       </td>
   </tr>

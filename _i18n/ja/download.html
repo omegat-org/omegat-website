@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>通常版</label>
           <p>「通常版」の OmegaT には、完全な取扱説明書が含まれています（少なくとも英語版は、そうです）。また、バグを取り除くために、ある程度のテスト期間を経ています。OmegaT を初めて使うユーザーにお勧めです。</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>開発版</label>
-            <p>名前が示すとおり、「開発版」の OmegaT は通常版よりも新しい内容のバージョンです。ただし、取扱説明書はまだ更新されていないでしょう（そのため、機能が変更された部分で混乱するかもしれません）。また、致命的でないバグが、まだいくつか残っているかもしれません。それでも、「開発版」はたいていの場合、十分に安定して動作します。OmegaT をある程度使い慣れているユーザーであれば、お勧めできます。</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -134,8 +130,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 
 <h3 id="standard">通常版 - {{site.data.versions.standard.name}}</h3>
 
-<p>通常版には、Java {{site.data.versions.standard.java_version}}が必要です。ある程度の評価試用期間を経ているため、動作は安定しています。取扱説明書については、少なくとも英語版は常に最新の内容になっています。<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -157,38 +151,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">ダウンロード</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">ダウンロード</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">最新版 - {{site.data.versions.latest.name}}</h3>
-
-<p>最新版には、Java {{site.data.versions.latest.java_version}}が必要です。通常版よりも新しいバージョンであり、通常版にはない新機能が含まれています。最新版は、大抵の利用では、十分に安定して使用できます。けれども、不具合やバグが少し残っているかもしれません。文書については、特に新機能を中心に、記載されていなかったり、草稿段階の記述だったりします。OmegaT を長期に利用しているユーザーは、最新版を選ぶことがよくあります。</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>プラットフォーム</th>
-      <th>詳細な手順</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">ダウンロード</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">ダウンロード</a></td>
       {% endif %}
       </td>
   </tr>

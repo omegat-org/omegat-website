@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">encontre sua versão do OmegaT</a
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Estável</label>
           <p>A versão "estável" do OmegaT inclui um manual completo para o usuário (ao menos em inglês) e, normalmente, já foi testada por algum tempo para a eliminação de quaisquer erros. É a versão recomendada para usuários que utilizarão a ferramenta pela primeira vez..</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Última versão</label>
-            <p>Como o nome sugere, a "última versão" do OmegaT é a versão mais recente. Contudo, nessa versão, o manual do usuário pode não estar atualizado (e, por isso, será possivelmente confuso) e há a possibilidade de ocorrer pequenos erros. Ainda assim, as "últimas" versões do OmegaT costumam ser bem estáveis e são recomendadas para quaisquer usuários que já possuem experiência com a ferramenta.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -111,8 +107,6 @@ href="#download-wizard" data-toggle="collapse">encontre sua versão do OmegaT</a
 <p>O OmegaT não é particularmente difícil de instalar ou usar, mas requer disposição do usuário para ler e seguir as instruções. Caso tenha uma aversão natural a instruções em forma escrita e sua abordagem a novos programas seja clicar em todos os botões até que algo com mais ou menos o efeito desejado ocorra, o OmegaT, então, provavelmente não é para você.</p>
 
 <h3 id="downloads">Versão estável - {{site.data.versions.standard.name}}</h3>
-
-<p>A versão estável é a que normalmente já está sendo utilizada há algum tempo e, por isso, já foi aprovada. O manual dessa versão, ao menos em inglês, costuma ser bem atualizado. Essa versão não possui, porém, alguns dos recursos da "última versão".</p>
 
 <table class="table table-striped downloads">
   <thead>
@@ -141,48 +135,6 @@ href="#download-wizard" data-toggle="collapse">encontre sua versão do OmegaT</a
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Baixar</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Baixar</a></td>
-      
-      {% endif %}
-      
-      </td>
-  </tr>
-
-{% endfor %}
-  
-  </tbody>
-
-</table>
-
-<h3 id="latest">Última versão - {{site.data.versions.latest.name}}</h3>
-
-<p>A "última versão" é mais recente que a "versão estável" e inclui novos recursos. Apesar de a "última versão" ser bem estável e usável, pode apresentar alguns erros. O manual dessa versão, especialmente quando se refere aos novos recursos, é menos compreensível que o manual da "versão estável". Usuários que já possuem experiência com o OmegaT costumam preferir a "última versão".</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Plataforma</th>
-      <th>Instruções detalhadas</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-
-{% for platform in site.data.downloads.latest.platforms %}
- 
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      
-      {% if platform.noInfo != true %}
-          
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      
-      {% endif %}
-      
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Baixar</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Baixar</a></td>
       
       {% endif %}
       

@@ -82,10 +82,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Classica</label>
           <p>A versione «&nbsp;Classica&nbsp;» d’OmegaT hè pruvista cù una documentazione sana (omancu in inglese) è hè stata pruvata è verificata per caccià i penseri. Ghjè a versione ricumandata per i principianti.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Ultima</label>
-            <p>A versione «&nbsp;Ultima&nbsp;» nant’à u situ di scaricamentu hè a più recente d’OmegaT. À stu livellu di sviluppu, sta versione pò cuntene certi penseri è a so documentazione hè forse incumpleta. Da bona regula, e versioni «&nbsp;Ultima&nbsp;» sò stabile ma sò fatte soprattuttu per l’utilizatori più esperti.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -134,8 +130,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
 
 <h3 id="standard">Versione classica - {{site.data.versions.standard.name}}</h3>
 
-<p>A versione classica richiesta a versione {{site.data.versions.standard.java_version}} di Java. Ghjè a versione impiegata di solitu perchè hà fattu e so prove dapoi un pezzu ma ùn cuntene micca e nove funzioni di l’ultima versione. A documentazione pruvista hè assai cumpleta, omancu in inglese.<!--It will however lack some of the features of the "Latest" version.--></p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -157,38 +151,6 @@ href="#download-wizard" data-toggle="collapse">Selettore di scaricamentu</a>.</p
       <td>
       {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Scaricà</a></td>
       {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Scaricà</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">Ultima versione - {{site.data.versions.latest.name}}</h3>
-
-<p>L’ultima versione richiesta a versione {{site.data.versions.latest.java_version}} di Java. Ghjè una versione più recente chì a versione classica è chì cuntene nove funzioni. Da bona regula, hè stabile ma pò dinù cuntene qualchì penseru. A so documentazione hè menu detagliata, soprattuttu l’infurmazioni nant’à e nove funzioni. L’utilizatori chì sò avvezzi à OmegaT preferiscenu aspessu l’ultima versione.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Piattaforma</th>
-      <th>Istruzzione detagliate</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"> </span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Scaricà</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Scaricà</a></td>
       {% endif %}
       </td>
   </tr>

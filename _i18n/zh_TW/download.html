@@ -110,15 +110,6 @@ href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
           <p>The "Standard" version of OmegaT includes a full user manual (at
           least in English) and will usually have been tested for some time to
           eliminate any bugs. It is the recommended version for first-time users.</p>
-          <div class="radio">
-            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Latest</label>
-            <p>As its name suggests, the "Latest" version of Omegat is more up to
-          date. However, the user manual may no longer be up to date (and
-          therefore possibly confusing), and some minor bugs are possible.
-          Nevertheless, the "Latest" versions of OmegaT are usually very stable
-          and are recommended for any users who already have some experience with
-          OmegaT.</p>
-          </div>
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
@@ -158,10 +149,6 @@ then OmegaT is probably not suitable for you.</p>
 
 <h3 id="downloads">Standard Version - {{site.data.versions.standard.name}}</h3>
 
-<p>The Standard version has usually been in use for some time and is therefore
-proven. Its documentation, at least in English, is usually reasonably up to
-date. It will however lack some of the features of the "Latest" version.</p>
-
 <table class="table table-striped downloads">
   <thead>
     <tr>
@@ -185,45 +172,6 @@ date. It will however lack some of the features of the "Latest" version.</p>
         <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
       {% else %}
         <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
-      {% endif %}
-      </td>
-  </tr>
-{% endfor %}
-  </tbody>
-
-</table>
-
-<h3 id="latest">Latest Version - {{site.data.versions.latest.name}}</h3>
-
-<p>The Latest version is a more recent version than the Standard version and
-includes new features not present in the latter. The Latest version will
-usually be reasonably stable and usable, but may have some bugs. Documentation,
-particularly of new features, will be less comprehensive than that of the
-Standard version. Users who already have some experience with OmegaT often
-prefer the Latest version.</p>
-
-<table class="table table-striped downloads">
-  <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Detailed instructions</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-{% for platform in site.data.downloads.latest.platforms %}
- <tr id="{{ platform.id }}">
-      <td class="version-name">{% translate platform.name %}</td>
-      <td>
-      {% if platform.noInfo != true %}
-          <span rel="popover" data-platform="{{ platform.name }}" data-title="{% translate platform.name %}" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-      {% endif %}
-      </td>
-      <td>
-      {% if platform.link != null %}
-        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a></td>
-      {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.latest.folder }}/{{ site.data.versions.latest.name }}/OmegaT_{{ site.data.versions.latest.version }}_{{ platform.fileName}}/download" role="button">Download</a></td>
       {% endif %}
       </td>
   </tr>
