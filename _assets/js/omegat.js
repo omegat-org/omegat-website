@@ -83,12 +83,12 @@ $(document).ready(function () {
             $(target + ' input').attr('checked', false);
         });
 
-        showTab('install-type');
+        showTab('operating-system');
 
         // Automatically move to the next question
         $('.radio', downloadWizard).change(function () {
             var sel = {
-                type: $('input[name=optType]:checked').val(),
+                type: 'traditional',
                 os: $('input[name=optOS]:checked').val(),
                 jre: $('input[name=optJRE]:checked').val(),
                 version: $('input[name=optVersion]:checked').val()
@@ -109,16 +109,7 @@ $(document).ready(function () {
         });
 
         var navigateWizard = function (currentTab, sel) {
-            if (currentTab == 'install-type') {
-                //showTab('version');
-                if (sel.type != 'webstart') {
-                    showTab('operating-system');
-                }
-            } else if (currentTab == ('version')) {
-                if (sel.type != 'webstart') {
-                    showTab('operating-system');
-                }
-            } else if (currentTab == 'operating-system') {
+            if (currentTab == 'operating-system') {
                 if (sel.os == 'windows') {
                     $('.with-windows-jre').show();
                     $('.with-linux-jre').hide();
@@ -156,9 +147,7 @@ $(document).ready(function () {
             }
 
             var result = [version, os, jre].join('_');
-            if (type == 'webstart') {
-                result = [version, type].join('_');
-            } else if (os == 'osx') {
+            if (os == 'osx') {
                 result = [version, os, 'signed'].join('_');
             }
 
