@@ -166,10 +166,15 @@ $(document).ready(function () {
             $('#wizard-result-version').attr('href', '#' + result);
             $('#wizard-result-btn').attr('href', btnLink);
 
-            // OS X Signed / Unsigned
+            // MacOS Signed / Unsigned
             if (os == 'osx') {
-                var unsignedHref = $('a', '#' + result.replace(/_signed$/, '_unsigned')).attr('href');
-                $('#wizard-result-unsigned').attr('href', unsignedHref);
+
+                // If no Signed version is present, we still propose the Unsigned one
+                if (!$('#standard_osx_signed').length) {
+                     $('#wizard-result-version').attr('href', '#standard_osx_unsigned');
+                     $('#wizard-result-btn').attr('href', $('.version-download', $('#standard_osx_unsigned')).attr('href'));
+                }
+
                 $('#wizard-result').show();
                 $('#wizard-result-osx').show();
             } else {
