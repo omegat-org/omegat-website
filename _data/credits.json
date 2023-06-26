@@ -4,16 +4,22 @@
         "Briac Pilpré"
     ],
     "translators": {
-        "fr": [
-          "Briac Pilpré",
-          "Brigitte Le Grand",
-          "Jean-Christophe Helary"
+        "ca": [
+          "Marc Riera"
         ],
         "co": [
           "Patriccollu di Santa Maria è Sichè"
         ],
         "es": [
           "Cristina Rodríguez"
+        ],
+        "fi": [
+          "Pia Vinkki"
+        ],
+        "fr": [
+          "Briac Pilpré",
+          "Brigitte Le Grand",
+          "Jean-Christophe Helary"
         ],
         "ia": [
           "Carmelo Serraino"
@@ -34,9 +40,6 @@
           "Аліна Петкау",
           "Анастасія Писаренко",
           "Валерія Стаднюк"
-        ],
-        "fi": [
-          "Pia Vinkki"
         ]
     }
 }

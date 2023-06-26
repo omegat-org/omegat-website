@@ -8,6 +8,7 @@ menu:
   documentation: Documentazione
   contact: Cuntattu
   download: Scaricamentu
+  install: Installà
   resources: Risorse
   support: Assistenza
 
@@ -15,6 +16,7 @@ footer:
   connect: Cunnettassi
   omegat_project: U prughjettu OmegaT
   documentation: Documentazione
+  developers: Cuntribuzione
 
 titles:
   404: A pagina ùn esiste micca
@@ -22,32 +24,34 @@ titles:
   contact: Cuntattu è Assistenza
   support: Assistenza
   documentation: Documentazione
-  download: Scaricamentu
+  download: Scaricà
+  install: Installà
   home: OmegaT - L’attrezzu liberu di memoria di traduzzione
   philosophy: Filosufia
+  policies: Strategie
   resources: Risorse
   manual: Manuale
   tutorials: Furmazioni autonome
   howto: Cumu fà…
   reviews: Articuli
-  sponsorship: Cumparaticu
+  sponsorship: Cumparaticul
   howtos:
      compatibility: Cumpatibilità
-     compatibility_deja_vu: Cumufà - Cumpatibilità d’OmegaT cù Déjà Vu (in inglese)
-     compiling_from_source: Cumufà - Creazione di prugramma d’esecuzione OmegaT à partesi di u codice di fonte (in inglese)
-     docx: Cumufà - Traduzzione di schedarii Microsoft Office, sopratuttu Word 2007, cù OmegaT (in inglese)
-     export_uncleaned_rtf: Cumufà - Espurtà da OmegaT ver di u furmatu micca pulitu « Trados uncleaned RTF » (in inglese)
-     google_translate: Cumufà - Impiegu di Google Translate cù OmegaT (in inglese)
-     iceni_infix: Cumufà - Traduzzione di schedarii PDF cù Iceni Infix è OmegaT (in inglese)
-     linux: Cumufà - Impiegu d’OmegaT nant’à Linux (in inglese)
-     localizing_omegat: Cumufà - Traduzzione è lucalisazione d’OmegaT in a vostra lingua (in inglese)
-     ms_translator: Cumufà - Impiegu di Microsoft Translator cù OmegaT (in inglese)
-     new_filter: Cumufà - Creazione d’un novu filtru di schedariu (in inglese)
-     preview: Cumufà - Aghjuntu d’una funzione di previsualizazione (in inglese)
-     prop12m: Cumufà - Funzioni di prupagazione è di traduzzione multiple (in inglese)
-     spelling: Cumufà - Impiegu d’un cuntrullore d’ortugrafia (in inglese)
-     text_export: Cumufà - Impiegu di a funzione d’espurtazione di testu (in inglese)
-     tokenizer: Cumufà - Impiegu d’un analizatore lessicale (in inglese)
+     compatibility_deja_vu: Cumu fà (in inglese) - Cumpatibilità d’OmegaT cù Déjà Vu
+     compiling_from_source: Cumu fà (in inglese) - Creazione di prugramma d’esecuzione OmegaT à partesi di u codice di fonte
+     docx: Cumu fà (in inglese) - Traduzzione di schedarii Microsoft Office, sopratuttu Word 2007, cù OmegaT
+     export_uncleaned_rtf: Cumu fà (in inglese) - Espurtà da OmegaT à u furmatu micca pulitu « Trados uncleaned RTF »
+     google_translate: Cumu fà (in inglese) - Impiegu di Google Translate cù OmegaT
+     iceni_infix: Cumu fà (in inglese) - Traduzzione di schedarii PDF cù Iceni Infix è OmegaT
+     linux: Cumu fà (in inglese) - Impiegu d’OmegaT nant’à Linux
+     localizing_omegat: Cumu fà (in inglese) - Traduzzione è lucalizazione d’OmegaT in a vostra lingua
+     ms_translator: Cumu fà (in inglese) - Impiegu di Microsoft Translator cù OmegaT
+     new_filter: Cumu fà (in inglese) - Creazione d’un filtru novu di schedariu
+     preview: Cumu fà (in inglese) - Aghjuntu d’una funzione di fighjulata
+     prop12m: Cumu fà (in inglese) - Funzioni di prupagazione è di traduzzione multiple
+     spelling: Cumu fà (in inglese) - Impiegu d’un cuntrullore d’ortugrafia
+     text_export: Cumu fà (in inglese) - Impiegu di a funzione d’espurtazione di testu
+     tokenizer: Cumu fà (in inglese) - Impiegu d’un analizatore lessicale
 
 # Platforms name
 windows_jre: Windows cù JRE
