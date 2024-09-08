@@ -54,12 +54,12 @@ titles:
      tokenizer: Howto - Using the OmegaT tokenizer
 
 # Platforms name
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
-osx_signed: macOS Notarized
-osx_unsigned: macOS Unsigned
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
-nojre: Cross-platform without JRE
+windows_jre: Windows installer packaged with 32-bit JRE
+windows_jre64b: Windows installer packaged with 64-bit JRE
+windows_nojre: Windows installer with no JRE
+osx_signed: macOS package, Notarized
+osx_unsigned: macOS package, Unsigned
+linux_jre: Linux package, with 32-bit JRE
+linux_jre64b: Linux package, with 64-bit JRE
+nojre: Cross-platform package, with no JRE
 source: Source code
