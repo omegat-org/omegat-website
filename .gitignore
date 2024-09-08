@@ -14,4 +14,13 @@ js/bootstrap.min.js
 js/jquery.min.js
 *.swo
 *.bak
+*~
+
+# ruby
 Gemfile.lock
+.bundle
+.ruby-version
+vendor
+
+# ide
+.idea
