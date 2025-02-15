@@ -14,15 +14,20 @@
   <h3 id="tutorials">Esercitazioni</h3>
   <p>I seguenti opuscoli sono disponibili in linea per lo scaricamento:</p>
   <table class="table">
+    <tr><td><a href="https://hackmd.io/@omegat/for_cat_beginners">Esercitazione OmegaT for CAT beginners (edizione 2020)</a>
+    </td><td>di Susan Welsh, Marc Prior e Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/for_cat_beginners_ja">OmegaT for CAT beginners (2020, in giapponese)</a></td><td>di Susan Welsh, Marc Prior e Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/the_cat_power_tools">OmegaT the CAT power tools</a></td><td>di Hiroshi Miura</td></tr>
+    <tr><td><a href="https://hackmd.io/@omegat/the_cat_power_tools_ja">OmegaT the CAT power tools (in giapponese)</a></td></tr>
     <tr>
       <td>
-        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">Esercitazione a OmegaT per principianti</a>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.odt' | prepend: site.baseurl_root }}">Esercitazione OmegaT for Beginners (edizione 2014)</a>
       </td>
       <td>di Susan Welsh (formato Open Document).</td>
     </tr>
     <tr>
       <td>
-        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">Esercitazione a OmegaT per principianti</a>
+        <a href="{{ '/files/guide/OmegaT_for_Beginners_' | append:site.lang | append:'.pdf' | prepend: site.baseurl_root }}">Esercitazione OmegaT for Beginners (edizione 2014)</a>
       </td>
       <td>di Susan Welsh (formato PDF).</td>
     </tr>
@@ -38,132 +43,27 @@
       </td>
       <td>di Sheila Gomes (in Brasiliano).</td>
     </tr>
-
   </table>
-  <h3 id="howto">Guide</h3>
-  <p>Le "Guide", in questo sito, contengono informazioni per utenti esperti su determinate procedure e caratteristiche di OmegaT che non sono coperte dal manuale.</p>
+
+  <h3 id="developers">Documentazione per gli sviluppatori</h3>
+  <p>OmegaT non è solo un prodotto, è un progetto entusiasmante e puoi farne parte.</p>
+  <p>I nuovi collaboratori sono sempre i benvenuti!</p>
+  <p>Per saperne di più riguardo la collaborazione, dai uno sguardo alla nostra documentazione per gli sviluppatori:</p>
   <table class="table">
     <tr>
-      <td/>
       <td>
-        <strong>Guide sulla compatibilità</strong>
+        <a href="https://omegat.readthedocs.io/ ">Contribution Guide</a>
       </td>
+      <td>La guida alla collaborazione in OmegaT.</td>
     </tr>
     <tr>
       <td>
-        <a href="howtos/compatibility.html">Compatibilità con OmegaT</a>
+        <a href="https://github.com/omegat-org/omegat/tree/master/docs_devel/docs">Testo sorgente della Contribution Guide</a>
       </td>
-      <td>Descrive la compatibilità di OmegaT con altri prodotti software scelti. Con collegamenti a guide più dettagliate.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/docx.html">Compatibilità con .docx</a>
-      </td>
-      <td>Descrive la compatibilità di OmegaT con i file di Microsoft Office 2007, soprattutto Word 2007.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/compatibility_deja_vu.html">Compatibilità con Déjà Vu</a>
-      </td>
-      <td>Descrive la compatibilità di OmegaT con Déjà Vu</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/export_uncleaned_rtf.html">RTF non ripulito</a>
-      </td>
-      <td>Descrive come utilizzare OmegaT col formato RTF bilingue di Trados (file "non ripuliti").</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/iceni_infix.html">Iceni Infix</a>
-      </td>
-      <td>Descrive come utilizzare OmegaT con Iceni Infix per tradurre i file in formato PDF.</td>
-    </tr>
-    <tr>
-      <td/>
-      <td>
-        <strong>Guide sulle funzionalità</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/spelling.html">Correttore ortografico</a>
-      </td>
-      <td>Descrive la funzione di correzione ortografica di OmegaT.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/prop12m.html">Propagazione e concordanza uno-a-molti </a>
-      </td>
-      <td>Descrive le funzionalità della propagazione e della concordanza uno a molti di OmegaT.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/google_translate.html">Google Translate</a>
-      </td>
-      <td>Uso di OmegaT in sinergia con Google Translate.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/ms_translator.html">MS Translator</a>
-      </td>
-      <td>Procedura per la configurazione di Microsoft Translator.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/preview.html">Anteprima</a>
-      </td>
-      <td>Creazione di una funzione di anteprima per l'uso con OmegaT.</td>
-    </tr>
-    <tr>
-      <td/>
-      <td>
-        <strong>Guide sulle funzionalità avanzate</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/tokenizer.html">Plugin tokenizer di OmegaT</a>
-      </td>
-      <td>Aggiunge il riconoscimento delle forme flesse di OmegaT alle funzioni glossario e concordanza parziale.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/text_export.html">Funzione di esportazione testo di OmegaT</a>
-      </td>
-      <td>Uso della funzione di esportazione testo di OmegaT (interfaccia di script).</td>
-    </tr>
-    <tr>
-      <td/>
-      <td>
-        <strong>Altre guide</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/compiling_from_source.html">Compilazione di OmegaT da sorgente</a>
-      </td>
-      <td>Spiega come compilare OmegaT dal codice sorgente.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/new_filter.html">Creazione di un nuovo filtro</a>
-      </td>
-      <td>Spiega come creare un filtro per un nuovo formato di file da tradurre con OmegaT.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/localizing_omegat.html">Localizzare OmegaT</a>
-      </td>
-      <td>Procedura amministrativa e tecnica per localizzare OmegaT.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="howtos/linux.html">Uso di OmegaT su Linux</a>
-      </td>
-      <td>Rivolta in particolare agli utenti neofiti di Linux.</td>
+      <td>Il testo sorgente della Contribution Guide presente nel deposito di OmegaT.</td>
     </tr>
   </table>
+
   <h3>Documentazione esterna</h3>
   <p>Informazioni su procedure e caratteristiche di OmegaT per utenti esperti, rinvenibili su altri siti.</p>
   <table class="table">

@@ -1,5 +1,5 @@
-<!-- index -->
-  
+
+  <!-- index -->
   <div class="jumbotron">
     <div class="container-fluid">
       <h1>OmegaT <small>lo strumento gratuito per memorie di traduzione</small></h1>
@@ -32,7 +32,11 @@
   </div>
 
   <div class="container-fluid section">
-    <p class="lead"><strong>OmegaT</strong> è un'applicazione di memoria di traduzione gratuita scritta in Java. È uno strumento progettato per traduttori professionisti. Essa non traduce per te! (Il software che fa questo è chiamato "traduttore automatico", e si dovrà cercare altrove).</p>
+<p class="lead">
+<strong>OmegaT</strong> è un'applicazione di memoria di traduzione che funziona in Windows, macOS, Linux… È uno strumento progettato per traduttori professionisti. Non traduce per te! (Il software che fa questo lavoro è chiamato "traduttore automatico". OmegaT è in grado di interfacciarsi con alcuni programmi o servizi Internet di traduzione automatica)</p>
+
+    <p class="lead">OmegaT è un software gratuito. Ciò significa che gli utenti come te possono scaricarlo e utilizzarlo senza restrizioni. Sei anche libero di copiarlo e di distribuirlo ad altre persone e persino di modificarlo in modo che soddisfi le tue esigenze. Puoi trovare una <a href="https://www.gnu.org/philosophy/free-sw.html">spiegazione del software libero</a> più dettagliata nel sito web della Free Software Foundation.</p>
+    
     <div class="row">
       <div class="col-md-4">
         <h3>Funzioni professionali</h3>
@@ -49,23 +53,23 @@
         <h3>Funziona con più di trenta formati di file</h3>
         <div class="header-line"><!----></div>
         <ul>
-          <li>Microsoft Word, Excel, Powerpoint
-          </li><li>XHTML e HTML</li>
-          <li>Open Document Format (LibreOffice, OpenOffice.org)</li>
+          <li>Microsoft Office Word, Excel, PowerPoint (versione 2007 e successive)</li>
+          <li>XHTML e HTML</li>
+          <li>OpenDocument Format (formato di file nativo per LibreOffice, Apache OpenOffice)</li>
           <li>MediaWiki (Wikipedia)</li>
           <li>File di solo testo</li>
-          <li>... e circa trenta altri formati di file</li>
+          <li>…e circa altri trenta formati di file</li>
         </ul>
       </div>
       <div class="col-md-4">
         <h3>Strumenti avanzati</h3>
         <div class="header-line"><!----></div>
         <ul>
-          <li>Supporto Unicode (UTF-8): può essere utilizzato con alfabeti non latini</li>
-          <li>Supporto per le lingue da destra a sinistra</li>
-          <li>Correttore ortografico integrato</li>
-          <li>Compatibile con altre applicazioni per memorie di traduzione (TMX, TTX, XML, XLIFF, SDLXLIFF)</li>
-          <li>Interfaccia di Google Translate</li>
+          <li>Supporto Unicode: può essere utilizzato con vari alfabeti e script</li>
+          <li>Supporto per le lingue da destra a sinistra (RTL)</li>
+          <li>Correttore ortografico completo che utilizza i dizionari Hunspell (gli stessi utilizzati in altri software tipo LibreOffice o Mozilla Firefox)</li>
+          <li>Compatibile con altre applicazioni per memorie di traduzione attraverso formati di scambio come TMX, TTX, TXML, XLIFF, SDLXLIFF</li>
+          <li>Interfaccia ai servizi software/web di traduzione automatica e traduzione automatica neurale</li>
         </ul>
       </div>
     </div>
@@ -78,12 +82,19 @@
     <div class="whitebox">
       <h2>Scarica</h2>
       <div class="header-line"><!----></div>
+
+      <div class="container-fluid versions">
+        <ul class="list-group">
+          <li class="list-group-item"><span class="badge"><a href="download#standard">{{site.data.versions.standard.name}}</a></span> Versione più recente</li>
+        </ul>
+      </div>
+
       <p class="text-md-center"><strong>OmegaT</strong> è disponibile in diverse versioni per soddisfare le esigenze di un'ampia gamma di utenti.</p>
 
 
       <div class="row">
-        <div class="col-md-2"><!-- padding -->
-          
+        <div class="col-md-2">
+          <!-- padding -->
         </div>
         <div class="col-md-4 text-md-center">
           <p>Per trovare la versione più adatta, seguire il collegamento sottostante "Selettore di scaricamento".</p>
@@ -91,13 +102,13 @@
         <div class="col-md-4 text-md-center">
           <p>In alternativa, se si sa già quale versione si desidera scaricare, fare clic sul pulsante per visualizzare una panoramica delle diverse versioni di OmegaT disponibili.</p>
         </div>
-        <div class="col-md-2"><!-- padding -->
-          
+        <div class="col-md-2">
+          <!-- padding -->
         </div>
       </div>
       <div class="row">
-        <div class="col-md-2"><!-- padding -->
-          
+        <div class="col-md-2">
+          <!-- padding -->
         </div>
         <div class="col-md-4 text-md-center">
           <p>
@@ -113,28 +124,23 @@
     </div>
     <div class="row">&#xA0;</div>
 
-    <div class="container-fluid versions">
-      <ul class="list-group">
-        <li class="list-group-item"><span class="badge"><a href="download#standard">{{site.data.versions.standard.name}}</a></span> Versione standard</li>
-        <li class="list-group-item"><span class="badge"><a href="download#latest">{{site.data.versions.latest.name}}</a></span> Versione più recente</li>
-      </ul>
-    </div>
+
   </div>
 
   <div class="container-fluid section" id="page-quotes-carousel">
      <div class='col-md-offset-2 col-md-8'>
-      <div class="carousel slide" data-ride="carousel" id="quote-carousel"><!-- Bottom Carousel Indicators -->
-        
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
           <li data-target="#quote-carousel" data-slide-to="1"></li>
           <li data-target="#quote-carousel" data-slide-to="2"></li>
-        </ol><!-- Carousel Slides / Quotes -->
+        </ol>
         
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
         
-        <div class="carousel-inner"><!-- Quote 1 -->
-        
-          
+          <!-- Quote 1 -->
           <div class="item active">
             <blockquote>
               <div class="row">
@@ -147,22 +153,22 @@
                 </div>
               </div>
             </blockquote>
-          </div><!-- Quote 2 -->
-          
+          </div>
+          <!-- Quote 2 -->
           <div class="item">
             <blockquote>
-              <div class="row"><!--div class="col-sm-3 text-center">
+              <div class="row">
+                <!--div class="col-sm-3 text-center">
                   <img class="img-circle" src="{{site.baseurl_root}}/img/quote2.jpg" style="width: 100px;height:100px;" alt="User portrait">
                 </div-->
-                
                 <div class="col-sm-12">
                   <p>I traduttori italiani di ODFAuthors e LibreOffice sono orgogliosi di usare un così valido strumento per il duro lavoro all'interno della Comunità di LibreOffice.</p>
                   <small>Valter Mura - Traduttore EN &gt; IT</small>
                 </div>
               </div>
             </blockquote>
-          </div><!-- Quote 3 -->
-          
+          </div>
+          <!-- Quote 3 -->
           <div class="item">
             <blockquote>
               <div class="row">
@@ -176,13 +182,13 @@
               </div>
             </blockquote>
           </div>
-        </div><!-- Carousel Buttons Next/Prev --><!--
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <!--
         <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
         <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
         -->
-        
-        
-        
       </div>                          
     </div>
   </div>
@@ -191,62 +197,61 @@
     <h2>Tu e il progetto OmegaT</h2>
     <div class="header-line"><!----></div>
     <p>OmegaT non è solo un prodotto, è un progetto entusiasmante e puoi farne parte.</p>
-    <p>OmegaT è un software gratuito. Ciò significa che gli utenti come te sono liberi di scaricarlo e utilizzarlo con pochissime restrizioni. Sei anche libero di copiarlo e di distribuirlo ad altre persone.</p>
-    <p>OmegaT è un software open source. Ciò significa che se pensi di esserne in grado, puoi modificare OmegaT per soddisfare le tue esigenze. Per i sostenitori del software open source, questa libertà è persino più importante dell'esenzione dal dover pagare qualcosa.</p>
     <p>Il progetto OmegaT beneficerebbe da un maggiore sostegno da parte dei volontari, in quasi tutti i settori. Anche se molti utenti ne sono consapevoli, spesso la loro risposta è: "Ma io non so programmare!". La programmazione è certamente la funzione più importante, e senza di essa non esisterebbe alcun programma. Ma la programmazione non è l'unico lavoro necessario. Di seguito è riportato un elenco delle aree nelle quali sarebbero più che benvenuti nuovi volontari!</p>
     <div class="row project">
-      <div class="col-sm-4"><!---->
+      <div class="col-sm-4">
         <span class="glyphicon glyphicon-pencil">
-          
+          <!---->
         </span>
         <h3>Creazione di documentazione</h3>
         <p>La <a href="documentation">documentazione</a> è molto importante. Molti di voi, che leggete queste pagine, sono traduttori che hanno tradotto tanta documentazione utente. Hai mai pensato di scrivere in prima persona della documentazione utente? È una vera rivelazione!</p>
       </div>
-      <div class="col-sm-4"><!---->
+      <div class="col-sm-4">
         <span class="glyphicon glyphicon-globe">
-          
+          <!---->
         </span>
         <h3>Localizzazione</h3>
-        <p>Grazie al lavoro di traduttori precedenti, l'interfaccia utente di OmegaT e le guide sono state tradotte in diverse lingue. Ciò significa che ne sono rimaste 'solo' alcune migliaia da fare! La localizzazione di OmegaT in altre lingue è anche un lavoro in corso, dal momento che nuove funzioni e funzionalità vengono aggiunte continuamente. Vedere la <a href="howtos/localizing_omegat">Guida per la localizzazione di OmegaT</a> per i dettagli di ciò che significa tradurre/localizzare OmegaT.</p>
+        <p>Grazie al lavoro di traduttori precedenti, l'interfaccia utente di OmegaT e le guide sono state tradotte in diverse lingue. Ciò significa che ne sono rimaste 'solo' alcune migliaia da fare! La localizzazione di OmegaT in altre lingue è anche un lavoro in corso, dal momento che nuove funzioni e funzionalità vengono aggiunte continuamente. Contattare il <a href="mailto:localization@omegat.org">coordinatore della localizzazione di OmegaT</a> per i dettagli di ciò che significa tradurre/localizzare OmegaT.</p>
       </div>
-      <div class="col-sm-4"><!---->
+      <div class="col-sm-4">
         <span class="glyphicon glyphicon-wrench">
-          
+          <!---->
         </span>
         <h3>Controlli di qualità</h3>
         <p>Una delle cose più utili che l'utente di OmegaT può fare è...  usare OmegaT. E quando si trovano cose che non funzionano, o carenze nella documentazione, segnalarcele.</p>
-      </div>
+    <p>Considera, inoltre, di provare le <a href="https://sourceforge.net/projects/omegat/files/Weekly/">weekly build</a> di OmegaT che potrebbero contenere persino errori più nuovi e interessanti!</p>
+    </div>
     </div>
     <div class="row project">
-      <div class="col-sm-6"><!---->
+      <div class="col-sm-6">
         <span class="glyphicon glyphicon-bullhorn">
-          
+          <!---->
         </span>
         <h3>Pubblicità</h3>
         <p>Hai mai scritto un articolo per la rivista della tua associazione professionale? Se non l'hai fatto, perché non scrivere un articolo sull'uso di OmegaT?</p>
       </div>
-      <div class="col-sm-6"><!---->
+      <div class="col-sm-6">
         <span class="glyphicon glyphicon-piggy-bank">
-          
+          <!---->
         </span>
         <h3>Donazioni</h3>
-        <p>Se hai trovato utile OmegaT e vuoi esprimere la tua gratitudine facendo una <a href="https://sourceforge.net/p/omegat/donate/?source=website">donazione</a> sul nostro conto Paypal.</p>
+        <p>Se hai trovato utile OmegaT e vuoi esprimere la tua gratitudine, fai una <a href="https://sourceforge.net/p/omegat/donate/?source=website">donazione</a> sul nostro conto Paypal.</p>
       </div>
     </div>
     <div class="row project">
-      <div class="col-sm-6"><!---->
+      <div class="col-sm-6">
         <span class="glyphicon glyphicon-cog">
-          
+          <!---->
         </span>
         <h3>Programmazione (Java)</h3>
-        <p>OmegaT è scritto in Java. Se sei un programmatore e per caso conosci Java, guarda la documentazione in <a href="download#downloadTrunk">source code</a> sotto /docs_devel per ottenere informazioni su come iniziare a collaborare.</p>
+        <p>OmegaT è scritto in Java. Se sei un programmatore e per caso conosci Java, consulta la <a href="https://omegat.readthedocs.io/en/latest/">OmegaT contribution guide</a>, o il suo testo sorgente nel <a href="download#downloadTrunk">codice sorgente</a> in /docs_devel, per ottenere informazioni su come iniziare a collaborare.</p>
       </div>
-      <div class="col-sm-6"><!---->
+      <div class="col-sm-6">
         <span class="glyphicon glyphicon-cog">
-          
+          <!---->
         </span>
         <h3>Programmazione (non Java)</h3>
-        <p>Se sei in grado di programmare in un'altra lingua, puoi scrivere codice per supportare l'applicazione principale. Tale codice ausiliario, per esempio, è già stato scritto in Javascript, Groovy and Tcl/Tk, per esempio.</p>
+        <p>Se sei in grado di programmare in un'altra lingua, puoi scrivere codice per supportare l'applicazione principale. Tale codice ausiliario, per esempio, è già stato scritto in Javascript, Groovy e Tcl/Tk, per esempio.</p>
       </div>
       <div class="row project">
         <div class="col-sm-12">
