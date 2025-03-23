@@ -31,18 +31,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '2.7.6' # Not needed with a .ruby-version file
+          ruby-version: "2.7.6" # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
       - name: Setup Pages 📃
         id: pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
 
       #- name: Install HTML Proofer 🔧
       #  run: gem install html-proofer
@@ -80,4 +80,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages 🎉
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
