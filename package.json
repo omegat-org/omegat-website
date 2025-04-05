@@ -1,0 +1,15 @@
+{
+  "name": "omegat-website",
+  "version": "1.0.0",
+  "description": "The website for the OmegaT CAT tool.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "OmegaT Team",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "jest": "29.7.0"
+  }
+}
