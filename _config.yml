@@ -110,6 +110,10 @@ exclude_from_localizations:
     "safari-pinned-tab.svg",
     "sitemap.xml",
     "tutorial",
+    "package.json",
+    "package-lock.json",
+    "README.md",
+    "Dockerfile",
   ]
 
 # Build settings
@@ -148,3 +152,7 @@ exclude:
   - Jenkinsfile
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - Dockerfile
+  - README.md
