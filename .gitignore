@@ -22,5 +22,8 @@ Gemfile.lock
 .ruby-version
 vendor
 
+# npm
+node_modules/
+
 # ide
 .idea
