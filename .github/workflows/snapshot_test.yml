@@ -38,8 +38,8 @@ jobs:
       - name: Build with Jekyll 🏗
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
+        # env:
+        #   JEKYLL_ENV: production
 
       - name: Snapshot Testing
         uses: actions/setup-node@v4
