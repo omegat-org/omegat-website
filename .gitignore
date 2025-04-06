@@ -25,5 +25,7 @@ vendor
 # npm
 node_modules/
 
+snapshot-test-results.json
+
 # ide
 .idea
