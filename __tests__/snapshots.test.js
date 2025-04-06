@@ -1,10 +1,10 @@
 const path = require("path");
 const fs = require("fs");
 
-function checkSnapshot(filePath) {
-  describe(filePath + " Snapshot", () => {
+function checkSnapshot(testableFileObject) {
+  describe(testableFileObject.relative + " Snapshot", () => {
     it("should match the saved snapshot", () => {
-      const htmlContent = fs.readFileSync(filePath, "utf8");
+      const htmlContent = fs.readFileSync(testableFileObject.absolute, "utf8");
 
       expect(htmlContent).toMatchSnapshot();
     });
@@ -41,12 +41,14 @@ function findTestableFiles(directory) {
   }
 }
 
-function checkSnapshotTestForPaths(filePaths) {
-  filePaths.forEach((filePath) => {
+function checkSnapshotTestForPaths(testableFileObjects) {
+  testableFileObjects.forEach((testableFileObject) => {
     try {
-      checkSnapshot(filePath);
+      checkSnapshot(testableFileObject);
     } catch (error) {
-      console.error(`Error reading file ${filePath}: ${error.message}`);
+      console.error(
+        `Error reading file ${testableFileObject.relative}: ${error.message}`
+      );
     }
   });
 }
@@ -61,7 +63,11 @@ function main() {
     return;
   }
 
-  checkSnapshotTestForPaths(testableFiles);
+  const testableFileObjects = testableFiles.map((filePath) => {
+    return { relative: path.relative(targetDir, filePath), absolute: filePath };
+  });
+
+  checkSnapshotTestForPaths(testableFileObjects);
 }
 
 main();
