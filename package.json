@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf _site",
     "update-snapshots": "jest --updateSnapshot",
     "test-with-output": "jest --json --outputFile=snapshot-test-results.json",
     "test": "jest"
