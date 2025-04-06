@@ -26,6 +26,7 @@ vendor
 node_modules/
 
 snapshot-test-results.json
+__tests__/__snapshots__/
 
 # ide
 .idea
