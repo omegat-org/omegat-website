@@ -41,12 +41,14 @@ jobs:
         # env:
         #   JEKYLL_ENV: production
 
-      - name: Snapshot Testing
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
-      - run: npm ci
-      - run: npm run test-with-output
+      - name: Get Node Dependencies
+        run: npm ci
+      - name: Snapshot Testing
+        run: npm run test-with-output
 
       - name: Publish Snapshot Test Results
         uses: actions/upload-artifact@v4
