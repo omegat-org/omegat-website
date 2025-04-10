@@ -65,6 +65,10 @@ jobs:
           name: snapshots
           path: __tests__/__snapshots__/snapshots.test.js.snap
 
+      - name: Get Ruby dependencies
+        # This is needed to get the gems from the PR branch
+        run: bundle install
+
       - name: Build with Jekyll from PR branch 🏗
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build
