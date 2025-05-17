@@ -22,5 +22,11 @@ Gemfile.lock
 .ruby-version
 vendor
 
+# npm
+node_modules/
+
+snapshot-test-results.json
+__tests__/__snapshots__/
+
 # ide
 .idea
