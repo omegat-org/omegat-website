@@ -29,8 +29,6 @@ jobs:
       - name: Setup Pages 📃
         id: pages
         uses: actions/configure-pages@v5
-      - name: Patch jekyll/assets/utils.rb 🧷
-        run: patch --verbose vendor/bundle/ruby/3.4.1/gems/jekyll-assets-3.0.12/lib/jekyll/assets/utils.rb _patch_multiple-language/jekyll_assets_utils.patch
       - name: Build with Jekyll 🏗
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
