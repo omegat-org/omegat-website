@@ -113,7 +113,7 @@ href="#download-wizard" data-toggle="collapse">Download-Selektor</a> verwenden.<
 			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">Spenden</a>
 		</form>
 	</div>
-	{% asset donation.js %}
+    <script src="{{ '/assets/js/donation.js' | relative_url }}"></script>
 </div>
 
 <h3 id="standard">Standardversion - {{site.data.versions.standard.name}}</h3>

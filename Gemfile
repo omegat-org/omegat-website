@@ -29,7 +29,7 @@ group :jekyll_plugins do
    gem 'uglifier'
    gem 'jekyll-multiple-languages-plugin'
    gem 'jekyll-sitemap'
-   gem 'jekyll-assets'
+   gem 'jekyll-minifier'
    gem 'jekyll-redirect-from'
 end
 

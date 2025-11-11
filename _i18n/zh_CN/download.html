@@ -113,7 +113,7 @@ href="#download-wizard" data-toggle="collapse">下载选择器</a>。</p>
 			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;美金 <a class="btn btn-primary" href="#" id="donate-button">捐款</a>
 		</form>
 	</div>
-	{% asset donation.js %}
+    <script src="{{ '/assets/js/donation.js' | relative_url }}"></script>
 </div>
 
 <h3 id="standard">标准版本 — {{site.data.versions.standard.name}}</h3>
