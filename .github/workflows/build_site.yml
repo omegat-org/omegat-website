@@ -5,12 +5,7 @@ on:
 
 permissions:
   contents: read
-  pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -31,3 +26,8 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: development
+      - name: Upload artifact 🚚
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: _site
