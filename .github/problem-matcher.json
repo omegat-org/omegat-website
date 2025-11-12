@@ -1,0 +1,95 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}External link .* \\(?failed(?:: .*?)?\\)? \\(?status code (40\\d)\\)$",
+          "message": 0,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}http://.* is not an HTTPS link$",
+          "message": 0
+        }
+      ]
+    },
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}'a' tag is missing a reference$",
+          "message": 0
+        }
+      ]
+    },
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}internal image .* does not exist$",
+          "message": 0
+        }
+      ]
+    },
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}internally linking to .*; the file exists, but the hash '.*' does not$",
+          "message": 0
+        }
+      ]
+    },
+    {
+      "owner": "htmlproofer",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\* At\\s+(.+?):(\\d+):$",
+          "file": 1,
+          "line": 2
+        },
+        {
+          "regexp": "^\\s{2,}internally linking to .*?, which does not exist$",
+          "message": 0
+        }
+      ]
+    }
+  ]
+}

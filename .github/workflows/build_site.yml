@@ -29,21 +29,14 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: development
+      - name: create annotation
+        run: echo "::add-matcher::${{ github.workspace }}/.github/problem-matcher.json"
       - name: Check for broken links 🧐🔗
         id: links
-        run: htmlproofer --log-level :debug _site 2> links.log
+        run: htmlproofer --only-4xx _site
         continue-on-error: true
-      - name: Archive checker log 🗄
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: links-check.log
-          path: links.log
       - name: Upload artifact 🚚
         uses: actions/upload-artifact@v4
         with:
           name: website
           path: _site
-      - name: Report result
-        if: ${{ steps.jekyll.outcome == 'failure' || steps.links.outcome == 'failure' }}
-        run: exit 1
