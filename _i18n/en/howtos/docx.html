@@ -8,7 +8,7 @@
   <p>The new format can also serve as a useful way of handling the legacy .doc, .xls and .ppt formats, since they can be converted to their MS Office 2007 counterparts, translated in OmegaT, and converted back again. This procedure is therefore an alternative for translators who would prefer not to use OpenOffice.org for this purpose.</p>
   <h3>Converting to MS Office 2007 format</h3>
   <p>You can convert MS Office 1997/2000/2003/XP files to MS Office 2007 format by opening them in MS Office 2007 and saving them with "Save As" in the new format. (Since this is now the standard format, it is simply described as Word, Excel or Powerpoint in MS Office 2007).</p>
-  <p>Linux users: both MS Office 2007 and the Microsoft compatibility plug-in run on <a href="http://www.codeweavers.com">Crossover Linux.</a></p>
+  <p>Linux users: both MS Office 2007 and the Microsoft compatibility plug-in run on <a href="https://www.codeweavers.com">Crossover Linux.</a></p>
   <h3>Points to note when using the .docx, .xlsx and .pptx formats in OmegaT</h3>
   <p>In OmegaT versions prior to 2.1.8, each formatting change in an MS Office 2007 file resulted in a long series of multiple tags, which often made handling this file format impractical. As of version 2.1.8, by default, these multiple tags are now aggregated (condensed) into a single tag. Users wishing to translate MS Office 2007 files should therefore upgrade to OmegaT version 2.1.8 or later.</p>
   <p>(The greater ease of tag handling with .docx files comes at the cost of a slight loss in control over formatting. For example, without the "aggregate tags" function, where a word in the source text is in bold and italics, the translator could choose to render it in bold only, or in italics only. With the "aggregate tags" function enabled, this is not possible. Most users will probably find that the greater ease of use outweighs this drawback.)</p>
@@ -32,8 +32,8 @@
   <p>Note that even after Word's settings have been changed so that it does not insert "nuisance" codes, for example for auto-hyphenation, such codes may still be present in the file and not removed by the change in configuration. Removal of these codes is described below. Before following the instructions below for removal of the nuisance codes, however, remember to make the configuration changes in Word first, or Word may simply re-insert nuisance codes again when the file is next opened.</p>
   <h3>Third-party tools</h3>
   <p>As already mentioned, this problem with MS Word is not unique to OmegaT. Third-party tools have been produced to deal with the problem. Two of these are:</p>
-  <p><a href="http://asap-traduction.com/CodeZapper">CodeZapper</a> (inexpensive)</p>
-  <p><a href="http://www.translatortools.net/word-doccleaner.html">Document Cleaner</a> (free)</p>
+  <p><a href="https://asap-traduction.com/CodeZapper">CodeZapper</a> (inexpensive)</p>
+  <p><a href="https://www.translatortools.net/word-doccleaner.html">Document Cleaner</a> (free)</p>
   <h3>Levelling character formatting</h3>
   <p>An alternative to running the CodeZapper macro on your text is to "level" the formatting. "Levelling" the formatting means applying the format of the first character in a selection of text (such as a whole paragraph) to all subsequent characters. Note that this is not the same as "deleting" the formatting, which would cause the character formatting to revert to the document's default.</p>
   <p>You can level the formatting of paragraphs essentially by copying whole paragraphs in MS Word and pasting them back over themselves such that the entire paragraph assumes the formatting of the first character.</p>
@@ -44,7 +44,7 @@
   <p>- level the formatting from these paragraphs using the macro as described above, then re-insert the formatting; or</p>
   <p>- mark only the text up to the beginning of the formatted part, copy this text and paste it back over itself, then repeat the process on the text after the formatted part. </p>
   <h3>Creating a macro to level the character formatting of a paragraph</h3>
-  <p>You can automate the above procedure somewhat by creating a macro. Brief instructions for creating the macro (in MS Office 2007) are provided below. (For more detailed instructions, refer to your instruction manual or click <a href="http://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">here</a> or <a href="https://oit.nd.edu/assets/141085/word_2013_macros_qrg.pdf">here</a>.)</p>
+  <p>You can automate the above procedure somewhat by creating a macro. Brief instructions for creating the macro (in MS Office 2007) are provided below. (For more detailed instructions, refer to your instruction manual or click <a href="https://www.dummies.com/how-to/content/how-to-create-a-word-2007-macro.html">here</a> or <a href="https://oit.nd.edu/assets/141085/word_2013_macros_qrg.pdf">here</a>.)</p>
   <p>If you have not already done so, add the Developer tab to the ribbon as follows: click on the Office button. Select Word Options. Click Popular in the Word Options dialog box. On the ribbon, check Show Developer tab and confirm with OK. Close Word.</p>
   <p>Launch Word again, create a new Word file and add a paragraph of sample text, at least three lines long, e.g.:</p>
   <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
