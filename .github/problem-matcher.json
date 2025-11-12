@@ -1,7 +1,7 @@
 {
   "problemMatcher": [
     {
-      "owner": "htmlproofer",
+      "owner": "External link check",
       "severity": "error",
       "pattern": [
         {
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "owner": "htmlproofer",
+      "owner": "http URL check",
       "severity": "error",
       "pattern": [
         {
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "owner": "htmlproofer",
+      "owner": "a tag reference check",
       "severity": "error",
       "pattern": [
         {
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "owner": "htmlproofer",
+      "owner": "internal image check",
       "severity": "error",
       "pattern": [
         {
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "owner": "htmlproofer",
+      "owner": "internal link check: hash mismatch",
       "severity": "error",
       "pattern": [
         {
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "owner": "htmlproofer",
+      "owner": "internal link check 2: file does not exist",
       "severity": "error",
       "pattern": [
         {
