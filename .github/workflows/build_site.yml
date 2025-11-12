@@ -22,10 +22,20 @@ jobs:
       - name: Setup Pages 📃
         id: pages
         uses: actions/configure-pages@v5
+      - name: Install HTML Proofer 🔧
+        run: gem install html-proofer
       - name: Build with Jekyll 🏗
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: development
+      - name: Check for broken links 🧐🔗
+        run: htmlproofer --log-level :debug _site 2> links.log
+        continue-on-error: true
+      - name: Archive checker log 🗄
+        uses: actions/upload-artifact@v4
+        with:
+          name: links-check.log
+          path: links.log
       - name: Upload artifact 🚚
         uses: actions/upload-artifact@v4
         with:
