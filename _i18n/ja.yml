@@ -54,12 +54,12 @@ titles:
      tokenizer: Howto - OmegaT トークナイザーを使用する
 
 # Platforms name
-windows_jre: Windows (JRE付き)
-windows_jre64b: Windows (64-bit, JRE付き)
-windows_nojre: Windows (JRE無し)
+windows_jre: Windowsインストーラ(32-bit, JRE付き)
+windows_jre64b: Windowsインストーラ(64-bit, JRE付き)
+windows_nojre: Windowsインストーラ(JRE無し)
 osx_signed: macOS (認証済み)
 osx_unsigned: macOS (署名なし)
-linux_jre: Linux (JRE付き)
+linux_jre: Linux (32-bit、 JRE付き)
 linux_jre64b: Linux (64-bit、 JRE付き)
 nojre: クロスプラットフォーム(JRE無し)
 source: ソースコード
