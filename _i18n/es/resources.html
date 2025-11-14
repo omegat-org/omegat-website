@@ -5,37 +5,90 @@
     <tbody>
       <tr>
         <td>
-          <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Complemento de filtros de Okapi</a>
+          <a href="https://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Complemento de filtros de Okapi</a>
         </td>
-        <td>Proporciona filtros para usar más formatos de archivo, incluido el TTX de Trados.</td>
+        <td>Proporciona filtros para gestionar más formatos de archivo, incluidos TTX de Trados y Markdown.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Complemento Apertium</a>
+          <a href="https://wiki.apertium.org/wiki/Apertium-OmegaT">Complemento de Apertium</a>
         </td>
         <td>Integra la función de traducción automática de Apertium en OmegaT.</td>
       </tr>
       <tr>
         <td>
-          <a href="https://github.com/yoursdearboy/omegat-browser">Plugin para navegador web</a>
+          <a href="https://github.com/yoursdearboy/omegat-browser">Complemento de navegador web</a>
         </td>
-        <td>Acceso rápido a sitios web Soporte de sitio web puede ser escrito en Groovy&lt;</td>
+        <td>Acceso rápido a sitios web. El soporte de sitios web se puede programar en Groovy.</td>
       </tr>
+      <tr>
+        <td>
+          <a href="https://codeberg.org/miurahr/omegat-textra-plugin">NICT TexTra plugin</a>
+        </td>
+        <td>Integra el motor de traducción automática neuronal TexTra en OmegaT. La API de TexTra es proporcionada gratuitamente por NICT, la agencia de investigación del gobierno japonés.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://codeberg.org/miurahr/omegat-epwing">Complemento EPWING</a>
+        </td>
+        <td>Proporciona la función para leer el formato de diccionario EPWING.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/ychoi-kr/omegat-plugin-deepl-api-free">DeepL API Free plugin</a>
+        </td>
+        <td>Provides connector for DeepL machine translation (via Free API)</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/omegat-org/moses-plugin">Moses MT connector plugin</a>
+        </td>
+        <td>Provides Moses Machine Translator plugin for OmegaT</td>
+      </tr>
+      <tr>
+        <td>
+        <a href="https://github.com/omegat-org/azure-translate-plugin">Azure Translate plugin</a>
+        </td>
+        <td>Provides Azure Translate V2/V3 connector for OmagaT</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/omegat-org/deepl-connector-plugin">DeepL connector plugin</a>
+        </td>
+        <td>Provides DeepL MT connector (via Pro V1 API)</td>
+      </tr>
+    <tr>
+      <td>
+        <a href="https://codeberg.org/miurahr/omegat-pdic">PDIC dictionary lookup plugin</a>
+      </td>
+      <td>Provides PDIC bilingual dictionary lookup feature</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://codeberg.org/miurahr/omegat-mdict">MDict dictionary lookup plugin</a>
+      </td>
+      <td>Provides MDict bilingual dictionary lookup feature</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://codeberg.org/miurahr/omegat-dltranslator">DLTranslator API connector plugin</a>
+      </td>
+      <td>Provides DLTranslator connector. DLTranslator is a python project that runs AI translation server on PC. See <a href="https://codeberg.org/miurahr/dltranslator">DLTranslator</a> </td>
+    </tr>
     </tbody>
   </table>
-  <p>Importante: los complementos mencionados funcionan con la versión 4 de OmegaT y superiores.</p>
   <h3>Utilidades</h3>
   <table class="table">
     <tbody>
       <tr>
         <td>
-          <a href="{{ '/files/aligner.zip' | prepend: site.baseurl_root }}">Utilidad de alineación Aligner</a>
+          <a href="{{ '/files/aligner.zip' | prepend: site.baseurl_root }}">Utilidad de alineación "Aligner"</a>
         </td>
         <td>Escrita en Python. Contribución de Dmitri Gabinski.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://bligner.aligner.free.fr">Utilidad de alineación Bligner</a>
+          <a href="https://bligner.aligner.free.fr">Utilidad de alineación "Bligner"</a>
         </td>
         <td>Escrita en Python/Perl. Contribución de Didier Briel.</td>
       </tr>
@@ -49,13 +102,13 @@
         <td>
           <a href="{{ '/files/TMXCleaner-1.0.RC1.zip' | prepend: site.baseurl_root }}">TMXCleaner</a>
         </td>
-        <td>Script de línea de comandos de Java para eliminar las unidades de traducción prescindibles de un archivo TMX: elimina todas las unidades de traducción sin segmento meta o en las que el segmento meta es igual que el segmento origen. Contribución de Henry Pijffers.</td>
+        <td>Script de línea de comandos de Java para eliminar las unidades de traducción prescindibles de un archivo TMX: elimina todas las unidades de traducción sin segmento traducido o en las que el segmento traducido es igual que el segmento original. Contribución de Henry Pijffers.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/toxic.zip' | prepend: site.baseurl_root }}">Toxic</a>
         </td>
-        <td>Utilidad para convertir los archivos de Trados TagEditor (TTX) a un formato intermedio, de forma que se puedan traducir en OmegaT. Esta recopilación de scripts puede resultar de utilidad a los programadores de scripts que tengan conocimientos de tcl/tk. Se recomienda al resto de usuarios usar el <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Complemento de filtros de Okapi</a> en su lugar. Toxic es una contribución de Marc Prior.</td>
+        <td>Utilidad para convertir los archivos de Trados TagEditor (TTX) a un formato intermedio, de forma que se puedan traducir en OmegaT. Esta recopilación de scripts puede resultar de utilidad a los programadores de scripts que tengan conocimientos de tcl/tk. Se aconseja a los demás usuarios que utilicen en su lugar el <a href="https://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">complemento de filtros de Okapi</a>. Toxic es una contribución de Marc Prior.</td>
       </tr>
       <tr>
         <td>
@@ -73,7 +126,7 @@
         <td>
           <a href="{{ '/files/toxic_scripts.zip' | prepend: site.baseurl_root }}">Scripts de Toxic</a>
         </td>
-        <td>Versiones en scripts de Toxic. Independiente de plataforma; es necesario tcl/tk.</td>
+        <td>Versiones en scripts de Toxic. Independiente de la plataforma; es necesario tcl/tk.</td>
       </tr>
       <tr>
         <td>
@@ -85,7 +138,7 @@
         <td>
           <a href="{{ '/files/omegatk/tkount.zip' | prepend: site.baseurl_root }}">TKount</a>
         </td>
-        <td>Utilidad para contar TKount. Son necesarios tcl/tk, Abiword y pdftotext. Se ha probado en Linux. Contribución de Marc Prior.</td>
+        <td>Utilidad para contar texto TKount. Son necesarios tcl/tk, Abiword y pdftotext. Se ha probado en Linux. Contribución de Marc Prior.</td>
       </tr>
       <tr>
         <td>
@@ -97,7 +150,7 @@
         <td>
           <a href="{{ '/files/WF.zip' | prepend: site.baseurl_root }}">Conversor de archivos TMX de Wordfast</a>
         </td>
-        <td>Convierte las memorias de traducción en formato TMX generadas por Wordfast de forma que las pueda leer OmegaT. Contribución de Dmitri Gabinski. </td>
+        <td>Convierte las memorias de traducción en formato TMX generadas por Wordfast a un formato que pueda leer OmegaT. Contribución de Dmitri Gabinski. </td>
       </tr>
     </tbody>
   </table>
@@ -108,19 +161,19 @@
         <td>
           <a href="{{ '/files/training/translation_memory_training_course.zip' | prepend: site.baseurl_root }}">Curso de formación</a>
         </td>
-        <td>Curso de formación en OmegaT. Consiste en un modelo de manual del estudiante con instrucciones para los formadores para la adaptación y recursos de muestra.</td>
+        <td>Curso de formación de OmegaT. Consiste en un manual de un estudiante modelo con instrucciones para los formadores respecto a la adaptación y recursos de muestra.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/omegat-icons.zip' | prepend: site.baseurl_root }}">Iconos</a>
         </td>
-        <td>Selección de iconos alternativos para usar con OmegaT.</td>
+        <td>Selección de iconos alternativos para utilizar en OmegaT.</td>
       </tr>
       <tr>
         <td>
           <a href="{{ '/files/sample_texts_1.0.zip' | prepend: site.baseurl_root }}">Textos de muestra</a>
         </td>
-        <td>Para testear y mostrar el funcionamiento de OmegaT.</td>
+        <td>Para probar y mostrar el funcionamiento de OmegaT.</td>
       </tr>
     </tbody>
   </table>
@@ -142,59 +195,59 @@
     </tbody>
   </table>
   <h2>Software de terceros</h2>
-  <h3>Software de terceros para usar con OmegaT</h3>
+  <h3>Software de terceros para utilizar con OmegaT</h3>
   <table class="table">
     <tbody>
       <tr>
         <td>
-          <a href="howtos/spelling.html#repositories">Diccionarios ortográficos</a>
-        </td>
-        <td>Repositorios en línea de diccionarios ortográficos para usar en OmegaT.</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="http://openoffice.org/">OpenOffice.org</a>
+          <a href="https://openoffice.org/">OpenOffice.org</a>
           <br/>
-          <a href="http://www.libreoffice.org/">Libre Office</a>
+          <a href="https://www.libreoffice.org/">Libre Office</a>
         </td>
         <td>Alternativas gratuitas (y compatibles) a Microsoft Office.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://okapiframework.org/">Framework Okapi</a>
+          <a href="https://okapiframework.org/">Okapi Framework</a>
         </td>
         <td>Un completo conjunto de utilidades para preparar los archivos para su traducción en una herramienta TAO. Permite la traducción de numerosos formatos de archivo con los que no se puede trabajar de forma nativa con OmegaT. Hay un tutorial detallado disponible. </td>
       </tr>
       <tr>
         <td>
-          <a href="http://sourceforge.net/projects/bitext2tmx">bitext2tmx</a>
+          <a href="https://sourceforge.net/projects/bitext2tmx">bitext2tmx</a>
         </td>
         <td>Herramienta de alineación con GUI para crear archivos de memorias de traducción a partir de textos antiguos y sus traducciones.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://sourceforge.net/projects/aligner">LF Aligner</a>
+          <a href="https://sourceforge.net/projects/aligner">LF Aligner</a>
         </td>
         <td>Una herramienta inteligente de alineación en línea de comandos para crear archivos de memorias de traducción a partir de textos antiguos y sus traducciones.</td>
       </tr>
       <tr>
         <td>
-          <a href="http://www.leuce.com/autoit/">Scripts y procedimientos de Samuel Murray</a>
+          <a href="https://www.leuce.com/autoit/">Scripts y procedimientos de Samuel Murray</a>
         </td>
         <td>Descripciones y enlaces de los scripts y procedimientos de Samuel Murray. Para la mayoría de estos scripts se necesita MS Windows, aunque algunos procedimientos también pueden funcionar en otras plataformas.<br/> Los scripts y procedimientos están disponibles para permitirle hacer lo siguiente:
 
 <ul>
-<li>Saltar los segmentos con un conjunto de caracteres específico</li>
-<li>Extraer todo el texto origen de los archivos de proyecto en un solo archivo de texto grande</li>
-<li>Crear un archivo TMX con todas las cadenas con el mismo texto origen que meta</li>
-<li>Agregar términos a un glosario mientras traduce en OmegaT</li>
+<li>Omitir los segmentos con un conjunto de caracteres específico</li>
+<li>Extraer todo el texto original de los archivos del proyecto en un solo archivo de texto grande</li>
+<li>Crear un archivo TMX con todas las cadenas con el mismo texto original y traducido</li>
+<li>Añadir términos a un glosario mientras traduce en OmegaT</li>
 <li>Añadir números a todos los segmentos, de forma que todos sean "únicos"</li>
-<li>Eliminar todo el texto pero no las etiquetas, o todas las etiquetas pero no el texto</li>
+<li>Eliminar todo el texto excepto las etiquetas o todas las etiquetas excepto el texto</li>
 <li>Comprobar la ortografía (varios procedimientos)</li>
 </ul>
 
 </td>
       </tr>
+    <tr>
+      <td>
+        <a href="https://codeberg.org/miurahr/dltranslator">DLTranslator Deep Learning translator server/client</a>
+      </td>
+      <td>Provides a translation API server built on dl-translate library powered by Hugging Face transformers. The server accepts a request in JSON form and return a translation result by pre-trained transformer model.</td>
+    </tr>
     </tbody>
   </table>
 </div>
