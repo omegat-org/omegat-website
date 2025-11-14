@@ -133,12 +133,11 @@ assets:
 
 plugins_dir:
   - jekyll-sitemap
-  #- jekyll-feed
+  # https://github.com/hofers/jekyll-uglify
   - uglifier
   # https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin
   - jekyll-multiple-languages-plugin
-  # https://github.com/jekyll/jekyll-assets
-  - jekyll-assets
+  - jekyll-minifier
   # https://github.com/jekyll/jekyll-redirect-from
   - jekyll-redirect-from
 
@@ -156,3 +155,7 @@ exclude:
   - package-lock.json
   - Dockerfile
   - README.md
+
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true

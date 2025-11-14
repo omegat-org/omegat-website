@@ -1,7 +1,7 @@
 <div class="container">
 
 <p class="lead">以下のリンクから、さまざまなバージョンの OmegaT を入手できます。ダウンロードするバージョンがわからない場合は、<a
-href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a>を使用できます。</p>
+href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a>を使用できます。現在は、通常版のみを提供しています。</p>
 
 <div id="download-wizard" class="panel panel-primary collapse">
   <div class="panel-heading">
@@ -23,12 +23,6 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
       </div>
     </div>
     <div class="tab-content">
-      <div class="tab-pane fade in" id="tab-install-type">
-        <div class="radio">
-          <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>通常インストール</label>
-          <p>このパッケージは、ユーザーの手によってインストール作業が実行されます。以前からの OmegaT ユーザーには、おなじみの方法です。迷っているなら、このパッケージを選んでください。</p>
-        </div>
-      </div>
       <div class="tab-pane fade" id="tab-operating-system">
         <div class="radio">
           <label><input type="radio" class="radio-primary" id="optWindows" value="windows" name="optOS"/>Windows</label>
@@ -44,13 +38,13 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
         </div>
         <div class="radio">
           <label><input type="radio" class="radio-primary" value="other" name="optOS"/>その他</label>
-          <p>その他の OS（FreeBSD や Solaris など）へのインストール用<br/><i>OmegaT は、 Java ランタイム環境のバージョン 8 を実行できる任意のオペレーティング・システム上にインストールできます。</i></p>
+          <p>その他の OS（FreeBSD や Solaris など）へのインストール用<br/><i>OmegaTは、Javaランタイム環境のバージョン11を実行できる任意のオペレーティング・システムにインストールできます。</i></p>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-jre">
         <p class="with-windows-jre" style="display:none;">Java 実行環境（JRE）を同梱した OmegaT と、同梱しない OmegaT のどちらをダウンロードするか、選んでください。適切なバージョンの JRE が Windows にインストール済みであれば、「JRE 無し」を選んでください。JRE をまだインストールしていないか、あるいは定かではない場合は、「JRE 付き」を選んでください。</p>
         <div class="with-linux-jre" style="display:none;">
-          <p>OmegaT は通常、適切なバージョンの Java 実行環境（JRE）をインストールできるシステムであれば、どの Linux 上でも動作します。OmegaT は現在 JRE のバージョン 8 以降を必要としています。インストールされている JRE のバージョンを確認するには、コンソール（コマンドライン ウィンドウ）を開いて、次のコマンドを入力してください：</p>
+          <p>OmegaT は通常、適切なバージョンの Java 実行環境（JRE）をインストールできるシステムであれば、どの Linux 上でも動作します。OmegaT は現在 JRE のバージョン 11 以降を必要としています。インストールされている JRE のバージョンを確認するには、コンソール（コマンドライン ウィンドウ）を開いて、次のコマンドを入力してください：</p>
           <pre>$ <strong>java -version</strong></pre>
           <p>適切なバージョンの JRE がシステムにインストール済みかどうかよく分からない場合は、JRE 付きのパッケージをダウンロードしてインストールすればよいでしょう。このパッケージに同梱される JRE は、OmegaT 専用の実行環境になります。既存の他の JRE と衝突したり、それを上書きしたり、あるいは削除するようなことはありません。安全に使用できます。</p>
         </div>
@@ -75,13 +69,13 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
         </div>
       </div>
       <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
-        <p>お客様の選択に基づいて、次のものを使用するように指示します。</p>
+        <p>選択内容に基づいて、以下を使用することをお勧めします。</p>
         <h3><a id="wizard-result-version" href="#">何らかのバージョン</a></h3>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> ダウンロード</a>
 
 <!-- 
         <div id="wizard-result-osx" style="display:none;">
-          <p>このバージョンが使用できない場合は、<a href="#" id="wizard-result-unsigned">署名のないバージョン</a>をダウンロードしてみてください。</p>
+          <p>If this version is not available, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p>
         </div>
  -->
       </div>
@@ -93,7 +87,7 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 
 <h4>システム要件</h4>
 
-<p>OmegaT は、適正なJRE（Java Runtime Environment）がインストールされた、あるいはインストールできる、すべてのシステム上で動きます。JRE は、OmegaT と一緒に配布されていますが、別々に入手することもできます。OmegaT は、Windows（98 以降のすべての版）、macOS、Linux にインストールできます。</p>
+<p>OmegaT は、適正なJRE（Java Runtime Environment）がインストールされた、あるいはインストールできる、すべてのシステム上で動きます。JRE は、OmegaT と一緒に配布されていますが、別々に入手することもできます。OmegaT は、Windows（Windows 8 以降のすべての版）、macOS、Linux にインストールできます。</p>
 
 <!-- Donation slider -->
 <div class="donation-section section">
@@ -110,10 +104,11 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 			<input type="hidden" name="item_name" value="Donation to OmegaT - multiplatform CAT tool">
 			<input type="hidden" name="currency_code" value="USD">
 
-			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">寄付</a>
+			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;<label for="amount">米ドル</label>
+			<a class="btn btn-primary" href="#" id="donate-button">寄付</a>
 		</form>
 	</div>
-	{% asset donation.js %}
+    <script src="{{ '/assets/js/donation.js' | relative_url }}"></script>
 </div>
 
 <h3 id="standard">通常版 - {{site.data.versions.standard.name}}</h3>
@@ -137,8 +132,10 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
       {% endif %}
       </td>
       <td>
-      {% if platform.link != null %} <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">ダウンロード</a></td>
-      {% else %} <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">ダウンロード</a></td>
+      {% if platform.link != null %}
+        <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a>
+      {% else %}
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a>
       {% endif %}
       </td>
   </tr>
@@ -190,23 +187,23 @@ href="#download-wizard" data-toggle="collapse">ダウンロードセレクタ</a
 </p>
 
 <div id="popover_content_osx_signed" style="display:none">
-<h4 id="about_signing">認証済みと署名なし</h4>
+  <h4 id="about_signing">認証済みと署名なし</h4>
 
-<p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
+  <p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
 
-<p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+  <p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
 
-<p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
+  <p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
 </div>
 
 <div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_signing">認証済みと署名なし</h4>
+<h4 id="about_unsigning">認証済みと署名なし</h4>
 
-<p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
+  <p>macOSは、検証されていないプログラムの実行が困難になるため、セキュリティが向上します。</p>
 
-<p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
+  <p>OmegaT for macOSには、認証済みバージョンと署名なしバージョンの両方が用意されています。これらは機能的には同じですが、システムによって既知の開発者によって公開されたものとして認識されるため、署名付きバージョンが推奨されます。</p>
 
-<p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
+  <p>認証されたバージョンの公開が遅れる場合があります。急いでいるユーザーは、代わりに署名なしバージョンを使用できます。アプリケーションの起動に問題がある場合は、<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">身元不明の開発者からアプリケーションを開く方法</a>を参照してください。</p>
 </div>
 
 <div id="popover_content_master" style="display:none">
