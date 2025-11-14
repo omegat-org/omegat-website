@@ -1,0 +1,42 @@
+name: run Jekyll build for test
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v4
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        with:
+          ruby-version: "3.2.6"
+          bundler-cache: true
+          cache-version: 0
+      - name: Setup Pages 📃
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install HTML Proofer 🔧
+        run: gem install html-proofer
+      - name: Build with Jekyll 🏗
+        id: jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: development
+      - name: create annotation
+        run: echo "::add-matcher::${{ github.workspace }}/.github/problem-matcher.json"
+      - name: Check for broken links 🧐🔗
+        id: links
+        run: htmlproofer --only-4xx _site
+        continue-on-error: true
+      - name: Upload artifact 🚚
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: _site

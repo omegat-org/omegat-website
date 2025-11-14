@@ -112,7 +112,7 @@ href="#download-wizard" data-toggle="collapse">latausvalitsinta</a>.</p>
 			<input type="text" class="input-lg" id="amount" name="amount" size="3" value="35">&nbsp;USD <a class="btn btn-primary" href="#" id="donate-button">Lahjoita</a>
 		</form>
 	</div>
-	{% asset donation.js %}
+    <script src="{{ '/assets/js/donation.js' | relative_url }}"></script>
 </div>
 
 <h3 id="standard">Standardiversion – {{site.data.versions.standard.name}}</h3>

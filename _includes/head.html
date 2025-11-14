@@ -16,13 +16,13 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  {% asset omegat.css %}
-  {% asset rangeslider.css %}
+  <link rel="stylesheet" href="{{ '/assets/css/omegat.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/rangeslider.css' | relative_url }}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  {% asset omegat.js %}
-  {% asset rangeslider.js %}
+  <script src="{{ '/assets/js/omegat.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/rangeslider.js' | relative_url }}"></script>
 
   <meta name="description" content="{% t global.description %}">
 
