@@ -8,6 +8,7 @@ menu:
   documentation: Documentación
   contact: Contacto
   download: Descargar
+  install: Instalar
   resources: Recursos
   support: Soporte
 
@@ -15,6 +16,7 @@ footer:
   connect: Conecte con nosotros
   omegat_project: El proyecto OmegaT
   documentation: Documentación
+  developers: Contributing
 
 titles:
   404: Página no encontrada
@@ -23,14 +25,16 @@ titles:
   support: Soporte
   documentation: Documentación
   download: Descargar
+  install: Instalar
   home: OmegaT - La herramienta TAO gratuita
   philosophy: Filosofía
+  policies: Policies
   resources: Recursos
   manual: Manual
   tutorials: Tutoriales
   howto: Guías
   reviews: Reseñas
-  sponsorship: Sponsorship
+  sponsorship: Patrocinio
   howtos:
      compatibility: Compatibilidad
      compatibility_deja_vu: Guía práctica - Compatibilidad de OmegaT con Déjà Vu (en inglés)
@@ -44,19 +48,18 @@ titles:
      ms_translator: Guía práctica - Usar Microsoft Translator en OmegaT (en inglés)
      new_filter: Guía práctica - Crear un nuevo filtro de archivo (en inglés)
      preview: Guía práctica - Añadir una función de previsualización en OmegaT (en inglés)
-     priorview: Guía práctica - La utilidad de previsualización "Priorview" (en inglés)
      prop12m: Guía práctica de propagación y coincidencias de uno a muchos (en inglés)
      spelling: Guía práctica - Corrección ortográfica (en inglés)
      text_export: Guía práctica - Usar la función de exportar a texto en OmegaT (interfaz de programación) (en inglés)
      tokenizer: Guía práctica - Usar el tokenizador de OmegaT (en inglés)
 
 # Platforms name
-windows_jre: Windows con JRE
-windows_jre64b: Windows con JRE de 64 bits
-windows_nojre: Windows sin JRE
-osx_signed: macOS notarizado
-osx_unsigned: macOS sin firmar
-linux_jre: Linux con JRE
-linux_jre64b: Linux con JRE de 64 bits
-nojre: Multiplataforma sin JRE
+windows_jre: Windows installer packaged with 32-bit JRE
+windows_jre64b: Windows installer packaged with 64-bit JRE
+windows_nojre: Windows installer with no JRE
+osx_signed: macOS package, Notarized
+osx_unsigned: macOS package, Unsigned
+linux_jre: Linux package, with 32-bit JRE
+linux_jre64b: Linux package, with 64-bit JRE
+nojre: Cross-platform package, with no JRE
 source: Código fuente
