@@ -32,7 +32,7 @@ Currently, we offer only a Standard version.</p>
           <p>For installation on Windows System.</p>
         </div>
         <div class="radio">
-          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>macOS</label>
+          <label><input type="radio" class="radio-primary" id="optmacOS" value="macOS" name="optOS"/>macOS</label>
           <p>For installation on macOS.</p>
         </div>
         <div class="radio">
@@ -101,7 +101,7 @@ Currently, we offer only a Standard version.</p>
         <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Download</a>
 
 <!-- 
-        <div id="wizard-result-osx" style="display:none;">
+        <div id="wizard-result-macOS" style="display:none;">
           <p>If this version is not available, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p>
         </div>
  -->
@@ -220,24 +220,13 @@ space on your hard drive. In this case, do not select the Default version; selec
 <p><strong>Linux users</strong>: most Linux distributions are supplied with a Java Runtime Environment, but some open-source implementations do not work properly with OmegaT (although this may not be immediately apparent). If you are relatively new to Linux, we advise you to select an OmegaT version with the JRE included. More experienced Linux users may prefer to install the Oracle (formerly Sun) JRE at system level.
 </p>
 
-<div id="popover_content_osx_signed" style="display:none">
-  <h4 id="about_signing">Notarized vs Unsigned</h4>
+<div id="popover_content_macOS_notarized" style="display:none">
+  <h4 id="about_signing">Notarized</h4>
 
   <p>macOS tries to increase security by making it difficult to run unverified programs.</p>
 
-  <p>OmegaT for macOS is available in both Notarized and Unsigned versions; they are functionally identical, but the Notarized version is preferred as it is recognized by the system as being a) published by a known developer, and b) scanned by Apple.</p>
+  <p>OmegaT for macOS is only available in Notarized version. The Notarized version is recognized by the system as being a) published by a known developer, and b) scanned by Apple.</p>
 
-  <p>There may be a delay in publishing the Notarized version. Users in a hurry can use the Unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
-</div>
-
-<div id="popover_content_osx_unsigned" style="display:none">
-<h4 id="about_unsigning">Notarized vs Unsigned</h4>
-
-  <p>macOS tries to increase security by making it difficult to run unverified programs.</p>
-
-  <p>OmegaT for macOS is available in both Notarized and Unsigned versions; they are functionally identical, but the Notarized version is preferred as it is recognized by the system as being a) published by a known developer, and b) scanned by Apple.</p>
-
-  <p>There may be a delay in publishing the Notarized version. Users in a hurry can use the Unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">how to open an app from an unidentified developer</a>.</p>
 </div>
 
 <div id="popover_content_master" style="display:none">

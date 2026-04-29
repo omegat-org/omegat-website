@@ -19,9 +19,9 @@
             "noInfo": true,
             "fileName": "Windows_without_JRE_signed.exe"
         }, {
-            "id": "standard_osx_unsigned",
-            "name": "osx_unsigned",
-            "fileName": "Mac.zip"
+            "id": "standard_macOS_notarized",
+            "name": "macOS_notarized",
+            "fileName": Notarized.dmg"
         }, {
             "id": "standard_linux_jre64b",
             "name": "linux_jre64b",
