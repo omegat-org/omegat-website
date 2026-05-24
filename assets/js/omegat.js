@@ -69,7 +69,7 @@ $(document).ready(function () {
         //    } else if (platform.match(/^Linux/i)) {
         //        $('#optLinux').prop('checked', true);
         //    } else if (platform.match(/^Mac/i)) {
-        //        $('#optOsx').prop('checked', true);
+        //        $('#optmacOS').prop('checked', true);
         //    }
         //}
 
@@ -146,8 +146,8 @@ $(document).ready(function () {
             }
 
             var result = [version, os, jre].join('_');
-            if (os == 'osx') {
-                result = [version, os, 'signed'].join('_');
+            if (os == 'macOS') {
+                result = [version, os, 'notarized'].join('_');
             }
 
             console.log('best version: ' + result);
@@ -165,21 +165,6 @@ $(document).ready(function () {
             $('#wizard-result-version').html(resultName);
             $('#wizard-result-version').attr('href', '#' + result);
             $('#wizard-result-btn').attr('href', btnLink);
-
-            // MacOS Signed / Unsigned
-            if (os == 'osx') {
-
-                // If no Signed version is present, we still propose the Unsigned one
-                if (!$('#standard_osx_signed').length) {
-                     $('#wizard-result-version').attr('href', '#standard_osx_unsigned');
-                     $('#wizard-result-btn').attr('href', $('.version-download', $('#standard_osx_unsigned')).attr('href'));
-                }
-
-                $('#wizard-result').show();
-                $('#wizard-result-osx').show();
-            } else {
-                $('#wizard-result-osx').hide();
-            }
 
         };
 

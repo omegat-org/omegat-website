@@ -40,8 +40,7 @@ titles:
 windows_jre: Windows installer packaged with 32-bit JRE
 windows_jre64b: Windows installer packaged with 64-bit JRE
 windows_nojre: Windows installer with no JRE
-osx_signed: macOS package, Notarized
-osx_unsigned: macOS package, Unsigned
+macOS_notarized: macOS package, Notarized
 linux_jre: Linux package, with 32-bit JRE
 linux_jre64b: Linux package, with 64-bit JRE
 nojre: Cross-platform package, with no JRE
