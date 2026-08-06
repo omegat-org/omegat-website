@@ -50,12 +50,11 @@ titles:
      tokenizer: "Guia: ús del lematitzador de l'OmegaT"
 
 # Platforms name
-windows_jre: Windows amb el JRE
-windows_jre64b: Windows amb el JRE de 64 bits
+windows_jre_aarch64: Windows amb el JRE de ARM 64bit
+windows_jre_amd64: Windows amb el JRE de Intel/AMD 64 bits
 windows_nojre: Windows sense el JRE
-osx_signed: macOS validat
-osx_unsigned: macOS sense signar
-linux_jre: Linux amb el JRE
-linux_jre64b: Linux amb el JRE de 64 bits
+macOS_notarized: macOS validat
+linux_jre_aarch64: Linux amb el JRE Aarch64
+linux_jre_amd64: Linux amb el JRE de Intel/AMD 64 bits
 nojre: Multiplataforma sense el JRE
 source: Codi font

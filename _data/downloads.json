@@ -3,13 +3,13 @@
     "standard": {
         "folder": "OmegaT - Standard",
         "platforms": [{
-            "id": "standard_windows_jre",
-            "name": "windows_jre",
+            "id": "standard_windows_jre_aarch64",
+            "name": "windows_jre_aarch64",
             "noInfo": true,
-            "fileName": "Windows_signed.exe"
+            "fileName": "Windows_aarch64_signed.exe"
         }, {
-            "id": "standard_windows_jre64b",
-            "name": "windows_jre64b",
+            "id": "standard_windows_jre_amd64",
+            "name": "windows_jre_amd64",
             "noInfo": true,
             "fileName": "Windows_64_signed.exe"
 
@@ -19,14 +19,19 @@
             "noInfo": true,
             "fileName": "Windows_without_JRE_signed.exe"
         }, {
-            "id": "standard_macOS_notarized",
+            "id": "standard_macOS_arm_notarized",
             "name": "macOS_notarized",
-            "fileName": macOS_Notarized.dmg"
+            "fileName": "macOS_Notarized.dmg"
         }, {
-            "id": "standard_linux_jre64b",
-            "name": "linux_jre64b",
+            "id": "standard_linux_jre_64",
+            "name": "linux_jre_amd64",
             "noInfo": true,
             "fileName": "Linux_64.tar.bz2"
+        }, {
+            "id": "standard_linux_jre_aarch64",
+            "name": "linux_jre_aarch64",
+            "noInfo": true,
+            "fileName": "Linux_aarch64.tar.bz2"
         }, {
             "id": "standard_linux_nojre",
             "name": "nojre",

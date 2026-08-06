@@ -51,12 +51,11 @@ titles:
      tokenizer: Howto - Using the OmegaT tokenizer
 
 # Platforms name
-windows_jre: Версія для Windows із JRE
-windows_jre64b: Версія для Windows із JRE (64 біти)
+windows_jre_aarch64: Версія для Windows із aarch64 JRE
+windows_jre_amd64: Версія для Windows із AMD64 JRE
 windows_nojre: Версія для Windows без JRE
-osx_signed: Версія для macOS (завірена)
-osx_unsigned: Версія для macOS (незавірена)
-linux_jre: Версія для Linux із JRE
-linux_jre64b: Версія для Linux із JRE (64 біти)
+macOS_notarized: Версія для macOS (завірена)
+linux_jre_aarch64: Версія для Linux із aarch64 JRE
+linux_jre_amd64: Версія для Linux із AMD64 JRE
 nojre: Кросплатформна версія без JRE
 source: Програмний код

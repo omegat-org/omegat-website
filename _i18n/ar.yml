@@ -6,8 +6,6 @@ footer:
 global:
   description: OmegaT is a free open-source translation memory application for professional translators written in Java.
   title: 'OmegaT - The Free Translation Memory Tool'
-linux_jre: Linux with JRE
-linux_jre64b: Linux with 64-bit JRE
 menu:
   about: من نحن
   contact: التواصل والدعم
@@ -15,10 +13,6 @@ menu:
   download: تنزيل أوميجاتي
   languages: Languages
   resources: موارد أخرى
-nojre: Cross-platform without JRE
-osx_signed: macOS Signed
-osx_unsigned: macOS Unsigned
-source: Source code
 titles:
   404: Page Not Found
   3rd_party: برامج مساعدة
@@ -69,6 +63,13 @@ titles:
   screenshots: صور للبرنامج
   sponsorship: الرعاة
   tutorials: Tutorials
-windows_jre: Windows with JRE
-windows_jre64b: Windows with 64-bit JRE
-windows_nojre: Windows without JRE
+
+# Platforms name
+windows_jre_aarch64: Windows installer packaged with ARM64/aarch64 64-bit JRE
+windows_jre_amd64: Windows installer packaged with Intel/AMD 64-bit JRE
+windows_nojre: Windows installer with no JRE
+macOS_notarized: macOS package, Notarized
+linux_jre_aarch64: Linux package, with ARM64/aarch64 64-bit JRE
+linux_jre_amd64: Linux package, with Intel/AMD 64-bit JRE
+nojre: Cross-platform package, with no JRE
+source: Source code

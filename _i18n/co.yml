@@ -54,12 +54,11 @@ titles:
      tokenizer: Cumu fà (in inglese) - Impiegu d’un analizatore lessicale
 
 # Platforms name
-windows_jre: Windows cù JRE
-windows_jre64b: Windows cù JRE 64-bit
+windows_jre_aarch64: Windows cù JRE ARM64
+windows_jre_amd64: Windows cù JRE Intel/AMD 64-bit
 windows_nojre: Windows senza JRE
-osx_signed: macOS nutariatu
-osx_unsigned: macOS senza firma
-linux_jre: Linux cù JRE
-linux_jre64b: Linux cù JRE 64-bit
+maxOS_notarized: macOS nutariatu
+linux_jre_aarch64: Linux cù JRE AMD64/aarch64
+linux_jre_amd64: Linux cù JRE Intel/AMD 64-bit
 nojre: Multi-piattaforma senza JRE
 source: Codice di fonte

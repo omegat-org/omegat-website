@@ -50,12 +50,11 @@ titles:
      tokenizer: Como fazer - Usar o código do OmegaT
 
 # Platforms name
-windows_jre: Windows com JRE
-windows_jre64b: Windows com 64-bit JRE
+windows_jre_aarch64: Windows com ARM64/aarch64 JRE
+windows_jre_amd64: Windows com Intel/AMD 64-bit JRE
 windows_nojre: Windows semJRE
-osx_signed: macOS Autenticada
-osx_unsigned: macOS Não assinada
-linux_jre: Linux com JRE
-linux_jre64b: Linux com 64-bit JRE
+macOS_notarized: macOS Autenticada
+linux_jre_aarch64: Linux com ARM64/aarch64 JRE
+linux_jre_amd64: Linux com AMD 64-bit JRE
 nojre: Multi-plataforma sem JRE
 source: Código-fonte

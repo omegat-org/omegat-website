@@ -50,12 +50,11 @@ titles:
      tokenizer: Использование модуля токенизации в OmegaT
 
 # Platforms name
-windows_jre: Windows с JRE
-windows_jre64b: Windows с 64-разрядной JRE
+windows_jre_aarch64: Windows с aarch64 JRE
+windows_jre_amd64: Windows с AMD 64-разрядной JRE
 windows_nojre: Windows без JRE
-osx_signed: macOS с электронной подписью
-osx_unsigned: macOS без электронной подписи
-linux_jre: Linux с JRE
-linux_jre64b: Linux с 64-разрядной JRE
+macOS_notarized: macOS с электронной подписью
+linux_jre_aarch64: Linux с aarch64 JRE
+linux_jre_amd64: Linux с AMD64 JRE
 nojre: Кросс-платформенная версия без JRE
 source: Исходный код
