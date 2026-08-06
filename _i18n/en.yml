@@ -43,5 +43,9 @@ windows_nojre: Windows installer with no JRE
 macOS_notarized: macOS package, Notarized
 linux_jre_aarch64: Linux package, with ARM64/aarch64 64-bit JRE
 linux_jre_amd64: Linux package, with Intel/AMD 64-bit JRE
+linux_rpm_amd64: Linux RPM package (Intel/AMD 64-bit)
+linux_rpm_aarch64: Linux RPM package (ARM64/aarch64)
+linux_deb_amd64: Linux DEB package (Intel/AMD 64-bit)
+linux_deb_arm64: Linux DEB package (ARM64/aarch64)
 nojre: Cross-platform package, with no JRE
 source: Source code

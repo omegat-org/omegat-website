@@ -165,7 +165,23 @@ versions from Windows 8 onwards), macOS and Linux.</p>
       {% if platform.link != null %}
         <a class="btn btn-primary version-download" href="{{ platform.link }}" role="button">Download</a>
       {% else %}
-        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/OmegaT_{{ site.data.versions.standard.version }}_{{ platform.fileName}}/download" role="button">Download</a>
+        {%- comment -%}
+          File names are built from data-driven parts, so the archive, deb and
+          rpm naming schemes are all supported:
+            {product}{nameSep}{version}{release}{archSep}{fileName}
+            archive : OmegaT_6.1.0_Linux_aarch64.tar.bz2   (nameSep "_", archSep "_")
+            deb     : omegat_6.1.0-3_amd64.deb             (nameSep "_", archSep "_")
+            rpm     : omegat-6.1.0-3.x86_64.rpm            (nameSep "-", archSep ".")
+          "product" defaults to "OmegaT"; "nameSep"/"archSep" default to "_".
+          Packages set "package: true" to append the "package_release" suffix
+          (e.g. "-3") from versions.json.
+        {%- endcomment -%}
+        {%- assign product = platform.product | default: "OmegaT" -%}
+        {%- assign nameSep = platform.nameSep | default: "_" -%}
+        {%- assign archSep = platform.archSep | default: "_" -%}
+        {%- assign fileVersion = site.data.versions.standard.version -%}
+        {%- if platform.package -%}{%- assign fileVersion = fileVersion | append: site.data.versions.standard.package_release -%}{%- endif -%}
+        <a class="btn btn-primary version-download" href="{{ site.data.downloads.baseUrl }}/{{ site.data.downloads.standard.folder }}/{{ site.data.versions.standard.name }}/{{ product }}{{ nameSep }}{{ fileVersion }}{{ archSep }}{{ platform.fileName }}/download" role="button">Download</a>
       {% endif %}
       </td>
   </tr>

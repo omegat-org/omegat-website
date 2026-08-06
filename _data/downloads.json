@@ -38,6 +38,38 @@
             "noInfo": true,
             "fileName": "Without_JRE.zip"
         }, {
+            "id": "standard_linux_rpm_amd64",
+            "name": "linux_rpm_amd64",
+            "noInfo": true,
+            "product": "omegat",
+            "package": true,
+            "nameSep": "-",
+            "archSep": ".",
+            "fileName": "x86_64.rpm"
+        }, {
+            "id": "standard_linux_rpm_aarch64",
+            "name": "linux_rpm_aarch64",
+            "noInfo": true,
+            "product": "omegat",
+            "package": true,
+            "nameSep": "-",
+            "archSep": ".",
+            "fileName": "aarch64.rpm"
+        }, {
+            "id": "standard_linux_deb_amd64",
+            "name": "linux_deb_amd64",
+            "noInfo": true,
+            "product": "omegat",
+            "package": true,
+            "fileName": "amd64.deb"
+        }, {
+            "id": "standard_linux_deb_arm64",
+            "name": "linux_deb_arm64",
+            "noInfo": true,
+            "product": "omegat",
+            "package": true,
+            "fileName": "arm64.deb"
+        }, {
             "id": "standard_source",
             "name": "source",
             "fileName": "Source.zip"
