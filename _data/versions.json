@@ -1,7 +1,7 @@
 {
     "standard": {
-        "name": "OmegaT 6.1.0",
-        "version": "6.1.0",
+        "name": "OmegaT 6.1.1",
+        "version": "6.1.1",
         "package_release": "-3",
         "java_version": 11
     }
