@@ -54,12 +54,11 @@ titles:
      tokenizer: Guide - Utilisation du lemmatiseur OmegaT
 
 # Platforms name
-windows_jre: Windows avec JRE
-windows_jre64b: Windows avec JRE 64 bits
+windows_jre_aarch64: Windows avec ARM64/aarch64 JRE
+windows_jre_amd64: Windows avec Intel/AMD JRE 64 bits
 windows_nojre: Windows sans JRE
-osx_signed: macOS Notarié
-osx_unsigned: macOS Non signé
-linux_jre: Linux avec JRE
-linux_jre64b: Linux avec JRE 64 bits
+macOS_notarized: macOS Notarié
+linux_jre_aarch64: Linux avec ARM64/aarch64 JRE
+linux_jre_amd64: Linux avec Intel/AMD JRE 64 bits
 nojre: Cross-platform sans JRE
 source: Code source

@@ -50,12 +50,12 @@ titles:
      tokenizer: 指南：使用 OmegaT 分词器
 
 # Platforms name
-windows_jre: Windows，带 JRE
-windows_jre64b: Windows，带 64 位 JRE
+windows_jre_aarch64: Windows，带 aarch64 JRE
+windows_jre_amd64: Windows，带 AMD 64 位 JRE
 windows_nojre: Windows，不带 JRE
 osx_signed: macOS，已公证
 osx_unsigned: macOS，未签名
-linux_jre: Linux，带 JRE
-linux_jre64b: Linux，带 64 位 JRE
+linux_jre_aarch64: Linux，带 aarch64 JRE
+linux_jre_amd64: Linux，带 AMD 64 位 JRE
 nojre: 跨平台，不带 JRE
 source: 源代码

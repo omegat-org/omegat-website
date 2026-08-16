@@ -50,12 +50,11 @@ titles:
      tokenizer: Miten tämä tehdään? – OmegaT:n saneistimen käyttö
 
 # Platforms name
-windows_jre: Windows, jossa on JRE
-windows_jre64b: Windows, jossa on 64-bittinen JRE
+windows_jre_aarch64: Windows, jossa on JRE ARM64/aarch64
+windows_jre_amd64: Windows, jossa on Intel/AMD 64-bittinen JRE
 windows_nojre: Windows ilman JRE:tä
-osx_signed: macOS Notarized
-osx_unsigned: macOS Unsigned
-linux_jre: Linux, jossa on JRE
-linux_jre64b: Linux, jossa on 64-bittinen JRE
+macOS_notarized: macOS Notarized
+linux_jre_aarch64: Linux, jossa on JRE ARM64/aarch64
+linux_jre_amd64: Linux, jossa on Intel/AMD 64-bittinen JRE
 nojre: Käyttöliittymästä riippumaton versio ilman JRE:tä
 source: Lähdekoodi

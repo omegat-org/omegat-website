@@ -50,12 +50,11 @@ titles:
      tokenizer: Guide pratik - Itilizasion 'tokenizer' OmegaT
 
 # Platforms name
-windows_jre: Windows avek JRE
-windows_jre64b: Windows avek 64-bit JRE
+windows_jre_aarch64: Windows avek ARM64/aarch64 JRE
+windows_jre_amd64: Windows avek Intel/AMD 64-bit JRE
 windows_nojre: Windows san JRE
-osx_signed: macOS version Noter
-osx_unsigned: macOS version Non Signe
-linux_jre: Linux avek JRE
-linux_jre64b: Linux avek 64-bit JRE
+macOS_notarized: macOS version Noter
+linux_jre_aarch64: Linux avek ARM64/aarch64 JRE
+linux_jre_amd64: Linux avek AMD 64-bit JRE
 nojre: Miltiplatform san JRE
 source: Kod sours
